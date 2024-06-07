@@ -2,6 +2,8 @@
 
 Hi there, Dazzer is Fuzzer :) 
 
+
+
 ## Instaling
 
 So, closer to the point, to install Dazzer you should run a few simple commands:
