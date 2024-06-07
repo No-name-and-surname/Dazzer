@@ -7,7 +7,8 @@ Hi there, Dazzer is my first handmade fuzzer.
 So, closer to the point, to install Dazzer you should run a few simple commands:
 
 ```
-   git clone git@github.com:No-name-and-surname/Dazzer.git 
+   git clone git@github.com:No-name-and-surname/Dazzer.git
+   cd Dazzer
    python3 main.py
 ```
       
