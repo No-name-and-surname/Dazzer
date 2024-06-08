@@ -2,7 +2,8 @@
 
 Hi there, Dazzer is Fuzzer :) 
 
-![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pixil-frame.png)
+![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pix.png)
+
 
 
 ## Instaling
