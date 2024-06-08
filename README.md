@@ -2,7 +2,7 @@
 
 Hi there, Dazzer is Fuzzer :) 
 
-!(https://ibb.co/VDY8x9d)
+![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pixil-frame-0 (7).png)
 
 
 ## Instaling
