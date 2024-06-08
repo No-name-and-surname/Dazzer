@@ -2,7 +2,7 @@
 
 Hi there, Dazzer is Fuzzer :) 
 
-![](https://ibb.co/VDY8x9d)
+!(https://ibb.co/VDY8x9d)
 
 
 ## Instaling
