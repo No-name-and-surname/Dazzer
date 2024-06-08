@@ -1,7 +1,7 @@
 # Dazzer
 
 Hi there, Dazzer is Fuzzer :) 
-
+![](http://webdesign.ru.net/images/Heydon_min.jpg)
 
 
 ## Instaling
