@@ -19,13 +19,13 @@ def mutate(buf, m_l):
             if len(new_dict) > 0:
                 index_in_nd = randint(0, len(new_dict) - 1)
                 ret = list(new_dict[index_in_nd])
-                if len(ret) >= m_l:
+                if len(ret) >= m_l-1:
                     flag = 1
                 new_dict.remove(new_dict[index_in_nd])
             else:
                 index_in_nd2 = randint(0, len(new_dict2) - 1)
                 ret = list(new_dict2[index_in_nd2])
-                if len(ret) >= m_l:
+                if len(ret) >= m_l-1:
                     flag = 1
                 new_dict2.remove(new_dict2[index_in_nd2])
         except:
@@ -46,7 +46,7 @@ def mutate(buf, m_l):
             new_letter = chr(Low)
         ret[Index_to_insert_random_symbol] = new_letter
         for i in range(Quantity_new_symbols):
-            if len(ret) == m_l:
+            if len(ret) == m_l-1:
                 break
             j = randint(65, 122)
             newline += chr(j)
@@ -56,11 +56,11 @@ def mutate(buf, m_l):
                     ret[i] = chr(randint(33, 126))
         if Del_or_add == 0:
             if Quantity_new_symbols >= len(ret):
-                ret += newline
+                ret += newline[:m_l-1]
             else:
-                ret = ret[:Quantity_new_symbols-1]
+                ret = ret[:m_l-1]
         else:
-            ret += newline
+            ret += newline[:m_l-1]
     return ''.join(ret)
 
 # buf = input('Начальная константа: ')

@@ -29,11 +29,11 @@ with open(config.output_file, 'w') as filik:
                         try:
                             if len(res[i][3]) > 1:
                                 for j in range(len(res[i][3])):
-                                    nn = mutator.mutate(f, res[i][2])
+                                    nn = mutator.mutate(f, res[i][2]-2)
                                     res[i][3][j] = nn
                                     calibrator.calibrate(res[i][3], filik)
                             else:
-                                mm = mutator.mutate(f, res[i][2])
+                                mm = mutator.mutate(f, res[i][2]-2)
                                 calibrator.calibrate([mm], filik)
                         except:
                             break
@@ -83,4 +83,7 @@ with open(config.output_file, 'w') as filik:
                                 mm = mutator.mutate(f, 100)
                                 calibrator.calibrate([mm], filik)
                 calibrator.results_asd()
-
+    sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+    filik.write('with SEGMENTATION fault ' + str(len(sig_segvi)) + '\n\n\n')
+    filik.write('with NO ERROR ' + str(len(no_error)) + '\n\n\n')
+    filik.write('with SIG FPE ' + str(len(sig_fpe)) + '\n\n\n')
