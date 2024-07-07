@@ -10,6 +10,8 @@ host
 ice
 mirror
 remind
+nameless
+name
 visible
 height
 difficulty
@@ -567,6 +569,7 @@ custom
 feast
 fist
 mass
+password
 nameless
 remarkable
 stamp

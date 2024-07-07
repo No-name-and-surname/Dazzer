@@ -62,68 +62,51 @@ def send_inp(file_name, i, testiki, read_count, filik):
     read_count = 0
     strace_command = ["strace", file_name]
     f = chr(randint(97, 122))
-    with subprocess.Popen(strace_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE) as process:        
-        read_count = 0  
-        for line in process.stderr:
-            # print(line.decode())
-            if 'read(' in line.decode():
-                # print('read_count ', read_count)
-                try:
-                    # print(config.FUZZ, tests_2[read_count])
-                    if tests_2[read_count] == config.FUZZ:
-                        nn = mutator.mutate(f, 100)
-                        # print(nn)
-                        f = nn
-                        process.stdin.write(f.encode())
-                        tests_2[read_count] = f
-                        
-                        read_count += 1
-                        process.stdin.flush()
-                        # print(tests_2)
-                    else:
-                        # print(line.decode(), end='')
-                        # print(tests_2[read_count])
-                        process.stdin.write(tests_2[read_count].encode())
-                        read_count += 1
-                        process.stdin.flush()
-                except:
-                    # print(line.decode(), end='')
-                    break
-                    # process.stdin.write(' '.encode())
-                    # process.stdin.flush()
-            # if line == b'lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)\n':
-            #     flag = 1
-            # print(line, end='')
-        exec_time, returncode, stdout, stderr = testing(file_name, tests_2)
-        if returncode == -11:
-            sig_segv.append([returncode, tests_2, read_count, stdout])
-            filik.write("test: (" + ',    '.join(tests_2) + ')' + ' SEGMENTATION fault ' + str(read_count) + '\n\n\n')
-            read_count = 0
-        elif returncode == -8:
-            sig_fpe.append([returncode, tests_2, read_count, stdout])
-            filik.write("test: (" + ',    '.join(tests_2) + ')' + ' SIGFPE fault ' + str(read_count) + '\n\n\n')
-            read_count = 0
-        elif line == -1:
-            time_out.append([returncode, tests_2, read_count, stdout])
-            filik.write("test: (" + ',    '.join(tests_2) + ')' + ' TIME_OUT fault ' + str(read_count) + '\n\n\n')
-            read_count = 0
-        # elif b'lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)\n' in  process.stderr or flag == 1: #Тут надо сделать что бы он изменения отслеживал, а не конкретно ошибку, изменилось что-то - круто, нет, не очень круто
-        #     for i in range(read_count - 1):
-        #         listik.append(one_test)
-        #     ill_const.append([returncode, listik, read_count - 1])
-        else:
-            no_err.append([returncode, tests_2, read_count, stdout])
-            filik.write("test: (" + ',    '.join(tests_2) + ')' + ' No error ' + str(read_count) + '\n\n\n')
-            read_count = 0
-            # print('ЭТО РИД_КАУНТ: ', read_count)
-        file_times.append(exec_time)
-        file_results.append((returncode, stdout, stderr))
-        average_time = statistics.mean(file_times)
-        times.append(average_time)
-        results.append(file_results)
+    try:
+        with subprocess.Popen(strace_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE) as process:        
+            read_count = 0  
+            for line in process.stderr:
+                if 'read(' in line.decode():
+                    try:
+                        if tests_2[read_count] == config.FUZZ:
+                            nn = mutator.mutate(f, 100)
+                            f = nn
+                            process.stdin.write(f.encode())
+                            tests_2[read_count] = f
+                            read_count += 1
+                            process.stdin.flush()
+                        else:
+                            process.stdin.write(tests_2[read_count].encode())
+                            read_count += 1
+                            process.stdin.flush()
+                    except:
+                        break
+    except:
+        return
+    exec_time, returncode, stdout, stderr = testing(file_name, tests_2)
+    if returncode == -11:
+        sig_segv.append([returncode, tests_2, read_count, stdout])
+        filik.write("test: (" + ',    '.join(tests_2) + ')' + ' '+ str(returncode) + ' ' + str(read_count) + '\n\n\n')
         read_count = 0
-        forik = 0
-        # print(sig_segv, time_out, no_err, sig_fpe)
+    elif returncode == -8:
+        sig_fpe.append([returncode, tests_2, read_count, stdout])
+        filik.write("test: (" + ',    '.join(tests_2) + ')' +  ' '+ str(returncode) + ' ' + str(read_count) + '\n\n\n')
+        read_count = 0
+    elif line == -1:
+        time_out.append([returncode, tests_2, read_count, stdout])
+        filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(read_count) + '\n\n\n')
+        read_count = 0
+    else:
+        no_err.append([returncode, tests_2, read_count, stdout])
+        filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' +  str(read_count) + '\n\n\n')
+        read_count = 0
+    file_times.append(exec_time)
+    file_results.append((returncode, stdout, stderr))
+    average_time = statistics.mean(file_times)
+    times.append(average_time)
+    results.append(file_results)
+    read_count = 0
+    forik = 0
 
 def calibrate(testiki, filik):
     times = []
@@ -135,17 +118,6 @@ def calibrate(testiki, filik):
             read_count = 0
             send_inp(file_name, 1, testiki, read_count, filik)
             print(str(c_c) + "'s cycle")
-            print('-------------------------------------------------------------')
-            print()
-            print()
-            print("How many inputs've been fuzzed without error: ", len(no_err))
-            print("How many inputs've been fuzzed with seg_fault: ", len(sig_segv))
-            print("How many inputs've been fuzzed with seg_fpe: ", len(sig_fpe))
-            print()
-            print()
-            print('-------------------------------------------------------------')
-            print()
-            print()
     else:
         read_count = 0
         send_inp(file_name, 0, testiki, read_count, filik)
@@ -162,7 +134,7 @@ def no_error_try(index, mas):
     rand_num = rand_num = randint(0, 87)
     for i in mas[index][1]:
         started_i = i
-        started_out = mas[index][3]
+        started_out = mas[index][2]
         for j in range(len(symbols_list)):
             # print(i[:-1])
             if i[:-1] in '1234567890':
@@ -181,7 +153,7 @@ def no_error_try(index, mas):
             Check = copy.deepcopy(check_no_error(mas[index][1], started_out))
             if Check[0] == True:
                 gg = copy.deepcopy([copy.deepcopy(Check)[2], copy.deepcopy(mas)[index][1], copy.deepcopy(Check)[1]])
-                print(gg)
+                # print(gg)
                 flagik = 1
                 if Check[2] == -11:
                     sig_segv.append(copy.deepcopy(gg))
@@ -220,28 +192,5 @@ def seg_segv(index):
     return resultiki
 
 def results_asd():
-    print("Now let's run strace: ")
-
-    print('-------------SEG_FAULT--------------')
-    print('')
-    for i in range(len(sig_segv)):
-        print('')
-        print('test: ', sig_segv[i][1])
-        print('Crashed on', sig_segv[i][2])
-    print('')
-    print('--------------SIG_FPE----------------')
-    print('')
-    for i in range(len(sig_fpe)):
-        print('')
-        print('test: ', sig_fpe[i][1])
-        print('Crashed on', sig_fpe[i][2])
-    print('')
-    print('---------------OKAY-----------------')
-    print('')
-    for i in range(len(no_err)):
-        print('')
-        print('test : ', no_err[i][1])
-        print('Passed', no_err[i][2])
-        # print(no_error)
     print('')
     # for returncode, stdout, stderr in results:

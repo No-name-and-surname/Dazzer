@@ -2,8 +2,7 @@ from random import *
 import config
 
 fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
-new_dict, new_dict2 = [], []
-flag = 0
+flag, trewq  = 0, 0
 def init(seed):
     random.seed(seed)
 
@@ -11,7 +10,18 @@ def init(seed):
 def deinit():
     pass
 
-def mutate(buf, m_l):
+def mutate(buf, m_l, new_dict2, new_dict):
+    if len(new_dict) == 0 and trewq == 0:
+        for i in fileik:
+            if i.startswith(buf.lower()) == True:
+                if list(buf)[0].lower() != list(buf)[0]:
+                    i = list(i)
+                    i[0] = i[0].upper()
+                    new_dict.append(''.join(i))
+                else:
+                    new_dict.append(i)
+            elif buf in i:
+                new_dict2.append(i)
     Norm_or_rand = randint(0, 1)
     if Norm_or_rand == 0:
         global flag
@@ -63,18 +73,3 @@ def mutate(buf, m_l):
             ret += newline[:m_l-1]
     return ''.join(ret)
 
-# buf = input('Начальная константа: ')
-# for i in fileik:
-#     if i.startswith(buf.lower()) == True:
-#         if list(buf)[0].lower() != list(buf)[0]:
-#             i = list(i)
-#             i[0] = i[0].upper()
-#             new_dict.append(''.join(i))
-#         else:
-#             new_dict.append(i)
-#     elif buf in i:
-#         new_dict2.append(i)
-# for i in range(10):
-#     h = mutate(buf, 0, 0)
-#     print(h)
-#     buf = h
