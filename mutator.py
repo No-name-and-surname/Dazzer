@@ -3,14 +3,8 @@ import config
 
 fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
-def init(seed):
-    random.seed(seed)
 
-
-def deinit():
-    pass
-
-def mutate(buf, m_l, new_dict2, new_dict):
+def mutate(buf, min_length, new_dict2, new_dict):
     if len(new_dict) == 0 and trewq == 0:
         for i in fileik:
             if i.startswith(buf.lower()) == True:
@@ -29,13 +23,13 @@ def mutate(buf, m_l, new_dict2, new_dict):
             if len(new_dict) > 0:
                 index_in_nd = randint(0, len(new_dict) - 1)
                 ret = list(new_dict[index_in_nd])
-                if len(ret) >= m_l-1:
+                if len(ret) >= min_length-1:
                     flag = 1
                 new_dict.remove(new_dict[index_in_nd])
             else:
                 index_in_nd2 = randint(0, len(new_dict2) - 1)
                 ret = list(new_dict2[index_in_nd2])
-                if len(ret) >= m_l-1:
+                if len(ret) >= min_length-1:
                     flag = 1
                 new_dict2.remove(new_dict2[index_in_nd2])
         except:
@@ -47,7 +41,7 @@ def mutate(buf, m_l, new_dict2, new_dict):
         Up = randint(65, 90)
         Low = randint(97, 122)
         Up_or_low_case = randint(0, 1)
-        Quantity_new_symbols = randint(0, m_l)
+        Quantity_new_symbols = randint(0, min_length)
         Del_or_add = randint(0, 1)
         
         if Up_or_low_case == 0:
@@ -56,7 +50,7 @@ def mutate(buf, m_l, new_dict2, new_dict):
             new_letter = chr(Low)
         ret[Index_to_insert_random_symbol] = new_letter
         for i in range(Quantity_new_symbols):
-            if len(ret) == m_l-1:
+            if len(ret) == min_length-1:
                 break
             j = randint(65, 122)
             newline += chr(j)
@@ -66,10 +60,10 @@ def mutate(buf, m_l, new_dict2, new_dict):
                     ret[i] = chr(randint(33, 126))
         if Del_or_add == 0:
             if Quantity_new_symbols >= len(ret):
-                ret += newline[:m_l-1]
+                ret += newline[:min_length-1]
             else:
-                ret = ret[:m_l-1]
+                ret = ret[:min_length-1]
         else:
-            ret += newline[:m_l-1]
+            ret += newline[:min_length-1]
     return ''.join(ret)
 

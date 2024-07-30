@@ -11,22 +11,21 @@ import signal
 import curses
 
 TIMEOUT = 1
- 
-codes = []
-settic = set()
+
+pos = 27
+places = []
+codes, codes_set = [], set()
 countik = 0
-global MAX_C
 MAX_C = 0
-glob_fl = 0
-Grwq = 0
+flag = 0
 term = Terminal()
-filei = open(config.dict_name, 'rb').read().decode().split('\r\n')
+dictionary = open(config.dict_name, 'rb').read().decode().split('\r\n')
 new_dict, new_dict2 = [], []
 x = (term.width - len('Number of tests already sent: ')) // 2
 y = (term.height - term.height //2)
-temp = '---------------------TOTAL---------------------'
-temp_1 = '-----------------------------------------------'
-x_1 = (term.width - len(temp)) // 2
+temp_up = '---------------------TOTAL---------------------'
+temp_bottom = '-----------------------------------------------'
+x_1 = (term.width - len(temp_up)) // 2
 def main(stdscr):
     stdscr.nodelay(1)
     curses.start_color()
@@ -35,30 +34,30 @@ def main(stdscr):
     with open(config.output_file, 'w') as filik:
         if config.FUZZ not in config.args:
             calibrator.calibrate(copy.deepcopy(config.args), filik)
-            calibrator.results_asd()
+            
         else:
             print('So here it is: ')
             calibrator.calibrate(copy.deepcopy(config.args), filik)
         countik = 0
-        curses.curs_set(0)  # Скрыть курсор
-        for gfg in range(1000):
+        curses.curs_set(0)
+        for step in range(1000):
+            places = []
+            pos = 27
             key = stdscr.getch()
             for y in range(term.height - 30, term.height - 10):
                 stdscr.addch(y, x_1, "|", curses.color_pair(1) | curses.A_BOLD)
             for y in range(term.height - 30, term.height - 10):
-                stdscr.addch(y, x_1 + len(temp)-1, "|", curses.color_pair(1) | curses.A_BOLD)
+                stdscr.addch(y, x_1 + len(temp_up)-1, "|", curses.color_pair(1) | curses.A_BOLD)
             stdscr.refresh()
             stdscr.addstr(term.height - 1, 0, "press <Enter> to exit..", curses.color_pair(1) | curses.A_BOLD)
             stdscr.refresh()
-            # stdscr.addstr(term.height // 2, (term.width - len("Текущее значение: {}".format(gfg))) // 2, "Текущее значение: {}".format(gfg))
-            # stdscr.refresh()
-            stdscr.addstr(term.height - 30, x_1, temp, curses.color_pair(1) | curses.A_BOLD)
+            stdscr.addstr(term.height - 30, x_1, temp_up, curses.color_pair(1) | curses.A_BOLD)
             stdscr.refresh()
-            stdscr.addstr(term.height - 10, x_1, temp_1, curses.color_pair(1) | curses.A_BOLD)
+            stdscr.addstr(term.height - 10, x_1, temp_bottom, curses.color_pair(1) | curses.A_BOLD)
             stdscr.refresh()
             if len(config.args) == 1:
-                for i in filei:
-                    if gfg == 0:
+                for i in dictionary:
+                    if step == 0:
                         if i.startswith(config.args[0].lower()) == True:
                             if config.args[0].lower() != config.args[0]:
                                 i = list(i)
@@ -69,9 +68,6 @@ def main(stdscr):
                         elif config.args[0] in i:
                             new_dict2.append(i)
             sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
-            # with term.location(x, y):
-            #     time.sleep(0.5)
-            #     print('Number of tests already sent: {}'.format(bb), end='\b')
             if len(sig_segvi) != 0:
                 for i in range(len(sig_segvi)):
                     res = calibrator.seg_segv(i)
@@ -80,58 +76,58 @@ def main(stdscr):
                     except:
                         MAX_C = MAX_C
                 for i in range(len(sig_segvi)):
-                    f = chr(randint(97, 122))
+                    rand_symbol = chr(randint(97, 122))
                     try:
                         if len(res[i][3]) > 1:
                             for j in range(len(res[i][3])):
-                                nn = mutator.mutate(f, MAX_C, new_dict2, new_dict)
-                                res[i][3][j] = nn
+                                mutated_err_data = mutator.mutate(rand_symbol, MAX_C, new_dict2, new_dict)
+                                res[i][3][j] = mutated_err_data
                                 calibrator.calibrate(res[i][3], filik)
                         else:
-                            mm = mutator.mutate(f, MAX_C, new_dict2, new_dict)
-                            calibrator.calibrate([mm], filik)
+                            mutated_data = mutator.mutate(rand_symbol, MAX_C, new_dict2, new_dict)
+                            calibrator.calibrate([mutated_data], filik)
                     except:
                         break
-                    calibrator.results_asd()
+                    
             elif len(no_error) != 0 or len(sig_fpe) != 0:
                 if len(no_error) != 0:
                     for i in range(len(no_error)):
                         my_err = copy.deepcopy(no_error)
                         res = calibrator.no_error_try(i, my_err)
-                    calibrator.results_asd()
+                    
                     for i in range(len(my_err)):
                         if len(my_err[i][1]) > 1:
                             for j in range(len(my_err[i][1])):
-                                f = chr(randint(97, 122))
-                                nn = mutator.mutate(f, 100, new_dict2, new_dict)
+                                rand_symbol = chr(randint(97, 122))
+                                mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
                                 my_err2 = copy.deepcopy(my_err)
-                                my_err2[i][1][j] = nn
+                                my_err2[i][1][j] = mutated_err_data
                                 calibrator.calibrate(my_err2[i][1], filik)
                         else:
-                            f = chr(randint(97, 122))
-                            mm = mutator.mutate(f, 100, new_dict2, new_dict)
-                            calibrator.calibrate([mm], filik)
-                    calibrator.results_asd()
+                            rand_symbol = chr(randint(97, 122))
+                            mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                            calibrator.calibrate([mutated_data], filik)
+                    
                 else:
                     for i in range(len(sig_fpe)):
                         sig_fpe_1 = copy.deepcopy(sig_fpe)
                         res = calibrator.no_error_try(i, sig_fpe_1)
-                    calibrator.results_asd()
+                    
                     for i in range(len(sig_fpe_1)):
                         if len(sig_fpe_1[i][1]) > 1:
                             for j in range(len(sig_fpe_1[i][1])):
-                                f = chr(randint(97, 122))
-                                nn = mutator.mutate(f, 100, new_dict2, new_dict)
+                                rand_symbol = chr(randint(97, 122))
+                                mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
                                 sig_fpe_2 = copy.deepcopy(sig_fpe_1)
-                                sig_fpe_2[i][1][j] = nn
+                                sig_fpe_2[i][1][j] = mutated_err_data
                                 calibrator.calibrate(sig_fpe_2[i][1], filik)
                         else:
-                            f = chr(randint(97, 122))
-                            mm = mutator.mutate(f, 100, new_dict2, new_dict)
-                            calibrator.calibrate([mm], filik)
-                    calibrator.results_asd()
+                            rand_symbol = chr(randint(97, 122))
+                            mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                            calibrator.calibrate([mutated_data], filik)
+                    
             try:
-                if key == 10 or gfg == 999:
+                if key == 10 or step == 999:
                     sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
                     filik.write(f"-------------------TOTAL-------------------\n\n\n")
                     if len(sig_segvi) > 0:
@@ -141,60 +137,68 @@ def main(stdscr):
                     if len(no_error) > 0:
                         for i in no_error:
                             codes.append(i[0])
-                            settic.add(i[0])
-                        for i in settic:
+                            codes_set.add(i[0])
+                        for i in codes_set:
                             for j in codes:
                                 if j == i:
                                     countik += 1
                             filik.write(f"with {i}: " + str(countik) + '\n\n\n')
                             countik = 0
                     filik.write(f"-------------------------------------------\n\n\n")
-                    glob_fl = 1
-                    break  # Выход из цикла
+                    flag = 1
+                    break
                 else:
                     co = 0
-                    xik = (term.width - len(temp)) // 2 + 5
+                    x_pos = (term.width - len(temp_up)) // 2 + 5
                     sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                    pos = 27
                     if len(sig_segvi) > 0:
-                        stdscr.addstr(term.height - 27, xik, 'with -11: ' + str(len(sig_segvi)), curses.A_BOLD)
+                        stdscr.addstr(term.height - pos, x_pos, 'with -11: ' + str(len(sig_segvi)), curses.A_BOLD)
+                        places.append(pos)
                         stdscr.refresh()
                     if len(sig_fpe) > 0:
-                        stdscr.addstr(term.height - 25, xik, 'with -8: ' + str(len(sig_fpe)), curses.A_BOLD)
+                        pos -= len(places)
+                        stdscr.addstr(term.height - pos, x_pos, 'with -8: ' + str(len(sig_fpe)), curses.A_BOLD)
+                        places.append(pos)
                         stdscr.refresh()
                     if len(no_error) > 0:
                         for i in no_error:
                             codes.append(i[0])
-                            settic.add(i[0])
-                        for i in settic:
+                            codes_set.add(i[0])
+                        for i in codes_set:
                             co += 1
                             for j in codes:
                                 if j == i:
                                     countik += 1
-                            stdscr.addstr(term.height - 23 + co, xik, f"with {i}: " + str(countik), curses.A_BOLD)
+                            pos -= len(places)
+                            stdscr.addstr(term.height - pos, x_pos, f"with {i}: " + str(countik), curses.A_BOLD)
+                            places.append(pos)
                             stdscr.refresh()
                             countik = 0
+                    
                     filik.write(f"-------------------------------------------\n\n\n")
+                    
             except:
                 break
-
-print("Hi, i hope you've already read README, but here is some info that should be useful:\n")
-time.sleep(0.4)
-print("After you read this text, you'll see frame.")
-time.sleep(0.2)
-print("In this frame the results of the fuzzing will be displayed.")
-time.sleep(0.2)
-print("Btw, they will change dynamically.")
-time.sleep(0.2)
-print("Type 'c' to start fuzzing")
-if input() == 'c':
-    try:
-        curses.wrapper(main)
-        print("All results were saved to 'output.txt'")
-    except:
-        if glob_fl == 0:
-            print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
-        else:
+if __name__ == '__main__':
+    print("Hi, i hope you've already read README, but here is some info that should be useful:\n")
+    time.sleep(0.4)
+    print("After you read this text, you'll see frame.")
+    time.sleep(0.2)
+    print("In this frame the results of the fuzzing will be displayed.")
+    time.sleep(0.2)
+    print("Btw, they will change dynamically.")
+    time.sleep(0.2)
+    print("Type 'c' to start fuzzing")
+    if input() == 'c':
+        try:
+            curses.wrapper(main)
             print("All results were saved to 'output.txt'")
-else:
-    print("It doesn't look like 'c'...")
-    print("Okay, have a good time, bye! <3")
+        except:
+            if flag == 0:
+                print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
+            else:
+                print("All results were saved to 'output.txt'")
+    else:
+        print("It doesn't look like 'c'...")
+        print("Okay, have a good time, bye! <3")

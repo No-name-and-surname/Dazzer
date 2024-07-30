@@ -121,9 +121,6 @@ def calibrate(testiki, filik):
     else:
         read_count = 0
         send_inp(file_name, 0, testiki, read_count, filik)
-        # print('stderr: ', stderr)
-        # print(f"Average execution time for {one_test[:-1]}: {average_time:.4f} seconds")
-        # print(f"Results: {file_results}")
         
     return times, results
 
@@ -190,7 +187,3 @@ def seg_segv(index):
             sig_segv[index][1][count] = started_i
         count += 1
     return resultiki
-
-def results_asd():
-    print('')
-    # for returncode, stdout, stderr in results:
