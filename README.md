@@ -4,6 +4,13 @@ Hi there, Dazzer is Fuzzer :)
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pix.png)
 
+## How does it actually work?
+
+Here are some screens of it's work:
+
+![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-47-07.png)
+
+![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-45-17.png)
 
 
 ## Instaling
@@ -29,5 +36,10 @@ After you've finished previous part, you should just run:
 ```
    python3 main.py
 ```
+Then just follow the instructions
+After Dazzer finish you should look into output_file
+Some results:
+
+![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-53-03.png)
 
 ## 
