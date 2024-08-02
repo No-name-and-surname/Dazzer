@@ -31,6 +31,7 @@ It contains five variables:
    * file_name - here should be inserted the name of programm you want fuzz. By default it is  `Test_examples/trees`. (one of the test programms)
    * output_file - a file in which the results are saved after the program is execute. By default it is  `output.txt`, but you can create your own file.
    * dict_name - by default it is equal to the pre-downloaded dictionary. But you can download yours and change it.
+   * SEG_FAULT - by default it is set to *False*. If you change it to *True*, Dazzer will use the mutator function to generate tests to find a segmentation fault as often as other functions. If you leave the flag set to False, then the fuzzer will use       the mutator functions less to generate tests to find the segmentation fault.
 After you've finished previous part, you should just run:
 
 ```
