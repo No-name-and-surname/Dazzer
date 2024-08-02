@@ -16,7 +16,7 @@ def mutate(buf, min_length, new_dict2, new_dict):
                     new_dict.append(i)
             elif buf in i:
                 new_dict2.append(i)
-    Norm_or_rand = randint(0, 1)
+    Norm_or_rand = randint(0, 2)
     if Norm_or_rand == 0:
         global flag
         try:
@@ -34,20 +34,27 @@ def mutate(buf, min_length, new_dict2, new_dict):
                 new_dict2.remove(new_dict2[index_in_nd2])
         except:
             flag = 1
-    if Norm_or_rand == 1 or flag == 1:
+    if Norm_or_rand == 1 or Norm_or_rand == 2 or flag == 1:
         ret = list(buf)
         Index_to_insert_random_symbol = randint(0, len(ret) - 1)
         newline = ''
-        Up = randint(65, 90)
+        Up = randint(33, 90)
         Low = randint(97, 122)
-        Up_or_low_case = randint(0, 1)
+        Strange = randint(97, 122)
         Quantity_new_symbols = randint(0, min_length)
-        Del_or_add = randint(0, 1)
+        if config.SEG_FAULT:
+            Up_or_low_case = randint(0, 2)
+            Del_or_add = randint(0, 2)
+        else:
+            Up_or_low_case = randint(0, 3)
+            Del_or_add = randint(0, 1)
         
         if Up_or_low_case == 0:
             new_letter = chr(Up)
-        else:
+        elif Up_or_low_case == 1:
             new_letter = chr(Low)
+        elif Up_or_low_case == 2 or Up_or_low_case == 3:
+            new_letter = chr(Strange)
         ret[Index_to_insert_random_symbol] = new_letter
         for i in range(Quantity_new_symbols):
             if len(ret) == min_length-1:
@@ -58,12 +65,13 @@ def mutate(buf, min_length, new_dict2, new_dict):
                 ret[i] = chr(ord(ret[i]) ^ ord(chr(j)))
                 if ord(ret[i]) < 33 or ord(ret[i]) > 126:
                     ret[i] = chr(randint(33, 126))
-        if Del_or_add == 0:
+        if Del_or_add == 0 or Del_or_add == 2:
             if Quantity_new_symbols >= len(ret):
                 ret += newline[:min_length-1]
             else:
                 ret = ret[:min_length-1]
         else:
-            ret += newline[:min_length-1]
+            ret = ret[:min_length-1]
+
     return ''.join(ret)
 

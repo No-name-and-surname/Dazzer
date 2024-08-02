@@ -14,7 +14,7 @@ TIMEOUT = 1
 
 pos = 27
 places = []
-codes, codes_set = [], set()
+codes = []
 countik = 0
 MAX_C = 0
 flag = 0
@@ -41,6 +41,7 @@ def main(stdscr):
         countik = 0
         curses.curs_set(0)
         for step in range(1000):
+            codes, codes_set = [], set()
             places = []
             pos = 27
             key = stdscr.getch()
@@ -88,7 +89,6 @@ def main(stdscr):
                             calibrator.calibrate([mutated_data], filik)
                     except:
                         break
-                    
             elif len(no_error) != 0 or len(sig_fpe) != 0:
                 if len(no_error) != 0:
                     for i in range(len(no_error)):
@@ -128,21 +128,37 @@ def main(stdscr):
                     
             try:
                 if key == 10 or step == 999:
-                    sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                    # sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                    # filik.write(f"-------------------------------------------\n\n\n")
+                    # for i in sig_segvi:
+                    #     filik.write("test: (" + ',    '.join(i[1]) + ')' + ' '+ str(i[0]) + ' ' + str(i[2]) + '\n\n\n')
+                    #     filik.write(f"-------------------------------------------\n\n\n")
+
+                    # for i in sig_fpe:
+                    #     filik.write("test: (" + ',    '.join(i[1]) + ')' + ' '+ str(i[0]) + ' ' + str(i[2]) + '\n\n\n')
+                    #     filik.write(f"-------------------------------------------\n\n\n")
+                    
+                    # for i in no_error:
+                    #     filik.write("test: (" + ',    '.join(i[1]) + ')' + ' '+ str(i[0]) + ' ' + '\n\n\n')
+                    #     filik.write(f"-------------------------------------------\n\n\n")
+
                     filik.write(f"-------------------TOTAL-------------------\n\n\n")
                     if len(sig_segvi) > 0:
                         filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
                     if len(sig_fpe) > 0:
                         filik.write('with -8: ' + str(len(sig_fpe)) + '\n\n\n')
                     if len(no_error) > 0:
-                        for i in no_error:
-                            codes.append(i[0])
-                            codes_set.add(i[0])
-                        for i in codes_set:
-                            for j in codes:
-                                if j == i:
-                                    countik += 1
-                            filik.write(f"with {i}: " + str(countik) + '\n\n\n')
+                        # for i in no_error:
+                        #     codes.append(i[0])
+                        #     codes_set.add(i[0])
+                        # for i in codes_set:
+                        #     for j in codes:
+                        #         if j == i:
+                        #             countik += 1
+                        #     filik.write(f"with {i}: " + str(countik) + '\n\n\n')
+                        #     countik = 0
+                        for i in calibrator.codes_set:
+                            filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
                             countik = 0
                     filik.write(f"-------------------------------------------\n\n\n")
                     flag = 1
@@ -162,21 +178,24 @@ def main(stdscr):
                         places.append(pos)
                         stdscr.refresh()
                     if len(no_error) > 0:
-                        for i in no_error:
-                            codes.append(i[0])
-                            codes_set.add(i[0])
-                        for i in codes_set:
-                            co += 1
-                            for j in codes:
-                                if j == i:
-                                    countik += 1
+                        # for i in no_error:
+                        #     codes.append(i[0])
+                        #     codes_set.add(i[0])
+                        # for i in codes_set:
+                        #     for j in codes:
+                        #         if j == i:
+                        #             countik += 1
+                        #     pos -= len(places)
+                        #     stdscr.addstr(term.height - pos, x_pos, f"with {i}: " + str(countik), curses.A_BOLD)
+                        #     places.append(pos)
+                        #     stdscr.refresh()
+                        #     countik = 0
+                        for i in calibrator.codes_set:
                             pos -= len(places)
-                            stdscr.addstr(term.height - pos, x_pos, f"with {i}: " + str(countik), curses.A_BOLD)
+                            stdscr.addstr(term.height - pos, x_pos, f"with {i}: " + str(calibrator.codes_dict[i]), curses.A_BOLD)
                             places.append(pos)
                             stdscr.refresh()
                             countik = 0
-                    
-                    filik.write(f"-------------------------------------------\n\n\n")
                     
             except:
                 break

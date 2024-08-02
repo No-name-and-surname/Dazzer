@@ -13,7 +13,7 @@ sig_segv, time_out, no_err, sig_fpe = [], [], [], []
 file_name = config.file_name
 fileik = open('dict.txt', 'rb').read().decode().split('\r\n')
 new_dict, new_dict2 = [], []
-
+codes_set, codes_dict = set(), {}
 def testing(file_name, listik):
     p = ''.join(listik)
     start_time = time.time()
@@ -99,6 +99,11 @@ def send_inp(file_name, i, testiki, read_count, filik):
     else:
         no_err.append([returncode, tests_2, read_count, stdout])
         filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' +  str(read_count) + '\n\n\n')
+        if returncode not in codes_set:
+            codes_dict.update({returncode:0})
+        else:
+            codes_dict.update({returncode : codes_dict[returncode] + 1})
+        codes_set.add(returncode)
         read_count = 0
     file_times.append(exec_time)
     file_results.append((returncode, stdout, stderr))
