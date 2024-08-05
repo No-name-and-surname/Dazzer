@@ -91,40 +91,48 @@ def main(stdscr):
                         break
             elif len(no_error) != 0 or len(sig_fpe) != 0:
                 if len(no_error) != 0:
-                    for i in range(len(no_error)):
+                    if len(no_error) == 1:
+                        for i in range(len(no_error)):
+                            my_err = copy.deepcopy(no_error)
+                            res = calibrator.no_error_try(i, my_err)
+                    else:
                         my_err = copy.deepcopy(no_error)
-                        res = calibrator.no_error_try(i, my_err)
+                        res = calibrator.no_error_try(0, my_err)
                     
-                    for i in range(len(my_err)):
-                        if len(my_err[i][1]) > 1:
-                            for j in range(len(my_err[i][1])):
-                                rand_symbol = chr(randint(97, 122))
-                                mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
-                                my_err2 = copy.deepcopy(my_err)
-                                my_err2[i][1][j] = mutated_err_data
-                                calibrator.calibrate(my_err2[i][1], filik)
-                        else:
+                    
+                    if len(calibrator.queue_no_error[0][1]) > 1:
+                        for j in range(len(calibrator.queue_no_error[0][1])):
                             rand_symbol = chr(randint(97, 122))
-                            mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
-                            calibrator.calibrate([mutated_data], filik)
+                            mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                            calibrator.queue_no_error[0][1][j] = mutated_err_data
+                            calibrator.calibrate(calibrator.queue_no_error[0][1], filik)
+                        calibrator.queue_no_error.pop(0)
+                    else:
+                        rand_symbol = chr(randint(97, 122))
+                        mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                        calibrator.calibrate([mutated_data], filik)
+                        calibrator.queue_no_error.pop(0)
                     
                 else:
-                    for i in range(len(sig_fpe)):
+                    if len(sig_fpe) == 1:
+                        for i in range(len(sig_fpe)):
+                            sig_fpe_1 = copy.deepcopy(sig_fpe)
+                            res = calibrator.no_error_try(i, sig_fpe_1)
+                    else:
                         sig_fpe_1 = copy.deepcopy(sig_fpe)
-                        res = calibrator.no_error_try(i, sig_fpe_1)
-                    
-                    for i in range(len(sig_fpe_1)):
-                        if len(sig_fpe_1[i][1]) > 1:
-                            for j in range(len(sig_fpe_1[i][1])):
-                                rand_symbol = chr(randint(97, 122))
-                                mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
-                                sig_fpe_2 = copy.deepcopy(sig_fpe_1)
-                                sig_fpe_2[i][1][j] = mutated_err_data
-                                calibrator.calibrate(sig_fpe_2[i][1], filik)
-                        else:
+                        res = calibrator.no_error_try(0, sig_fpe_1)
+                    if len(calibrator.queue_sig_fpe[0][1]) > 1:
+                        for j in range(len(calibrator.queue_sig_fpe[0][1])):
                             rand_symbol = chr(randint(97, 122))
-                            mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
-                            calibrator.calibrate([mutated_data], filik)
+                            mutated_err_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                            calibrator.queue_sig_fpe[0][1][j] = mutated_err_data
+                            calibrator.calibrate(calibrator.queue_sig_fpe[0][1], filik)
+                        calibrator.queue_sig_fpe.pop(0)
+                    else:
+                        rand_symbol = chr(randint(97, 122))
+                        mutated_data = mutator.mutate(rand_symbol, 100, new_dict2, new_dict)
+                        calibrator.calibrate([mutated_data], filik)
+                        calibrator.queue_sig_fpe.pop(0)
                     
             try:
                 if key == 10 or step == 999:
@@ -210,14 +218,15 @@ if __name__ == '__main__':
     time.sleep(0.2)
     print("Type 'c' to start fuzzing")
     if input() == 'c':
-        try:
-            curses.wrapper(main)
-            print("All results were saved to 'output.txt'")
-        except:
-            if flag == 0:
-                print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
-            else:
-                print("All results were saved to 'output.txt'")
+        # try:
+        #     curses.wrapper(main)
+        #     print("All results were saved to 'output.txt'")
+        # except:
+        #     if flag == 0:
+        #         print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
+        #     else:
+        #         print("All results were saved to 'output.txt'")
+        curses.wrapper(main)
     else:
         print("It doesn't look like 'c'...")
         print("Okay, have a good time, bye! <3")

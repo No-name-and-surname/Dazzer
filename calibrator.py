@@ -6,6 +6,8 @@ import mutator
 import copy
 from random import *
 
+queue_no_error = []
+queue_sig_fpe = []
 symbols_list = list("1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'!@#$%^&*()?><\|/:;~,.}{[]")
 tests = copy.deepcopy(config.args)
 outputich = []
@@ -21,7 +23,6 @@ def testing(file_name, listik):
         result = subprocess.run([file_name], input=p, capture_output=True, text=True, timeout=5)
         end_time = time.time()
         exec_time = end_time - start_time
-        # print(result.returncode, result.stdout)
         return exec_time, result.returncode, result.stdout, result.stderr
     except subprocess.TimeoutExpired:
         return float('inf'), -1, "", "Timeout"
@@ -41,7 +42,6 @@ def check_no_error(list_of_inp, started_out):
 def check_seg_segv(list_of_inp):
     exec_time, returncode, stdout, stderr = testing(file_name, list_of_inp)
     if returncode == -11:
-        # print(exec_time, returncode, stdout, stderr)
         return [False, '', '']
     else:
         return [True, stdout, returncode]
@@ -138,16 +138,11 @@ def no_error_try(index, mas):
         started_i = i
         started_out = mas[index][2]
         for j in range(len(symbols_list)):
-            # print(i[:-1])
             if i[:-1] in '1234567890':
-                # print('Our i:', i[:-1])
                 rand_num = randint(10, 61)
             elif i[:-1] in 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM':
-                # print('Our i:', i[:-1])
                 rand_num = randint(62, 87)
-                # print(symbols_list[rand_num])
             elif i[:-1] in "'!@#$%^&*()?><\|/:;~,.}{[]":
-                # print('Our i:', i[:-1])
                 rand_num = randint(0, 9)
             i = symbols_list[rand_num] + '\n'
             # print(i)
@@ -161,10 +156,12 @@ def no_error_try(index, mas):
                     sig_segv.append(copy.deepcopy(gg))
                 elif Check[2] == -8:
                     sig_fpe.append(copy.deepcopy(gg))
+                    queue_sig_fpe.append(copy.deepcopy(gg))
                 elif Check[2] == -1:
                     time_out.append(copy.deepcopy(gg))
                 else:
                     no_err.append(copy.deepcopy(gg))
+                    queue_no_error.append(copy.deepcopy(gg))
 
 
                 break

@@ -1,5725 +1,2294 @@
 test: (1,    +,    1) 0 3
 
 
-test: (v,    W
-,    M
-) 0 3
+test: (lap,    +,    1) 0 2
 
 
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
+test: (lap,    }u`gRIyyrcwdMbWInVroFb_tQ,    1) 0 2
 
 
-test: (T
-,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
+test: (lap,    }u`gRIyyrcwdMbWInVroFb_tQ,    limb) 0 2
 
 
-test: (uneasy,    +,    1) 0 2
-
-
-test: (1,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    1) 0 3
-
-
-test: (1,    +,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 3
-
-
-test: (undoubted,    +,    1) 0 2
-
-
-test: (T
-,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    1) 0 3
-
-
-test: (T
-,    +,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (0DKazlJkKGnfebKwznYeq^Uhu[su[oYVEbNDIfTYC]ClWSq[kROsWaM^AOmhLEPIw^ecjYzXWIyDe,    W
+test: (legend,    z
 ,    1) 0 2
 
 
-test: (T
-,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    1) 0 3
+test: (legend,    1,    1) 0 2
 
 
-test: (T
-,    W
-,    ;) 0 3
+test: (legend,    1,    /gkYf[V^\ifTGiJZQzujtnFw[VYM`Oi]bKNjEPBnrufYFXi[`xjm^Z) 0 2
 
 
-test: (upright,    W
-,    M
-) 0 2
-
-
-test: (T
-,    -,    M
+test: ([,    z
+,    H
 ) 0 3
 
 
-test: (T
-,    W
-,    cYV) 0 3
-
-
-test: ()\kijUDbs[eMGnXWGDdbbhUzssQeZFNVPJWLGI_cxVnal[wlEuwzlZIoszpET,    W
-,    M
-) 0 2
-
-
-test: (v,    YmsQNrMjS]BQNJYP,    M
+test: ([,    lett,    H
 ) 0 3
 
 
-test: (v,    W
-,    uncomfortable) 0 3
+test: ([,    lett,    lesson) 0 3
 
 
-test: (universe,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
+test: (A,    +,    1) 0 3
 
 
-test: (T
-,    uncertain,    M
-) 0 3
+test: (A,    bcJxdaCd`[mDkYOW^R\q`]vfo,    1) 0 3
 
 
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    =) 0 3
+test: (A,    bcJxdaCd`[mDkYOW^R\q`]vfo,    luck) 0 3
 
 
-test: (<ky^VtDya\qGtqp_lsvF\WiGdiW`gsuCtfExqBeEaKjKfZYTubGoeHy`qvbrDVIL,    :
-,    :
-) 0 2
-
-
-test: ({
-,    university,    :
-) 0 3
-
-
-test: ({
-,    :
-,    upstairs) 0 3
-
-
-test: (e,    +,    1) 0 3
-
-
-test: (j
-,    upper,    1) 0 3
-
-
-test: (j
-,    +,    !) 0 3
-
-
-test: (]U\GUwfdqETG_FQ__`\oMsYddI`tWZTsccR``_cWvvhqMLB^n`AJXEXPUUYNvqbMSMKu]\hQgvHbygDaUjiSNoN,    r
+test: (Cisbm\XqJp^RD]vTaPdiPiSXGeveEPXORTF^ihMpzHdVanHY,    a
 ,    1) 0 2
 
 
-test: (j
-,    w,    1) 0 3
+test: (Cisbm\XqJp^RD]vTaPdiPiSXGeveEPXORTF^ihMpzHdVanHY,    xL^^gyJzH^JSHaIsq`RtwZB`ZDuDiZrXWPodjE]]pwyACGrRS[iKxrKfTAKtihaIaN`_GjemLVlPnwhs`lvLYWazqBzYgui,    1) 0 2
 
 
-test: (j
-,    r
-,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
+test: (Cisbm\XqJp^RD]vTaPdiPiSXGeveEPXORTF^ihMpzHdVanHY,    xL^^gyJzH^JSHaIsq`RtwZB`ZDuDiZrXWPodjE]]pwyACGrRS[iKxrKfTAKtihaIaN`_GjemLVlPnwhs`lvLYWazqBzYgui,    lion) 0 2
 
 
-test: (unfortunate,    r
-,    P
+test: (=eEDbhI[IMUG`,    a
+,    B
 ) 0 2
 
 
-test: (j
-,    x,    P
-) 0 3
+test: (=eEDbhI[IMUG`,    v_tlDWzRPEVFZL`]Lh\GTpUtPcNkEpQCTXKECGHkZ\[_CtguGsOfGSHaGE,    B
+) 0 2
 
 
-test: (j
-,    r
-,    |) 0 3
+test: (=eEDbhI[IMUG`,    v_tlDWzRPEVFZL`]Lh\GTpUtPcNkEpQCTXKECGHkZ\[_CtguGsOfGSHaGE,    lighter) 0 2
 
 
-test: (z,    +,    1) 0 3
+test: (lurk,    +,    1) 0 2
 
 
-test: (3
-,    union,    1) 0 3
+test: (lurk,    labour,    1) 0 2
 
 
-test: (3
-,    +,    ?) 0 3
+test: (lurk,    labour,    loom) 0 2
 
 
-test: (unhappy,    /
+test: (launch,    W
 ,    1) 0 2
 
 
-test: (3
-,    unseen,    1) 0 3
+test: (launch,    7[bkXnB]Cw]iYxQJ]dwCc`OgL,    1) 0 2
 
 
-test: (3
-,    /
-,    *\XoCCPWjhww) -8 3
+test: (launch,    7[bkXnB]Cw]iYxQJ]dwCc`OgL,    o) 0 2
 
 
-test: (unexpected,    W
-,    M
-) 0 2
-
-
-test: (*
-,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    M
+test: (*,    W
+,    X
 ) 0 3
 
 
-test: (*
-,    W
-,    unconscious) 0 3
-
-
-test: (eOjQr]fWSlJLAcv^a`zJVvSHlSmfaNDkPPVGHmGakhj,    [
-,    M
-) 0 2
-
-
-test: (*
-,    utmost,    M
+test: (*,    lone,    X
 ) 0 3
 
 
-test: (*
-,    [
-,    $PEKFanTXReuXepnbmBWOci) 0 3
+test: (*,    lone,    {) 0 3
 
 
-test: (ultimate,    [
-,    ;
-) 0 2
+test: (latter,    +,    1) 0 2
 
 
-test: (*
-,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    ;
+test: (latter,    likewise,    1) 0 2
+
+
+test: (latter,    likewise,    linger) 0 2
+
+
+test: (?PTLSyS^]GIKxgkTIfzX`LhTK\VUWqKrcAE]ZUi_lp[txUTQEYhiUNJU,    p
+,    1) 0 2
+
+
+test: (?PTLSyS^]GIKxgkTIfzX`LhTK\VUWqKrcAE]ZUi_lp[txUTQEYhiUNJU,    ;PTdf[WThDNxcYvjWhTgPYmd`i`iO`aelnWmYW,    1) 0 2
+
+
+test: (?PTLSyS^]GIKxgkTIfzX`LhTK\VUWqKrcAE]ZUi_lp[txUTQEYhiUNJU,    ;PTdf[WThDNxcYvjWhTgPYmd`i`iO`aelnWmYW,    {FEeUFM_PZIO^EhxqE) 0 2
+
+
+test: (?,    p
+,    z
 ) 0 3
 
 
-test: (*
-,    [
-,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 3
-
-
-test: (uniform,    W
-,    M
-) 0 2
-
-
-test: (k
-,    upward,    M
+test: (?,    J,    z
 ) 0 3
 
 
-test: (k
-,    W
-,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
+test: (?,    J,    lawn) 0 3
 
 
-test: (+D`]]QDf`mYCGXJz^GCzMHmmjNxzvgW_gL`YbCKFj_qyA\_eaHK\VqjSVuEAHboQitLkrGbzfYipmzrwwA_LN_xbTEpaTzKonv,    >
-,    M
-) 0 2
+test: (laughter,    +,    1) 0 2
 
 
-test: (k
-,    urgent,    M
-) 0 3
+test: (laughter,    lore,    1) 0 2
 
 
-test: (k
-,    >
-,    unlike) 0 3
+test: (laughter,    lore,    leader) 0 2
 
 
-test: (upset,    >
-,    &
-) 0 2
-
-
-test: (k
-,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    &
-) 0 3
-
-
-test: (k
-,    >
-,    useless) 0 3
-
-
-test: (underneath,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: ([
-,    unicorn,    M
-) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    byCdww`rWclo`p]k) 0 3
-
-
-test: (nLmbvB_RopasKjvrYslJoHn]uleqO\]GvdtaNDqEDVGUpYcbhS`\kbIiJ`nqTZFf,    [
-,    M
-) 0 2
-
-
-test: ([
-,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    M
-) 0 3
-
-
-test: ([
-,    [
-,    underground) 0 3
-
-
-test: (}MrPjAszXt`rOYdstAYCy\ARv`afmqTcBi[OjuOLTcb,    [
-,    ;
-) 0 2
-
-
-test: ([
-,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    ;
-) 0 3
-
-
-test: ([
-,    [
-,    $ThOdEBqxztyXNtbLN) 0 3
-
-
-test: (unpleasant,    +,    1) 0 2
-
-
-test: (1,    \ciHLNfrLqRxBeJyfzKXxwmiWcsrvllUEnW`]FmRnFpPzsN^_K]\ohAi]TpTf[_fqy[IKAslwe^NSFdk]LONBjFO,    1) 0 3
-
-
-test: (1,    +,    unusual) 0 3
-
-
-test: (8NJl\wJkRlmAQVSXr[jPdaGweUtDtLKOHKJk^i^PzaEV\LoI_wYEATvhLfAjUUfmMguBGwrTWRKm\FWOzQZDnCdoK,    +,    1) 0 2
-
-
-test: (T
-,    6,    1) 0 3
-
-
-test: (T
-,    +,    unlock) 0 3
-
-
-test: (b,    W
+test: (-,    x
 ,    1) 0 3
 
 
-test: (T
-,    unit,    1) 0 3
+test: (-,    ^,    1) 0 3
 
 
-test: (T
-,    W
-,    |) 0 3
+test: (-,    ^,    link) 0 3
 
 
-test: (9VUhqBO`htpipciXSKYI`umHuVIOAbhaPz`[PgwJzusaYNtBdZLRnRZaDWTypry,    W
-,    M
+test: (leaf,    x
+,    T
 ) 0 2
 
 
-test: (T
-,    5sT]xAn`]g\[W^uiNJGQQctckRA^LWNdnJh]VH``wFSxFTT[N^HQApHDGqeC[iZ_trXd[igjttnv,    M
-) 0 3
-
-
-test: (T
-,    W
-,    ,) 0 3
-
-
-test: (>,    W
-,    M
-) 0 3
-
-
-test: (v,    useful,    M
-) 0 3
-
-
-test: (v,    W
-,    )) 0 3
-
-
-test: (universal,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: (T
-,    unable,    M
-) 0 3
-
-
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    urge) 0 3
-
-
-test: (8KLcTBgCogX\tcG`XGGwXXdZISLZSSYyMcWJFdruwXUyjjy]TEIw_iDLmIr\g^G^`,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: (T
-,    wErdx`dGnBNHmD_mozF_MOOdxePvt_kIP\jTeQ[DhDWZk\xu^D`ZKqRfJ\ZUlSI`_AYscft_qtiSZOmXUl,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (T
-,    W
-,    R) 0 3
-
-
-test: (|,    +,    1) 0 3
-
-
-test: (j
-,    physician,    1) 0 3
-
-
-test: (j
-,    +,    ;ofOTJMlqvKrfX`PgxCaSKzEkjjYBJgaCkTtEZpYVvuTrw^iNPwucwccagjTlRIwMsH`gXMnOEkOzipV) 0 3
-
-
-test: (panel,    r
-,    1) 0 2
-
-
-test: (j
-,    papa,    1) 0 3
-
-
-test: (j
-,    r
-,    X) 0 3
-
-
-test: (b,    r
-,    P
-) 0 3
-
-
-test: (j
-,    +_fG`aFAgmhLfPnbGqpBEafZnXzTOmplj^kRxs^an`rLCfbPgbkV_f`\Fg_[,    P
-) 0 3
-
-
-test: (j
-,    r
-,    O) 0 3
-
-
-test: (%WBrTbcwB_iMsBq`\aEYh]kYW^kPhOvYAGbeJVAKSgqbXG_TCXQuZjVwWUrfpanURv[FOmUH,    +,    1) 0 2
-
-
-test: (3
-,    k,    1) 0 3
-
-
-test: (3
-,    +,    3[obXHiq]DEmTGpvu`TVHeJSAaEwxuo`DTkjLMj\zoZSHx_MccvLexEGVdo) 0 3
-
-
-test: (plastic,    /
-,    1) 0 2
-
-
-test: (3
-,    property,    1) 0 3
-
-
-test: (3
-,    /
-,    permit) -8 3
-
-
-test: (password,    W
-,    M
-) 0 2
-
-
-test: (*
-,    permission,    M
-) 0 3
-
-
-test: (*
-,    W
-,    ibXtI_JnT[pio[fWne\yGKChp[kA_vovJs_nflGpMRiLwuZFUuGRUVwwXXzSASVQ`NhmsSgarpm\UJ) 0 3
-
-
-test: (poet,    [
-,    M
-) 0 2
-
-
-test: (*
-,    prisoner,    M
-) 0 3
-
-
-test: (*
-,    [
-,    VwojKVr) 0 3
-
-
-test: (pen,    [
-,    ;
-) 0 2
-
-
-test: (*
-,    !KhgZOkGomijPUnxsHvPlyU,    ;
-) 0 3
-
-
-test: (*
-,    [
-,    +]No__nXgfkjjDhVtGeTi[`SbTcw[iNBcSJowPKiOVd]kvcX^XFo\acLQ_vvHDlrdLN_Tn[rTlZYYpbVs) 0 3
-
-
-test: (O,    W
-,    M
-) 0 3
-
-
-test: (k
-,    .KQqGx,    M
-) 0 3
-
-
-test: (k
-,    W
-,    pencil) 0 3
-
-
-test: (phrase,    >
-,    M
-) 0 2
-
-
-test: (k
-,    M,    M
-) 0 3
-
-
-test: (k
-,    >
-,    !) 0 3
-
-
-test: (pot,    >
-,    &
-) 0 2
-
-
-test: (k
-,    WPaxm^PoOwCjXfKxCJs[hbgf^fcUJmLq_VrvKoRa\`OZGeeGjdWitVLPcN,    &
-) 0 3
-
-
-test: (k
-,    >
-,    pilot) 0 3
-
-
-test: (w,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
-
-
-test: ([
-,    $KArXVNSi[DO[YonZSwOhRS]z,    M
-) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    peculiar) 0 3
-
-
-test: (k,    [
-,    M
-) 0 3
-
-
-test: ([
-,    #Vk`ippa]uoaWsEGUL^XMjtRxmv\kkj]cSLPy^pP,    M
-) 0 3
-
-
-test: ([
-,    [
-,    +) 0 3
-
-
-test: (3,    [
-,    ;
-) 0 3
-
-
-test: ([
-,    #ILBflzrfKqKBFDcYzcxhwgdIp[wC_rBGPMn[bgS,    ;
-) 0 3
-
-
-test: ([
-,    [
-,    /vpHH\PjJGwoeunCpBAtJRw_LzWOfZMb\) 0 3
-
-
-test: (R,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    *,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    W
-,    9) 0 3
-
-
-test: (1ejOyrGDwvQp]QNAxO`eZiaaljfqOuK_]]kc]oTIMweZkCJLeJEBXuliAHTZknzgBbM]bKeP]lg,    :
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: ({
-,    -,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    :
-,    pole) 0 3
-
-
-test: (SfB^CFfZWh^sbBCA[HXtEKAtNRMgFgXFWxCOp_IyJWgZOmoZslfGY,    :
-,    :
-) 0 2
-
-
-test: ({
-,    O,    :
-) 0 3
-
-
-test: ({
-,    :
-,    process) 0 3
-
-
-test: (precious,    +,    1) 0 2
-
-
-test: (uneasy,    potion,    1) 0 2
-
-
-test: (uneasy,    +,    pie) 0 2
-
-
-test: (4,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    1) 0 3
-
-
-test: (1,    patient,    1) 0 3
-
-
-test: (1,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    vZ^nCYa\iQ`fRosqHihC_EWaIoMtqCQkc`STKyLWQSnyxGvBrHFfScDgH`FzTqoBpE]ZMBFEo) 0 3
-
-
-test: (president,    +,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 2
-
-
-test: (1,    prayer,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 3
-
-
-test: (1,    +,    h) 0 3
-
-
-test: (7SSxnOmHjmnPUmfZLXvKfFlU,    +,    1) 0 2
-
-
-test: (undoubted,    portrait,    1) 0 2
-
-
-test: (undoubted,    +,    0_sJzvJZcQEmPXHcdvUCNhlZkmFDfEghUuPPrHHqkf\b) 0 2
-
-
-test: (!CoTE\nhzjRT\iFdZmiScygTUGYp_zL]kKFjOKW,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    1) 0 2
-
-
-test: (T
-,    x,    1) 0 3
-
-
-test: (T
-,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    `Zbru`zpcMmebZjWUiCH^`Y^DDuiXPyGfhpom`^\g_zRkmxP_Yb`ekOM[fqnnd]GuhEk^XcbLnLfVaBvwBZ) 0 3
-
-
-test: (S,    +,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (T
-,    protection,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (T
-,    +,    =JbEDO^Z[DMFNY_tBvOAzUmmLLFIyLGp_]LD\jkI[PhUQQkTS) 0 3
-
-
-test: (price,    W
-,    1) 0 2
-
-
-test: (0DKazlJkKGnfebKwznYeq^Uhu[su[oYVEbNDIfTYC]ClWSq[kROsWaM^AOmhLEPIw^ecjYzXWIyDe,    pant,    1) 0 2
-
-
-test: (0DKazlJkKGnfebKwznYeq^Uhu[su[oYVEbNDIfTYC]ClWSq[kROsWaM^AOmhLEPIw^ecjYzXWIyDe,    W
-,    ~) 0 2
-
-
-test: (proceed,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    1) 0 2
-
-
-test: (T
-,    Su]pRblmJdU,    1) 0 3
-
-
-test: (T
-,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    @yVs_ogHOmtOFFZnRo\CBdubghnztFVamxVfG_bC``fFU[DyDahtnzRI`pFuRPQP\\bYiwqGSM) 0 3
-
-
-test: (axHwqooTfV^EM,    W
-,    ;) 0 2
-
-
-test: (T
-,    Z`xGlJNvnmOmxv[rvd\iAqCcfABHUxYPV,    ;) 0 3
-
-
-test: (T
-,    W
-,    poke) 0 3
-
-
-test: (@,    W
-,    M
-) 0 3
-
-
-test: (upright,    (,    M
-) 0 2
-
-
-test: (upright,    W
-,    'CPJzhkZEpLWbUlbwqPBOXJQOnYG[vTkGX_jfT_snejlyyLlSYIYECxVIB[[kH`GxptlbrOQtaXPNORGKgmz_huPIFHogsJYFTv) 0 2
-
-
-test: (period,    -,    M
-) 0 2
-
-
-test: (T
-,    1,    M
-) 0 3
-
-
-test: (T
-,    -,    q) 0 3
-
-
-test: (],    W
-,    cYV) 0 3
-
-
-test: (T
-,    port,    cYV) 0 3
-
-
-test: (T
-,    W
-,    9) 0 3
-
-
-test: (F,    W
-,    M
-) 0 3
-
-
-test: ()\kijUDbs[eMGnXWGDdbbhUzssQeZFNVPJWLGI_cxVnal[wlEuwzlZIoszpET,    /,    M
-) 0 2
-
-
-test: ()\kijUDbs[eMGnXWGDdbbhUzssQeZFNVPJWLGI_cxVnal[wlEuwzlZIoszpET,    W
-,    pan) 0 2
-
-
-test: (prison,    YmsQNrMjS]BQNJYP,    M
-) 0 2
-
-
-test: (v,    vZhoMEDRXQmTqxnMpYH,    M
-) 0 3
-
-
-test: (v,    YmsQNrMjS]BQNJYP,    pinch) 0 3
-
-
-test: (hdtqjVnvQPvUD\alMhOQDjMzciqegSbxpNOuoFKJmUmoJTvWekymqJLMYul,    W
-,    uncomfortable) 0 2
-
-
-test: (v,    =koIe,    uncomfortable) 0 3
-
-
-test: (v,    W
-,    Z) 0 3
-
-
-test: (partner,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: (universe,    plenty,    M
-) 0 2
-
-
-test: (universe,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    >) 0 2
-
-
-test: (ponder,    uncertain,    M
-) 0 2
-
-
-test: (T
-,    (bQj`AaYSGlJyHusLTUUN[vh`SYSM]FXqOjhgVWjBQAmYMmYSyAbX^`TrsMRebknbKTTCNUQnnIU,    M
-) 0 3
-
-
-test: (T
-,    uncertain,    8) 0 3
-
-
-test: (<,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    =) 0 3
-
-
-test: (T
-,    *,    =) 0 3
-
-
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    *FO]w^VpMWjK]QrDeNSktYTEglfxaLRiG`g) 0 3
-
-
-test: (park,    :
-,    :
-) 0 2
-
-
-test: (<ky^VtDya\qGtqp_lsvF\WiGdiW`gsuCtfExqBeEaKjKfZYTubGoeHy`qvbrDVIL,    pink,    :
-) 0 2
-
-
-test: (<ky^VtDya\qGtqp_lsvF\WiGdiW`gsuCtfExqBeEaKjKfZYTubGoeHy`qvbrDVIL,    :
-,    /) 0 2
-
-
-test: (0,    university,    :
-) 0 3
-
-
-test: ({
-,    `,    :
-) 0 3
-
-
-test: ({
-,    university,    G) 0 3
-
-
-test: (K,    :
-,    upstairs) 0 3
-
-
-test: ({
-,    principle,    upstairs) 0 3
-
-
-test: ({
-,    :
-,    'B\TGXlaUZjgMJ]mgYYz]lVihYGLid_M^JlIggxTvjQwF`x) 0 3
-
-
-test: (8,    +,    1) 0 3
-
-
-test: (e,    .,    1) 0 3
-
-
-test: (e,    +,    0) 0 3
-
-
-test: (peak,    upper,    1) 0 2
-
-
-test: (j
-,    ?,    1) 0 3
-
-
-test: (j
-,    upper,    $RWhCGqd_EC^pArTuQj`zWKeawYESjrHdc\wnzk\h]P`ySkBrwSJOujKdzkw) 0 3
-
-
-test: (9,    +,    !) 0 3
-
-
-test: (j
-,    "o\ACfKUqMR\\oWSEAWQfhjzezpBc]xkZp,    !) 0 3
-
-
-test: (j
-,    +,    -Hg]Ulnyb`RpFrKuv) 0 3
-
-
-test: (pry,    r
-,    1) 0 2
-
-
-test: (]U\GUwfdqETG_FQ__`\oMsYddI`tWZTsccR``_cWvvhqMLB^n`AJXEXPUUYNvqbMSMKu]\hQgvHbygDaUjiSNoN,    oTY,    1) 0 2
-
-
-test: (]U\GUwfdqETG_FQ__`\oMsYddI`tWZTsccR``_cWvvhqMLB^n`AJXEXPUUYNvqbMSMKu]\hQgvHbygDaUjiSNoN,    r
-,    i) 0 2
-
-
-test: (bl\hxvZHRzADlRqvclsUbOflCPcsaBWZnuYUovKZV^ua`KG_zAyKd\CPmxWt]VBS\eptlruzNnuoyxZfXh^rOYpEfTojxxlYJXCR,    w,    1) 0 2
-
-
-test: (j
-,    %ihBeboegQ`Vo^Ri^xmrn\^hG^UjGweJuXx,    1) 0 3
-
-
-test: (j
-,    w,    L) 0 3
-
-
-test: (7zxOU[r`bXyFRNBMZGeI[xxpVcJk_xjwt`ccKDH`[vLoyQnc`YDYNEyljnzfOqaozfseUQ`lpwQdTkj[zTg,    r
-,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 2
-
-
-test: (j
-,    k,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
-
-
-test: (j
-,    r
-,    )) 0 3
-
-
-test: (/tALqo_WWwPvOd\UrnddPiMhwfPgiyOsnkAay[TaFN^CVechhSNBdkZI_chEvlIDDVLkdXBv,    r
-,    P
-) -8 2
-
-
-test: (unfortunate,    [pWvcsiarAuDBcni_oKtLHyPJCtR`prsADh]xaQGYY\OyfHJzkRiZourrTU`PzgvkMiayKevUCjnfdkpq]NkS[nrNMcHba^pkhqS,    P
-) 0 2
-
-
-test: (unfortunate,    r
-,    JvtZbtOd]tA^E]iAzn_bdvq]sRpfhWBid_ppw^_xSCKUs_loJPPpPFNXky) 0 2
-
-
-test: (palace,    x,    P
-) 0 2
-
-
-test: (j
-,    plant,    P
-) 0 3
-
-
-test: (j
-,    x,    pet) 0 3
-
-
-test: (passionate,    r
-,    |) 0 2
-
-
-test: (j
-,    T,    |) 0 3
-
-
-test: (j
-,    r
-,    |SIqHzBIByXyHUlFPcqXyC_uhYabjP]VkXg`PmTTAn`uSMcO) 0 3
-
-
-test: (poison,    +,    1) 0 2
-
-
-test: (z,    plunge,    1) 0 3
-
-
-test: (z,    +,    _CcXBbScxwzjzESePATn_`E[bWQQiPblLsAuwS^_e]IuldonwyxtMOM^d\yAX`yKB]igoiqWXE]BI) 0 3
-
-
-test: (prince,    union,    1) 0 2
-
-
-test: (3
-,    ,Zfr`j`uzESXxDNaNWEaD^aItvnXsF_TMG^_,    1) 0 3
-
-
-test: (3
-,    union,    proof) 0 3
-
-
-test: (painful,    +,    ?) 0 2
-
-
-test: (3
-,    @sBfzOuxSyUg]sM`RBggHT_QBaa[gzpbaY^eoHypfQZ^Lv\[KXxeVaTUleW_ErMRi,    ?) 0 3
-
-
-test: (3
-,    +,    0EfpvsaRNQnfJUK\gyfk_DvUhZRfFyJ\tsId_BDlpHaCq[qWlKrTgFUBlmq_BeGaxmPkhOP[WUqpHsJaruUNeBtoOl) 0 3
-
-
-test: (puff,    /
-,    1) 0 2
-
-
-test: (unhappy,    2,    1) 0 2
-
-
-test: (unhappy,    /
-,    5) 0 2
-
-
-test: (=\ZyiGwgC[Pj\c`ove\Xh_PYkRcQLMyAeouc_tWAbB\wSmF_lHYtpKySz,    unseen,    1) 0 2
-
-
-test: (3
-,    :,    1) 0 3
-
-
-test: (3
-,    unseen,    w) 0 3
-
-
-test: (0]xmFnDGJj`GgVXyByJIxTJtGNkDrumb]qjWYcvbRdJeKTIOhUDcLS^SrRQIk,    W
-,    M
-) 0 2
-
-
-test: (unexpected,    /UVj]]ZT[sAZxOTrlaxcZkRcN^Iv^gmJZwKabaxiIjEaZMor,    M
-) 0 2
-
-
-test: (unexpected,    W
-,    ryBLvdtayoQUVIWDAaNqpSmSvDxBetnXsYZOATc`O_Gyf\RfVoVAQlWQcPcDQLU) 0 2
-
-
-test: (positive,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    M
-) 0 2
-
-
-test: (*
-,    per,    M
-) 0 3
-
-
-test: (*
-,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    :SBu_tV) 0 3
-
-
-test: ("xxsLz^`gHAMQIpeZTSP[WviuI[BS^_yH,    W
-,    unconscious) 0 2
-
-
-test: (*
-,    8,    unconscious) 0 3
-
-
-test: (*
-,    W
-,    '^) 0 3
-
-
-test: (.,    [
-,    M
-) 0 3
-
-
-test: (eOjQr]fWSlJLAcv^a`zJVvSHlSmfaNDkPPVGHmGakhj,    prefer,    M
-) 0 2
-
-
-test: (eOjQr]fWSlJLAcv^a`zJVvSHlSmfaNDkPPVGHmGakhj,    [
-,    +) 0 2
-
-
-test: ({gHombH\y\^nnPlr^TdxMYWpHYlYz\_\EMoWxR[`xMgn`G\VeTOjiHiNcMM]HwAtW`UXVerneyvjdVO,    utmost,    M
-) 0 2
-
-
-test: (*
-,    praise,    M
-) 0 3
-
-
-test: (*
-,    utmost,    TqNti]BNLQFaLC^LfsVNeHC_[O[ZfHnqsjnLq^V\) 0 3
-
-
-test: (W,    [
-,    $PEKFanTXReuXepnbmBWOci) 0 3
-
-
-test: (*
-,    >,    $PEKFanTXReuXepnbmBWOci) 0 3
-
-
-test: (*
-,    [
-,    K) 0 3
-
-
-test: (3,    [
-,    ;
-) 0 3
-
-
-test: (ultimate,    0,    ;
-) 0 2
-
-
-test: (ultimate,    [
-,    &) 0 2
-
-
-test: (&,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    ;
-) 0 3
-
-
-test: (*
-,    physical,    ;
-) 0 3
-
-
-test: (*
-,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    <) 0 3
-
-
-test: (pad,    [
-,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 2
-
-
-test: (*
-,    0XxKmGowawF]kgqowjoWoMn`wXPJh^pXYA_a^[E,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 3
-
-
-test: (*
-,    [
-,    previous) 0 3
-
-
-test: (T,    W
-,    M
-) 0 3
-
-
-test: (uniform,    X,    M
-) 0 2
-
-
-test: (uniform,    W
-,    HzCqW]OOaZNiOJPBQgh]NnuBkvkRuvRWOpGrvoIZ[Adk) 0 2
-
-
-test: (peep,    upward,    M
-) 0 2
-
-
-test: (k
-,    _eVLGEBYTxnTqbSllHqJn`KlXmc^[euwWuu,    M
-) 0 3
-
-
-test: (k
-,    upward,    lfQXuiWLcsWNQqdmKxjx[tmwP) 0 3
-
-
-test: (pressure,    W
-,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 2
-
-
-test: (k
-,    R,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (k
-,    W
-,    u) 0 3
-
-
-test: (<FqRTQKMYjakmCgDgbit^\\qe`VeL]\VwIlcMNNxnXT,    >
-,    M
-) 0 2
-
-
-test: (+D`]]QDf`mYCGXJz^GCzMHmmjNxzvgW_gL`YbCKFj_qyA\_eaHK\VqjSVuEAHboQitLkrGbzfYipmzrwwA_LN_xbTEpaTzKonv,    gxPxR[]fNOpChAoGFvFkCzA,    M
-) 0 2
-
-
-test: (+D`]]QDf`mYCGXJz^GCzMHmmjNxzvgW_gL`YbCKFj_qyA\_eaHK\VqjSVuEAHboQitLkrGbzfYipmzrwwA_LN_xbTEpaTzKonv,    >
-,    krx[lrht\KwjklANmtWXtgnBfRVgiH^zOY_BvAG[RVfAw) 0 2
-
-
-test: (prospect,    urgent,    M
-) 0 2
-
-
-test: (k
-,    preserve,    M
-) 0 3
-
-
-test: (k
-,    urgent,    pillar) 0 3
-
-
-test: (9,    >
-,    unlike) 0 3
-
-
-test: (k
-,    purple,    unlike) 0 3
-
-
-test: (k
-,    >
-,    powder) 0 3
-
-
-test: (principal,    >
-,    &
-) 0 2
-
-
-test: (upset,    pride,    &
-) 0 2
-
-
-test: (upset,    >
-,    ") 0 2
-
-
-test: ($,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    &
-) 0 3
-
-
-test: (k
-,    8WpuqIdfiwHjZEbLZUwHi\itlWekGVsIueOeiDtRFHJAR\SYa]ZCl,    &
-) 0 3
-
-
-test: (k
-,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    =) 0 3
-
-
-test: (pin,    >
-,    useless) 0 2
-
-
-test: (k
-,    8YsGA,    useless) 0 3
-
-
-test: (k
-,    >
-,    4[dQiPtnIR[w[JHRjYCiaQFCD`ximwJt) 0 3
-
-
-test: (:,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
-
-
-test: (underneath,    #,    M
-) 0 2
-
-
-test: (underneath,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    perch) 0 2
-
-
-test: (rTtiUrqyS^uxDOqezmeFb[fI^xjdNWokmyykk,    unicorn,    M
-) 0 2
-
-
-test: ([
-,    pit,    M
-) 0 3
-
-
-test: ([
-,    unicorn,    $) 0 3
-
-
-test: ($,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    byCdww`rWclo`p]k) 0 3
-
-
-test: ([
-,    practice,    byCdww`rWclo`p]k) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    -koUjY\j]Ph_ewerOc_vZlj__NFIPdbn\YDPhIJcWCkwtwCbgm_BRLe`AzevUklYpjugeCj\\WcHAqsBBwCxAhL^UB`Mja) 0 3
-
-
-test: (parchment,    [
-,    M
-) 0 2
-
-
-test: (nLmbvB_RopasKjvrYslJoHn]uleqO\]GvdtaNDqEDVGUpYcbhS`\kbIiJ`nqTZFf,    precise,    M
-) 0 2
-
-
-test: (nLmbvB_RopasKjvrYslJoHn]uleqO\]GvdtaNDqEDVGUpYcbhS`\kbIiJ`nqTZFf,    [
-,    "xZmY\yQlaxQo_) 0 2
-
-
-test: (protect,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    M
-) 0 2
-
-
-test: ([
-,    peril,    M
-) 0 3
-
-
-test: ([
-,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    pardon) 0 3
-
-
-test: (practical,    [
-,    underground) 0 2
-
-
-test: ([
-,    5,    underground) 0 3
-
-
-test: ([
-,    [
-,    propose) 0 3
-
-
-test: (pitch,    [
-,    ;
-) 0 2
-
-
-test: (}MrPjAszXt`rOYdstAYCy\ARv`afmqTcBi[OjuOLTcb,    persuade,    ;
-) 0 2
-
-
-test: (}MrPjAszXt`rOYdstAYCy\ARv`afmqTcBi[OjuOLTcb,    [
-,    ab\XRMsljbdEADGnzr\nOppimoQKcgg^MFyS`ZVrwhfPUWEmn]WTkoAQUXLdB[`BckOjPbbkKsNYVxXOyQoZZ) 0 2
-
-
-test: (lUjl_djrDxQfJqRxlqwh^i^g]w]SG[OBFn\js\zQfhYAMo[[xOiAthIQrVaUf]Fy`hLteofeQgycL\ec[FUxFOv\oQhE\RCZ^,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    ;
-) 0 2
-
-
-test: ([
-,    :M`OztYiCgpcUUaRfmzRx[ukZh\`uV,    ;
-) 0 3
-
-
-test: ([
-,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    pace) 0 3
-
-
-test: (parlour,    2
-,    2
-) 0 2
-
-
-test: (5
-,    pony,    2
-) 0 3
-
-
-test: (5
-,    2
-,    1HMqkl\FZ]utAGfGWECzdfACrBVTwt^RMgM_NZdVupvwc\yFc\gsb[^Y) 0 3
-
-
-test: (%OO\hRcuqqo`COtR`KK]nWCi\\X,    +,    1) 0 2
-
-
-test: (v
-,    !lsXVtHyySgywpKFahjywKj[VG\vCLsbiHDuchhwiHrThBYiFY^v[bp]SSLmXXiCPdTPcYjXUiUMW,    1) 0 3
-
-
-test: (v
-,    +,    /) 0 3
-
-
-test: (>qLUwYUhUetkEJICjzPDLNCwzZvmixmBxSpfbZazIWgKqgMHgRN,    U
-,    1) 0 2
-
-
-test: (v
-,    pipe,    1) 0 3
-
-
-test: (v
-,    U
-,    performance) 0 3
-
-
-test: (prey,    U
-,    W
-) 0 2
-
-
-test: (v
-,    j,    W
-) 0 3
-
-
-test: (v
-,    U
-,    I) 0 3
-
-
-test: (0,    +,    1) 0 3
-
-
-test: (2
-,    +,    1) 0 3
-
-
-test: (2
-,    +,    purchase) 0 3
-
-
-test: (f,    *
-,    1) 0 3
-
-
-test: (2
-,    pattern,    1) 0 3
-
-
-test: (2
-,    *
-,    $qJ[paVCmOVHk^WYopKokRUbnjc_sVJBfABEVvdrvllMDzhNS_ezKBldKpdQcIBMdBQUjlvDLItHnHXecZNhIQmJVj) 0 3
-
-
-test: (possibility,    *
-,    f
-) 0 2
-
-
-test: (2
-,    3,    f
-) 0 3
-
-
-test: (2
-,    *
-,    punish) 0 3
-
-
-test: (%I]lMOrEe\mwglfjIAVBF`VK[queePYp`noXaOg[tRGc\UDRgrEeQif]gtg_JPQ`mNv_kOnQhXd^mOdrwExhcS,    W
-,    M
-) 0 2
-
-
-test: (*
-,    plane,    M
-) 0 3
-
-
-test: (*
-,    W
-,    player) 0 3
-
-
-test: (>TbPU^`bPkWItjJKyzkciz[nEAdQROuwMtsu_z`K__RTK\PtJttHtUrR\lWIy_hBOS_K_kTkocRZE_,    \
-,    M
-) 0 2
-
-
-test: (*
-,    peeve,    M
-) 0 3
-
-
-test: (*
-,    \
-,    8) 0 3
-
-
-test: (e,    \
-,    %
-) 0 3
-
-
-test: (*
-,    profound,    %
-) 0 3
-
-
-test: (*
-,    \
-,    -) 0 3
-
-
-test: (),    W
-,    M
-) 0 3
-
-
-test: (o
-,    pursue,    M
-) 0 3
-
-
-test: (o
-,    W
-,    perish) 0 3
-
-
-test: (*][w^caGDnUKoa[\mALLPFThx`DoPPZiLc,    }
-,    M
-) 0 2
-
-
-test: (o
-,    <Q`PCRG_euOxYpfH_dYM[GATqencbm[pnFwKzeWoIFfrnT_xgYiYqzjhtUoDK^DPCOIUAvutzvDt]DB,    M
-) 0 3
-
-
-test: (o
-,    }
-,    )) 0 3
-
-
-test: (5,    }
-,    [
-) 0 3
-
-
-test: (o
-,    pursuit,    [
-) 0 3
-
-
-test: (o
-,    }
-,    program) 0 3
-
-
-test: (7,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
-
-
-test: ([
-,    M,    M
-) 0 3
-
-
-test: (x,    [
-,    M
-) 0 3
-
-
-test: ([
-,    H,    M
-) 0 3
-
-
-test: ([
-,    [
-,    n) 0 3
-
-
-test: (>,    [
-,    >
-) 0 3
-
-
-test: ([
-,    pig,    >
-) 0 3
-
-
-test: ([
-,    [
-,    #RzhtSxSVBzlcTEoJcluDt\Ev[sk[QcYhXqHoaTgekgChgPrFFqWZ`qjrWLkZbdqhgvv\yLzNJiZAWpcaTup) 0 3
-
-
-test: (uxFweMKiTqPfaAOh\YOVZX_cbQGMkT,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: ('
-,    potato,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ('
-,    W
-,    i) 0 3
-
-
-test: (pose,    \
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: ('
-,    #,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ('
-,    \
-,    4^YJZnqPkhLHjXAltqvSddkF`GHJznWdtgY`YE_wjbSygWPg]wQsepArQcsHWivgVKsh^[wjrno`]FHwxYGoioUHV_YY^ljkQgMV) 0 3
-
-
-test: (qzodJsStit\vuePvL^hSNLdY[cOsQJOBr[bZvKUseEWurA,    \
-,    \
-) 0 2
-
-
-test: ('
-,    pat,    \
-) 0 3
-
-
-test: ('
-,    \
-,    peter) 0 3
-
-
-test: (LpQs]LXLLQxOZo`r]sjTUQYF[,    +,    1) 0 2
-
-
-test: (*
-,    e,    1) 0 3
-
-
-test: (*
-,    +,    patrician) 0 3
-
-
-test: (ierwZZmkbwPy`LBNWxqJfbBKct^CrrzwrH^\YHnnyJ\HkdnFCLmsxkohUlxndS]hESuNoCh,    C
-,    1) 0 2
-
-
-test: (*
-,    preparation,    1) 0 3
-
-
-test: (*
-,    C
-,    .) 0 3
-
-
-test: (pop,    C
-,    t
-) 0 2
-
-
-test: (*
-,    pirate,    t
-) 0 3
-
-
-test: (*
-,    C
-,    perform) 0 3
-
-
-test: (qbEHtdsE_NkXsFQJmFDHlEkmewzN,    r
-,    P
-) 0 2
-
-
-test: (*
-,    v,    P
-) 0 3
-
-
-test: (*
-,    r
-,    print) 0 3
-
-
-test: (pine,    >
-,    P
-) 0 2
-
-
-test: (*
-,    C,    P
-) 0 3
-
-
-test: (*
-,    >
-,    photograph) 0 3
-
-
-test: (5,    >
-,    ;
-) 0 3
-
-
-test: (*
-,    pierce,    ;
-) 0 3
-
-
-test: (*
-,    >
-,    palm) 0 3
-
-
-test: (prompt,    +,    1) 0 2
-
-
-test: (F
-,    7,    1) 0 3
-
-
-test: (F
-,    +,    passe) 0 3
-
-
-test: (GzU[Di`uUfBC]CSsKiS_kojFDQ^xEHWex\sxukVfzmIkDOWVzWqf^rURSlzusDTmEjzLNbVoicYbYfFmXSGGEQTQdmn[NNdh`yk,    z
-,    1) 0 2
-
-
-test: (F
-,    pavement,    1) 0 3
-
-
-test: (F
-,    z
-,    0ZGJm[uX^CVa]gKAosDZBfMXaHKsJETwKbAdVxb_eConp]m_yKnmFIcsrBJdtIm]bFKcnfnzJMjQjbAKgmo) 0 3
-
-
-test: (protest,    z
-,    c
-) 0 2
-
-
-test: (F
-,    <,    c
-) 0 3
-
-
-test: (F
-,    z
-,    AhfdjJ) 0 3
-
-
-test: (progress,    /
-,    1) 0 2
-
-
-test: (V
-,    `pjgaZURVCqZ_XIBZwlLIaPQVNtxiwhtsT,    1) 0 3
-
-
-test: (V
-,    /
-,    tjuvX`]isbRoI\_P]kWKvXZUv^qpg_ISmF\lgc) 0 3
-
-
-test: (polite,    8
-,    1) 0 2
-
-
-test: (V
-,    ],    1) 0 3
-
-
-test: (V
-,    8
-,    patch) 0 3
-
-
-test: ([,    8
-,    D
-) 0 3
-
-
-test: (V
-,    pont,    D
-) 0 3
-
-
-test: (V
-,    8
-,    <) 0 3
-
-
-test: (`ZeOv\UHu^kTKfP`O]cO\PO[`O`]]TTdMyAt_XPaU]_hrKAibJz`JMZwUk`xyUWodEXpBeiMgdcXVMTmvDX\Wk_IG[llR^ye_fie,    W
-,    M
-) 0 2
-
-
-test: (2
-,    6,    M
-) 0 3
-
-
-test: (2
-,    W
-,    pool) 0 3
-
-
-test: (platform,    #
-,    M
-) 0 2
-
-
-test: (2
-,    peaceful,    M
-) 0 3
-
-
-test: (2
-,    #
-,    xE`ixBJKYTUQWFhoBOArFvSskAsPPblY`^^N) 0 3
-
-
-test: (patience,    #
-,    <
-) 0 2
-
-
-test: (2
-,    prevent,    <
-) 0 3
-
-
-test: (2
-,    #
-,    =kMqQNHS]eBbdzzrWvQoUqOgJ\XRnASrB[JsKb]FSgiSI) 0 3
-
-
-test: (puzzle,    [
-,    M
-) 0 2
-
-
-test: (8
-,    professional,    M
-) 0 3
-
-
-test: (8
-,    [
-,    9) 0 3
-
-
-test: (j,    6
-,    M
-) 0 3
-
-
-test: (8
-,    #rElTuVnEtWeo`RwUeF]DptNdp^lBBXaXzIvOWK\ezpKQvSpfTzNeVENCRKqoA,    M
-) 0 3
-
-
-test: (8
-,    6
-,    possess) 0 3
-
-
-test: (pillow,    6
-,    |
-) 0 2
-
-
-test: (8
-,    ,ZL`^eq^RSl[gfOkolRrOrDIsfCEkRoYe\dU^LrrkVcuFa[G]yfEw\CPI^lDKNUurVs_JLS`YfVGBPMFxaPnRKSrAzj\]oxw,    |
-) 0 3
-
-
-test: (8
-,    6
-,    ShZIR_poRDuWobGEURayFTWNompiIYIKjLQSeTVZ\DRB]cVBwszrfzzZw) 0 3
-
-
-test: (9`GDFCgAvZoGxD`,    [
-,    ;
-) 0 2
-
-
-test: (0
-,    <YqgrVM^Rsf,    ;
-) 0 3
-
-
-test: (0
-,    [
-,    q) 0 3
-
-
-test: (petunia,    5
-,    ;
-) 0 2
-
-
-test: (0
-,    paw,    ;
-) 0 3
-
-
-test: (0
-,    5
-,    `) 0 3
-
-
-test: (%VREBTEZ[_oVIjncSQbBOJShEdyMNpxt[csV]shi]jb`YNTBXRGUduknk`jJ_zAgDdW\vPasKv,    5
-,    5
-) 0 2
-
-
-test: (0
-,    possession,    5
-) 0 3
-
-
-test: (0
-,    5
-,    profession) 0 3
-
-
-test: (,n_cyz^bTzB_Ja[WCZJM^ZFIREHvRwhxJfvhUKl[R`FYgPWskv]GGbDb[kIbWpe`dnbE,    W
-,    M
-) 0 2
-
-
-test: (*
-,    1eDku]nthgUwkSAWowgHu`qfrGTGSyIjI[pAzXQH_SL[MfGAzpTtNFByKgsImpJmVVKK]^u,    M
-) 0 3
-
-
-test: (*
-,    W
-,    perceive) 0 3
-
-
-test: (&Sy`PGI\ubdQqdX]Yd`gpXAS`MQZGkkR_Aa,    ?
-,    M
-) 0 2
-
-
-test: (*
-,    vwUw[_,    M
-) 0 3
-
-
-test: (*
-,    ?
-,    omwgO_^siNnohJHFlSuxZzgeumYqec_pjDPF_rKs^ZTTp\lnS\cqKIKXAY]) 0 3
-
-
-test: (>LS`tlMXUcONHqrULY\nwriez_KY\EKXx[XvbYfQkd,    ?
-,    >
-) 0 2
-
-
-test: (*
-,    ',    >
-) 0 3
-
-
-test: (*
-,    ?
-,    E) 0 3
-
-
-test: (\zDqpUMGAncmLwFkJ,    5
-,    &
-) 0 2
-
-
-test: (/
-,    project,    &
-) -8 3
-
-
-test: (/
-,    5
-,    /Z\RUGZny\`vcrzVSpXnxZdOvfqARXD`wi) 0 3
-
-
-test: ($,    5
-,    6
-) 0 3
-
-
-test: (/
-,    d,    6
-) -8 3
-
-
-test: (/
-,    5
-,    G) 0 3
-
-
-test: (provide,    [
-,    M
-) 0 2
-
-
-test: (*
-,    6AXMkM,    M
-) 0 3
-
-
-test: (*
-,    [
-,    pity) 0 3
-
-
-test: (>,    6
-,    M
-) 0 3
-
-
-test: (*
-,    powerful,    M
-) 0 3
-
-
-test: (*
-,    6
-,    5) 0 3
-
-
-test: (\,    6
-,    @
-) 0 3
-
-
-test: (*
-,    HjHbY_\ipcYcPpPD^NaukdCeUVGhd[ErXxsrl]EcMMeQRsYjIxkcFUOVplNLRDTp`Axlu[MhWXrJUyewN_VKJPw[SYRpklEpXGhb,    @
-) 0 3
-
-
-test: (*
-,    6
-,    [lnr^rC]pgCMRHQabzQs]ZrTrwPzlFhJguTSJOMDVR) 0 3
-
-
-test: (z,    1
-,    ;
-) 0 3
-
-
-test: (/
-,    ?qKdTTMb\mdrXFWU\XXvqjnFJY_jtxzgcqmqjyjenwQOuJNG]FJDicM]rrk[SL_wgDEbUtCcasXZaAFmRYzLQKD,    ;
-) -8 3
-
-
-test: (/
-,    1
-,    polish) 0 3
-
-
-test: (sNyRo[ZDlNGjsaT`fQxErufgWqFoaRB,    1
-,    0
-) 0 2
-
-
-test: (/
-,    pure,    0
-) -8 3
-
-
-test: (/
-,    1
-,    v) 0 3
-
-
-test: (personality,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: (*
-,    3,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (*
-,    W
-,    `MVGZgUFsOksIT) 0 3
-
-
-test: (s,    @
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (*
-,    +,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (*
-,    @
-,    passion) 0 3
-
-
-test: (panic,    @
-,    @
-) 0 2
-
-
-test: (*
-,    c,    @
-) 0 3
-
-
-test: (*
-,    @
-,    punch) 0 3
-
-
-test: ([bHThmrEuRZcDXxinRl]pMvkdiaDTumupgF^d]HEmeyfbh\DXXQoQofznpoVIaLfWzuq^^PnthoUGcoJDRF[]jseyF`uw,    :
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: (*
-,    !EiMwKkJwTjWnvWBNRnRVDHDeDhUe^fBtoadIoetolESjkgnAz^\QOjiMHcQBoSv[pbbsLvx`_yAIEdtXzeGX^VwQnpBeYqqxp[V,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (*
-,    :
-,    TmpHkXdgdOiDr^OimaukPCwPdYswqEz[SxRcejtG`lVCtbHZsRRn]IfJyzwyDxOL) 0 3
-
-
-test: (2]utgN[j[lJYCHiBAaWf\GUPKUSxuYyCjOQMwMLIhYTZ^IPr_OFKPSci\jP,    3
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: (*
-,    majesty,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: (*
-,    3
-,    9) 0 3
-
-
-test: (1C^sYvCaPUHY]FPDWQZBj`YhmJD,    3
-,    3
-) 0 2
-
-
-test: (*
-,    major,    3
-) 0 3
-
-
-test: (*
-,    3
-,    morrow) 0 3
-
-
-test: (mental,    :
-,    :
-) 0 2
-
-
-test: (*
-,    $,    :
-) 0 3
-
-
-test: (*
-,    :
-,    mysterious) 0 3
-
-
-test: (q,    9
-,    :
-) 0 3
-
-
-test: (*
-,    model,    :
-) 0 3
-
-
-test: (*
-,    9
-,    i) 0 3
-
-
-test: (5CorUgKcXJzG]cjbjOh,    9
-,    3
-) 0 2
-
-
-test: (*
-,    i,    3
-) 0 3
-
-
-test: (*
-,    9
-,    nwgwyvxLpkTFfW^^_KgiUh^zPzLPTyLJ`_\napicUMmNO^UTwWaRkB]uQ) 0 3
-
-
-test: (Fcwyc`ZsHLBcbLDerz[BFnyuoA,    +,    1) 0 2
-
-
-test: (K
-,    *,    1) 0 3
-
-
-test: (K
-,    +,    hYfPaUnFwWOdnIeK]DFNwJQoNPNQydoJwFDloJbZnNW) 0 3
-
-
-test: (UoBqfvUZHsqj_TpEW`HrDb\q,    z
-,    1) 0 2
-
-
-test: (K
-,    o,    1) 0 3
-
-
-test: (K
-,    z
-,    moan) 0 3
-
-
-test: (;MRMtzyeCgfmLGHP\yFZlKQvRUbcUlMHphOgRqfyIytjUkXgEzSs^D\aAV`hjNNLInd^AreCV,    z
-,    j
-) 0 2
-
-
-test: (K
-,    8YeFiWWbZW``XbJfbFEGiIeUoq\QM,    j
-) 0 3
-
-
-test: (K
-,    z
-,    )) 0 3
-
-
-test: (L,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    1) 0 3
-
-
-test: (c
-,    murder,    1) 0 3
-
-
-test: (c
-,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    .mtSehmF[ak^^xtQxY_OuGFwUfGaDIWLABxuAajcCiTgDoXGiPIaxhslpomvoAU) 0 3
-
-
-test: (3]GlR^bv[ZlNehW]AaPuYhTRTnvowKmEcJHiDR,    c
-,    1) 0 2
-
-
-test: (c
-,    O,    1) 0 3
-
-
-test: (c
-,    c
-,    <DnACbwzhTAuyDXKkbTKExIUlp\I_tRtuEaFG[`INVWxGCMKGitVnHtOrQxU[NRVewOgDc\ZSnif`v^F) 0 3
-
-
-test: (musical,    c
-,    c
-) 0 2
-
-
-test: (c
-,    .BYf_ZomVaVfhxd`b[OEFbzTYzgnmcv`cinJUaNaGwquUEiI`^kdBfAhw^EqLHbTrWff\CWV,    c
-) 0 3
-
-
-test: (c
-,    c
-,    z) 0 3
-
-
-test: (.zPvZX^rQBhDKEUYgwBaXR_HhfHI^uuf^b\Mk^hyrGqZWCVmNR[K\EbShmZNcpxsMVLNHYsOWGDhZjTNn][PW,    +,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 2
-
-
-test: (c
-,    0,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 3
-
-
-test: (c
-,    +,    >Wp\w`RK\rWVKcCqOvVcpSwYtVLagF^jCyZZ^umlCzqclzQRHulvgVUj_V__lt^QWhyJq`hTt]_kbDRF[^CSaCyC[) 0 3
-
-
-test: (material,    q
-,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 2
-
-
-test: (c
-,    +,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 3
-
-
-test: (c
-,    q
-,    J) 0 3
-
-
-test: (monstrous,    q
-,    q
+test: (leaf,    3,    T
 ) 0 2
-
-
-test: (c
-,    -,    q
-) 0 3
 
 
-test: (c
-,    q
-,    )VikCPHCf`g_ezg_vqBcNXRUaJMqOuQqd]ieKsuVr) 0 3
+test: (leaf,    3,    *) 0 2
 
 
-test: (L,    +,    1) 0 3
+test: (lid,    +,    1) 0 2
 
 
-test: (B
-,    midst,    1) 0 3
+test: (lid,    :,    1) 0 2
 
 
-test: (B
-,    +,    midnight) 0 3
+test: (lid,    :,    >) 0 2
 
 
-test: (/bYJbHDdHVy\AwyfXqUfAD`EKM]lHHyLBAaL_XF^nu_tne]Ijofcx[SRIgQO,    p
+test: (/gMpMGBvWJpQBMPxDZMQA`_pziHiUDyD\FKi`qKNuN\[^ZDy]XCYAxHxOXgtYp^hoqAVm_u`cmyOsiy`NrtgjG`,    v
 ,    1) -8 2
 
 
-test: (B
-,    (,    1) 0 3
+test: (/gMpMGBvWJpQBMPxDZMQA`_pziHiUDyD\FKi`qKNuN\[^ZDy]XCYAxHxOXgtYp^hoqAVm_u`cmyOsiy`NrtgjG`,    ",    1) -8 2
 
 
-test: (B
-,    p
-,    .]SZYeAOLcIBu``aQLQOMJpyppyUH\][PMYBXyxJPkOeDyhbiZUVMs_DVkOn]qAsL\tWBmiSfk]jeaEA) 0 3
+test: (/gMpMGBvWJpQBMPxDZMQA`_pziHiUDyD\FKi`qKNuN\[^ZDy]XCYAxHxOXgtYp^hoqAVm_u`cmyOsiy`NrtgjG`,    ",    cvFI^UnnKLKGwgCoIguAEMOJbajKiI[Qs^srSjMiaK\EODjbF^DFCwMYGLwJCPSRLof[vaXoi_OWsjHARjjXgRQQtGOMqAaB`xbV) -8 2
 
 
-test: (NpS[jDFFtcURcSwpA`cJo_PxGBYN]uVZKqdQxch^ugWp]O,    p
-,    l
-) 0 2
-
-
-test: (B
-,    &,    l
-) 0 3
-
-
-test: (B
-,    p
-,    2) 0 3
-
-
-test: (yQPnfTSxac]DUassoj[f\VERZGwG[X]v`FxlIa\Yh`QDX,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    1) 0 2
-
-
-test: (^
-,    HiB[,    1) 0 3
-
-
-test: (^
-,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    |) 0 3
-
-
-test: (3,    ^
-,    1) 0 3
-
-
-test: (^
-,    5qn[LwCF^lqu]hZGvPon^IbLp\shizZanWzUhhoBzobIMre[,    1) 0 3
-
-
-test: (^
-,    ^
-,    J) 0 3
-
-
-test: (mortal,    ^
-,    P
-) 0 2
-
-
-test: (^
-,    PhCffQbYLZx\_Yk]uSIBGoMUttvQhMiyvTgvRRhQvhaBuw,    P
-) 0 3
-
-
-test: (^
-,    ^
-,    messenger) 0 3
-
-
-test: (VMKp\WaHjLwqB_i]oiiLgP^pC[pgLCiAZSLlGdnn,    +,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 2
-
-
-test: (|
-,    mingle,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (|
-,    +,    mood) 0 3
-
-
-test: (male,    M
-,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 2
-
-
-test: (|
-,    mess,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (|
-,    M
-,    -) 0 3
-
-
-test: (milk,    M
-,    M
-) 0 2
-
-
-test: (|
-,    mail,    M
-) 0 3
-
-
-test: (|
-,    M
-,    apy) 0 3
-
-
-test: (0,    W
-,    1) 0 3
-
-
-test: (1
-,    $CRDfWMJRvjPmmpy\xcZDHjFiDtW`UOEeA[Qs`\fab^m`eiQKrAuMoJPeRgjtRE`GOQM]Qe,    1) 0 3
-
-
-test: (1
-,    W
-,    method) 0 3
-
-
-test: (&,    (
-,    1) 0 3
-
-
-test: (1
-,    mystery,    1) 0 3
-
-
-test: (1
-,    (
-,    muffle) 0 3
-
-
-test: (Q,    (
-,    y
-) 0 3
-
-
-test: (1
-,    =,    y
-) 0 3
-
-
-test: (1
-,    (
-,    a) 0 3
-
-
-test: (h,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    1) 0 3
-
-
-test: ($
-,    9Njc][\HiL`dtBRaVZfG_AspydFTMgkzG\^PvuvUUU\RU\LymuRklvpE[vpkDiSeyIaNv,    1) 0 3
-
-
-test: ($
-,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    /) 0 3
-
-
-test: (F,    $
-,    1) 0 3
-
-
-test: ($
-,    !VDtTcMG^[mhs\LQHGlYksTd\FoHSVxA\VuWPvApAHnSd]ljuDF`rdKupx,    1) 0 3
-
-
-test: ($
-,    $
-,    KtZrrjNIz_zlEzJuKhK\TGAPyyMzZNkGXzUKitRrJsA) 0 3
-
-
-test: (,OUiOF[xoY[mXRTZS\y[OI,    $
-,    Y
-) 0 2
-
-
-test: ($
-,    map,    Y
-) 0 3
-
-
-test: ($
-,    $
-,    (KehLPXSjUv\qkTsHjQtM[vE]in\wHDRN\TnXf]am[NQQZyj\WmN^pN^ZImgjHOsTPJj) 0 3
-
-
-test: (mankind,    W
-,    ;) 0 2
-
-
-test: (]
-,    market,    ;) 0 3
-
-
-test: (]
-,    W
-,    +) 0 3
-
-
-test: (magical,    ;
-,    ;) 0 2
-
-
-test: (]
-,    motion,    ;) 0 3
-
-
-test: (]
-,    ;
-,    T) 0 3
-
-
-test: (k,    ;
-,    s
-) 0 3
-
-
-test: (]
-,    (ZlbQfvVnQg[VrhZdMFE]n^,    s
-) 0 3
-
-
-test: (]
-,    ;
-,    madness) 0 3
-
-
-test: (marble,    W
-,    M
-) 0 2
-
-
-test: (M
-,    ,,    M
-) 0 3
-
-
-test: (M
-,    W
-,    mount) 0 3
-
-
-test: (Y,    {
-,    M
-) 0 3
-
-
-test: (M
-,    :,    M
-) 0 3
-
-
-test: (M
-,    {
-,    :]sNJYtQsoUdpQKvpBPEwtiuFXJDlSaIiINKPTFR[IMACFzEtVsFwIJmvCDpz^Do[^VQAxayzVr_RFiHGpVDRHwdtZfA) 0 3
-
-
-test: (^qCBMvaect[UVkXheX[at]]nXofL,    {
-,    !
-) 0 2
-
-
-test: (M
-,    ;,    !
-) 0 3
-
-
-test: (M
-,    {
-,    mirror) 0 3
-
-
-test: (PfJobgMNyscXTlwThAg`TkP\jzRl`mnhsRI,    -,    M
-) 0 2
-
-
-test: (\
-,    marriage,    M
-) 0 3
-
-
-test: (\
-,    -,    minister) 0 3
-
-
-test: (t,    T
-,    M
-) 0 3
-
-
-test: (\
-,    1,    M
-) 0 3
-
-
-test: (\
-,    T
-,    mend) 0 3
-
-
-test: (misery,    T
-,    !
-) 0 2
-
-
-test: (\
-,    :,    !
-) 0 3
-
-
-test: (\
-,    T
-,    %NQorrbTDkFVgkKmVIcQyDrRVD]bGKiC_M^KMHH_msVglBNzxiCnfy) 0 3
-
-
-test: (.,    W
-,    cYV) 0 3
-
-
-test: ([
-,    ~,    cYV) 0 3
-
-
-test: ([
-,    W
-,    @) 0 3
-
-
-test: (mum,    :
-,    cYV) 0 2
-
-
-test: ([
-,    vNAZPWnbiuo\nk]N[zXYqvQfEDMJsUYNDqgagJPGD,    cYV) 0 3
-
-
-test: ([
-,    :
-,    (Rhu]avzwQJOZQwLKgLZGVNSZ`f^KndhgWEDdcWQ]dZaBMptDlyb`) 0 3
-
-
-test: (meat,    :
-,    :
-) 0 2
-
-
-test: ([
-,    c,    :
-) 0 3
-
-
-test: ([
-,    :
-,    1) 0 3
-
-
-test: (YckAWzTrPQGFBi]lDTkTB]r[ndfCdLRhrKyntYsej_AHOaMipK`G,    W
-,    M
-) 0 2
-
-
-test: (S
-,    mix,    M
-) 0 3
-
-
-test: (S
-,    W
-,    mumble) 0 3
-
-
-test: (6,    @
-,    M
-) 0 3
-
-
-test: (S
-,    UtLQIERDjxyWOZxnlwCxIQmrODqVRxSJC``vCr_IVPiEIVbWchv_LndeFEG[G[UaiUoagMjYcCQByxbBQ[szDgweW[^`NY]xmvpa,    M
-) 0 3
-
-
-test: (S
-,    @
-,    !CSuB[DmL) 0 3
-
-
-test: (miserable,    @
-,    ?
-) 0 2
-
-
-test: (S
-,    ouW\kuEMrGzf,    ?
-) 0 3
-
-
-test: (S
-,    @
-,    museum) 0 3
-
-
-test: (menace,    YmsQNrMjS]BQNJYP,    M
-) 0 2
-
-
-test: (Q
-,    ",    M
-) 0 3
-
-
-test: (Q
-,    YmsQNrMjS]BQNJYP,    -]eZNhg\WcKEV_kjafytcweIFi^K\uRsUPUdBi]QWYG^X^NXqaSAqFoTpI_nqJUcPIO`YluCQ) 0 3
-
-
-test: (y,    Q
-,    M
-) 0 3
-
-
-test: (Q
-,    merchant,    M
-) 0 3
-
-
-test: (Q
-,    Q
-,    T) 0 3
-
-
-test: (:,    Q
-,    |
-) 0 3
-
-
-test: (Q
-,    monkey,    |
-) 0 3
-
-
-test: (Q
-,    Q
-,    .BNKlQZL^NmqpVbSmOK`yQyDbTWHaLOMvIcLpTRKgRUYSsuSJ_\a_nrChQInRN]ZlE\KyXOc) 0 3
-
-
-test: (*O,    W
-,    uncomfortable) 0 2
-
-
-test: (C
-,    n,    uncomfortable) 0 3
-
-
-test: (C
-,    W
-,    *_z_yeenoiWksdTKJVAAfH[kBYxBQznzr]gulEyjwojS`cIyL^vkDcJdoQoH) 0 3
-
-
-test: (z,    }
-,    uncomfortable) 0 3
-
-
-test: (C
-,    %GCWQWiZDMN^KY][]E]JC`[EfIH\GS[WWtq[OOJRMGtwR]ZakhMLJCywtduCsfho,    uncomfortable) 0 3
-
-
-test: (C
-,    }
-,    8RfkmPurzlGJ\rCHYoAfIeS_FeXqlqzfqewtwNaWMeqvzd[MxJp) 0 3
-
-
-test: (",    }
-,    }
-) 0 3
-
-
-test: (C
-,    mom,    }
-) 0 3
-
-
-test: (C
-,    }
-,    {) 0 3
-
-
-test: (-Ek,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: (N
-,    >,    M
-) 0 3
-
-
-test: (N
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    i) 0 3
-
-
-test: ($CZZfLxrFyb^Rgl,    N
-,    M
-) 0 2
-
-
-test: (N
-,    0,    M
-) 0 3
-
-
-test: (N
-,    N
-,    9) 0 3
-
-
-test: (1sEX,    N
-,    {
-) 0 2
-
-
-test: (N
-,    mill,    {
-) 0 3
-
-
-test: (N
-,    N
-,    5YTcqSZgnMTFfBWfizS]NUpjlCv_URfrOuVesenapGBNhy^lWQZtBRB__hdJVtbgINs`No) 0 3
-
-
-test: ()osSOVbaCwKoyWtiSR\u`]dhrEQRDziUxPDpEfsnNbV\KaUPlKLF,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    =) 0 2
-
-
-test: ([
-,    T,    =) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    H) 0 3
-
-
-test: ($,    [
-,    =) 0 3
-
-
-test: ([
-,    (,    =) 0 3
-
-
-test: ([
-,    [
-,    7) 0 3
-
-
-test: (mistaken,    [
-,    F
-) 0 2
-
-
-test: ([
-,    ?`aCoNoh[uhLQXH^aTQJ^Tj^hIqH^aowUZFFilYzHZNRxqpKyx]ooVv^wH,    F
-) 0 3
-
-
-test: ([
-,    [
-,    +Ar^bz\h[]kFmMHw[BkdUbE`Tc_hSxguiaKuDIkuG^gA) 0 3
-
-
-test: ((,    :
-,    :
-) 0 3
-
-
-test: (y
-,    ?,    :
-) 0 3
-
-
-test: (y
-,    :
-,    2`B^lCur_eRFGlDO`^oTawg[CXopkaOJiAqJljlUFVVLWCpLvPzZhLEaTctqr^sd) 0 3
-
-
-test: (mild,    9
-,    :
-) 0 2
-
-
-test: (y
-,    9Puf_SHe`gcglFoYezYuiYq,    :
-) 0 3
-
-
-test: (y
-,    9
-,    Z) 0 3
-
-
-test: (maintain,    9
-,    9
-) 0 2
-
-
-test: (y
-,    maid,    9
-) 0 3
-
-
-test: (y
-,    9
-,    military) 0 3
-
-
-test: (y,    university,    :
-) 0 3
-
-
-test: (2
-,    <wOXpAaQiysAYtERKMawLDWZJbcNKmTfe_qph\xAYjIzdrhiVUUmVtTILRwILOAexVUPPKrC_tqejnQDOZUtz]DqyNoy\,    :
-) 0 3
-
-
-test: (2
-,    university,    u) 0 3
-
-
-test: (meal,    2
-,    :
-) 0 2
-
-
-test: (2
-,    muscle,    :
-) 0 3
-
-
-test: (2
-,    2
-,    misty) 0 3
-
-
-test: (melt,    2
-,    1
-) 0 2
-
-
-test: (2
-,    /EJKRfNOuYxMpLwTbogCJ]bXiDvtACAzg]SNZQO^POwJUQZbhA`K^LMteOLCHWO],    1
-) -8 3
-
-
-test: (2
-,    2
-,    B) 0 3
-
-
-test: (=,    :
-,    upstairs) 0 3
-
-
-test: (2
-,    myrtle,    upstairs) 0 3
-
-
-test: (2
-,    :
-,    #hKRDAkSNax\[h_fBMIUPSoGdYBcfjHRhfKhoS[mJCuCGlKQAnPn`fTZFx) 0 3
-
-
-test: (`,    8
-,    upstairs) 0 3
-
-
-test: (2
-,    drVyj[rvrGawyTXAExD_i,    upstairs) 0 3
-
-
-test: (2
-,    8
-,    r) 0 3
-
-
-test: (0JXYMtKwg_sQUypGOPfZsl^mNtuMGm`OGiJFgO\Gxe,    8
-,    8
-) 0 2
-
-
-test: (2
-,    ,hMGjV\US[FzJRWJtGNRQyZ[MtvFHdNCSH[RUtnUvXzvlNxaGWAc[jUeweoaEA,    8
-) 0 3
-
-
-test: (2
-,    8
-,    ?) 0 3
-
-
-test: (cijqmD_IsCoZZvGqRS_EnuLUvo,    +,    1) 0 2
-
-
-test: (R
-,    marvel,    1) 0 3
-
-
-test: (R
-,    +,    8) 0 3
-
-
-test: (medical,    j
-,    1) 0 2
-
-
-test: (R
-,    mission,    1) 0 3
-
-
-test: (R
-,    j
-,    4Pm[QIHVFwjXBQWarW) 0 3
-
-
-test: (5,    j
-,    I
-) 0 3
-
-
-test: (R
-,    KhQY,    I
-) 0 3
-
-
-test: (R
-,    j
-,    ~) 0 3
-
-
-test: (member,    upper,    1) 0 2
-
-
-test: (>
-,    0,    1) 0 3
-
-
-test: (>
-,    upper,    2YeFEdu^egYnSgc\tpQBMTcAkOY`U`ENj`xZtH^Hq) 0 3
-
-
-test: (:^bX^JuuFhUmcilmDDZ`HanuH\L\xDXdzT^MwBytivmlWb]wtcLH,    >
-,    1) 0 2
-
-
-test: (>
-,    XtDDjQqoTXRqwi[`NWn[spCTJ^xJbhQCplGClvMEEumZjPTWiAnToEVPMGyaHzuM]dMVxyXmg]AiDKEiAx\uExbkFJZCYC\,    1) 0 3
-
-
-test: (>
-,    >
-,    If]hdwUFXxZz`KCc]yioOsNv) 0 3
-
-
-test: (motive,    >
-,    R
-) 0 2
-
-
-test: (>
-,    L,    R
-) 0 3
-
-
-test: (>
-,    >
-,    dk^NJkCPVyChbfG[klUosdeMivhGn\nade) 0 3
-
-
-test: (`,    +,    !) 0 3
-
-
-test: (@
-,    &,    !) 0 3
-
-
-test: (@
-,    +,    I) 0 3
-
-
-test: (FtGHkcX_pT,    h
-,    !) 0 2
-
-
-test: (@
-,    measure,    !) 0 3
-
-
-test: (@
-,    h
-,    %) 0 3
-
-
-test: ([,    h
-,    x
-) 0 3
-
-
-test: (@
-,    mud,    x
-) 0 3
-
-
-test: (@
-,    h
-,    ministry) 0 3
-
-
-test: ("IB[Un_V[^pLnoVGefLudfzIbs[f_W[rvrTsZNELH\vtCnoJSpgJkOHnZhqPQffbf[puEJR,    w,    1) 0 2
-
-
-test: (!
-,    :,    1) 0 3
-
-
-test: (!
-,    w,    s`qAp`_EIPs\hrF]wTyBNuczJsob\Il) 0 3
-
-
-test: (:YYLbUs]ozogtreXna`CHeyuTFPUKYhaXR\S_F^nyHQce]IpjY[eKqYBpexSr^jl,    Q
-,    1) 0 2
-
-
-test: (!
-,    mound,    1) 0 3
-
-
-test: (!
-,    Q
-,    moral) 0 3
-
-
-test: (8nZLyxyM`F^_F]xeDlSK`mpxPeaPg\FIzuBtKdZWaJIKiG\MEw`INgJbP^utrOz`sIczMoInByvaelnWWNc^LBUF^Oc,    Q
-,    S
-) 0 2
-
-
-test: (!
-,    5,    S
-) 0 3
-
-
-test: (!
-,    Q
-,    4WJpS[uBqFOoDiLr]cNZ]iF]\Y\L]fTPBDx^lUqAiQmQva`PfV^KGnX`uWoMk`IWF]olBrjU) 0 3
-
-
-test: (%
-,    )_OlEyAcvYFNntOOp[rFljp\hSXEcj^qHDGpMErgbbuTrdEYdo,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
-
-
-test: (%
-,    r
-,    8) 0 3
-
-
-test: (O,    [
-,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
-
-
-test: (%
-,    ujgy\cXVMF^NQ,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
-
-
-test: (%
-,    [
-,    Lz[irzVfXxwgRRVdBerE_iU``IXK\YJjVZmjvlFrDTIWgiISBvDf[^OXjdq]pl[HBEY^xjYRykn]WiOjOrhgt`rpObPjlo) 0 3
-
-
-test: (c,    [
-,    [
-) 0 3
-
-
-test: (%
-,    P,    [
-) 0 3
-
-
-test: (%
-,    [
-,    meanwhile) 0 3
-
-
-test: (`,    r
-,    P
-) 0 3
-
-
-test: (2
-,    2qoaelkYnycXtpHpmfaFIWhlN,    P
-) 0 3
-
-
-test: (2
-,    r
-,    mask) 0 3
-
-
-test: (x,    #
-,    P
-) 0 3
-
-
-test: (2
-,    moonlight,    P
-) 0 3
-
-
-test: (2
-,    #
-,    mansion) 0 3
-
-
-test: (;,    #
-,    ^
-) 0 3
-
-
-test: (2
-,    8,    ^
-) 0 3
-
-
-test: (2
-,    #
-,    5) 0 3
-
-
-test: (1,    x,    P
-) 0 3
-
-
-test: (^
-,    >M[DnBlfFfgkH,    P
-) 0 3
-
-
-test: (^
-,    x,    monster) 0 3
-
-
-test: (<TglCl]UeU\NXllC,    N
-,    P
-) 0 2
-
-
-test: (^
-,    mock,    P
-) 0 3
-
-
-test: (^
-,    N
-,    1bMxpwTha[FZWgLkAWdTnqLGz\CoFzL[bCaTrI[MxBJBjfdpE]_ZZrzStsgCUnD]oQN]jVA`rR) 0 3
-
-
-test: (marsh,    N
-,    {
-) 0 2
-
-
-test: (^
-,    mechanical,    {
-) 0 3
-
-
-test: (^
-,    N
-,    M) 0 3
-
-
-test: (monk,    r
-,    |) 0 2
-
-
-test: (~
-,    >,    |) 0 3
-
-
-test: (~
-,    r
-,    ') 0 3
-
-
-test: (monsieur,    <
-,    |) 0 2
-
-
-test: (~
-,    <
-,    _iSbPoqwhaMgBd[xJT) 0 3
-
-
-test: (-BoBXVVwsSdATLCMydaYknsGupDPfYzHQBUYsxZSxbuttTfWCTWKo^V`yfMSanVudY`XfObXhJ\uxWRtB^tDlP\x,    <
-,    S
-) 0 2
-
-
-test: (~
-,    ',    S
-) 0 3
-
-
-test: (~
-,    <
-,    9oTSuhNGTLYGwYAjLBq[Lx^vTJxMf`WBRlhnUiZXhmRsxE) 0 3
-
-
-test: (=,    +,    1) 0 3
-
-
-test: (M
-,    E,    1) 0 3
-
-
-test: (M
-,    +,    marvellous) 0 3
-
-
-test: (mass,    Z
-,    1) 0 2
-
-
-test: (M
-,    mistress,    1) 0 3
-
-
-test: (M
-,    Z
-,    (koCkFCaXn_OTOe]OhsfaTtxpjApKxUQOb[QVBEi\qWnldgR) 0 3
-
-
-test: (;QOYet\afOy^KOl_`cAbrahMINLWdI_T]TTzYEYDbvwDfI`,    Z
-,    X
-) 0 2
-
-
-test: (M
-,    massive,    X
-) 0 3
-
-
-test: (M
-,    Z
-,    >XGcLyytyVZhA[xoKnQKLZ\FdgMFqODcoV^W_URswAPznocaHZLNUBbBIV`FIF_) 0 3
-
-
-test: (myth,    union,    1) 0 2
-
-
-test: (l
-,    mistake,    1) 0 3
-
-
-test: (l
-,    union,    monday) 0 3
-
-
-test: (modern,    l
-,    1) 0 2
-
-
-test: (l
-,    mercy,    1) 0 3
-
-
-test: (l
-,    l
-,    /IJzrZpqZaR`YBSenxJuKsbFo`ZPOCePM]OOIKNuoYltsJrNugFsSVmq) 0 3
-
-
-test: (7CdqvyhBE_\]wAgls]FeqkfdmBf[IGJupH]Tg[zTYvRUqStinxnbhOIMpZS^DFuSrxuHVtX,    l
+test: (lazy,    v
 ,    v
 ) 0 2
 
 
-test: (l
-,    5,    v
-) 0 3
-
-
-test: (l
-,    l
-,    )XPXEm`TMccccwSItYIWlYeEsdNkWTiWPE_qRdfEhLfvlyRmsc`KPVRxSvfMMQyUe^juF[hykp`a[T\PQobwYKmBFxhGQ`Zx[qoo) 0 3
-
-
-test: (~Lp^mwbrqSnuNAtobwZhJLR[slO][bGIEscZpf^NIPn`lrKay`_P_ycBLnuvm]Vl\holuxiCNpXs,    +,    ?) 0 2
-
-
-test: (b
-,    +oaj_EUA_[BzSUzSLPJslp_ZAQQfGGXOUSAphEuhRLJI_fpLylXcNZqLWfmeLDNDG[,    ?) 0 3
-
-
-test: (b
-,    +,    $WQrZGj^pUg\ENyWuGtfuVmrvmwxk[JmFORQw\bWbNkaG]yiEUaUsPzfEH[PsDhsvOAOAjDtffXdmm) 0 3
-
-
-test: (3,    R
-,    ?) 0 3
-
-
-test: (b
-,    7,    ?) 0 3
-
-
-test: (b
-,    R
-,    .) 0 3
-
-
-test: (motor,    R
-,    b
+test: (lazy,    lash,    v
 ) 0 2
 
 
-test: (b
-,    ?bmOJTzvyWRggtNCS`bhHtpZ[NPVwaR]vDOPXooF,    b
-) 0 3
+test: (lazy,    lash,    .KtC`OIDsXIndQGzaI^VqHJsWHo[SlXVK^BbZqT`) 0 2
 
 
-test: (b
-,    R
-,    T) 0 3
+test: (7yWOEYC\LwB_XFU\FBv^YN^DSJJLb_QPNFZrvyfSbaan^xuubvOhsFFn]uDlTzMGdjoLNz_N[tv,    +,    1) 0 2
 
 
-test: ()[zzYfdbJHcMrA^QyzUnjTimcSiYckmjkbxlRBOFVJGsQvbqOO`RgmSmSQWQt^bT[SY`jjyoxHxsNS[AWDHvxkCBQJo^o,    /
+test: (7yWOEYC\LwB_XFU\FBv^YN^DSJJLb_QPNFZrvyfSbaan^xuubvOhsFFn]uDlTzMGdjoLNz_N[tv,    ;,    1) 0 2
+
+
+test: (7yWOEYC\LwB_XFU\FBv^YN^DSJJLb_QPNFZrvyfSbaan^xuubvOhsFFn]uDlTzMGdjoLNz_N[tv,    ;,    oaHG`mJMNuxLqCRBjZG]lczvobn`yoTQw^^wMLbU_drPnPASfYi`QXhj) 0 2
+
+
+test: (load,    Q
 ,    1) 0 2
 
 
-test: (<
-,    4,    1) 0 3
+test: (load,    laboratory,    1) 0 2
 
 
-test: (<
-,    /
-,    KTDSxrHJHcW]fbjGYhJ`^\HmLrFbIY^QrKxp\RwcDTGAAVnqqN^tW[yjaL\j^Q`RINeReCyxkWEJbr]vereidxiyvparCTelLQn) 0 3
+test: (load,    laboratory,    @sktKlwRDLjxwOZqgFhC]EsaFrObnSNYbrFLjKL\QbREs\]]K`InJogSEBprTqFAlIafWgToCD`RF_udYtzui\fMxeRAs) 0 2
 
 
-test: (yield,    4
-,    1) 0 2
-
-
-test: (<
-,    #,    1) 0 3
-
-
-test: (<
-,    4
-,    younger) 0 3
-
-
-test: (*CqxnKGetnn,    4
-,    J
-) 0 2
-
-
-test: (<
-,    &,    J
-) 0 3
-
-
-test: (<
-,    4
-,    yawn) 0 3
-
-
-test: (N,    unseen,    1) 0 3
-
-
-test: (P
-,    B,    1) 0 3
-
-
-test: (P
-,    unseen,    Ve) 0 3
-
-
-test: (7i^]`WshfWxIZCsfYtKhdYApnaqAazCNYAknCq\BGoxhDatHciCzCppLDLDWuIIBjbTIYITUrNDihXqUOlOwaqXyofK,    P
-,    1) 0 2
-
-
-test: (P
-,    yesterday,    1) 0 3
-
-
-test: (P
-,    P
-,    ._]JRyEzFOisJJ[QdkaztImgfXXcr_AoxbEWGf\VIiszimHMpwZSWaHUoHciCU) 0 3
-
-
-test: (N,    P
-,    q
-) 0 3
-
-
-test: (P
-,    gown,    q
-) 0 3
-
-
-test: (P
-,    P
-,    7) 0 3
-
-
-test: (aRZoqn`U_[^zeqEtxZyvEMluIH`Bau\]`GSEjDf\o^ZxFzE_^eBHkMYORdhQtPybB^sqbf`CcSbIwMA`KiE[Cr,    W
-,    M
-) 0 2
-
-
-test: (G
-,    5,    M
-) 0 3
-
-
-test: (G
-,    W
-,    0) 0 3
-
-
-test: (5d]hWRXeIdoxedLsSaVMjfluU\UgUqEQyYBdjivWSekVJZSZSHvTGNIrrL]R\VWcUDDiqCEy^IoiLU,    '
-,    M
-) 0 2
-
-
-test: (G
-,    p,    M
-) 0 3
-
-
-test: (G
-,    '
-,    gang) 0 3
-
-
-test: (),    '
-,    (
-) 0 3
-
-
-test: (G
-,    a,    (
-) 0 3
-
-
-test: (G
-,    '
-,    goblin) 0 3
-
-
-test: (b,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    M
-) 0 3
-
-
-test: (9
-,    grip,    M
-) 0 3
-
-
-test: (9
-,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    giant) 0 3
-
-
-test: (9
-,    grim,    M
-) 0 3
-
-
-test: (9
-,    9
-,    SjFPRpKIzdel\RRVeccxOWxUdlougYfIoxBVfPyHw[OHK_eD^Wn\hv`bKLMXnCB\\C[NepG) 0 3
-
-
-test: (gloomy,    9
-,    >
-) 0 2
-
-
-test: (9
-,    grope,    >
-) 0 3
-
-
-test: (9
-,    9
-,    v) 0 3
-
-
-test: (dvobZzHjxzjcPYoNGyI]OVlUyVA,    W
-,    unconscious) 0 2
-
-
-test: (0
-,    5,    unconscious) 0 3
-
-
-test: (0
-,    W
-,    grunt) 0 3
-
-
-test: (guy,    ^
-,    unconscious) 0 2
-
-
-test: (0
-,    gigantic,    unconscious) 0 3
-
-
-test: (0
-,    ^
-,    guilty) 0 3
-
-
-test: (gain,    ^
-,    ^
-) 0 2
-
-
-test: (0
-,    r,    ^
-) 0 3
-
-
-test: (0
-,    ^
-,    9NE^^FCqROoo^glbrAAbAIPubmharybtyNpMoOFFg) 0 3
-
-
-test: (1cWAnNhtVNeRVfiOgDPDVWcaXAzF[DYSchTacYATsgtyMJ^BGpUE[V`dMIfBAZOSIZllG]yK,    [
-,    M
-) 0 2
-
-
-test: (a
-,    I,    M
-) 0 3
-
-
-test: (a
-,    [
-,    )) 0 3
-
-
-test: (Q,    2
-,    M
-) 0 3
-
-
-test: (a
-,    glint,    M
-) 0 3
-
-
-test: (a
-,    2
-,    $QYpGcCsucTTyGE\OsAwyOH`UhMrdlxe) 0 3
-
-
-test: (gap,    2
-,    ]
-) 0 2
-
-
-test: (a
-,    7pDBAFIQ\ZRt,    ]
-) 0 3
-
-
-test: (a
-,    2
-,    8) 0 3
-
-
-test: (*,    utmost,    M
-) 0 3
-
-
-test: (8
-,    b,    M
-) 0 3
-
-
-test: (8
-,    utmost,    ,ZxbUdHCnQXzODJQ) 0 3
-
-
-test: (glimmer,    8
-,    M
-) 0 2
-
-
-test: (8
-,    ghastly,    M
-) 0 3
-
-
-test: (8
-,    8
-,    glide) 0 3
-
-
-test: (nupOA^UPlRrviwvKkyJJwVweB\EqNTGc\UDFVcmkvwmpCtSs[OR^GxjsRTamk^tWOQGkhkc[uFPbwj\^BVL,    8
-,    }
-) 0 2
-
-
-test: (8
-,    {,    }
-) 0 3
-
-
-test: (8
-,    8
-,    V) 0 3
-
-
-test: (grove,    [
-,    $PEKFanTXReuXepnbmBWOci) 0 2
-
-
-test: (8
-,    grand,    $PEKFanTXReuXepnbmBWOci) 0 3
-
-
-test: (8
-,    [
-,    2) 0 3
-
-
-test: (w[Y]yLxsYSgOasWjAQoMsEwQeXztxjcSnjWEFtklPHbrpBfUbcs]PJ\PDyR^,    8
-,    $PEKFanTXReuXepnbmBWOci) 0 2
-
-
-test: (8
-,    0,    $PEKFanTXReuXepnbmBWOci) 0 3
-
-
-test: (8
-,    8
-,    2krGiSIR_x\diSoDEXuZEX\eFdPGdfMVPfOUtZIoCT^hjsycJZgTJopZGigDMJScwAtuQrCRsBrZPePQGgcMIpN]^K) 0 3
-
-
-test: (groan,    8
-,    8
-) 0 2
-
-
-test: (8
-,    }dEvSmfnZHwwWGBIoOKUYrmvbiUvTAmTzfjHakR]bq]nOHoXWGalwqVkY[NT^LncHTYNxDwLefA,    8
-) 0 3
-
-
-test: (8
-,    8
-,    %DwVjr\w^hCeBgKwIyURTFwNM[]kr`v^NcqIspCBKF]ZnyN[jJUyiqCVUtlvVmmDygjSvxCyyXi) 0 3
-
-
-test: (Jpdsev[isGfjNVLeCfSOFE[pOhBkZsfzYyKhTvPDD]hpBPT]`H,    [
-,    ;
-) 0 2
-
-
-test: (J
-,    greet,    ;
-) 0 3
-
-
-test: (J
-,    [
-,    -) 0 3
-
-
-test: (0h[khffKlotwGFDwyfAftVqlbdCNfmmVsTgOcoXkizyxpPBiWw`U[LlX]yuzmP]LDsbnZ]aII]Gm^JxdlsTe^HqQjNQaoDfdG]YT,    1
-,    ;
-) 0 2
-
-
-test: (J
-,    (XTONwlZbQUnIbMjunUGv,    ;
-) 0 3
-
-
-test: (J
-,    1
-,    /) 0 3
-
-
-test: (s_cgudgQUFZWuCRzLszJOl\OEWPzRsmIjDh_MKQnvrOZdLQOvMsZDPocGHEmapljkKBxXm^hTEdXFYYYcB^ZLBqVW,    1
-,    2
-) 0 2
-
-
-test: (J
-,    ?,    2
-) 0 3
-
-
-test: (J
-,    1
-,    ') 0 3
-
-
-test: (glitter,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    ;
-) 0 2
-
-
-test: (8
-,    /,    ;
-) -8 3
-
-
-test: (8
-,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    r) 0 3
-
-
-test: (6bqB_sc[Q^TbkY`x^VZbwPmWvwZRNsO]snvrEFo[h_JSpRvuqyfTBf^xOhpZSEU,    8
-,    ;
-) 0 2
-
-
-test: (8
-,    gradual,    ;
-) 0 3
-
-
-test: (8
-,    8
-,    guest) 0 3
-
-
-test: (3Ih^cjbJJzuLz,    8
-,    1
-) 0 2
-
-
-test: (8
-,    gay,    1
-) 0 3
-
-
-test: (8
-,    8
-,    5) 0 3
-
-
-test: (>RLYgFu][kPCm`,    [
-,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 2
-
-
-test: (4
-,    gloom,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 3
-
-
-test: (4
-,    [
-,    generous) 0 3
-
-
-test: (growl,    0
-,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 2
-
-
-test: (4
-,    ^ADsGwfSpLJ^lKt\ekxBRvZc_GVFsfbdSNsbFlCVpgVDi^\aTOZWIi]TzjwTGIp`TRcCzuKBWq\jbikCynyYlY`\BWMW^ZzQ,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 3
-
-
-test: (4
-,    0
-,    1GpRgyq^RnDWdKzQccantA\pbjal_U`lQrt_ZyjBapt) 0 3
-
-
-test: (h,    0
-,    0
-) 0 3
-
-
-test: (4
-,    grotesque,    0
-) 0 3
-
-
-test: (4
-,    0
-,    9) 0 3
-
-
-test: (grasp,    W
-,    M
-) 0 2
-
-
-test: (H
-,    goblet,    M
-) 0 3
-
-
-test: (H
-,    W
-,    /) 0 3
-
-
-test: (grant,    ^
-,    M
-) 0 2
-
-
-test: (H
-,    +,    M
-) 0 3
-
-
-test: (H
-,    ^
-,    v) 0 3
-
-
-test: (Ba[xuzRev_ZO`KZZhUyUWHjJN[gIzjHtoA`xAvem^T^fVNdhrYfvZ,    ^
-,    $
-) 0 2
-
-
-test: (H
-,    government,    $
-) 0 3
-
-
-test: (H
-,    ^
-,    PnRZktLdbbf`EGqgmOgLKvDbAzY`acrjOfgvexo_QXhgOuyRvzJgfNre^YGchvKWlrNb) 0 3
-
-
-test: (gear,    upward,    M
-) 0 2
-
-
-test: ((
-,    /rtfIs^erKwSazPabPF,    M
-) 0 3
-
-
-test: ((
-,    upward,    0^MXSiErgPdrxECdsXZPRr_B^dP\vqWLb`\owFjBwyUN`S\bIHIi`plkPNcCv_JQfgQPJLlYo) 0 3
-
-
-test: (Y,    (
-,    M
-) 0 3
-
-
-test: ((
-,    genius,    M
-) 0 3
-
-
-test: ((
-,    (
-,    -IahdypfA\ukz\EmZwLLkWXA]MBGaIiJIUWBBhGTcuKMyX`usRZDLxpI\]ClYgDRcnnNNr) 0 3
-
-
-test: (gaze,    (
-,    {
-) 0 2
-
-
-test: ((
-,    glare,    {
-) 0 3
-
-
-test: ((
-,    (
-,    V) 0 3
-
-
-test: (Q,    W
-,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (~
-,    vCbNhCm_SUWQma[rIml,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (~
-,    W
-,    ^MBdgbkCYs_sCGRwyHFSzlX_EopqznCeFURuJyKmWPsRauPvI]lwm]WpRGk[_CxmeWmVdc`QraXyUApqUHJYNBQ_bcmGO[Z) 0 3
-
-
-test: (TqpMHrn`xViehVQRBq,    @
-,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 2
-
-
-test: (~
-,    8]VQUYF[sLwHfbKihONEwdmmCzUyADZSTwen[CCrZmFkB`jUdgv_sWcLva,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (~
-,    @
-,    hmyHmbQRGOtNrZW\fbiMJQx) 0 3
-
-
-test: (gallop,    @
-,    @
-) 0 2
-
-
-test: (~
-,    $F[CgixXmyHRPH^YGrT]r^XGMFkfeNWSE^ihNSp_penCt,    @
-) 0 3
-
-
-test: (~
-,    @
-,    grippe) 0 3
-
-
-test: (,,    >
-,    M
-) 0 3
-
-
-test: (o
-,    <_yNbl_HiVTlxbvJUUzWZmYfneFlu_mVwHgTMJ^VuvUQmuFpaPuHWsaNN,    M
-) 0 3
-
-
-test: (o
-,    >
-,    BvkZENzDpjxBBdeDObXvmDPvfHSHEXpnv) 0 3
-
-
-test: (!LaCCwxoL^ZeFwqsNnCJFKGSea^SxV\apnAhPvXAKZw\MMK\Gsgu[LYtEgwoUQxMsv`uXEezaJc_\Wo]Cmc`\LtMPBIOSpo,    9
-,    M
-) 0 2
-
-
-test: (o
-,    0,    M
-) 0 3
-
-
-test: (o
-,    9
-,    () 0 3
-
-
-test: (goose,    9
-,    $
-) 0 2
-
-
-test: (o
-,    IQkEaonojgAjxvUrrHmcLBdQTNIoSMobXFWbFEeuDTUHoMHfSWYkX[rZSXbKeY\ZHn`GlOLkHTXcljd]`TtLJchuGxttd,    $
-) 0 3
-
-
-test: (o
-,    9
-,    #) 0 3
-
-
-test: (3z``GeuzOpTvRwWd`VRAkLzJA^yXGdpfTXHeLxEW^UUIqHxP^n,    urgent,    M
-) 0 2
-
-
-test: (*
-,    "[r_boxtRNUSnoXDthT^Ey\TwIdKw`PkKRaZOnUtYl[BiyT[T]SfYDVgIkESD_ztmpPR,    M
-) 0 3
-
-
-test: (*
-,    urgent,    -tXTvHFvHFdr^mwBQiOKzUhpyzj^ueEzQNCEy[uRXv_YXwnrhjG[WJ_\EXAPcjirxZHSeHNchWJgFFvbOtVwOBQD) 0 3
-
-
-test: (a,    *
-,    M
-) 0 3
-
-
-test: (*
-,    1,    M
-) 0 3
-
-
-test: (*
-,    *
-,    YcMmmtLDctzgTV[JEfn_qCyFhJujUCSkdNfWxyof_Hmkcp) 0 3
-
-
-test: (+,    *
-,    '
-) 0 3
-
-
-test: (*
-,    glory,    '
-) 0 3
-
-
-test: (*
-,    *
-,    =ZJIRn^Q^PUBQiHPoChtFPwmskPqkglSyU__NQUz_IhybgprJBrzdJrGSd) 0 3
-
-
-test: (gaunt,    >
-,    unlike) 0 2
-
-
-test: (~
-,    grandfather,    unlike) 0 3
-
-
-test: (~
-,    >
-,    :rfr`sOhAcWYVtN^s[_qMQoyl[Cq`nTbVNngLf) 0 3
-
-
-test: (-W`NKMIPIrVoKHSbPEEoe^Hyl`GiEykeebtxRlUZT[wuPFWa\SoLZr^s\qWMU_UZh[hOQbeDeHjynfUrdtB\oOpOVSjavd`KW,    5
-,    unlike) 0 2
-
-
-test: (~
-,    *,    unlike) 0 3
-
-
-test: (~
-,    5
-,    () 0 3
-
-
-test: (generation,    5
-,    5
-) 0 2
-
-
-test: (~
-,    german,    5
-) 0 3
-
-
-test: (~
-,    5
-,    r) 0 3
-
-
-test: (kdw]uTdByHWH[pkWmoDW]DljyDQLLHlxTrEdZdWxYZfIHf_wbFbNaeEJjHhSWrRGsfMHWWmzauLVlKCXyMnVhn,    >
-,    &
-) 0 2
-
-
-test: (C
-,    gulf,    &
-) 0 3
-
-
-test: (C
-,    >
-,    grumble) 0 3
-
-
-test: (,C_tVMAywRN,    4
-,    &
-) 0 2
-
-
-test: (C
-,    grateful,    &
-) 0 3
-
-
-test: (C
-,    4
-,    #[\twWwVTywqAxCuTjEu^BltS`UfSwhraeiJfglffurInGqEVKHB]Qnf`TPGx]rj`TTnvsB) 0 3
-
-
-test: (c,    4
-,    8
-) 0 3
-
-
-test: (C
-,    ^,    8
-) 0 3
-
-
-test: (C
-,    4
-,    /) 0 3
-
-
-test: (k,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    &
-) 0 3
-
-
-test: (#
-,    -XqnKzCfUGY[XOqADgqtycBAnrpAfUymmT\afEYZrTRMfOW]tP,    &
-) 0 3
-
-
-test: (#
-,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    glove) 0 3
-
-
-test: (*OysES,    #
-,    &
-) 0 2
-
-
-test: (#
-,    ",    &
-) 0 3
-
-
-test: (#
-,    #
-,    8) 0 3
-
-
-test: (grief,    #
-,    9
-) 0 2
-
-
-test: (#
-,    galaxy,    9
-) 0 3
-
-
-test: (#
-,    #
-,    gracious) 0 3
-
-
-test: (gas,    >
-,    useless) 0 2
-
-
-test: (%
-,    s,    useless) 0 3
-
-
-test: (%
-,    >
-,    SmeXtziHlNFz]PbaHtgXWmMsKrZyZFlTbCbd`lKAGljH[zalPCm_daJiF[TRbkk_vcAAUzZM`NnRRW`QryDdh) 0 3
-
-
-test: (:,    7
-,    useless) 0 3
-
-
-test: (%
-,    b,    useless) 0 3
-
-
-test: (%
-,    7
-,    gift) 0 3
-
-
-test: ((,    7
-,    7
-) 0 3
-
-
-test: (%
-,    ghoul,    7
-) 0 3
-
-
-test: (%
-,    7
-,    }WotfWUbEkLen[jBOPFhjddTOHjmyiXFSZf`RXvfopcPAOdh^jMGdDwkclLIFpQ_) 0 3
-
-
-test: (2,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
-
-
-test: (k
-,    gFUgRPEJnrQm^qr__ejWq]WnhetOeglfOnJMfSX,    M
-) 0 3
-
-
-test: (k
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    lKDzopJN^jWhjK[dk_IpCBvahf[HFYNfn^SATTtmFq^wuT[dgvMHbJeJMy\gi^bW_YrL) 0 3
-
-
-test: (&,    k
-,    M
-) 0 3
-
-
-test: (k
-,    7SiTjOcJIciFYxCW[_\SYskyKwLMMY_Qp`coZgS^DvnZERE`[kYoIUQd^TcoATUZimEhbzOvLsHfGDHOmZX]^bfelVvnNG,    M
-) 0 3
-
-
-test: (k
-,    k
-,    ?TaGgOe[OFnfHNDUobVjEKtFDOYNLXGg`TvezUmsT_H`JumMGNnZReYrmXnNZOSJO) 0 3
-
-
-test: (uJ[QImNIDsFnu_bLp]xAB`\NMHYQm]JIDKx_JD]m[uxVBYRdFZ[_TLxuA[byHdRLgHo_kotVdI`M,    k
-,    ?
-) 0 2
-
-
-test: (k
-,    jasiZMPKGhqzbo^CEG_SYSQAapwDEQxyxARLCS_pWLsbIjWLGRllHYaSIu`EnvfzmCRzZdULihoTuLNxObzR`QAqz,    ?
-) 0 3
-
-
-test: (k
-,    k
-,    w) 0 3
-
-
-test: (;P^\YkypuqEP,    unicorn,    M
-) 0 2
-
-
-test: (4
-,    3,    M
-) 0 3
-
-
-test: (4
-,    unicorn,    genuine) 0 3
-
-
-test: (N,    4
-,    M
-) 0 3
-
-
-test: (4
-,    goodness,    M
-) 0 3
-
-
-test: (4
-,    4
-,    () 0 3
-
-
-test: (gratitude,    4
-,    \
-) 0 2
-
-
-test: (4
-,    glisten,    \
-) 0 3
-
-
-test: (4
-,    4
-,    _nDhjgobpnbpT_XDxYBLqVCBFaBqotCynGHdyThuZmCw_Fn`qCh) 0 3
-
-
-test: (gesture,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    byCdww`rWclo`p]k) 0 2
-
-
-test: (8
-,    grace,    byCdww`rWclo`p]k) 0 3
-
-
-test: (8
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    i) 0 3
-
-
-test: (graceful,    8
-,    byCdww`rWclo`p]k) 0 2
-
-
-test: (8
-,    !AaoOwSPs^IJqcxBzvo[WQmAhnT\ppJ_SCKeAHJFQeeugKLWlsvPsAvWjEM_DOcqvee,    byCdww`rWclo`p]k) 0 3
-
-
-test: (8
-,    8
-,    _hYUjQWHmtFKPNDvATHqViWfBqYHvHz^PkPaGFXoaQtj[VUyzO`[Otvrmipt) 0 3
-
-
-test: (joke,    8
-,    8
-) 0 2
-
-
-test: (8
-,    jack,    8
-) 0 3
-
-
-test: (8
-,    8
-,    4) 0 3
-
-
-test: (journal,    [
-,    M
-) 0 2
-
-
-test: (v
-,    %hHU^^qli,    M
-) 0 3
-
-
-test: (v
-,    [
-,    8MwIFWmN_upOZVBE_mtvZeDZtUrsJ]MMPVrZAoeJ`yGHrRIyHnV[gsTFlHxqx]yu^neaL\^CrxfXuRvPuuW_ilvw^Cjh) 0 3
-
-
-test: (jug,    6
-,    M
-) 0 2
-
-
-test: (v
-,    joy,    M
-) 0 3
-
-
-test: (v
-,    6
-,    eZQgjUIbmiYVU\jcrRfqkxUT]VJp`KuVBDzzaWADVb\HZteVKsRpsFAATuZAef^YLNufqWDqdCRDUljgPRQ[) 0 3
-
-
-test: ($ggilmMGbZH_p\iKPOW[GywazahKjdMt^_gih`]IReQDORgEdIoJnaoZ^H\AM_vKTntwqae^NbdLagVSmRXBruuOzf`WdKFPuo,    6
-,    {
-) 0 2
-
-
-test: (v
-,    7,    {
-) 0 3
-
-
-test: (v
-,    6
-,    ^dBh) 0 3
-
-
-test: (omtN[n`yOvVvaA\cp[rxpdstexTfydeA[QzhNNHCYYCAwatxbQOaa^V\UTZx]RUNxFHxQApZ_y[ksmVmfSZxbeLhEfCrTQXSz`d,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    M
-) 0 2
-
-
-test: (5
-,    =Xo]aOApSAjZmVVkxhMb[HptOqXxAYJPun\Et[Di_wIKI[uJDfmJzOVhddgOdSbg``mRMuOlvLbfIKvlLTNpoEmbe_IrGV,    M
-) 0 3
-
-
-test: (5
-,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    jordan) 0 3
-
-
-test: (zASlcI\WSSxYbfkTakfOaMMTLcG^zEtforRmDwxZbB,    5
-,    M
-) 0 2
-
-
-test: (5
-,    jet,    M
-) 0 3
-
-
-test: (5
-,    5
-,    justice) 0 3
-
-
-test: (.,    5
-,    ,
-) 0 3
-
-
-test: (5
-,    O,    ,
-) 0 3
-
-
-test: (5
-,    5
-,    _wvreMCNsnSjOVPHCswpFSG_uvCCBbhMUsvicsGgVTCMGW[AqZW[ZsKYlGhGrhc]OvNTdQcz) 0 3
-
-
-test: (bpm^[OboVDDg_KGIWMTxfKfp\IsKDPVrGB`s_IOEFhJQQzcV\,    [
-,    underground) 0 2
-
-
-test: (4
-,    k,    underground) 0 3
-
-
-test: (4
-,    [
-,    jar) 0 3
-
-
-test: (jerk,    2
-,    underground) 0 2
-
-
-test: (4
-,    T,    underground) 0 3
-
-
-test: (4
-,    2
-,    uhv\ZGCVt\UPJILKasNVlzu\DMW\UhGLN]dHs]ym\ILaDGWxRvUwqnkjccC) 0 3
-
-
-test: (%GRoOQmeG\tbOWPXzbu[lTxxZBOlHwlMLgftSeEkhbHrvhsJD`hBwVpQ,    2
-,    2
-) 0 2
-
-
-test: (4
-,    |,    2
-) 0 3
-
-
-test: (4
-,    2
-,    7UiHwDnYSrlYKFoBf_EmghZkCWsCW_B`PcHy) 0 3
-
-
-test: (+,    [
-,    ;
-) 0 3
-
-
-test: (o
-,    7,    ;
-) 0 3
-
-
-test: (o
-,    [
-,    il) 0 3
-
-
-test: (!uQ_^H]]kzJKrOgMPfkuQbZDE]e[fPBqnwPBqKffj_kDRmTczX^nrQAkriNh^lvHrvlfnPmxppRxGBmXqweqKbSLzPWPOgoWTWt\,    2
-,    ;
-) 0 2
-
-
-test: (o
-,    jacket,    ;
-) 0 3
-
-
-test: (o
-,    2
-,    2) 0 3
-
-
-test: (tXJjH[PmbpHHAHw,    2
-,    2
-) 0 2
-
-
-test: (o
-,    jaw,    2
-) 0 3
-
-
-test: (o
-,    2
-,    9) 0 3
-
-
-test: (m,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    ;
-) 0 3
-
-
-test: (7
-,    <,    ;
+test: (e,    Q
+,    x
 ) 0 3
 
 
-test: (7
-,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    0YHTD[yADDTleKVWQjInKbMtqYAr\Zk^p\AfccJSGqLKRBrELA\PaoiRvJgeYQAJYa[izA]Z) 0 3
-
-
-test: (2XwIUCA\myFfoGs]AKGDIX`KlSrvjys`ps,    7
-,    ;
-) 0 2
-
-
-test: (7
-,    $,    ;
-) 0 3
-
-
-test: (7
-,    7
-,    @) 0 3
-
-
-test: (7GQ,    7
-,    3
-) 0 2
-
-
-test: (7
-,    4aUyyvVkOkJgl[\DSarAquQLToOE]hFdyNvDbv]cvZ[gqbX[ZuHD_qNrfyBjJizsqeh,    3
+test: (e,    !,    x
 ) 0 3
-
-
-test: (7
-,    7
-,    *hQrSvjY[s\) 0 3
-
-
-test: (jail,    +,    1) 0 2
-
-
-test: (1,    4oGrklrjWp][`fpcljY\[fePHBNTmeY]UCV_xUuZkf[mCZ]JR\SAfxur`zXnU\jAUKLJbZpv^ZHcy_xdnWwT]nVMLRt_Rg,    1) 0 3
 
 
-test: (1,    +,    jewel) 0 3
+test: (e,    !,    1) 0 3
 
 
 test: (C,    +,    1) 0 3
 
 
-test: (T
-,    q,    1) 0 3
+test: (C,    ?YDuXI_\UtXwNdMALjLvzotugQsXqsDufsrL__fV[vhT\noZXF,    1) 0 3
 
 
-test: (T
-,    +,    amount) 0 3
+test: (C,    ?YDuXI_\UtXwNdMALjLvzotugQsXqsDufsrL__fV[vhT\noZXF,    FrIMwoaDtyZBsGTpWhKEV[BezO^myxMprGDTaNG^jcBRLZgBeiQA`Hv`\cBJriu]SUvrr]YxpSWjKZXd) 0 3
 
 
-test: (anyhow,    W
+test: (;\H[LJDRfbkDjEYZKCbiSS\LCPMz_jpxVVlipez,    X
 ,    1) 0 2
 
 
-test: (T
-,    ?,    1) 0 3
+test: (;\H[LJDRfbkDjEYZKCbiSS\LCPMz_jpxVVlipez,    !WFaRGGbMFe[KxnUmhtp`DZjNYPirLrtjTQxLKosmmtDZI]MrOvrPtu]CbCoSZsKPXLxjWeCY\kgh_HSsnlevNERVRJky[nRc,    1) 0 2
 
 
-test: (T
-,    W
-,    *Czvr]fdx_qhdearyxPXqVNBTq]GqGvjSBKosZrZ_Fjv_XrIezAXbIlVJvFvqdvTX\LoYDRx`JfK]lPesai`ScYbhReyBCiXUgQ) 0 3
+test: (;\H[LJDRfbkDjEYZKCbiSS\LCPMz_jpxVVlipez,    !WFaRGGbMFe[KxnUmhtp`DZjNYPirLrtjTQxLKosmmtDZI]MrOvrPtu]CbCoSZsKPXLxjWeCY\kgh_HSsnlevNERVRJky[nRc,    ") 0 2
 
 
-test: (`TfZm`ASogLb\gEsVooNn_bFIkZGOtJP\i_BpfLfSGAlk]GOXz[`ImTgBR[T__UK]IDYkTTUSfuinDQmcprlGSPJN,    W
-,    M
+test: (lucky,    X
+,    b
 ) 0 2
 
 
-test: (T
-,    $,    M
-) 0 3
-
-
-test: (T
-,    W
-,    #) 0 3
-
-
-test: (8,    W
-,    M
-) 0 3
-
-
-test: (v,    7,    M
-) 0 3
-
-
-test: (v,    W
-,    *Zqip) 0 3
-
-
-test: (uqXxB\HAELr[MoogR\XwpgMW_cJWsVlykt]pKDzgMUfjDsXydzZISFaPrYd[^`LTm]Gj[eTWD,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
+test: (lucky,    },    b
 ) 0 2
 
 
-test: (T
-,    2CECerOtGEPg[vuDieRe\QSqv[[ziXEVKqjZdjmkxUZG\iAOHZmqIogZidvKVUM_ua`Cc^inUoQyvvxVl,    M
-) 0 3
+test: (lucky,    },    lump) 0 2
 
 
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    )) 0 3
+test: (log,    +,    1) 0 2
 
 
-test: (j,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
+test: (log,    9,    1) 0 2
 
 
-test: (T
-,    #`BZFfiU\rfeIGhSrwp`IhpaATbOXFMvLy\WzNrtuu`vwG[dHU^aTjSHyiNkkrVpk]JCWN,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
+test: (log,    9,    mCfRG]XDsjSzdDhs\pi]NWyFvelSGHhNeie_DdWRVCxBuO`w[) 0 2
 
 
-test: (T
-,    W
-,    arrival) 0 3
+test: (+hLtnrXfNFh\nqEIoHQqhaWdQhlTQKCjQsQA^wdZbI[_WQ_Y_nnqcAr^zFbE_`\MW],    K
+,    1) 0 2
 
 
-test: (|UZEDQ]I]uFTOBYOk`k,    +,    1) 0 2
+test: (+hLtnrXfNFh\nqEIoHQqhaWdQhlTQKCjQsQA^wdZbI[_WQ_Y_nnqcAr^zFbE_`\MW],    >,    1) 0 2
 
 
-test: (j
-,    ashamed,    1) 0 3
+test: (+hLtnrXfNFh\nqEIoHQqhaWdQhlTQKCjQsQA^wdZbI[_WQ_Y_nnqcAr^zFbE_`\MW],    >,    FzQPGq^[oHnPAODzw_rNqLtoDkC_YdTBEx^]NZKGK]c]wGDH) 0 2
 
 
-test: (j
-,    +,    abyss) 0 3
+test: (list,    K
+,    J
+) 0 2
 
 
-test: (X,    r
+test: (list,    |hD,    J
+) 0 2
+
+
+test: (list,    |hD,    lest) 0 2
+
+
+test: (lodge,    +,    1) 0 2
+
+
+test: (lodge,    M,    1) 0 2
+
+
+test: (lodge,    M,    H) 0 2
+
+
+test: (-,    b
 ,    1) 0 3
 
 
-test: (j
-,    7NiUjX]WvcttwyXmZSAbebTan]cLJmJc^brnKQC\xzid[ec\eQvlrGGStxAlRDw\eZt,    1) 0 3
+test: (-,    V,    1) 0 3
 
 
-test: (j
-,    r
-,    U) 0 3
+test: (-,    V,    4) 0 3
 
 
-test: (ankle,    r
-,    P
+test: (lawyer,    b
+,    T
 ) 0 2
 
 
-test: (j
-,    assemble,    P
-) 0 3
+test: (lawyer,    ejrJEOpVknFHZQJnJtIYadewDo,    T
+) 0 2
 
 
-test: (j
-,    r
-,    5) 0 3
+test: (lawyer,    ejrJEOpVknFHZQJnJtIYadewDo,    leather) 0 2
 
 
-test: (&,    +,    1) 0 3
+test: (limp,    +,    1) 0 2
 
 
-test: (3
-,    <,    1) 0 3
+test: (limp,    +AjUHNJbSGpaEpciKaENwVQ`JxyNcfFxPjAIoYoUflbvTtz\Dp,    1) 0 2
 
 
-test: (3
-,    +,    .) 0 3
+test: (limp,    +AjUHNJbSGpaEpciKaENwVQ`JxyNcfFxPjAIoYoUflbvTtz\Dp,    ") 0 2
 
 
-test: (hlVMXsloakDlKHBuAUVI]^,    /
+test: (/,    l
+,    1) -8 3
+
+
+test: (/,    6,    1) 0 3
+
+
+test: (/,    6,    local) 0 3
+
+
+test: (4FZeUXgVibdftXWFBRKLixzRVSl]AHf`T[wPtsB[uUGz\vbrK^xtkMDuvIt`uthdLzgpzrH[oqtIflWjedgK`mt,    l
+,    N
+) 0 2
+
+
+test: (4FZeUXgVibdftXWFBRKLixzRVSl]AHf`T[wPtsB[uUGz\vbrK^xtkMDuvIt`uthdLzgpzrH[oqtIflWjedgK`mt,    q,    N
+) 0 2
+
+
+test: (4FZeUXgVibdftXWFBRKLixzRVSl]AHf`T[wPtsB[uUGz\vbrK^xtkMDuvIt`uthdLzgpzrH[oqtIflWjedgK`mt,    q,    ?\SL`rXTJOFywbOWyRTGeMU`FOImaah\UmrtYNNGenTArQZeMdXswYr^ZYGjvBoquMEIfhGY]Erc) 0 2
+
+
+test: (ladder,    +,    1) 0 2
+
+
+test: (ladder,    8PU`o^CehmlTk_UcwthLVaNySf]uPuNuZFYDwUiZ_iiy`,    1) 0 2
+
+
+test: (ladder,    8PU`o^CehmlTk_UcwthLVaNySf]uPuNuZFYDwUiZ_iiy`,    _) 0 2
+
+
+test: ({K^JAmx]^DxzvYoAZAIU_UbGjjbDImyj`rqLRUresnJnbPVwr[BCySSSIWGyuzycSih]qIwWD[gbkLPI]fj[,    g
 ,    1) 0 2
 
 
-test: (3
-,    j,    1) 0 3
+test: ({K^JAmx]^DxzvYoAZAIU_UbGjjbDImyj`rqLRUresnJnbPVwr[BCySSSIWGyuzycSih]qIwWD[gbkLPI]fj[,    =jjucnWHbj[gTLAFANebYbqRSgtKtDWGovF^CqQeeIEw`S,    1) 0 2
 
 
-test: (3
-,    /
-,    august) -8 3
+test: ({K^JAmx]^DxzvYoAZAIU_UbGjjbDImyj`rqLRUresnJnbPVwr[BCySSSIWGyuzycSih]qIwWD[gbkLPI]fj[,    =jjucnWHbj[gTLAFANebYbqRSgtKtDWGovF^CqQeeIEw`S,    lack) 0 2
 
 
-test: (attitude,    W
-,    M
-) 0 2
-
-
-test: (*
-,    ,,    M
+test: (O,    g
+,    N
 ) 0 3
 
 
-test: (*
-,    W
-,    attic) 0 3
-
-
-test: (absurd,    [
-,    M
-) 0 2
-
-
-test: (*
-,    dvyghIUMmnzWLDkMMm^v,    M
+test: (O,    `jIg,    N
 ) 0 3
 
 
-test: (*
-,    [
-,    acquaintance) 0 3
+test: (O,    `jIg,    lend) 0 3
 
 
-test: (alas,    [
-,    ;
-) 0 2
+test: (<,    +,    1) 0 3
 
 
-test: (*
-,    J,    ;
-) 0 3
+test: (<,    NoAyEhWbLku,    1) 0 3
 
 
-test: (*
-,    [
-,    astonishment) 0 3
+test: (<,    NoAyEhWbLku,    9) 0 3
 
 
-test: (apple,    W
-,    M
-) 0 2
-
-
-test: (k
-,    r,    M
-) 0 3
-
-
-test: (k
-,    W
-,    n) 0 3
-
-
-test: (ash,    >
-,    M
-) 0 2
-
-
-test: (k
-,    9vK[mbN`fTxslqmqcfCFyOSNePUlDBTBtj_h[LCqVgQjcg]uCO^ADNSCmYwsg,    M
-) 0 3
-
-
-test: (k
-,    >
-,    ?) 0 3
-
-
-test: (associate,    >
-,    &
-) 0 2
-
-
-test: (k
-,    (^OTHw_LlwfY[vP^KBZwSAlPHNomOCkHPZbKPwHdHcfW_FsgHUyX_]ANPHSDY[UdamuFHOmXAew`mPUQYszVNpU]p_Zoqp,    &
-) 0 3
-
-
-test: (k
-,    >
-,    accord) 0 3
-
-
-test: (angle,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: ([
-,    !,    M
-) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    agreeable) 0 3
-
-
-test: (admire,    [
-,    M
-) 0 2
-
-
-test: ([
-,    8]BPXwrorlP[uhrhL^x\lafusctr\\hUShWGNLliIMGdxsYMS^snbPQAYLcfC\hsArhAIFS,    M
-) 0 3
-
-
-test: ([
-,    [
-,    Xss]urxSrQEWuscex`idDz^jDqKMOEYgVJMIVM`DsAic) 0 3
-
-
-test: (ftnale`pnYl[OItcl_PRuaVkMWRVxJsDettTfVSieSYjKn]AeSYLbjH,    [
-,    ;
-) 0 2
-
-
-test: ([
-,    L,    ;
-) 0 3
-
-
-test: ([
-,    [
-,    >N) 0 3
-
-
-test: (<OGfg[rbIF[^gt\Ah^zguQB]bySDjmk`,    W
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 2
-
-
-test: ({
-,    l,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    W
-,    altogether) 0 3
-
-
-test: (.,    :
-,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    <IxzC[MAq`eLB[FYq\ZSVQYNeR`T]bRlrlCtfvtADBIEJY,    vKedciGGicqWggQNUDGDPtPAQbOAxGcvtum_CiHufWHGFH_]_`KKrbTlEtvT_Vr[QMSQpc]`JJlTS) 0 3
-
-
-test: ({
-,    :
-,    wfwF) 0 3
-
-
-test: (?Px]pgnPSiNhnJjcSaLCyT_\rkjjUvyDeC^sZOGFvqeeKOF,    :
-,    :
-) 0 2
-
-
-test: ({
-,    5,    :
-) 0 3
-
-
-test: ({
-,    :
-,    amaze) 0 3
-
-
-test: (?,    +,    1) 0 3
-
-
-test: (uneasy,    w,    1) 0 2
-
-
-test: (uneasy,    +,    .) 0 2
-
-
-test: (!,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    1) 0 3
-
-
-test: (1,    |y^Efc_EsWA^wLaWncV,    1) 0 3
-
-
-test: (1,    =^AWNSSLjjJoug[UHi[ZsfNxKsJiOGxQJoEHKWOI_daoWmDIupDmjbMfdmNcEF]CAaAVLLI,    anymore) 0 3
-
-
-test: ($OyzEH_bevuLLMOGfmTt[juePGhGFiSKwM[mGAES_XK,    +,    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 2
-
-
-test: (1,    ',    Wzilb`\IvUaAdZvJpa_j^LNvMK[_\XBCTK) 0 3
-
-
-test: (1,    +,    t) 0 3
-
-
-test: (Y,    +,    1) 0 3
-
-
-test: (undoubted,    X,    1) 0 2
-
-
-test: (undoubted,    +,    0) 0 2
-
-
-test: (3,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    1) 0 3
-
-
-test: (T
-,    ug`W^DSpT[hCOfpCOxAyEvTmTxbQknLkzg\XD_z\erIs\teH,    1) 0 3
-
-
-test: (T
-,    )lPEafqdFHjdSnevhgKdhpBqO[eEtqtKuKfeHWdop[Zq^Vi[H^_e`iZAoOfLFWsXgMYySCXB`zY\ExFnxJcno,    De^TgcMSOG^PulkYSWhhGsjNxdi\CYUloYhg^ykALKbnz]CpRhxlXQ_rVIKhXXfmH\C^CRPEmbFXkzvuhtyAgUBbWIMHaIgGrqA) 0 3
-
-
-test: (/,    +,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (T
-,    .^BsYughg`pCFBPNFcKK\wnMDAqBWhKqaTcrvcCF`xa[QkiZkUrd,    6fVVsdQid\[tMxOCwZhBiW]z[J\) 0 3
-
-
-test: (T
-,    +,    awaken) 0 3
-
-
-test: (adult,    W
+test: (-FekKzLLDgIfRPSvZrVfn^C\CC]IhrlauUffaevmcKXcl_]teUYVnt^frXKeADbpU,    U
 ,    1) 0 2
 
 
-test: (0DKazlJkKGnfebKwznYeq^Uhu[su[oYVEbNDIfTYC]ClWSq[kROsWaM^AOmhLEPIw^ecjYzXWIyDe,    7],    1) 0 2
+test: (-FekKzLLDgIfRPSvZrVfn^C\CC]IhrlauUffaevmcKXcl_]teUYVnt^frXKeADbpU,    )hNiLt[ewRgX[[QnKYO`dud`^JPgfAnzwJ_ykHjtGTnaLJcHNdD_jtiihZAhFwcuTvdoC\McoiZVb\bOCvaJ,    1) 0 2
 
 
-test: (0DKazlJkKGnfebKwznYeq^Uhu[su[oYVEbNDIfTYC]ClWSq[kROsWaM^AOmhLEPIw^ecjYzXWIyDe,    W
-,    >) 0 2
+test: (-FekKzLLDgIfRPSvZrVfn^C\CC]IhrlauUffaevmcKXcl_]teUYVnt^frXKeADbpU,    )hNiLt[ewRgX[[QnKYO`dud`^JPgfAnzwJ_ykHjtGTnaLJcHNdD_jtiihZAhFwcuTvdoC\McoiZVb\bOCvaJ,    |zdcKUT`]f^IcVjQgnxKMqrOtlcmhPTDjYJZQkVobxPzOWqqUPYFfRvSvzH) 0 2
 
 
-test: (anywhere,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    1) 0 2
-
-
-test: (T
-,    "GFUDSgnfTfaYUPpealRFsL^zlom^YkLv[oJrlQCVcsAGkjKqOweotUwfn`o]f\eqlpp,    1) 0 3
-
-
-test: (T
-,    PwvNQgeWNm[yPgbnnQ^Wp[]MvC],    accident) 0 3
-
-
-test: (arrow,    W
-,    ;) 0 2
-
-
-test: (T
-,    autumn,    ;) 0 3
-
-
-test: (T
-,    W
-,    u) 0 3
-
-
-test: (k,    W
-,    M
-) 0 3
-
-
-test: (upright,    N,    M
+test: ()lP][pEedoL^wLXqwLErWT\Lm[GP[q^LgfF[OtpcKldZT`ZBtdq],    U
+,    n
 ) 0 2
 
 
-test: (upright,    W
-,    dwGoKRLpHzyz_BBl]TaspyaJbCUswJFL) 0 2
-
-
-test: (,,    -,    M
-) 0 3
-
-
-test: (T
-,    $BoSTmGr\lBsEdgyOTjae`bvrrVirGBEQHLyFooZNPob,    M
-) 0 3
-
-
-test: (T
-,    -,    acknowledge) 0 3
-
-
-test: ((Y^UtQueCQDRtPnQOfrwBWtDBUlcadDh[anVp_ndk,    W
-,    cYV) 0 2
-
-
-test: (T
-,    rwY_OUgdq\PGZiIe[tZbuT]CCOX[QAhsD[V]ovOoNU^rRtKOx`lxiazrXL^hSnvEQKB[o\Y_bW^i`,    cYV) 0 3
-
-
-test: (T
-,    W
-,    amazement) 0 3
-
-
-test: (P`HIV[VfsXZwLGiPzVCNMZqSwhf^Pc[WZbvGKA,    W
-,    M
+test: ()lP][pEedoL^wLXqwLErWT\Lm[GP[q^LgfF[OtpcKldZT`ZBtdq],    bXqwvEfPbGHAiCN]VqF,    n
 ) 0 2
 
 
-test: ()\kijUDbs[eMGnXWGDdbbhUzssQeZFNVPJWLGI_cxVnal[wlEuwzlZIoszpET,    ankh,    M
-) 0 2
+test: ()lP][pEedoL^wLXqwLErWT\Lm[GP[q^LgfF[OtpcKldZT`ZBtdq],    bXqwvEfPbGHAiCN]VqF,    loss) 0 2
 
 
-test: ()\kijUDbs[eMGnXWGDdbbhUzssQeZFNVPJWLGI_cxVnal[wlEuwzlZIoszpET,    W
-,    9lUeyBz^) 0 2
+test: (lad,    +,    1) 0 2
 
 
-test: (announce,    YmsQNrMjS]BQNJYP,    M
-) 0 2
+test: (lad,    lofty,    1) 0 2
 
 
-test: (v,    w,    M
-) 0 3
+test: (lad,    lofty,    license) 0 2
 
 
-test: (v,    YmsQNrMjS]BQNJYP,    /LxYZv[FAjR^FXr`FEgWRFzUMduQoBdUENEvvN]ACEfdadS]QJxwqkDtaOUqwIUvzplBCH_siiZiO) 0 3
-
-
-test: (6zWwdfezCkWeXdcHmzQP`bOwfm`uodIiKGxolXy_mW,    W
-,    uncomfortable) 0 2
-
-
-test: (v,    i,    uncomfortable) 0 3
-
-
-test: (v,    W
-,    1e``NGZjpstmU`HkOHqfGpzXcl`\LbkJiV[ikpOhzAIMhresKDyI]byTaavyRP\) 0 3
-
-
-test: (:,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 3
-
-
-test: (universe,    aspect,    M
-) 0 2
-
-
-test: (universe,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    JsCinNfRm__INsKXYNuHE[AbeRjoABmxoHIzKqZYYcS]wTQrwE\DJEtGrMYs^JqCYELDc\eYZUcdQRWybJIiX^qPdFP) 0 2
-
-
-test: (vzvB^FCkocmrcvKNdNPMVQq,    uncertain,    M
-) 0 2
-
-
-test: (T
-,    U,    M
-) 0 3
-
-
-test: (T
-,    uncertain,    <) 0 3
-
-
-test: (;,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    =) 0 3
-
-
-test: (T
-,    1,    =) 0 3
-
-
-test: (T
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    argue) 0 3
-
-
-test: (5msCtXcGZ,    :
-,    :
-) 0 2
-
-
-test: (<ky^VtDya\qGtqp_lsvF\WiGdiW`gsuCtfExqBeEaKjKfZYTubGoeHy`qvbrDVIL,    {,    :
-) 0 2
-
-
-test: (<ky^VtDya\qGtqp_lsvF\WiGdiW`gsuCtfExqBeEaKjKfZYTubGoeHy`qvbrDVIL,    :
-,    2) 0 2
-
-
-test: (e,    university,    :
-) 0 3
-
-
-test: ({
-,    anger,    :
-) 0 3
-
-
-test: ({
-,    university,    attract) 0 3
-
-
-test: (abrupt,    :
-,    upstairs) 0 2
-
-
-test: ({
-,    army,    upstairs) 0 3
-
-
-test: ({
-,    :
-,    accompany) 0 3
-
-
-test: (assume,    +,    1) 0 2
-
-
-test: (e,    (LBT_akVogQCkrJLrK`,    1) 0 3
-
-
-test: (e,    +,    (bavOwUpiXkonLR^Q^UCIGap]naLaFGjrJbYtZCS[qMednhuGKKVRhyPJ) 0 3
-
-
-test: (D,    upper,    1) 0 3
-
-
-test: (j
-,    ),    1) 0 3
-
-
-test: (j
-,    upper,    advice) 0 3
-
-
-test: (aid,    +,    !) 0 2
-
-
-test: (j
-,    6kE[D^xEIa^BevSqG]ZdaMdGMCO]EVHJGDjqgdF_FAPWDjpJsL`SZRio^G]B\vVINCAfR_MpNtaJ[AYPpFjRRCfieWlSo[BZVOVc,    !) 0 3
-
-
-test: (j
-,    +,    5) 0 3
-
-
-test: (1iWq^MHcfxS,    r
+test: (.ZnQxuHRv^UBMAWH`PzACmNBTgen\K`]W]v]CsEypviV`ZIxChhlctPmYj^qhVFSB]qf`rv`tnBtogOaxAP,    N
 ,    1) 0 2
 
 
-test: (]U\GUwfdqETG_FQ__`\oMsYddI`tWZTsccR``_cWvvhqMLB^n`AJXEXPUUYNvqbMSMKu]\hQgvHbygDaUjiSNoN,    attach,    1) 0 2
+test: (.ZnQxuHRv^UBMAWH`PzACmNBTgen\K`]W]v]CsEypviV`ZIxChhlctPmYj^qhVFSB]qf`rv`tnBtogOaxAP,    lantern,    1) 0 2
 
 
-test: (]U\GUwfdqETG_FQ__`\oMsYddI`tWZTsccR``_cWvvhqMLB^n`AJXEXPUUYNvqbMSMKu]\hQgvHbygDaUjiSNoN,    r
-,    NQHyofDFHetOhN`[N`WJttVm]EGazHHfX\dVj`wXrkdqSODrCjreuOpVhqU) 0 2
+test: (.ZnQxuHRv^UBMAWH`PzACmNBTgen\K`]W]v]CsEypviV`ZIxChhlctPmYj^qhVFSB]qf`rv`tnBtogOaxAP,    lantern,    9) 0 2
 
 
-test: (amiable,    w,    1) 0 2
+test: (limit,    N
+,    V
+) 0 2
 
 
-test: (j
-,    &_,    1) 0 3
+test: (limit,    B,    V
+) 0 2
 
 
-test: (j
-,    w,    v) 0 3
+test: (limit,    B,    $) 0 2
 
 
-test: (s,    r
-,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
+test: (",    +,    1) 0 3
 
 
-test: (j
-,    s,    =GILjRotVQtAkVOkx]xkTjrbNAEFQjgY_DAQgJyY) 0 3
+test: (",    -TflemNWP_jSGnf`QQgeIvbGfmeB[aXlkqPHnSkfREtpTakC,    1) 0 3
 
 
-test: (j
-,    r
-,    arch) 0 3
+test: (",    -TflemNWP_jSGnf`QQgeIvbGfmeB[aXlkqPHnSkfREtpTakC,    9) 0 3
 
 
-test: (.,    r
-,    P
+test: (onCKnZWX`EnINp^H`XBizWLBfyHHSMRT[giyJWZgkd\qVDyltAehCUbfSwFZ^uSu_RglzhGxiWe,    A
+,    1) 0 2
+
+
+test: (onCKnZWX`EnINp^H`XBizWLBfyHHSMRT[giyJWZgkd\qVDyltAehCUbfSwFZ^uSu_RglzhGxiWe,    0,    1) 0 2
+
+
+test: (onCKnZWX`EnINp^H`XBizWLBfyHHSMRT[giyJWZgkd\qVDyltAehCUbfSwFZ^uSu_RglzhGxiWe,    0,    lightning) 0 2
+
+
+test: (lick,    A
+,    b
+) 0 2
+
+
+test: (lick,    IzgIUa\CvXKm\\[`[XwvGwT]GiX\mR\aSofuRFeZoIDvaA,    b
+) 0 2
+
+
+test: (lick,    IzgIUa\CvXKm\\[`[XwvGwT]GiX\mR\aSofuRFeZoIDvaA,    SffOCdDNliwyT) 0 2
+
+
+test: (librarian,    +,    1) 0 2
+
+
+test: (librarian,    .HuxoaNsBIT^wGB_aiGorSfRRxsKQDTAjKPsKBRgODi_DiXrdlfH]gntY\``\CvYp^TWjsCGWvjaON,    1) 0 2
+
+
+test: (librarian,    .HuxoaNsBIT^wGB_aiGorSfRRxsKQDTAjKPsKBRgODi_DiXrdlfH]gntY\``\CvYp^TWjsCGWvjaON,    ') 0 2
+
+
+test: (lane,    V
+,    1) 0 2
+
+
+test: (lane,    \,    1) 0 2
+
+
+test: (lane,    \,    4G_zTfNbnJPsTJVShUTEUsVUSNADKEpJaPs\NVD^joUpdVgZ[HKV`pBnKIavnADKNRQvPfUQseWQdlzNiC) 0 2
+
+
+test: (5gOQ`sebFYyxkiiDQKbV]FgNZfevNY\gTYhCatOgSt_HNcSksN[AZvLiKrevfoVBuPJdX\,    V
+,    u
+) 0 2
+
+
+test: (5gOQ`sebFYyxkiiDQKbV]FgNZfevNY\gTYhCatOgSt_HNcSksN[AZvLiKrevfoVBuPJdX\,    7VCnOFCRHef_ubILCJiZsCr^fFQ^P^vstCgYifdHevj,    u
+) 0 2
+
+
+test: (5gOQ`sebFYyxkiiDQKbV]FgNZfevNY\gTYhCatOgSt_HNcSksN[AZvLiKrevfoVBuPJdX\,    7VCnOFCRHef_ubILCJiZsCr^fFQ^P^vstCgYifdHevj,    <F^[kzmsxUrXaUwdLVDmmfLWLSKNrjIdI\) 0 2
+
+
+test: (%,    +,    1) 0 3
+
+
+test: (%,    lArLziGqgNcHfnjqpDNzmN^dYtaQmG`wCFaS]PAsCxFRvIWlV,    1) 0 3
+
+
+test: (%,    lArLziGqgNcHfnjqpDNzmN^dYtaQmG`wCFaS]PAsCxFRvIWlV,    =) 0 3
+
+
+test: (&,    R
+,    1) 0 3
+
+
+test: (&,    K,    1) 0 3
+
+
+test: (&,    K,    u) 0 3
+
+
+test: (,NnV][YdIQF\M[GhdW`oSEGg\oGGvDhaGo[kwaOaZHvNxqWxc^NO_oQza`HNittScXzEdccStVRPwrDxS,    R
+,    n
+) 0 2
+
+
+test: (,NnV][YdIQF\M[GhdW`oSEGg\oGGvDhaGo[kwaOaZHvNxqWxc^NO_oQza`HNittScXzEdccStVRPwrDxS,    #,    n
+) 0 2
+
+
+test: (,NnV][YdIQF\M[GhdW`oSEGg\oGGvDhaGo[kwaOaZHvNxqWxc^NO_oQza`HNittScXzEdccStVRPwrDxS,    #,    league) 0 2
+
+
+test: (y,    +,    1) 0 3
+
+
+test: (y,    +^splnOTxzkBLZaUgBAwPsaVz_Q[WaQFLTSt__G]hFMuhYqTZ,    1) 0 3
+
+
+test: (y,    +^splnOTxzkBLZaUgBAwPsaVz_Q[WaQFLTSt__G]hFMuhYqTZ,    GvgRxNzZUrvVaJxXab^MZK[qOmOx_ugOV[YGioIAk]r\gNf\opuKnyTykrUQQfnfinxt_vfcZFbkZPg) 0 3
+
+
+test: ()]So]^dVaMc]_WYHl[YZRfGIfbnRTvcyObh]vjQROihmprwvHNiSFxAAIhOwXtu^uhfmgzojvp^y\vM]WHIdH^IecQBX[T\`QQO,    t
+,    1) 0 2
+
+
+test: ()]So]^dVaMc]_WYHl[YZRfGIfbnRTvcyObh]vjQROihmprwvHNiSFxAAIhOwXtu^uhfmgzojvp^y\vM]WHIdH^IecQBX[T\`QQO,    P,    1) 0 2
+
+
+test: ()]So]^dVaMc]_WYHl[YZRfGIfbnRTvcyObh]vjQROihmprwvHNiSFxAAIhOwXtu^uhfmgzojvp^y\vM]WHIdH^IecQBX[T\`QQO,    P,    landscape) 0 2
+
+
+test: (6PGBMLb`cny\GedemVo]ipaKaWxvZJ]ICUYXeJFcFItxLDEUb^JLBlIvleVaoklxnU\qve,    t
+,    V
+) 0 2
+
+
+test: (6PGBMLb`cny\GedemVo]ipaKaWxvZJ]ICUYXeJFcFItxLDEUb^JLBlIvleVaoklxnU\qve,    liberty,    V
+) 0 2
+
+
+test: (6PGBMLb`cny\GedemVo]ipaKaWxvZJ]ICUYXeJFcFItxLDEUb^JLBlIvleVaoklxnU\qve,    liberty,    YmIWDZZWyTdXRN^jL[NvFHTTXEpsCTI^pcjMQMH_`GdueKUjtfa[pmofs[CnMqj`lS[sYd) 0 2
+
+
+test: (lover,    +,    1) 0 2
+
+
+test: (lover,    3reNJKsmT,    1) 0 2
+
+
+test: (lover,    3reNJKsmT,    ?TySa^cQWXdNxvkM[NcMzCMDuIBdnVTuvhhcwjBhAVAEXDr^fGtDjJTB]BdSOdaPzbBh) 0 2
+
+
+test: (4N\_G[ora^cTeOVjDJlUCwcAm_PDwszzCmPqlWzZFNplvHWhW]YfiazvtIGiSbqwodRrinZtRnPpD[QqCo`OO_C_oH_vvuawGAdL,    H
+,    1) 0 2
+
+
+test: (4N\_G[ora^cTeOVjDJlUCwcAm_PDwszzCmPqlWzZFNplvHWhW]YfiazvtIGiSbqwodRrinZtRnPpD[QqCo`OO_C_oH_vvuawGAdL,    lunch,    1) 0 2
+
+
+test: (4N\_G[ora^cTeOVjDJlUCwcAm_PDwszzCmPqlWzZFNplvHWhW]YfiazvtIGiSbqwodRrinZtRnPpD[QqCo`OO_C_oH_vvuawGAdL,    lunch,    .) 0 2
+
+
+test: (',    H
+,    j
 ) 0 3
 
 
-test: (unfortunate,    vttprPJuRvHXUTavbswV\xYxNLApiwYeoHzX`aArqVFOFZt^koB[_yPYH^jXROXKFTfsgkmEVJaTNDcD^vQV]Qnja,    P
-) 0 2
-
-
-test: (unfortunate,    r
-,    8UEeJwYRG\wmCTMjdMIbQmJAUSyGuweXAZnNqfbokcF_Z`ozd) 0 2
-
-
-test: (arrange,    x,    P
-) 0 2
-
-
-test: (j
-,    &djHapLyqTYPUwTwVNDKbxawAqiDZ\eep`GPTnb^YXxSaBOXD[,    P
+test: (',    UwCDHB]SFYTZGzvVQjweiVSSiMAvaAlip_wlnoQXNNdgoE]vwAlZ`iLlusYWQ^NRsJMe[ea^^UXIDpdaIYHukvDdMxvxzZZolCZ,    j
 ) 0 3
 
 
-test: (j
-,    x,    atmosphere) 0 3
+test: (',    UwCDHB]SFYTZGzvVQjweiVSSiMAvaAlip_wlnoQXNNdgoE]vwAlZ`iLlusYWQ^NRsJMe[ea^^UXIDpdaIYHukvDdMxvxzZZolCZ,    risk) 0 3
 
 
-test: (_,    r
-,    |) 0 3
+test: (remembrance,    +,    1) 0 2
 
 
-test: (j
-,    -jKIAxfeOlA]oXVBZYsShdCbkVd^JewY`JGksw[kUyPspOZbpfKNriBMdF\_tVPmOWIkjy\sAoGyI[KayQEiO\FZ,    |) 0 3
+test: (remembrance,    rescue,    1) 0 2
 
 
-test: (j
-,    r
-,    _) 0 3
+test: (remembrance,    rescue,    rot) 0 2
 
 
-test: (affair,    +,    1) 0 2
+test: (riddle,    E
+,    1) 0 2
 
 
-test: (z,    &,    1) 0 3
+test: (riddle,    [,    1) 0 2
 
 
-test: (z,    +,    "l^zZisZBZULExMNQQTBKHhei\YzKzRNoxT]Zsl`BCDSxMCqsTSdOToIu^uTYiiL^z_Zat]NzAHAPlNOkNiYPRCPPH_Rx) 0 3
+test: (riddle,    [,    !) 0 2
 
 
-test: (arise,    union,    1) 0 2
-
-
-test: (3
-,    >,    1) 0 3
-
-
-test: (3
-,    union,    area) 0 3
-
-
-test: (J,    +,    ?) 0 3
-
-
-test: (3
-,    {Yb]dvrCjmdTJ[t^PtGUmT[\lXZRAEypNj[RimKweziPEobTlWfOJ_\ZpmQbYQfwygHyYm^cLx`RwslwDS_NLJ,    ?) 0 3
-
-
-test: (3
-,    +,    advise) 0 3
-
-
-test: (unhappy,    ),    1) 0 2
-
-
-test: (unhappy,    /
-,    auditor) 0 2
-
-
-test: (kieNw_GxPIPhjVCDhuFiJIpD,    unseen,    1) 0 2
-
-
-test: (3
-,    7,    1) 0 3
-
-
-test: (3
-,    unseen,    argument) 0 3
-
-
-test: (vqfY`abCLzNOL`maCScZh_hF\^hsTiprAdxSArN\gJdJPPYI[jpqx^JKlfQV,    W
-,    M
+test: (<TMHooR]mRwxzplKfoJzNxRXQcGGGdKs[YOjMPRhaCbfzST`FUgKvrbguchxPMEStwTmU[dKqhhkQ\t,    E
+,    w
 ) 0 2
 
 
-test: (unexpected,    axe,    M
+test: (<TMHooR]mRwxzplKfoJzNxRXQcGGGdKs[YOjMPRhaCbfzST`FUgKvrbguchxPMEStwTmU[dKqhhkQ\t,    rate,    w
 ) 0 2
 
 
-test: (unexpected,    W
-,    active) 0 2
+test: (<TMHooR]mRwxzplKfoJzNxRXQcGGGdKs[YOjMPRhaCbfzST`FUgKvrbguchxPMEStwTmU[dKqhhkQ\t,    rate,    5) 0 2
 
 
-test: (arrangement,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    M
+test: (=PLDYqNKVPeMtFZY\RKr[YqqTg[nQWyPojiNvK_SqzmjLqoMHTCsg[gQ,    +,    1) 0 2
+
+
+test: (=PLDYqNKVPeMtFZY\RKr[YqqTg[nQWyPojiNvK_SqzmjLqoMHTCsg[gQ,    restore,    1) 0 2
+
+
+test: (=PLDYqNKVPeMtFZY\RKr[YqqTg[nQWyPojiNvK_SqzmjLqoMHTCsg[gQ,    restore,    raft) 0 2
+
+
+test: (rage,    B
+,    1) 0 2
+
+
+test: (rage,    render,    1) 0 2
+
+
+test: (rage,    render,    &) 0 2
+
+
+test: (rear,    B
+,    B
 ) 0 2
 
 
-test: (*
-,    i,    M
+test: (rear,    reduce,    B
+) 0 2
+
+
+test: (rear,    reduce,    #) 0 2
+
+
+test: (6\BIcryqHCQA,    +,    1) 0 2
+
+
+test: (6\BIcryqHCQA,    represent,    1) 0 2
+
+
+test: (6\BIcryqHCQA,    represent,    rack) 0 2
+
+
+test: (",    y
+,    1) 0 3
+
+
+test: (",    rare,    1) 0 3
+
+
+test: (",    rare,    yiPcWjdbgrtqhNKywXzxvyMolaAYZeEsJT[avszouZUbaFoFXr) 0 3
+
+
+test: (.CuRF^L[^zdhtNcsMGwzmvbCIXpVnnZpQDZmYXeLqbh]DdXusHY[JTn[Zq\v\lYywv`WIju,    y
+,    p
+) 0 2
+
+
+test: (.CuRF^L[^zdhtNcsMGwzmvbCIXpVnnZpQDZmYXeLqbh]DdXusHY[JTn[Zq\v\lYywv`WIju,    y,    p
+) 0 2
+
+
+test: (.CuRF^L[^zdhtNcsMGwzmvbCIXpVnnZpQDZmYXeLqbh]DdXusHY[JTn[Zq\v\lYywv`WIju,    y,    wyZ[QHzRqty`\xMk\MIbeecDnDLtyGA]RJd_DIhlUQQ]lvymUMAiXtwnkLbgEo[FkaC]GrDMBh`X\BQweZvI\Q[SLEHXAOu) 0 2
+
+
+test: (v,    +,    1) 0 3
+
+
+test: (v,    6,    1) 0 3
+
+
+test: (v,    6,    :jMqUXeNyhRLrUvvQDRrHBXSIPBDIuePWQDnciefB\xTq]iz]nTeBTKaNETfVPa^EBDgnlOALAfeBxBMIEhc) 0 3
+
+
+test: ($,    u
+,    1) 0 3
+
+
+test: ($,    },    1) 0 3
+
+
+test: ($,    },    !FO]K`eInJo]^BbLbR`pnUOmgbCNDhHPU]OLbUsU`ZKTtUUrwWJh\UDqjzvQIh\WYHB\fbW^rluApv) 0 3
+
+
+test: (root,    u
+,    a
+) 0 2
+
+
+test: (root,    t,    a
+) 0 2
+
+
+test: (root,    t,    royal) 0 2
+
+
+test: (+,    +,    1) 0 3
+
+
+test: (+,    C,    1) 0 3
+
+
+test: (+,    C,    rifle) 0 3
+
+
+test: (rip,    j
+,    1) 0 2
+
+
+test: (rip,    <,    1) 0 2
+
+
+test: (rip,    <,    Zj_HfIxvy`) 0 2
+
+
+test: (reflect,    j
+,    T
+) 0 2
+
+
+test: (reflect,    (,    T
+) 0 2
+
+
+test: (reflect,    (,    remind) 0 2
+
+
+test: (m,    +,    1) 0 3
+
+
+test: (m,    =UFGb\afRqhA]rJbPkjXdW]lBLtBHRMUEzqRBEWCqMafx`\znmZtqyrm,    1) 0 3
+
+
+test: (m,    =UFGb\afRqhA]rJbPkjXdW]lBLtBHRMUEzqRBEWCqMafx`\znmZtqyrm,    2JcsbFPTDQhndDdkWqUKXbz[DYFjaVDlkEKVLfyEDvrVzaX[IVOQ_WctbQhxLYuqNyvR`iau) 0 3
+
+
+test: (reader,    C
+,    1) 0 2
+
+
+test: (reader,    /_etAuaiqNyE,    1) 0 2
+
+
+test: (reader,    /_etAuaiqNyE,    russian) 0 2
+
+
+test: (?LdWyKSois\BsGiVoPYIQpUs]NiyWKFBhRfBgCHG,    C
+,    O
+) 0 2
+
+
+test: (?LdWyKSois\BsGiVoPYIQpUs]NiyWKFBhRfBgCHG,    =mh_aUWD]LD`KlaiLXCwWTvnB]FRqmfTCkWlCnFA`HSDBLpLnd\h^^lzHYyjrEu[uLsVz]ij`lCgoOaShWFW,    O
+) 0 2
+
+
+test: (?LdWyKSois\BsGiVoPYIQpUs]NiyWKFBhRfBgCHG,    =mh_aUWD]LD`KlaiLXCwWTvnB]FRqmfTCkWlCnFA`HSDBLpLnd\h^^lzHYyjrEu[uLsVz]ij`lCgoOaShWFW,    radio) 0 2
+
+
+test: (J,    +,    1) 0 3
+
+
+test: (J,    XwNMXM]wznEKBo\EeJ[M,    1) 0 3
+
+
+test: (J,    XwNMXM]wznEKBo\EeJ[M,    regular) 0 3
+
+
+test: (5,    T
+,    1) 0 3
+
+
+test: (5,    rapid,    1) 0 3
+
+
+test: (5,    rapid,    4QISVN[Xmp) 0 3
+
+
+test: (#nGITtekmTbVPsSrGklR\xoOqet_clTrHB,    T
+,    d
+) 0 2
+
+
+test: (#nGITtekmTbVPsSrGklR\xoOqet_clTrHB,    8lmFWHdyslk^FfZFOmd`oj]jCCrqrREAfwAvEMAVsnvdX_[hVxlAYl\WwauLVRqhbSHfAskO[ImqDOfK_GeSZwfDfg\ylIqkZKJ,    d
+) 0 2
+
+
+test: (#nGITtekmTbVPsSrGklR\xoOqet_clTrHB,    8lmFWHdyslk^FfZFOmd`oj]jCCrqrREAfwAvEMAVsnvdX_[hVxlAYl\WwauLVRqhbSHfAskO[ImqDOfK_GeSZwfDfg\ylIqkZKJ,    6) 0 2
+
+
+test: (repair,    +,    1) 0 2
+
+
+test: (repair,    refuse,    1) 0 2
+
+
+test: (repair,    refuse,    resist) 0 2
+
+
+test: (8KVYUWwcTM,    b
+,    1) 0 2
+
+
+test: (8KVYUWwcTM,    ^mNbhDeXYvg_kuAvXWvnLo^TpPKZyYyFzQQRwN[ND[gjUI\agADJPQIMx^cx`]GfRHwuAXDLfUSzeaUL_CZZzaemFEZ,    1) 0 2
+
+
+test: (8KVYUWwcTM,    ^mNbhDeXYvg_kuAvXWvnLo^TpPKZyYyFzQQRwN[ND[gjUI\agADJPQIMx^cx`]GfRHwuAXDLfUSzeaUL_CZZzaemFEZ,    !MaRZooVV_X`PLKrfySFDlvkntKt) 0 2
+
+
+test: (recognize,    b
+,    k
+) 0 2
+
+
+test: (recognize,    realm,    k
+) 0 2
+
+
+test: (recognize,    realm,    replace) 0 2
+
+
+test: (<,    +,    1) 0 3
+
+
+test: (<,    reluctant,    1) 0 3
+
+
+test: (<,    reluctant,    U) 0 3
+
+
+test: (],    Y
+,    1) 0 3
+
+
+test: (],    OqgZkQ[LrAhJlqcqTWHA^mzC[P`GrV`fX,    1) 0 3
+
+
+test: (],    OqgZkQ[LrAhJlqcqTWHA^mzC[P`GrV`fX,    relate) 0 3
+
+
+test: (recent,    Y
+,    B
+) 0 2
+
+
+test: (recent,    9Tvok]Am^uyrgk,    B
+) 0 2
+
+
+test: (recent,    9Tvok]Am^uyrgk,    8) 0 2
+
+
+test: (>RoSuNjB\FyaXtUqmcPCNoGTqK`fgsTX`kH_AXowfSV[ESxUiczk,    +,    1) 0 2
+
+
+test: (>RoSuNjB\FyaXtUqmcPCNoGTqK`fgsTX`kH_AXowfSV[ESxUiczk,    5mX^BmlpvYLBEH\cY,    1) 0 2
+
+
+test: (>RoSuNjB\FyaXtUqmcPCNoGTqK`fgsTX`kH_AXowfSV[ESxUiczk,    5mX^BmlpvYLBEH\cY,    B) 0 2
+
+
+test: (i,    O
+,    1) 0 3
+
+
+test: (i,    rim,    1) 0 3
+
+
+test: (i,    rim,    4EfIeDvnleruqDhYCBoeEPjoxf\JzOmTtnQyoht_aj]zJAbljLMSnD^aqxD_ZKtl[SnPtVfGzaXEk_hG) 0 3
+
+
+test: (n,    O
+,    F
 ) 0 3
 
 
-test: (*
-,    &AeYua]Br`KKCgcjsVGCRd`YZpQZoavT_jMFvtkwG]kxbC]y\AOLuVzximcOvRUU_stHXBkQ\ldmoO_Oz\J^,    ]) 0 3
+test: (n,    ;,    F
+) 0 3
 
 
-test: (aim,    W
-,    unconscious) 0 2
+test: (n,    ;,    8IG^GR^YjparaWIKf[fBOuAWyYibebOjk) 0 3
 
 
-test: (*
-,    apartment,    unconscious) 0 3
+test: (refresh,    +,    1) 0 2
 
 
-test: (*
+test: (refresh,    O,    1) 0 2
+
+
+test: (refresh,    O,    %cwwU\[_PfEIRl\YluAXnzFAvuYgzAbDlkuRLIGvlTsA`sXLpvrsGtSHFeyy) 0 2
+
+
+test: (!,    e
+,    1) 0 3
+
+
+test: (!,    )Pj]hWWauXqUgflZYAieVMIMtwrGij`SfBsUcf]EFTkxeZea[`AeQELGKFnZfXZrvZsJLOa^OteOezLbrO]NoKGMhgvyfRUzB,    1) 0 3
+
+
+test: (!,    )Pj]hWWauXqUgflZYAieVMIMtwrGij`SfBsUcf]EFTkxeZea[`AeQELGKFnZfXZrvZsJLOa^OteOezLbrO]NoKGMhgvyfRUzB,    i) 0 3
+
+
+test: (rustle,    e
+,    t
+) 0 2
+
+
+test: (rustle,    hJVv[lezwPLFJIRnAdMEcFam]KbSafjqnRSr_vgmtUwAUA]QOHaSpZDD_gUr`TtdB]v`WJxUXegNuhpngxPplMpRUGLYo,    t
+) 0 2
+
+
+test: (rustle,    hJVv[lezwPLFJIRnAdMEcFam]KbSafjqnRSr_vgmtUwAUA]QOHaSpZDD_gUr`TtdB]v`WJxUXegNuhpngxPplMpRUGLYo,    <KmauucJbJiMhCDOYEa]WwqMyyQv) 0 2
+
+
+test: (`,    +,    1) 0 3
+
+
+test: (`,    $,    1) 0 3
+
+
+test: (`,    $,    OqPWP_ardgs`) 0 3
+
+
+test: (7iQOKhVMX`ewu[GFjeeZkWAEufHcVxSUpfme]ocsyOkCVrATIRgnf[^rXSWymhVbPwSmbQE]OzwWJyJcdpwcvVH]GOrp,    O
+,    1) 0 2
+
+
+test: (7iQOKhVMX`ewu[GFjeeZkWAEufHcVxSUpfme]ocsyOkCVrATIRgnf[^rXSWymhVbPwSmbQE]OzwWJyJcdpwcvVH]GOrp,    *HdQun]mOghmIE\fsajzfvHDfykgRUBPemw[F``JiSJp[[TfHFn`tgqG`YzeuLDsKdb_LHzM[w`RNAhdeRTSxDEj^P,    1) 0 2
+
+
+test: (7iQOKhVMX`ewu[GFjeeZkWAEufHcVxSUpfme]ocsyOkCVrATIRgnf[^rXSWymhVbPwSmbQE]OzwWJyJcdpwcvVH]GOrp,    *HdQun]mOghmIE\fsajzfvHDfykgRUBPemw[F``JiSJp[[TfHFn`tgqG`YzeuLDsKdb_LHzM[w`RNAhdeRTSxDEj^P,    7) 0 2
+
+
+test: ()]rIvlQIUgKArPVjueeblL[g_za^IJnmyoEYoZXo[KqPeAKdDDJFkvPJBDkRpAjH`zfGX_]CQVbKUqKe,    O
+,    H
+) 0 2
+
+
+test: ()]rIvlQIUgKArPVjueeblL[g_za^IJnmyoEYoZXo[KqPeAKdDDJFkvPJBDkRpAjH`zfGX_]CQVbKUqKe,    rude,    H
+) 0 2
+
+
+test: ()]rIvlQIUgKArPVjueeblL[g_za^IJnmyoEYoZXo[KqPeAKdDDJFkvPJBDkRpAjH`zfGX_]CQVbKUqKe,    rude,    reference) 0 2
+
+
+test: (3,    +,    1) 0 3
+
+
+test: (3,    <WCqcYRU\fT`qveyvyYEpFHPXZ]r\xmQvUcKRT^Ruo\^XBNneFxUA^fy^Hk,    1) 0 3
+
+
+test: (3,    <WCqcYRU\fT`qveyvyYEpFHPXZ]r\xmQvUcKRT^Ruo\^XBNneFxUA^fy^Hk,    K) 0 3
+
+
+test: (A,    B
+,    1) 0 3
+
+
+test: (A,    Z,    1) 0 3
+
+
+test: (A,    Z,    %RIy\AVtANXeiyJyKhCauC_glIE^QFj) 0 3
+
+
+test: (reserve,    B
+,    c
+) 0 2
+
+
+test: (reserve,    -DRjku]WfHqDZhhbCq]bx]ZPJ_nReiUvIMviUgRQrYUJGRwI_RM[jN]ZpbWrD]YdBKPwZghtV,    c
+) 0 2
+
+
+test: (reserve,    -DRjku]WfHqDZhhbCq]bx]ZPJ_nReiUvIMviUgRQrYUJGRwI_RM[jN]ZpbWrD]YdBKPwZghtV,    /JUoShVfdfdQA^_noyXPfA[GbgWlsAHhrkWkwXRVDkY^[PPc^dfdCICurkBSa\]`lrcOQwtfJYR_MlX^nzKeYKZRda`XqpJYe) 0 2
+
+
+test: (;U]A[FYnNNpPRtmxvrkHRigazNIXHlkCUTtzHUkpQv[ISzhVjC\ibbiNeNZxOqf\V]RXCwuNZqVxKVdfktMv_wxAtGzenX[,    +,    1) 0 2
+
+
+test: (;U]A[FYnNNpPRtmxvrkHRigazNIXHlkCUTtzHUkpQv[ISzhVjC\ibbiNeNZxOqf\V]RXCwuNZqVxKVdfktMv_wxAtGzenX[,    range,    1) 0 2
+
+
+test: (;U]A[FYnNNpPRtmxvrkHRigazNIXHlkCUTtzHUkpQv[ISzhVjC\ibbiNeNZxOqf\V]RXCwuNZqVxKVdfktMv_wxAtGzenX[,    range,    relieve) 0 2
+
+
+test: (9MTOFUeLQJr_tmisbEHEttSYjlhahMxYnTQ[pJAGCYy[lfDS,    O
+,    1) 0 2
+
+
+test: (9MTOFUeLQJr_tmisbEHEttSYjlhahMxYnTQ[pJAGCYy[lfDS,    +,    1) 0 2
+
+
+test: (9MTOFUeLQJr_tmisbEHEttSYjlhahMxYnTQ[pJAGCYy[lfDS,    +,    *\j]h`YJTvNnxjZjwJf\zJ_CKlinTft[yFIMK_\v) 0 2
+
+
+test: (\r`IQZUopPMTCOztyp\HzAXdCpGXUHyzg,    O
+,    d
+) 0 2
+
+
+test: (\r`IQZUopPMTCOztyp\HzAXdCpGXUHyzg,    rumble,    d
+) 0 2
+
+
+test: (\r`IQZUopPMTCOztyp\HzAXdCpGXUHyzg,    rumble,    zaFKbhjFxzgMzw]U]YovzFL^OlrkuQ) 0 2
+
+
+test: (respond,    +,    1) 0 2
+
+
+test: (respond,    .\s[ivf[GQOTx]PFMKiB]KOCA[Q^`,    1) 0 2
+
+
+test: (respond,    .\s[ivf[GQOTx]PFMKiB]KOCA[Q^`,    OtRvCc^nPAeCKwKmOPgqoSH_ueQkYFmXoeOOMuO^ADcbW`FpDvvPoHhdi`ZFp^J]XJrkirnrn]WC]F) 0 2
+
+
+test: (reward,    v
+,    1) 0 2
+
+
+test: (reward,    >fjvbFJyfkOxm]zHb[qdgEcKISewRZFLdFkEvanDHp_CYPSoF,    1) 0 2
+
+
+test: (reward,    >fjvbFJyfkOxm]zHb[qdgEcKISewRZFLdFkEvanDHp_CYPSoF,    rail) 0 2
+
+
+test: (research,    v
 ,    W
-,    E) 0 3
+) 0 2
 
 
-test: (/,    [
+test: (research,    rusty,    W
+) 0 2
+
+
+test: (research,    rusty,    CheSAvy[sttJL[bRdn[qiZFoY]qP_t`UbzyHRn`_SXHWWxp\pFt[MYagyJR]Ig^) 0 2
+
+
+test: (regret,    +,    1) 0 2
+
+
+test: (regret,    -,    1) 0 2
+
+
+test: (regret,    -,    i) 0 2
+
+
+test: (request,    J
+,    1) 0 2
+
+
+test: (request,    rabbit,    1) 0 2
+
+
+test: (request,    rabbit,    9MAO) 0 2
+
+
+test: (relative,    J
+,    w
+) 0 2
+
+
+test: (relative,    _zVwprTOoJFDmt`an`^jfZFAroLFF,    w
+) 0 2
+
+
+test: (relative,    _zVwprTOoJFDmt`an`^jfZFAroLFF,    relation) 0 2
+
+
+test: (U,    +,    1) 0 3
+
+
+test: (U,    /,    1) 0 3
+
+
+test: (U,    /,    2) 0 3
+
+
+test: (@wuvwFpeVvUprXt_dLs_MadZQNbMRHmYaHqIFZtPccqEoTMPKSCFceQEHkhQtbfODyAiqmB]_q`lkAJICPzY^LHixYV,    C
+,    1) 0 2
+
+
+test: (@wuvwFpeVvUprXt_dLs_MadZQNbMRHmYaHqIFZtPccqEoTMPKSCFceQEHkhQtbfODyAiqmB]_q`lkAJICPzY^LHixYV,    B,    1) 0 2
+
+
+test: (@wuvwFpeVvUprXt_dLs_MadZQNbMRHmYaHqIFZtPccqEoTMPKSCFceQEHkhQtbfODyAiqmB]_q`lkAJICPzY^LHixYV,    B,    SrVypbW`h`lTyHPJq`ROa]KcgMIjkeJoyXru`PyWaMjD^A]`rHPHM_QkZNOEFGuEIWg[jODWS) 0 2
+
+
+test: (<MIilQW,    C
+,    j
+) 0 2
+
+
+test: (<MIilQW,    a,    j
+) 0 2
+
+
+test: (<MIilQW,    a,    Oy_EX\\WwQGV]mTncVfzGgKMfheHRDQwJTTqS`SORG^qtIG[ooLcIWWQVZcwgCcENltfmaDcwUfS`IzdsnyICXkDqIMq\ZjoVRIs) 0 2
+
+
+test: (y,    +,    1) 0 3
+
+
+test: (y,    <kcumdLDuc_vSrIiIFPQQLDSfbHTyylNRnY,    1) 0 3
+
+
+test: (y,    <kcumdLDuc_vSrIiIFPQQLDSfbHTyylNRnY,    require) 0 3
+
+
+test: (p,    n
+,    1) 0 3
+
+
+test: (p,    e,    1) 0 3
+
+
+test: (p,    e,    K) 0 3
+
+
+test: (},    n
+,    l
+) 0 3
+
+
+test: (},    ridge,    l
+) 0 3
+
+
+test: (},    ridge,    robot) 0 3
+
+
+test: (a,    +,    1) 0 3
+
+
+test: (a,    %,    1) 0 3
+
+
+test: (a,    %,    bEGS]u_[h) 0 3
+
+
+test: (Q,    B
+,    1) 0 3
+
+
+test: (Q,    O,    1) 0 3
+
+
+test: (Q,    O,    &QAfvglBGJQq^r`ij_eMC[kKDFq`xpeWof\RCedGmFTl^ONHfZFW]MYbyJymzXjnjlI) 0 3
+
+
+test: (l,    B
+,    L
+) 0 3
+
+
+test: (l,    },    L
+) 0 3
+
+
+test: (l,    },    b) 0 3
+
+
+test: ($JMynGBsHnKPsLMsjWPvTgidMNg[aSDKfVqKkywAO`aoxy,    +,    1) 0 2
+
+
+test: ($JMynGBsHnKPsLMsjWPvTgidMNg[aSDKfVqKkywAO`aoxy,    remarkable,    1) 0 2
+
+
+test: ($JMynGBsHnKPsLMsjWPvTgidMNg[aSDKfVqKkywAO`aoxy,    remarkable,    m) 0 2
+
+
+test: (A,    I
+,    1) 0 3
+
+
+test: (A,    $,    1) 0 3
+
+
+test: (A,    $,    rob) 0 3
+
+
+test: (;,    I
+,    Z
+) 0 3
+
+
+test: (;,    i,    Z
+) 0 3
+
+
+test: (;,    i,    recover) 0 3
+
+
+test: (tWsPiTs^gTcdlhXYnO[MarWoapstHnVLklWczTf`Kc,    +,    1) 0 2
+
+
+test: (tWsPiTs^gTcdlhXYnO[MarWoapstHnVLklWczTf`Kc,    7nxMGil,    1) 0 2
+
+
+test: (tWsPiTs^gTcdlhXYnO[MarWoapstHnVLklWczTf`Kc,    7nxMGil,    rag) 0 2
+
+
+test: (reasonable,    u
+,    1) 0 2
+
+
+test: (reasonable,    T,    1) 0 2
+
+
+test: (reasonable,    T,    }) 0 2
+
+
+test: (eUDHQBoeTiQJznMT^CJ\UlZnpC`cmtp\I_oHXKxHEd\KtO_IUbJAoyTOlEXcSUAvh,    u
+,    b
+) 0 2
+
+
+test: (eUDHQBoeTiQJznMT^CJ\UlZnpC`cmtp\I_oHXKxHEd\KtO_IUbJAoyTOlEXcSUAvh,    [wA`exKijezhpVtUBuLMupcuc`gHkbCTYGjI`Y_[uVNI`lwDwAmMFbs_scrQTKUkZexk]]mng`bpq]Zpt^XDn],    b
+) 0 2
+
+
+test: (eUDHQBoeTiQJznMT^CJ\UlZnpC`cmtp\I_oHXKxHEd\KtO_IUbJAoyTOlEXcSUAvh,    [wA`exKijezhpVtUBuLMupcuc`gHkbCTYGjI`Y_[uVNI`lwDwAmMFbs_scrQTKUkZexk]]mng`bpq]Zpt^XDn],    1) 0 2
+
+
+test: (resume,    +,    1) 0 2
+
+
+test: (resume,    &CXhcfAYLSVF\GwyIlLGx,    1) 0 2
+
+
+test: (resume,    &CXhcfAYLSVF\GwyIlLGx,    B) 0 2
+
+
+test: (%,    C
+,    1) 0 3
+
+
+test: (%,    <ExTC`PzrPmnLro_DtDGm[lFhQ^GpY_hRrVfPMpgkz]iv_yThNXWLXhBu,    VTcp^vdBGu`GNDU^NwoFPqyo^jdD`Ey[\U]Y]RReBY_kwKgHCzHNFaqfmnqGCBFn) 0 3
+
+
+test: (reef,    C
+,    c
+) 0 2
+
+
+test: (reef,    _vaI_CbTbnNgw]rXexrWZePaMcx\o\xHM]RNMrRNihORnLhB`Iu,    c
+) 0 2
+
+
+test: (reef,    _vaI_CbTbnNgw]rXexrWZePaMcx\o\xHM]RNMrRNihORnLhB`Iu,    refer) 0 2
+
+
+test: (%,    +,    1) 0 3
+
+
+test: (%,    retire,    1) 0 3
+
+
+test: (%,    retire,    respectable) 0 3
+
+
+test: (A,    C
+,    1) 0 3
+
+
+test: (A,    &,    1) 0 3
+
+
+test: (A,    &,    ,EMxSVmdVvniPQONxmh]^RMuVR[NIKxVVpNBxBuZIRqFbVWkXFRmQExThaoMwkIMr[mKv) 0 3
+
+
+test: (relax,    C
+,    e
+) 0 2
+
+
+test: (relax,    XpHOqEYdxghnDHES^bqJGihSbsyWZEWeBBWjQPsWJXZHgbf]QheQKRMVkeP,    e
+) 0 2
+
+
+test: (relax,    XpHOqEYdxghnDHES^bqJGihSbsyWZEWeBBWjQPsWJXZHgbf]QheQKRMVkeP,    ridiculous) 0 2
+
+
+test: (eJwqxjm,    +,    1) 0 2
+
+
+test: (eJwqxjm,    rouse,    1) 0 2
+
+
+test: (eJwqxjm,    rouse,    #[Vyf^DANdSkC]gVMIBrcWqIcK^OmYKNXhteAchGRnstDjgApEOhLZTepZBjFTkP_nNQY^ZnA`pQl) 0 2
+
+
+test: (7OSrhjn\MXuWVBaZHgmOlLxLO^^bka[Wv^Gl`]zAChBWBtlZ`ToRGAFKbcEU[ovSlatmMKlAvVw,    W
+,    1) 0 2
+
+
+test: (7OSrhjn\MXuWVBaZHgmOlLxLO^^bka[Wv^Gl`]zAChBWBtlZ`ToRGAFKbcEU[ovSlatmMKlAvVw,    +\XYYKG^apW]NoeGAzi,    1) 0 2
+
+
+test: (7OSrhjn\MXuWVBaZHgmOlLxLO^^bka[Wv^Gl`]zAChBWBtlZ`ToRGAFKbcEU[ovSlatmMKlAvVw,    +\XYYKG^apW]NoeGAzi,    YuQAd[s_`SLHE_f[jQUsUNgalCOAcFofCFMwigfUeHxKgNIZfLphBvcqe) 0 2
+
+
+test: (=,    W
+,    l
+) 0 3
+
+
+test: (=,    1,    l
+) 0 3
+
+
+test: (=,    1,    'DDWIhuVQrjbZx[hnXRe) 0 3
+
+
+test: (retreat,    +,    1) 0 2
+
+
+test: (retreat,    {A]jN\qjYfTMTSwqju_S^^`mB^ZdAWjkC_SeCxifQhJvpZgaBHrjGVOwMBFxqmfvB]`U^YcCexxQdAqvDEYzlk]KJQzaKXwahP_,    1) 0 2
+
+
+test: (retreat,    {A]jN\qjYfTMTSwqju_S^^`mB^ZdAWjkC_SeCxifQhJvpZgaBHrjGVOwMBFxqmfvB]`U^YcCexxQdAqvDEYzlk]KJQzaKXwahP_,    +QXapnaTznwJWiYWrTDZtUuovmSgayaaJjMACx^xDMso`mS^y[[GCEFplRPZL) 0 2
+
+
+test: (=,    B
+,    1) 0 3
+
+
+test: (=,    %,    1) 0 3
+
+
+test: (=,    %,    |) 0 3
+
+
+test: (recollection,    B
+,    X
+) 0 2
+
+
+test: (recollection,    kATfQWEXyHNBohJFhMxvMVGSM`TAcMcZaFwR[yUPtN]\Sh_fSu_qELcVozbO_gQpmsqcqHMYnUpCPyihJ]rUlnnL,    X
+) 0 2
+
+
+test: (recollection,    kATfQWEXyHNBohJFhMxvMVGSM`TAcMcZaFwR[yUPtN]\Sh_fSu_qELcVozbO_gQpmsqcqHMYnUpCPyihJ]rUlnnL,    route) 0 2
+
+
+test: (,O]lKsgca]g[UIEC`SScmfqMYp\nbqrD^wdJ[wCjzZ\PRRlFfFtPRhuDOkUDg,    +,    1) 0 2
+
+
+test: (,O]lKsgca]g[UIEC`SScmfqMYp\nbqrD^wdJ[wCjzZ\PRRlFfFtPRhuDOkUDg,    remote,    1) 0 2
+
+
+test: (,O]lKsgca]g[UIEC`SScmfqMYp\nbqrD^wdJ[wCjzZ\PRRlFfFtPRhuDOkUDg,    remote,    resolve) 0 2
+
+
+test: (rank,    c
+,    1) 0 2
+
+
+test: (rank,    region,    1) 0 2
+
+
+test: (rank,    region,    A) 0 2
+
+
+test: (`,    c
+,    r
+) 0 3
+
+
+test: (`,    recollect,    r
+) 0 3
+
+
+test: (`,    recollect,    roger) 0 3
+
+
+test: (rep,    +,    1) 0 2
+
+
+test: (rep,    (KdncVic_h\iuOj^Qlcm[DVhbum^VtTage^aesUGIPZqQ]iip_\qM\wW][erOxGPdx^Fji^hIBD]KJRSSmH\,    1) 0 2
+
+
+test: (rep,    (KdncVic_h\iuOj^Qlcm[DVhbum^VtTage^aesUGIPZqQ]iip_\qM\wW][erOxGPdx^Fji^hIBD]KJRSSmH\,    reality) 0 2
+
+
+test: (rib,    S
+,    1) 0 2
+
+
+test: (rib,    |NWRGLEX_JQ,    1) 0 2
+
+
+test: (rib,    |NWRGLEX_JQ,    response) 0 2
+
+
+test: (CcXJJ\^wjzfuShZrUMVtnG^Ix^TWHBZtmkG,    S
+,    K
+) 0 2
+
+
+test: (CcXJJ\^wjzfuShZrUMVtnG^Ix^TWHBZtmkG,    #ADjSnMorVqDXQdnPyy_Slm],    K
+) 0 2
+
+
+test: (CcXJJ\^wjzfuShZrUMVtnG^Ix^TWHBZtmkG,    #ADjSnMorVqDXQdnPyy_Slm],    *yFXCS\_bafmnyFoPKhV[jWtvfzDVENqyubrbeQTIh) 0 2
+
+
+test: (\,    +,    1) 0 3
+
+
+test: (\,    rattle,    1) 0 3
+
+
+test: (\,    rattle,    rent) 0 3
+
+
+test: (g\hdTF^e^YzPnRKmMlfcjhU,    n
+,    1) 0 2
+
+
+test: (g\hdTF^e^YzPnRKmMlfcjhU,    nPHZ`\A_eyuRxZyuT``ebZtiw^aQ\mVpFXYzDOfGKQBusSShlKkDk,    1) 0 2
+
+
+test: (g\hdTF^e^YzPnRKmMlfcjhU,    nPHZ`\A_eyuRxZyuT``ebZtiw^aQ\mVpFXYzDOfGKQBusSShlKkDk,    6zfRQnhlujgr\OOwhBpkvINKxMveGNCTie\) 0 2
+
+
+test: (reflection,    n
+,    z
+) 0 2
+
+
+test: (reflection,    m,    z
+) 0 2
+
+
+test: (reflection,    m,    @pYiuQ]JuYETkzkvBLSh^DqCUt`reaQawfGHmP]XFLVUZO`yZPLPMhOcem) 0 2
+
+
+test: (<WyJioOMIfSiYE[xYHR]]\MkJCzWV\wZvnJFdqBaZ^uBrvyMElkHzWIVmTUKZgmolf[NFRWoghDsFAuRRCYdA,    +,    1) 0 2
+
+
+test: (<WyJioOMIfSiYE[xYHR]]\MkJCzWV\wZvnJFdqBaZ^uBrvyMElkHzWIVmTUKZgmolf[NFRWoghDsFAuRRCYdA,    restless,    1) 0 2
+
+
+test: (<WyJioOMIfSiYE[xYHR]]\MkJCzWV\wZvnJFdqBaZ^uBrvyMElkHzWIVmTUKZgmolf[NFRWoghDsFAuRRCYdA,    restless,    t) 0 2
+
+
+test: (C,    q
+,    1) 0 3
+
+
+test: (C,    M,    1) 0 3
+
+
+test: (C,    M,    ixDBrwBjjmvffVCQpW^VjItfCNh]o`bFzuxpsmySATiaNd\YPjW^h`emfFm^bwW_MVvFzfY`DkshfRIS) 0 3
+
+
+test: (relief,    q
+,    j
+) 0 2
+
+
+test: (relief,    },    j
+) 0 2
+
+
+test: (relief,    },    #WupkmwcuXgowpFIRT]iGBfHIMvgFHFhqZTu]IahmJj^H^xl^_Lb_DPWp\NLvTfDAbWMBpf) 0 2
+
+
+test: (resolution,    +,    1) 0 2
+
+
+test: (resolution,    P,    1) 0 2
+
+
+test: (resolution,    P,    CqhChmDTswmhNGEgoWLooMzGrQxN^BaQQlnYnCZYrLkfJWf]eMVJoaQi\Lw[_SmXycBrHx^zoClsWEopRFCY\x) 0 2
+
+
+test: (EsHnngKJU^vSkoBvY^^JG,    g
+,    1) 0 2
+
+
+test: (EsHnngKJU^vSkoBvY^^JG,    ,,    1) 0 2
+
+
+test: (EsHnngKJU^vSkoBvY^^JG,    ,,    $) 0 2
+
+
+test: (!,    g
 ,    M
+) 0 3
+
+
+test: (!,    release,    M
+) 0 3
+
+
+test: (!,    release,    n) 0 3
+
+
+test: (d,    +,    1) 0 3
+
+
+test: (d,    ray,    1) 0 3
+
+
+test: (d,    ray,    1) 0 3
+
+
+test: (national,    I
+,    1) 0 2
+
+
+test: (national,    !itkdv_ahXOhlDZMQgQLNSvjjP^WFTFYEupzaOxCOOy`kVCjD^m,    1) 0 2
+
+
+test: (national,    !itkdv_ahXOhlDZMQgQLNSvjjP^WFTFYEupzaOxCOOy`kVCjD^m,    nevertheless) 0 2
+
+
+test: (OuEluynMRG[iTNGhZZFksHIXgP[qrHm,    I
+,    f
+) 0 2
+
+
+test: (OuEluynMRG[iTNGhZZFksHIXgP[qrHm,    nightmare,    f
+) 0 2
+
+
+test: (OuEluynMRG[iTNGhZZFksHIXgP[qrHm,    nightmare,    LyuSReJZtrdkXtfmBdxHwdWShybSjZKFDwIKc]D\bz\hW\qKoIIUCCgVi) 0 2
+
+
+test: (),    +,    1) 0 3
+
+
+test: (),    =eKHxuRD,    1) 0 3
+
+
+test: (),    =eKHxuRD,    2) 0 3
+
+
+test: (&MzFbPBzOEO]``CIGPqXacuQ\\Vv^EKUWxyfEydFO_uVJizVhxZqYYBSaYBHAWDvVDvhTsNqfaFA]cpYVYwFqTNlxYE^gmY,    z
+,    1) 0 2
+
+
+test: (&MzFbPBzOEO]``CIGPqXacuQ\\Vv^EKUWxyfEydFO_uVJizVhxZqYYBSaYBHAWDvVDvhTsNqfaFA]cpYVYwFqTNlxYE^gmY,    N,    1) 0 2
+
+
+test: (&MzFbPBzOEO]``CIGPqXacuQ\\Vv^EKUWxyfEydFO_uVJizVhxZqYYBSaYBHAWDvVDvhTsNqfaFA]cpYVYwFqTNlxYE^gmY,    N,    ]) 0 2
+
+
+test: (neat,    z
+,    Z
+) 0 2
+
+
+test: (neat,    northern,    Z
+) 0 2
+
+
+test: (neat,    northern,    net) 0 2
+
+
+test: (nowhere,    +,    1) 0 2
+
+
+test: (nowhere,    #,    1) 0 2
+
+
+test: (nowhere,    #,    7tJvp`^zViIzxt_OmNG_PYa) 0 2
+
+
+test: (:,    F
+,    1) 0 3
+
+
+test: (:,    7\WpfgFLPg`HGPxcgVd_nGZSgsCdWOmJsTMrbBsnJjJHkAeaVfMGXQRsFwrCRKxwHUSwmpULROgCStufjjBiP]\x,    1) 0 3
+
+
+test: (:,    7\WpfgFLPg`HGPxcgVd_nGZSgsCdWOmJsTMrbBsnJjJHkAeaVfMGXQRsFwrCRKxwHUSwmpULROgCStufjjBiP]\x,    nay) 0 3
+
+
+test: (3,    F
+,    j
+) 0 3
+
+
+test: (3,    ),    j
+) 0 3
+
+
+test: (3,    ),    neighbourhood) 0 3
+
+
+test: (>,    +,    1) 0 3
+
+
+test: (>,    agLuyxzLiLdKtemYnvfBIHXzkGlLvVOrFOs[RTju_n\OufhGUkuyLZ]VTtLIahWYwl_vlUpV,    1) 0 3
+
+
+test: (>,    agLuyxzLiLdKtemYnvfBIHXzkGlLvVOrFOs[RTju_n\OufhGUkuyLZ]VTtLIahWYwl_vlUpV,    (F[ljqAq_C]GrBHtCVfmi[aXS]CeCkWjNW]F]tTSpQBfhfZwLaHyt]) 0 3
+
+
+test: (nostril,    K
+,    1) 0 2
+
+
+test: (nostril,    0\yOeuLqUpABQvcIM[CmuldXRpqlnTdKfvhXbFJnrNzeDBJSg[MWW,    1) 0 2
+
+
+test: (nostril,    0\yOeuLqUpABQvcIM[CmuldXRpqlnTdKfvhXbFJnrNzeDBJSg[MWW,    QxyJEEaDPuEUbvB^wrJziCItqHlcuM`_GgAffVZZdPW^^`ivOKAsvUktsPBsdhdzugCcooKGnNSDNkk_UQDzk`hO]uuKN]Nap) 0 2
+
+
+test: (T,    K
+,    F
+) 0 3
+
+
+test: (T,    nephew,    F
+) 0 3
+
+
+test: (T,    nephew,    &SjvPxviEfxijdChpV[GDvjyRCA]eq\OmWZIgGvTXRHmlj) 0 3
+
+
+test: ($,    +,    1) 0 3
+
+
+test: ($,    %,    1) 0 3
+
+
+test: ($,    %,    +) 0 3
+
+
+test: (2qmofDIP]NBbVatWdLH]ep,    Z
+,    1) 0 2
+
+
+test: (2qmofDIP]NBbVatWdLH]ep,    'FNHzsQdsMk_eCbLpSWJwLCYyzFtMyPtr_hlwZYYBFuyYBcNWhUwAHpfvxBcTbHboVcG,    1) 0 2
+
+
+test: (2qmofDIP]NBbVatWdLH]ep,    'FNHzsQdsMk_eCbLpSWJwLCYyzFtMyPtr_hlwZYYBFuyYBcNWhUwAHpfvxBcTbHboVcG,    crfzXOXfBIbppVfpPXMvb`NYFurBdlypuAnbOsmE\cbHlrm`DsPeK) 0 2
+
+
+test: (QoCw\rt]wOxM]zhCbbCjSRpYSChEv,    Z
+,    C
+) 0 2
+
+
+test: (QoCw\rt]wOxM]zhCbbCjSRpYSChEv,    =PgxRbOLkciwxY\z_dPGD\FApD,    C
+) 0 2
+
+
+test: (QoCw\rt]wOxM]zhCbbCjSRpYSChEv,    =PgxRbOLkciwxY\z_dPGD\FApD,    nameless) 0 2
+
+
+test: (!mhOTn\CVjFN_MukoGVXLkckxTpN\ycUN^hPlaWIuGWjyWbhBwhxn[TklpbH`fw][XT`UakADpcOe,    +,    1) 0 2
+
+
+test: (!mhOTn\CVjFN_MukoGVXLkckxTpN\ycUN^hPlaWIuGWjyWbhBwhxn[TklpbH`fw][XT`UakADpcOe,    l,    1) 0 2
+
+
+test: (!mhOTn\CVjFN_MukoGVXLkckxTpN\ycUN^hPlaWIuGWjyWbhBwhxn[TklpbH`fw][XT`UakADpcOe,    l,    W) 0 2
+
+
+test: (:,    W
+,    1) 0 3
+
+
+test: (:,    /,    1) 0 3
+
+
+test: (:,    /,    nearest) 0 3
+
+
+test: (WtLQxznkRcwTiki,    W
+,    F
+) 0 2
+
+
+test: (WtLQxznkRcwTiki,    nurse,    F
+) 0 2
+
+
+test: (WtLQxznkRcwTiki,    nurse,    noon) 0 2
+
+
+test: (nail,    +,    1) 0 2
+
+
+test: (nail,    9hNSsfAhBdVCNI,    1) 0 2
+
+
+test: (nail,    9hNSsfAhBdVCNI,    !GZBRKrzWbESiWqi_zfNjp`vTKNCOs_oseLmGBBcopVMruPRWwyF^) 0 2
+
+
+test: (5,    h
+,    1) 0 3
+
+
+test: (5,    "ZePAOmHlEAKFk]GdLJ,    1) 0 3
+
+
+test: (5,    "ZePAOmHlEAKFk]GdLJ,    nameless) 0 3
+
+
+test: (*,    h
+,    o
+) 0 3
+
+
+test: (*,    >JJEVvkyAsxEqx_BqiqQm`haLkxysqoRSuULFAAaaTwPMC`XVLaiIL^woelnYbARc\UcbFeOI^qE,    o
+) 0 3
+
+
+test: (*,    >JJEVvkyAsxEqx_BqiqQm`haLkxysqoRSuULFAAaaTwPMC`XVLaiIL^woelnYbARc\UcbFeOI^qE,    D) 0 3
+
+
+test: (:BvekDFCumEDXWOrOYdoVi_I`rbDpSRpAnJZvM]dJgCYZkKAtFFeasGpLFHOXPYy]au_[zaRmGYAWNZz,    +,    1) 0 2
+
+
+test: (:BvekDFCumEDXWOrOYdoVi_I`rbDpSRpAnJZvM]dJgCYZkKAtFFeasGpLFHOXPYy]au_[zaRmGYAWNZz,    _,    1) 0 2
+
+
+test: (:BvekDFCumEDXWOrOYdoVi_I`rbDpSRpAnJZvM]dJgCYZkKAtFFeasGpLFHOXPYy]au_[zaRmGYAWNZz,    _,    notion) 0 2
+
+
+test: (niece,    A
+,    1) 0 2
+
+
+test: (niece,    non,    1) 0 2
+
+
+test: (niece,    non,    #JLKB[XDASiXaJD[^SKoPmpztBHcwlHjPWs\rMFsrKKVfxdKcnq`qZaM) 0 2
+
+
+test: (nick,    A
+,    z
+) 0 2
+
+
+test: (nick,    *,    z
+) 0 2
+
+
+test: (nick,    *,    )) 0 2
+
+
+test: (P,    +,    1) 0 3
+
+
+test: (P,    =I[^cCYdvfGs_REVw`k`O\]hfnQPpC^z_HLFhtgbJL`,    1) 0 3
+
+
+test: (P,    =I[^cCYdvfGs_REVw`k`O\]hfnQPpC^z_HLFhtgbJL`,    noble) 0 3
+
+
+test: (nigger,    X
+,    1) 0 2
+
+
+test: (nigger,    ,,    1) 0 2
+
+
+test: (nigger,    ,,    o) 0 2
+
+
+test: (nasty,    X
+,    X
+) 0 2
+
+
+test: (nasty,    nearby,    X
+) 0 2
+
+
+test: (nasty,    nearby,    R) 0 2
+
+
+test: (HAvJ`oHm[uSUVYp^OhFOkYJ`xJvljJITdYdeDJU[dEvWazElbeB,    +,    1) 0 2
+
+
+test: (HAvJ`oHm[uSUVYp^OhFOkYJ`xJvljJITdYdeDJU[dEvWazElbeB,    'IILSGZGI[]qUTaFYeuj[IOkzQnQQnoEiQXQvRyhcsBE`_inOJd^pQJQ_vHotnKMHkEi`ahbk`cqVMpgJw[CvQkepjYhTRn,    1) 0 2
+
+
+test: (HAvJ`oHm[uSUVYp^OhFOkYJ`xJvljJITdYdeDJU[dEvWazElbeB,    'IILSGZGI[]qUTaFYeuj[IOkzQnQQnoEiQXQvRyhcsBE`_inOJd^pQJQ_vHotnKMHkEi`ahbk`cqVMpgJw[CvQkepjYhTRn,    PffBotEMWOLICPPnDAKE_XCh`KDXHpPaH]jkF[hTDQjRgdC]cxc`XknBbKU^[kXKT\L) 0 2
+
+
+test: (YugwEsACBv`pMFXdhXagBYlvgufTUplMYSpPCl]BkKZJwWnCoJVgbKK[ABvqGgwwOc_xdF_H^F,    A
+,    1) 0 2
+
+
+test: (YugwEsACBv`pMFXdhXagBYlvgufTUplMYSpPCl]BkKZJwWnCoJVgbKK[ABvqGgwwOc_xdF_H^F,    name,    1) 0 2
+
+
+test: (YugwEsACBv`pMFXdhXagBYlvgufTUplMYSpPCl]BkKZJwWnCoJVgbKK[ABvqGgwwOc_xdF_H^F,    name,    native) 0 2
+
+
+test: (/,    A
+,    Q
 ) -8 3
 
 
-test: (eOjQr]fWSlJLAcv^a`zJVvSHlSmfaNDkPPVGHmGakhj,    affection,    M
-) 0 2
-
-
-test: (eOjQr]fWSlJLAcv^a`zJVvSHlSmfaNDkPPVGHmGakhj,    [
-,    amidst) 0 2
-
-
-test: (annoy,    utmost,    M
-) 0 2
-
-
-test: (*
-,    *,    M
-) 0 3
-
-
-test: (*
-,    utmost,    MugmPkelA`PxumQyQlcSrilVujcXL[^NwQAJN]PLuToH[pObSR`WC_OmsURBeuFWW) 0 3
-
-
-test: (artist,    [
-,    $PEKFanTXReuXepnbmBWOci) 0 2
-
-
-test: (*
-,    UlHGSWEAeveT[x\eSMNlW[EZmPLsjRqZFvaMQPcTly_B,    $PEKFanTXReuXepnbmBWOci) 0 3
-
-
-test: (*
-,    [
-,    %`QxRsFzx\t^hDhX\UBZNvbJJQvZMYjTVlRJcoh^fhjfD) 0 3
-
-
-test: (/,    [
-,    ;
+test: (/,    'BFQZDVAUplaD]WXTmfSTOur,    Q
 ) -8 3
 
 
-test: (ultimate,    +,    ;
-) 0 2
+test: (/,    'BFQZDVAUplaD]WXTmfSTOur,    V) -8 3
 
 
-test: (ultimate,    [
-,    )) 0 2
+test: (0[NT_iu,    +,    1) 0 2
 
 
-test: (Q,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    ;
+test: (0[NT_iu,    newspaper,    1) 0 2
+
+
+test: (0[NT_iu,    newspaper,    needle) 0 2
+
+
+test: (+,    r
+,    1) 0 3
+
+
+test: (+,    f,    1) 0 3
+
+
+test: (+,    f,    p) 0 3
+
+
+test: (n,    r
+,    x
 ) 0 3
 
 
-test: (*
-,    9WFigb\IDU_YGLEbNCtxhMOm[sCPa^Cj^ouR,    9) 0 3
-
-
-test: (absence,    [
-,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 2
-
-
-test: (*
-,    adventure,    zVbyu^MAElGRUDR]IjnBumoimQteK) 0 3
-
-
-test: (*
-,    [
-,    I) 0 3
-
-
-test: (#QXRqyoWCH`clVZCLqrWM_vz]PjflZWniFqlapfPm_moDlZy[JRDZULczzyyEpXhQAPNyCXuw,    W
-,    M
-) 0 2
-
-
-test: (uniform,    rHqKS`QlDcTqBdf^`o_SaCpnJQp^qvPCMYeNNcy_`^HinvCAOhhiY,    M
-) 0 2
-
-
-test: (uniform,    W
-,    accustom) 0 2
-
-
-test: (oS_I,    upward,    M
-) 0 2
-
-
-test: (k
-,    attend,    M
+test: (n,    nonsense,    x
 ) 0 3
 
 
-test: (k
-,    upward,    advance) 0 3
-
-
-test: (;,    W
-,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (k
-,    JYop[jqB]EbKMe`giLbsLXhJygzu^WSKhqbe^eXPLwu,    =LxDYeAcsJ_FgidvIcbxyCfSlnNMPQEHdnmTSIBbFeNwWFWXkYVJF`Hsjj`CUYkGvEz\EEHTXgdxV\) 0 3
-
-
-test: (k
-,    W
-,    0) 0 3
-
-
-test: (assistant,    >
-,    M
-) 0 2
-
-
-test: (+D`]]QDf`mYCGXJz^GCzMHmmjNxzvgW_gL`YbCKFj_qyA\_eaHK\VqjSVuEAHboQitLkrGbzfYipmzrwwA_LN_xbTEpaTzKonv,    ?,    M
-) 0 2
-
-
-test: (+D`]]QDf`mYCGXJz^GCzMHmmjNxzvgW_gL`YbCKFj_qyA\_eaHK\VqjSVuEAHboQitLkrGbzfYipmzrwwA_LN_xbTEpaTzKonv,    >
-,    #) 0 2
-
-
-test: (?,    urgent,    M
-) 0 3
-
-
-test: (k
-,    attendant,    M
-) 0 3
-
-
-test: (k
-,    urgent,    audience) 0 3
-
-
-test: (@,    >
-,    unlike) 0 3
-
-
-test: (k
-,    _QZBmTm`GxoC[KXXbbVmA[ErapnwBfv_\gGeWN]nasO_JyOwngReShMQP,    unlike) 0 3
-
-
-test: (k
-,    >
-,    america) 0 3
-
-
-test: (arrest,    >
-,    &
-) 0 2
-
-
-test: (upset,    dN`KB,    &
-) 0 2
-
-
-test: (upset,    >
-,    amongst) 0 2
-
-
-test: (pIpuxVtAUZjTRSxSGyEbCtqRjkSlPUHuHqbiRFhcMRekQJES[EgM\GkLuzanYKXT`DC,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    &
-) 0 2
-
-
-test: (k
-,    8,    &
-) 0 3
-
-
-test: (k
-,    P`x]oZbUX]]PBEaAEHB_DbChTSQoOltzzfMesXvHLAyKw_[]fKndQAXIKEGceI`N^c_ErJC,    P) 0 3
-
-
-test: (-,    >
-,    useless) 0 3
-
-
-test: (k
-,    4,    useless) 0 3
-
-
-test: (k
-,    >
-,    !) 0 3
-
-
-test: (-IkgF_rHuhS^GlHMkt^fvLOmFBgvrklKAjX,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    M
-) 0 2
-
-
-test: (underneath,    !,    M
-) 0 2
-
-
-test: (underneath,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    ptW[UEggHQmsz\wJ\tnuPIhiOO\Y_) 0 2
-
-
-test: (alley,    unicorn,    M
-) 0 2
-
-
-test: ([
-,    UxDQuAgqtPlZzCkq[JPMI`,    M
-) 0 3
-
-
-test: ([
-,    unicorn,    /) 0 3
-
-
-test: (6,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    byCdww`rWclo`p]k) 0 3
-
-
-test: ([
-,    MVHgVajg]MQQS]EmP`syApGGLWb\Y`AevnQRMmK_`POBFbYsSCysGvlJewZp,    byCdww`rWclo`p]k) 0 3
-
-
-test: ([
-,    ,UIr_HyZALzbxpirKaVdKENFe[oTV\ybb_wey\uxTPlr`krkFdYladlJMMsjrvkvMsyc,    agony) 0 3
-
-
-test: (ypVRE`ZUhNyTuKdrIa[e\BVw,    [
-,    M
-) 0 2
-
-
-test: (nLmbvB_RopasKjvrYslJoHn]uleqO\]GvdtaNDqEDVGUpYcbhS`\kbIiJ`nqTZFf,    RlyuJ`KAwVGmtlv_OqiWIbzq]iRrywlPyd^FdGGbwYVoFDFYZ,    M
-) 0 2
-
-
-test: (nLmbvB_RopasKjvrYslJoHn]uleqO\]GvdtaNDqEDVGUpYcbhS`\kbIiJ`nqTZFf,    [
-,    -) 0 2
-
-
-test: (affect,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    M
-) 0 2
-
-
-test: ([
-,    ?,    M
-) 0 3
-
-
-test: ([
-,    2BVBe[bkaFWhS]OtHhbRn`h^PZY[b^ksDKLmfSe_Z\KIiKPErkN__iuos]hZYonAtMTqpOEznCZTguEFTsyn,    $) 0 3
-
-
-test: (article,    [
-,    underground) 0 2
-
-
-test: ([
-,    7,    underground) 0 3
-
-
-test: ([
-,    [
-,    anxiety) 0 3
-
-
-test: (yT\[TzmqTEkOhB\AsmHNGCgZHbswhPay`GBq\j`GJhUTV`]CgQmn,    [
-,    ;
-) 0 2
-
-
-test: (}MrPjAszXt`rOYdstAYCy\ARv`afmqTcBi[OjuOLTcb,    ,\rYoDEY[uGlPltiQwmOLxbudB_eWTJ_XaHRqpXoIGpqYMOArwmJ\uoYhAkR,    ;
-) 0 2
-
-
-test: (}MrPjAszXt`rOYdstAYCy\ARv`afmqTcBi[OjuOLTcb,    [
-,    accurate) 0 2
-
-
-test: (alien,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    ;
-) 0 2
-
-
-test: ([
-,    9AhJ_[]_SSzcZgbWmN\kMXqUIZFEwVH`GlzMCKn`_BIlpwS]SczDWiMVjNDQZlf`jiujAcTNYUpwbYrtVj]rbtpuACSlNcog,    ;
-) 0 3
-
-
-test: ([
-,    1VklR]EalZkpSyr_MIXwewwrtAPPJNnELsCCVX,    alter) 0 3
-
-
-test: (absorb,    [
-,    $ThOdEBqxztyXNtbLN) 0 2
-
-
-test: ([
-,    oqOlEYgzWbMLPkPDCsjTMHLn]^grAhB]iwFwhYzVeMaVEolKDJUZmC,    $ThOdEBqxztyXNtbLN) 0 3
-
-
-test: ([
-,    [
-,    ,) 0 3
+test: (n,    nonsense,    +Iz`HEU`VbCa`riFeUlGVLhecfnSZpsacT`CIPFJnNWGXcEkjhSCcOarqDpoxfWCYAOSOISV]ndtlG) 0 3
 
 
 test: (r,    +,    1) 0 3
 
 
-test: (v
-,    b,    1) 0 3
+test: (r,    T,    1) 0 3
 
 
-test: (v
-,    +,    ]) 0 3
+test: (r,    T,    )) 0 3
 
 
-test: (accurse,    U
+test: (nigh,    y
 ,    1) 0 2
+
+
+test: (nigh,    V,    1) 0 2
+
+
+test: (nigh,    V,    %) 0 2
+
+
+test: (=JtrK`viaLtIQkwO,    y
+,    p
+) 0 2
+
+
+test: (=JtrK`viaLtIQkwO,    l],    p
+) 0 2
+
+
+test: (=JtrK`viaLtIQkwO,    l],    ;aeGXigM^nXoRo[mM]Dni) 0 2
+
+
+test: (5,    +,    1) 0 3
+
+
+test: (5,    nerve,    1) 0 3
+
+
+test: (5,    nerve,    VdjghL^r^qX[DtopbjBsGBmlCW]WtXEHxplaTohYXJfipLL) 0 3
+
+
+test: (northward,    j
+,    1) 0 2
+
+
+test: (northward,    limit,    1) 0 2
+
+
+test: (northward,    limit,    -) 0 2
+
+
+test: (labour,    j
+,    U
+) 0 2
+
+
+test: (labour,    <JukarXjfRJC`peUAOnDzPh]eNUiUihl^rKlKqtaBFqRPCfsSMNizQEnpDWBxsTw,    U
+) 0 2
+
+
+test: (labour,    <JukarXjfRJC`peUAOnDzPh]eNUiUihl^rKlKqtaBFqRPCfsSMNizQEnpDWBxsTw,    p) 0 2
+
+
+test: (q,    +,    1) 0 3
+
+
+test: (q,    lucky,    1) 0 3
+
+
+test: (q,    lucky,    limp) 0 3
+
+
+test: (0l^YduGPYbkHppaOrGBIia`ZVFIbPJhWdOEymoeFsnUgBKyJcJBV^RNLzLAcRQBPerikogsuv]QdyFE,    T
+,    1) 0 2
+
+
+test: (0l^YduGPYbkHppaOrGBIia`ZVFIbPJhWdOEymoeFsnUgBKyJcJBV^RNLzLAcRQBPerikogsuv]QdyFE,    Fn_MTujhuOhMVTkhR`ZOOrwBdgS^rOzNiPPwJudVTqHgpPmHwAhER^AvjLD\InYuaNX^Gy\tyuNUpqeMS,    1) 0 2
+
+
+test: (0l^YduGPYbkHppaOrGBIia`ZVFIbPJhWdOEymoeFsnUgBKyJcJBV^RNLzLAcRQBPerikogsuv]QdyFE,    Fn_MTujhuOhMVTkhR`ZOOrwBdgS^rOzNiPPwJudVTqHgpPmHwAhER^AvjLD\InYuaNX^Gy\tyuNUpqeMS,    lane) 0 2
+
+
+test: (loss,    T
+,    L
+) 0 2
+
+
+test: (loss,    lash,    L
+) 0 2
+
+
+test: (loss,    lash,    {oDfX`[bxmnaorsMcr) 0 2
+
+
+test: (x,    +,    1) 0 3
+
+
+test: (x,    =BFGJPM_^fvIBkBdimwn[liisAJlt\sZAhro_lfylr^wigyEn_j_sIptvbxuzmyc\HPGiEj,    1) 0 3
+
+
+test: (x,    =BFGJPM_^fvIBkBdimwn[liisAJlt\sZAhro_lfylr^wigyEn_j_sIptvbxuzmyc\HPGiEj,    V) 0 3
+
+
+test: (3,    k
+,    1) 0 3
+
+
+test: (3,    !,    1) 0 3
+
+
+test: (3,    !,    list) 0 3
+
+
+test: (lazy,    k
+,    J
+) 0 2
+
+
+test: (lazy,    |MiFyiNf^^KIkPCa^[j[GnnndiaYg,    J
+) 0 2
+
+
+test: (lazy,    |MiFyiNf^^KIkPCa^[j[GnnndiaYg,    load) 0 2
+
+
+test: (.,    +,    1) 0 3
+
+
+test: (.,    1^GXeqhNfXTcDPaRCGtkdvHIdziOdLdBncesOc`CkSEmRWUkxrgEcuZJbkGlUNTErVNYzJtYdUbMu\TXMC_MSWLQAoyGsX^hyKYv,    1) 0 3
+
+
+test: (.,    1^GXeqhNfXTcDPaRCGtkdvHIdziOdLdBncesOc`CkSEmRWUkxrgEcuZJbkGlUNTErVNYzJtYdUbMu\TXMC_MSWLQAoyGsX^hyKYv,    4vfd[fkwjHp]vAxjxTHdpM[zfyGMECBQYHKoWOdy_BwGJJwkETJK`LRqpfnjhrzUiaExf) 0 3
+
+
+test: (1CN`dZIUwTiiDm]W^_Gwn`WkZycYVbNHCUG_c[YiqhDD_ocZWNFI,    K
+,    1) 0 2
+
+
+test: (1CN`dZIUwTiiDm]W^_Gwn`WkZycYVbNHCUG_c[YiqhDD_ocZWNFI,    Q,    1) 0 2
+
+
+test: (1CN`dZIUwTiiDm]W^_Gwn`WkZycYVbNHCUG_c[YiqhDD_ocZWNFI,    Q,    1xiFONnxu\mELwhuEqloTpTbBShvjzyDLWqpBWxZNhLYFccORCK\v_pJjRtSpqLwrx`roilVs`N\NUCbusGINAHPNb) 0 2
+
+
+test: (T,    K
+,    Y
+) 0 3
+
+
+test: (T,    aGR_bMrWDkIT^Hwu,    Y
+) 0 3
+
+
+test: (T,    aGR_bMrWDkIT^Hwu,    loom) 0 3
+
+
+test: (~lQ,    +,    1) 0 2
+
+
+test: (~lQ,    limb,    1) 0 2
+
+
+test: (~lQ,    limb,    9^GDUuDPW_UOIaAiNvVS) 0 2
+
+
+test: (pyXmGoXjOyM]QIAWp_XMEbFUDZzVkJkN^`SQc]mRYqzzje]PIYcto`bFkDMJ]ulXzR[E^LEFKjTqw,    K
+,    1) 0 2
+
+
+test: (pyXmGoXjOyM]QIAWp_XMEbFUDZzVkJkN^`SQc]mRYqzzje]PIYcto`bFkDMJ]ulXzR[E^LEFKjTqw,    =,    1) 0 2
+
+
+test: (pyXmGoXjOyM]QIAWp_XMEbFUDZzVkJkN^`SQc]mRYqzzje]PIYcto`bFkDMJ]ulXzR[E^LEFKjTqw,    =,    linger) 0 2
+
+
+test: ($,    K
+,    X
+) 0 3
+
+
+test: ($,    k,    X
+) 0 3
+
+
+test: ($,    k,    #OYiLGjlRG]QygvkSCOwyKEAFOxkVOfCBLdBHHVJIFpcpXPSebMFt]SU`FZd_cX`Y[r\NV) 0 3
+
+
+test: (),    +,    1) 0 3
+
+
+test: (),    ;`H[exuqfwIaCA_n[EppMQmGyJXrGut[dufovZbSs`QmRQwfkVTeiKDwQ,    1) 0 3
+
+
+test: (),    ;`H[exuqfwIaCA_n[EppMQmGyJXrGut[dufovZbSs`QmRQwfkVTeiKDwQ,    "UT\XM^KgsnVoSuaIBjxVZXWPCPGO) 0 3
+
+
+test: (?WspxX[[GwSHeBGjZWeiiO^toexc[QnZ[ePWJTZT`udH,    R
+,    1) 0 2
+
+
+test: (?WspxX[[GwSHeBGjZWeiiO^toexc[QnZ[ePWJTZT`udH,    laughter,    1) 0 2
+
+
+test: (?WspxX[[GwSHeBGjZWeiiO^toexc[QnZ[ePWJTZT`udH,    laughter,    launch) 0 2
+
+
+test: (;,    R
+,    o
+) 0 3
+
+
+test: (;,    1,    o
+) 0 3
+
+
+test: (;,    1,    lend) 0 3
+
+
+test: (link,    +,    1) 0 2
+
+
+test: (link,    lesson,    1) 0 2
+
+
+test: (link,    lesson,    7UGPUBmVIUswscJdTXsLIe\fgl\ybpAmyUpjXahpXPlqmHfEAHwJHGTpR[JRaSZZNoWYRDHejhqkbnYIF) 0 2
+
+
+test: (7BpyTHfN,    P
+,    1) 0 2
+
+
+test: (7BpyTHfN,    (_HSvIlhuy^vghtEeO\XFQafPgrImphIKLwyEmJf^dqlxMQtvZ\D]PJVLZiHthOGjyawbKpWGQqnXXnDqN^Jlcv_qSsgioENQ,    1) 0 2
+
+
+test: (7BpyTHfN,    (_HSvIlhuy^vghtEeO\XFQafPgrImphIKLwyEmJf^dqlxMQtvZ\D]PJVLZiHthOGjyawbKpWGQqnXXnDqN^Jlcv_qSsgioENQ,    O) 0 2
+
+
+test: (lap,    P
+,    L
+) 0 2
+
+
+test: (lap,    >NJe\pTudXLPmGeoCbwNu_zNLpKkggkXJyQJdd^OqoNyE^SYdmM\Sc\CxpoBE,    L
+) 0 2
+
+
+test: (lap,    >NJe\pTudXLPmGeoCbwNu_zNLpKkggkXJyQJdd^OqoNyE^SYdmM\Sc\CxpoBE,    -BaaRkztLLAiVilD\rBIhElrcBouUYoO[qN`HSIYl) 0 2
+
+
+test: (legend,    +,    1) 0 2
+
+
+test: (legend,    qdVbkMz[g[Rz\MNhQFWWf[hdkEog[gc_Spoh^WWaRCDXKIPk_OcQuGs`J\JLrvDYmVWezigrTjtGtgaHIQ_kovKxRzMUrU,    1) 0 2
+
+
+test: (legend,    qdVbkMz[g[Rz\MNhQFWWf[hdkEog[gc_Spoh^WWaRCDXKIPk_OcQuGs`J\JLrvDYmVWezigrTjtGtgaHIQ_kovKxRzMUrU,    h) 0 2
+
+
+test: (6,    W
+,    1) 0 3
+
+
+test: (6,    +,    1) 0 3
+
+
+test: (6,    +,    ladder) 0 3
+
+
+test: (aQ\hymjkO^cRPB`c[y`xWmzMJkoPT_\lzbUkfnBbCi]Cdp[NgGFSkBQ,    W
+,    h
+) 0 2
+
+
+test: (aQ\hymjkO^cRPB`c[y`xWmzMJkoPT_\lzbUkfnBbCi]Cdp[NgGFSkBQ,    lunch,    h
+) 0 2
+
+
+test: (aQ\hymjkO^cRPB`c[y`xWmzMJkoPT_\lzbUkfnBbCi]Cdp[NgGFSkBQ,    lunch,    lurk) 0 2
+
+
+test: (WCmkqpq^SSUrWrSLZ`Dtk]AfFJdNKEZHSduGERSfjGCQkKfGra]dDf,    +,    1) 0 2
+
+
+test: (WCmkqpq^SSUrWrSLZ`Dtk]AfFJdNKEZHSduGERSfjGCQkKfGra]dDf,    4,    1) 0 2
+
+
+test: (WCmkqpq^SSUrWrSLZ`Dtk]AfFJdNKEZHSduGERSfjGCQkKfGra]dDf,    4,    librarian) 0 2
+
+
+test: (liberty,    M
+,    1) 0 2
+
+
+test: (liberty,    7,    1) 0 2
+
+
+test: (liberty,    7,    c) 0 2
+
+
+test: (Dzw`\AEnWCwaWKJdSALpOGSxHeZEoOSnSU,    M
+,    K
+) 0 2
+
+
+test: (Dzw`\AEnWCwaWKJdSALpOGSxHeZEoOSnSU,    +,    K
+) 0 2
+
+
+test: (Dzw`\AEnWCwaWKJdSALpOGSxHeZEoOSnSU,    +,    sCxOKOqKXhjGNc\xagdmSgNDxfrWUhkL[pAiBFsB) 0 2
+
+
+test: (>,    +,    1) 0 3
+
+
+test: (>,    :zzkf^SXzgPiv,    1) 0 3
+
+
+test: (>,    :zzkf^SXzgPiv,    b) 0 3
+
+
+test: (BtwjFXjCLFUxL_KzEUrKDd\FLHxD]kaaKKtvNPlFtqus[eel^_aBz[wkiFUTUtNaXQ\`punE\uZNDm]tDyZiHjV,    e
+,    1) 0 2
+
+
+test: (BtwjFXjCLFUxL_KzEUrKDd\FLHxD]kaaKKtvNPlFtqus[eel^_aBz[wkiFUTUtNaXQ\`punE\uZNDm]tDyZiHjV,    l,    1) 0 2
+
+
+test: (BtwjFXjCLFUxL_KzEUrKDd\FLHxD]kaaKKtvNPlFtqus[eel^_aBz[wkiFUTUtNaXQ\`punE\uZNDm]tDyZiHjV,    l,    mv_djPAPBLIWdFhbBuX]OHHFxoqKK) 0 2
+
+
+test: (lack,    e
+,    Y
+) 0 2
+
+
+test: (lack,    :,    Y
+) 0 2
+
+
+test: (lack,    :,    .) 0 2
+
+
+test: (-,    +,    1) 0 3
+
+
+test: (-,    p,    1) 0 3
+
+
+test: (-,    p,    lett) 0 3
+
+
+test: (latter,    p
+,    1) 0 2
+
+
+test: (latter,    landscape,    1) 0 2
+
+
+test: (latter,    landscape,    C) 0 2
+
+
+test: (3,    p
+,    V
+) 0 3
+
+
+test: (3,    (,    V
+) 0 3
+
+
+test: (3,    (,    n) 0 3
+
+
+test: (lightning,    +,    1) 0 2
+
+
+test: (lightning,    log,    1) 0 2
+
+
+test: (lightning,    log,    M) 0 2
+
+
+test: (;ANrfZqFswOXWNTDg[RcrSpP[MQQigojC,    r
+,    1) 0 2
+
+
+test: (;ANrfZqFswOXWNTDg[RcrSpP[MQQigojC,    `vRzZQBTTmOLcm]o,    1) 0 2
+
+
+test: (;ANrfZqFswOXWNTDg[RcrSpP[MQQigojC,    `vRzZQBTTmOLcm]o,    *^xC^GEvqlTFgFGKLzRnsb`HvyiTMVqHhgJ[CqZTnQerBT`qXySWLpQJqDTNO`UFN[LuUMRcqBzbzra) 0 2
+
+
+test: (lion,    r
+,    d
+) 0 2
+
+
+test: (lion,    7O\\Qn`Yjk,    d
+) 0 2
+
+
+test: (lion,    7O\\Qn`Yjk,    luck) 0 2
+
+
+test: (lover,    +,    1) 0 2
+
+
+test: (lover,    2,    1) 0 2
+
+
+test: (lover,    2,    ~) 0 2
+
+
+test: (,,    Z
+,    1) 0 3
+
+
+test: (,,    RftNLvlKZ\MCOtjIWcmLuS]qMoLwVmMQU],    1) 0 3
+
+
+test: (,,    RftNLvlKZ\MCOtjIWcmLuS]qMoLwVmMQU],    f) 0 3
+
+
+-------------------TOTAL-------------------
+
+
+with -8: 7
+
+
+with 0: 655
+
+
+-------------------------------------------
 
 
