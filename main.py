@@ -40,7 +40,9 @@ def main(stdscr):
             calibrator.calibrate(copy.deepcopy(config.args), filik)
         countik = 0
         curses.curs_set(0)
-        for step in range(1000):
+        step = -1
+        while True:
+            step += 1
             codes, codes_set = [], set()
             places = []
             pos = 27
@@ -135,7 +137,7 @@ def main(stdscr):
                         calibrator.queue_sig_fpe.pop(0)
                     
             try:
-                if key == 10 or step == 999:
+                if key == 10:
                     # sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
                     # filik.write(f"-------------------------------------------\n\n\n")
                     # for i in sig_segvi:
@@ -218,15 +220,14 @@ if __name__ == '__main__':
     time.sleep(0.2)
     print("Type 'c' to start fuzzing")
     if input() == 'c':
-        # try:
-        #     curses.wrapper(main)
-        #     print("All results were saved to 'output.txt'")
-        # except:
-        #     if flag == 0:
-        #         print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
-        #     else:
-        #         print("All results were saved to 'output.txt'")
-        curses.wrapper(main)
+        try:
+            curses.wrapper(main)
+            print("All results were saved to 'output.txt'")
+        except:
+            if flag == 0:
+                print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
+            else:
+                print("All results were saved to 'output.txt'")
     else:
         print("It doesn't look like 'c'...")
         print("Okay, have a good time, bye! <3")
