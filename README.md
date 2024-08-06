@@ -11,7 +11,7 @@ So it's goal is to find as much bugs/vulns as it can.
 Actually Dazzer can automatically determine the number of parameters that are required as input to the program using static analysis of the file as it executes and finding reading functions.
 After it found how many inputs does programm need, it will start to calibrate and mutate inputs. 
 
-Mutation includes: random symbol changes, random length changes (by adding new symbols or just cutting some of them), 
+Mutation includes such techniques as: random symbol changes, random length changes (by adding new symbols or just cutting some of them), 
 replacement by close inputs in dict, random words from dict, and some mixed techniques.
 
 And if we talk about calibrator, it can: find changes between program outputs on different tests and, based on the result, decide what to do with the inputs next (for example, if we received a segmentation fault, it will track the length of the input and will no longer send outputs of the same or longer length, which will allow the fuzzer to more productively search for other vulnerabilities),
