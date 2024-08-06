@@ -6,6 +6,20 @@ Hi there, Dazzer is Fuzzer :)
 
 ## How does it actually work?
 
+As I've already written -  Dazzer is Fuzzer
+So it's goal is to find as much bugs/vulns as it can.
+Actually Dazzer can automatically determine the number of parameters that are required as input to the program using static analysis of the file as it executes and finding reading functions.
+After it found how many inputs does programm need, it will start to calibrate and mutate inputs. 
+
+Mutation includes: random symbol changes, random length changes (by adding new symbols or just cutting some of them), 
+replacement by close inputs in dict, random words from dict, and some mixed techniques.
+
+And if we talk about calibrator, it can: find changes between program outputs on different tests and, based on the result, decide what to do with the inputs next (for example, if we received a segmentation fault, it will track the length of the input and will no longer send outputs of the same or longer length, which will allow the fuzzer to more productively search for other vulnerabilities),
+also the determination of the amount of input data is determined precisely in it. So it's like fuzzer's brain.
+
+The biggest advantage of Dazzer, is that it can be configured as it would be convenient for the user using `config.py` that will be reviewed later. 
+If you are not sure if you understand how it would work or just want to test it, where are some test programms for which it can be run. (These programms are in Test_examples folder)
+
 Here are some screens of it's work:
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-47-07.png)
