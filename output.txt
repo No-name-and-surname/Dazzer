@@ -1,103 +1,254 @@
-test: (1,    1) 0 0.0%
+test: (1,    1) 0 68.89%
 
 
-test: (,    1) 0 0.0%
+test: (,    1) 0 57.78%
 
 
-test: (,    XikWlqgXm\nQSmqsneaaDxAkOkfkrAuXtEyKFwW`FRB`DSJaTfHe[g_xibW^]qjY^Zsd) 0 0.0%
+test: (,    j) 0 57.78%
 
 
-test: (<CcJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBL,    1) 0 0.0%
+test: (|,    1) 0 57.78%
 
 
-test: (<CcJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBL,    ~) 0 0.0%
+test: (|,    ´) 0 57.78%
 
 
-test: (4KP`fmWthdEreY`poehmFeeAdHM_xBEB\CEDWhLJZ[DwFmSnzv_]jOmVKT_q,    XikWlqgXm\nQSmqsneaaDxAkOkfkrAuXtEyKFwW`FRB`DSJaTfHe[g_xibW^]qjY^Zsd) 0 0.0%
+test: (32768,    j) 0 66.67%
 
 
-test: (4KP`fmWthdEreY`poehmFeeAdHM_xBEB\CEDWhLJZ[DwFmSnzv_]jOmVKT_q,    32769) 0 0.0%
+test: (32768,    ) 0 66.67%
 
 
-test: (<CJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBL,    1) 0 0.0%
+test: (ù,    1) 0 57.78%
 
 
-test: (<CJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBL,    2147483647) 0 0.0%
+test: (ù,    {) 0 57.78%
 
 
-test: (<CcJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaB,    ~) 0 0.0%
+test: (,    ´) 0 57.78%
 
 
-test: (<CcJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaB,    65536) 0 0.0%
+test: (,    }XVMktlVe_hGuNsn_LXKqu]sHQTlYSiytXLxAzyfBSfYKq[[onbjx[t`]MSH`jE`KNWXHq]OqW_eWcS_yQesZ`VYXIn) 0 57.78%
 
 
-test: (None,    XikWlqgXm\nQSmqsneaaDxAkOkfkrAuXtEyKFwW`FRB`DSJaTfHe[g_xibW^]qjY^Zsd) 0 0.0%
+test: (WgG}bdUpKZAlAIDJQiQJOpnwdRZJkjHx`WOFhxssBXOYoVfLn,    j) 0 57.78%
 
 
-test: (None,    None) 0 0.0%
+test: (WgG}bdUpKZAlAIDJQiQJOpnwdRZJkjHx`WOFhxssBXOYoVfLn,    None) 0 57.78%
 
 
-test: (qjZ\WmNR^H_cZJU_RW|__{^rweBxxfy~mRvp`a~M|WiT@LegPuWlqneK,    32769) 0 0.0%
+test: (None,    ) 0 57.78%
 
 
-test: (qjZ\WmNR^H_cZJU_RW|__{^rweBxxfy~mRvp`a~M|WiT@LegPuWlqneK,    None) 0 0.0%
+test: (None,    ) 0 57.78%
 
 
-test: (a++-|/&"7&-p#I!h&*23,y3"Y"W:F;o1u=#+I']hfgQ[Om^LYJNigWFa\QUVdDfTlkpuIXmjHJ]kyekjprJq`LujhwY\JQF``s[`mhom\xRrB,    1) 0 0.0%
+test: (4294967296,    1) 0 57.78%
 
 
-test: (a++-|/&"7&-p#I!h&*23,y3"Y"W:F;o1u=#+I']hfgQ[Om^LYJNigWFa\QUVdDfTlkpuIXmjHJ]kyekjprJq`LujhwY\JQF``s[`mhom\xRrB,    65535) 0 0.0%
+test: (4294967296,    K) 0 57.78%
 
 
-test: (vx+P*{42?7;=@&}}<'%['36cS'qp[*|cgi,^1CJPtHqr]DVoOmKGpI\_KykxaFaQvEndNzvJGw\IMFtgMXZoLIb[]aKZsvWJWJA`oh^vnrbLPpAdiNPv,    2147483647) 0 0.0%
+test: (,    {) 0 57.78%
 
 
-test: (vx+P*{42?7;=@&}}<'%['36cS'qp[*|cgi,^1CJPtHqr]DVoOmKGpI\_KykxaFaQvEndNzvJGw\IMFtgMXZoLIb[]aKZsvWJWJA`oh^vnrbLPpAdiNPv,    214748347) 0 0.0%
+test: (,    -1) 0 57.78%
 
 
-test: (129,    ~) 0 0.0%
+test: (®,    ´) 0 57.78%
 
 
-test: (129,    5KEcvJlHN`\cIx[CGqm`xThZTtEGbVRzBEB\\QrVfRXaufnB[idlPTCEC) 0 0.0%
+test: (®,    ) 0 57.78%
 
 
-test: (v?YJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBJCe,    65536) 0 0.0%
+test: (N]NUMIEqv_NUDSjVLwaUX^`dQ]jxv[YfRHsMYHj[]GQ\Q,    }XVMktlVe_hGuNsn_LXKqu]sHQTlYSiytXLxAzyfBSfYKq[[onbjx[t`]MSH`jE`KNWXHq]OqW_eWcS_yQesZ`VYXIn) 0 57.78%
 
 
-test: (v?YJ[tiOijtPYaaL`KnbLKWffvnQwNCisWkaBJCe,    255) 0 0.0%
+test: (N]NUMIEqv_NUDSjVLwaUX^`dQ]jxv[YfRHsMYHj[]GQ\Q,    None) 0 57.78%
 
 
-test: (-9223372036854775808,    XikWlqgXm\nQSmqsneaaDxAkOkfkrAuXtEyKFwW`FRB`DSJaTfHe[g_xibW^]qjY^Zsd) 0 0.0%
+test: (9223372036854775807,    j) 0 62.22%
 
 
-test: (-9223372036854775808,    -129) 0 0.0%
+test: (9223372036854775807,    ê) 0 62.22%
 
 
-test: (4294967296,    None) 0 0.0%
+test: (WgG}bdUpKZAlAIDJQiQJOpnwdRJkjHx`WOFhxssBXOYoVfLn,    None) 0 57.78%
 
 
-test: (4294967296,    "#() 0 0.0%
+test: (WgG}bdUpKZAlAIDJQiQJOpnwdRJkjHx`WOFhxssBXOYoVfLn,    zone) 0 57.78%
 
 
-test: (None,    32769) 0 0.0%
+test: (129,    ) 0 66.67%
 
 
-test: (None,    129) 0 0.0%
+test: (129,    |) 0 66.67%
 
 
-test: (None,    None) 0 0.0%
+test: (32767,    ) 0 66.67%
 
 
-test: (None,    -9223372036854775808) 0 0.0%
+test: (32767,    ô) 0 66.67%
+
+
+test: (JLGJGHILGH,    1) 0 57.78%
+
+
+test: (JLGJGHILGH,    -9223372036854775808) 0 57.78%
+
+
+test: (Uje9mnWtYA,    K) 0 57.78%
+
+
+test: (Uje9mnWtYA,    65535) 0 57.78%
+
+
+test: (|,    {) 0 57.78%
+
+
+test: (|,    ,WCLKuXwcFr[IpuaXueeEx_\pBwRnIYKUAdiEnvp^`E]]]_\LYM^Zaavsu\pN) 0 57.78%
+
+
+test: (,    -1) 0 57.78%
+
+
+test: (,    256) 0 57.78%
+
+
+test: (None,    ´) 0 57.78%
+
+
+test: (None,    3) 0 57.78%
+
+
+test: (,,    ) 0 57.78%
+
+
+test: (,,    ¼) 0 57.78%
+
+
+test: (:=!<*+/!3=-8!,    }XVMktlVe_hGuNsn_LXKqu]sHQTlYSiytXLxAzyfBSfYKq[[onbjx[t`]MSH`jE`KNWXHq]OqW_eWcS_yQesZ`VYXIn) 0 57.78%
+
+
+test: (:=!<*+/!3=-8!,    -2147483648) 0 57.78%
+
+
+test: (128,    None) 0 66.67%
+
+
+test: (128,    Éèéâ) 0 66.67%
+
+
+test: (None,    j) 0 57.78%
+
+
+test: (None,    None) 0 57.78%
+
+
+test: (9223372036854775807,    ê) 0 62.22%
+
+
+test: (9223372036854775807,    ) 0 62.22%
+
+
+test: (4294967296,    None) 0 57.78%
+
+
+test: (4294967296,    
++*!) 0 57.78%
+
+
+test: (-129,    zone) 0 62.22%
+
+
+test: (-129,    9223372036854775807) 0 57.78%
+
+
+test: (nT}_fDX^uHbyZ_MYugQ,    ) 0 57.78%
+
+
+test: (nT}_fDX^uHbyZ_MYugQ,    ~) 0 57.78%
+
+
+test: (Rvo,    |) 0 57.78%
+
+
+test: (Rvo,    -2147483648) 0 57.78%
+
+
+test: (aisl[,    ) 0 57.78%
+
+
+test: (aisl[,    t) 0 57.78%
+
+
+test: (a}fLG,    ô) 0 57.78%
+
+
+test: (a}fLG,    j) 0 57.78%
+
+
+test: (32769,    1) 0 60.0%
+
+
+test: (32769,    B) 0 66.67%
+
+
+test: (60;6;450;4,    -9223372036854775808) 0 66.67%
+
+
+test: (60;6;450;4,    65536) 0 66.67%
+
+
+test: (-9223372036854775808,    K) 0 57.78%
+
+
+test: (-9223372036854775808,    257) 0 60.0%
+
+
+test: (65535,    65535) 0 62.22%
+
+
+test: (65535,    256) 0 60.0%
+
+
+test: (-128,    {) 0 62.22%
+
+
+test: (-128,    þ) 0 62.22%
+
+
+test: (None,    ,WCLKuXwcFr[IpuaXueeEx_\pBwRnIYKUAdiEnvp^`E]]]_\LYM^Zaavsu\pN) 0 57.78%
+
+
+test: (None,    128) 0 57.78%
+
+
+test: (RIk`tU_ToOivyCM[Tr,    -1) 0 57.78%
+
+
+test: (RIk`tU_ToOivyCM[Tr,    Olb]`mLGQ_mVfwzScSKAvcqvVSNQnhJo]nOy][mXL[MKdBE]AKqvpYvysfGYVFz) 0 57.78%
+
+
+test: (ô,    256) 0 57.78%
+
+
+test: (ô,    _X[) 0 57.78%
+
+
+test: (Non,    ´) 0 57.78%
+
+
+test: (Non,    0) 0 57.78%
 
 
 -------------------TOTAL-------------------
 
 
-with -11: 31
+with 0: 80
 
 
 -------------------------------------------
 
 
-[25.0, 7.142857142857143, 32.142857142857146, 35.714285714285715]
+[25, 25, 25, 25]

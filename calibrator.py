@@ -255,16 +255,15 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
             return
     elif config.FUZZING_TYPE == "White":
         src = config.source_file
-        for input_data in tests_2:
-            run_cmd = f"./{file_name}"
-            stdout, stderr = run_command(run_cmd, "Ошибка при запуске программы", input_data)
-            if check_sanitizer(stderr):
-                san = stderr
         is_interesting = 1
         global afiget
-        tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, filik, 1, read_count, num, mut_type, is_interesting)
         
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
+        
+        if returncode == -11 or returncode == -8 or check_sanitizer(stderr):
+            tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, filik, 0, read_count, num, mut_type, is_interesting)
+        else:
+            tests_sorting(no_err, queue_no_error, tests_2, stdout, filik, 1, read_count, num, mut_type, is_interesting)
         
         file_times.append(exec_time)
         file_results.append((returncode, stdout, stderr))
@@ -274,9 +273,9 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         read_count = 0
         forik = 0
         afiget = datetime.datetime.now().time()
-    # else config.FUZZING_TYPE == "Black":
-    
-    
+    elif config.FUZZING_TYPE == "Black":
+        # Implementation for Black box fuzzing
+        pass
 
 def calibrate(testiki, filik, mut_type):
     times = []
@@ -732,38 +731,54 @@ def get_coverage(binary_path, input_data):
         if not os.path.exists(source_file):
             return 0, 1, 0.0
             
-        # Компилируем с флагами покрытия
-        compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_file} -o {binary_path}"
-        subprocess.run(compile_cmd, shell=True, check=True)
+        # Save current directory
+        original_dir = os.getcwd()
         
-        # Очищаем старые данные покрытия
-        subprocess.run("rm -f *.gcda", shell=True)
-        
-        # Запускаем программу с входными данными    
-        process = subprocess.Popen(binary_path, 
-                                stdin=subprocess.PIPE,
-                                stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE)
         try:
-            if isinstance(input_data, list):
-                if len(input_data) >= 2:
-                    process.stdin.write(str(input_data[0]).encode() + b'\n')
-                    process.stdin.flush()
-                    process.stdin.write(str(input_data[1]).encode() + b'\n')
-                    process.stdin.flush()
-                else:
-                    process.stdin.write(str(input_data[0]).encode() + b'\n')
-                    process.stdin.flush()
-            else:
-                process.stdin.write(str(input_data).encode() + b'\n')
-                process.stdin.flush()
+            # Get source directory and change to it
+            source_dir = os.path.dirname(source_file)
+            if source_dir:
+                os.chdir(source_dir)
                 
-            stdout, stderr = process.communicate(timeout=1)
+            # Clean old coverage data
+            subprocess.run("rm -f *.gcda *.gcov", shell=True)
+                
+            # Compile with coverage flags
+            source_base = os.path.basename(source_file)
+            binary_base = os.path.basename(binary_path)
+            compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
+            subprocess.run(compile_cmd, shell=True, check=True)
             
-            # Генерируем отчет о покрытии
-            subprocess.run(f"gcov {source_file}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            # Prepare input data
+            if isinstance(input_data, list):
+                input_str = "\n".join(str(x) for x in input_data) + "\n"
+            else:
+                input_str = str(input_data) + "\n"
+                
+            # Run the program with input
+            process = subprocess.Popen(
+                [f"./{binary_base}"],
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE
+            )
             
-            gcov_file = f"{source_file}.gcov"
+            try:
+                stdout, stderr = process.communicate(input=input_str.encode(), timeout=1)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+                
+            # Generate coverage report
+            subprocess.run(
+                ["gcov", source_base],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=True
+            )
+            
+            # Parse coverage data
+            gcov_file = f"{source_base}.gcov"
             if os.path.exists(gcov_file):
                 with open(gcov_file) as f:
                     lines = f.readlines()
@@ -775,28 +790,31 @@ def get_coverage(binary_path, input_data):
                         parts = line.split(':', 2)
                         if len(parts) < 3:
                             continue
+                            
                         execution_count = parts[0].strip()
-                        line_content = parts[2].strip()
+                        line_number = parts[1].strip()
+                        source_line = parts[2].strip()
                         
-                        # Пропускаем пустые строки и комментарии
-                        if not line_content or line_content.startswith('//') or line_content.startswith('#'):
+                        # Skip non-code lines
+                        if not source_line or source_line.startswith('//') or source_line.startswith('#'):
                             continue
                         if execution_count == '-':
                             continue
                             
                         total += 1
-                        if execution_count != '#####' and execution_count != '=====' and execution_count != '0':
+                        if execution_count != '#####' and execution_count != '0':
                             executed += 1
                     
-                    coverage = round((executed / total * 100) if total > 0 else 0, 2)
-                    return executed, total, coverage
+                    if total > 0:
+                        coverage = round((executed / total * 100), 2)
+                        return executed, total, coverage
                     
             return 0, 1, 0.0
             
-        except subprocess.TimeoutExpired:
-            process.kill()
-            return 0, 1, 0.0
-            
+        finally:
+            # Always restore original directory
+            os.chdir(original_dir)
+        
     except Exception as e:
         print(f"Error in get_coverage: {e}")
         return 0, 1, 0.0
