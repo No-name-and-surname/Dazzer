@@ -1,24 +1,41 @@
-from random import *
+from random import randint, choice
 import config
+import main
+
+#globals initialization ---------------------------------------------------------------------------------------------------
 
 fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
+# 25 = 25
+# 25 = 25
+# 25 = 25
+# 25 = 25
+flag = 0
+
+# --------------------------------------------------------------------------------------------------------------------------
 
 def xor(ret):
-    Up = randint(33, 90)
-    Low = randint(97, 122)
-    Strange = randint(122, 137)
-    Up_or_low_case = randint(0, 3)
-    if Up_or_low_case == 0:
-        new_letter = Up
-    elif Up_or_low_case == 1:
-        new_letter = Low
-    elif Up_or_low_case == 2 or Up_or_low_case == 3:
-        new_letter = Strange
-    for i in range(len(ret)):
-        g = ret[i]
-        ret[i] = chr(ord(g) ^ new_letter)
-    return ret
+    try:
+        Up = randint(33, 90)
+        Low = randint(97, 122)
+        Strange = randint(122, 137)
+        Up_or_low_case = randint(0, 3)
+        if Up_or_low_case == 0:
+            new_letter = Up
+        elif Up_or_low_case == 1:
+            new_letter = Low
+        elif Up_or_low_case == 2 or Up_or_low_case == 3:
+            new_letter = Strange
+        
+        for i in range(len(ret)):
+            if len(ret[i]) == 1:
+                g = ret[i]
+                ret[i] = chr(ord(g) ^ new_letter)
+            else:
+                ret[i] = chr(Up ^ new_letter)
+        return ret
+    except:
+        return ret + chr(randint(97, 122))
 
 def dict_test(min_length, new_dict2, new_dict):
     flag = 0
@@ -37,6 +54,23 @@ def dict_test(min_length, new_dict2, new_dict):
         new_dict2.remove(new_dict2[index_in_nd2])
         return ret, flag
 
+def dict_test_via_rand(min_length, new_dict2, new_dict):
+    flag = 0
+    if len(new_dict) > 0:
+        index_in_nd = randint(0, len(new_dict) - 1)
+        ret = list(new_dict[index_in_nd])
+        if len(ret) >= min_length-1:
+            flag = 1
+        new_dict.remove(new_dict[index_in_nd])
+        return rand_length_change(min_length, ret), flag
+    else:
+        index_in_nd2 = randint(0, len(new_dict2) - 1)
+        ret = list(new_dict2[index_in_nd2])
+        if len(ret) >= min_length-1:
+            flag = 1
+        new_dict2.remove(new_dict2[index_in_nd2])
+        return rand_length_change(min_length, ret), flag
+    
 def rand_length_change(min_length, ret):
     newline = ''
     Del_or_add = randint(0, 1)
@@ -46,10 +80,13 @@ def rand_length_change(min_length, ret):
                 break
             j = randint(65, 122)
             newline += chr(j)
-            if i < len(ret):
-                ret[i] = chr(ord(ret[i]) ^ ord(chr(j)))
-                if ord(ret[i]) < 33 or ord(ret[i]) > 126:
-                    ret[i] = chr(randint(33, 126))
+            try:
+                if i < len(ret):
+                    ret[i] = chr(ord(ret[i]) ^ ord(chr(j)))
+                    if ord(ret[i]) < 33 or ord(ret[i]) > 126:
+                        ret[i] = chr(randint(33, 126))
+            except:
+                continue
     if Del_or_add == 0 or Del_or_add == 2:
         if Quantity_new_symbols >= len(ret):
             return ret[:min_length-1]
@@ -60,57 +97,57 @@ def rand_length_change(min_length, ret):
         return ret
 
 def rand_change_symbol(ret):
-    Index_to_insert_random_symbol = randint(0, len(ret) - 1)
-    Up = randint(33, 90)
-    Low = randint(97, 122)
-    Strange = randint(122, 137)
-    Up_or_low_case = randint(0, 3)
-    if Up_or_low_case == 0:
-        new_letter = chr(Up)
-    elif Up_or_low_case == 1:
-        new_letter = chr(Low)
-    elif Up_or_low_case == 2 or Up_or_low_case == 3:
-        new_letter = chr(Strange)
-    ret[Index_to_insert_random_symbol] = new_letter
-    return ret
+    try:
+        Index_to_insert_random_symbol = randint(0, len(ret) - 1)
+        Up = randint(33, 90)
+        Low = randint(97, 122)
+        Strange = randint(122, 137)
+        Up_or_low_case = randint(0, 3)
+        if Up_or_low_case == 0:
+            new_letter = chr(Up)
+        elif Up_or_low_case == 1:
+            new_letter = chr(Low)
+        elif Up_or_low_case == 2 or Up_or_low_case == 3:
+            new_letter = chr(Strange)
+            ret[Index_to_insert_random_symbol] = new_letter
+            return ret
+    except:
+        return list(ret)
+
+def interesting_values():
+    interesting = [
+        '0', '1', '-1', 
+        '127', '128', '129',
+        '255', '256', '257',
+        '32767', '32768', '32769',
+        '65535', '65536', '65537',
+        '-128', '-129', '-32768',
+        '2147483647', '-2147483648',
+        '4294967295', '4294967296',
+        '9223372036854775807',
+        '-9223372036854775808'
+    ]
+    return choice(interesting)
 
 def mutate(buf, min_length, new_dict2, new_dict):
-    if len(new_dict) == 0 and trewq == 0:
-        for i in fileik:
-            if i.startswith(buf.lower()) == True:
-                if list(buf)[0].lower() != list(buf)[0]:
-                    i = list(i)
-                    i[0] = i[0].upper()
-                    new_dict.append(''.join(i))
-                else:
-                    new_dict.append(i)
-            elif buf in i:
-                new_dict2.append(i)
-    Norm_or_rand = randint(0, 2)
-    if Norm_or_rand == 0:
-        global flag
-        try:
-            ret_1, flag = dict_test(min_length, new_dict2, new_dict)
-        except:
-            flag = 1
-    if Norm_or_rand == 1 or Norm_or_rand == 2 or flag == 1:
-        ret = list(buf)
-        ret_1 = list(buf)
-        choose = randint(0, 2)
-        if choose == 0:
-            try:
-                ret_1 = rand_change_symbol(ret)
-            except:
-                choose = randint(1, 2)
-        if choose == 1:
-            try:
-                ret_1 = rand_length_change(min_length, ret)
-            except:
-                choose = 2
-        if choose == 2:
-            try:
-                ret_1 = xor(ret)
-            except:
-                pass
-    return ''.join(ret_1)
+    mutation_types = ["length_ch", "ch_symb", "xor", "interesting"]
+    mut_type = choice(mutation_types)
+    ret = list(buf)
 
+    if mut_type == "ch_symb":
+        ret = rand_change_symbol(ret)
+    elif mut_type == "length_ch":
+        ret = rand_length_change(min_length, ret)
+    elif mut_type == "xor":
+        ret = xor(ret)
+    elif mut_type == "interesting":
+        return interesting_values(), mut_type
+
+    if isinstance(ret, list):
+        result = ''.join(ret)
+    elif isinstance(ret, str):
+        result = ret
+    else:
+        result = str(ret)
+        
+    return result, mut_type
