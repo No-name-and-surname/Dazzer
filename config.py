@@ -8,6 +8,8 @@ file_name = './Test_examples/cov_test'
 source_file = "./Test_examples/cov_test.c" #if white type of fuzzing
 output_file = 'output.txt'
 dict_name = 'dict.txt'
-FUZZING_TYPE = "White" # Black/White/Gray
+FUZZING_TYPE = "Black" # Black/White/Gray
 Corpus_dir = "out"
-
+TARGET_HOST = "localhost"
+TARGET_PORT = 1337
+TIMEOUT = 5

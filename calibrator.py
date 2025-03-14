@@ -58,28 +58,48 @@ def graph_collecting_tests(color1, color2, index, bbbb, mas, flag):
         _, nnn, _, _ = testing2(config.file_name, gf[0])
         info.append([bbbb, gf, num1, num, color1, color2, 0, returncode, nnn])
 
-def tests_sorting(listik, queue_name, tests_2, stdout, filik, flag, read_count, num, mut_type, is_interesting):
+def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read_count, num, mut_type, is_interesting):
     executed, total, coverage = get_coverage(file_name, tests_2)
+    increased_coverage = False
+    if len(listik) == 0:
+        increased_coverage = True
+    else:
+        prev_max_coverage = max(item[5] for item in listik) if listik else 0
+        increased_coverage = coverage > prev_max_coverage
+    new_error = False
+    if returncode not in [item[0] for item in sig_segv]:
+        new_error = True
+    error_count = stderr.count("error") + stderr.count("Error")
+    max_previous_errors = 0
+    if len(sig_segv) > 0:
+        for item in sig_segv:
+            _, _, _, prev_stderr = testing2(file_name, item[1])
+            prev_errors = prev_stderr.count("error") + prev_stderr.count("Error")
+            max_previous_errors = max(max_previous_errors, prev_errors)
+    more_errors = error_count > max_previous_errors
     
-    listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
-    queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
-    num += 1
-    info_set.add(num)
-    info_dict.update({tuple(tests_2):num})
-    if tests_2 not in bbbbb:
-        bbbbb.append(tests_2)
-    filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(coverage) + '%\n\n\n')
-    if is_interesting == 1:
+    if increased_coverage or new_error or more_errors or is_interesting == 1:
+        listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
+        queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
+        num += 1
+        info_set.add(num)
+        info_dict.update({tuple(tests_2):num})
+        if tests_2 not in bbbbb:
+            bbbbb.append(tests_2)
+        filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(coverage) + '%\n\n\n')
+        
+        # Сохраняем в файл
         tests_2_quoted = shlex.quote(str(tests_2))
         file_namus = fr"time-{datetime.datetime.now().time()}:mut_type-{mut_type}:cov-{coverage}"
         run_command(fr'cd out ; touch "{file_namus}"; echo {tests_2_quoted} > "{file_namus}"', "Command isn't correct")
-    if flag == 1:
-        if returncode not in codes_set:
-            codes_dict.update({returncode:0})
-        else:
-            codes_dict.update({returncode : codes_dict[returncode] + 1})
-        codes_set.add(returncode)
-    read_count = 0
+            
+        if flag == 1:
+            if returncode not in codes_set:
+                codes_dict.update({returncode:0})
+            else:
+                codes_dict.update({returncode : codes_dict[returncode] + 1})
+            codes_set.add(returncode)
+        read_count = 0
 
 def run_command(command, error_message, input_data=None):
     if input_data is not None:
@@ -108,32 +128,87 @@ if len(config.args) == 1:
             new_dict2.append(i)
 def testing2(file_name, listik):
     try:
-        if isinstance(listik, list):
-            if len(listik) >= 2:
-                process = subprocess.Popen([file_name], 
-                                        stdin=subprocess.PIPE,
-                                        stdout=subprocess.PIPE,
-                                        stderr=subprocess.PIPE)
+        if config.FUZZING_TYPE == "Black":
+            try:
+                import socket
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(5)
+                sock.connect((config.TARGET_HOST, config.TARGET_PORT))
+                
                 start_time = time.time()
+                
+                if isinstance(listik, list):
+                    input_data = "\n".join(str(x) for x in listik) + "\n"
+                else:
+                    input_data = str(listik) + "\n"
+                
+                sock.sendall(input_data.encode())
+                stdout = b""
+                stderr = b""
+                
+                while True:
+                    try:
+                        data = sock.recv(4096)
+                        if not data:
+                            break
+                        stdout += data
+                    except socket.timeout:
+                        break
+                    
+                end_time = time.time()
+                sock.close()
+                
+                exec_time = end_time - start_time
                 try:
-                    input1 = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
-                    process.stdin.write(input1 + b'\n')
-                    process.stdin.flush()
-                    input2 = str(listik[1]).encode() if not isinstance(listik[1], bytes) else listik[1]
-                    process.stdin.write(input2 + b'\n')
-                    process.stdin.flush()
-                    stdout, stderr = process.communicate(timeout=5)
-                    end_time = time.time()
-                    exec_time = end_time - start_time
-                    return exec_time, process.returncode, stdout.decode(), stderr.decode()
-                except subprocess.TimeoutExpired:
-                    process.kill()
-                    return float('inf'), -1, "", "Timeout"
+                    return_code = 0 if stdout else -1
+                    return exec_time, return_code, stdout.decode(), stderr.decode()
+                except:
+                    return float('inf'), -1, "", "Decode error"
+                    
+            except socket.error as e:
+                return float('inf'), -1, "", f"Network error: {str(e)}"
+                
+        else:
+            if isinstance(listik, list):
+                if len(listik) >= 2:
+                    process = subprocess.Popen([file_name], 
+                                            stdin=subprocess.PIPE,
+                                            stdout=subprocess.PIPE,
+                                            stderr=subprocess.PIPE)
+                    start_time = time.time()
+                    try:
+                        input1 = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
+                        process.stdin.write(input1 + b'\n')
+                        process.stdin.flush()
+                        input2 = str(listik[1]).encode() if not isinstance(listik[1], bytes) else listik[1]
+                        process.stdin.write(input2 + b'\n')
+                        process.stdin.flush()
+                        stdout, stderr = process.communicate(timeout=5)
+                        end_time = time.time()
+                        exec_time = end_time - start_time
+                        return exec_time, process.returncode, stdout.decode(), stderr.decode()
+                    except subprocess.TimeoutExpired:
+                        process.kill()
+                        return float('inf'), -1, "", "Timeout"
+                else:
+                    start_time = time.time()
+                    try:
+                        input_data = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
+                        result = subprocess.run([file_name], 
+                                             input=input_data,
+                                             capture_output=True,
+                                             text=True,
+                                             timeout=5)
+                        end_time = time.time()
+                        exec_time = end_time - start_time
+                        return exec_time, result.returncode, result.stdout, result.stderr
+                    except subprocess.TimeoutExpired:
+                        return float('inf'), -1, "", "Timeout"
             else:
                 start_time = time.time()
                 try:
-                    input_data = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
-                    result = subprocess.run([file_name], 
+                    input_data = str(listik).encode() if not isinstance(listik, bytes) else listik
+                    result = subprocess.run([file_name],
                                          input=input_data,
                                          capture_output=True,
                                          text=True,
@@ -143,21 +218,7 @@ def testing2(file_name, listik):
                     return exec_time, result.returncode, result.stdout, result.stderr
                 except subprocess.TimeoutExpired:
                     return float('inf'), -1, "", "Timeout"
-        else:
-            start_time = time.time()
-            try:
-                input_data = str(listik).encode() if not isinstance(listik, bytes) else listik
-                result = subprocess.run([file_name],
-                                     input=input_data,
-                                     capture_output=True,
-                                     text=True,
-                                     timeout=5)
-                end_time = time.time()
-                exec_time = end_time - start_time
-                return exec_time, result.returncode, result.stdout, result.stderr
-            except subprocess.TimeoutExpired:
-                return float('inf'), -1, "", "Timeout"
-        return float('inf'), -1, "", "Error"
+            return float('inf'), -1, "", "Error"
     except Exception as e:
         return float('inf'), -1, "", str(e)
 
@@ -239,11 +300,11 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
                         except:
                             break 
             exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
-            is_interesting = 1
+            is_interesting = if_interesting([returncode, tests_2, stdout])
             if returncode == -11 or returncode == -8:
-                tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, filik, 0, read_count, num, mut_type, is_interesting)
+                tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
             else:
-                tests_sorting(no_err, queue_no_error, tests_2, stdout, filik, 1, read_count, num, mut_type, is_interesting)
+                tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
             file_times.append(exec_time)
             file_results.append((returncode, stdout, stderr))
             average_time = statistics.mean(file_times)
@@ -255,15 +316,15 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
             return
     elif config.FUZZING_TYPE == "White":
         src = config.source_file
-        is_interesting = 1
         global afiget
         
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
+        is_interesting = if_interesting([returncode, tests_2, stdout])
         
         if returncode == -11 or returncode == -8 or check_sanitizer(stderr):
-            tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, filik, 0, read_count, num, mut_type, is_interesting)
+            tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
         else:
-            tests_sorting(no_err, queue_no_error, tests_2, stdout, filik, 1, read_count, num, mut_type, is_interesting)
+            tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
         
         file_times.append(exec_time)
         file_results.append((returncode, stdout, stderr))
@@ -274,8 +335,28 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         forik = 0
         afiget = datetime.datetime.now().time()
     elif config.FUZZING_TYPE == "Black":
-        # Implementation for Black box fuzzing
-        pass
+        exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
+        is_interesting = if_interesting([returncode, tests_2, stdout])
+        
+        new_output = True
+        if len(no_err) > 0:
+            for item in no_err:
+                if item[3] == stdout:
+                    new_output = False
+                    break
+        
+        if returncode < 0 or check_sanitizer(stderr):
+            tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
+        elif new_output:
+            tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
+        
+        file_times.append(exec_time)
+        file_results.append((returncode, stdout, stderr))
+        average_time = statistics.mean(file_times)
+        times.append(average_time)
+        results.append(file_results)
+        read_count = 0
+        forik = 0
 
 def calibrate(testiki, filik, mut_type):
     times = []
