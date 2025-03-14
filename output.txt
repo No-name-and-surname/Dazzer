@@ -1,97 +1,243 @@
 test: (1,    1) 0 68.89%
 
 
-test: (²,    1) 0 57.78%
-
-
-test: (²,    -129) 0 57.78%
-
-
-test: (8,    1) 0 60.0%
-
-
-test: (8,    B) 0 66.67%
-
-
-test: (F,    -129) 0 57.78%
-
-
-test: (F,    IUV]) 0 57.78%
-
-
 test: (G,    1) 0 57.78%
 
 
-test: (G,    32769) 0 57.78%
+test: (G,    _nxEoLQhsVGBcZ) 0 57.78%
 
 
-test: (e,    B) 0 57.78%
+test: (65536,    1) 0 60.0%
 
 
-test: (e,    None) 0 57.78%
+test: (65536,    None) 0 66.67%
 
 
-test: (None,    -129) 0 57.78%
+test: (4294967296,    _nxEoLQhsVGBcZ) 0 57.78%
+
+
+test: (4294967296,    None) 0 57.78%
+
+
+test: (9223372036854775807,    1) 0 57.78%
+
+
+test: (9223372036854775807,    ) 0 62.22%
+
+
+test: (´··±´,    None) 0 57.78%
+
+
+test: (´··±´,    Noe) 0 57.78%
+
+
+test: (X^UXUZ[^UZ,    _nxEoLQhsVGBcZ) 0 57.78%
+
+
+test: (X^UXUZ[^UZ,    -F&5<<W,#A!9o/rw^pSlSDPKfVnugOWR^CKgnZ) 0 57.78%
 
 
 test: (None,    None) 0 57.78%
 
 
-test: (-2147483648,    IUV]) 0 62.22%
-
-
-test: (-2147483648,    129) 0 57.78%
+test: (None,    ;:1) 0 57.78%
 
 
 test: (None,    1) 0 57.78%
 
 
-test: (None,    128) 0 57.78%
+test: (None,    ) 0 57.78%
 
 
-test: (\,    32769) 0 57.78%
+test: (4294967295,    ) 0 62.22%
 
 
-test: (\,    65537) 0 57.78%
+test: (4294967295,    None) 0 62.22%
 
 
-test: (,    B) 0 57.78%
+test: (´··±~,    None) 0 57.78%
 
 
-test: (,    Æ) 0 57.78%
+test: (´··±~,    )@TPAindFwA^KCsSJwyscY\RHc`gao\NtCBB\tFKHW\JelDueLeWC\CjDujV^VZU^i) 0 57.78%
 
 
-test: (3,    None) 0 66.67%
+test: (2S!W@,    Noe) 0 71.11%
 
 
-test: (3,    R1kX) 0 66.67%
+test: (2S!W@,    6Ñ<) 0 71.11%
 
 
-test: (Çæçì,    -129) 0 57.78%
+test: (None,    _nxEoLQhsVGBcZ) 0 57.78%
 
 
-test: (Çæçì,    -129) 0 57.78%
+test: (None,    9223372036854775807) 0 57.78%
 
 
-test: (.Q'(`pmy[XlphCbxkegkJj^[`lxESVqzfnyahsIgviJE\JGIjYinocBeacIwtMMYYhBmXwnVu^g`duFW^MSUMsgV^chi,    None) 0 57.78%
+test: (X^UXUZ[^U,    -F&5<<W,#A!9o/rw^pSlSDPKfVnugOWR^CKgnZ) 0 57.78%
 
 
-test: (.Q'(`pmy[XlphCbxkegkJj^[`lxESVqzfnyahsIgviJE\JGIjYinocBeacIwtMMYYhBmXwnVu^g`duFW^MSUMsgV^chi,    -32768) 0 57.78%
+test: (X^UXUZ[^U,    129) 0 57.78%
 
 
-test: (-214748364,    IUV]) 0 62.22%
+test: (256,    None) 0 66.67%
 
 
-test: (-214748364,    None) 0 62.22%
+test: (256,    kq6e_snybfGi]N]qS\PEBfgoIRfDlQmYZvVVLdxyJCWmXCzm) 0 66.67%
+
+
+test: (255,    ;:1) 0 66.67%
+
+
+test: (255,    0) 0 66.67%
+
+
+test: (None,    1) 0 57.78%
+
+
+test: (None,    -9223372036854775808) 0 57.78%
+
+
+test: (+@K"DOtGc^dnvz]tfWMBqJkYUrYpcikTQEyJmEAFzPigDBlQlsItEj,    ) 0 57.78%
+
+
+test: (+@K"DOtGc^dnvz]tfWMBqJkYUrYpcikTQEyJmEAFzPigDBlQlsItEj,    O) 0 57.78%
+
+
+test: (BxJ}oObxm|,    ) 0 57.78%
+
+
+test: (BxJ}oObxm|,    None) 0 57.78%
+
+
+test: (dbidifgbie,    None) 0 57.78%
+
+
+test: (dbidifgbie,    #%Hu) 0 57.78%
+
+
+test: (´··±},    None) 0 57.78%
+
+
+test: (´··±},    )&,3) 0 57.78%
+
+
+test: (None,    )@TPAindFwA^KCsSJwyscY\RHc`gao\NtCBB\tFKHW\JelDueLeWC\CjDujV^VZU^i) 0 57.78%
+
+
+test: (None,    256) 0 57.78%
+
+
+test: (W9s"x,    Noe) 0 57.78%
+
+
+test: (W9s"x,    None) 0 57.78%
+
+
+test: (2SW@,    6Ñ<) 0 71.11%
+
+
+test: (2SW@,    32768) 0 71.11%
+
+
+test: (#,    _nxEoLQhsVGBcZ) 0 57.78%
+
+
+test: (#,    21.259m.49'foWm_bwZuNlko`WdJLmBLgajbNoQJKCtwDbtRtzGtydzW`zLcyLbTW[reJaQTzCNthhyDi_JXTmcznUTdro]BkMVGhAo_kZHWAqZ[S) 0 57.78%
+
+
+test: (PX@oCiwaVIIfuHDodYNcs_DxeY,    9223372036854775807) 0 57.78%
+
+
+test: (PX@oCiwaVIIfuHDodYNcs_DxeY,    uAVWucYkf[Lbzc`]nEP) 0 57.78%
+
+
+test: (2V387#69/)j_fUbymguwJdkm,    -F&5<<W,#A!9o/rw^pSlSDPKfVnugOWR^CKgnZ) 0 71.11%
+
+
+test: (2V387#69/)j_fUbymguwJdkm,    None) 0 71.11%
+
+
+test: (X^UXU[^U,    129) 0 57.78%
+
+
+test: (X^UXU[^U,    od^) 0 57.78%
+
+
+test: (]dC,    None) 0 57.78%
+
+
+test: (]dC,    ~one) 0 57.78%
+
+
+test: ({BFIwplE^zjxOjxukSJzkT[^afb_,    kq6e_snybfGi]N]qS\PEBfgoIRfDlQmYZvVVLdxyJCWmXCzm) 0 57.78%
+
+
+test: ({BFIwplE^zjxOjxukSJzkT[^afb_,    ãù¾í×ûæñêîÏáÕÆÕùÛÔØÍÊîïçÁÚîÌäÙåÑÒþÞÞÄìðñÂËßåÐËòå) 0 57.78%
+
+
+test: (PO`,    ;:1) 0 57.78%
+
+
+test: (PO`,    ^oY^) 0 57.78%
+
+
+test: (None,    0) 0 57.78%
+
+
+test: (None,    g) 0 57.78%
+
+
+test: (&,    1) 0 57.78%
+
+
+test: (&,    -129) 0 57.78%
+
+
+test: (a@AJ,    -9223372036854775808) 0 57.78%
+
+
+test: (a@AJ,    tVbVCXrlaaUb^YtxYJH}YoPdpkE^QRcZkmCOlrxEPQ]FTXwyy`kLMaPwS_yz^By]DBaGYfUZc\) 0 57.78%
+
+
+test: (-9223372036854775808,    ) 0 57.78%
+
+
+test: (-9223372036854775808,    h) 0 57.78%
+
+
+test: (ryv}FuQlV\DHoFTepCxYkg@kBQ[YfcwKx_wstHb[Uvp^c^A{FwX,    O) 0 57.78%
+
+
+test: (ryv}FuQlV\DHoFTepCxYkg@kBQ[YfcwKx_wstHb[Uvp^c^A{FwX,    None) 0 57.78%
+
+
+test: (BxJ}oObxm,    ) 0 57.78%
+
+
+test: (BxJ}oObxm,    1) 0 57.78%
+
+
+test: (5=
+8,    None) 0 66.67%
+
+
+test: (5=
+8,    /b"-aOLHVwduaW) 0 66.67%
+
+
+test: (548*0:97}?,    None) 0 66.67%
+
+
+test: (548*0:97}?,    257) 0 66.67%
 
 
 -------------------TOTAL-------------------
 
 
-with -11: 29
+with -11: 77
 
 
 -------------------------------------------
 
 
-[30.76923076923077, 19.23076923076923, 19.23076923076923, 30.76923076923077]
+[31.08108108108108, 18.91891891891892, 29.72972972972973, 20.27027027027027]

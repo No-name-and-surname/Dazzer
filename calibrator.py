@@ -77,18 +77,15 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
             prev_errors = prev_stderr.count("error") + prev_stderr.count("Error")
             max_previous_errors = max(max_previous_errors, prev_errors)
     more_errors = error_count > max_previous_errors
-    
-    if increased_coverage or new_error or more_errors or is_interesting == 1:
-        listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
-        queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
-        num += 1
-        info_set.add(num)
-        info_dict.update({tuple(tests_2):num})
-        if tests_2 not in bbbbb:
-            bbbbb.append(tests_2)
-        filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(coverage) + '%\n\n\n')
-        
-        # Сохраняем в файл
+    listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
+    queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
+    num += 1
+    info_set.add(num)
+    info_dict.update({tuple(tests_2):num})
+    if tests_2 not in bbbbb:
+        bbbbb.append(tests_2)
+    filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(coverage) + '%\n\n\n')
+    if increased_coverage or new_error or more_errors:
         tests_2_quoted = shlex.quote(str(tests_2))
         file_namus = fr"time-{datetime.datetime.now().time()}:mut_type-{mut_type}:cov-{coverage}"
         run_command(fr'cd out ; touch "{file_namus}"; echo {tests_2_quoted} > "{file_namus}"', "Command isn't correct")
@@ -533,7 +530,6 @@ def seg_segv(index):
         started_i = i
         started_out = sig_segv[index][3]
         for j in range(len(i)):
-            # print(i)
             i = i[:-1]
             Check = check_seg_segv(i)
             if Check[0] == True:
@@ -562,7 +558,6 @@ def reset_coverage_data(binary_name):
         return False
 
 def get_line_coverage(gcov_file):
-    """Подсчитывает покрытие строк кода"""
     if not os.path.exists(gcov_file):
         return 0, 0, 0.0
     
@@ -594,7 +589,6 @@ def get_line_coverage(gcov_file):
         return 0, 0, 0.0
 
 def get_function_coverage(gcov_file):
-    """Подсчитывает покрытие функций"""
     if not os.path.exists(gcov_file):
         return 0, 0, 0.0
     
@@ -811,32 +805,21 @@ def get_coverage(binary_path, input_data):
         source_file = config.source_file
         if not os.path.exists(source_file):
             return 0, 1, 0.0
-            
-        # Save current directory
         original_dir = os.getcwd()
         
         try:
-            # Get source directory and change to it
             source_dir = os.path.dirname(source_file)
             if source_dir:
                 os.chdir(source_dir)
-                
-            # Clean old coverage data
             subprocess.run("rm -f *.gcda *.gcov", shell=True)
-                
-            # Compile with coverage flags
             source_base = os.path.basename(source_file)
             binary_base = os.path.basename(binary_path)
             compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
             subprocess.run(compile_cmd, shell=True, check=True)
-            
-            # Prepare input data
             if isinstance(input_data, list):
                 input_str = "\n".join(str(x) for x in input_data) + "\n"
             else:
                 input_str = str(input_data) + "\n"
-                
-            # Run the program with input
             process = subprocess.Popen(
                 [f"./{binary_base}"],
                 stdin=subprocess.PIPE,
@@ -849,16 +832,12 @@ def get_coverage(binary_path, input_data):
             except subprocess.TimeoutExpired:
                 process.kill()
                 process.wait()
-                
-            # Generate coverage report
             subprocess.run(
                 ["gcov", source_base],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 check=True
             )
-            
-            # Parse coverage data
             gcov_file = f"{source_base}.gcov"
             if os.path.exists(gcov_file):
                 with open(gcov_file) as f:
@@ -876,7 +855,6 @@ def get_coverage(binary_path, input_data):
                         line_number = parts[1].strip()
                         source_line = parts[2].strip()
                         
-                        # Skip non-code lines
                         if not source_line or source_line.startswith('//') or source_line.startswith('#'):
                             continue
                         if execution_count == '-':
@@ -893,17 +871,8 @@ def get_coverage(binary_path, input_data):
             return 0, 1, 0.0
             
         finally:
-            # Always restore original directory
             os.chdir(original_dir)
         
     except Exception as e:
         print(f"Error in get_coverage: {e}")
         return 0, 1, 0.0
-
-
-
-
-
-
-
-    
