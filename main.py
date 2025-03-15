@@ -13,6 +13,9 @@ from pyvis.network import Network
 import networkx as nx
 from screeninfo import get_monitors
 import re
+from simple_term_menu import TerminalMenu
+import sys
+from datetime import datetime
 
 #globals initialization ---------------------------------------------------------------------------------------------------
 DEBUG_PROB_OF_MUT = [25, 25, 25]
@@ -29,13 +32,102 @@ flag = 0
 term = Terminal()
 dictionary = open(config.dict_name, 'rb').read().decode().split('\r\n')
 new_dict, new_dict2 = [], []
-x = (term.width - len('Number of tests already sent: ')) // 2
-y = (term.height - term.height //2)
-temp_up = '---------------------TOTAL---------------------'
-temp_bottom = '-----------------------------------------------'
-x_1 = (term.width - len(temp_up)) // 2
+start_time = None
+total_tests = 0
+saved_tests = 0
+last_update_time = 0
+update_interval = 0.1  # Update every 100ms
 
 # --------------------------------------------------------------------------------------------------------------------------
+
+def get_best_mutator(stats):
+    """Determine the most effective mutator based on found issues"""
+    mutator_stats = {
+        "interesting": 0,
+        "ch_symb": 0,
+        "length_ch": 0,
+        "xor": 0
+    }
+    
+    for i in stats.get('sig_segvi', []):
+        if i[4] in mutator_stats:
+            mutator_stats[i[4]] += 1
+    
+    for i in stats.get('sig_fpe', []):
+        if i[4] in mutator_stats:
+            mutator_stats[i[4]] += 1
+            
+    best_mutator = max(mutator_stats.items(), key=lambda x: x[1])[0] if any(mutator_stats.values()) else "None"
+    return best_mutator
+
+def get_coverage():
+    """Get current code coverage"""
+    try:
+        if os.path.exists('out'):
+            files = len([f for f in os.listdir('out') if os.path.isfile(os.path.join('out', f))])
+        else:
+            files = 0
+        return files
+    except:
+        return 0
+
+def format_time(seconds):
+    """Format seconds into readable time"""
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    elif seconds < 3600:
+        minutes = seconds // 60
+        seconds = seconds % 60
+        return f"{int(minutes)}m {int(seconds)}s"
+    else:
+        hours = seconds // 3600
+        minutes = (seconds % 3600) // 60
+        return f"{int(hours)}h {int(minutes)}m"
+
+def create_stats_box(stats):
+    """Create a formatted statistics box"""
+    box_content = [
+        "╔═══════════════ FUZZING STATISTICS ═══════════════╗",
+        "║                                                  ║",
+        f"║  Segmentation Faults: {len(stats.get('sig_segvi', [])):<24} ║",
+        f"║  Floating Point Exceptions: {len(stats.get('sig_fpe', [])):<17} ║"
+    ]
+    
+    # Add return codes if any exist
+    if stats.get('codes_set'):
+        for code in stats.get('codes_set', []):
+            count = stats.get('codes_dict', {}).get(code, 0)
+            box_content.append(f"║  Return Code {code}: {count:<28} ║")
+    
+    box_content.extend([
+        "║                                                  ║",
+        "╚══════════════════════════════════════════════════╝"
+    ])
+    
+    return box_content
+
+def display_stats(stats):
+    """Display fuzzing statistics in a nice format with a centered box"""
+    # Clear screen
+    os.system('clear')
+    
+    # Create and display the statistics box
+    stats_box = create_stats_box(stats)
+    
+    # Calculate terminal dimensions and center the box
+    term_height = term.height
+    term_width = term.width
+    box_height = len(stats_box)
+    box_width = len(stats_box[0])
+    box_y = (term_height - box_height) // 2
+    box_x = (term_width - box_width) // 2
+    
+    # Print the box
+    for i, line in enumerate(stats_box):
+        print("\033[{};{}H{}".format(box_y + i, box_x, colored(line, "cyan")))
+    
+    # Print exit instruction
+    print("\033[{};{}H{}".format(box_y + box_height + 1, box_x, colored("Press Ctrl+C to exit", "yellow")))
 
 def processing(listik, j, filik):
     mutated_err_data, mut_type = mutator.mutate(listik[0][1][j], 100, new_dict2, new_dict)
@@ -132,96 +224,79 @@ def define_probability_of_mutations(no_error, sig_segvi, sig_fpe):
     
     return chances
 
-def main(stdscr):
-    stdscr.nodelay(1)
-    curses.start_color()
-    curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
+def main():
+    global DEBUG_PROB_OF_MUT
     with open(config.output_file, 'w') as filik:
         if config.FUZZ not in config.args:
             calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
         else:
             calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
-        # if len(config.args) == 1:
-        #     for i in strings:
-        #         calibrator.calibrate(copy.deepcopy([i]), filik)
-        countik = 0
-        curses.curs_set(0)
+
         step = -1
         while True:
-            step += 1
-            codes, codes_set = [], set()
-            places = []
-            pos = 27
-            key = stdscr.getch()
-            for y in range(term.height - 30, term.height - 10):
-                stdscr.addch(y, x_1, "|", curses.color_pair(1) | curses.A_BOLD) 
-            for y in range(term.height - 30, term.height - 10):
-                stdscr.addch(y, x_1 + len(temp_up)-1, "|", curses.color_pair(1) | curses.A_BOLD)
-            stdscr.refresh()
-            stdscr.addstr(term.height - 1, 0, "press <Enter> to exit..", curses.color_pair(1) | curses.A_BOLD)
-            stdscr.refresh()
-            stdscr.addstr(term.height - 30, x_1, temp_up, curses.color_pair(1) | curses.A_BOLD)
-            stdscr.refresh()
-            stdscr.addstr(term.height - 10, x_1, temp_bottom, curses.color_pair(1) | curses.A_BOLD)
-            stdscr.refresh()
-            if len(config.args) == 2:
-                for i in dictionary:
-                    if step == 0:
-                        if i.startswith(config.args[0].lower()) == True:
-                            if config.args[0].lower() != config.args[0]:
-                                i = list(i)
-                                i[0] = i[0].upper()
-                                new_dict.append(''.join(i))
-                            else:
-                                     new_dict.append(i)
-                        elif config.args[0] in i:
-                            new_dict2.append(i)
-            sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
-            if len(sig_segvi) != 0 and len(calibrator.queue_seg_fault) != 0:
-                if len(sig_segvi) == 1:
-                    for i in range(len(sig_segvi)):
-                        my_err = copy.deepcopy(calibrator.queue_seg_fault)
-                else:
-                    my_err = copy.deepcopy(calibrator.queue_seg_fault)
-                if len(calibrator.queue_seg_fault[0][1]) > 1:
-                    for j in range(len(calibrator.queue_seg_fault[0][1])):
-                        processing(calibrator.queue_seg_fault, j, filik)
-                    calibrator.queue_seg_fault.pop(0)      
-                else:
-                    processing(calibrator.queue_seg_fault, 0, filik)
-                    calibrator.queue_seg_fault.pop(0)
-                # except:
-                #     break
-            if len(no_error) != 0 or len(sig_fpe) != 0:
-                if len(no_error) != 0:
-                    if len(no_error) == 1:
-                        for i in range(len(no_error)):
-                            my_err = copy.deepcopy(calibrator.queue_no_error)
-                    else:
-                        my_err = copy.deepcopy(calibrator.queue_no_error)
-                    try:
-                        if len(calibrator.queue_no_error[0][1]) > 1:
-                            for j in range(len(calibrator.queue_no_error[0][1])):
-                                processing(calibrator.queue_no_error, j, filik)
-                            calibrator.queue_no_error.pop(0)
-                        else:
-                            processing(calibrator.queue_no_error, 0, filik)
-                            calibrator.queue_no_error.pop(0)
-                    except:
-                        continue
-                    
-                else:
-                    if len(sig_fpe) == 1 and len(calibrator.queue_sig_fpe) != 0:
-                        for i in range(len(sig_fpe)):
-                            sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
-                    else:
-                        sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
-                    if len(calibrator.queue_sig_fpe[0][1]) > 1:
-                        for j in range(len(calibrator.queue_sig_fpe[0][1])):
-                            processing(calibrator.queue_sig_fpe, j, filik)
-                        calibrator.queue_sig_fpe.pop(0)
+            try:
+                step += 1
+                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                
+                # Prepare stats for display
+                stats = {
+                    'sig_segvi': sig_segvi,
+                    'time_out': time_out,
+                    'no_error': no_error,
+                    'sig_fpe': sig_fpe,
+                    'codes_set': calibrator.codes_set if hasattr(calibrator, 'codes_set') else set(),
+                    'codes_dict': calibrator.codes_dict if hasattr(calibrator, 'codes_dict') else {}
+                }
+                
+                # Update display
+                display_stats(stats)
 
-            if key == 10:
+                # Original fuzzing logic
+                if len(sig_segvi) != 0 and len(calibrator.queue_seg_fault) != 0:
+                    if len(sig_segvi) == 1:
+                        for i in range(len(sig_segvi)):
+                            my_err = copy.deepcopy(calibrator.queue_seg_fault)
+                    else:
+                        my_err = copy.deepcopy(calibrator.queue_seg_fault)
+                    if len(calibrator.queue_seg_fault[0][1]) > 1:
+                        for j in range(len(calibrator.queue_seg_fault[0][1])):
+                            processing(calibrator.queue_seg_fault, j, filik)
+                        calibrator.queue_seg_fault.pop(0)      
+                    else:
+                        processing(calibrator.queue_seg_fault, 0, filik)
+                        calibrator.queue_seg_fault.pop(0)
+
+                if len(no_error) != 0 or len(sig_fpe) != 0:
+                    if len(no_error) != 0:
+                        if len(no_error) == 1:
+                            for i in range(len(no_error)):
+                                my_err = copy.deepcopy(calibrator.queue_no_error)
+                        else:
+                            my_err = copy.deepcopy(calibrator.queue_no_error)
+                        try:
+                            if len(calibrator.queue_no_error[0][1]) > 1:
+                                for j in range(len(calibrator.queue_no_error[0][1])):
+                                    processing(calibrator.queue_no_error, j, filik)
+                                calibrator.queue_no_error.pop(0)
+                            else:
+                                processing(calibrator.queue_no_error, 0, filik)
+                                calibrator.queue_no_error.pop(0)
+                        except:
+                            continue
+                    else:
+                        if len(sig_fpe) == 1 and len(calibrator.queue_sig_fpe) != 0:
+                            for i in range(len(sig_fpe)):
+                                sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
+                        else:
+                            sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
+                        if len(calibrator.queue_sig_fpe[0][1]) > 1:
+                            for j in range(len(calibrator.queue_sig_fpe[0][1])):
+                                processing(calibrator.queue_sig_fpe, j, filik)
+                            calibrator.queue_sig_fpe.pop(0)
+
+                DEBUG_PROB_OF_MUT = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)
+                
+            except KeyboardInterrupt:
                 filik.write(f"-------------------TOTAL-------------------\n\n\n")
                 if len(sig_segvi) > 0:
                     filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
@@ -230,71 +305,63 @@ def main(stdscr):
                         filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
                 filik.write(f"-------------------------------------------\n\n\n")
                 filik.write(f"{DEBUG_PROB_OF_MUT}")
-                flag = 1
                 break
-            else:
-                co = 0
-                x_pos = (term.width - len(temp_up)) // 2 + 5
-                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
-                pos = 27
-                if len(sig_segvi) > 0:
-                    stdscr.addstr(term.height - pos, x_pos, 'with -11: ' + str(len(sig_segvi)), curses.A_BOLD)
-                    places.append(pos)
-                    stdscr.refresh()
-                if len(sig_fpe) > 0:
-                    pos -= len(places)
-                    stdscr.addstr(term.height - pos, x_pos, 'with -8: ' + str(len(sig_fpe)), curses.A_BOLD)
-                    places.append(pos)
-                    stdscr.refresh()
-                if len(no_error) > 0:
-                    for i in calibrator.codes_set:
-                        pos -= len(places)
-                        stdscr.addstr(term.height - pos, x_pos, f"with {i}: " + str(calibrator.codes_dict[i]), curses.A_BOLD)
-                        places.append(pos)
-                        stdscr.refresh()
-                        countik = 0
-                color_const = '#c9024b'
-            DEBUG_PROB_OF_MUT = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)   
-if __name__ == '__main__':
-    print("Hi, i hope you've already read README, but here is some info that should be useful:\n")
-    time.sleep(0.4)
-    print("After you read this text, you'll see frame.")
-    time.sleep(0.2)
-    print("In this frame the results of the fuzzing will be displayed.")
-    time.sleep(0.2)
-    print("Btw, they will change dynamically.")
-    time.sleep(0.2)
-    print("Type 'c' to start fuzzing")
-    if input() == 'c':
-        # try:
-        #     curses.wrapper(main)
-        #     print("All results were saved to 'output.txt'")
-        # except:
-        #     if flag == 0:
-        #         print("Oh, here's some error, try to resize your terminal (like: Ctrl+Shift+'-' or  Ctrl+Shift+'+') or restart fuzzer")
-        #     else:
-        #         print("All results were saved to 'output.txt'")
 
-        #DEBUG
-        curses.wrapper(main)
-        nt.set_options("""
-            const options = {
-            "physics": {
-                "barnesHut": {
-                "gravitationalConstant": -26300
-                },
-                "minVelocity": 0.75
-            }
-            }""")
-        for i in copy.deepcopy(calibrator.info):
-            src, dst = i[0], i[1]
-            if i[6] == 0: 
-                nt.add_node(i[2], str(src) + f";  code:{i[7]}", color=i[4], title=str(src))
-                nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
-                nt.add_edge(i[2], i[3], weight=5)
-                i[6] = 1
-        # nt.show('nx.html', notebook=False)
-        print(calibrator.afiget)
+def show_welcome_screen():
+    title = """
+    ╔╦╗┌─┐┌─┐┌─┐┌─┐┬─┐
+     ║║├─┤┌─┘┌─┘├┤ ├┬┘
+    ═╩╝┴ ┴└─┘└─┘└─┘┴└─
+    """
+    menu_items = [
+        "Start Fuzzing",
+        "Exit"
+    ]
+    terminal_menu = TerminalMenu(
+        menu_items,
+        title=title,
+        menu_cursor="→ ",
+        menu_cursor_style=("fg_purple", "bold"),
+        menu_highlight_style=("bg_purple", "fg_black"),
+        cycle_cursor=True,
+        clear_screen=True
+    )
+    
+    print(colored("Welcome to Dazzer! I hope you've already read README.", "cyan"))
+    time.sleep(0.4)
+    print(colored("This fuzzer will help you find bugs and vulnerabilities.", "cyan"))
+    time.sleep(0.2)
+    print(colored("Results will be displayed in a dynamic interface.", "cyan"))
+    time.sleep(0.2)
+    
+    selection = terminal_menu.show()
+    return selection
+
+if __name__ == '__main__':
+    selection = show_welcome_screen()
+    if selection == 0:  # Start Fuzzing
+        try:
+            main()
+            nt.set_options("""
+                const options = {
+                "physics": {
+                    "barnesHut": {
+                    "gravitationalConstant": -26300
+                    },
+                    "minVelocity": 0.75
+                }
+                }""")
+            for i in copy.deepcopy(calibrator.info):
+                src, dst = i[0], i[1]
+                if i[6] == 0: 
+                    nt.add_node(i[2], str(src) + f";  code:{i[7]}", color=i[4], title=str(src))
+                    nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
+                    nt.add_edge(i[2], i[3], weight=5)
+                    i[6] = 1
+            print(colored("\nAll results were saved to 'output.txt'", "green"))
+            print(calibrator.afiget)
+        except Exception as e:
+            print(colored(f"\nAn error occurred: {str(e)}", "red"))
+            print(colored("Try resizing your terminal or restarting the fuzzer", "yellow"))
     else:
-        print("It doesn't look like 'c'...")
-        print("Okay, have a good time, bye! <3")
+        print(colored("\nOkay, have a good time, bye! <3", "magenta"))
