@@ -1,4 +1,4 @@
-![изображение](https://github.com/user-attachments/assets/54e341dd-d086-403a-9754-c37679ccaabd)
+
 # <a id="title0">Dazzer</a>
 
 Dazzer - это мутационный фаззер с открытым исходным кодом
