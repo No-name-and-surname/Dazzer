@@ -11,7 +11,6 @@ import datetime
 from random import *
 import shlex
 import tempfile
-import threading
 
 #globals initialization ---------------------------------------------------------------------------------------------------
 
@@ -41,17 +40,6 @@ codes_set, codes_dict = set(), {}
 codes_set1, codes_dict1 = set(), {}
 dictionary = open(config.dict_name, 'rb').read().decode().split('\r\n')
 
-# Путь к папке для сохранения результатов
-OUTPUT_DIR = config.Corpus_dir
-if not os.path.exists(OUTPUT_DIR):
-    os.makedirs(OUTPUT_DIR)
-
-# Добавляем глобальный кэш для результатов покрытия
-coverage_cache = {}
-
-# Добавляем кэш для результатов базового покрытия
-base_coverage_cache = {}
-
 # --------------------------------------------------------------------------------------------------------------------------
 
 def if_interesting(test_case):
@@ -71,23 +59,16 @@ def graph_collecting_tests(color1, color2, index, bbbb, mas, flag):
         info.append([bbbb, gf, num1, num, color1, color2, 0, returncode, nnn])
 
 def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read_count, num, mut_type, is_interesting):
-    # Получаем покрытие (кэширование уже внутри функции get_coverage)
     executed, total, coverage = get_coverage(file_name, tests_2)
-    
-    # Проверка на увеличение покрытия
     increased_coverage = False
     if len(listik) == 0:
         increased_coverage = True
     else:
         prev_max_coverage = max(item[5] for item in listik) if listik else 0
         increased_coverage = coverage > prev_max_coverage
-    
-    # Проверка на новые ошибки
     new_error = False
     if returncode not in [item[0] for item in sig_segv]:
         new_error = True
-        
-    # Анализ количества ошибок
     error_count = stderr.count("error") + stderr.count("Error")
     max_previous_errors = 0
     if len(sig_segv) > 0:
@@ -96,54 +77,26 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
             prev_errors = prev_stderr.count("error") + prev_stderr.count("Error")
             max_previous_errors = max(max_previous_errors, prev_errors)
     more_errors = error_count > max_previous_errors
-    
-    # Добавляем тест в списки
     listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
     queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
-    
-    # Обновляем счетчики и словари
     num += 1
     info_set.add(num)
     info_dict.update({tuple(tests_2):num})
     if tests_2 not in bbbbb:
         bbbbb.append(tests_2)
-    
-    # Записываем в лог
     filik.write("test: (" + ',    '.join(tests_2) + ')'  + ' '+ str(returncode) + ' ' + str(coverage) + '%\n\n\n')
-    
-    # Определяем имя текущего потока и очищаем его от специальных символов
-    current_thread = threading.current_thread()
-    thread_name = current_thread.name.replace("(", "_").replace(")", "_").replace(" ", "_")
-    
-    # Создаем директорию для сохранения результатов тестов для этого потока
-    tests_output_dir = os.path.join(OUTPUT_DIR, f"tests_{thread_name}")
-    os.makedirs(tests_output_dir, exist_ok=True)
-    
-    # Создаем имя файла с информацией о потоке и сохраняем только если тест интересен
-    # (имеет высокое покрытие или новую ошибку)
-    if increased_coverage or new_error or more_errors or is_interesting:
-        timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-        file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}"
-        file_path = os.path.join(tests_output_dir, file_namus)
-        
-        # Сохраняем результаты
-        with open(file_path, 'w') as f:
-            f.write(f"Test: {tests_2}\n")
-            f.write(f"Coverage: {coverage}%\n")
-            f.write(f"Return code: {returncode}\n")
-            f.write(f"Mutation type: {mut_type}\n")
-            if stdout:
-                f.write(f"Stdout: {stdout}\n")
-            if stderr:
-                f.write(f"Stderr: {stderr}\n")
-    
-    if flag == 1:
-        if returncode not in codes_set:
-            codes_dict.update({returncode:0})
-        else:
-            codes_dict.update({returncode : codes_dict[returncode] + 1})
-        codes_set.add(returncode)
-    read_count = 0
+    if increased_coverage or new_error or more_errors:
+        tests_2_quoted = shlex.quote(str(tests_2))
+        file_namus = fr"time-{datetime.datetime.now().time()}:mut_type-{mut_type}:cov-{coverage}"
+        run_command(fr'cd out ; touch "{file_namus}"; echo {tests_2_quoted} > "{file_namus}"', "Command isn't correct")
+            
+        if flag == 1:
+            if returncode not in codes_set:
+                codes_dict.update({returncode:0})
+            else:
+                codes_dict.update({returncode : codes_dict[returncode] + 1})
+            codes_set.add(returncode)
+        read_count = 0
 
 def run_command(command, error_message, input_data=None):
     if input_data is not None:
@@ -816,163 +769,57 @@ def analyze_binary_coverage(binary_path, input_data):
     return get_binary_coverage(binary_path, input_data)
 
 def get_base_coverage(binary_path):
-    # Проверяем кэш для данного бинарного файла
-    if binary_path in base_coverage_cache:
-        return base_coverage_cache[binary_path]
-        
     try:
         source_file = config.source_file
         if not os.path.exists(source_file):
             return 1
+            
+        compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_file} -o {binary_path}"
+        subprocess.run(compile_cmd, shell=True, check=True)
         
-        # Создаем временную директорию для текущего потока без специальных символов
-        thread_name = threading.current_thread().name.replace("(", "_").replace(")", "_").replace(" ", "_")
-        temp_dir = os.path.join(OUTPUT_DIR, f"temp_{thread_name}")
-        os.makedirs(temp_dir, exist_ok=True)
+        subprocess.run("rm -f *.gcda", shell=True)
         
-        # Создаем директорию для сохранения результатов gcov для этого потока
-        gcov_output_dir = os.path.join(OUTPUT_DIR, f"gcov_{thread_name}")
-        os.makedirs(gcov_output_dir, exist_ok=True)
-        
-        # Подготавливаем пути для файлов
-        source_base = os.path.basename(source_file)
-        binary_base = os.path.basename(binary_path)
-        temp_source = os.path.join(temp_dir, source_base)
-        
-        # Проверяем, нужно ли перекомпилировать
-        need_compile = not os.path.exists(os.path.join(temp_dir, binary_base))
-        
-        original_dir = os.getcwd()
-        
+        process = subprocess.Popen(binary_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         try:
-            # Копируем исходник во временную директорию только если нужно
-            if need_compile:
-                with open(source_file, 'r') as src, open(temp_source, 'w') as dst:
-                    dst.write(src.read())
+            process.communicate(input=b"\n\n", timeout=1)
+        except subprocess.TimeoutExpired:
+            process.kill()
             
-            # Переходим во временную директорию
-            os.chdir(temp_dir)
-            
-            # Компилируем с поддержкой покрытия только если нужно
-            if need_compile:
-                compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
-                subprocess.run(compile_cmd, shell=True, check=True)
-            
-            # Удаляем старые файлы покрытия, если они есть
-            for gcda_file in [f for f in os.listdir('.') if f.endswith('.gcda')]:
-                try:
-                    os.unlink(gcda_file)
-                except:
-                    pass
-            
-            # Запускаем тест
-            process = subprocess.Popen(
-                [f"./{binary_base}"],
-                stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE
-            )
-            try:
-                process.communicate(input=b"\n\n", timeout=1)
-            except subprocess.TimeoutExpired:
-                process.kill()
-                
-            # Генерируем отчет о покрытии
-            subprocess.run(["gcov", source_base], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-            
-            # Анализируем покрытие
-            gcov_file = f"{source_base}.gcov"
-            if os.path.exists(gcov_file):
-                with open(gcov_file) as f:
-                    lines = f.readlines()
-                    total_lines = sum(1 for line in lines 
-                                    if line.split(':')[0].strip() not in ['-'] and 
-                                    not line.split(':')[2].strip().startswith('//') and
-                                    not line.split(':')[2].strip().startswith('#'))
-                    
-                    # Копируем .gcov файл в отдельную директорию для потока
-                    timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-                    output_filename = f"base_time-{timestamp}_{source_base}.gcov"
-                    output_gcov = os.path.join(gcov_output_dir, output_filename)
-                    with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
-                        dst.write(src.read())
-                    
-                    # Сохраняем результат в кэш
-                    result = max(total_lines, 1)
-                    base_coverage_cache[binary_path] = result
-                    return result
-                    
-            # Если не удалось получить покрытие, возвращаем 1 и кэшируем
-            base_coverage_cache[binary_path] = 1
-            return 1
-            
-        finally:
-            os.chdir(original_dir)
-            
-            # НЕ удаляем временную директорию, чтобы переиспользовать компиляцию
-            # Мы будем только очищать .gcda файлы перед каждым запуском
-            
+        subprocess.run(f"gcov {source_file}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        
+        gcov_file = f"{source_file}.gcov"
+        if os.path.exists(gcov_file):
+            with open(gcov_file) as f:
+                lines = f.readlines()
+                total_lines = sum(1 for line in lines 
+                                if line.split(':')[0].strip() not in ['-'] and 
+                                not line.split(':')[2].strip().startswith('//') and
+                                not line.split(':')[2].strip().startswith('#'))
+                return max(total_lines, 1)
+        return 1
     except Exception as e:
-        print(f"Error in get_base_coverage: {e}")
         return 1
 
 def get_coverage(binary_path, input_data):
     try:
-        # Проверяем кэш для данного входного набора
-        input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
-        if input_key in coverage_cache:
-            return coverage_cache[input_key]
-            
         source_file = config.source_file
         if not os.path.exists(source_file):
             return 0, 1, 0.0
-            
-        # Создаем временную директорию для текущего потока без специальных символов
-        thread_name = threading.current_thread().name.replace("(", "_").replace(")", "_").replace(" ", "_")
-        temp_dir = os.path.join(OUTPUT_DIR, f"temp_{thread_name}")
-        os.makedirs(temp_dir, exist_ok=True)
-        
-        # Создаем директорию для сохранения результатов gcov для этого потока
-        gcov_output_dir = os.path.join(OUTPUT_DIR, f"gcov_{thread_name}")
-        os.makedirs(gcov_output_dir, exist_ok=True)
-        
-        # Копируем исходный файл во временную директорию
-        source_base = os.path.basename(source_file)
-        binary_base = os.path.basename(binary_path)
-        temp_source = os.path.join(temp_dir, source_base)
-        
-        # Проверяем, нужно ли перекомпилировать
-        need_compile = not os.path.exists(os.path.join(temp_dir, binary_base))
-        
         original_dir = os.getcwd()
         
         try:
-            # Копируем исходник во временную директорию только если нужно
-            if need_compile:
-                with open(source_file, 'r') as src, open(temp_source, 'w') as dst:
-                    dst.write(src.read())
-            
-            # Переходим во временную директорию
-            os.chdir(temp_dir)
-            
-            # Компилируем с поддержкой покрытия во временной директории только если нужно
-            if need_compile:
-                compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
-                subprocess.run(compile_cmd, shell=True, check=True)
-            
-            # Очищаем данные о покрытии перед запуском теста
-            for gcda_file in [f for f in os.listdir('.') if f.endswith('.gcda')]:
-                try:
-                    os.unlink(gcda_file)
-                except:
-                    pass
-            
-            # Запускаем тест
+            source_dir = os.path.dirname(source_file)
+            if source_dir:
+                os.chdir(source_dir)
+            subprocess.run("rm -f *.gcda *.gcov", shell=True)
+            source_base = os.path.basename(source_file)
+            binary_base = os.path.basename(binary_path)
+            compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
+            subprocess.run(compile_cmd, shell=True, check=True)
             if isinstance(input_data, list):
                 input_str = "\n".join(str(x) for x in input_data) + "\n"
             else:
                 input_str = str(input_data) + "\n"
-                
             process = subprocess.Popen(
                 [f"./{binary_base}"],
                 stdin=subprocess.PIPE,
@@ -985,16 +832,12 @@ def get_coverage(binary_path, input_data):
             except subprocess.TimeoutExpired:
                 process.kill()
                 process.wait()
-                
-            # Генерируем отчет о покрытии
             subprocess.run(
                 ["gcov", source_base],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 check=True
             )
-            
-            # Анализируем покрытие
             gcov_file = f"{source_base}.gcov"
             if os.path.exists(gcov_file):
                 with open(gcov_file) as f:
@@ -1023,29 +866,13 @@ def get_coverage(binary_path, input_data):
                     
                     if total > 0:
                         coverage = round((executed / total * 100), 2)
-                        
-                        # Копируем файл gcov в отдельную директорию для потока
-                        timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-                        output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.gcov"
-                        output_gcov = os.path.join(gcov_output_dir, output_filename)
-                        with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
-                            dst.write(src.read())
-                            
-                        # Сохраняем результат в кэш
-                        result = (executed, total, coverage)
-                        coverage_cache[input_key] = result
-                        return result
-            
-            result = (0, 1, 0.0)
-            coverage_cache[input_key] = result
-            return result
+                        return executed, total, coverage
+                    
+            return 0, 1, 0.0
             
         finally:
             os.chdir(original_dir)
-            
-            # НЕ удаляем временную директорию, чтобы переиспользовать компиляцию
-            # Мы будем только очищать .gcda файлы перед каждым запуском
-            
+        
     except Exception as e:
         print(f"Error in get_coverage: {e}")
         return 0, 1, 0.0
