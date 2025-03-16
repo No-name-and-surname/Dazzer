@@ -1,0 +1,10 @@
+Test: ['i).kcjyNbs=o$>*BV3sjAI*C\\T`ksZjT=Wg%no`b-a?h0vZ]ivI-:\\%p935->;%>!8hPDJTKdm_mdWhLMymlBhwIdh{\\jpzQWS^UwCb_GSo]lWmvjiaAJa_PNDTXKPeHBfpXGzyfmn]yUR`vL[JWKSWaS^fFMOLQFGYbTvVhsEdpPlurrH\\yANemoURUsIkytQzYI[G\\vpiRZEP_f[gBAzTtWmKb^TJvOAwODDoRt', 'RLMHIG']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

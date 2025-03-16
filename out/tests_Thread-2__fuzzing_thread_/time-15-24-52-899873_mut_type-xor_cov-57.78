@@ -1,0 +1,5 @@
+Test: ['_A@EDJ', "BA;{3I/$>E=5d8]nr'EeS;?lwRFtHcWeOXUHYPZx]]\\ezF"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

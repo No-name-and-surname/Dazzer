@@ -1,0 +1,10 @@
+Test: ['[WHezmNte/$o&\'/[7;4ux37p#KlisB&#@<=61]]6(m]l/_mlxmfnxsgwdp|${g\x1a\x1f\x0cw7sx\t\x1dlgdj0\rf~nnv~z\tftm\x0erbd\x01\r2\x00#\x01%"\x0c\x04\x03\x0c\x1a\x043:\x1c\x148)\x1d;\x1b(8\x16$\x0b%=7\x1a(\x0b\x088\x06\x1d\x1c\x02\x1d=\x0f>3\x19\x06#\x19', "0d+(F0wa&!~N26(-d5'>0,(1-#/#)s7P.n=u/A\\995yOLFVtcpeTilwXKLoZPQpuLtzUHazBxomVmQuHukSyfFi[EueylcWeJC]OcYEH]KkKrdW"]
+Coverage: 75.56%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

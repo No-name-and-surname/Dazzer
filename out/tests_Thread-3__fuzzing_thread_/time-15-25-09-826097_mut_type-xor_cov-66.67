@@ -1,0 +1,5 @@
+Test: ['1I"WesLkhHyjDbQx_]qEsJAlZZxnwqQx]rIvtiyAimQAjBnNrDXjMrZAelISVRzTvDyhamYMTSfbS^LhEONPdWudCe`lycndxAbjB', ' SDDC^D"\x14$\x19\x02\x05\x18+:.;.\'9\x1d\x1d\x1f!(\x02\x15+2,&7$&7\x18\n-(:\x1d\x13#\x04>39/8\x03\x13\x02\x13=\x07\x03%\x11\x05;"\x1b\x1e19"\x13\x13\x19']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,10 @@
+Test: ['>.3yH\\eW_XlXTwMf`^ClL^BbjyXXfFuP]tLbW^bOEpV\\qfjTLi`qVksoLfmxOnLfBaE\\ePG`cbHqXVb]nCO\\ICNrfjhygg', '©\x93\x93¹\x98\x9f¦¦\x8a\xadµ\x84\x99³¢\x89\x8b\x91\x9d\x81½\x8d\x91\x9a¹¹\x8b\x89¹°\x8a\x8e\x9f\x92¡\x98´\x9a\x89»\x85\x9b¼¶½¸¦\x91\x92¢µ¬\x84²\x93\x83¿½±\x8f¼®¯\x99´¾\x9f´\x86\x99\xad¢\x8c']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

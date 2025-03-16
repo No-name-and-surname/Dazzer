@@ -1,0 +1,10 @@
+Test: ['&tT-5bYcNxXj3nI"C33.<6/3;!-1dE;Ft.&<%/17+6>!39=$)&*^hS+(:<QLnElZcGeCoZTfqeprLLvKElotBu[GsSaWyljVHVMVXfzxKt_xp^Epzw^rLFE', 'f%.#O']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

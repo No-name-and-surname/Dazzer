@@ -1,0 +1,5 @@
+Test: ['_q+ULC/|.e9:<="*:<N2+?>!&1I$', '256']
+Coverage: 77.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

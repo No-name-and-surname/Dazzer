@@ -1,0 +1,5 @@
+Test: ['\x03\x02\x07\x06\x07', 'TQCfdvzn`VrhpOBg_qTqSMQOlJm^TbvICGyKbEbWHvL\\l_rnvjczWxAjni^IW[YEDDHF[JQmYQ']
+Coverage: 62.22%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

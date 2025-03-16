@@ -1,0 +1,10 @@
+Test: ['.\x00U(Z\x0fV\x14\x1aM%\x16', 'w]`yyrsQTbUh~b_SZ~JRgXz\t\x0f\x02)7\t?;\x0b\x0c\x03\x04\n;\x1e\x1401/\x19$\x05-4;&*;\x17\x00\x0c(MEJoY^qrpaVWMYQKE_Esnptq']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

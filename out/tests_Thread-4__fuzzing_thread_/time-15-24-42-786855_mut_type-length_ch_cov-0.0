@@ -1,0 +1,13 @@
+Test: ['6r`>6=3c5$(?J,d&90W#9y&/|"N_"(_\'9>-y3<G;)~1L&4]d\';0&S3SwVgdSAqqsjVOz^bAEC\\lmcEXBRv^esXU[Jg`GOPvOlqWkSbRasdnU[ZJtt`MbrOF_ycnMEBFCRpC^PSeu', 'M<Q9=wqb#">>;XYt"KZ"|6=8T_lzvEtQvtgyJ[qZjTkgXNFbMQgj']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

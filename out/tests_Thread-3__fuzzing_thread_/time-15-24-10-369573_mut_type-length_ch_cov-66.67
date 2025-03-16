@@ -1,0 +1,10 @@
+Test: ['j \x0e`f9\x1c\x1d<\x15#-\x05\x140\x00\x1f\x1b\x0f.?\x807\x16 \x05\x0e\x0e1\x01\x0f:\x1e.\x1c\x1d\x1c\x0b\x14-', 'Hye[CPWk^gF`zUKXPwJNevIhRBaJGFE_iRPCEIQgwjIqLSp']
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

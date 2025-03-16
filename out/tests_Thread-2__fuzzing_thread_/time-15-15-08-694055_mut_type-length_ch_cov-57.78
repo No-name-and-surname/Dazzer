@@ -1,5 +1,0 @@
-Test: ['\x0f"\x0f1?8\x0f650\'\x133,05\t3-)\x0c\x15<.&2\x16-\x14\x0f\x07$\'\x17;\x07\x178\x0b\r\x108/#\x0e %64\x1f8:7\t$\x17\x07#', ')*H%!t5=)n])<s\'#^j\\4?0"!?hBbi3P?7-z#-b$3-ZHo&]!#$.o?WG']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

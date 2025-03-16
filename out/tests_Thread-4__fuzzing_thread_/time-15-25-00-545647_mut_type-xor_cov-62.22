@@ -1,0 +1,5 @@
+Test: ['rwFr@|]c|Zr\x81_sh\\b{kKEtAsKoSOlJckD_iZK\\hm', '\x89']
+Coverage: 62.22%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

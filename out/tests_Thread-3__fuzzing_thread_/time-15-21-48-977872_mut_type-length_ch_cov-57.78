@@ -1,0 +1,10 @@
+Test: ['l3"{PK8F4p*"\'2l!%,kb>[K+$=&n:$)),+3;*s6U:<Z<KO@55&/K=<:^#+s', '@gJOsuYWuaNDUfafZjGnWJMkEmysafExVFZsitubEnlmeK\\IuEUiplJKtLSaeAok[izTrWlhwVHPizH]jo[akMNsjbgdreG]ahSfFb']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

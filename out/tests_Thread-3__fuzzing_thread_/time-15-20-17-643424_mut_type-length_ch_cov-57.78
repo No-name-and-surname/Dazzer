@@ -1,0 +1,10 @@
+Test: ['DO_\x0f\x07*\x12&:4\x02\x05/)2\x04=\x004\x028\t\x0c\x08\x14=*/=72%<"\x1b0\x0f\x184\x0c=$6;+\x0e \x0f\x10\x14$;5(.4\x05\x19\x17\x13>\x0e\x040\x15=\t37\x11,\x0b\x02&87\x04\t)\x19\x0e6,\x17;4\x1b(;\x1b\x18\x05\x17\x16\x05\x12/?\x19', 'kpK1WhlvMOLw]nype]lD_GJdMsgdlCuVIYrwLORveXQigMOebxW`xykPyR`D']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

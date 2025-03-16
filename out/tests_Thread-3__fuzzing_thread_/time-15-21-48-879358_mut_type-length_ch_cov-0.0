@@ -1,0 +1,10 @@
+Test: ['?7s<qlkYfv`SSIetMYX[AyRjZjImpRWHyoR_qzsIsZXiGvPgBoYNSGjB\\OamwLShX\\XWTOm', "M#>3C>\x11=\x1b.\x1c#\x19\x02<1+\x1c(\x1f<5\x16\x15;\x13%\x1f'-1\x0f\x1f*\n\x0e\x1f\x17#&\x16=;"]
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: [':no]j%)pwQlhE.bEl*}_vLzY_i[e]`EzRQRaLDQFzB]fHBRRdkkNqPyDBO\\J^]mFxckQs^IYw_ISz`d`wBQVnuLFnvVJEkwHaJlnAwjtbQmtR', "Y(@INTQT\n!#9\x1d4\r\t \x05%=<7.5'\x1d\x04\x16\x14\x14\x01\x0b\x14"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

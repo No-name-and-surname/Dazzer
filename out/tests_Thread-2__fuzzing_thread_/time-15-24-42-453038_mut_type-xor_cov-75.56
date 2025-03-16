@@ -1,0 +1,10 @@
+Test: ["\x03\x19+\x18.(\x19!\x0c\x05\x057$\n'\x1f#\x00\x06\x1a\x19\x1b4);*\x15\x06\x1f\x08=\x04\t\x03\x1e\x1e4%\t*\x08'\x0b\x14\t<\x08 >!\x07\x0c\x0e\x0c!04", '\\\\m]QjiXnggdpBJnKnvPZyeczjjjXwgLxkyoPeVeQZqflOQspijfhLByPOFDrrP\\CEzZrJLyvkMkKISJBgnoUXrl]qIxw']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

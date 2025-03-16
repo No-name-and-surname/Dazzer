@@ -1,0 +1,10 @@
+Test: ['\n\x07( \x16\x07+)\x01.\x01\x05**\x06\x14\x10!0?\x10\x030\x1e*\x16\x0e-\x11#\x02\x16\x05\x06(\x12%.2%/\'?\x06(=\n$\x06\x03-"0\x03;\x16!0\x1b\x14\x07\n)=0\x0f91,\x0b+\x1e\x13\x18\x1d\x0b!\x1e\x17\x12"\x18\x06\'\x07.', '%2ULH[MEHfaZDsfLuHBdltVRthwuzVEqSlfZWyaGHbdZeF_MWqmekPrQWQ]roKIdjh']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

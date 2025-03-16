@@ -1,0 +1,10 @@
+Test: ['SQpFGfSeFja`Dqs^`Sr]FfE@D^Rf_bvWLItMJZkpXIWQxbX^zTF[fZQlAOZV^LSsaLULoche]i^mkGYcR]u^TCRZdEhAiFNXOdtZtniMmNVA', '.\x01*\x192\x04=6=\x12\x16\x033\x1b-\x050\x05\x05\x0b&.<.1\x183\x0e6+\x07\x1b$+\r\x10\x0c\r,\x0e\x04\x0c\x0f\x0f\x076\x0f\x1d97\x15\x18\x0e\r\x10\x07,\x1f,\x1028\x04*\x1f\x06\t§,\x047\x08+\x06\x0f\x16?=:5\x0e\x06\x03\x1d73\x14\x184(\x1f\x03\x16\x0b\x11\x010\r\x025\x158\x0716']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

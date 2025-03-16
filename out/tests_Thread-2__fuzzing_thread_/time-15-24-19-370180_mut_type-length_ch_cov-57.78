@@ -1,0 +1,10 @@
+Test: ['SbuZ.$&-M<k461p7)!-%n@"L6;!-8}/_"9[%5%"$6q?]\'+7*=3v{6")2O[8k]LjcVqxzFmXYoAVGHMcyStlN[lTSUqvi[JnnVRGsB[xwo`qUGeVXwJiRzdtMsXDdculpYrhVE_o', '6\x88536']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: ['<k651[V=54+c6XgddRbaZ\\jBcZukXQnnUkqlO\\^TNqvMdtzsPrS`R]_tVZ', '.!iR<|?@+/*"X\'9%k6>(4,-)x\'"']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

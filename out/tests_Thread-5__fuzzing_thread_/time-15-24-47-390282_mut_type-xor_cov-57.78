@@ -1,0 +1,5 @@
+Test: ['¢¨\x96\x84§¶\x9c¿²¹¹\x9f\x8f\x80\x84\x9e§\x98\x96\x9a¦¥£¢»°\x8a´\x96\x93¦\x86¹¥¦\x87\x81µS¨\x84\x91§\x8a', 'R(r8e{p?8aekq[wXdeogoGINgzZZgGFCAWUXsGyWKThpeGYteZMximsdesmEsPwZG\\SmMSbgtw`nNJzfaEeaR']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

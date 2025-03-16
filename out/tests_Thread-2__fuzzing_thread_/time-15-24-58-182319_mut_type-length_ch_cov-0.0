@@ -1,0 +1,11 @@
+Test: ['-2147483648', 'POmIFeLq|Q_`MdDVYU\\\\|arm[PPKXvjeZxiz(RjugWnZS~W~mFW|LOJkeIQ^pnEKyy_jZ|WAlaA[kjgVsZYBhMxnCtCaMhjifgr_xPIQYi\\zUtsRMgjdgCzd`U^iqC^rNDNeJRbpYKxxRiDsCipuDtOD\\fW[fz']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

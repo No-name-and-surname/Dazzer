@@ -1,0 +1,5 @@
+Test: ['K(/p', '6k[sOZOonDL_KeWjWwpyawC\\pgzoCfrssvqHAEad_hBu`[WMVauwzBE]VzFxfVbufhSIsHKQxuHXRjZw']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

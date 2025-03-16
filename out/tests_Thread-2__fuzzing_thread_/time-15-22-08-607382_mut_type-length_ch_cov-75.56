@@ -1,0 +1,10 @@
+Test: ['=Bn(W6H/#Z>G=`7!n|%4n|$#,%*31:/298?GhGftRkXRMzKVoWkqIkERUGJ_aIFaejBw[wpmjXXM\\vIR]xDGYJwyNhnaJQZtXVTvsGdzfv_YhpOyB]FFZ_L`MVlNM', 'fC]']
+Coverage: 75.56%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

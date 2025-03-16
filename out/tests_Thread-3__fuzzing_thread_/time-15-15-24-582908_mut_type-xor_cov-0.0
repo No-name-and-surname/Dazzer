@@ -1,5 +1,0 @@
-Test: [".P\x0e]\x10=\x1b]M\x1a\x130\x02\x16?R!_,\x16\x11%\x13P;$\x04>LH(XI\x00NWCV\x1eMP_\t\x1aY\x01ZFDRC/\x0b]RX\x08YA;\x1f\x07\x17\x1b+08\x14+%$6!\x00!'\x0f\x17\x136\x1d80\x1e =\r\r \x06", '\x05!,']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

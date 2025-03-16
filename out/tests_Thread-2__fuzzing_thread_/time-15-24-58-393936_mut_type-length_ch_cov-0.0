@@ -1,0 +1,5 @@
+Test: ['Zlg', 'oZan$,L(4TC.\'+8+,6H("&WR;E,;"3eTA"oX2^#P#03']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

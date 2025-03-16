@@ -1,0 +1,5 @@
+Test: ['\x00*\t\n\\9-\x19;=:\x01\x0b\x19*\x19\x02/\x17&\x13\x16<\x1a\x19%=:\x04+\x05\x06\x0b1< \x03:>\x17\x17#7*\x1b1\x12+&\x05*\x17\t,0\x10/)";-\x05', '@ttzqvAAIFMY^RuitCSFZYdcOnueTcFXRXEVhsSNMDkuKPYd^l\\]Vgq_INLgv\\lTdcnLMvb']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,10 @@
+Test: ["GRKJ7)h%316o6<%->+#63*20Z*39.9f#3-?0;/81~$2m(p:76!9G3(I.%19j';+/W(5<e//<!79#R2(S+1S$+vmkNO[sBqhyYfumqzamnkbEJIeXUgffuTB\\[LceXrwcnYIWk]K^p`q`waefXB[FGgpKVlUrdaI^^]TyysJVuDDo^ivjSCfvPejM", 'None']
+Coverage: 75.56%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

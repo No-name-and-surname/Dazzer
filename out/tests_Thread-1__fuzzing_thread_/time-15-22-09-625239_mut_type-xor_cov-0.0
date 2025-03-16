@@ -1,0 +1,13 @@
+Test: ['5\x14\x15\x1e', 'MH_py]UoVqQUu`z\\OShR_mKMHCjl[Iq[TsP[yV\\Y]tqaivdfg_XAde`qGd`XfM_mH]_K]\\mcrF\\ZogtUklxOlAqzqJTLXuyg]JIDgTm']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

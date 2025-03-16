@@ -1,0 +1,10 @@
+Test: ['@q?=16q*!93_/!"/pw=_$4g!<#oO#/%}("-B*S68?56i<+0`S{+x5\'sB]j\\V\\\\RmHBNzdUln_QHnLHmabXYJ`VF_ZCHo_ejVYB]^A[iHSinSQVV', '65536']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

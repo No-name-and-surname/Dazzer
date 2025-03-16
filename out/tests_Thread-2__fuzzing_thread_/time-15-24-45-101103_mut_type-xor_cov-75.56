@@ -1,0 +1,5 @@
+Test: ['°¶½°½²³¶½²', 'ek\x03c\x02\x11\x07\x06*4>8\x0c\x07\x15\n\x190\x1f%*$%<*\x1d)\x15?\x05\x02-\x04,/)\x11.%\x1d=%\r8!\x0e\x17\x16! \x1d']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

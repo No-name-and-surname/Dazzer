@@ -1,0 +1,10 @@
+Test: ["DN?\x0152\x087\x1f/?\x0f5\x14\x14(\t\x19\x0e;\x08-6\x148&8';'\x01\x06\x16-", '&t\\rX9lj>;t]63"4NLD1KgMvoP\'p(?A#J5U91lvpgqbdTWFC_aOCoMnr\\ATmUc^]jCjyq]wMxJNob][_FIZfioy']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

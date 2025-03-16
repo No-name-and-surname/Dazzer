@@ -1,0 +1,10 @@
+Test: ['P{8u))+FQR,$4Kb2/~88?l:}(?<.ux8/4?2u0(8:ToUN/&8Yh=7,J11~a<mZrh]x[ZI^WBihLZeiIpJNqGiUapb\\obGLTwERT[VxapmYaVmbovsTeWexMVYGuJwAHUYcAvyN[Kkz', '-129']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

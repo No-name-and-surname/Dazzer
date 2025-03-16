@@ -1,0 +1,10 @@
+Test: ['§\x97\x90¶±®\x99¤\x9e\x9aµº©\xad\x84\x96\x96\x98\x9c¸\x8a\x8b\x8c\x99\x9d\x8f\x94©¤¨\x8b\x9a½\x8e', "H\\X)OR+a`A@.-#c/'$9'>#*a%J+F%7<%14'9Kjxhi\\FUvyznoilTitHEPNXjhjDh\\ZffURvzzjOFC"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

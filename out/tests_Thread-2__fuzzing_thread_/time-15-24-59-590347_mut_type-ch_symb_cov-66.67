@@ -1,0 +1,10 @@
+Test: ['|pta-<~Xu{4+_**YG9::)D,(&h6<0?$q$17ca=&~>*]2xO!Z4t!Z<?J:eV=,Y,*E2\'$r|6ObJ-%7"iR>*#)4%6PzYDNGFN\\Tcn_jioynW`etKz]MBGIWeauxSCpmepchazcivzL][OxjpAutyTxySoLj[MWKncv]kpa\\xraLuqcfJONYhy', '8kGm=)1@,#.ld>M3:6I77>Y&#&>><GgUbPvyZfeZ[pRvoPvDQ^aYjtwRRqXrbMtElWyVhWJZXL[UsZfgkZKXLZbdmmMLxgohh`O`txCHoYNkZji']
+Coverage: 66.67%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

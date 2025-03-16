@@ -1,0 +1,10 @@
+Test: ['$#:_< ,+<4$9#_>-*Ei;"_~@~{GArMao\x7fY_Gh{Wmd}`q}mWG~KIKJMcT]lEqBV_p|dJcY{]aAm\x7fT|i@]', 'i1Nf("G/;wVs\x7fVJiK\\Jaw`}Rv`LL`uhSbjSfvtO\x7f']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

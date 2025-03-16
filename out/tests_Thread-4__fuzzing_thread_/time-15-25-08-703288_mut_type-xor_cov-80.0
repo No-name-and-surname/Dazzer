@@ -1,0 +1,5 @@
+Test: ["-'s#cHfFAZKHvqCHRagkQhWlFQYrDQStnI]RBzZK_]^zQvOQlTe\\OuHcTfrLxe_OlehqkHFWVqf[]MDzHDrxMI\\uytgWl[rODmUFrzf", '7\x1c&7\x16\x06\x16\x0f\x072 \x1a.\x17\x03!2.<1\x06\x18\x19?!\x15#\x1a\x1f\x1a\x003\x14\x1b\x1a\x19-\x00\x1c\x13*"=\x1e--\x1e\x1f\x13']
+Coverage: 80.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

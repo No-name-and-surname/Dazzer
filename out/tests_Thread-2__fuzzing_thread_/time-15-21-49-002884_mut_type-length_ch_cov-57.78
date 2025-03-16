@@ -1,0 +1,10 @@
+Test: ['yT@Pf', "==>&012/59'?C=U8/[>]rpD-k,?'V,'uakPIzD[^`wKSLpr`Fgn\\avxeiIJZBehZGQOchS"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

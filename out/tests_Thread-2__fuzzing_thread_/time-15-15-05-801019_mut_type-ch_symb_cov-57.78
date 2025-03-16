@@ -1,5 +1,0 @@
-Test: ['M/=3!4&\'4/,\x05\x03\x0b\x00\n4"15\x07.!\x114-7\x18\x1c\x06\x1f\x15,=\x0b\x1b\x06*&5\x1b\x08;\x15\x1e1!', 'None']
-Coverage: 57.78%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['|\x7f\x7fy\x7f', '2147483647']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

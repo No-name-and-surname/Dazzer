@@ -1,0 +1,10 @@
+Test: ['P\x86[ZZ^[êZ_Q\\]^^\\QY^', 'cQniWjxMVROeFrlBQbvjCURWtiil@TuQnEhMQLmOJkkW/AqXqiK[}TvLw[HmvNSdRomaYCYnK@rEhJvYGfsAxHsxk`KVg^U]F]]fAwQsF]hGTCvLJ]GXbNV[FsBFmdoirc\\wSadPOdSn`bGLMFWTkDYvGDuCdmC^olMddlnNl']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

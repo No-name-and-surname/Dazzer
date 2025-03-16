@@ -1,0 +1,5 @@
+Test: ['\x14\x1f\x10\x15%\n/\x192"\x069-!!\x12>\x17*\x04\x16>-', 'òßò´¸']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

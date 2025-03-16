@@ -1,5 +1,0 @@
-Test: ['\x88\x83\x83\x82\x82\x86\x83\x81\x82\x87\x89\x84\x85\x86\x86\x84\x89\x81\x86', '65537']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

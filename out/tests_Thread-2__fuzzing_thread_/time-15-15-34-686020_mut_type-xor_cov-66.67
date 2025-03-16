@@ -1,5 +1,0 @@
-Test: ['½\x9c\x9d\x96', 'inlCXu_arf']
-Coverage: 66.67%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

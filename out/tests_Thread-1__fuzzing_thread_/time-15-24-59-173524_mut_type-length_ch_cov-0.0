@@ -1,0 +1,10 @@
+Test: ['0', '01-"-}o)7:;(c9.Z7kG/89v#6gP9:1471ek3/}3#eS]I]tdMz[fFdGRAPzvqupdjt`W]OGH\\xYzjlTMqGbiPSmTsGST]BLIW\\mkH`VLch_]cdVcd]yuvuEVXq']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Первое число равно нулю.
+Первое число четное.
+Второе число положительное.
+Второе число нечетное.
+

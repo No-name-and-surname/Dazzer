@@ -1,0 +1,10 @@
+Test: ['Fm_s&;O+F$>=1y9"F&A7s14"&^*g?l&H{p5f2h;1&=W*r838+YF@ESPBKojQKVoiqeBD`HWZM_wjHgdzUhTf]eafBPc]LUFZtBkYhaI\\ECzaRUqlcIddHIwviRIWYkHbsHNcFpHl_\\miExLPv', '\x15zL\x15K\x13zGm}\x1c\x11\x1ftHCX\x05\x0c\x16\x15\x0c\x1b}X\x0f\x07\tke\x1b\x0fX\x0e']
+Coverage: 73.33%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

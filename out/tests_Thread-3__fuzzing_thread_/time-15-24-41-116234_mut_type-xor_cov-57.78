@@ -1,0 +1,10 @@
+Test: ['$.">5:;|62y#*CZ0m$-,6I76-*]/%I-(.%6<zma")*eA1$?VNx5Se>1@#*V((A^j[SYwA[zymTXlPS[RXwbhKiTVEShoQAfUgTCTbtLuAGktwlWsIGNMQlBzlrRbDMQfmGiNPRXRu', '!\x00\x01\n']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

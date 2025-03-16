@@ -1,0 +1,10 @@
+Test: [',+2W4($#4<,1+W6%"Ma3*WvHvsOIzEigwQWO`s_eluhyue_OvCACBEk\\UdMyJ^WxtlBkQsUiIew\\taHU', '\x0cr\x0c\x08BQbm~wVs\x7fVJiK\\Jaw`}Rv`LL`uhSbjSfvtO\x7fOrtRvoLl@t']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

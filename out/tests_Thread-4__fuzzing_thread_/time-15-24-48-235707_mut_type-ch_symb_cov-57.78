@@ -1,0 +1,5 @@
+Test: ['\x039&9T\x13TM<TO\x196A\x18Y<\t\x04\x05>>\x1a$\x18.7$)#&\x0e\x00\x06\x040*#\x03<\r!\n*88?\x06$\x00\x1f)\x03\x1f\x11":\x08\x1c', '\x87']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

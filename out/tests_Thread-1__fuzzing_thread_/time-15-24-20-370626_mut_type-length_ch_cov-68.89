@@ -1,0 +1,10 @@
+Test: ['b2c:*4h9=\'%$#`0*\'u2\'6-"?m/1=7zd?LP\'**/1$%,57693;1(&LN>O#M*5K8$))K%U2;>2/u(vHn8Re1TF7X36D\'5?\',?(V-3LxWlEJoQIhNYVhFinNhRzIhFP[lopJgGsckOMK]wJBcgQ_ayuvqr^x^WFyRu^p\\oEM]nObcwIwIYsQyNbOlmWGjCiRNUBY^ZEWt', 'JA\x83@@DAC@EKFGDDFKCD']
+Coverage: 68.89%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: ['\x8832768', 'fiNZqi[R4Nm0O@O\\0#ylzJTAnt=iNUDjRKKM;snLGgpSTWzfHWO%jPY?bxw%@A;q!Q\\`vZ&d}MZzihllTrl=1IB"J*tVbKfewWneUp{aDzFjoWv_~JojXP`TboW`CD\\\\qZxltARaUxP@[G@V~TvTcRQWHZcYmQ|yVDZfD[Ft\x7ftSX[][GnnsLIkqQQDPHcJL[OHauduIWZU`PlRivzbCFGdkeWFsdSLCiuOKubyWwibfkP\\IPgbVPlOYHxjKfbzhtlNckwaYKvJQ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

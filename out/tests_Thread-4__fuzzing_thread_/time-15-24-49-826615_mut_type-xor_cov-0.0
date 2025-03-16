@@ -1,0 +1,5 @@
+Test: ['<\x1d\x1c\x17', '\x08\x0b\x00']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

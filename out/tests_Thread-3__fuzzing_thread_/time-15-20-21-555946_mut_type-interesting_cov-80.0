@@ -1,0 +1,5 @@
+Test: ['655\x806', '-9223372036854775808']
+Coverage: 80.0%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

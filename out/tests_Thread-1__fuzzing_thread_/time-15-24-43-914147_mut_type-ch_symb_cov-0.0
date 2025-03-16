@@ -1,0 +1,10 @@
+Test: ['[ya8.b&(T0=g+7:Pd6.8)"c3sQ9:$!Cdo1#iPQ(f1}&!4%!Y8?>erdTRSaDPIf_GBE`ECtQhF[uIyBcOegkpFQElokAbxZGdhCCaJUmLHhvPUgZmxthSjZIXnHPbyprU\\kFotGnmJBIyZJWXhCBNlgg', 'None']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

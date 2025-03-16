@@ -1,0 +1,10 @@
+Test: ["U)\x1c<\x1b\x0e\x08\x0e\x11\x13)6\x003\r\x00\x0c5?\x19\x18\x16\x1a\x16\x15\x144)\x02=4>2,\x10\x00'0%<-\r8\x02\x0f<\x0b\x03+.\x1962\r1", 'CXJSARR\\@zzYcnuS@~mcnaxaraenpILaJZBduF][wnLpozEwNWpjfXcQMYQDMeHEphvvItdNURd^PcHRb']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

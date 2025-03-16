@@ -1,0 +1,5 @@
+Test: ['RN', 'K(1I&']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['None', 'lZRsSMupn<@~eugWL{bsW@g[uiDo8DyAWeYk^NPvyisxf`pWSI~`\\kbt\x0f<\x0f3\x11\x1b\'\t<%*\x15\x0f\'\x14+\x08%,5\x1c\x1e\x19\x16-% >\x14\x107;\x17\x0b< 5(2"\x13.!\x166\x1b$\x12\x15rx[IBjkepNu^uMiq_]D[RMxVgRTBjL]yPmwXq`_[^F_TBu\\iI]H[qEQP']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['None', '\x87\x0b\n\x01']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

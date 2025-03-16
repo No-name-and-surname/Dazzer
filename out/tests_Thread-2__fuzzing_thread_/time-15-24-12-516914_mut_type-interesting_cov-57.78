@@ -1,0 +1,11 @@
+Test: ['-32768', 'I"%0%a,B"5p"1%6QsHkB.!w+7\',{]==(9yN?\'1Zi2w&.80&,v!<"ju^BAQxuszcP[\\[VORjgcKJsPathIwFKluzJxfn\\sywzLqnFqXKMDBESjbIYJx']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

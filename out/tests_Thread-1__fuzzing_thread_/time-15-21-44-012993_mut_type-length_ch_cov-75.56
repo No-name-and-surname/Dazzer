@@ -1,0 +1,10 @@
+Test: ["D72V=?a;$'='90'k$:YL:2_fGzBTfDqeNJWAiCImALheNA`u^sY^ltUDME\\WkugBxYZUjSRhpnRRhYeDuUtkMsHxDHkePJQVZ]cpSwaQaPQ`rQ_q", 'lK']
+Coverage: 75.56%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,5 @@
+Test: ['\x81\x81\x89\x96\x98\x91¦¾\xa0\x8f\x98\xad\x8a\x89¡«´\x89·¸³»¥«¦\x94´\x93¹\xa0ª¾¾\x96\x9e\x8c¹\x80\x99®\xad', '32768']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

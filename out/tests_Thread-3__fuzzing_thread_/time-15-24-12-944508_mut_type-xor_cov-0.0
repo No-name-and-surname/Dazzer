@@ -1,0 +1,10 @@
+Test: ['0>D83RU@#13<$3-W)01.)|t$<b1#/\'"5<N6?E=6x*pVC=,cp@5.)5cCmfJwMuIg`gYg[VQEJoMXO\\NIaESjd]H`EQwo`UKFsnL`WUJduZ_JrPps_[ljvVRkbV_H`bqPW`JLHVg]JkmXZ', '\x18\x08*\x01>0']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

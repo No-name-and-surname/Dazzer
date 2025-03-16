@@ -1,0 +1,5 @@
+Test: ['w\\~H!6,#A0G#dL+2=>41=h', '\x08']
+Coverage: 71.11%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

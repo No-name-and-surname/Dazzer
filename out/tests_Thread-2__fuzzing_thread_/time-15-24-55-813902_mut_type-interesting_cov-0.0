@@ -1,0 +1,5 @@
+Test: ['¥¹', '4294967296']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

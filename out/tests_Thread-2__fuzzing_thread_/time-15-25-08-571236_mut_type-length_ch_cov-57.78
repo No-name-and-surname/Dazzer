@@ -1,0 +1,5 @@
+Test: ['\x99\x90ûî¸½¾¾\x93\x93¨\x85¬¯º\x86\x93¥', 'j+0LgwzWnWyJgywpqXwyQTnZTZxLNdXiKMFDTk\\ksE_Q_Wk`WWmfFVWwMTjc_jEiUrrfS`OetWN\\']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

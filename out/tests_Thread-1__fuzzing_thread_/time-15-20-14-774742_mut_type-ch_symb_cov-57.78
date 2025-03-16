@@ -1,0 +1,10 @@
+Test: ['\x8832768', '\x08\x1a\x02\x13\x1a\x18P\x03d\x1eSS\x05\x0c\x14\x13xe\x0c\x08\x0f\x03\x03\x1bDg@\x05\x1c|f\x10k\x08\r\n_i\x0b\x1b\x01\x14\x14\x00\x18\x14\x13\x13\x07\x1cjm\x13\x07\x08V\x00\x1e\x1cu\x1c\x08k\x16C\x07\x0c\x0cW\x03n\x1c\x17\x06v\x18\x13\x00\x18\x00\x1a\x11\x07\x08PF\tT]{tVbKfewWneUp{aDzFjoWv_~JojXP`TboW`CD\\\\qZxltARaUxP@[G@V~TvTcRQWHZcYmQ|yVDZfD[Ft\x7ftSX[][Gn']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

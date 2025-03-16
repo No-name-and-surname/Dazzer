@@ -1,0 +1,10 @@
+Test: ['H]K\x14', '{ffJkJAyf]cQF[ju@vQ]DMKV\\xVKB][`Ai{J}KtMPKVMwn#+ .\x03\x1c\x04\x131\x08\x02\x1b63/\x0c\x0f\x04\n\x1e%-01\t\x03+7:\x1f!#\x0c,-\x11>\x1a\x081$\x1e1"8Fjerseny`EUPh[gLRQWAWWFhtPnFBMzaCTBfZFDydAvwEZ']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

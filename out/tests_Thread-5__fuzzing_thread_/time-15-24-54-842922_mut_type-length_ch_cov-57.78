@@ -1,0 +1,5 @@
+Test: ['\x16\x05<\x12\x1b', ')OWtBhLX^RPkCOO\\vrkCrQM^FY']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

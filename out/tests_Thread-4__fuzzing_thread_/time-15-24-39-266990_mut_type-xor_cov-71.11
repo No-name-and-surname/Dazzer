@@ -1,0 +1,5 @@
+Test: ['7\x00V\x12OU*; : 5!\x0e[TOKçE9%D\x1154^M[\\AYU\x18,EU-.\t*5*\x04"\x11\x11\x19\x02*', 'None']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

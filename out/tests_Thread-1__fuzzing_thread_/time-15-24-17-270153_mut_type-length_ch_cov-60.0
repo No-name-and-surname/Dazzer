@@ -1,0 +1,11 @@
+Test: ['-1', "FUPq}XpTabggmguzqx{DoyekeaKAYu`sRjuV_pbB]zhrBKxpUTKabQph]ZQ\n$-\x10\x1d!8 =0,\x0c61\x161\x16'=,2\x19;\x01-2\x085\x1d!\x0f\x14\x176AbQZ_XdkOadSGB[Vi_pRKpCTENSuMaqsOCTC^YCYzYPJxSmkEAqlwl_BQGf"]
+Coverage: 60.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

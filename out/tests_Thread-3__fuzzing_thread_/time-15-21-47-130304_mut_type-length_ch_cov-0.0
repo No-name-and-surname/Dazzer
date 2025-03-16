@@ -1,0 +1,10 @@
+Test: ['TF\x01V\x1fTMPZ@C\x13EK\x0fJH4WPWXC\x16\\\x12TCZP\x13NSU\x16[#EH\x1a@\nKTSA?J^NH\x0c\x16@GX4\x18', 'AofKO']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

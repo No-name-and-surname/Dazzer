@@ -1,0 +1,5 @@
+Test: ["s@SjquLOo_TUOB#\x10\n8$\x123*\x115\x1f\x0f2\n%\x08\x162.:\x1c;5\x17+\x18)#\x16;3+\x16\x0e.*\x1e6=$9)*\x14\r\x16\x147:9\x1c\x1d05\x16\x1a\x1f\x05%*\x0e63\n\t;\r\n\x1a7'\x08", '`jKJoHFyhM~YZeg^B_uLRy_m7DjDpBz']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

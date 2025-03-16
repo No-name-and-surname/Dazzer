@@ -1,0 +1,10 @@
+Test: ['\x1cM\x175K\x1f\x01SU*\x16\x00\x037; .&(\x0b>%*<\x14\x1a\x03\x17\x1f\r\x10\x11$+\x082\x02+%', '!/9$orWARRWhIzaXDeragD\\QPP`lIQDw\\[W`ULgItZ^GpKekalBtlTOzpzHXyABI\\s`fROQ^ROKOCkgi_gTeldTTHYvLytR']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

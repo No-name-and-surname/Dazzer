@@ -1,0 +1,5 @@
+Test: ["T&@^\x1a\x1e\x05;$2\x06\x0e\r++\x13\x1b!:5\x08\x05/*7/\x05\x05\x1c\x01,\n/8*\x11\x1e!7;'2\n\x04\t\x0f#\x0f\x11$3\x03\x19 6 \x08\x0f\x01\t\x0b>\x18$0", '32768']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

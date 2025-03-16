@@ -1,0 +1,5 @@
+Test: ['ò´â\xadÝëóÛÿòêÄõØØÝÿÞöËÉÊäÔ×üáïÉËÐÄõóåÇÉÐÉÂÌîÌåéÒÃ×þÄìÇæõÊå×üÈÐîáÊÒäËÀËÁÁü÷ÿÎðÇÑÈÎíÚÕÚîËÁÀâÿêÏáÅþÀÛ×Î×ÑÓ', 'TejQqFFioq_hGidPDNouzsdWAAQdiyHhkTPENdY]]cIS[]JBIGjumzXakr_ZFefmcwLDYX`jB^SvHJeEDxWsaXMwXKQ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

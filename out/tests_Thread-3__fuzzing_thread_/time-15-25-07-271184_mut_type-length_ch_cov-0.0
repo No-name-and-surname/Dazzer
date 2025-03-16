@@ -1,0 +1,5 @@
+Test: ['\x8b', '-{^mQ/"(3y:?m:$J>b#15/h;q7X+=?,M!!Wl;/7,&/-"?7$$dM7n^vTDedm_GWQUxlpjKM_OLbdl_h^ngnMhowo`sRfGIiwVvAvbOkipsxJHFeuIVhoMco[NdVenrwx]oHbiZlrMepL']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

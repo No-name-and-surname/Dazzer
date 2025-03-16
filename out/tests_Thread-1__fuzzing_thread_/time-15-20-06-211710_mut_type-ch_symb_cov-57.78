@@ -1,0 +1,10 @@
+Test: ["t>(/M-5.7-73=&f'$.;.:%7:)*adS8%RQIc6%(g&gnpT}JNnUvCROsRPZIJzvhg_JhgR~[zoJHICgIOrT^TWlbbvlz^ElbiegUedYk_h]Iw_W|Djh`k\\iWNwOno", 'AG`lhwrU__E[kpaXZcD_]~WvXUpD^TFEERqe{QdRAAzYQanCkyTWX_px']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

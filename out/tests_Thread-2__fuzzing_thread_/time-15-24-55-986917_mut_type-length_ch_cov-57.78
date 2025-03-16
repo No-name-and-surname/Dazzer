@@ -1,0 +1,5 @@
+Test: ['pb$qr', '-1']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

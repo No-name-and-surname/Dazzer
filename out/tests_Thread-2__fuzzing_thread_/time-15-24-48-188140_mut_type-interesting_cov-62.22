@@ -1,0 +1,5 @@
+Test: ["I:'9", '9223372036854775807']
+Coverage: 62.22%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

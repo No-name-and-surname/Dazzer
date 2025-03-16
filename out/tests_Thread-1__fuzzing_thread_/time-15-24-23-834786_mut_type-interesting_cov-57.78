@@ -1,0 +1,10 @@
+Test: ["lc!l%siho^^s)Hi0PQ.7(nh/kCf}$<?&]qLhY'_G4|riu\\|;zKoGnPC@7~0`$34#J1>3H[UR,r5ul]bVRzmMMep_FxHE^[fcarB`wGhNgzez`CKR_ubFBZGuL_ziIwZJcgu^E`XOZ]tnXlwVwxUjLQ]eNUElnb^_FMYDR\\LHvaH_aENw`fD[DT_[rWVDRwCsMqBwapavNEBXgJduiYnFbs", '127']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,5 @@
+Test: ['^KZ}s=50"-+(H"Vk[VBR`Toa\x89[kCszh]Ac]a`YTYJvJkTjv', '\x054";\x13']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

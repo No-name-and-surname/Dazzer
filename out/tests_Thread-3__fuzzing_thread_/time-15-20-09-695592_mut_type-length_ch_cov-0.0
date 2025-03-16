@@ -1,0 +1,5 @@
+Test: ['3C8+WlVNLFKrpLfvy`Tvtj\\NZ', 'U\x07\x1d\\\x15%_D_\tY.W\x0b]9M\x1b0,\x19?\x1c<0\x02!\x04\x05%?\'\x08*;5%\x188\x1f\r\x1f"6,\x00\x1a!0\x07=\x07&\x14#1\x08&\x08\x1a* ,\x0e\x025/\x05*;$>\t,6<\t,']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

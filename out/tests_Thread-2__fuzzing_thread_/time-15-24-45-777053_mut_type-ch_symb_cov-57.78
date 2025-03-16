@@ -1,0 +1,10 @@
+Test: ['Su?bx>m/\'$,8S(#-1525V1$&14IB,"$5I"85}:c%>>39"98X%frL"?1Q-[^4wIrR&"4G3*1*\'0d^bmpmUeQ]QzoUv\\rYo\x82k]ggvfj`gzNCloS^U`EnmxIOq^ZtLm\\NKIjrNiRde\\_KUyflmPmfSulr\\]]vbEXLmKozLfWcOcFB', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

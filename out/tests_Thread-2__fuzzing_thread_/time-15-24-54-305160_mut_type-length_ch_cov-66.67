@@ -1,0 +1,11 @@
+Test: ['32768', '1U{s%3;,N30:9&39Q$[?3HqSIvEwsvE]`\\c\\kkWjkPPcv\\f]tr]kIYtqIlWRXNN^kCYCkVQoAUmhGTWNFPWZdwt]u]']
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число положительное.
+Второе число нечетное.
+

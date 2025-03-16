@@ -1,0 +1,10 @@
+Test: ['*7Wd6D>h%*@(~{r+9v-~A!g:!<FV;4\'"u$/o4Qr3Z-24)(S%%g}2^#|#&j6-:+<QLp9fNupTqJtBxHhOVv`FXBDDJ]]PVUPfY]HKMFpPMjKtttDZojzRRlFZEKbTlkJwKBnv`VKc[BxrhHDm\\hg]SfyFn[', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

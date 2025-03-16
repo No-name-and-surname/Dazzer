@@ -1,0 +1,5 @@
+Test: ['xdgl', '9223372036854775807']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

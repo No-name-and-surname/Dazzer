@@ -1,0 +1,5 @@
+Test: ["FXB$[Q:-/\x1a\x1e\x13\x138'\x023\x07\x08:7*\x0b\x076?28\x1b :&/\x1f#>0-\x07\x1f\x08,* 9\x19;;5\x00;", 'No\x89e']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

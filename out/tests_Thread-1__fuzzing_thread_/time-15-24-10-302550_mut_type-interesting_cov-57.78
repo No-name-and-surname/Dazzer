@@ -1,0 +1,5 @@
+Test: ["\x11$4'+;4$1;\x82;\x157?$>2/<\x1c8\x17\x07\x07\x06,;\x0c3\x0c\x17\n\x05<\x0c\x06\r\n\x03\x066\x03.\n\x15 \x11\x1d\x12.6\x17\x00\x05).*\r0#''6'*3\x05<&4\x03?0\x0c\x076 4\t", '9223372036854775807']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

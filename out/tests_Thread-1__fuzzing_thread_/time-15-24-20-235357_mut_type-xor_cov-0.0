@@ -1,0 +1,11 @@
+Test: ['-128', '\x11U\n\x11V\x0f\x1eG\x0e\x1cY\x1e\x11njd\x06\tJ\x00\x1bvLyGxK~kADk@pFa{Pd[AImGoCP\x7fzLA~Y}eUuYTzW\x7frDbnb\x7fPAOfS[v`OJvG{e`\x7fF']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

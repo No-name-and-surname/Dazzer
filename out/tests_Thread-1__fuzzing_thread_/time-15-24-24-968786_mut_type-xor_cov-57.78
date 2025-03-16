@@ -1,0 +1,5 @@
+Test: ['A^]X[XT_ZXT', '(-##Y%VNwSZ*|6>"7,uB)>"Db7*9OXH\\i8|7*y,']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

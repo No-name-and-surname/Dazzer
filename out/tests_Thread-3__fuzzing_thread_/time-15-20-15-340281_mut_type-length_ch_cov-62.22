@@ -1,0 +1,13 @@
+Test: ['128', "]r&Q},20>,mz#^\\9s*O9b%*;+e>|4Nb:ov!#'w8KmXFiC\\SUPzB]jfexhSYHvPm[F[Usoi_NYPlS_CxCCH_c]Yxvdw\\TtAMduYGoaS\\eXCqjaLseBt_RmL`dNBtJFVsAu"]
+Coverage: 62.22%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

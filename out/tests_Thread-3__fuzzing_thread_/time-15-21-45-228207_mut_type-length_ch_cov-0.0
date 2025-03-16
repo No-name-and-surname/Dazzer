@@ -1,0 +1,10 @@
+Test: ['WpWIyjgh[Qv]yArfqbjlUQFusBpIh]YkfBwLFLtlumJafRAQfvzNYHnIEQpQBVKnIt_OIhkGKupHMa`Ovaf`KRHl\\WuzUTZL`qn', 'QUn>:0.$7*1&+}39+%ij6eg97)6&E&=>?+2?+)<7"fz2Fw\'1s<>8)}\'h<A2:35O#Y-K}']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

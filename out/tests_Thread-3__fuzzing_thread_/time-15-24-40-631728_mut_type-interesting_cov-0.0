@@ -1,0 +1,5 @@
+Test: ['pXe4[CjRRc\\nTSoBnIuGYXhyYMWcMvORKFsWOvPaHFtg]J_LCrsZgir]y]vJckN', '4294967295']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

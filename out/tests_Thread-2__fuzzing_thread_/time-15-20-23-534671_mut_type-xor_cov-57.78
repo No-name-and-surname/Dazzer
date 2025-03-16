@@ -1,0 +1,10 @@
+Test: ['\x03\x0bU\x1fMdYPttrbA_tPo]dJ[{ADeb[uKKbyx[Jsfu^pQxuB~{B{HDO|TjFJIsfvgol~Vc|{YNn_NEukfAskpKGJd_pB_^wI', 'czp\x1d\x1d+\x12=\x022 \x0c\x166\x02\r\x16\x0e-*\x0f\x1e\x1f\'\x10(\x19\x107\x00\x04\t,\r2%7\x18\x18-*\x13*\x10\x1e\x18\x04\x1f7"=\x110\x0f\x1e07\x0f\x01"\x044\x0e,\x14\x11\n!\x1a+%\x1d/\x15\x1d-\x1c &\x070\x11\x02\x02']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

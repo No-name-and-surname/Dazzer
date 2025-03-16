@@ -1,0 +1,10 @@
+Test: ['=GID04C0Ism>3a5d(K?D#"5<_/:-K,E,!', "r=vHY~%L8<jyT5uyshEXTTYXS\\_PWpmM`b{V{aaFtc\\Y[dzYdUwf|oLUtAN}^vT~lYU]rH\x10'*&\x03\x0e\t\n6\x15GfXkVrrAcsTBi[P[K_egshey]x_RgoTsmZWiDyZOGAIDENhOu^Cojvfk[VzMnDTluTXp]J"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

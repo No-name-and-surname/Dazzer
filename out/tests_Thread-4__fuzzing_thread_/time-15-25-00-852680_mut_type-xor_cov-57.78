@@ -1,0 +1,5 @@
+Test: ['~irfqwWxU¸L}AdtaQ~K~SP@TBD`JerzEtPCVdF{FP[buIoQbWoURTqA]hUvt[xbDfVeBt', 'L\x12\x10\x01:\x1f?\x19\x06\x17\x00\x0f50\x00\x1c):#,\x1a#\x13\x12\x17\x06\x1c\x1d17\x14+3\x13\x01:!\x07\x1187\x0f%?\x05\x05\x1a\x1d\x1f,"5\x16-\x03\x0f3\'\x144)!\x107']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

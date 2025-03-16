@@ -1,0 +1,13 @@
+Test: ['4+$%9`-\\/(E?K>zzt<a(NKHLetinHsfYCQJL_MXMZBLrWNTpng_qVXMvbKR]ldsNNvKDSDrkaHgpFZnbuKlugXPcjlRPL^eJF', '-129']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

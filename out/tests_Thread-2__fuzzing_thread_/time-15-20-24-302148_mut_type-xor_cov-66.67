@@ -1,0 +1,5 @@
+Test: ['©\x88\x89\x82', '2\x886']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

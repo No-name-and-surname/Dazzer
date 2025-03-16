@@ -1,0 +1,10 @@
+Test: ['·íßâÛÇàÕÈíÜïãðÊÜóÔøÇÏÊèå×èÜÚÍÒÔôÈÎìÓÁÉòéÃëåÓÇÁÁÈÊÉõßÍÐÚìúÝÍëáóÉÌ', 'Tn<Ff8[>?(2)Fw=f\'4"\'VP:-:/)#l\\w##\'qb8+AsORwZXYcmvxEbvccUbmintBYnwvgqoIwZJbET]yxWKzJEWivSyzHmEqbL]]fScsaCMihoPODkrAwkbnS']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

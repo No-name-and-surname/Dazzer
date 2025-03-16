@@ -1,0 +1,5 @@
+Test: ['ªßÏòÑÖÿÖº®ÇûõêåÉì¾½¶\xa0âÇÍÂÒ"\x16$\x18$\x00&\x06<\x02\x013:ÅíÕÃëÖíÏÑÊÜÉûàèúÒØåßøÍÃÒÐË', '\x16\x02\t\t\x08\x08\x0c\t\x0b\x08\r\x03\x0e\x0f\x0c\x0c\x0e\x03\x0b\x03']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

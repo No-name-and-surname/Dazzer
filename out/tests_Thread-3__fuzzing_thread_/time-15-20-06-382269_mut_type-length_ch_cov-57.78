@@ -1,0 +1,5 @@
+Test: ['!HSqw~"2e[z`#P"sF.q@l4j)V(.IpO}[4R=e¾ªêçõÍÉîñÆâÖðè×ëéáàî÷ËÊÕáùÁÕêæßÈÙØðìÖúÔæÌíÁ', "\x1d\x0c\x14\x16\x07\t0'\x0e\x1c\x0e6\x19\x12\x16*4"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

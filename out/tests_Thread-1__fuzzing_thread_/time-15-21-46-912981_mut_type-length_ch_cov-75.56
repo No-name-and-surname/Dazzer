@@ -1,0 +1,10 @@
+Test: ['hyo_ku`[WfISq\\JTDHNPG_KHAogFHzZXdrX^qTYxU', '$<>;\x14 \x07\x04\r\x0f\x1b\x11"\x0c-\x14\t(\x16\x05\x08\x1e\x16 ,-\x0b\x0e3);>>\x19"2\n\x1e4\x075\x0c/\x04\x13-5(.\x05\x1c\x1f\x1c\x02/.> ']
+Coverage: 75.56%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

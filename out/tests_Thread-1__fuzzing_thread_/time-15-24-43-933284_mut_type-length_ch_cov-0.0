@@ -1,0 +1,13 @@
+Test: ['12\x86', "Sxb?r@9NqYqPwt212_/;9v7+1&p3'Yz`PQRgMS_RhsTQWtqPfxF\\NGQwZmJDLJDOCZFye[r^kEFDQsqSTca[SJNlqegZqx`^NVH\\gmYELK[]Hjqd_eNbTCjGJtO]jR]sjacGd"]
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,13 @@
+Test: ['256', 'Dg{OWuifl}k&}b-=+1?tMe<18O!+~yj[ONj`13/R!Ftm"G0)7^=:fb<_+=)\'lYPkVHF_NP]hx^IAOStIf\\elyahFZgkir`BAUpE]MkebQQVofGNhSJUvcxvEPRF']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

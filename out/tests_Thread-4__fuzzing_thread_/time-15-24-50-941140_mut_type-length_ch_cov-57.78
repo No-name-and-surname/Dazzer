@@ -1,0 +1,5 @@
+Test: ['h8^gegTZ83%5"*6tz&>,~8h);l4(]1V-)K3>)1;"!Q/m",', '129']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

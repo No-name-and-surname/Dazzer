@@ -1,0 +1,10 @@
+Test: ["Gmo_(.-0/qSUgXm274Im!PA'3#fjjiKsAu>;:!T!7!>-*>8>L58,y:C'$5-2*p^FmzP`mwPyeZIMfB^PPlg`BQhcADCFJK[SB^fQTgpoNI[A`hAiuHCFkt^iWiGBiv[\\KaeePGmjrKrRFQcFcZ", 'Swg]cixIj]DAwu\\vjGSqLBhgDovS^scJEJzJgOcOT_JmxENXMnUOQRk]]YVPM]Vu]Reviy\\wT`g[^aXfqqQuexzAy']
+Coverage: 62.22%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

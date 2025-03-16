@@ -1,0 +1,5 @@
+Test: ['=-"5;1l($.9?=l+3W$2=%G"1W?#\\M!+7o=2\\(q,3.0/U60#H<2o8@6v\'?<<C9.-0', 'H4%4']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['Ò°¢¬¾«¹¸«°³\x9a\x9c\x94\x9f\x95«½®\x19\x98±¾\x8e«²¨\x87\x83\x99\x80\x8a³¢\x94\x84\x99µ¹ª\x84\x97¤\x8a\x81®¾', '\x87']
-Coverage: 57.78%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

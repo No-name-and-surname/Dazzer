@@ -1,0 +1,13 @@
+Test: ['5c0XgOuygk^L\\RBavDs\\[LiZbl_Yw[vwqetPLjZxmVwjvehN]vgJPIZeQadDIsgRogLFPNvcuUTg`faYVx]^gk\\_C_OxZUJ', "\t\x04j \x01\x11\x0428$0\x1d+6:\x05\x151,98\x19>1+'8\r<8*\x06\x11'\x1a*2\x0c\x0f\x04\x06\x12>\x1a\x05\x12\x16\x0e4\x1d\x044\x1d$\x05>:&$\t'"]
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

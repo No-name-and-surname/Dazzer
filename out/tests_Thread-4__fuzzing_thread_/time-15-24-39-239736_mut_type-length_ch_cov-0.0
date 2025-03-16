@@ -1,0 +1,5 @@
+Test: ['None', 'E8k^>sHm\\\'_.p.9$1K"\\A[FbM\'6BJ.=\'']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

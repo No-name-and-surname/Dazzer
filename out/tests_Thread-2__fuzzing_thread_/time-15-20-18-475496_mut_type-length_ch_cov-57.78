@@ -1,0 +1,10 @@
+Test: ['Qz1D*I2.G+$=C63V9N.EX+5ai%y0sm2y!P\\idu\'&39;/4?7<=Y.0U",-"AI/=*\\}<3=v7A)24[67$TLDDmICEFEZ\\EGkRlyHMJpCwkM^bZN\\SAjzJZy_TRix^MB[ekkZU^lQR]hxVTiAFkJcfXqcYg_ctbP_UI]YsmoU', 'pD\x85GkcxZ9j\\`zWRUhTisreE]qQZd']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

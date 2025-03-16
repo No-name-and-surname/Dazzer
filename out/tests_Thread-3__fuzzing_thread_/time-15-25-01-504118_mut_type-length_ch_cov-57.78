@@ -1,0 +1,10 @@
+Test: ['X47m#/Owu=9GT.^-UZmGkn#:%"3]"@62j%p;dL;\'#B\'(5A\'+M$L=J<>908/+-lh=dR3#4re?y<D;<,.2~,9p%*8826#{=>>(l-tfCzvzXDcDYrrqVG\\VZrzajlmC`AZjIBGsENNpOsnSsNWwDA^AhyZDIdFRFtHjAYLPLipq\\HXdTmW`pQKDGWGWXXTJkTdUvV`CUDLWUCxlMpln`R`', ',']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

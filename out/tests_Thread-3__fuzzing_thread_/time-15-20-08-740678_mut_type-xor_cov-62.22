@@ -1,0 +1,5 @@
+Test: ['Êëêá', '[&4%GAn>>S#&Zd6"\'Oq}\'.^\'9UY10&=DY0&T=3(.]eNM_`RAfIMsy\\OtV_tWfkwGEOVosVi`nPiBFDCFEns[dtufaMdLGynjhQq`XyKeiZLBBXnITmHpIX_mSD]lYJK']
+Coverage: 62.22%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

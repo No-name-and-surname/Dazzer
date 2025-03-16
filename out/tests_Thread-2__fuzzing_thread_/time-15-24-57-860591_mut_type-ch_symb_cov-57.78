@@ -1,0 +1,5 @@
+Test: ['None', '4?;s[\'"v4w#m};;7"sa"?27@"9+.Vr+q*$oK<&(9-yPIY^BflgJu`D_XtpDpEQ\\MmzIO]`kOX`tmgRVgfet[oaIdq\\ltIfzvwEcHobVN`BGbqIt]A]GPk^qetjTkuSvbq^ROp[SETNovuVqN']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

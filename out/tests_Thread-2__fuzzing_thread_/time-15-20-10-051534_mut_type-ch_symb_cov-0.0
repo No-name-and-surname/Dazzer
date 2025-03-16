@@ -1,0 +1,10 @@
+Test: ["\x1bYJ\x10RGS3V/\x11E\x00BPE1'@_C-@+PW\x12^$DE\x00CJCBLK!\x0b{%&?\x0f4\x10;$\x072\x15\x18,\t#-#!\x1d+3\x0e!\x13-\x1a\x18\x0e3 \x0f\x1e-\x12\x1f*\x0b\x0e7\x1e'3\x11\x0e\x1b", 'QmkyLRYDmAe_RMudnvTwldhHCLJz`RTxATqqZPDHBswwB']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

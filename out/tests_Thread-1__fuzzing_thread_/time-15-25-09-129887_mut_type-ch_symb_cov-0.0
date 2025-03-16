@@ -1,0 +1,5 @@
+Test: [']]S\x0b\x132.\x18\x14\x19,\x1f*\x12\x1f$\x0e)\x0c{{)ý751\x06#(:>\x14\x12', '}one']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

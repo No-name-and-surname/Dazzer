@@ -1,0 +1,10 @@
+Test: ["U-8a4S_vk(=b_:7rP!;iv)'P8=-**9nc5*~-@b}(V/,xEB4=40Xs517}2=2E=c+j|>_Z)//<!~9#R2(S|1S$+vmkNO[sBqhyYfumqzamnkbEJIeXUgz`nSjFqCsblRsOwH]cmEkNTZfVnFqjPC_lfvk\\GGuHEXTCHg^cX[l\\NGf\\vWJiqiQdCsC", 'pB']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

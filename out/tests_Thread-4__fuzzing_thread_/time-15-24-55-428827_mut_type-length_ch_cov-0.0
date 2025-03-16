@@ -1,0 +1,5 @@
+Test: ['@EQ2xT(C,9XS|.kFw#K>nixLJiApNBslNpRqIngWMLxhfx_MsfVy`A^zwDiGU_tETPCVvF\\]CGKMqhEIPGl`', 'S8jOMzNbBH[izupyqMEc\\FZn[jV^vyVQtlPbaRkaMxuAAbnjykpujGvn_XgYaIQOraVeol^wQsts']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

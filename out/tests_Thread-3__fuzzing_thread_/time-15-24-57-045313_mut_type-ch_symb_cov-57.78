@@ -1,0 +1,5 @@
+Test: ['<T^\x08M2L>\x19KW K\t:^\x1d\x16?X\x01;ZP\x15;%\x15I', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

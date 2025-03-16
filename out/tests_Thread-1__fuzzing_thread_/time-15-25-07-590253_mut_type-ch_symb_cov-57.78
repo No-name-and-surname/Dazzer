@@ -1,0 +1,5 @@
+Test: ['\x19\x1a\x1a\x81\x18', 'PtiJcXFsHpjG^rlTn[mz\x88[XkoylXLPhkrWMvQaJFedG]tryWOMyEgYYYPe[tRdkL']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

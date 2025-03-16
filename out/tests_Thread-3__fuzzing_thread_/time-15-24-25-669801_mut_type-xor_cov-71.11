@@ -1,0 +1,10 @@
+Test: ['P7\x08 \x1b', 'b*%NLEKs_BvjDydDGtXp_F^^ofo[jGR^WaXzvZgtvjyrwcLxeuaXYqzGwvS_S_nub]rO[AppRajr']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

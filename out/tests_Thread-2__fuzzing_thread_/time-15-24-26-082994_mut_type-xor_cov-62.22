@@ -1,0 +1,10 @@
+Test: ['AB|}zDzZ~PupEICrMhGequY^cY^^qzKYdkqhWKWj]W[yybUyrNtsyubVT\\eEicZgwJjFA`PSqfbM]]lMWHx', '1I BX%BB9OV!]\x13=A3=\'\x10\x1d1F\\BBU8]FZ\x1b"\x05:\n<.\x08\n\x017\x017\x1a\x191\x15\x01\x1b4*/*\x12)\x14\x1e\x06\x05\x1b\x11\x085)8\x011"\'>\x10*\x12\x1f\x195\x1c']
+Coverage: 62.22%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

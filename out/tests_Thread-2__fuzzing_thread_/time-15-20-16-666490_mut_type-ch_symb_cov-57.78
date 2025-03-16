@@ -1,0 +1,5 @@
+Test: ['No\x82e', ".?'%\x86:\x03\x14=/=\x05*!%\x19\x07"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

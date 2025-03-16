@@ -1,0 +1,5 @@
+Test: ['v\x1a?\x11~#n:,m\'-\x11~\x08toezvu|fa+dx\x10p"0<\'\x19\x1b\n\x00\x12\r(\x0091,\x150>\x11\x1e\x13\x0c\x12\x0b?9\x0f\x16=\x11<<\x1f\'\x15 \x0e*\x029\'>!(.', ':cvpFzChWpKCeN]oOOYjJ\\Ww`BHqlILQDvZa_MR_IDII`qg`gCIL]Z[Uqf_sa\\ky`j']
+Coverage: 68.89%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

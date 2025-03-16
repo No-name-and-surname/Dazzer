@@ -1,0 +1,10 @@
+Test: ['j`lp{tu2x|7md\r\x14~#jcbx\x07yxcd\x13ak\x07cf`kxr4#/lgd+\x0f\x7fjq\x18\x006{\x1d+p\x7f\x0emd\x18ff\x0f\x10$\x15\x1d\x179\x0f\x1547#\x1a\x16"\x1e\x1d\x15\x1c\x169,&\x05\'\x1a\x18\x0b\x1d&!\x1f\x0f(\x1b)\x1a\r\x1a,:\x02;\x0f\t%:9"\x19=\x07\t\x00\x03\x1f"\x0c4"<\x1c,\n\x03\x1f(#\t\'\x00\x1e\x1c\x16\x1c;', 'IDObhDNhlwNFwbvBCbcIhbrLXrEJjKntPyOA]K]ibXSXztBRfcMII`QJ_KW`n[KHjhUUrfpRb[gBh_fwK']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

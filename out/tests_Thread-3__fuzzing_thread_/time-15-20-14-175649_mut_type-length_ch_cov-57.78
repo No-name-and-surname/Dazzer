@@ -1,0 +1,10 @@
+Test: ['-32768', '5"%.:u1|U&,2ra,<4"A;&<<(~{<*0>I6:6-5L:;)8/#;H1!5:$?4-w)r#96$9>_:f\x7f|Ix{N}HGspmZNnxZM~sq\x7fkLjYCh@tSuWVHO[\\YwIWhlfdnAPJycbTcydcxCtCr[tojhMZeeUXODPxz\\Eb_CEMMrkZWeJy']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Первое число отрицательное.
+Первое число четное.
+Второе число положительное.
+Второе число нечетное.
+

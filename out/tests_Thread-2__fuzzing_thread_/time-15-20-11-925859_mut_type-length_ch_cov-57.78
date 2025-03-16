@@ -1,0 +1,10 @@
+Test: ['@(0V<bYj[~0?|v_mdZy@z%k)|+EM6Za=\\ovND\\{C?EN,qEH4', '0LZUTmIzkjEXZ}TAvi"kPG@leo]IGv--\x11\x0f\x11\n']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

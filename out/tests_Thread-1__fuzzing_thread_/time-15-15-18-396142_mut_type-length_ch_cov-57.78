@@ -1,5 +1,0 @@
-Test: ['ipE9V', '4294\x8667296']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

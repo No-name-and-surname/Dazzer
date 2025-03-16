@@ -1,0 +1,10 @@
+Test: ['Tu\x9a\x7f', '3oaMQqDHDHMsXwcElKiLA\x84zrYEB]lG^sY']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

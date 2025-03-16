@@ -1,0 +1,5 @@
+Test: ['_]iDVih\\wc^DxLNUAAnYEaJDCQvpS`Hb', '©½¶¶··³¶´·²¼±°³³±¼´¼']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

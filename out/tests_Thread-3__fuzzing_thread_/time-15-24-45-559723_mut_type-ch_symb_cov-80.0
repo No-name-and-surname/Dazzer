@@ -1,0 +1,5 @@
+Test: ["F\r\x1b \x15>(:2=.<4(\x01\x08?\x03\x17\x05\r#\x107+\x02/(1'\x08\x15\x04&\x02\x157\x05\t\x0c9\n)+3,\x0c&\n\x07\x00\x08\n", 'O\x85]{n']
+Coverage: 80.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

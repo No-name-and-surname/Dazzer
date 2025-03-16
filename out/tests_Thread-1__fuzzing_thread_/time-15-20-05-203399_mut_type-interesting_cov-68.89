@@ -1,0 +1,10 @@
+Test: ['@Jj!xgZd\x81Gjr[D[Lyk|r_Xad[HMkISVxL^P^WDORreXwP]Ojhy', '255']
+Coverage: 68.89%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

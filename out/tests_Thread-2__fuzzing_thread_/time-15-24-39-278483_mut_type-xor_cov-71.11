@@ -1,0 +1,5 @@
+Test: ['NMF', "P'r4*ik/'(24-L;1>e>q-<V359)&5PR76:<4+5p,&b!RY^BflgJu`D_Xt"]
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

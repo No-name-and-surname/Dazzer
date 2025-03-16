@@ -1,0 +1,5 @@
+Test: ['|,wkjhi+!kg}wfca/\x129h}x.rcm&/a)dz9x\x7f{wz\x87ndkiph#\t(g1k\x14}|7)h}n~~c\x06i|dq|', '256']
+Coverage: 75.56%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

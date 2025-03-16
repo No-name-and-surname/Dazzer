@@ -1,0 +1,10 @@
+Test: ['TDMqM$S4$0*79E+5!)v\'8$/19gO$15Bg-5R*P6?7;,"]w+>[cLPgQJftuukc`mJiKr\\yJ\\INnycGdLJ\\zXkvNWXYdfvJ_Dz_sezlCegx_^vRbvxcTFXiTMLrXfQCwZTzR^zqAzNvntFMUMfL', 'ßÏ÷éÂØÒ\xa0ÑÛçòýÆÝõìêßçïßÐÝÇèÑëÊØËÆÒÕÙöâÝîíÍËÅÑÚÙ×ãÐÆæÐÏêÝäíïðÌë']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

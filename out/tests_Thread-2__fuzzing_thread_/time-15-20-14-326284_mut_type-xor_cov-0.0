@@ -1,0 +1,10 @@
+Test: [')UHn;&;Wrx?$K"5%<1!j\'\'\\%;l?ql;*!Q:(&;k0.]!9\'2xI{d3"`.{iKJ~".)t0YS91KgzetfPwKei\\lnRuqygyUGHLKdnJY^jZSxQtvRtlbpImdF_^[baVlxalSjEYl^wBj^\\Vo', '\n\x1e\x15\x15\x14\x14\x10\x15\x17\x14\x11\x1f\x12\x13\x10\x10\x12\x1f\x17\x1f']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

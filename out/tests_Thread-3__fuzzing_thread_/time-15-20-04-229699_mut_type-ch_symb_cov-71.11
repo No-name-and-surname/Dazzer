@@ -1,0 +1,10 @@
+Test: ['=/.2Mj5{6!)"L]3-(\'&)<(!1WT.$;Y5IX63h=)idvNJmrEaUskThjbcmtHIVbzBVie\\KZ[soUyWeOnBQMHCNLgyUBSTaXzuvVzrBGOVdEgsfVF^vM_r`', "4%=?. \x19\x0e'5'\x1f0;?\x03\x1d"]
+Coverage: 71.11%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

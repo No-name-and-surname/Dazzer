@@ -1,0 +1,10 @@
+Test: ['&dD@BOby}k|ux0\'UBlDJU}TjF\'Fd}TMR(f,Y=7:*.%22=*HPVF&I=@w*|q-"7>}94#Y=3$93pn0235>ory30*3|FU"=!nrEFpoVMurZGHXIwqJpdCVulZtkcmrZEXIRI[oDmzMaydUCPnhaT[lbofVsZ\\T\\i`sFzj]VvFRFyRN_]YuIqVOQJ^uCGmFxvHImuepfAX`wYS_nrFpdUL', '-9223372036854775808']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

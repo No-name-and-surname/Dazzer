@@ -1,0 +1,5 @@
+Test: ["zb(3a#+B~@A=j>V9UV.k)28#!'\x8f\x8c¸\x80¹»µ\x9e\x84\xad¶\xad\x8c\x89¾©\x86´\x8b³\x8c¤··©\x9a«\x9a\x9b¶\x9f¦³\x81±¾\x8f\x88º¤¥\x94¾¼\x96©©\x85\x8d¤\x8a¨¨\x87\x8a³\x80®§\x95GouarpKXNUunsupNKvKOaYYesi", 'z\x90\x91\x9a']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

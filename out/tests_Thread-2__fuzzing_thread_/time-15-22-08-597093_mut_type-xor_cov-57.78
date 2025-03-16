@@ -1,0 +1,10 @@
+Test: ['-9223372036854775808', 'VB\x11>VCJQIDZ8DKVW_#?^VZZJ^PO\x04C\x12DV%DE\t\x045*1MV8X1XY2SE^\x14!B&ENVCZDM\x14\x08L7O=FX_E\x18UC%\x1a!\x05\n6\x14((\x083, \x1d\x1f\x1b=\x05\x16.;\x1f\x10\x1b8\x1c*\x1d)(&6\x1a\t"\t>\x1e\x0c#\x16#+3\r5\x0c7#-\x18\x1a\x19)\t38\x0c\r\x08(\x05\x1a>/\x17(\x17\x0e*\x0b\x13\x0c\x13#-\r\x10\x11\x0e11\x1e\x11\x1c:.\x12%\x1d\x1d']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

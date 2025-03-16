@@ -1,0 +1,10 @@
+Test: ['f*0<Pm^Y_nt]engNtfC^TKIxbFuzBigBAlFsVBhSN_d_rK\x81a]]hucOZU', 'Ïîïä']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

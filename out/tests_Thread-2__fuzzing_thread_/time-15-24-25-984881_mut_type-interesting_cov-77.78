@@ -1,0 +1,14 @@
+Test: ["1@)9:+!'tq,?*'[*v2/VdXL;3fX/0!_,B(\\.$kL]IZflBCQDIX`_ZYR]cMiPz^ahOqNXBZEElied[OWUyryVSioZJ\\FPjOvyXpgFqobmSNXidRdrt_ZdyTvdmXX_odRdlP", '-128']
+Coverage: 77.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Первое 1, второе 0
+Первое больше второго
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: ['??\x10\x1d\x11#W\x14GEztsnC~QiacNGH\\Qki\x7fmptD[i]cN{ZKlHL\x7f@eIogEa[FHJk|EC`jxI{~uwCR\x7fMiI`ONsiEF', '][X\x08\x134\x03\x0b:\x12-;-\x056\x08\x15\x15>;\x16?8(<8>(\x00\x0b(/\x06\x08</?(\x0b96+\x027/\x12\'\x14\x15=\'7"\x0b\x14\x12<\n(\x0b\x06(.//!\x1c\x019\x0f.\x12\t:;<\x019\x0c\x1c\'\x1c9)\x0f\x06>1']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

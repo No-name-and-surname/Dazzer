@@ -1,5 +1,0 @@
-Test: ['49L\x1d$::(\x02;\x81%\x00+\x81î!$: %-3ï\x0f', 'kZvZ']
-Coverage: 75.56%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

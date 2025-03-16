@@ -1,0 +1,10 @@
+Test: ['^S&6)<90(291v>]"3\\6(H*)$Crv\\GVoMTqaUP_STmsWIhJk][kRo', '`uYEhSGnsPGmNOus]Hfop^qunaQ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

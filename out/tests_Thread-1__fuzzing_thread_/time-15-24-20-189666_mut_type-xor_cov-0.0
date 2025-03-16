@@ -1,0 +1,10 @@
+Test: ['{VMGcMZBI\x17d\tne\x0fVj\x1aSH`]\x04\x17\x19OR\x1bgitE|\x10x\ntkwDP\x0eWiU\x00\x1db\x08\x0cAv\x0fld\x1c\x15\x06\x1c\t\x1f\x1cn\x06\n\x04\x08\r\x17\x11\t\x03FK\x7fnN}kixq@NUL~jLfoMi|C{^nU_LSUmISIU|_@fkKbB', '\x10\x1b\x1b\x1a\x1a\x1e\x1b\x19\x1a\x1f\x11\x1c\x1d\x1e\x1e\x1c\x11\x19\x1e']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

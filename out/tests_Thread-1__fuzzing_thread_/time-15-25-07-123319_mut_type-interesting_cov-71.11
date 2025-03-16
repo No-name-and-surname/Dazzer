@@ -1,0 +1,5 @@
+Test: ['\x8b\x8a\x8f\x8e\x80', '-32768']
+Coverage: 71.11%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

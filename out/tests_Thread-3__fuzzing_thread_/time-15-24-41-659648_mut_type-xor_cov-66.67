@@ -1,0 +1,5 @@
+Test: ['\x1ek\x18~&py}\x07\x7fz\x0fq\x0bdl\x1d|.w\x1d\t\x199k~)gnt\x0f*cj\x02l|%=:\x004\x12h\x10\x08\x1b\x1e\x07Z\x19\x1c\x03\x16\x0c\x0c\x0e\x1b\x1dtUK@fQCsIGaD}y[]ARTp|rgwxViG`XcurUdPVlGodx\\D`{u}T}\\VWUsEYhVzoDCt@]Ve_uConEPwIjmrkUukBQGTtgaQ{R^cubjBWDpd\x0c)\x1b"\r\x14*\x1d%%.\x03!\x17"\x11\x08.\x10\'\x1e\x050\x11.6\x00$)\x1e8\x15\x08=\x03\x13*\x06\n:#\x12#:', '}:jf\x0fziw|']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

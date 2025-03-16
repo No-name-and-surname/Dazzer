@@ -1,0 +1,10 @@
+Test: ['N\x1b\x1bg\x18\x13\x07\x03\x17\x17\x0c`\x0b\x06\x0b\x11O\x03I\x0e\nI\x0b\x12\x0e\x0f\x11\t\n@nO\x00\r\x1c\x14\x16J\x05\x13\x18u\x11bHq\x19\x14\x1b\x1d\x11\x05D\x01\x0f\x10\x01\x06\x15\x15\x05\x15\x1d\x0bQ]\x1dv\x0e\x00Bn\x01\x06\r\x00\x07r\x1c\nP\x0er\x1c\x07\x1e³\x14V`]SWO{ONnv_K]@}AxB{fKUb^_ThpMuSoLNXavH]awtMPOuYmemC~sqHevHvpMNQ{uIJHcSdcc\\JuuS[]\\XWbUvS@twQTQ', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

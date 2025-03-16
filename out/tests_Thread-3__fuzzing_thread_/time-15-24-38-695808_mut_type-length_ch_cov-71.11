@@ -1,0 +1,10 @@
+Test: ['@qL5)[1/-l#XP/9)/3&l:F5+##2&1#-#2W>IHr%lPjVDqOoLRzgmCv`oztGOgTcNMQeYPZVkYTMwJW[qRRzIH\\px`^iU', '32769']
+Coverage: 71.11%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

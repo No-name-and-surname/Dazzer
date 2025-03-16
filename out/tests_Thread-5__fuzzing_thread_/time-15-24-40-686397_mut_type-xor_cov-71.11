@@ -1,0 +1,5 @@
+Test: ['{ZKP', ']8YGVHE\\lg^YuYiImfleaeFM_N_gxoBz`UwxaqiZwwoR[Me\\sUi']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

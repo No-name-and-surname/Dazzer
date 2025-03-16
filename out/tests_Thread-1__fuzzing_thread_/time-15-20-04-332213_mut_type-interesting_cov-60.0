@@ -1,0 +1,10 @@
+Test: ['-2147483648', '92%=13p45J>\\=s\'"ke!:~:%)kcYM6Lb9CfNqSWPtbsMYfBNVZFVoL`RSC_\\Iwx_MB_syGjrPbqq^jBDPM\\^tcv']
+Coverage: 60.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Первое число отрицательное.
+Первое число четное.
+Второе число положительное.
+Второе число четное.
+

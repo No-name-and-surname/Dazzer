@@ -1,0 +1,5 @@
+Test: ['@wkqERQYkOBteKQvxpqCyZyytWG\\m^lOAt^DBIt]OF^lhznDVY]YtzOOPxvo^bdGszrx^', '\x03\x04\x1ee\x03\x0e\x19\x02\\\r\x17\x13\x08i\x1b\x1e\n\x7f\x19M\x08ZN\x0bFo\x01\x01K']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

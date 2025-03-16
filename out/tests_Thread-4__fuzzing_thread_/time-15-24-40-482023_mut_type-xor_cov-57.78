@@ -1,0 +1,5 @@
+Test: ['%\x1e9\x03\x027\x06\x1aU\x16', '1']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

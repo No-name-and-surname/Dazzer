@@ -1,0 +1,10 @@
+Test: ['è\x9eâøê\x9aÅÁïÖü\x80ïýÚÎßõ\x95\x8f\x90âðò\x81ïÎÁ÷ñ×\x94\x8d\x06\x03X\r\x19YTF~z]BuQeC[dXZRS]DxyfRJrfYUl{jkC_eIgU\x7f^ra}xs~|WIercdQhJEFfJBrw\x7ffTuWCVfvnF}oBPþõþÚõÙèÊâñôØÇäðæËÁÛôåõÒÜâÉåÿÔêñßè', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

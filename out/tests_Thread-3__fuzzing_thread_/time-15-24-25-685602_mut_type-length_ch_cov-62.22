@@ -1,0 +1,10 @@
+Test: ['\\%$f(', '2BO-)3*13\\O5>a1,#p-$G+9k+\'m/y20Q08"H"$$"1U}26:-.n.]!!XDMX,IRa74>b64=>4xut8$rPhjZevaalCg_MriKdbuTQAgNDAqtpubAFpzbTZCVGkgRAraVf[hyxeqQztTHEhZslkFreugzWYN']
+Coverage: 62.22%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

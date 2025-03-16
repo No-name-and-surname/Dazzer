@@ -1,0 +1,11 @@
+Test: ['9223372036854775807', 'cyN]x\x05[\x05\x1f\x12\x03zE\x17\x18\x1b\x04\x0eI\x05\x11jZ\x0fa\x0e\x0e\x18\x0b\x0eE\n\x11\x02v\x1c\x15\x12\x1e\x1a]\x0b\x19\x0cHU\x01\x0eP`\x11\x01\x12\x1foz^lFYZ_^~EWlAUdTmwTXzzFBxwpW]oKb_htXaDh\\QKXccWm[f|A{SR}pWJ}{w{\x7f`aIgt^\\\x7fbBvk|b']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

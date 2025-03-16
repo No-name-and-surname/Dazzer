@@ -1,0 +1,10 @@
+Test: ['OiGeg', '<8f)ok+y-rN_x+RjLeR7Og[o"((K;O3,?\'3<S3X4,G#vWK<6ZaIzJUEfrQFMGpa^LAx\\Dy^UoxYSTft_XLHwsad^ckOB_yByUIVi[eawgPmv']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

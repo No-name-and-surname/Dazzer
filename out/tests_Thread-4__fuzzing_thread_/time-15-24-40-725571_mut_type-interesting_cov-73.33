@@ -1,0 +1,13 @@
+Test: ['32769', "p(i<u/174(`K(58Z9:7!8C[942&J-*=V7%12U&/Q,b/H\\a'lwz'(+.430*L3#!8.&wW^:sVdgitpHBTL]YJoFpuUWDUsRH\\HklkmfJHwJAIOGGYRSKK]lbg^FtDcYFbfZRYEzQhqGfwIeiMUUAxLsriY"]
+Coverage: 73.33%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

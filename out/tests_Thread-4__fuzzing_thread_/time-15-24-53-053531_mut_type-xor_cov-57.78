@@ -1,0 +1,10 @@
+Test: ['X-+IM"?9:f.;"R6F{3}/>6%)&I99#_;2%B;i#&65(%=snIcYhSTfN]OFCTeRXmJSnkv`eAAE`_SbecMYnLvUFJT`i^etCnHxcECrfwUInphQghCLyFJgCPKZX', 'ÞÆ\x99Í\x90©\x85\x83\x9d·\x95\x90¢\x91¼¨\x83\x8a½¯\x95\x82¬']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

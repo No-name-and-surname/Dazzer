@@ -1,0 +1,5 @@
+Test: ['ÃªÆ½½®¥¿´¡¨«\x88\x98\x95\x80\x8f¦', '¨\x05ÁØ\x8bØ\x8dÈÛÆÀÚÎÈÀ×ÖÅ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

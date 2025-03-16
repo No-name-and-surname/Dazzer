@@ -1,0 +1,10 @@
+Test: ["*)'!u>21c!2(,,3gu,g_>+\\,<k1Cb$>/s3+G@[=1v3/0;(9\\4$&?2>LMnz*7FwR_kUEZp_yPOERGUfDL^MfZILm`ElbydtIQFcz\\gYyqkQxSF_nj^GOHIOifxv`HHmfgclsZKquyNZzxCW_[WYwLUVLEC^^TFWzJiXjnseqjtluczJWP[wT", '$p_NtdbSakSA[MbNBwAOJpdygJqNZHwGyrTk\x80AsK[sv`BhwMgbLk`KukfR']
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,11 @@
+Test: ['32769', '2v)2u,=d-?z=2MIG%*i#8UoZd[h]HbgHcSeBXsGxbjNdL`s\\Yob]z^FvVzwYt\\QgAMA\\sblEpxUCliUdXFC\\e']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число положительное.
+Второе число четное.
+

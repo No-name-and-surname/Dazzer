@@ -1,0 +1,5 @@
+Test: ['D[X]^]QZ_]Q', 'ù\x85\x12\x19']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

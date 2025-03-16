@@ -1,0 +1,5 @@
+Test: ['sn`jo{L?*"', '\x01\x02\x02\x04\x02']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['_sHU', '<S294o,]>>2B"9;7UZ5LfpCaoTHz]MJVLIKGwcLCzlx`PLPg[oqhVkpwZipH^ldYKIOnuPhtuz^OUydRlaKMofyUGEeu\\FVGOYlSkBerlgE[l]o']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

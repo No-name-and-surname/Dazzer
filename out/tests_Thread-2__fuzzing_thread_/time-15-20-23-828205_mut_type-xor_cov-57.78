@@ -1,0 +1,5 @@
+Test: ['\t|3lhur{f\x0f\x11)!71:\'\x0085\x0c"\t\x04\x15\x05\x03\x14&\x06\x18\x1b(\x18', 'Êëêá']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['\x8827', '6++:xDE_SDgbavchrxzExKNiFE\\Ov^`XauAG[P`Fbgm_KJOcJmXC^m']
+Coverage: 60.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

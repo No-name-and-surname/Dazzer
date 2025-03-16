@@ -1,0 +1,5 @@
+Test: ['\x11\x12\x17\x14\x17\x1b\x10\x15\x17\x14', '-128']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

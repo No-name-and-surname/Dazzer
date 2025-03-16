@@ -1,0 +1,5 @@
+Test: ['=\x1c\x1d\x16', '"FMA']
+Coverage: 62.22%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

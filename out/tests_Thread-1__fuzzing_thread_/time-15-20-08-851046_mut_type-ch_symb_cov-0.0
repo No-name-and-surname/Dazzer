@@ -1,0 +1,10 @@
+Test: ['None', 'PJ}nK6h6,!0Iv$+(7=z6"Yi<R==+8=v9"1E/&!-)n8*?{f2=cS"2!,\\Im_ujilmMvd_rfWg^DgkIIuqKDCdn\\xQl[GkRw[obxkPPd^hUOrH`aNCdyNHDHLSRzTGmoLQqEXOQ']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

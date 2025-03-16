@@ -1,0 +1,5 @@
+Test: ['=)VT0#811\x00"%:&3\x1c\x19\t\x02\x04-?1\n9\x1c;\x1e\x017\x16\x045\x02\x01?58 \x07\x00\x01\x08\x1c4<\x1a\x1996\r\x076>\x14(?', '\x8e¯®¥']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

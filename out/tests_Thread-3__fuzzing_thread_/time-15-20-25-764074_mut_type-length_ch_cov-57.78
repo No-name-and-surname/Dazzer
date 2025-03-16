@@ -1,0 +1,10 @@
+Test: ['\x1c\x1b\x18', 'L-0d+(}^H)40a4d,Xk97*{=)g<2292yV5hV}*$-69X2;)=3Y."f!>//"]$>(=$u74E3)?5"??231,nMn&<E?D4`GtzuKtpzejTWvKpqNxsAYN`U\\jqfasIpPtfdcaKRpXOoxptSD^JAjZAyu[DwMWn_QH_krvDeyPDWsd]PckWoNzEPqSJbR']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

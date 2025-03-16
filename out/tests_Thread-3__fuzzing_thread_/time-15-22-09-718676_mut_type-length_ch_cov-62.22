@@ -1,0 +1,10 @@
+Test: ['Ô¾\x9f²Ô£Î¾¦\x9c²ÓÊ\x91\x07ßÈ\x94¦ÍÑ\x9e¯\x9d\x9c\x9f¹\x8b·', "MFa$,t5};vH,^IY:G1&eh^vwso.@({7?'&{AZòøÜÝÃõÈéÁØ×ÊÆ×ûìàÄB`wD]LT[RGzHRCrnQYbklDPbpkliYbClEa]WI"]
+Coverage: 62.22%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

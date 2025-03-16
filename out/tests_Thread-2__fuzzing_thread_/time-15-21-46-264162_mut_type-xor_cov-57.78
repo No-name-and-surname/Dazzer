@@ -1,0 +1,10 @@
+Test: ["e68|6>>(0aF10*)c4a=oIB8/`5i!<89vV67;bj%+e'<)%6u81[$LF/-<9,I!4TfgGjdDp^YlNdtVkawY_DEDPHWDOuFOqSTijpB[k``R^AisOEgAJhwNhQItotP\\qXzJNYTD^P]ZtxUwNzLNJ\\^GcZJuutuuKDgkxe", 'ÑÖÔ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

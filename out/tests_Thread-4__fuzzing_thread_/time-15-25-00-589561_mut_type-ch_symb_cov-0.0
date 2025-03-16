@@ -1,0 +1,5 @@
+Test: ['M.\x81ovt', '\t \x12í%\x0b\x16/\x0c\x1c\x0f']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

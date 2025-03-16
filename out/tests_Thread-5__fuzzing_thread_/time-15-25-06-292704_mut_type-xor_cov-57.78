@@ -1,0 +1,10 @@
+Test: ['GwduBR[Uhb^HEJKiSS\\fpAcFyHBsTvcXUhOYhO[bKjcJIZLPHJ', '_WY\x1bO05V\x1f\x0cV7=J<5%!\r\x05\x11.6*\n\t\x13']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

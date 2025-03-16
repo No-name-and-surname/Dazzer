@@ -1,5 +1,0 @@
-Test: ['\x08\x16\x17\x12\x13\x1d', '\x08\x0e\x05\x08\x05\n\x0b\x0e\x05\t']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

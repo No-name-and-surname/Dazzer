@@ -1,0 +1,10 @@
+Test: ['bZHlKliKrFXhMnWsM[ctTsx_oZGNbGu\\OQNdPMnKhksPyYOI', '\x01<\x1f\x10:\x13.\x10"15\x0e&$\x03%\x19"\x1b\x04\x19\x0e4\x08(0\x1f\x02"\x18:+(#\x1c;4\x08?\x19\x13\x0e\x1e(-6\x1e>2# \x1f(\x10\x03"\x0f 6<\x02->\x1a\x039\x13']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

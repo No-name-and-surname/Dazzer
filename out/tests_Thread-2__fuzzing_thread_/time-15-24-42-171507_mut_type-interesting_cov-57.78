@@ -1,0 +1,5 @@
+Test: ['ÔÈ®Ç¸§\x8d\x84\x81¶\x83\x85²\x9f\x87\x82\x80¿\x9c', '32769']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

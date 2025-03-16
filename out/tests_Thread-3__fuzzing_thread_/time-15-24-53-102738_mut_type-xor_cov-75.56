@@ -1,0 +1,5 @@
+Test: ['(\x1fM.', '\x85']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

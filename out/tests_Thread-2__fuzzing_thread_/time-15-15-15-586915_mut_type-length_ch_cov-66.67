@@ -1,5 +1,0 @@
-Test: ['xn2:', 'C`Z{}IT~nzbd]@ZOM^i[']
-Coverage: 66.67%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

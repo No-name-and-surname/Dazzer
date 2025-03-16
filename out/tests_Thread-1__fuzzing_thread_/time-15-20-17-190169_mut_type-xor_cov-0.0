@@ -1,0 +1,5 @@
+Test: ['B^çV', '\x9d\x9fÓ¤«ªºÀ\x99¾ÈÊË\x9d³\x83É¬\x9b¼\x9e\x8e\x99¦¬°\x8d\xad¼§\x9c']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

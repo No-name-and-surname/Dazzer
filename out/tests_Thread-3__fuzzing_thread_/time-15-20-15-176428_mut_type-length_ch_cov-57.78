@@ -1,0 +1,10 @@
+Test: ['!(q1$4=4&20.#t]K:3*+:0<]91+6^l:=L<%3<D"(42\'0.)7"!+>$\';9C$J(+8"#2v=X[zSHbSHybtIfeV]V`qd`yVcPeeIrLfMAuzxGSrxamWfzVurISrdcmUd]fDyowmagur', "g'\\3"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,5 @@
+Test: ['P\x86[ZZ^[ê{_Q\\]^^\\QY^', '7v5F%+)Z8v=1;/Hqm1/09d\\qV#0"|!Eso+;q8&*9[g")p&f-~7\'o6<!_OiQ&0i&e&10yb:_1M+;)r2D>\'#:-']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['ÏÛÔÙ', 'zE)9Z0Yv2VE,74h<\\X3N[c\\RAweCRuvtqZNycWnfKxhuA]yDeHdsUL^RSlYfUioWKIrwvzwclzwRt`J\\g']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

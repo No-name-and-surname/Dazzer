@@ -1,0 +1,5 @@
+Test: ['mmc;#\x02\x1e($)\x1c/\x1a"/\x14>\x19<\x1c\x0e\x19Í\x07\x05\x016\x13\x18\x86\x0e$"', '8viiTTExhAmpDL_XBMZE]FF[t^zxJeCDwBVlEbAsIXogdPhlkqNslcPDUmNJJHzhcw']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

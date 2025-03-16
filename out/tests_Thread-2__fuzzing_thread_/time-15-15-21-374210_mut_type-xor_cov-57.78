@@ -1,5 +1,0 @@
-Test: ['KO\x08\x00\n\x19\x1fuRH\x0f\x04u\x0f\x1dU\x02eu|Zl\x1f\x1fHr\x05\x0cSKPie\nznq\\t[\x0c\r\x04\x11M\x03dpeTyYq\x7feRUbzAe{LXuoB\\oOkgEdb}{CrzixszP]', '{Z[P']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

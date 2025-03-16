@@ -1,0 +1,10 @@
+Test: ["\x08}h.!?\x1a?w\x08\x0ed5\x07b\x17bm\x19n2\x053b~2\x0eqt~ho'ldsp\x0f`\x1ezaw\x06a\x10=ew\x17qpa|8 b\ns|q\x13\x1d\x06%=-:+\x1b-\x0c\x1b\x053\x16'+\x1c\x13#3+\x12<\x05\x16\x08\x02\x05!2\x0c1\x1b\x1a?\x0f>\x00+!\t3==\x08\x1e*1<\x08\x08\x05\x14\x1a\x1e*8<\x04#\x07*<,\x12)\x18'\t\n\x14\x10\x02*2\x1c\x18,\x08\x14;8\t\t\x15\x18\x07&\x0f", 'wG?+>+.4,C*{?8$)1@]D!o7A&:lsg*7.)9!!+H47n|w)Gc;3!:>?2~_/XTq!ysLxOesImnoiE^goGcFfQsrkyAR`OQDd[x^\\RFvnFp^JDZxocgLr\\fwMAXtzrgOlLH^_hO]Ur']
+Coverage: 73.33%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

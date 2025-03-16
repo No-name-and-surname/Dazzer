@@ -1,0 +1,10 @@
+Test: ['%EM\x02PP3K_OB\x0b%4:20#,3#\x06.\x14\x163;\x1d\x17")!\x0b\r!\x0c7<\'\x0e%\t%\n\x0c\x129\x10\x1c7,:$\x0b\x11', 'yU^kXej^^vKdj\\l]YhjAZNDdhqqsUxnVWZABeJnb']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

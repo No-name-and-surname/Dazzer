@@ -1,0 +1,5 @@
+Test: ["\x07`0\x16\x1d\x12\x0e'\x02\x15*: \n\x03%$\x1c\x05\x13,<>,\x06/\n,(\x16\x1d\x15> \x12$\t'\t\x0f\x11()\x1e\x11,", 'None']
+Coverage: 66.67%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

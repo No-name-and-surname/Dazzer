@@ -1,0 +1,5 @@
+Test: ['=dbv/`', '¯â\x8f\x84']
+Coverage: 60.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

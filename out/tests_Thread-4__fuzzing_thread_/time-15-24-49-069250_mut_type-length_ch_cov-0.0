@@ -1,0 +1,5 @@
+Test: ["'gU5", 'K_P`Usq_usAmQVDYHMOgcfknmIpQvEBTaHrVYmtWIIseVpcgSu\\XvwQujJZfAgGQ_ffrmf_WqQTwlDpcDhIbwqHBU[AbXRzzbWzuQIJpr`XM']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,10 @@
+Test: ['$wEVnI+2}/,=>\\1,dRg7/(3R+<**-J,1=&//6#-s*65zA3U\\nxBIRXGG^VvME^lwktw^SRFED_L^ZYcm]rvRBlNixH_fuDPGvvUGjB\\EIeywvuwcuCWv\\yvtwAaQFjbViBYNaOAzPw`ybC', 'e_nWqVmYaHljwAzcrasEV]_[vDPKlreJQD[kNPAVAfE[_V]XfxaLktiy`JzIePFzlwXy_jRKAKvBvdOhYDFqJkBA']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

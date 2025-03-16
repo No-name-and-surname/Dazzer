@@ -1,0 +1,5 @@
+Test: ["* 6G\x08\r\x17&%\r5\x0c\x02:\t#\x0b' \x03=\x19+!!'#\x17\x15\x0e\x028\x00)\x1b", 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

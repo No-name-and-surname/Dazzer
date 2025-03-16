@@ -1,0 +1,10 @@
+Test: ['E\x0f\x16\x1aj`xOsHuW\x7f`WISCKA\x7fMPl@\x7fob\x7fsIqMxVroWtdowDp}F]C_@{rkJJ|Ld`SV{WTn', '32769']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

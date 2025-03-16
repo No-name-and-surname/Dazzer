@@ -1,0 +1,10 @@
+Test: ['CYX\\3ONDZ_ _J(9SW\x13>7', 'lADPVqgwUQo^nAFujxRwKyXu`UjeIL`C']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

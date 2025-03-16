@@ -1,0 +1,10 @@
+Test: ['W<wSMkZ[bmhCDHEW]AdgZk]NyXMdtBo[nCVtWpitaNsLapkNegIThV', '\x1c\x061\x0c%"\x06(&7(4\x088\x1c\x141\x1a\x1f\x02.<\x15+$3%\x14751\x071\x012\x19 \x1b\x17\x03\x00.\x0f\x0b\r&+\x1a']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

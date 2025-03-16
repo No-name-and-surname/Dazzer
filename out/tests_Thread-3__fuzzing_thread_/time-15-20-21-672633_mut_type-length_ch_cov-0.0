@@ -1,0 +1,5 @@
+Test: ["i24wuFw5~BK2&pTfTB%u!;?'$", '\x07']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

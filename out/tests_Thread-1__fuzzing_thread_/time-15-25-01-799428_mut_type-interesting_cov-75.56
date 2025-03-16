@@ -1,0 +1,10 @@
+Test: ['e5{%iy0@=6@4t?9#H<,6pP7(7?)U=2)6(!,&h]ob4(4V2,9*:O@?r;r:_rXQeXCoyFsgbNaUkFpyzRG^uP]XmEkAqujOlzsYFeQfzjts]ffEYtgn_CarvunxzkuNFZs^LdIkaEYrsYeWzfzisReyLIlU\\NSq', '256']
+Coverage: 75.56%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

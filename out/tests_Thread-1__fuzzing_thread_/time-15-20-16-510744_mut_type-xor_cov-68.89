@@ -1,0 +1,10 @@
+Test: ['\\NOS,\x0bT\x1aW@HC-<RLIFGH]I@P65OEZ8T(9WR\t\\H\x08\x05\x17/+\x0c\x13$\x004\x12\n5\t\x0b\x03\x02\x0c\x15)(7\x03\x1b#7\x08\x04=*;:\x12\x0e4\x186\x04.\x0f#0,)"/-\x06\x184#25\x009\x12\x14\x177\x1b\x13#&.7\x05$\x06\x12\x077\'?\x17,>\x13\x01', 'JuCPMoICQysH|czpDI@rRJDX_\\GvRfL_\\JlvoICuHIyE__lrWkgrtj^p_HUA^pCSEU^Yli^TDehn\\Yoz[h']
+Coverage: 68.89%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

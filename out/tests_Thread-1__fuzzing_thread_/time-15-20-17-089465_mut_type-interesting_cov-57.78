@@ -1,0 +1,5 @@
+Test: ['jqhk"7|>aylr352>5"")QYw1L)8=$+;D8[yOahAEtbOqJ_VtVbKgt^Ie\\bd_hACN]ksMsqwDOfN', '65536']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

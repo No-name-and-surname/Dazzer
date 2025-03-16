@@ -1,0 +1,10 @@
+Test: ["X_-4y)Iat;(>L/.grQ6!3*|:+w,{4V#,'9$q$;-_&h='56\\aUm=$2d)2.-?:9=3Cab#10#01w?=Wr=$3EitFciuvibchbqSkEFQJUpuTV`tnoqlhkEG`nsibMOVkPJWuD`WaS[tSBZvLhhBJXwNZAkwqqBLqHHCeSiTHRBX[[daxyyeKcK\\VOKpoUdCOj", 'YFY\\|lrQ|amt`hEZEcETzxBYoh_`NCov`[YsaU]mHDWhJTQ[uDSPVu\\J`J\\srnGx']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

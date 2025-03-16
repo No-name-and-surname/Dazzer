@@ -1,0 +1,5 @@
+Test: ['`ptow', 'X;\x18\x0eNK#Y9\x0bZ?^\x16HZ9\n']
+Coverage: 75.56%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

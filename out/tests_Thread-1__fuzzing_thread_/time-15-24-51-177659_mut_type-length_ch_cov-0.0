@@ -1,0 +1,5 @@
+Test: ['\x85z', '<(1"]3#X#:7|55pdQlTtFKxmSAo[ggfwbGQi\\cDioDaKLMzzZOtL\\JOXbxFDxVNnUh\\hUzzmxRLktYB\\sr\\YKPDbigaltVzgehI_zhv^Tv\\iHi\\m`MKkTUvD']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

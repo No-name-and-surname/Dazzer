@@ -1,0 +1,11 @@
+Test: ['32767', '5txMY:_2B%`&hq1?)9hAJ<.0(+#+;0\'KE4,*>7LJQ>(!EBHS64E5&T+#,$2%542MU3,$2"$.3#6kwIv`[TGTCkf[__[BLEuXYHyxACGNPSr^]WBQxIOmNL[PCNaTTdKkbANUEdvrsQIOVGEprWrjorpvPaXSqxPdvhbmmLA]gQ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число положительное.
+Второе число нечетное.
+

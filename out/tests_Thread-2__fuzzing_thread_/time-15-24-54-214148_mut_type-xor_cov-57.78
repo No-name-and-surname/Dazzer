@@ -1,0 +1,10 @@
+Test: ['oPPRjdZzhPAm\\mundd^VbbaYShJ[fyXhZB[\\ToVzypDkzjG_QROVamZPWSRHJiS_CsDSEbZTAF]DhKunk_ozy', 'V]O\t4\x0b\',4\x18& $#4\x0e\x16\x19\t3+\x18,\x1a=\x00\x11(\t\x0f\x08>\x0f\n40\x19\x138\'\x0c"(\x03*\n=;/\x13\x1d"."\x08\x08\x03\x15\n\x1d0.\x1c)\n\x17\x16\x13\x08\x147\x1c\x134!0\x0b\x1d\x10\t\x18']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

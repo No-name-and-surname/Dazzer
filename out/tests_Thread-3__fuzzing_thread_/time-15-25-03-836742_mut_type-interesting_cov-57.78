@@ -1,0 +1,5 @@
+Test: ['\x16\x12\t$\x0e+1\x17\x02\x176\x119\x0c0\x07\x05!1>6\x0c 1\x05\x15,1>-&\x0514\x15+\x04\x05\x02\x04\x17;=/\x01\x0e!\x03\t1\x01,:<,5\x00)$9!-9', '65535']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

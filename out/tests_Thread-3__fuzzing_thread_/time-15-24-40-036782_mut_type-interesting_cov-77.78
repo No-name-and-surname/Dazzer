@@ -1,0 +1,11 @@
+Test: ['-1', ',5&&bZHjTFOqhUeoNCjOHNmsTisICUVQZgeL`wGBMwJL_wfc_mi_bqdTTp[Rcqp_wGubtqteBh']
+Coverage: 77.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,13 @@
+Test: ['257', 'oHT",&>8sS42w.,h#;H?5+/2t94z{Lv[W0)^:5O$VX\'7,QmQ&]E75+2&"9:Q24?:g3.P%2,J=E,U44W7p+#O$7zX5!7&&/v=T\'!iDJ\\BjN[asxmSvJICDhddL_svztIShBzxYw_J`xkrZhUG`lN[vCuSDbzokBv]UPQFlXoFAPwDhcqtMb]mluSyMMuQO_YhrHwDjYMYI']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

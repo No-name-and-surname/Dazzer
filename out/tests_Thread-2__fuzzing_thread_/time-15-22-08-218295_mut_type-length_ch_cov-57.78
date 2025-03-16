@@ -1,0 +1,5 @@
+Test: ['h1Ve82@5@8+5863j[7V&f+80\\', '-32768']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['DH:4^wTQAnskQxvJgfnygiGTEzMqBInlyTYyCbsMj`iSwDAgpUyfnZZOBymIeQlSbvGFW\\ghqjPWGcoEFpfwYgxNpNrsNolHi', '-32768']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

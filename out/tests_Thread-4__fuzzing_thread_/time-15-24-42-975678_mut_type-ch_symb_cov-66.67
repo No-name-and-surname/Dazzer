@@ -1,0 +1,5 @@
+Test: ['6553\x87', 'H;/\x7f']
+Coverage: 66.67%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

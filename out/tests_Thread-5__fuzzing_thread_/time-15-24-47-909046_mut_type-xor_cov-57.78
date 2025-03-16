@@ -1,0 +1,10 @@
+Test: ['x', 'Vx9#$D2*3{UKNSi\\qnlOrTTx{RwGFh{wNmDRKo~rCvBR|CAhugAtF{gGSzxvGp@xqo[oXnLtBd_ZK^mkzd|oX^~GZ}Q|Bp{zeuSCHxvqDhz']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

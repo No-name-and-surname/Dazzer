@@ -1,0 +1,5 @@
+Test: ['oNÒD', "\x1f\x139\x1b;\x06\x10#\x12\x04'"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

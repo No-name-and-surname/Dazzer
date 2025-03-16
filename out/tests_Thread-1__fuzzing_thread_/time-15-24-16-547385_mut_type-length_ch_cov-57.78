@@ -1,0 +1,10 @@
+Test: ['=!>IF(f{*xl\'%k)l5!pr)0?,75._5#V9g*7"gM6%$$<&.cH8H(/6nC3q|)(@j:-.M17%*-9q5,?iPHNwgBLhKJhRlniXqe`HNxusZJrS^IalUudYhLwYsBHh^_[qcBYtIiWL_Pcr\\UfNPorr`SG[nLsUjYMQqatWztnd\\xyv_ijEC[XOZoRUhgm', 'NHCNCLMHCO']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

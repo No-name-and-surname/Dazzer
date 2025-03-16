@@ -1,0 +1,10 @@
+Test: ['?[U&1*8DSx&NeVGRO_a]hWV[gdE`dUsueYl`sGM`RycdBCwQwZqdXyQmLhJxclwhYtZU`o_zIzkDkoEvi]JdFJWKuZfqOm', '5Nm\\bca[k]zC|^CU_^aTSVd_gUOBCNOOsmshMV_\x7fAG~JJsNq|ljqhm`pPA`TCF_Unch']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

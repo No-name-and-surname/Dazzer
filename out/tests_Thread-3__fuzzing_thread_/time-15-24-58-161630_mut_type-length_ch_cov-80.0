@@ -1,0 +1,10 @@
+Test: ['\xad\x1c\x1c\x1a\x1c', "Z\\U'%=]QJ7`/p82%c9;c|`2)'0,%/R-Qb$+%=P^/0vwnPv_wnxuAxzksKZZWbxBC[FAjxyJvYcYZVQm\\ONAdeVrrJPuW^QPr`"]
+Coverage: 80.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

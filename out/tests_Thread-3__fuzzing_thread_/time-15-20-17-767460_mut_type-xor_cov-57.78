@@ -1,0 +1,5 @@
+Test: [']O-ES\x1c\x1aAB0^DPZY\x0fG?X""8\x0f\x19,#\x08\x08=\x1f\x08\x0f\x14\x17#,=\x16\x1f,>\x16', 'JAA@@DAC@EKFGDDFKCD']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

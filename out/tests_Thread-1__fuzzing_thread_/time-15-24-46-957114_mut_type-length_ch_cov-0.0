@@ -1,0 +1,10 @@
+Test: ['JIAaNv[ubsu~vesPW\x00\x06\x1a\x19\x1b4);*\x15\x06\x1f\x08=\x04\t\x03\x1e\x1e4%\t', '\\\\m]QjiXnggdpBJnKnvPZyeczjjjXwgLxkyoPeVeQZqflOQspijfhLByPOFDrrP\\CEzZrJLyvkMkKISJBgnoUXrl]qIxw']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

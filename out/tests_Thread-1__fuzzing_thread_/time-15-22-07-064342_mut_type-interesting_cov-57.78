@@ -1,0 +1,10 @@
+Test: ['OvRobUb|EbdmZEZokYxn{S{t_fg`NVHdru|lmacUMYwpI\x1b+\x16).\x06\x01\x83<=+\t:\x10>\x1d\x0c\x1f\x04>\x0c-\x00\x02\x17;!\r/\t)8\x0b8\r58)\x03OBqKoccijZDVfCjDEsCWn[H_KWaVVRp]ETsblcol]qiJt', '256']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: ["W'`~s(>+753hl^3@^<!HK%:6J;+8%}/)$1o=<Wt1)G><g?&>8%E=')#O%!O%*/ciM}.=.1UqIwCRhZjFN]XUEGEUUwcJEVVljq`FAEGpcieEcUunwPeF\\l]QfLfCgyj[FR`ef[ivgOv^]tcShGGFZM]lV", '4294967295']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

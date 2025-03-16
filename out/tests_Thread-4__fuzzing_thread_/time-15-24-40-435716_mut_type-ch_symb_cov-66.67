@@ -1,0 +1,5 @@
+Test: ['\x0c7\x7f}+\x1e/3=?', '^-tuQ']
+Coverage: 66.67%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

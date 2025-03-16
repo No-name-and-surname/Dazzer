@@ -1,0 +1,5 @@
+Test: ['>D*N', '256']
+Coverage: 82.22%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['i\r#{/\x88\x14\x112\x05\x1a\x17\x18\x11*', 'hIHC']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

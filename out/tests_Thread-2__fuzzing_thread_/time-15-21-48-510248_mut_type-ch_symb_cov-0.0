@@ -1,0 +1,5 @@
+Test: ['No\x88e', 'V1H6u2N;Va13"5j>J7?i4%!>RhSjxRdkBX[]_CptjrTJ_m]tL`FkAljFLQWpfjCiWKWIRxS']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,10 @@
+Test: ['\x03\x13\x19\x0cu\x0b\x15\x08\x08b\x06\x1a\x10\x07\x19\x02WQ\x1ebY[tO`K`gOtEUjuGIZHnkqkiOB\x7fkYDz|HAG«@AzYgptEC@nuv@lrn`fW`X[^_Ml]uUJIlbV\\iOWWzajB\x7fNl^nmeHq', '9223372036854775807']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

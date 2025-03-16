@@ -1,0 +1,10 @@
+Test: ['nMlKb', 'Ck^`H\x1e\x0etUuO\x07\x08\x10H\\^R\x1dJrxqug\x01\x19\x06ScX\x14}\x12\x08`P\nWg\x11\x1b\x02_K\x12Y]\x08\x03~\x1d\\KAyGr\x1dS\x0eyaaUwaCv~d`FTNF]rP\\FoC|Q\x7f]bPJvLhsJL]wJaLrLSRIDn_\\W|LrVU`tuzAKphfSAU]BszTBiTA`J`vwtN`|VIMmLNvWi']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

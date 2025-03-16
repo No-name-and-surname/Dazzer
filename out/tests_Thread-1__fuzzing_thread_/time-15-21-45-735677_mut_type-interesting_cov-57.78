@@ -1,0 +1,5 @@
+Test: ['h(L(nw-"v\\V>AY&$0#7+-j1z:()#|;\\0:21zI0!;F)%(Y23&\'5507Mw73%U">3(+j!\\15},+[;', '128']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

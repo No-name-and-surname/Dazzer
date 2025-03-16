@@ -1,0 +1,10 @@
+Test: ['dggae', 'bwiPB_LgPoxlZb^NAotCDYnmXBiMYnyEp`bpw_CXtDzxFblEbaOftoqcdHjiQsI_TRU[DSmgJh]SBvl\\sdAiMlPm^FYCL']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

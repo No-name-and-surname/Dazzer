@@ -1,0 +1,10 @@
+Test: ['_\\\x16 \x12:)\x10*M\x17*\x13\x01)\x05\x1f\x0c\x0e6;!\x1d\x1e\r\x1c\x17\x13\x11\x1e\x05\x1e =\x06\x08>?\x0b+5\x0c\n!\x08){HasbFs\x7f|x~sAzPFE]_Z|bJYyf\\m}gzIcfrm\\uou{ogYPK`CF\x7fX\x7f~qT;\x0e<\x16\x1f\x07\x1b\x10*\x07\x0f"?%\x19(+\x0756?9\x07\x12\x1e3(\x0c\r7&\'\x11\x11\x16*\x1a;$"(?\x15\x1e5\x04', 'V5H3,*%0l6Qo;N(")5sD7Z]hEuzyRvDIf\\u\\cvOuL`tCOo[yZOOqPWEVipjYg^bqlT]\\P[lhvsVyPjU_J`npvruCMJ\\j\\wX]wFgrDdZyQA_izE^x]Y[Ya']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

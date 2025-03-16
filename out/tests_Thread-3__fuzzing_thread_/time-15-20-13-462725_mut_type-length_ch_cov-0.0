@@ -1,0 +1,10 @@
+Test: ["k5F@+V?/9;5B56('hZ\\z$+02=", '[keLTWRxjMOSaxrAIEAMvmwsD\\UsHLduZDPevdfHMsaCW_XalrAgpcRdC[oozxbJKNkQWlYPtW`os]AL^']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

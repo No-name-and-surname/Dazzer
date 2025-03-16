@@ -1,0 +1,10 @@
+Test: ['ö\x80Íëø', '&27#_Y)Q=3794%&"%62-12.,4@rb$2S3=V[\'ePL3-%**Fr\'-Yv.5#/20YE$4>6&1J$%$-(*Z:#4S<>xM/lGVjbFiD`yXESDBaanU[kqnWyoaDKsQu\\IGHYjKlzWE]zm`guEBIfQ\\bGalLdOwusKEwqU_SqUAY]hwUswKL]CPdiiGmlwP[`s']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

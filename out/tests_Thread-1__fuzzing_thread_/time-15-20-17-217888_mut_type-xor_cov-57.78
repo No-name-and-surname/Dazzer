@@ -1,0 +1,10 @@
+Test: ['\x80mNY', '\x17~N\x04an\x1an\x05\x0fIWv\x1f\x0b\x0c\x0fM_\x10SaaHc[YiuezwfiC}mpT\\oOIUngmdA~jXsylHee`}BH|fB']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

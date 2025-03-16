@@ -1,0 +1,5 @@
+Test: ['|hKlE6', '-2147483648']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

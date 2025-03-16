@@ -1,0 +1,10 @@
+Test: ['wzREOgvgb^BahzVqgP]XaaYUQHQWGiIiNucQ\x88FDLpLZ\\INnT', 'O\x02\x1c.\x1d\x10\x06\t\x10:7\x16%\x0b\x0b\x1b /\x058\x157\x0f<']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

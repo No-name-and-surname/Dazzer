@@ -1,0 +1,10 @@
+Test: ['b\r\x14\x16Fr\x02\x11\x1c\rg\x17X\n\x11w\r\x0caQ\x0c\x14\x05so\x1br\x05in\x13\x0b\x05\x12\x1b\x01\x0b\t\x02\x0e[d\x13r\x12\x05\x02\x1f\x01\x08VM\x14K\x1c\r\x07I\x16B\x01PzTxJesqGRh[THy]kTsehyftWzm^jy@WhvDcnGIRyEb^a\x7ffzqaZQemFR\\xuGZW\\kUQDTk@]eZzW[WahESYF\\kgYd', '65535']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

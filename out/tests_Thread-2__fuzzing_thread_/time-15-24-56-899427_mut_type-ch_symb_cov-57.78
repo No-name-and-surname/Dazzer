@@ -1,0 +1,5 @@
+Test: ['Brd\\sg{Y;hUqz_k%I,Y`9~K|ZOzqzDOgZ+#_&FWBpNXE^}beb\\q{M~iWK2_)7dzF`BL`ngVLCZyCo', '\x88']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

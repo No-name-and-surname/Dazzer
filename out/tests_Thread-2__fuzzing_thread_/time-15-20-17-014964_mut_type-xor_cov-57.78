@@ -1,0 +1,5 @@
+Test: ['xYXS', '\x16\x08M\n/7X\x03A\x02XVLI2J\x10']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['_\\W', '-129']
+Coverage: 75.56%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

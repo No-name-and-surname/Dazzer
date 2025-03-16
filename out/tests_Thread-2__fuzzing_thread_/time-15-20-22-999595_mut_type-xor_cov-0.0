@@ -1,0 +1,10 @@
+Test: ["s!l'VumBWNQxLUxRDSCQ[_dCCe^FKVWBdtO]^NUc^JLab_tPNzEf`sRASaOAroApmpDhs", '?S\t\x15\x19\x0c2># &<6\x05;3$)\x0b\x0e\x11\x19+>0\x1a8\x0e\x1b*\x151\t\x05>/\x0e8']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

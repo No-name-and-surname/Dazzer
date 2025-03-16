@@ -1,0 +1,5 @@
+Test: ['xdprW', '¼º±¼±¾¿º±¾']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

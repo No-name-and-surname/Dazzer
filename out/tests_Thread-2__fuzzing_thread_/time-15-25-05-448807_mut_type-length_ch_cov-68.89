@@ -1,0 +1,5 @@
+Test: ['\x11R\x1c_\x00kY\x14\x03xS\x01\x12\rh\x08\x02t\x16LV\x05}\x05\x05\x0cb\x7f\x1a\x18{\x0e\nB\x11Y\x0e\x06d\x06\x04\x0fV\x01Z\x18\x15\x01\x1fiss\x15\x0cJ\x1e\x1c\x13N\t\x06\ntaZ\x1c\x14R\x08vOEE\x1dUNs@`{vwhX\\STwJv}IbVc@sVWivVoc\x7fYAQH\x8dQwwdR\x7fg|bumYNelbhxauPsldrQ\x8e~pWCNYaZUkA}\\P', 'iab{DUVR^gbJaIXcHTyKkBwOoxgjtN\\mkDyn_rixctb_xQAzyFHRyUkizBuvhq^RAXGdkpjhj']
+Coverage: 68.89%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

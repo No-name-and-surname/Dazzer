@@ -1,0 +1,5 @@
+Test: ['ci\x82}', '1']
+Coverage: 71.11%
+Return code: 0
+Mutation type: interesting
+Stderr: [Errno 32] Broken pipe

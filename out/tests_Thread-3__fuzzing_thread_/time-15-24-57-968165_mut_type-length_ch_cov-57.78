@@ -1,0 +1,14 @@
+Test: ['1', "@AT\\/AeED5RF/T`C#|6~><Lz'F2li2RckeuC@IB0HNeevE^s4`i?(NhL¯°¹»\x8d\x8d¯£¼º\x85¥\x8dµ³\x86\x89\x94²\x94´¶¬µ½\x98\x91\x90ª§\x8d\x93¢\x8e¶\x87\x88gqPSnxTDXtUsMoxnpejpYwSLgp]sTv^YwmBKg]IAsf\\ay`CVs^broeuT"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Первое 1, второе 0
+Первое больше второго
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

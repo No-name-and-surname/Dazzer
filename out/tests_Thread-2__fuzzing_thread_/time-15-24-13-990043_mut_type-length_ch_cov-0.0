@@ -1,0 +1,10 @@
+Test: [';5~.3M):59|*3\'3f-R#3m?3Y47Z(4>9~>0|_]4/59$";gVTzfZhgwtxjN]lLcpeWfmSbqoswvWwPyZGrMU_uLVbrdxPdRyMpKNYJJDUpNqDzjcYL`v^[CYZbgn]TAuMuFDDsVzwFm^I_pjC`EKr', '{t1']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

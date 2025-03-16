@@ -1,0 +1,10 @@
+Test: ["RTWN'\x07\x87\x06\x0e:-?/)\x14\x02", "]:)2L1!Yz$><]#Y9N\\2'=2$i25$9&0>pk_e%z98!05:;0;#4i6?;rH^NIQJBJvDwezimU]\\innkGLWNM[h[zQsKWFUEJasaZrqlQqeIPxKhbL"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

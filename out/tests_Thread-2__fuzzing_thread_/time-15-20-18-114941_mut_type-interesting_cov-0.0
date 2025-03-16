@@ -1,0 +1,10 @@
+Test: ['(K{)pLO@oPT7\\Lj\\-^*Dt![XnrB\x1b\x18R|]\x12\x1f\x0e\x06\x04X\x17\x01\ng\x03pZc\x0b\x06\t\x0f\x03\x17V\x13\x1d\x02\x13\x14\x07\x07\x17\x07\x0f\x19CO\x0fd\x1c\x12P|\x13\x14\x1f\x12\x15`\x0e\x18B\x1c`\x0e\x15\x0c¡\x06DrOAE]i]\\|dMYORo~jPitYGpLMFzb_gA}^\\JsdZOsef_B]gK\x7fw\x7fQlacZwdZdb_\\Cig[XZqAvqqNXggAIONJEpGdARfeCFCtBrzzMZQjUJbEXs_pOLXlzBXroA', '255']
+Coverage: 0.0%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

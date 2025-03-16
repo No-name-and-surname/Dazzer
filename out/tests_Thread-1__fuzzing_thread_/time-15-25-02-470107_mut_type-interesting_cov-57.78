@@ -1,0 +1,11 @@
+Test: ['256', '-6?xcYsqrbhgF]ULErdrzQFh^Ds]xpydahFaNTpfQn[Y`p_OD\\USDdWJ']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число отрицательное.
+Второе число четное.
+

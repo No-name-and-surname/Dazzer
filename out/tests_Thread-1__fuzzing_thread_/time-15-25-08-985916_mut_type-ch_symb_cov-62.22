@@ -1,0 +1,11 @@
+Test: ['-129', ')VE`]Hse\\lnkBKgajQkPBztItJLkchMLtS]LFoZXS`yrJijBYA\\PP_ZHRIh[pAcjVloN]JaXS\\aITnh]_AWIq`jtLzG']
+Coverage: 62.22%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

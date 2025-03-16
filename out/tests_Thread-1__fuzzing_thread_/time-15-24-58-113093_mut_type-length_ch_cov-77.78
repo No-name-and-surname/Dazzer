@@ -1,0 +1,5 @@
+Test: ['Y+R*0', "BJU!B'NSR,3/]'I:-d*A2)S'P;r.?3ib3$)4{0M-8"]
+Coverage: 77.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe
