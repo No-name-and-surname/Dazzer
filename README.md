@@ -31,7 +31,8 @@ Dazzer - это мутационный фаззер с открытым исхо
 ```
    git clone git@github.com:No-name-and-surname/Dazzer.git
    cd Dazzer
-
+   sudo apt-get update
+   sudo apt-get install -y gcc g++ lcov gcovr valgrind strace linux-tools-common linux-tools-generic
    pip install -r requirements.txt
 ```
 
@@ -73,15 +74,33 @@ Dazzer - это мутационный фаззер с открытым исхо
 ```
 
 
-## <a id="title3">Get started</a>
+## <a id="title3">Быстрый старт</a>
 
-Firstly, you should pay attention to  `config.py`  file.
-It contains a lot variables: 
-    * FUZZ - constant variable, which one should be inserted in place of the element specifically that you want to fuzz separately from other elements in the initially specified test. (args) 
-    * args - a list there should be inserted initial test input. ❗IMPORTANT❗ if you'll set less or more input data than the program requires, the fuzzer won't work.
-    * file_name - here should be inserted the name of programm you want fuzz. By default it is  `Test_examples/trees`. (one of the test programms)
-    * output_file - a file in which the results are saved after the program is execute. By default it is  `output.txt`, but you can create your own file.
-    * dict_name - by default it is equal to the pre-downloaded dictionary. But you can download yours and change it.
+Первым делом вам стоит обратить внимание на файл [`config.py`](config.py).
+Он содержит основные настройки фаззера. Ниже приведено мини-описание каждого параметра:
+      ### Основные параметры
+          * FUZZ - Специальный маркер, используемый в аргументах, который указывает, где должна происходить мутация входных данных. При обнаружении этой строки в аргументах она заменяется на мутированные данные.
+          * __FUZZING_TYPE (тип фаззинга):__
+            * White - доступ к исходному коду
+            * Black - без доступа к исходному коду, по сети
+            * Gray - без доступа к исходному коду, только к бинарному файлу
+          * __Директории и пути к файлам:__
+            * BASE_DIR - Абсолютный путь к директории, где расположен скрипт.
+            * TEST_DIR - Путь к директории с тестовыми примерами.
+            * OUT_DIR - Путь к директории для сохранения результатов работы.
+            * file_name - Путь к тестируемому исполняемому файлу.
+            * source_file - Путь к исходному коду тестируемой программы (для режима White Box).
+      ### Настройки тестирования
+          * args - Список аргументов командной строки для передачи тестируемой программе.
+          * TARGET_HOST - Хост для тестирования по сети (для режима Black Box).
+          * TARGET_PORT - Порт для тестирования по сети (для режима Black Box).
+          * TIMEOUT - Максимальное время ожидания ответа от программы в секундах.
+      ### Сохранение результатов
+          * output_file - Имя файла для сохранения вывода фаззера.
+          * dict_name - Имя файла словаря, из которого берутся интересные входные данные.
+          * Corpus_dir - Директория для сохранения найденных интересных тестовых примеров (корпуса).
+      ### Производительность
+          * NUM_THREADS - Количество параллельных потоков для одновременного выполнения фаззинга. Увеличение этого значения может повысить производительность на многоядерных системах.
    
 After you've finished previous part, you should just run:
 
