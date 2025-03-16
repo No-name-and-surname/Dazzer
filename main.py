@@ -25,38 +25,25 @@ from threading import Lock
 import sys
 
 def fill_screen_black():
-    """Fill the entire terminal screen with black color"""
-    # Clear screen
     sys.stdout.write("\033[2J")
-    # Set black background
     sys.stdout.write("\033[40m")
-    # Set black foreground too (for compatibility)
     sys.stdout.write("\033[30m")
-    # Move cursor to top-left corner
     sys.stdout.write("\033[1;1H")
-    
-    # Get terminal size
     term = Terminal()
     width = term.width
     height = term.height
-    
-    # Fill the entire screen with spaces (with black background)
     for _ in range(height):
         sys.stdout.write(" " * width)
-    
-    # Reset cursor to top
+
     sys.stdout.write("\033[1;1H")
-    # Reset foreground color to white
     sys.stdout.write("\033[37m")
     sys.stdout.flush()
     
-    # Show a small loading animation
     loading_position = height // 2
     sys.stdout.write(f"\033[{loading_position};{width//2 - 10}H")
     sys.stdout.write(colored("Preparing Dazzer...", "white"))
     sys.stdout.flush()
     
-    # Show a simple progress bar
     bar_width = 20
     sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2}H[")
     sys.stdout.write(" " * bar_width)
@@ -64,19 +51,17 @@ def fill_screen_black():
     sys.stdout.flush()
     
     for i in range(bar_width):
-        time.sleep(0.02)  # Small delay for visual effect
+        time.sleep(0.02)
         sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2 + 1 + i}H")
         sys.stdout.write(colored("█", "magenta"))
         sys.stdout.flush()
     
-    # Clear everything again for the actual content
     time.sleep(0.2)
     sys.stdout.write("\033[2J")
     sys.stdout.write("\033[1;1H")
     sys.stdout.flush()
 
 def signal_handler(sig, frame):
-    # Reset colors
     sys.stdout.write("\033[0m")
     sys.stdout.flush()
     print(colored("\nExiting...", "yellow"))
@@ -244,22 +229,18 @@ def create_stats_box(stats):
     return box_content
 
 def hex_to_rgb(hex_color):
-    """Convert hex color to RGB values"""
     hex_color = hex_color.lstrip('#')
     return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
 
 def rgb_to_ansi(r, g, b, text):
-    """Convert RGB values to ANSI colored text"""
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 
 def hex_color(hex_code, text):
-    """Apply hex color to text using ANSI escape codes"""
     r, g, b = hex_to_rgb(hex_code)
     return rgb_to_ansi(r, g, b, text)
 
 def display_stats(stats):
-    """Display fuzzing statistics in a nice format with a centered box"""
-    # Ensure black background is maintained
+
     sys.stdout.write("\033[40m")
     
     stats_box = create_stats_box(stats)
@@ -272,8 +253,6 @@ def display_stats(stats):
     
     box_y = (term_height - box_height) // 2
     box_x = (term_width - box_width) // 2
-    
-    # Clear screen but maintain black background
     output = ["\033[2J\033[40m\033[H"]
     
     output.extend(["\n" * box_y])
@@ -285,15 +264,13 @@ def display_stats(stats):
     exit_msg = hex_color('#ffffff', "Press 'q' to exit")
     exit_padding = " " * ((term_width - len("Press 'q' to exit")) // 2)
     output.append("\033[{};{}H{}".format(box_y + box_height + 1, 0, exit_padding + exit_msg))
-    
-    # Fill any remaining space with black
+
     for i in range(box_y + box_height + 2, term_height):
         output.append("\033[{};{}H{}".format(i, 0, " " * term_width))
     
     print(''.join(output), flush=True)
 
 def process_queue(queue, queue_name, filik, thread_name):
-    """Process a single queue safely"""
     try:
         if not queue or len(queue) == 0:
             return False
@@ -324,7 +301,6 @@ def process_queue(queue, queue_name, filik, thread_name):
         return False
 
 def processing(task, j, filik, thread_name):
-    """Process a single mutation task"""
     try:
         with thread_stats_lock:
             if thread_name not in thread_stats:
@@ -437,20 +413,15 @@ def define_probability_of_mutations(no_error, sig_segvi, sig_fpe):
     return probs
 
 def restore_terminal():
-    """Restore terminal settings"""
-    # Reset colors
     sys.stdout.write("\033[0m")
     sys.stdout.flush()
-    # Restore terminal mode
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
-    # Clear screen once more with default colors
     sys.stdout.write("\033[2J\033[H")
     sys.stdout.flush()
 
 old_settings = termios.tcgetattr(sys.stdin)
 
 def fuzzing_thread(thread_name, filik):
-    """Function to run fuzzing in a separate thread"""
     global DEBUG_PROB_OF_MUT, queue_cache
     thread_id = int(thread_name.replace("thread", ""))
     last_prob_update = time.time()
@@ -647,7 +618,6 @@ def main():
         sys.exit(0)
 
 def show_welcome_screen():
-    # Fill screen with black before showing welcome
     fill_screen_black()
     
     title = """
@@ -702,23 +672,19 @@ if __name__ == '__main__':
                         nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
                         nt.add_edge(i[2], i[3], weight=5)
                         i[6] = 1
-                # Reset colors before final output
                 sys.stdout.write("\033[0m")
                 sys.stdout.flush()
                 print(colored("\nAll results were saved to 'output.txt'", "magenta"))
                 print(calibrator.afiget)
             except Exception as e:
-                # Reset colors before showing error
                 sys.stdout.write("\033[0m")
                 sys.stdout.flush()
                 print(colored(f"\nAn error occurred: {str(e)}", "red"))
                 print(colored("Try resizing your terminal or restarting the fuzzer", "white"))
         else:
-            # Reset colors before exit message
             sys.stdout.write("\033[0m")
             sys.stdout.flush()
             print(colored("\nOkay, have a good time, bye! <3", "magenta"))
     finally:
-        # Always ensure colors are reset
         sys.stdout.write("\033[0m")
         sys.stdout.flush()
