@@ -40,6 +40,11 @@ codes_set, codes_dict = set(), {}
 codes_set1, codes_dict1 = set(), {}
 dictionary = open(config.dict_name, 'rb').read().decode().split('\r\n')
 
+# Путь к папке для сохранения результатов
+OUTPUT_DIR = config.Corpus_dir
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
+
 # --------------------------------------------------------------------------------------------------------------------------
 
 def if_interesting(test_case):
@@ -88,7 +93,9 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
     if increased_coverage or new_error or more_errors:
         tests_2_quoted = shlex.quote(str(tests_2))
         file_namus = fr"time-{datetime.datetime.now().time()}:mut_type-{mut_type}:cov-{coverage}"
-        run_command(fr'cd out ; touch "{file_namus}"; echo {tests_2_quoted} > "{file_namus}"', "Command isn't correct")
+        file_path = os.path.join(OUTPUT_DIR, file_namus)
+        with open(file_path, 'w') as f:
+            f.write(str(tests_2))
             
         if flag == 1:
             if returncode not in codes_set:
@@ -805,21 +812,31 @@ def get_coverage(binary_path, input_data):
         source_file = config.source_file
         if not os.path.exists(source_file):
             return 0, 1, 0.0
+            
         original_dir = os.getcwd()
+        source_dir = os.path.dirname(source_file)
         
         try:
-            source_dir = os.path.dirname(source_file)
+            # Переходим в директорию с исходным файлом
             if source_dir:
                 os.chdir(source_dir)
+                
+            # Очищаем старые файлы покрытия
             subprocess.run("rm -f *.gcda *.gcov", shell=True)
+            
             source_base = os.path.basename(source_file)
             binary_base = os.path.basename(binary_path)
+            
+            # Компилируем с поддержкой покрытия
             compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
             subprocess.run(compile_cmd, shell=True, check=True)
+            
+            # Запускаем тест
             if isinstance(input_data, list):
                 input_str = "\n".join(str(x) for x in input_data) + "\n"
             else:
                 input_str = str(input_data) + "\n"
+                
             process = subprocess.Popen(
                 [f"./{binary_base}"],
                 stdin=subprocess.PIPE,
@@ -832,12 +849,16 @@ def get_coverage(binary_path, input_data):
             except subprocess.TimeoutExpired:
                 process.kill()
                 process.wait()
+                
+            # Генерируем отчет о покрытии
             subprocess.run(
                 ["gcov", source_base],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 check=True
             )
+            
+            # Анализируем покрытие
             gcov_file = f"{source_base}.gcov"
             if os.path.exists(gcov_file):
                 with open(gcov_file) as f:
@@ -867,12 +888,12 @@ def get_coverage(binary_path, input_data):
                     if total > 0:
                         coverage = round((executed / total * 100), 2)
                         return executed, total, coverage
-                    
+            
             return 0, 1, 0.0
             
         finally:
             os.chdir(original_dir)
-        
+            
     except Exception as e:
         print(f"Error in get_coverage: {e}")
         return 0, 1, 0.0
