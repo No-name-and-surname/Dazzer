@@ -1,0 +1,11 @@
+Test: ['-2147483648', 'Lz)S/K{R-2dT;,w"<6U,=\'?I7o9do&<:Nd$$-!!\\?4(0/1&(&-4.naIuztUXibs]Dh_ptZKX\\B\x86MgPyXpLYGumcMaWBMyX^_d[XwovlCYRMIUgdvACtddXMlxm`Qh[g`zrq]GMpfGW^Gv']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

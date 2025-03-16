@@ -1,0 +1,10 @@
+Test: ['!c#=-E5"),,9+I(.*\x827/.H+/i-xT43vY2513+\'I\'1_&*qPwtvtgNyc]BzD]hHde`MZm^FgPi`GZcGg^WAzSlnGoDSTUl^xaDUwTasYtNJvTaviCjlbJyXw\\wMZjjXJews_stg[u^_RSM[whc', '-32768']
+Coverage: 75.56%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

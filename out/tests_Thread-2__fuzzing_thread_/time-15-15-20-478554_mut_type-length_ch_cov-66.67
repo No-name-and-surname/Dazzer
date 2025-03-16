@@ -1,0 +1,5 @@
+Test: ['WZNzMVhEul', "TwrC&?|z9$Wz+2>'P{5<>4$3v.4'0w{!q?W:66{f+%Y!#m>H16^#-#]$!%<->:5{]"]
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

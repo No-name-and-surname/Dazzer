@@ -1,0 +1,5 @@
+Test: ['\x0b\x08\x02', 'JFfahEI}Pl\\']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

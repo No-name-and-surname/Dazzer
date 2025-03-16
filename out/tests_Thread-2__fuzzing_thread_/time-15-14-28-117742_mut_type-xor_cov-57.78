@@ -1,0 +1,10 @@
+Test: ['MQC/\r6Y\x1cJQQIG\x17UXDO\x05KAJ]Z)HF@D@O_\x12YH\x19\x01UB@M\x1c\x1b\x07Z!', '\x05\x1a\x19\x1c\x1f\x1c\x10\x1b\x1e\x1c\x10']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

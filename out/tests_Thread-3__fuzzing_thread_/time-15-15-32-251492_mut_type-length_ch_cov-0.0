@@ -1,0 +1,10 @@
+Test: ['</>\'358G/K4=0O1$s7)}W:%#7;$9#;g+"&;/(#xnS:p(*csrUDFTsFXYXkRnWxKISPXeII_[tKmbDLDSLZH`xwADE[XCtbkPUPvQYijjoVFefPxoinVEpJhiiQTFFY', 'N\x7fne']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

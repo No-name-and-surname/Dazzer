@@ -1,0 +1,10 @@
+Test: [">V1=-)i(@TsF[{T,Y-g{^dzeiU}0bK`*_oG0ya6jL-s7$CScWa*[Q*!3;4>reR'G]?66[339.j07!+G>mBcDT\\_oMc`\\QJMkPbOgclFA]PQbFT^QTtfP`FJ_^LXEmRR]kyPzYPYXHgLKiq]`gAJOyBKNhAMwkXaoXxZkUJdTSY]FdIMSdAhlSibIQHEpnN^EsvR`Yu^IMOlBCsQ[EaqyUcRFI[[D`TBdGJK", '3\x12\x13\x18']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

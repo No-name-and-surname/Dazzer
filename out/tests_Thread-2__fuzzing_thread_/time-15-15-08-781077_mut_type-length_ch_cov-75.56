@@ -1,0 +1,13 @@
+Test: ['4JUc<A$h+19,1/#8%W#.*,7L*6M/YV0jsL$=2p*g;9yZ8?6=>#7!2i>8@@$EZ"#9>-l0o3~*?9KJ*PbMuODhwIcBvv]padJo`uXBSkiKWhzFG^HpTE[SDgRjh^KTjxjquUHROIoPYdBkjKj_^Mp\\CLWGghaFuAlVF\\LZrkmYJLoQVe', ':g?']
+Coverage: 75.56%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

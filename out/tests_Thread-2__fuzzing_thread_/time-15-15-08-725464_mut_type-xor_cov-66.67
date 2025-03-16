@@ -1,0 +1,13 @@
+Test: ['8zHTHm|u/qjXb~t%wR:U+.D{2/F&u00>4u:=76+<P[Vjd_]FSbOoGISdcTLwSMznCYtjYy]QsRTKMuDL_NELfkPYFFbRLUOlVVMXXfkQlUoEUXuE[CxvyVkRLoNAJBXHC[kcfY', '{Z[P']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

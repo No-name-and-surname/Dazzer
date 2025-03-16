@@ -1,0 +1,10 @@
+Test: ['&-%IXWQ6!(IP=N+P,#"(+k$<3+ngxMG2.<lO",~4L-+;CG_)b%2\'/S?\'n>9%$?\'<a@9.9%>^jIGvPSSgmMKaFapbgXoLDfdZxNsHf`yHPKvvGWfJTVqQFyDYoDBZnLeyUeEaPixmYMdJbDr', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

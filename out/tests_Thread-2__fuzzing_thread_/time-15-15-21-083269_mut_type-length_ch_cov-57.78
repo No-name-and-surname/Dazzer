@@ -1,0 +1,5 @@
+Test: ['\x1d0\x13\x0b:\x1e', "NE)*5'?E/IVF'2?-ok'+"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

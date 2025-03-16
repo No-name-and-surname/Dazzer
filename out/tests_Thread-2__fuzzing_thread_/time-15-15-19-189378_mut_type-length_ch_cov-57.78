@@ -1,0 +1,13 @@
+Test: ['6\x89536', '-y%xat*%&U\'$,RK61>ZHI&5UDO]*6&7;%i6=Y\',}>$#\'C1(==u$d?.\'l2#!.NrB_V.}<.2=""{#:\'!XA_AqvNTTGzrWIiPRyZhQnuRtpTzHijGhSIpedLC\\q^Xm]CrcZYTGzdArekWI\\i`WyzlptuBG^MOAlFSAhHOcPECBvkqJ^']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

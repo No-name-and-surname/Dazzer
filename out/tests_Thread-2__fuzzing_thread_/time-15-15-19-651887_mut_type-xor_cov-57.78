@@ -1,0 +1,5 @@
+Test: ['Y>V\x05+\x16,NI*09P\x16*4I\x1b3[/54\x12]<\x17\x1f5\x08\x00)1\x00', 'Ïîïä']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Test: ['None', 'V}{\x17\x16D|Dufrn\x0cg\t\t\x17\x17\x0c\x17BQXfu|GTm_\x7fts']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

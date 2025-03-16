@@ -1,0 +1,10 @@
+Test: ['ky\\R310"5%Y8;.52+0&k(K#9u,_2#%x;&2)%&99~h$*7)/@Z-tV\'$2=;tA$19?)T/C(<q-(4P/?/2tP.+((-1)o+$-:_yGPmxnqitrElJp[ZA[ssch]X\\OjYluqklwraHtZoBrsFsCWPEj]chRoHxgcKrzUbqxkSwtFVZ]DPZITjJEgSKyvXJcc^wMNccczH]`aokzKgq', '\x1d¨\x1e\x18\x1e']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

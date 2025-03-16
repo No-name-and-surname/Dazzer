@@ -1,0 +1,5 @@
+Test: ['VRqrl', 'bCBI']
+Coverage: 62.22%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

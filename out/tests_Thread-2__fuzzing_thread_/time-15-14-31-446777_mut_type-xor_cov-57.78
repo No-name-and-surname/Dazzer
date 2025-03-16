@@ -1,0 +1,10 @@
+Test: ['[J4fyAyn\\H^b{R@%:1-\x18$0\'\x0c\x11\x172\x08:!\x06$-\x1e\x0f\n\x132+2"\x0f\x07$\x1f<7;\x18?\x11\t&3\t(\x1d2;\r\x1d\x1a\x1249\x11"3\x1c=\x12)\x1c0\r\x04\x1b%\x1f\x1d\x1d)\n?.\x06\x0b\x18\x0e)48\x07\x13$) :MrpGocIrxZmrZZT', '{ppqquprqtzwvuuwzru']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

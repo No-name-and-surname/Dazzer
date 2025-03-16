@@ -1,0 +1,5 @@
+Test: ['÷\x90Ç\x82', "QCx/!v+q#(%#.S,Om|mx4*!;s=s6P'/$;7k,N3-S.E0/06uV`TwXgRvBBJ`JO{KWL`BFOYvbljMEvK[gFYPN`JaWeIMQEjmbMFN[cq^PjNrGzuT"]
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

@@ -1,0 +1,10 @@
+Test: ['c>W', 'Y\x12\x16\x03\x0eD\x02\x1c\x0cI\x11\x16Z\x15\x1f\x03\x01\x13[@P}{\x11K\x15\x0e\x08~tu\x0b\x11\t\rm\x14C\x01\x16{p\x01\x10\x18\x19\x17\x0f\x1f\x02\x06m[\x13\x0ey\x02\x12\x12\x03\x08z\x04[q\x06Z\x05\x0b\x05\x08\x16lVr{YrBjkMyy{}Tp(ix[t_[ZpIslVne@BiNIqrJfYKHhuCHv]l]UeV\x7fmVTlNur\\`YrcitMTVK}fCPPxOcgJpvR{rRNlqlhKrM']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

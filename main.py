@@ -57,6 +57,8 @@ last_update_time = 0
 update_interval = 0.1  # Update every 100ms
 max_coverage = 0  # Track maximum coverage
 max_coverage_percent = 0  # Track maximum coverage percentage
+thread_stats = {}  # Dictionary to track tests per thread
+thread_stats_lock = Lock()  # Lock for thread_stats dictionary
 
 # --------------------------------------------------------------------------------------------------------------------------
 
@@ -164,6 +166,7 @@ def create_stats_box(stats):
         format_line("Runtime", format_time(round(runtime, 1)), 39),
         format_line("Total Tests", total_tests, 35),
         format_line("Tests/sec", f"{round(tests_per_sec, 1)}/s", 37),
+        format_line("Threads Running", config.NUM_THREADS, 32),
         format_line("Max Coverage", get_coverage(), 34),
         format_line("Best Mutator", best_mutator, 34),
         hex_color('#ff4a96ff', "║                                                  ║")
@@ -185,9 +188,22 @@ def create_stats_box(stats):
         format_line("    XOR", f"{round(DEBUG_PROB_OF_MUT[1], 1)}%", 39),
         format_line("    Symbol Change", f"{round(DEBUG_PROB_OF_MUT[2], 1)}%", 29),
         format_line("    Interesting", f"{round(DEBUG_PROB_OF_MUT[3], 1)}%", 31),
-        hex_color('#ff4a96ff', "║                                                  ║"),
-        hex_color('#ff4a96ff', "╚══════════════════════════════════════════════════╝")
+        hex_color('#ff4a96ff', "║                                                  ║")
     ])
+    
+    # Add thread statistics if available
+    if thread_stats:
+        box_content.append(hex_color('#ff4a96ff', "║  Thread Statistics:                               ║"))
+        # Sort threads by number of tests
+        sorted_threads = sorted(thread_stats.items(), key=lambda x: x[1], reverse=True)
+        for thread_name, tests in sorted_threads:
+            # Only show fuzzing threads
+            if thread_name.startswith("thread"):
+                thread_pct = (tests / total_tests * 100) if total_tests > 0 else 0
+                box_content.append(format_line(f"    {thread_name}", f"{tests} ({round(thread_pct, 1)}%)", 26))
+        box_content.append(hex_color('#ff4a96ff', "║                                                  ║"))
+    
+    box_content.append(hex_color('#ff4a96ff', "╚══════════════════════════════════════════════════╝"))
     
     return box_content
 
@@ -248,8 +264,15 @@ def process_queue(queue, queue_name, filik, thread_name):
         if not queue or len(queue) == 0:
             return False
         
-        current_task = queue[0]
-        queue.pop(0)
+        current_task = None
+        # Используем queue_lock только для короткого извлечения задачи
+        with queue_lock:
+            if len(queue) > 0:
+                current_task = queue[0]
+                queue.pop(0)
+        
+        if not current_task:
+            return False
         
         if not isinstance(current_task, list) or len(current_task) < 2:
             return False
@@ -270,6 +293,12 @@ def process_queue(queue, queue_name, filik, thread_name):
 def processing(task, j, filik, thread_name):
     """Process a single mutation task"""
     try:
+        # Increment thread test counter
+        with thread_stats_lock:
+            if thread_name not in thread_stats:
+                thread_stats[thread_name] = 0
+            thread_stats[thread_name] += 1
+        
         # Perform mutation
         if isinstance(task[1], list):
             mutated_err_data, mut_type = mutator.mutate(task[1][j], 100, new_dict2, new_dict)
@@ -385,25 +414,54 @@ old_settings = termios.tcgetattr(sys.stdin)
 def fuzzing_thread(thread_name, filik):
     """Function to run fuzzing in a separate thread"""
     global DEBUG_PROB_OF_MUT
+    thread_id = int(thread_name.replace("thread", ""))
+    last_prob_update = time.time()
+    prob_update_interval = 1.0  # Обновляем вероятности каждую секунду для каждого потока
     
     while True:
         try:
-            # Process queues in priority order
-            if len(calibrator.queue_seg_fault) > 0:
-                process_queue(calibrator.queue_seg_fault, "segfault", filik, thread_name)
-            elif len(calibrator.queue_no_error) > 0:
-                process_queue(calibrator.queue_no_error, "no_error", filik, thread_name)
-            elif len(calibrator.queue_sig_fpe) > 0:
-                process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
+            # Select queue to process based on thread ID to reduce contention
+            # Even threads prioritize segfault, odd threads prioritize floating point exceptions
+            processed = False
             
-            # Update probabilities
-            with stats_lock:
-                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
-                new_probs = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)
-                DEBUG_PROB_OF_MUT = new_probs
+            if thread_id % 3 == 0:  # Потоки 3, 6, 9...
+                if len(calibrator.queue_seg_fault) > 0:
+                    processed = process_queue(calibrator.queue_seg_fault, "segfault", filik, thread_name)
+                elif len(calibrator.queue_no_error) > 0:
+                    processed = process_queue(calibrator.queue_no_error, "no_error", filik, thread_name)
+                elif len(calibrator.queue_sig_fpe) > 0:
+                    processed = process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
+            elif thread_id % 3 == 1:  # Потоки 1, 4, 7...
+                if len(calibrator.queue_no_error) > 0:
+                    processed = process_queue(calibrator.queue_no_error, "no_error", filik, thread_name)
+                elif len(calibrator.queue_seg_fault) > 0:
+                    processed = process_queue(calibrator.queue_seg_fault, "segfault", filik, thread_name)
+                elif len(calibrator.queue_sig_fpe) > 0:
+                    processed = process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
+            else:  # Потоки 2, 5, 8...
+                if len(calibrator.queue_sig_fpe) > 0:
+                    processed = process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
+                elif len(calibrator.queue_seg_fault) > 0:
+                    processed = process_queue(calibrator.queue_seg_fault, "segfault", filik, thread_name)
+                elif len(calibrator.queue_no_error) > 0:
+                    processed = process_queue(calibrator.queue_no_error, "no_error", filik, thread_name)
             
-            time.sleep(0.001)
+            # Update probabilities less frequently to reduce lock contention
+            current_time = time.time()
+            if current_time - last_prob_update >= prob_update_interval:
+                with stats_lock:
+                    sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                    new_probs = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)
+                with prob_mut_lock:
+                    DEBUG_PROB_OF_MUT = new_probs
+                last_prob_update = current_time
             
+            # Use adaptive sleep to reduce contention and CPU usage
+            if not processed:  # If no work was done, sleep longer
+                time.sleep(0.005)  # 5ms
+            else:
+                time.sleep(0.0001)  # 0.1ms when actively working
+                
         except Exception as e:
             with output_lock:
                 filik.write(f"\n[{thread_name}] Error: {str(e)}\n")
@@ -430,20 +488,19 @@ def main():
                 else:
                     calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
             
-            # Create and start fuzzing threads
-            thread1 = threading.Thread(
-                target=fuzzing_thread,
-                args=('thread1', filik),
-                daemon=True
-            )
-            thread2 = threading.Thread(
-                target=fuzzing_thread,
-                args=('thread2', filik),
-                daemon=True
-            )
+            # Create and start fuzzing threads based on config
+            threads = []
+            for i in range(1, config.NUM_THREADS + 1):
+                thread = threading.Thread(
+                    target=fuzzing_thread,
+                    args=(f'thread{i}', filik),
+                    daemon=True
+                )
+                threads.append(thread)
             
-            thread1.start()
-            thread2.start()
+            # Start all threads
+            for thread in threads:
+                thread.start()
             
             # Main loop for display updates and user input
             while True:
@@ -476,15 +533,65 @@ def main():
             with stats_lock:
                 sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
                 with output_lock:
-                    filik.write(f"-------------------TOTAL-------------------\n\n\n")
+                    # Calculate runtime stats
+                    end_time = time.time()
+                    runtime = end_time - start_time
+                    total_tests = len(sig_segvi) + len(time_out) + len(no_error) + len(sig_fpe)
+                    tests_per_sec = total_tests / runtime if runtime > 0 else 0
+                    
+                    # Get best mutator
+                    stats = {
+                        'sig_segvi': sig_segvi,
+                        'time_out': time_out,
+                        'no_error': no_error,
+                        'sig_fpe': sig_fpe
+                    }
+                    best_mutator = get_best_mutator(stats)
+                    
+                    # Get actual thread information
+                    active_threads = threading.enumerate()
+                    active_thread_count = threading.active_count()
+                    
+                    filik.write(f"-------------------TOTAL-------------------\n\n")
+                    filik.write(f"Runtime: {format_time(round(runtime, 1))}\n")
+                    filik.write(f"Total Tests Run: {total_tests}\n")
+                    filik.write(f"Tests/sec: {round(tests_per_sec, 1)}/s\n")
+                    filik.write(f"Configured Threads: {config.NUM_THREADS}\n")
+                    filik.write(f"Active Threads: {active_thread_count}\n")
+                    
+                    # Thread details
+                    filik.write(f"Thread Details:\n")
+                    for t in active_threads:
+                        thread_status = "active" if t.is_alive() else "inactive"
+                        tests_by_thread = thread_stats.get(t.name, 0)
+                        thread_efficiency = (tests_by_thread / total_tests * 100) if total_tests > 0 else 0
+                        thread_tests_per_sec = tests_by_thread / runtime if runtime > 0 else 0
+                        filik.write(f"  {t.name}: {thread_status} (daemon: {t.daemon})\n")
+                        if t.name.startswith("thread"):
+                            filik.write(f"    Tests completed: {tests_by_thread} ({round(thread_efficiency, 1)}% of total)\n")
+                            filik.write(f"    Tests/sec: {round(thread_tests_per_sec, 1)}/s\n")
+                    
+                    filik.write(f"Max Coverage: {get_coverage()}\n")
+                    filik.write(f"Best Mutator: {best_mutator}\n\n")
+                    
+                    filik.write(f"Error Breakdown:\n")
                     if len(sig_segvi) > 0:
-                        filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
+                        filik.write('Segmentation Faults (-11): ' + str(len(sig_segvi)) + '\n')
+                    if len(sig_fpe) > 0:
+                        filik.write('Floating Point Exceptions: ' + str(len(sig_fpe)) + '\n')
+                    if len(time_out) > 0:
+                        filik.write('Timeouts: ' + str(len(time_out)) + '\n')
                     if len(no_error) > 0:
+                        filik.write('Other Return Codes:\n')
                         for i in calibrator.codes_set:
-                            filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
-                    filik.write(f"-------------------------------------------\n\n\n")
+                            filik.write(f"  Code {i}: {calibrator.codes_dict[i]}\n")
+                    filik.write(f"\nFinal Mutation Probabilities:\n")
                     with prob_mut_lock:
-                        filik.write(f"{DEBUG_PROB_OF_MUT}")
+                        filik.write(f"  Length Change: {round(DEBUG_PROB_OF_MUT[0], 1)}%\n")
+                        filik.write(f"  XOR: {round(DEBUG_PROB_OF_MUT[1], 1)}%\n")
+                        filik.write(f"  Symbol Change: {round(DEBUG_PROB_OF_MUT[2], 1)}%\n")
+                        filik.write(f"  Interesting: {round(DEBUG_PROB_OF_MUT[3], 1)}%\n")
+                    filik.write(f"-------------------------------------------\n\n")
             
             print(colored("\nResults saved to output.txt", "green"))
             

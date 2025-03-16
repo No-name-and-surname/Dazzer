@@ -1,0 +1,5 @@
+Test: ['None', 'P-5/5v08Jn73L=f{Rnz*gYsFGrgyaxwWfVGzInXEeIWX`]tPk]lwd[xEoR_TtzLtLp\\']
+Coverage: 60.0%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

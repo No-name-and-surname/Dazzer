@@ -1,0 +1,5 @@
+Test: ['w<c\x87FSpc\\woFllJUNoJTrLhiZyKIpyQBWXaIaA', '\x1aE/\x0b\x80']
+Coverage: 73.33%
+Return code: 0
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

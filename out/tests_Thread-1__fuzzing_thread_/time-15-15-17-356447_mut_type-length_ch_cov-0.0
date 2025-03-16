@@ -1,0 +1,5 @@
+Test: ['I8(-', '\x1b\x04\x07\x02\x01\x02\x0e\x05\x00\x02\x0e']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

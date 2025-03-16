@@ -1,0 +1,10 @@
+Test: ['\x0e97*#\x08\x05\x12 \x1f\x1c#)\x17##;\t\t\x14+ \x1e.-\x0548\n \x06\t4\x0479.?\x0b\x16!".\x1c\x00#-1)\x08+\x07\x08%\x1c\t\r:?\x00 \x1e+%$\x03\x12\x0e\r\x14?\x13*:\x064"\x00+>\x01\x06\x00', 'yiYikO\\lZ^PZefy\\JoykCTIUdpinfF^JolbJEgz`QPB]nqmFOhAjNaYw}hIvtyMsehahczNYfFRIqN_TkEhSOV']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

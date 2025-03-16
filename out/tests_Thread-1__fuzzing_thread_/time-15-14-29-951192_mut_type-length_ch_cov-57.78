@@ -1,0 +1,10 @@
+Test: ['OGf\x1d\x05aV\x08', '$GI^GNlthdOP_P_aaVqOtdeqFdzLSxLLSq[ljvqfkgMr']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

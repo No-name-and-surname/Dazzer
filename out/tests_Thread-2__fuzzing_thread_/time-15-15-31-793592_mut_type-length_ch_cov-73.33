@@ -1,0 +1,10 @@
+Test: ['Q4:bc^mFocTlddKrdRkfmNw_aJMuwKl[cFBSIlxsNsXG`Ci', ' \n\x13\x01\x0b\x16?&2<4\x13+"&\x10\x0c&\x14.\x0f\x17\x18\x18\x01(\n\x1b+\x0b?:=\x1b\x07\x171-\x19$%/\x01(\t/,#=\x07\r51\x16$1\x08\x07\x02#\x0c\t,\x1b;']
+Coverage: 73.33%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

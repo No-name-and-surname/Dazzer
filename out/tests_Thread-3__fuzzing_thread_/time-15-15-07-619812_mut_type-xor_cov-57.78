@@ -1,0 +1,10 @@
+Test: ['c=aEqS:M%-9}&1>LeM?bC%1*=#&o#=3a!.<@""l=.Q/{s"7#%*MBSu}MBe_E]MT}xxGvHhzp[pvgW~GF\x7fPqVFNM}_qrNCX_yBp]uq~TSOBCpTFLCFftBrTXML^JW\x7f@@OykBhKBKJZu^Y{cOruSX', 'yXYR']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

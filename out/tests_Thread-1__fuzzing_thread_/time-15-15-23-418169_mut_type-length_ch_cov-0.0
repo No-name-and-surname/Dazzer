@@ -1,0 +1,10 @@
+Test: ['\x0f\t\x02\x0f\x02\r\x0c\t\x02\r', 'e6,T^B7;h>(zOn`rzUbZVaDIIuqxRbRxpjaYZNgmIxonVi_nfXIww[wW\\^WsEfwMTNi']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

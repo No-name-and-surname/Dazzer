@@ -1,0 +1,10 @@
+Test: ['WTTRW', 'VJ@F]U\x0fAQE+[&NOGHNZX\x0eWZ\t\x16.1QHEUIDTB\x11 YHVM\x07\x03\\S\n']
+Coverage: 71.11%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,13 @@
+Test: ['65535', "vrc<+E((3*,+&/Sv7DU,wj)IL#3+J,v=wDV/-X21$0!_br8:3>'E3a55o,*UQjdFUUmDTEoOZJdf[oRcVG_WKn[P]tNIicqLSdm^bpzErhnUBePRISFWcmqWhUVCI^nZvJM"]
+Coverage: 75.56%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

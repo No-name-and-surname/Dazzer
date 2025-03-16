@@ -1,0 +1,10 @@
+Test: ['G&/S0%ZJI0=>009:G,\'**=];\'9?0/=63y.*4[4{;!<b. "\'olwMttU]Hzt^`z\\UZkszHD_OvqmyV^LcWYDJa{Wk_QIpevc@dWZwElyyjiIS', '255']
+Coverage: 0.0%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

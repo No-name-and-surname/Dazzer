@@ -33,3 +33,7 @@ Corpus_dir = OUT_DIR
 # Create directories if they don't exist
 os.makedirs(TEST_DIR, exist_ok=True)
 os.makedirs(OUT_DIR, exist_ok=True)
+
+# Multithreading settings
+NUM_THREADS = 3
+

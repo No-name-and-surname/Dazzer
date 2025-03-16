@@ -1,0 +1,10 @@
+Test: ['¤\x85\x80\x8f', '{K[m~o}TdfRmLB^qidyBOivv}JSNGqmGJzrzHrh_DT{NGCDy,9,\x15"\x1c\x1d\x1d\x01\x15\'\x12  \x07?7\x1e\x12\x05\x10 \x1c\x16\x10&$ \'\x1a(0.0\x00\x07?%%6\x0b\x03&8\x18^JZYh[Huaetl\\hF\\nCTlH[lRUoTiXKvplaoOacOXhsLsxxA\\']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

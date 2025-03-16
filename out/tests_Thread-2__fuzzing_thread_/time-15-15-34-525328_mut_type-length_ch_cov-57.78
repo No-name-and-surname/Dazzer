@@ -1,0 +1,13 @@
+Test: ['32767', 'KzPTxruQn[pYbzujfTz^TqtamsHxExXQOOs^IZYCWAAoedIHg^EBnYLcDeQYzjTbwlcxOriwhrrrbK]rthBdeTnW\\dS^NKs']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

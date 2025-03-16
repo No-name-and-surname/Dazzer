@@ -1,0 +1,10 @@
+Test: ['$!:(jNwM_QWoNOt', "ZZVBI'WSAYBZQ%5X[-AVLCL]=KSO\rL4ZFEQ?\x07U$\x05MS\x1eVG\t\x14.K@9S\x19M\x14/GA"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

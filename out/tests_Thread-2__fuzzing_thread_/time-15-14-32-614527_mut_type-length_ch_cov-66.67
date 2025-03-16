@@ -1,0 +1,13 @@
+Test: ['5zb(8[!,gi', "*?3?!8n8Bk|j9:$>),q,/+yV7$0!GB/1>B=05>a<Mk&n#')-#(!b,>.FFa+_9<'5h`N0+2uM?)_/5FV'&5K=2?]M<?p'/An\\tgXNrswvPlTDFDriiO\\HdrPuqQAjnLKcF_JPp\\Tu]^v`TflxIXqcwDIzGo\\eaTvwTASIG]CjkZBHsxUdlbTrNMoIbcISXWKQ"]
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

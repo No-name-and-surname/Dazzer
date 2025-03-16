@@ -1,0 +1,10 @@
+Test: ['RQQWQ', 'M\n\x029VG!WUU6\x1bTNFMC])ZUQB\x1b^%.LH@DPG$D-\n?O\x19\x12\x0c\x1eMP[&UG]3\x0eL\x12\\(VVEI\x16NME3^A$ 0\x01\x0b\x02\x0b\x1b-\'&\x11\x0f\x015\x04\n&,$\x06\x038:\x0f\x11#9\r0\x0363-\x1a\x1a%\x12,\x08&\x01\'1\t\x1c$\'658>\x07\x1296:$\x1a\x027\r/\x04\x0b\x01=$%%\x01 >\x18\x1b\x022"1"#\n\r\x1c\x1f\x0b\x0e\x04\x05\r']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

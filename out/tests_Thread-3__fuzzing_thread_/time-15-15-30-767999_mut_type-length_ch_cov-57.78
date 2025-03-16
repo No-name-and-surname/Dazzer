@@ -1,0 +1,10 @@
+Test: ['None', "p[0,zq^3>'}8<X(/\\+8N>A!-s7'0E=5,?'#$.-03p>6T~)*:9'%p.3#8Y!,vmQWSgsVSTfi_LeOXsgndYjtod`]ltLGvoCoheKdPbbXGjlNVRVmmKmWXkn[D_kY[PM"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

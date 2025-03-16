@@ -1,0 +1,10 @@
+Test: ['Fb=!4[%A:).(N038;0+9B;#ac/T?u*!9)V?@7*uy&+Z3A8kD"26`\\ZhZtG^_HW]BgGNOEpMBNIWVEFkReryrvjrKf[od[RtR^oP]jbz_UKC_zAfGcspyFamNWtZtiniCoq', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

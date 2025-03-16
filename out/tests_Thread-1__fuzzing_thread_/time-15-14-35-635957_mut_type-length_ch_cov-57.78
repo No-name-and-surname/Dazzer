@@ -1,0 +1,10 @@
+Test: ['O*x.-r9u,1",8(441c9<)+0$pzjeOOqWn`WwQYed`F\x7fIF]fTJ`ObgXd\x80GXN^OyygkYWHhrjoBHKPn\\Av', 'ZZGFSRJYY`']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

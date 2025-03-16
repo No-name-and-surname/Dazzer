@@ -1,0 +1,13 @@
+Test: ['32767', 'Om5,AtiILKcVBUmvnZbnvPViymZRCZANpk_vSCiaU^mxBmuRlGEF`aikkBnce]C]zSStSSdVEo\x88PdU']
+Coverage: 62.22%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

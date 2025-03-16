@@ -1,0 +1,10 @@
+Test: ['\x1cGk\x7f\x1bs\x07A\x12GD\x15\x15~Q\x05\x16\x7fr\x04\x17YH\x0fQ\x15\x14\x12v\x1d\r\x14\x1aH\x1b\nA\x11\x01V\x12\x05q\x05m\x12\x0fo\x0e\x07\x16p\x1fuCYr\x02\x0cp\x16]db\x1a^\x1bJ{^OOc^ama{]Au|\\bK}COq~PgA}edcYvnixcYV\\rNmcISburKZgWoTz{ugdXRjYr\x7fj}@SdUZIXUHdbnVV^QsJgv^z]~v@m~gifHq{', 'None']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

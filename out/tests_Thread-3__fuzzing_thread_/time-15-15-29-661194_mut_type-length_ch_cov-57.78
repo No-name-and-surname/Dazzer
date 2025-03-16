@@ -1,0 +1,10 @@
+Test: ['ARBZ\x0f=\x05?\x034!\x15\x0c/\x0f\x0f\n\x02\x87\r\x15)2)\x03-\x100\x10/\x13?\x01=-\x08#\x030$-(\r$;\x126\n9"0\x11\x05\x01', '/wEDPiZXIKOViFqLMECZYGn`JzZKmqIUviMJwb\\yLFTkrpgsjunByVvEaB`eOoPplHM_pthnSDwyQ\\hJrsRGRqfvBK']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

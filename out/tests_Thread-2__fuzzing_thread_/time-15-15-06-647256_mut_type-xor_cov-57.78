@@ -1,0 +1,10 @@
+Test: ['lc\x13lfz{f@at]u[\x7fSL@lNz~Eom]wAqpYOCSeTF~CYZciL\\VhVqLyFRri^\x7fmjys', 'Ó']
+Coverage: 57.78%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

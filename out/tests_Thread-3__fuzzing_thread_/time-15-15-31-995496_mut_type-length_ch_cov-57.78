@@ -1,0 +1,10 @@
+Test: ['\x1e\x18-\x11\x02\r\x06\x05\x06\x01/\x14$(<!1";\x02\x18/\x1c\x03\x16\n\n\x02>9\x1f\x1a\x1e\x15\x07)&\x00É\'?,\x02\x02;-\n\x18\'\x109\x0f:,<\x04\x16$\x1a\x12 !\x06\x06$=\x01\x17%993\x03\x0e\x12 &', 'CA}rsJxtXPrEJbdn_VdYKnxjtcXROUjYPgoViKHfNAvhNO\\jFOVzokeBCL']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

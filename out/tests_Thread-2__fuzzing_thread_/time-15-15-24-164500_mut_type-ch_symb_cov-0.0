@@ -1,0 +1,11 @@
+Test: ['-92233720\x856854775808', '@e}dgbaC[[tWDP^TVqbnRUPJnsNcLEHlE[jlTPI^AyQvxqabikKlz[zgqYrneBOq^Fey[nYgkgKZoqZiwwHFYF^DewbmAYOIxyCZG']
+Coverage: 0.0%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+Первое число отрицательное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

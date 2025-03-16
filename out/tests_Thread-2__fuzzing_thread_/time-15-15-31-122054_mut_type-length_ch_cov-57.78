@@ -1,0 +1,10 @@
+Test: ['pQP[', '-O):5^nssOP]dgssnPijfN_U^PcpbMBKWKI \x125\x0f\x08=!\x160\x16$>\x03\x13\x19"\x1a\x00.\x00!?qmBeqMOdUw\\^EduiVYCPVivnNDx^EjGX`vn']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

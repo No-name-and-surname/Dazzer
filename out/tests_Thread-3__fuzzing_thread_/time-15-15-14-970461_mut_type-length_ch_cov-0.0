@@ -1,0 +1,13 @@
+Test: ['4gIKP`GlrBus]D_mqeXTocDUbuiIVtfMnM`MxmOXCMPgpY^etIOMQZiKvoRoObgXolHOhyV^jR_Y', "154-LN#p5,<JR'1$S?mHzD##'*;Td2nLz)d;&C2]/u<''//Z#h48:?s?00.Rm=:(v2S1Z08)YoFSZRCaY^xkpAeWrfiRQu`yxPhhaReDkYTMo_dWFGO_JptgMcrihutWJW`c`qgX[dVhyKH`HXllJxmXOodj["]
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Сумма больше 1
+Первое число положительное.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

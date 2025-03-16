@@ -1,0 +1,10 @@
+Test: ['\x86+~', 'cs~FM)#\'SH;<>]6T7HI#i7460K<!Hz#S}<~a;T#kA/8(;V2;4:6b0"?$v-o67G9-5uu:JmoosgFa[e`_MahCxu_o]xMpnlognUcA^yS^DsILD[HPPZDy]pH]HnkRBNeUfOA^MS]^H[pCHBgK']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

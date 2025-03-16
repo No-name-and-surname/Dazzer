@@ -1,0 +1,10 @@
+Test: ['´·²±²¾µ°²±', '4Yo+YXK|IoTR`BUg[P[wlboLHqULEI\\mn[YvD`LPLqhwZPi[Xqx]HwCjPAksyyL']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

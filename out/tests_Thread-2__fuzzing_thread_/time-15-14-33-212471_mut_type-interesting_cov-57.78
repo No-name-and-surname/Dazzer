@@ -1,0 +1,10 @@
+Test: ["\x7f\x18cc\x1b\x13.%,8\x0b:\x15&\x142+!;\x084\x0c\x1d5'L}tMP\\_@OHNJza\x7fQVK~xnn[]MJ]NYwMXbAWlKUF|[tsqrgP|_fCmqxHx[IfH^fvya{f\\eC,\x13(\x156\x12\x14\x19\x18\r +\x11.\x16/!#\x01\r\x15\x1d\x1a5\x1b", '-2147483648']
+Coverage: 57.78%
+Return code: 0
+Mutation type: interesting
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

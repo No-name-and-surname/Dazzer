@@ -1,0 +1,10 @@
+Test: ['\x1e\x18\x13\x1e\x13\x1c\x1d\x18\x13\x1c', 'A|VIe0?-LK,rX&#+=-i;#$82+mZRCZANpk_vSCiaU^mxBmuRlGEF']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

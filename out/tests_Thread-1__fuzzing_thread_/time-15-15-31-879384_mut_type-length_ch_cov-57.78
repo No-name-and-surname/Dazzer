@@ -1,0 +1,10 @@
+Test: ['"4YAvVTVS>a/zQ=hf\\|:[O-[m.Z}$]Y>&5H=', '^y3>dpq^lixVIvx^UAP`qFoeX^\\pRjVhy`SP']
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

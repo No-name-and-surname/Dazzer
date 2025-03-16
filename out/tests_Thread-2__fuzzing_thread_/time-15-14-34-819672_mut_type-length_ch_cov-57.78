@@ -1,0 +1,14 @@
+Test: ['1\x897', "'Wtwb:[170!,{8=:4M36-8*5{n@8B?O(:Q3$WC07'-<v+jEJpKGplvIoIxY^bHfwhRwQRzaULLDMMpUlbVeGu\\x^y^AcXgoXAWyuIOKdNjpzhTqjiNdXBif"]
+Coverage: 57.78%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Первое 1, второе 0
+Первое больше второго
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

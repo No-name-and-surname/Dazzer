@@ -1,0 +1,10 @@
+Test: ['T==B?XC42$5=1&21Ou*S%1W:8;m4My0p8f")")*h@=Ge3<>', 'QkaPmpMeRGAvYm_FcAQXw\\D[JngCoeB\\xdM_xmsBvvP[RiyvqjrRvQlbwoiBgtLgcstWlUCRTEspIaNERWeVdQMoDDrF']
+Coverage: 66.67%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

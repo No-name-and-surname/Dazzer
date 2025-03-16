@@ -1,0 +1,10 @@
+Test: ['"\x06>\x1d\x1f\x0bC>)"', '3+7<OPEkjJwyz\\`HPHjN[PMtlEbxCizcGRIC[Ikzc_vmxOohitI]EKyFUKCjL^mFmG^MLJQuekbe]Rvh`mVYALAB_Rlw']
+Coverage: 66.67%
+Return code: 0
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

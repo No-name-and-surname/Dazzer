@@ -1,0 +1,10 @@
+Test: ['LY&\'04j-\'78.(<qN.*WG%,)7qh%5P&9%1ZdZ\'"mv<,jELlTHIus^cHQDtZrwBasstsCQxTCi\\ubeJISpupVMHBTBuOjGKTlhCopanuwBdGC`tBnrYPtnFHYM_ovqe\\En[lPz', '256']
+Coverage: 64.44%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

@@ -1,0 +1,10 @@
+Test: ['uTF^', 'HzN?0iT=#5<_.#A2$=H!2*.62d6[:7P)/%g!2\',M"2:~!:X_D!5-].5ej(*n1:T+J4+Qe2$F*25&19u(<!TxpUWpOwliTemyxzDye\\TW^SJHOTAxMDtNMd_[bJtQWpqdMQZtt_cORDIGKloVg]d`scLDEoYDnBh^ZhSHbXYsW']
+Coverage: 0.0%
+Return code: 0
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

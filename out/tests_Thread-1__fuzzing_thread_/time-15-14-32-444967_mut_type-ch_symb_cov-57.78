@@ -1,0 +1,10 @@
+Test: ['None', 'ep_W8Q2)>8)z^/C#>=.01<.Gq?%8J4n>SM)i$<0?4wWG(K=:Q04(7kCs55.m31X?x&*/7=86Ke"d$3,:y+HE`t[T]oFeQsqTqmGHB_gx^Or_D`zkXcT]FNeydMMPZzj`WWZuxGdyQfxqVRncMbTMAd[xJFMGuSlSzihzFmFzyzt\\cpgAKy']
+Coverage: 57.78%
+Return code: 0
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+
