@@ -1,4 +1,4 @@
-
+![изображение](https://github.com/user-attachments/assets/54e341dd-d086-403a-9754-c37679ccaabd)
 # <a id="title0">Dazzer</a>
 
 Dazzer - это мутационный фаззер с открытым исходным кодом
@@ -7,20 +7,21 @@ Dazzer - это мутационный фаззер с открытым исхо
 
 ## <a id="title1">How does it actually work?</a>
 
-Мой фаззер является мутационным, следовательно, он работает за счет преобразования изначальных входных данных (они задаются пользователем [тут](#title3)) с помощью одного из мутационных алгоритмов. 
+Мой фаззер является мутационным, следовательно, он работает за счет преобразования изначальных входных данных с помощью одного из мутационных алгоритмов. 
 Состоит фаззер из 3 частей:
-   * Калибратор ([`calibrator.py`](calibrator.py) - главный модуль по работе с целью. Он занимается "общением" с ней, сбором покрытия, сохранением тесткейсов.
-   * Мутатор ([`mutator.py`]) - модуль состоящий из мутационных алгоритмов. На данный момент реализованы: Xor, Change_length, Change_symbol, Interesting, Dict.
-   * Основной блок ([`main.py`]) - самый главный модуль. В нем инициализируются потоки, считаются вероятности мутаций, отображается статистика.
+   * Калибратор ([`calibrator.py`](calibrator.py)) - главный модуль по работе с целью. Он занимается "общением" с ней, сбором покрытия, сохранением тесткейсов.
+   * Мутатор ([`mutator.py`](mutator.py)) - модуль состоящий из мутационных алгоритмов. На данный момент реализованы: Xor, Change_length, Change_symbol, Interesting, Dict.
+   * Основной блок ([`main.py`](main.py)) - самый главный модуль. В нем инициализируются потоки, считаются вероятности мутаций, отображается статистика.
 Помимо них, так же есть:
-   * Конфиг ([`config.py`]()) - 
+   * Конфигурационный файл ([`config.py`](config.py)) - файл через который настраивается фаззер (подробнее см. [тут](#title3))
 
-Here are some screens of it's work:
+Приведу несколько скриншотов Dazzer:
 
-![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-47-07.png)
+![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-22-34.png)
 
-![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/Screenshot%20from%202024-07-30%2014-45-17.png)
+![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-20-54.png)
 
+![Image alt](https://github.com/user-attachments/assets/474f6198-a4aa-47c4-b1bd-958028c1247d)
 
 ## <a id="title2">Instaling</a>
 
