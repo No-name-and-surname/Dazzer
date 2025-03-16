@@ -1,5 +1,0 @@
-Test: ['BhC6', '9x*"waDaVuUSeHCG\x81CUoZHfmHQ[TzeQoTyvtURGNPhXKATtz\\qwL[cKpDjhHCXyRUbmk\\Kvk^bncrLsREuWSI']
-Coverage: 66.67%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

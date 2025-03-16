@@ -1,5 +1,0 @@
-Test: ['None', ')\x17<\x1b"\n\r\'\x04\x11\x13\x131(\'\x1f6)-**.\x1207\x141\x0e\x05\x00%1\x06\x16%(\x15\x0477"\x0c\x04\x1a\x032\x08\x11\x00\x1d,6+']
-Coverage: 75.56%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

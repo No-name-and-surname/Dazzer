@@ -1,5 +1,0 @@
-Test: ['\x0f\x11\x10\r\x04\x11\x17"0-&\'-)<-#\x045\x1e"("?7" \x10\x00\x1e\x10\x1f\x18\x1d\x0b\x1a\x16<\x05&6;\x19\x1d\x02\x024-7"=*\'\'\x19.\x1e\x14\x0227\x1b\x10', '9223372036854775807']
-Coverage: 75.56%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

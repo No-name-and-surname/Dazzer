@@ -1,5 +1,0 @@
-Test: ['CWFe', '\x18]^\x08I\x1f\x02t\x04ji\x16\x0fK\x04\x00\x13g\x04\x16D\r\x15']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

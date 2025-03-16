@@ -1,5 +1,0 @@
-Test: ["'gU5", '\x02/\x01\x16\x101%>=\x01\x174<"\x13\x10\x01>*1\x13\x05\x0c=\x18']
-Coverage: 0.0%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

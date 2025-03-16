@@ -1,5 +1,0 @@
-Test: ['i\x02\x03=\x16%6\x03,,$\x1c\x02\x1a3\x0e\x16\x02\t\t"*6)-0\x12%\x10\x17<\x14!\x01\x01\x06>\x11/\n1\x18&2\x0c\x1e\x0e%\x0f%\x00\n*', 'None']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['2\x13\x12\x19', '2147483647']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

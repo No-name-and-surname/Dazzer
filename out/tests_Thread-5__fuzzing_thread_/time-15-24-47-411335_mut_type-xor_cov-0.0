@@ -1,5 +1,0 @@
-Test: ['\x16\x1c"0\x13\x02(\x0b\x06\r\r+;40*\x13,".\x12\x11\x17\x16\x0f\x04>\x00"\'\x122\r\x11\x1235\x01ç\x1c0%\x13>', '4294967296']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

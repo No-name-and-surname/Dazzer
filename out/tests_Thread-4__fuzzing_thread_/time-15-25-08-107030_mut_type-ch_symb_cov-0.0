@@ -1,5 +1,0 @@
-Test: ['\x0f\x04\x04\x05\x05\x01\x04\x06\x05\x00°\x03\x02\x01\x01\x03\x0e\x06{', 'No{e']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

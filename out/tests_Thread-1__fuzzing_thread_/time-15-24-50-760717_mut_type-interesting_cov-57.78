@@ -1,5 +1,0 @@
-Test: ['\x97¯\xa0\x97°\x88\x9dª¡â\x96¬\x88\x91\x96º\x92¼¥', '129']
-Coverage: 57.78%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

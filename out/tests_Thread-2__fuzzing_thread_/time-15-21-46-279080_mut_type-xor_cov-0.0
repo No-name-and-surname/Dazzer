@@ -1,5 +1,0 @@
-Test: ['dm\x1c\x00\x06\x0f', '\x03"#(']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

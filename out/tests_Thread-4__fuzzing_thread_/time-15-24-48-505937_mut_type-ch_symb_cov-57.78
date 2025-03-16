@@ -1,5 +1,0 @@
-Test: ['Ì\x80ì\x89', '7\x16\x17\x1c']
-Coverage: 57.78%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

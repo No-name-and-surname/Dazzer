@@ -1,5 +1,0 @@
-Test: ['\x9c\x9a\x91\x9c\x91\x9e\x9f\x9a\x91\x9d', 'gFGL']
-Coverage: 77.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

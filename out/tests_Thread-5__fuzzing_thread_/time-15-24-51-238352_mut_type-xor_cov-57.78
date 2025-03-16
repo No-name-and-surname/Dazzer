@@ -1,5 +1,0 @@
-Test: ['92\x893\x8172036\x8654775807', 'Èéèã']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

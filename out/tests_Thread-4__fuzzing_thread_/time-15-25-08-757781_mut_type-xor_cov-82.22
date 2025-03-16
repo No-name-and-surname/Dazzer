@@ -1,5 +1,0 @@
-Test: ['None', '\x03\x17\x16\x1d']
-Coverage: 82.22%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

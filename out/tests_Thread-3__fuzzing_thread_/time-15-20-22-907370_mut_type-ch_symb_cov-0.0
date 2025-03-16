@@ -1,5 +1,0 @@
-Test: ['y\x81\x85&q\x06t\x11j', 'None']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

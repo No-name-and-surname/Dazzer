@@ -1,5 +1,0 @@
-Test: ['¥¹º°', 'OM42AxpEmGmsKRvIW^vvug[KFezpWKOtRl\\s[ilYUmdyJSlCLvLe]KPHcEr[SfsMAMIHoMlITiaxQfERMyZXJtvQ`cfSmX']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

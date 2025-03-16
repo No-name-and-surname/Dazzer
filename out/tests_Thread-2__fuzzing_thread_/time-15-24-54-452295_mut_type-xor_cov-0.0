@@ -1,5 +1,0 @@
-Test: ['\x8329', '\x7f\x0cU\x12\x0c\t\x19\x1ee}\x15']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

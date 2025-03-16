@@ -1,5 +1,0 @@
-Test: ['Êëêá', 'b?~\'u$\'Yajp.S["n:~ud4t+/"3$.\';!,>-K-"6;$1nJ']
-Coverage: 68.89%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

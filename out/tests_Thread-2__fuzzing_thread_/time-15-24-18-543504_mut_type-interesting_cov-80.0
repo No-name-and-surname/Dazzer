@@ -1,5 +1,0 @@
-Test: ['Rb[LKzqozHK', '2147483647']
-Coverage: 80.0%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

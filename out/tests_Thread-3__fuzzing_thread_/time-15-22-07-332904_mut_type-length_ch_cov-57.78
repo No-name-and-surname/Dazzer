@@ -1,5 +1,0 @@
-Test: ['\x81:C', 'A9:-*>,0[%Z3/2R)yA-q0%L%Yc;7>+~X]9!QAm4,&B^jpEepzIQg^uT^fyHTy^BgjBiXDSnRi[S[^\\AXL^IBOSBufgptvAerXCGHa]mHvFv^rWx`UixMakZRFdPG']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

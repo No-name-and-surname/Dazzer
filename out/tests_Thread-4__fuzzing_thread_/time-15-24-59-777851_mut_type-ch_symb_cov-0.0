@@ -1,5 +1,0 @@
-Test: ['B\x1fJNPF\x1dIVx|nCxk\x7fjHW]PG', 'None']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

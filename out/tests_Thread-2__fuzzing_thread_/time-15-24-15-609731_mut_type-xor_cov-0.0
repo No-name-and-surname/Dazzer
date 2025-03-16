@@ -1,5 +1,0 @@
-Test: ['\x054)\x01>6)\x00,\t1%\x17:\x0f=?\x07?\x000\x12\x112*\x1094\x0e(\x054', '-0\r\x180\n\x0e&1\x1f,']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

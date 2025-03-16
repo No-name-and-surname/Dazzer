@@ -1,5 +1,0 @@
-Test: ['\x9e\x94ª¸\x9b\x8a\xa0\x83\x8e\x85\x85£³¼¸¢\x9b¤ª¦\x9a\x99\x9f\x9e\x87\x8c¶\x88ª¯\x9aº\x85\x99\x9a»½\x89o\x94¸\xad\x9b¶', 'R(r8e{p?8aekq[wXdeogoGINgzZZgGFCAWUXsGyWKThpeGYteZMximsdesmEsPwZG\\SmMSbgtw`nNJzfaEeaR']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

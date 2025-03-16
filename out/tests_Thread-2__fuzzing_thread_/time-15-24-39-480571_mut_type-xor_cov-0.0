@@ -1,5 +1,0 @@
-Test: ['Úff\x17F', '\x10\x13\x16\x15\x16\x1a\x11\x14\x16\x15']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

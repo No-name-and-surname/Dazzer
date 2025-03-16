@@ -1,5 +1,0 @@
-Test: ["\x18*5\x19\x10\x0f06&\x12<\x1b!#8\x14\t\x02)\n4\x13!1\x1a5\x0e\x15\x134\r'2</3(\x0e52\x17\x02", '.K#_']
-Coverage: 73.33%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

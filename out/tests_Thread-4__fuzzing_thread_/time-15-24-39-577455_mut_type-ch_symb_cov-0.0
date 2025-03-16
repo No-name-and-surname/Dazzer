@@ -1,5 +1,0 @@
-Test: ['\r\x0b\x00\r\x00\x0f\x0e\x0b\x00\x0c', 'No{e']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

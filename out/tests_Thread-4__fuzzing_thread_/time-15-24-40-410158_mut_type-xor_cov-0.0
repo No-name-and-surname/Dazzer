@@ -1,5 +1,0 @@
-Test: ['\x83;:\x83', 'í\x16\x06\r']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

@@ -35,5 +35,5 @@ os.makedirs(TEST_DIR, exist_ok=True)
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # Multithreading settings
-NUM_THREADS = 5
+NUM_THREADS = 8
 

@@ -1,5 +1,0 @@
-Test: ['u\x80', '¨\x89\x88\x83']
-Coverage: 71.11%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

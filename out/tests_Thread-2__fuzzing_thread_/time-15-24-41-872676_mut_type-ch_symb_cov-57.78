@@ -1,5 +1,0 @@
-Test: ['5\x14\x88\x1e', '-2147483648']
-Coverage: 57.78%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

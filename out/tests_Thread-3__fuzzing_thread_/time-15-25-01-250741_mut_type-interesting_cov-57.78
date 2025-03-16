@@ -1,5 +1,0 @@
-Test: ['½\x9c\x9d\x96', '4294967296']
-Coverage: 57.78%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['\x0c\n\x01\x0c\x01\x0e\x0f\n\x01\x0e', 'Éèéâ']
-Coverage: 66.67%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

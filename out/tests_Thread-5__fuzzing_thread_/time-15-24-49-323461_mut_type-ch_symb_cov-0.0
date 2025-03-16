@@ -1,5 +1,0 @@
-Test: ["l\x07\x068\x13 3\x06))!\x19\x07\x1f6\x0b\x13\x07\x0c\x0c'/3,(5\x17 \x15\x129\x11$\x04\x04\x03;\x14*\x0f4\x1d#7\t\x1b\x0b \n \x05\x0f/", '2u%)@5&8{']
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

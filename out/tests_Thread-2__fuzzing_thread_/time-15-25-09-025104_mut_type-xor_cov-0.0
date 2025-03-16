@@ -1,5 +1,0 @@
-Test: ['!/?Q\x0b\x1e\x11\x08\x1e!\r\x1443/2\x0e\x08\x01:\x1f\x18\x02=', '\x1a;:1']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ["^q9'", 'ptMAFuqhyGxBhrqd`HAnspTFqIz\\AXpMrpriATcYSTNyjMSXGUrhhTB\\c[uLbP\\_Nap']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

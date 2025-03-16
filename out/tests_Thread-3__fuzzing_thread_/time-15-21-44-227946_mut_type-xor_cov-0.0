@@ -1,5 +1,0 @@
-Test: ['\n\t¸\x0f\x0b', 'ë']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

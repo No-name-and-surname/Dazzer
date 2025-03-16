@@ -1,5 +1,0 @@
-Test: ['None', '4^\x0114&"&76,.\x0b-?<8$ \x1d\x0b\t\x04 "9+4\x13+\x1b/5&\x0b\x1c7:\x07\x07\x1a:\t\x14)5\r%\n1\x12\x1b5/#:/5\x0e\x1c\x0c\x04.\x1b\x14\x04\x10#<\x1a"3\x0c\x0b<\x16\x18(']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

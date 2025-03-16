@@ -1,5 +1,0 @@
-Test: ['M\x14\x0cA\x1032+\x05\x1f0\x01\x0e>08:)&9)\x0c$\x1e\x1c91\x17\x1d(#+\x01\x07+\x06=6-\x04/\x03/\x00\x06\x183\x1a\x16=&0.\x01\x1b=\x0c2<\x10+\x1b0ö\x01!8', '65536']
-Coverage: 0.0%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['\x9e¿¾µ', '0YgM"ed`1C|uR/mxUca{n4Ol=XJM~BqQn`%S^P<D^vNo0gX/hHw2ZOgyc8%6^vs20mTq5:B:,~Q;J*t']
-Coverage: 0.0%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

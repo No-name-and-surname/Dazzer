@@ -1,5 +1,0 @@
-Test: ['\x7fxz', 'L4B1D[pTtw[M[D_hq]nboJGLGfQymLgqce\\cSLzbl_s`NFjUeYqmRBbQGSfgdv`XvXCGlaWESXc`iVNmQ]nDNUipaMYNhFHldeUnadc']
-Coverage: 71.11%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

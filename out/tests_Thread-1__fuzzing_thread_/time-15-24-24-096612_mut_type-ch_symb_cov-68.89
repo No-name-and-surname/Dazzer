@@ -1,5 +1,0 @@
-Test: ['3\x12\x13\x18', '"+5$nZbjbbmS\\oMiL[Nn`HUdGryzZC[X\\rGLkDTHahERmBkwRj']
-Coverage: 68.89%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

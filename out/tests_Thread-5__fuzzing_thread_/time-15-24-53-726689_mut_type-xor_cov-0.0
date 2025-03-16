@@ -1,5 +1,0 @@
-Test: ['pPh', '\x13\x0f\x0c\x06']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

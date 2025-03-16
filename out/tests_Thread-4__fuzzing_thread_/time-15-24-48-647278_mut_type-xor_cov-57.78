@@ -1,5 +1,0 @@
-Test: ['g\t\x14~ZZOKC\x13JTy\\WOnMT\x00\x05Dq\n\x01U\x05\x17|ahy\x10\x07gL\x11\x05\rM\rD\\\x08D\x03lS\rjY\x1a\x18\x12\x1cYPYpjQlGZrieifnnQihj', '\x88']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

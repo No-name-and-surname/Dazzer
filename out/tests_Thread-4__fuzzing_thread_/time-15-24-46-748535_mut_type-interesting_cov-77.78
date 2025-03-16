@@ -1,5 +1,0 @@
-Test: ['\x85', '-2147483648']
-Coverage: 77.78%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['wihmlb', '\x1c\x1d\x18.E86[DG6\x1e\x1a\x1f\x12\x11\x1c\x0f-\x1e\x11:\x11/\x0b/)\t\x08?%3?\x0b\x1c8!\x07\n\x1d']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

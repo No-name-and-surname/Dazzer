@@ -1,5 +1,0 @@
-Test: ['rbpqh|Sbfr', '\x05tr\x05\x02\x1b\x1c0\x1c7:\x05\x0c6\t3\x0b=\x05\x14\x16+\x17 \x04;>\x0e%:=7\x16']
-Coverage: 0.0%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

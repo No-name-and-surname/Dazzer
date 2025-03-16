@@ -1,5 +1,0 @@
-Test: ["1%*'", '¬Ò\x8bÂØÄ\x9cÉ\x84¢Å\x9d\x9e»¹³¹ÆÃ']
-Coverage: 71.11%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

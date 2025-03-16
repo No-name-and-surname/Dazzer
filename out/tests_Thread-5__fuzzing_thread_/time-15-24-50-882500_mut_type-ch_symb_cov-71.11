@@ -1,5 +1,0 @@
-Test: ['\x17\x060\x1c\x144:5\x02+"\x0c%5í*\x18\x19%%\x06\x19>\x1f$\x0b76\n.,&/"\x0b?\x01>\x1a\x11\x19!5*>\x1d5\x18\x18\x0e\x1c\x03%\x02', 'None']
-Coverage: 71.11%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['n08io"mc57', '\x0c\x15\x14?>"\x18 \x17\x12\x19\x10\x16&7)2\x03\x186\x12\x15%!&\x1a7>\x15\x19.\x1d\x1c\x10\x1d &,;> \x12\x1e"']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

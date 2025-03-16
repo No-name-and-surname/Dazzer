@@ -1,5 +1,0 @@
-Test: ['ßÃÀÊ', 'T*1qhPWo*6<,1>+00.#*>#}0\\<6+,J(A48$3;#n7q*"/"H#']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

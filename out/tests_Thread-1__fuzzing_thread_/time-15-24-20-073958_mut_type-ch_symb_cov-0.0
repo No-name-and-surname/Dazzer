@@ -1,5 +1,0 @@
-Test: ['None', "'\x05\x17\x10\x1f\x147 &(8; \x1e\x08 &\x07=\x18\x1e?\x0f\x1b/\x04/\x03\x14:<7 86\x00?/\x06!\x19\x1d4\x02#\x197\x1d"]
-Coverage: 0.0%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

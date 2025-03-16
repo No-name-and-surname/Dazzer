@@ -1,5 +1,0 @@
-Test: ['z\x81', '!m\\(-$4-:/h_Tdbg]`ucoK[IPZRtEGccf^vXrgmy^YNRW^SCthbDGQVnI\\pAa`VThwyxTIgXa]Avvp`YzB']
-Coverage: 57.78%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

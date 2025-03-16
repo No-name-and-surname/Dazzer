@@ -1,5 +1,0 @@
-Test: ['\x02\x03\x06\x07\t', '4294967295']
-Coverage: 77.78%
-Return code: 0
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

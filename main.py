@@ -24,7 +24,61 @@ from threading import Lock
 
 import sys
 
+def fill_screen_black():
+    """Fill the entire terminal screen with black color"""
+    # Clear screen
+    sys.stdout.write("\033[2J")
+    # Set black background
+    sys.stdout.write("\033[40m")
+    # Set black foreground too (for compatibility)
+    sys.stdout.write("\033[30m")
+    # Move cursor to top-left corner
+    sys.stdout.write("\033[1;1H")
+    
+    # Get terminal size
+    term = Terminal()
+    width = term.width
+    height = term.height
+    
+    # Fill the entire screen with spaces (with black background)
+    for _ in range(height):
+        sys.stdout.write(" " * width)
+    
+    # Reset cursor to top
+    sys.stdout.write("\033[1;1H")
+    # Reset foreground color to white
+    sys.stdout.write("\033[37m")
+    sys.stdout.flush()
+    
+    # Show a small loading animation
+    loading_position = height // 2
+    sys.stdout.write(f"\033[{loading_position};{width//2 - 10}H")
+    sys.stdout.write(colored("Preparing Dazzer...", "white"))
+    sys.stdout.flush()
+    
+    # Show a simple progress bar
+    bar_width = 20
+    sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2}H[")
+    sys.stdout.write(" " * bar_width)
+    sys.stdout.write("]")
+    sys.stdout.flush()
+    
+    for i in range(bar_width):
+        time.sleep(0.02)  # Small delay for visual effect
+        sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2 + 1 + i}H")
+        sys.stdout.write(colored("█", "magenta"))
+        sys.stdout.flush()
+    
+    # Clear everything again for the actual content
+    time.sleep(0.2)
+    sys.stdout.write("\033[2J")
+    sys.stdout.write("\033[1;1H")
+    sys.stdout.flush()
+
 def signal_handler(sig, frame):
+    # Reset colors
+    sys.stdout.write("\033[0m")
+    sys.stdout.flush()
     print(colored("\nExiting...", "yellow"))
     sys.exit(0)
 
@@ -205,6 +259,9 @@ def hex_color(hex_code, text):
 
 def display_stats(stats):
     """Display fuzzing statistics in a nice format with a centered box"""
+    # Ensure black background is maintained
+    sys.stdout.write("\033[40m")
+    
     stats_box = create_stats_box(stats)
     
     term_height = term.height
@@ -216,7 +273,8 @@ def display_stats(stats):
     box_y = (term_height - box_height) // 2
     box_x = (term_width - box_width) // 2
     
-    output = ["\033[2J\033[H"]
+    # Clear screen but maintain black background
+    output = ["\033[2J\033[40m\033[H"]
     
     output.extend(["\n" * box_y])
     
@@ -227,6 +285,10 @@ def display_stats(stats):
     exit_msg = hex_color('#ffffff', "Press 'q' to exit")
     exit_padding = " " * ((term_width - len("Press 'q' to exit")) // 2)
     output.append("\033[{};{}H{}".format(box_y + box_height + 1, 0, exit_padding + exit_msg))
+    
+    # Fill any remaining space with black
+    for i in range(box_y + box_height + 2, term_height):
+        output.append("\033[{};{}H{}".format(i, 0, " " * term_width))
     
     print(''.join(output), flush=True)
 
@@ -376,7 +438,14 @@ def define_probability_of_mutations(no_error, sig_segvi, sig_fpe):
 
 def restore_terminal():
     """Restore terminal settings"""
+    # Reset colors
+    sys.stdout.write("\033[0m")
+    sys.stdout.flush()
+    # Restore terminal mode
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
+    # Clear screen once more with default colors
+    sys.stdout.write("\033[2J\033[H")
+    sys.stdout.flush()
 
 old_settings = termios.tcgetattr(sys.stdin)
 
@@ -451,6 +520,9 @@ def fuzzing_thread(thread_name, filik):
                 filik.write(f"\n[{thread_name}] Error: {str(e)}\n")
 
 def main():
+    # Fill screen with black again before starting main program
+    fill_screen_black()
+    
     global DEBUG_PROB_OF_MUT, start_time, max_coverage_percent
     last_update = time.time()
     update_interval = 0.5
@@ -575,6 +647,9 @@ def main():
         sys.exit(0)
 
 def show_welcome_screen():
+    # Fill screen with black before showing welcome
+    fill_screen_black()
+    
     title = """
     ╔╦╗┌─┐┌─┐┌─┐┌─┐┬─┐
      ║║├─┤┌─┘┌─┘├┤ ├┬┘
@@ -606,30 +681,44 @@ def show_welcome_screen():
     return selection
 
 if __name__ == '__main__':
-    selection = show_welcome_screen()
-    if selection == 0:
-        try:
-            main()
-            nt.set_options("""
-                const options = {
-                "physics": {
-                    "barnesHut": {
-                    "gravitationalConstant": -26300
-                    },
-                    "minVelocity": 0.75
-                }
-                }""")
-            for i in copy.deepcopy(calibrator.info):
-                src, dst = i[0], i[1]
-                if i[6] == 0: 
-                    nt.add_node(i[2], str(src) + f";  code:{i[7]}", color=i[4], title=str(src))
-                    nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
-                    nt.add_edge(i[2], i[3], weight=5)
-                    i[6] = 1
-            print(colored("\nAll results were saved to 'output.txt'", "magenta"))
-            print(calibrator.afiget)
-        except Exception as e:
-            print(colored(f"\nAn error occurred: {str(e)}", "red"))
-            print(colored("Try resizing your terminal or restarting the fuzzer", "white"))
-    else:
-        print(colored("\nOkay, have a good time, bye! <3", "magenta"))
+    try:
+        selection = show_welcome_screen()
+        if selection == 0:
+            try:
+                main()
+                nt.set_options("""
+                    const options = {
+                    "physics": {
+                        "barnesHut": {
+                        "gravitationalConstant": -26300
+                        },
+                        "minVelocity": 0.75
+                    }
+                    }""")
+                for i in copy.deepcopy(calibrator.info):
+                    src, dst = i[0], i[1]
+                    if i[6] == 0: 
+                        nt.add_node(i[2], str(src) + f";  code:{i[7]}", color=i[4], title=str(src))
+                        nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
+                        nt.add_edge(i[2], i[3], weight=5)
+                        i[6] = 1
+                # Reset colors before final output
+                sys.stdout.write("\033[0m")
+                sys.stdout.flush()
+                print(colored("\nAll results were saved to 'output.txt'", "magenta"))
+                print(calibrator.afiget)
+            except Exception as e:
+                # Reset colors before showing error
+                sys.stdout.write("\033[0m")
+                sys.stdout.flush()
+                print(colored(f"\nAn error occurred: {str(e)}", "red"))
+                print(colored("Try resizing your terminal or restarting the fuzzer", "white"))
+        else:
+            # Reset colors before exit message
+            sys.stdout.write("\033[0m")
+            sys.stdout.flush()
+            print(colored("\nOkay, have a good time, bye! <3", "magenta"))
+    finally:
+        # Always ensure colors are reset
+        sys.stdout.write("\033[0m")
+        sys.stdout.flush()

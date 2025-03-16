@@ -1,5 +1,0 @@
-Test: ['/\x0e\x0f\x04', 'P8QlGXR}~^cskMGDQn|y|pmQtzCXVYs}U\x18\n1*\x0c\x1a3<\x04.4\x0e\x0e\x11\x16\x14\')>\x1d&\x08ú8,\x1f?"*\x1b<c[tzJfvLfosBhwUvLSs_T^mXuHhwTNlel]m']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

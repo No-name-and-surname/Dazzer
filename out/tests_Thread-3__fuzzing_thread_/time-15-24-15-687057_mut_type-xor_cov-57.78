@@ -1,5 +1,0 @@
-Test: ['\x05\x1a\x19\x1c\x1f\x1c\x10\x1b\x1e\x1c\x10', '1|8']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

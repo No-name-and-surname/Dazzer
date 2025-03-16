@@ -1,5 +1,0 @@
-Test: ['\x0e/.%', 'KoeYBpIX_Rmf]TmuDqkifUtObVGxrpLjNc^UhCa[pKEFL`ujnLQRtP_ZuIQDICbZifFsuxeTUGR']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

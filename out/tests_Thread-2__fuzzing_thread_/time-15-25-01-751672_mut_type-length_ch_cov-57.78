@@ -1,5 +1,0 @@
-Test: ['v&&2V[[ThAA7', '²ÍÓË¦ÈóÛÝ¹È£ä§ÂÄ¢áÏêÑ±ÐßÂâì\xa0÷²þãÏåÀ¦*+\n("*))!\x10);\x1f\x113>(+6!\n9\n6\x14\x1e"\x0c9 /\x81\n"\x11.\r )0\x19\x1b\x1c\x13( %;\x11\x152>\x12\x0e9%0-7\'\x16+$\x133\x1e!\x17\x10éßòÊÎäËýÜÈÖÏýÌäÙÛÎÆÛëÆÎáïéýÖÑ×ÓôãÓÑÁ']
-Coverage: 57.78%
-Return code: 0
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['\x1f\x19\x12\x1f\x12\x1d\x1c\x19\x12\x1e', '/\x1eOC']
-Coverage: 57.78%
-Return code: 0
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

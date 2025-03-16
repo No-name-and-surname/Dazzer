@@ -1,5 +1,0 @@
-Test: ['Ë\x80ëà', "h//:9=(?=5J6>88.6K)l[#q57b*='|/b8D_ADcnWdqaOhVuL^UJfet_YMuyFSsXO_s]zDXxrB]QbqIDXTj["]
-Coverage: 66.67%
-Return code: 0
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe
