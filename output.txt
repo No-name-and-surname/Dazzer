@@ -1,164 +1,8007 @@
 test: (1,    1) 0 68.89%
 
 
-test: (None,    1) 0 57.78%
+test: (_,    1) 0 57.78%
 
 
-test: (None,    -9223372036854775808) 0 57.78%
+test: (_,    None) 0 0.0%
 
 
-test: (-128,    1) 0 57.78%
+test: (257,    None) 0 0.0%
 
 
-test: (-128,    ) 0 62.22%
+test: (257,    Noe) 0 0.0%
 
 
-test: (H#)),    -9223372036854775808) 0 57.78%
+test: (zax,    None) 0 0.0%
 
 
-test: (H#)),    XLGGFFBGEFCM@ABB@MEM) 0 57.78%
+test: (zax,    Èéèã) 0 0.0%
 
 
-test: (VJIC,    1) 0 57.78%
+test: (sSo,    Noe) 0 0.0%
 
 
-test: (VJIC,    None) 0 57.78%
+test: (sSo,    -129) 0 0.0%
 
 
-test: (o1,    ) 0 57.78%
+test: (=&?,    None) 0 0.0%
 
 
-test: (o1,    None) 0 57.78%
+test: (=&?,    9223372036854775807) 0 0.0%
 
 
-test: (6a~MKBWVNNztROqvrXBVIvBjNNplbsn`urEDkbobodKLJeKKcXuBlE]gb,    -9223372036854775808) 0 66.67%
+test: (0,    Èéèã) 0 0.0%
 
 
-test: (6a~MKBWVNNztROqvrXBVIvBjNNplbsn`urEDkbobodKLJeKKcXuBlE]gb,    QENNOOKNLOJDIHKKIDLD) 0 66.67%
+test: (0,    None) 0 0.0%
 
 
-test: (-128,    XLGGFFBGEFCM@ABB@MEM) 0 62.22%
+test: (.,    Noe) 0 0.0%
 
 
-test: (-128,    ÐÄÏÏÎÎÊÏÍÎËÅÈÉÊÊÈÅÍÅ) 0 62.22%
+test: (.,    None) 0 0.0%
 
 
-test: (OfI-,    1) 0 57.78%
+test: (7<$,    -129) 0 0.0%
 
 
-test: (OfI-,    _) 0 57.78%
+test: (7<$,    None) 0 0.0%
+
+
+test: (32768,    None) 0 0.0%
+
+
+test: (32768,    127) 0 0.0%
+
+
+test: (-32768,    9223372036854775807) 0 0.0%
+
+
+test: (-129,    1) 0 57.78%
+
+
+test: (-129,    None) 0 0.0%
+
+
+test: (HxOUPAbQnEUdQmQpOhtGFKZbenQZzpuGOdVRLGVazQAr`MxFf\FkhZ^_PYanSVdkYFSoHIwZsONE_F`p]rz]XDZvwsoSpu^SAZVm,    Èéèã) 0 0.0%
+
+
+test: (HxOUPAbQnEUdQmQpOhtGFKZbenQZzpuGOdVRLGVazQAr`MxFf\FkhZ^_PYanSVdkYFSoHIwZsONE_F`p]rz]XDZvwsoSpu^SAZVm,    -9223372036854775808) 0 0.0%
+
+
+test: (o,    None) 0 0.0%
+
+
+test: (o,    Ïîïä) 0 0.0%
+
+
+test: (32767,    Noe) 0 0.0%
+
+
+test: (32767,    Èéã) 0 0.0%
+
+
+test: (2147483647,    None) 0 0.0%
+
+
+test: (2147483647,    1) 0 0.0%
+
+
+test: (NlByPfwUKML]lPPASjxUsvUfEWntHWy]subjVT,    -129) 0 0.0%
+
+
+test: (NlByPfwUKML]lPPASjxUsvUfEWntHWy]subjVT,    None) 0 0.0%
+
+
+test: (U^F,    None) 0 0.0%
+
+
+test: (U^F,    one) 0 0.0%
+
+
+test: (127,    None) 0 0.0%
+
+
+test: (127,    0) 0 0.0%
+
+
+test: (None,    127) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (EakQnzhRYfIBQYCWRlwxOLKvjPS,    9223372036854775807) 0 0.0%
+
+
+test: (EakQnzhRYfIBQYCWRlwxOLKvjPS,    None) 0 0.0%
+
+
+test: (-32768,    923372036854775807) 0 57.78%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    128) 0 0.0%
+
+
+test: (None,    Èéèã) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    -9223372036854775808) 0 0.0%
+
+
+test: (None,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (,    Ïîïä) 0 0.0%
+
+
+test: (,    Ïïä) 0 0.0%
+
+
+test: (65537,    Noe) 0 0.0%
+
+
+test: (65537,    eo) 0 0.0%
+
+
+test: (FGBCB,    Èéã) 0 0.0%
+
+
+test: (FGBCB,    None) 0 0.0%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (4294967295,    N{ne) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    z) 0 0.0%
+
+
+test: (ksKg,    1) 0 57.78%
+
+
+test: (ksKg,    @) 0 0.0%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (4294967295,    one) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    32769) 0 0.0%
+
+
+test: (I;Y,    one) 0 0.0%
+
+
+test: (I;Y,    2+]/) 0 0.0%
+
+
+test: (\evmWA[agMN]SHUYGEc`YbmPrzqMJMsxBvmiIWxeJowMWKhyCu[ylJelr[TYZOnIGSUMnvjnBFYPxYEMyWTtAT,    None) 0 0.0%
+
+
+test: (\evmWA[agMN]SHUYGEc`YbmPrzqMJMsxBvmiIWxeJowMWKhyCu[ylJelr[TYZOnIGSUMnvjnBFYPxYEMyWTtAT,    None) 0 0.0%
+
+
+test: (None,    0) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (0,    127) 0 0.0%
+
+
+test: (0,    4294967295) 0 0.0%
+
+
+test: (0,    1) 0 0.0%
+
+
+test: (0,    None) 0 0.0%
+
+
+test: (21t8F$14<=($=~u'c0|96+(s]2&,    9223372036854775807) 0 0.0%
+
+
+test: (21t8F$14<=($=~u'c0|96+(s]2&,    None) 0 0.0%
+
+
+test: (129,    None) 0 0.0%
+
+
+test: (65535,    -129) 0 60.0%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (AziF[M,    923372036854775807) 0 0.0%
+
+
+test: (AziF[M,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (E.G5WkjcKgevLSY[_JVZwNobgBzSsYxVybV^^KRgyPIEAul_`lo,    None) 0 0.0%
+
+
+test: (E.G5WkjcKgevLSY[_JVZwNobgBzSsYxVybV^^KRgyPIEAul_`lo,    Nne) 0 0.0%
+
+
+test: (32767,    128) 0 0.0%
+
+
+test: (32767,    nxM) 0 0.0%
+
+
+test: (Æçæí,    Èéèã) 0 0.0%
+
+
+test: (Æçæí,    None) 0 0.0%
+
+
+test: (
++*!,    1) 0 0.0%
+
+
+test: (
++*!,    A) 0 0.0%
+
+
+test: (dEDO,    -9223372036854775808) 0 0.0%
+
+
+test: (dEDO,    -922337203{854775808) 0 0.0%
+
+
+test: (d1M,,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (d1M,,    ÎÚÑÑÐÐÔÑÓÐÕÛÖ×ÔÔÖÛÓÛ) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    -9223372036854775808) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (129,    Noe) 0 66.67%
+
+
+test: (IyiZDlWAJngLUXQUj[rfXO\NVH_MGBZwou`r[UOUjAowclrXKP_x\Pzlbpr,    Ïïä) 0 0.0%
+
+
+test: (IyiZDlWAJngLUXQUj[rfXO\NVH_MGBZwou`r[UOUjAowclrXKP_x\Pzlbpr,    ¤ã) 0 0.0%
+
+
+test: (HKKMI,    Noe) 0 0.0%
+
+
+test: (HKKMI,    32767) 0 0.0%
+
+
+test: (¶µµ³·,    eo) 0 0.0%
+
+
+test: (¶µµ³·,    o) 0 0.0%
+
+
+test: (]2_)(,    Èéã) 0 0.0%
+
+
+test: (]2_)(,    129) 0 0.0%
+
+
+test: (ÏÎËÊË,    None) 0 0.0%
+
+
+test: (ÏÎËÊË,    }one) 0 0.0%
+
+
+test: ({yZdRlSPQr,    None) 0 0.0%
+
+
+test: ({yZdRlSPQr,    mLMF) 0 0.0%
+
+
+test: (-1,    N{ne) 0 0.0%
+
+
+test: (-1,    &:-=) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (None,    z) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (i""=bQiZrkjXIj_BwfR\ZW_Nes_l`X]vdnq^XZ]jqsYRoYYKrLGUmSg]i_HcxBJQEuF]Lz,    1) 0 0.0%
+
+
+test: (4294967295,    Ïîïä) 0 62.22%
+
+
+test: (4294967295,    0) 0 0.0%
+
+
+test: (65537,    @) 0 0.0%
+
+
+test: (65537,    65536) 0 0.0%
+
+
+test: (_YR_R]\YR^,    None) 0 0.0%
+
+
+test: (_YR_R]\YR^,    PC^a) 0 0.0%
+
+
+test: (PV]P]RSV]Q,    one) 0 0.0%
+
+
+test: (PV]P]RSV]Q,    255) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (qPQZ,    32769) 0 0.0%
+
+
+test: (qPQZ,    1) 0 0.0%
+
+
+test: (|;Y,    one) 0 0.0%
+
+
+test: (|;Y,    ëêá) 0 0.0%
+
+
+test: (127,    2+]/) 0 0.0%
+
+
+test: (127,    None) 0 0.0%
+
+
+test: (-129,    None) 0 0.0%
+
+
+test: (-129,    Çæçì) 0 0.0%
+
+
+test: (i""=bQiZrkjXIj_BwfR\ZW_Nes_l`X]vdnq^XZ]jqsYRoYYKrLGUmSg]i_HcxBJQEuF]Lz,    1) 0 57.78%
+
+
+test: (256,    0) 0 0.0%
+
+
+test: (256,    B) 0 0.0%
+
+
+test: (Noe,    None) 0 0.0%
+
+
+test: (Noe,    None) 0 0.0%
+
+
+test: (65535,    127) 0 0.0%
+
+
+test: (65535,    [X]) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (0,    1) 0 0.0%
+
+
+test: (0,    9223372036854775807) 0 0.0%
+
+
+test: (k,    None) 0 0.0%
+
+
+test: (k,    None) 0 0.0%
+
+
+test: (Gr<J-|SqFW@AK#/~.H9mxow#4xruCHrkXbEzjhev]ZYMxETND_PiJTT[urocE]zf`bWjUMnVPVjXJnjpBYozV[Qu`FHPpyI,    9223372036854775807) 0 0.0%
+
+
+test: (Gr<J-|SqFW@AK#/~.H9mxow#4xruCHrkXbEzjhev]ZYMxETND_PiJTT[urocE]zf`bWjUMnVPVjXJnjpBYozV[Qu`FHPpyI,    9223372036854775807) 0 0.0%
+
+
+test: (21t8z$14<=($=~u'c0|96+(s]2&,    None) 0 0.0%
+
+
+test: (21t8z$14<=($=~u'c0|96+(s]2&,    None) 0 0.0%
+
+
+test: (29,    None) 0 0.0%
+
+
+test: (29,    Nne) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüáÎëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁÉýÓÐðÅÐ,    None) 0 57.78%
+
+
+test: (65z35,    -129) 0 0.0%
+
+
+test: (65z35,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    Noe) 0 0.0%
+
+
+test: (AiF[M,    923372036854775807) 0 0.0%
+
+
+test: (AiF[M,    None) 0 0.0%
+
+
+test: (32768,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (32768,    MFóGGCFzGBLA@CCALDC) 0 0.0%
+
+
+test: (-128,    None) 0 0.0%
+
+
+test: (-128,    None) 0 0.0%
+
+
+test: (}mQPYq]_Lvicaepl`MtUX]x@iIcBlCXlddqh]Cjs{OVeZVU,    Nne) 0 0.0%
+
+
+test: (}mQPYq]_Lvicaepl`MtUX]x@iIcBlCXlddqh]Cjs{OVeZVU,    4ó) 0 0.0%
+
+
+test: (_^[Z[,    128) 0 0.0%
+
+
+test: (_^[Z[,    bak) 0 0.0%
+
+
+test: (1,    nxM) 0 0.0%
+
+
+test: (1,    ìúÏ) 0 0.0%
+
+
+test: (-9223372036854775808,    Èéèã) 0 0.0%
+
+
+test: (-9223372036854775808,    None) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüáÎëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁÉýÓÐðÅÐ,    -1) 0 57.78%
+
+
+test: (0,    1) 0 0.0%
+
+
+test: (0,    RculpwLjwGtpaOvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkqj\^vV^]OfXswV_) 0 0.0%
+
+
+test: (iqGF,    A) 0 0.0%
+
+
+test: (iqGF,    Æ) 0 0.0%
+
+
+test: (âÃÂÉ,    -9223372036854775808) 0 0.0%
+
+
+test: (âÃÂÉ,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDS) 0 0.0%
+
+
+test: (ìÍÌÇ,    -922337203{854775808) 0 0.0%
+
+
+test: (ìÍÌÇ,    -922337203{85475808) 0 0.0%
+
+
+test: (4G(^,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (4G(^,    /3)UTTPUWTQ_RSPP) 0 0.0%
+
+
+test: (-9223372036854775808,    ÎÚÑÑÐÐÔÑÓÐÕÛÖ×ÔÔÖÛÓÛ) 0 0.0%
+
+
+test: (-9223372036854775808,    -9223372036854775808) 0 0.0%
+
+
+test: (4,    None) 0 0.0%
+
+
+test: (4,    Nne) 0 0.0%
+
+
+test: ((}H",    -9223372036854775808) 0 0.0%
+
+
+test: ((}H",    |k@HaZEDUotJv\mgWjG_) 0 0.0%
+
+
+test: (s$kDZKklHDml^]Caiuz_HY`]lTH]RzscHCAtZufYsvjvLmngWnu\bBpKDvCRnprP^Vm]NtdXkgJIEmFzP]q\TiCuQ_,    4294967295) 0 0.0%
+
+
+test: (.TæírS,    None) 0 57.78%
+
+
+test: (.TæírS,    :) 0 0.0%
+
+
+test: (54?,    None) 0 0.0%
+
+
+test: (54?,    1) 0 0.0%
+
+
+test: (29,    Noe) 0 0.0%
+
+
+test: (29,    -128) 0 0.0%
+
+
+test: (ÈøèÛÅíÖÀËïæÍÔÙÐÔëÚóçÙÎÝÏ×ÉÞÌÆÃÛöîôáóÚÔÎÔëÀîöâíóÙÊÑÞùÝÑûíãñó,    Ïïä) 0 0.0%
+
+
+test: (ÈøèÛÅíÖÀËïæÍÔÙÐÔëÚóçÙÎÝÏ×ÉÞÌÆÃÛöîôáóÚÔÎÔëÀîöâíóÙÊÑÞùÝÑûíãñó,    å¢ÅÎ) 0 0.0%
+
+
+test: (?,2!7<:#.'#-.9*8 >);14,-#9#7.=&)*&,    ¤ã) 0 0.0%
+
+
+test: (?,2!7<:#.'#-.9*8 >);14,-#9#7.=&)*&,    None) 0 0.0%
+
+
+test: (65536,    Noe) 0 0.0%
+
+
+test: (65536,    32767) 0 0.0%
+
+
+test: ( ,    32767) 0 0.0%
+
+
+test: ( ,    65537) 0 0.0%
+
+
+test: (None,    eo) 0 0.0%
+
+
+test: (None,    65535) 0 0.0%
+
+
+test: (Z{g.CUlD[sraBWxyBsvuSHojbQ,    o) 0 0.0%
+
+
+test: (Z{g.CUlD[sraBWxyBsvuSHojbQ,    32767) 0 0.0%
+
+
+test: (s$kDZKklHDml^]Caiuz_HY`]lTH]RzscHCAtZufYsvjvLmngWnu\bBpKDvCRnprP^Vm]NtdXkgJIEmFzP]q\TiCuQ_,    None) 0 57.78%
+
+
+test: (]2_),    129) 0 0.0%
+
+
+test: (]2_),    A\4pnF[rACstxJmmF\AReeVoe^^YVMnTSVlJPiejvtJQNO^IJgO[`fbIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_B) 0 0.0%
+
+
+test: (©¨­¬­,    None) 0 0.0%
+
+
+test: (©¨­¬­,    '5#3iytVwGi^fZtTzdjwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`) 0 0.0%
+
+
+test: (VÎËÊËY,    }one) 0 0.0%
+
+
+test: (VÎËÊËY,    -:x@PUghchSbZcOlMvCzZl`nHSuTfdfAgE) 0 0.0%
+
+
+test: (91032,    None) 0 0.0%
+
+
+test: (91032,    1) 0 0.0%
+
+
+test: (EGdZlRmnoL,    mLMF) 0 0.0%
+
+
+test: (EGdZlRmnoL,    -2147483648) 0 0.0%
+
+
+test: (,    N{ne) 0 0.0%
+
+
+test: (,    2147483647) 0 0.0%
+
+
+test: (­±,    &:-=) 0 0.0%
+
+
+test: (­±,    257) 0 0.0%
+
+
+test: ("70&TX^CgMpX]ZwDMhYcdlTnexWuvBmnAuhVyxxuRGwMeCEOA\Al[INf[CxalTE]gFINpylwTiPOFBTjOcQTPKfUH_vti,    1) 0 0.0%
+
+
+test: ("70&TX^CgMpX]ZwDMhYcdlTnexWuvBmnAuhVyxxuRGwMeCEOA\Al[INf[CxalTE]gFINpylwTiPOFBTjOcQTPKfUH_vti,    o) 0 0.0%
+
+
+test: (Noe,    ) 0 0.0%
+
+
+test: (0,    Èéã) 0 57.78%
+
+
+test: (Noe,    None) 0 0.0%
+
+
+test: (Non},    z) 0 0.0%
+
+
+test: (Non},    z) 0 0.0%
+
+
+test: (0,    ) 0 0.0%
+
+
+test: (0,    ) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    ²) 0 0.0%
+
+
+test: (Gs|@[mYVTtsAEtb[ndmAxmSejESRY]agU^BlnStCkcHvarfTYvrtsXDw]s[jzoNMI`rvaFCnt,    Ïîïä) 0 0.0%
+
+
+test: (Gs|@[mYVTtsAEtb[ndmAxmSejESRY]agU^BlnStCkcHvarfTYvrtsXDw]s[jzoNMI`rvaFCnt,    127) 0 0.0%
+
+
+test: (ptKhmX@QAY,    0) 0 0.0%
+
+
+test: (ptKhmX@QAY,    z) 0 0.0%
+
+
+test: (AkkA[,    @) 0 0.0%
+
+
+test: (AkkA[,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbD`Az) 0 0.0%
+
+
+test: (-128,    65536) 0 0.0%
+
+
+test: (-128,    KHHNK) 0 0.0%
+
+
+test: (J.43#$&.+b,    None) 0 0.0%
+
+
+test: (J.43#$&.+b,    qo) 0 0.0%
+
+
+test: (2147483647,    PC^a) 0 0.0%
 
 
 test: (0,    None) 0 57.78%
 
 
-test: (0,    ;5C!) 0 57.78%
+test: (PV]z]RSV]Q,    one) 0 0.0%
 
 
-test: (None,    ) 0 57.78%
+test: (PV]z]RSV]Q,    ne) 0 0.0%
 
 
-test: (None,    m) 0 57.78%
+test: (Pz]P]RSV]Q,    255) 0 0.0%
 
 
-test: (-128,    None) 0 62.22%
+test: (Pz]P]RSV]Q,    25) 0 0.0%
 
 
-test: (-128,    -129) 0 57.78%
+test: ((	,    None) 0 0.0%
 
 
-test: (i;0)q{A!:%M^6wI0,2%1[t|4$L&ql:~),7``9N7=,9bS-"u)6o>LX:q*=,    -9223372036854775808) 0 57.78%
+test: ((	,    -2147483648) 0 0.0%
 
 
-test: (i;0)q{A!:%M^6wI0,2%1[t|4$L&ql:~),7``9N7=,9bS-"u)6o>LX:q*=,    LYpjwyc@r^|yCPPk{gq]a`BXDJTrBLJAvdg\N_AeoPqeWIPpE^teiCciP_bBgusa`owiRYHrfVK^Oyn^LzVAEBfUqibn[yBAtBi^YdqrADIgbprbzpDK) 0 57.78%
+test: (Ïîïä,    None) 0 0.0%
 
 
-test: (128,    QENNOOKNLOJDIHKKIDLD) 0 66.67%
+test: (Ïîïä,    9223372036854775807) 0 0.0%
 
 
-test: (128,    ) 0 66.67%
+test: (qQZ,    32769) 0 0.0%
 
 
-test: (129,    XLGGFFBGEFCM@ABB@MEM) 0 66.67%
+test: (qQZ,    µ´±°¿) 0 0.0%
 
 
-test: (129,    None) 0 66.67%
+test: (257,    1) 0 0.0%
 
 
-test: (32768,    ÐÄÏÏÎÎÊÏÍÎËÅÈÉÊÊÈÅÍÅ) 0 66.67%
+test: (257,    vGmdN^rqYkD^V_) 0 0.0%
 
 
-test: (32768,    None) 0 66.67%
+test: ( G%,    one) 0 0.0%
 
 
-test: (128,    1) 0 60.0%
+test: ( G%,    îïä) 0 0.0%
 
 
-test: (128,    ³) 0 66.67%
+test: (õ²Ð,    ëêá) 0 0.0%
 
 
-test: (x1#KKWjfBZHo]D^bmeDtvxf`XaaPtoSpz\TOgEU^bPR`hFsZDuyJEVzGbVqzJkfASq,    _) 0 57.78%
+test: (õ²Ð,    }) 0 0.0%
 
 
-test: (x1#KKWjfBZHo]D^bmeDtvxf`XaaPtoSpz\TOgEU^bPR`hFsZDuyJEVzGbVqzJkfASq,    128) 0 57.78%
+test: (±²·,    2+]/) 0 0.0%
 
 
-test: (³,    None) 0 57.78%
+test: (±²·,    2147483647) 0 0.0%
 
 
-test: (³,    z#-'WLCahChSgtYlVRIoIXxbp]TXQtBgbGKmqqtEuCE[CdiDcnRUCxt) 0 57.78%
+test: (2147483647,    ÓÀÝâ) 0 66.67%
 
 
-test: (L,    ;5C!) 0 57.78%
+test: (i^Dr,    None) 0 0.0%
 
 
-test: (L,    128) 0 57.78%
+test: (i^Dr,    256) 0 0.0%
 
 
-test: (Æçæí,    ) 0 57.78%
+test: (@mKUm\ylTNitDqbuW`qgotqLXpt]hKlblQPTBZVJPj\d^`zt^Z[bsQggurjEpldIphyJNfunyWyhWCR,    Çæçì) 0 0.0%
 
 
-test: (Æçæí,    _) 0 57.78%
+test: (@mKUm\ylTNitDqbuW`qgotqLXpt]hKlblQPTBZVJPj\d^`zt^Z[bsQggurjEpldIphyJNfunyWyhWCR,    Çæç) 0 0.0%
 
 
-test: (Non,    m) 0 57.78%
+test: (?hqW=?m8+"{s{m]4'd0Pa'_Nes_l`X]vdnq^XZ]jqsYRoYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEp,    1) 0 0.0%
 
 
-test: (Non,    4294967296) 0 57.78%
+test: (?hqW=?m8+"{s{m]4'd0Pa'_Nes_l`X]vdnq^XZ]jqsYRoYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEp,    µ) 0 0.0%
 
 
-test: (_~verOD]IFJpVuBuxwhc_XJrssm_HArJPjQH_cFSOJm\FU[cwngcDicrlJgYULH[bja\pZJSh`FF,    None) 0 57.78%
+test: (ZQ^hdhKrC,    0) 0 0.0%
 
 
-test: (_~verOD]IFJpVuBuxwhc_XJrssm_HArJPjQH_cFSOJm\FU[cwngcDicrlJgYULH[bja\pZJSh`FF,    '":;]fy^NXeI]DJfmztElN]sZD[Pm\CSFdWCnz_QfwtwXAhSuwhnMlM^rWyJhTj^OW) 0 57.78%
+test: (ZQ^hdhKrC,    ]mfa_nachYT^dzOz^pKknCcqgoQUZdTV[BjsXRgLugm) 0 0.0%
 
 
-test: (128,    -129) 0 57.78%
+test: (INM,    B) 0 0.0%
 
 
-test: (128,    -128) 0 57.78%
+test: (INM,    p) 0 0.0%
 
 
-test: (i;0)q{A!:%M^6wI0,2%1[t|4$L&ql:~),7``9N7=,9bS-")6o>LX:q*=,    -9223372036854775808) 0 57.78%
+test: (^1Y>S^r[YlEMAWiuvjTA^`Yxf[JrncUy]\rfXjFrMBmy]l`trYx^m`pNCI_RCevKjniVPpWV],    None) 0 0.0%
 
 
-test: (i;0)q{A!:%M^6wI0,2%1[t|4$L&ql:~),7``9N7=,9bS-")6o>LX:q*=,    256) 0 57.78%
+test: (^1Y>S^r[YlEMAWiuvjTA^`Yxf[JrncUy]\rfXjFrMBmy]l`trYx^m`pNCI_RCevKjniVPpWV],    9*J$NpoAzDWMKYUsLF) 0 0.0%
 
 
-test: (None,    LYpjwyc@r^|yCPPk{gq]a`BXDJTrBLJAvdg\N_AeoPqeWIPpE^teiCciP_bBgusa`owiRYHrfVK^Oyn^LzVAEBfUqibn[yBAtBi^YdqrADIgbprbzpDK) 0 57.78%
+test: (+
+â ,    None) 0 0.0%
 
 
-test: (None,    3&?!<//"=';5+=35>	#1 >/(6/:!</ =
--&7)4!0!3)>:=*$=>=!&>;6;4) 0 57.78%
+test: (+
+â ,    0) 0 0.0%
+
+
+test: (32768,    127) 0 0.0%
+
+
+test: (32768,    None) 0 0.0%
+
+
+test: (eQ_uB,    [X]) 0 0.0%
+
+
+test: (eQ_uB,    N*l) 0 0.0%
+
+
+test: (}27,    None) 0 57.78%
+
+
+test: ($d%9,    4294967295) 0 0.0%
+
+
+test: ($d%9,    IODIDKJODH) 0 0.0%
+
+
+test: (Nne,    None) 0 0.0%
+
+
+test: (Nne,    >7,8) 0 0.0%
+
+
+test: (}MO[aSobbSnR`ZF[FegzQijkVoNlBmWzpKCms^`syfQPOOT[mANOMLd_rZLucxdijs^ub]YmXn[sG]wFR^jI]c_bUcJ]NMLwtXYh,    1) 0 0.0%
+
+
+test: (}MO[aSobbSnR`ZF[FegzQijkVoNlBmWzpKCms^`syfQPOOT[mANOMLd_rZLucxdijs^ub]YmXn[sG]wFR^jI]c_bUcJ]NMLwtXYh,    None) 0 0.0%
+
+
+test: (257,    9223372036854775807) 0 0.0%
+
+
+test: (257,    GLLMMILNMHFKJIIKFNI) 0 0.0%
+
+
+test: (#qMlJzOtvkSRnAYZKKYW]\pNUYRi]sdgt^ZkZOGsEraIFYqfJFbqw]ckcydMmDHPLmCVRVp,    None) 0 0.0%
+
+
+test: (#qMlJzOtvkSRnAYZKKYW]\pNUYRi]sdgt^ZkZOGsEraIFYqfJFbqw]ckcydMmDHPLmCVRVp,    +}+$) 0 0.0%
+
+
+test: (32769,    None) 0 0.0%
+
+
+test: (32769,    :h/K) 0 0.0%
+
+
+test: (Z;ah@3YZT@m!$VB:E>RC%Q,SC!ob9k\#5VFhR9!&u?(|-.TND_PiJTT[urocE]zf`bWjUMnVPVjXJnjpBYozV[Qu`FHPpyITf]MmONzYUE`oumhkFkv]h[pwYvzZ_tvma]`tkgPAeOMUk,    9223372036854775807) 0 0.0%
+
+
+test: (Z;ah@3YZT@m!$VB:E>RC%Q,SC!ob9k\#5VFhR9!&u?(|-.TND_PiJTT[urocE]zf`bWjUMnVPVjXJnjpBYozV[Qu`FHPpyITf]MmONzYUE`oumhkFkv]h[pwYvzZ_tvma]`tkgPAeOMUk,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKeuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (65536,    9223372036854775807) 0 0.0%
+
+
+test: (65536,    {ekoUWp|djjL_]ucKQ|) 0 0.0%
+
+
+test: (E]:s5s14<=($=~u'c0|9,    None) 0 0.0%
+
+
+test: (E]:s5s14<=($=~u'c0|9,    $) 0 0.0%
+
+
+test: (}27,    None) 0 57.78%
+
+
+test: (CiV,    None) 0 0.0%
+
+
+test: (CiV,    [388M\V]Q`ncopHYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\) 0 0.0%
+
+
+test: (None,    Nne) 0 0.0%
+
+
+test: (None,    C\T6) 0 0.0%
+
+
+test: (ª¡·­»¸«¥¾£¯±³¯¦»¼»´¿¡¼»¡½µ­¼­¢¯¬¹¿±¥£»´°¯¦¯³»¡¢·¢,    None) 0 0.0%
+
+
+test: (ª¡·­»¸«¥¾£¯±³¯¦»¼»´¿¡¼»¡½µ­¼­¢¯¬¹¿±¥£»´°¯¦¯³»¡¢·¢,    Èéèã) 0 0.0%
+
+
+test: (None,    -129) 0 0.0%
+
+
+test: (None,    32768) 0 0.0%
+
+
+test: (W,    None) 0 0.0%
+
+
+test: (W,    2147483647) 0 0.0%
+
+
+test: (#,    None) 0 0.0%
+
+
+test: (#,    &_#$hyMAxAi\pPh\^vYU_rUnJPVrbxafPI\fqXk`URuusnCRK\E]yAfGRKZbGDv^nb^EOzL]fcJVEGV\Q) 0 0.0%
+
+
+test: (0,    Noe) 0 0.0%
+
+
+test: (0,    -2147483648) 0 0.0%
+
+
+test: (0,    923372036854775807) 0 0.0%
+
+
+test: (0,    W\é]]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    {sPXYxxELSOuNwaukmPLfL) 0 0.0%
+
+
+test: (32769,    None) 0 66.67%
+
+
+test: (4294967295,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (4294967295,    )"##'" #&(%$''%( ') 0 0.0%
+
+
+test: (±°µ´º,    MFóGGCFzGBLA@CCALDC) 0 0.0%
+
+
+test: (±°µ´º,    %#a!'%+{\$&I-7#B<=h) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    -%3#BJvFFd\GfeBJqAA^FDLze[WReFhSHoQCQTPuuMAIBouwnm) 0 0.0%
+
+
+test: (RNMG,    None) 0 0.0%
+
+
+test: (RNMG,    256) 0 0.0%
+
+
+test: (-1,    Nne) 0 0.0%
+
+
+test: (-1,    9223372036854775807) 0 0.0%
+
+
+test: (-32768,    4ó) 0 0.0%
+
+
+test: (-32768,    Nne) 0 0.0%
+
+
+test: (-9223372036854775808,    128) 0 0.0%
+
+
+test: (-9223372036854775808,    28) 0 0.0%
+
+
+test: (_^|Z[,    bak) 0 0.0%
+
+
+test: (_^|Z[,    039) 0 0.0%
+
+
+test: (None,    nxM) 0 0.0%
+
+
+test: (None,    n{M) 0 0.0%
+
+
+test: (32769,    -9223372036854775808) 0 66.67%
+
+
+test: (-128,    Èéèã) 0 0.0%
+
+
+test: (-128,    :8qK) 0 0.0%
+
+
+test: (SGLLMMILNMHFKJIIKFNF,    None) 0 0.0%
+
+
+test: (SGLLMMILNMHFKJIIKFNF,    D(-<) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁÉýÓÐðÅÐ,    -1) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁÉýÓÐðÅÐ,    None) 0 0.0%
+
+
+test: (,    1) 0 0.0%
+
+
+test: (,    b) 0 0.0%
+
+
+test: ({,    RculpwLjwGtpaOvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkqj\^vV^]OfXswV_) 0 0.0%
+
+
+test: ({,    u'Ij~684?-=)>OvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkq) 0 0.0%
+
+
+test: (-9223372036854775808,    A) 0 0.0%
+
+
+test: (-9223372036854775808,    D) 0 0.0%
+
+
+test: ('*%0,    Æ) 0 0.0%
+
+
+test: ('*%0,    None) 0 0.0%
+
+
+test: (¥,    -9223372036854775808) 0 0.0%
+
+
+test: (¥,    -32768) 0 0.0%
+
+
+test: (],    ìúÏ) 0 57.78%
+
+
+test: (],    0) 0 0.0%
+
+
+test: (1,    -922337203{854775808) 0 0.0%
+
+
+test: (1,    vk}2337203{854775808[RO) 0 0.0%
+
+
+test: (256,    -922337203{85475808) 0 0.0%
+
+
+test: (256,    -922337203{5475808) 0 0.0%
+
+
+test: (4294967295,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (4294967295,    2147483647) 0 0.0%
+
+
+test: (4G^,    /3)UTTPUWTQ_RSPP) 0 0.0%
+
+
+test: (4G^,    /3)UTTPUWTQ_RPP) 0 0.0%
+
+
+test: (CW\\]]Y\^]XV[ZYY[V^V,    ÎÚÑÑÐÐÔÑÓÐÕÛÖ×ÔÔÖÛÓÛ) 0 0.0%
+
+
+test: (CW\\]]Y\^]XV[ZYY[V^V,    0) 0 0.0%
+
+
+test: (9223372036854775807,    -9223372036854775808) 0 0.0%
+
+
+test: (9223372036854775807,    -922332036854775808) 0 0.0%
+
+
+test: (quVXE`BGdXHaFAhkvTW\xyBnOTFstNYkqTnbrQND[ukiGzAGr]xhNWgTLMY,    None) 0 0.0%
+
+
+test: (quVXE`BGdXHaFAhkvTW\xyBnOTFstNYkqTnbrQND[ukiGzAGr]xhNWgTLMY,    32769) 0 0.0%
+
+
+test: (E]JwqH^hunFdzgxozmeylfQZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfiBIFVbB\dYxs`ccN^jsLnznsv,    Nne) 0 0.0%
+
+
+test: (E]JwqH^hunFdzgxozmeylfQZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfiBIFVbB\dYxs`ccN^jsLnznsv,    32769) 0 0.0%
+
+
+test: (¡ «,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDS) 0 57.78%
+
+
+test: (¡ «,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (¡ôÁ«,    |k@HaZEDUotJv\mgWjG_) 0 0.0%
+
+
+test: (¡ôÁ«,    :M&<\ym7!s%dPr&;WjG_FnftzEQ_txQTw^Kh) 0 0.0%
+
+
+test: (0,    4294967295) 0 0.0%
+
+
+test: (0,    9223372036854775807) 0 0.0%
+
+
+test: (¨Ò`kôÕ,    None) 0 0.0%
+
+
+test: (¨Ò`kôÕ,    None) 0 0.0%
+
+
+test: (Fqv082h^wKJavzGS\jCM`S`brZZfTSgFOsO[w^dxQJEMvrmto]iDu_xHOtGBdv]AlmHgjiqqNFejLOEhYebGOLEGV_bPOb,    :) 0 0.0%
+
+
+test: (Fqv082h^wKJavzGS\jCM`S`brZZfTSgFOsO[w^dxQJEMvrmto]iDu_xHOtGBdv]AlmHgjiqqNFejLOEhYebGOLEGV_bPOb,    aTy@[OcQcNIWmGG\FVisBEjOaVeIwuihIdodrJFbINXqVOCna\EsboZdRRlacDL]U_kiBnhPKEz_siGukBFlGAKp) 0 0.0%
+
+
+test: (0,    None) 0 0.0%
+
+
+test: (0,    32768) 0 0.0%
+
+
+test: (1,    1) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (29,    Noe) 0 0.0%
+
+
+test: (29,    {4_3) 0 0.0%
+
+
+test: (÷º±,    -128) 0 0.0%
+
+
+test: (÷º±,    «·´¾) 0 0.0%
+
+
+test: (None,    -9223372036854775808) 0 57.78%
+
+
+test: (None,    PDOONNJOMNKEHIJJHEME) 0 0.0%
+
+
+test: (´§¹ª¼·±¨¥¬¨¦¥²¡³«µ¢°º¿§¦¨²¨¼¥¶­¢¡­,    å¢ÅÎ) 0 0.0%
+
+
+test: (´§¹ª¼·±¨¥¬¨¦¥²¡³«µ¢°º¿§¦¨²¨¼¥¶­¢¡­,    65537) 0 0.0%
+
+
+test: (]m}NPxCU^zsXALEA~OfrL[HZB\KYSVNc{atfOA[A~U{cwxfL_DKlHDnxvdf,    ¤ã) 0 0.0%
+
+
+test: (]m}NPxCU^zsXALEA~OfrL[HZB\KYSVNc{atfOA[A~U{cwxfL_DKlHDnxvdf,    ,k) 0 0.0%
+
+
+test: (?,2!7<:#.'#-|.9*8 >);14,-#9#7.=&)*&,    None) 0 0.0%
+
+
+test: (?,2!7<:#.'#-|.9*8 >);14,-#9#7.=&)*&,    None) 0 0.0%
+
+
+test: (None,    Noe) 0 0.0%
+
+
+test: (None,    oe) 0 0.0%
+
+
+test: (None,    32767) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (2147483647,    32767) 0 0.0%
+
+
+test: (2147483647,    256) 0 0.0%
+
+
+test: (~}}{,    65537) 0 0.0%
+
+
+test: (~}}{,    _^}<e) 0 0.0%
+
+
+test: (256,    eo) 0 0.0%
+
+
+test: (256,    1) 0 0.0%
+
+
+test: (ÈøèÛÅíÖÀËïæÍÔÙÐÔëÚóçÙÎÝÏ×ÉÞÌÆÃÛöîôáóÚÔÎzëÀîöâíóÙÊÑÞùÝÑûíãñó,    Ïïä) 0 57.78%
+
+
+test: (ÈøèÛÅíÖÀËïæÍÔÙÐÔëÚóçÙÎÝÏ×ÉÞÌÆÃÛöîôáóÚÔÎzëÀîöâíóÙÊÑÞùÝÑûíãñó,    None) 0 0.0%
+
+
+test: (&R?)8'>+>
+	/4-,    o) 0 0.0%
+
+
+test: (&R?)8'>+>
+	/4-,    >*) 0 0.0%
+
+
+test: (Ûúæ¯ÂÔíÅÚòóàÃÖùøÃò÷ôÒÉîëãÐ,    32767) 0 0.0%
+
+
+test: (Ûúæ¯ÂÔíÅÚòóàÃÖùøÃò÷ôÒÉîëãÐ,    0) 0 0.0%
+
+
+test: (;l##$ %$)!=2 ($ 2;+ 	<=.;>">%&/&=*
+8>&8:%<,#/%29!=,    None) 0 0.0%
+
+
+test: (;l##$ %$)!=2 ($ 2;+ 	<=.;>">%&/&=*
+8>&8:%<,#/%29!=,    ') 0 0.0%
+
+
+test: (]2_~,    129) 0 0.0%
+
+
+test: (]2_~,    65536) 0 0.0%
+
+
+test: (]_),    A\4pnF[rACstxJmmF\AReeVoe^^YVMnTSVlJPiejvtJQNO^IJgO[`fbIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_B) 0 0.0%
+
+
+test: (]_),    9223372036854775807) 0 0.0%
+
+
+test: (BvrcdTGUeq_zrGhG\oHQlETpP^]]zVUFqLtH[QopLKJk^h[]Ukp,    None) 0 0.0%
+
+
+test: (BvrcdTGUeq_zrGhG\oHQlETpP^]]zVUFqLtH[QopLKJk^h[]Ukp,    2) 0 0.0%
+
+
+test: (5u>|%lHBE\tK^nzb,    '5#3iytVwGi^fZtTzdjwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`) 0 0.0%
+
+
+test: (5u>|%lHBE\tK^nzb,    Cta@N#;T4#C}~#<2(djwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`dABslZO]CdeZryHfZ) 0 0.0%
+
+
+test: (#»¾¿¾,,    }one) 0 0.0%
+
+
+test: (#»¾¿¾,,    SA@K) 0 0.0%
+
+
+test: (3(a466eKoth_FPyCOXrQopWWD,    -:x@PUghchSbZcOlMvCzZl`nHSuTfdfAgE) 0 0.0%
+
+
+test: (Ïîïä,    65535) 0 57.78%
+
+
+test: (Ïîïä,    -1) 0 0.0%
+
+
+test: (+)
+4< ",    None) 0 0.0%
+
+
+test: (+)
+4< ",    6(?M) 0 0.0%
+
+
+test: (mcjAKxDWs],    1) 0 0.0%
+
+
+test: (mcjAKxDWs],    65535) 0 0.0%
+
+
+test: (None,    mLMF) 0 0.0%
+
+
+test: (None,    -1) 0 0.0%
+
+
+test: (2147483647,    -2147483648) 0 0.0%
+
+
+test: (2147483647,    None) 0 0.0%
+
+
+test: (128,    N{ne) 0 0.0%
+
+
+test: (128,    g541) 0 0.0%
+
+
+test: (4294967296,    2147483647) 0 0.0%
+
+
+test: (4294967296,    256) 0 0.0%
+
+
+test: (-32768,    &:-=) 0 0.0%
+
+
+test: (-32768,    &-=) 0 0.0%
+
+
+test: (RkdDKVsGzg[\ZQYTYQIzMprODpOczDURWKkDgnwXxnKv]Lt]_oyfEKLapXwtAjYjwJ],    257) 0 0.0%
+
+
+test: (RkdDKVsGzg[\ZQYTYQIzMprODpOczDURWKkDgnwXxnKv]Lt]_oyfEKLapXwtAjYjwJ],    dca) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (3(a466eKoth_FPyCOXrQopWWD,    4294967296) 0 66.67%
+
+
+test: (Gj\M!)Uj=R909,    o) 0 0.0%
+
+
+test: (Gj\M!)Uj=R909,    
+) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (32768,    Èéã) 0 0.0%
+
+
+test: (32768,    -1) 0 0.0%
+
+
+test: (0,    None) 0 0.0%
+
+
+test: (0,    Éèéâ) 0 0.0%
+
+
+test: (127,    z) 0 0.0%
+
+
+test: (127,    ø) 0 0.0%
+
+
+test: (None,    z) 0 0.0%
+
+
+test: (None,    þ) 0 0.0%
+
+
+test: (|,    ) 0 0.0%
+
+
+test: (|,    ) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (-9223372036854775808,    1) 0 0.0%
+
+
+test: (None,    s) 0 57.78%
+
+
+test: (o\0qXn^sI]ObexCxF^gjfG[ztGsansHk,    ²) 0 0.0%
+
+
+test: (o\0qXn^sI]ObexCxF^gjfG[ztGsansHk,    Ø) 0 0.0%
+
+
+test: (|HG{`VbmoOHz~OY`U_VzCVh^Q~hibfZ\neyWUhOxPXsMZI]obMIOHcLfH`QATuvr[IMZ}xUO,    Ïîïä) 0 0.0%
+
+
+test: (|HG{`VbmoOHz~OY`U_VzCVh^Q~hibfZ\neyWUhOxPXsMZI]obMIOHcLfH`QATuvr[IMZ}xUO,    Ïïä) 0 0.0%
+
+
+test: (34/-"  51 /5'1'&-)!*6' 7< - ,0)/:9=27 ,    127) 0 0.0%
+
+
+test: (34/-"  51 /5'1'&-)!*6' 7< - ,0)/:9=27 ,    27) 0 0.0%
+
+
+test: (->&7'?,    0) 0 0.0%
+
+
+test: (->&7'?,    bRXrulkzzf[Bu[UVDKy_iUUhabcFECQ^vddqWYKZJ[loEcNBP) 0 0.0%
+
+
+test: (!'=[4}7(B`,    z) 0 0.0%
+
+
+test: (!'=[4}7(B`,    z) 0 0.0%
+
+
+test: (!=,    @) 0 0.0%
+
+
+test: (!=,    y) 0 0.0%
+
+
+test: (55/,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbD`Az) 0 0.0%
+
+
+test: (55/,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbDAz) 0 0.0%
+
+
+test: (4294967295,    65536) 0 0.0%
+
+
+test: (4294967295,    DWQVe) 0 0.0%
+
+
+test: (BIv_oxDgOLhPa[SDJMrELe`]`]zGsv,    KHHNK) 0 0.0%
+
+
+test: (BIv_oxDgOLhPa[SDJMrELe`]`]zGsv,    -1) 0 0.0%
+
+
+test: (-9223372036854775808,    32768) 0 60.0%
+
+
+test: (J.43#z&.+b,    qo) 0 0.0%
+
+
+test: (J.43#z&.+b,    3') 0 0.0%
+
+
+test: (None,    PC^a) 0 0.0%
+
+
+test: (None,    %U8Y) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    "-/~) 0 0.0%
+
+
+test: (ØÞÕòÕÚÛÞÕÙ,    one) 0 0.0%
+
+
+test: (ØÞÕòÕÚÛÞÕÙ,    ïîå) 0 0.0%
+
+
+test: (*,' '(),'+,    ne) 0 0.0%
+
+
+test: (*,' '(),'+,    4294967296) 0 0.0%
+
+
+test: (ÖüÛÖÛÔÕÐÛ×,    255) 0 0.0%
+
+
+test: (ÖüÛÖÛÔÕÐÛ×,    AFF) 0 0.0%
+
+
+test: (ÒøßÒßÐÑÔßÓ,    25) 0 0.0%
+
+
+test: (ÒøßÒßÐÑÔßÓ,    -9223372036854775808) 0 0.0%
+
+
+test: ((	{,    None) 0 0.0%
+
+
+test: ((	{,    6942xkrWyUOq_MdpAhIZYcgWWXwp]RULbLc\TC_]aa_GA\\ZDFBMAyUcHZwR]aZHr]PEw) 0 0.0%
+
+
+test: («,    -2147483648) 0 0.0%
+
+
+test: («,    QNMHKHDOJHD) 0 0.0%
+
+
+test: (None,    None) 0 57.78%
+
+
+test: (None,    Noe) 0 0.0%
+
+
+test: (%<n<,    9223372036854775807) 0 0.0%
+
+
+test: (%<n<,    q@fok_E`YjpeSY}S_QM) 0 0.0%
+
+
+test: (2147483647,    32769) 0 0.0%
+
+
+test: (2147483647,    CJpWa) 0 0.0%
+
+
+test: (qQ,    µ´±°¿) 0 0.0%
+
+
+test: (qQ,    None) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    32769) 0 0.0%
+
+
+test: (255,    vGmdN^rqYkD^V_) 0 0.0%
+
+
+test: (255,    #	 *:= :2;) 0 0.0%
+
+
+test: (None,    one) 0 0.0%
+
+
+test: (None,    ne) 0 0.0%
+
+
+test: (65536,    îïä) 0 0.0%
+
+
+test: (65536,    ^RkqZWbAbVPhlUVurTuelCzRD\DM[OAqxahf\KEWd^Q[MMQ) 0 0.0%
+
+
+test: (õÐ,    ëêá) 0 0.0%
+
+
+test: (õÐ,    nod) 0 0.0%
+
+
+test: (°,    None) 0 57.78%
+
+
+test: (w0R,    }) 0 0.0%
+
+
+test: (w0R,    .NP1) 0 0.0%
+
+
+test: (ýþû,    2+]/) 0 0.0%
+
+
+test: (ýþû,    xae) 0 0.0%
+
+
+test: (p!8,    2147483647) 0 0.0%
+
+
+test: (p!8,    -129) 0 0.0%
+
+
+test: (X[^]^RY\^],    ÓÀÝâ) 0 0.0%
+
+
+test: (X[^]^RY\^],    de<H) 0 0.0%
+
+
+test: (j-,Uyshj\npEjAUIsePAEkrRpiRh\fNyFpFGDZRC,    None) 0 0.0%
+
+
+test: (j-,Uyshj\npEjAUIsePAEkrRpiRh\fNyFpFGDZRC,    9223372036854775807) 0 0.0%
+
+
+test: (íÚÀö,    256) 0 0.0%
+
+
+test: (íÚÀö,    tQe) 0 0.0%
+
+
+test: (4294967295,    Çæçì) 0 0.0%
+
+
+test: (4294967295,    |æçì) 0 0.0%
+
+
+test: (-9223372036854775808,    Çæç) 0 0.0%
+
+
+test: (-9223372036854775808,    ¬ï) 0 0.0%
+
+
+test: (Zb'r|HUPfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAqgu,    1) 0 0.0%
+
+
+test: (Zb'r|HUPfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAqgu,    CrMAtP]dcRixnZANFy^WFDtpXFxJibzJDlr_CbDthXXK]JOIsCsErKCEofDt) 0 0.0%
+
+
+test: (°,    128) 0 57.78%
+
+
+test: (1|+>:(k/ozEuV^q\cIE\r[QEkd,    0) 0 0.0%
+
+
+test: (1|+>:(k/ozEuV^q\cIE\r[QEkd,    ) 0 0.0%
+
+
+test: (ÙÒÝëçëÈñÀ,    ]mfa_nachYT^dzOz^pKknCcqgoQUZdTV[BjsXRgLugm) 0 0.0%
+
+
+test: (ÙÒÝëçëÈñÀ,    -1) 0 0.0%
+
+
+test: (-*),    B) 0 0.0%
+
+
+test: (-*),    65537) 0 0.0%
+
+
+test: (None,    p) 0 0.0%
+
+
+test: (None,    J) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    65537) 0 0.0%
+
+
+test: (None,    9*J$NpoAzDWMKYUsLF) 0 0.0%
+
+
+test: (None,    °£Ã­ÇùæÈóÍÞÄÂÐÜúÅÏ) 0 0.0%
+
+
+test: (4294967296,    None) 0 0.0%
+
+
+test: (4294967296,    +p(F) 0 0.0%
+
+
+test: (ogVJDmDJBxOdlla_xNuHyqaJSgrPOyWVRQBs`KadNNXHiPkKPxgXTfwVFdDGGWVoZaQmRYhUdUQhip[B[I_[LxhHbXWeVm,    0) 0 0.0%
+
+
+test: (ogVJDmDJBxOdlla_xNuHyqaJSgrPOyWVRQBs`KadNNXHiPkKPxgXTfwVFdDGGWVoZaQmRYhUdUQhip[B[I_[LxhHbXWeVm,    thNW) 0 0.0%
+
+
+test: (vM"=Ec)U~e.(*!(Mk&F|(~2"/;[3h)x)25;,    µ) 0 57.78%
+
+
+test: (vM"=Ec)U~e.(*!(Mk&F|(~2"/;[3h)x)25;,    -32768) 0 0.0%
+
+
+test: (CxGX[,    None) 0 0.0%
+
+
+test: (CxGX[,    3<]B) 0 0.0%
+
+
+test: (-S;=I,    [X]) 0 0.0%
+
+
+test: (-S;=I,    -9223372036854775808) 0 0.0%
+
+
+test: (;5(,    N*l) 0 0.0%
+
+
+test: (;5(,    :YJtskgOrxTHxnVnuCbPlhUyaOtSqOJEVSrcststP`xaHdzV[^Yscnwws^dMTLM]IaXBLdengE) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    257) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (None,    NHCNCLMHCO) 0 0.0%
+
+
+test: (None,    IODIDKJODH) 0 0.0%
+
+
+test: (None,    ÊÌÇÊÇÈÉÌÇË) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    /.%) 0 0.0%
+
+
+test: ("(kuldwkcUwLlrI`wRdPMQG\rOv\s_gUSqFwYDp\p[TKA_E,    >7,8) 0 0.0%
+
+
+test: ("(kuldwkcUwLlrI`wRdPMQG\rOv\s_gUSqFwYDp\p[TKA_E,    mmof) 0 0.0%
+
+
+test: (2147483647,    1) 0 0.0%
+
+
+test: (2147483647,    4294967295) 0 0.0%
+
+
+test: (None,    127) 0 57.78%
+
+
+test: (-2147483648,    None) 0 0.0%
+
+
+test: (-2147483648,    -1) 0 0.0%
+
+
+test: (None,    9223372036854775807) 0 0.0%
+
+
+test: (None,    -1) 0 0.0%
+
+
+test: (²µ·,    GLLMMILNMHFKJIIKFNI) 0 0.0%
+
+
+test: (²µ·,    !**++/*(+. -,//- (/) 0 0.0%
+
+
+test: (kR,#<+9&*<>i?,<]WV!4/I[?/9h2-w>5ZbnJ45_&k#/l!2*32/7)*:HMcydMmDHPLmCVRVpHpaavivR\WmJpBeI\_PcrIeL^`T[]cZRvTMc[zHnJQNRNk[UJiUX]Erx,    None) 0 0.0%
+
+
+test: (kR,#<+9&*<>i?,<]WV!4/I[?/9h2-w>5ZbnJ45_&k#/l!2*32/7)*:HMcydMmDHPLmCVRVpHpaavivR\WmJpBeI\_PcrIeL^`T[]cZRvTMc[zHnJQNRNk[UJiUX]Erx,    5) 0 0.0%
+
+
+test: (s!<*$&;>	
+	 	9#47$
+;
+#"1	!62!'3;3)4= = ,    +}+$) 0 0.0%
+
+
+test: (s!<*$&;>	
+	 	9#47$
+;
+#"1	!62!'3;3)4= = ,    65535) 0 0.0%
+
+
+test: (32769,    None) 0 0.0%
+
+
+test: (32769,    0TN4) 0 0.0%
+
+
+test: (_yoAVlKXwoQOPjV`xvE_fim,    :h/K) 0 0.0%
+
+
+test: (_yoAVlKXwoQOPjV`xvE_fim,    v'G9) 0 0.0%
+
+
+test: (32767,    9223372036854775807) 0 0.0%
+
+
+test: (32767,    yrrsswrpsvxutwwuxpw) 0 0.0%
+
+
+test: (Z;ah@3YZT@m!$VB:E>RC%Q,SC!ob9k\#5VFhR9!&u?(|-.TND_PiJTT[urocE]zf`bWjUMnV{VjXJnjpBYozV[Qu`FHPpyITf]MmONzYUE`oumhkFkv]h[pwYvzZ_tvma]`tkgPAeOMUk,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKeuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (Z;ah@3YZT@m!$VB:E>RC%Q,SC!ob9k\#5VFhR9!&u?(|-.TND_PiJTT[urocE]zf`bWjUMnV{VjXJnjpBYozV[Qu`FHPpyITf]MmONzYUE`oumhkFkv]h[pwYvzZ_tvma]`tkgPAeOMUk,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (None,    ´·²) 0 57.78%
+
+
+test: (KHHNK,    {ekoUWp|djjL_]ucKQ|) 0 0.0%
+
+
+test: (KHHNK,    8$ZNRWp|djjL_]ucKQ|CAKfB) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (129,    $) 0 0.0%
+
+
+test: (129,    qQ\IUTXFH^WmFLaMIJp^HrP]sVsHBxa[JWbRTMkfTRbPHpw\rscdOmSbJ[BZi) 0 0.0%
+
+
+test: (4294967296,    None) 0 0.0%
+
+
+test: (4294967296,    'h"Y) 0 0.0%
+
+
+test: (2e8qyR[GFKp_r^hIzyNS]DU_jQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdp,    None) 0 0.0%
+
+
+test: (2e8qyR[GFKp_r^hIzyNS]DU_jQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdp,    4294967296) 0 0.0%
+
+
+test: (=(,    [388M\V]Q`ncopHYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\) 0 0.0%
+
+
+test: (=(,    ß·¼¼ÉØÒÙÕäêçëôÌÝÔßãÍÓÂÚäÙüÀÈåÍÚÝ×ÀèÛäâÓÃÚÍÌÕñóÃÜôÕöÏÒàØ) 0 0.0%
+
+
+test: (',    Nne) 0 0.0%
+
+
+test: (',    Nne) 0 0.0%
+
+
+test: (Ëêëà,    C\T6) 0 0.0%
+
+
+test: (Ëêëà,    None) 0 0.0%
+
+
+test: (32767,    9223372036854775807) 0 60.0%
+
+
+test: (32767,    ) 0 0.0%
+
+
+test: ((#5/9:)'<!-31-$9>96=#>9#?7/>/ -.;=3'!962-$-19#  5 ,    Èéèã) 0 0.0%
+
+
+test: ((#5/9:)'<!-31-$9>96=#>9#?7/>/ -.;=3'!962-$-19#  5 ,    Èèã) 0 0.0%
+
+
+test: (Noe,    -129) 0 0.0%
+
+
+test: (Noe,    T~YK) 0 0.0%
+
+
+test: (127,    32768) 0 0.0%
+
+
+test: (127,    65536) 0 0.0%
+
+
+test: (4294967296,    None) 0 0.0%
+
+
+test: (4294967296,    32768) 0 0.0%
+
+
+test: (,/`)/,    2147483647) 0 0.0%
+
+
+test: (,/`)/,    MNKHKGLIKH) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (4294967295,    &_#$hyMAxAi\pPh\^vYU_rUnJPVrbxafPI\fqXk`URuusnCRK\E]yAfGRKZbGDv^nb^EOzL]fcJVEGV\Q) 0 0.0%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (32769,    Noe) 0 0.0%
+
+
+test: (32769,    127) 0 0.0%
+
+
+test: (-129,    None) 0 62.22%
+
+
+test: (J`pTzq`OyPtwd\xYUiqJr[C]krDuuqcDWMNwtq\KP`tKJkYjzttGWk,    -2147483648) 0 0.0%
+
+
+test: (J`pTzq`OyPtwd\xYUiqJr[C]krDuuqcDWMNwtq\KP`tKJkYjzttGWk,    129) 0 0.0%
+
+
+test: (uEKFzJ\RCdGs\PWfdv^hOTmNxolvr]LaWVKYAwKuzPXNfmLE\mv`QFyJMtIDduyUfilNHI_OIYOufn[RuSnoYhTznXQxNscyNQ[,    923372036854775807) 0 0.0%
+
+
+test: (uEKFzJ\RCdGs\PWfdv^hOTmNxolvr]LaWVKYAwKuzPXNfmLE\mv`QFyJMtIDduyUfilNHI_OIYOufn[RuSnoYhTznXQxNscyNQ[,    ¿´µµ±´¶µ°¾³²±±³¾¶±) 0 0.0%
+
+
+test: (C,    W\é]]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (C,    W\é]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (-128,    None) 0 0.0%
+
+
+test: (-128,    -1) 0 0.0%
+
+
+test: (~mhLJ_FQGRL^p`,    {sPXYxxELSOuNwaukmPLfL) 0 0.0%
+
+
+test: (~mhLJ_FQGRL^p`,    1922?=+?!',) 0 0.0%
+
+
+test: (3276,    None) 0 0.0%
+
+
+test: (3276,    -1) 0 0.0%
+
+
+test: (None,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (None,    N'm#+\fm2O!-2"E+>"$) 0 0.0%
+
+
+test: (-9223372036854775808,    )"##'" #&(%$''%( ') 0 0.0%
+
+
+test: (-9223372036854775808,    Pe#erFLLgFNqoSV|btwyGCFQanlD`fTKtqYJTPpXFCsNTea_aSmgdXoOml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQ) 0 0.0%
+
+
+test: (±°µº,    MFóGGCFzGBLA@CCALDC) 0 0.0%
+
+
+test: (-129,    one) 0 62.22%
+
+
+test: (None,    %#a!'%+{\$&I-7#B<=h) 0 0.0%
+
+
+test: (None,    JLd[MEC-LeL<xT{`~l&ooizj`hVRAjuUcX_BQNrXDxVqUiQng_SYaiLIwb) 0 0.0%
+
+
+test: (F)(J,    None) 0 0.0%
+
+
+test: (F)(J,    Non|) 0 0.0%
+
+
+test: (None,    -%3#BJvFFd\GfeBJqAA^FDLze[WReFhSHoQCQTPuuMAIBouwnm) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (RNG,    None) 0 0.0%
+
+
+test: (RNG,    65535) 0 0.0%
+
+
+test: (None,    256) 0 0.0%
+
+
+test: (None,    26) 0 0.0%
+
+
+test: (a},    Nne) 0 0.0%
+
+
+test: (a},    257) 0 0.0%
+
+
+test: (-1,    9223372036854775807) 0 0.0%
+
+
+test: (-1,    QzPSvp@zQxUGurYdsEZhHM`EGrJbNmrAEnQKumDTEE`drMjTiWOlEtmYem^NNy]C`Z) 0 0.0%
+
+
+test: ([ZtWXTviF`nle_NvZByXxetbs,    4ó) 0 0.0%
+
+
+test: ([ZtWXTviF`nle_NvZByXxetbs,    {z^pOZJoXff_m]jVFAc^ZazbeKvgu_) 0 0.0%
+
+
+test: (-2147483648,    Nne) 0 0.0%
+
+
+test: (±°µº,    /-x)!(15437<3U`&4=5) 0 57.78%
+
+
+test: (9223372036854775808,    128) 0 0.0%
+
+
+test: (9223372036854775808,    12) 0 0.0%
+
+
+test: (BXqx`X,    28) 0 0.0%
+
+
+test: (BXqx`X,    None) 0 0.0%
+
+
+test: (2147483647,    bak) 0 0.0%
+
+
+test: (2147483647,    j(:wlQN_NCN`bw) 0 0.0%
+
+
+test: (None,    039) 0 0.0%
+
+
+test: (None,    IJ@) 0 0.0%
+
+
+test: (Nne,    nxM) 0 0.0%
+
+
+test: (Nne,    -2147483648) 0 0.0%
+
+
+test: (5,    n{M) 0 0.0%
+
+
+test: (5,    0) 0 0.0%
+
+
+test: (qgBy_BUuOfrIDGltwhwK\,    -9223372036854775808) 0 0.0%
+
+
+test: (qgBy_BUuOfrIDGltwhwK\,    ZaQiYjMlt\wN|{U{fMATwXc[jYz^DoAvIObLSuqleqlSYjSM^TmZT]KtMRfIayrjXZsiw]vkGIgpS`w[ciyxliA) 0 0.0%
+
+
+test: (-{28,    Èéèã) 0 0.0%
+
+
+test: (-{28,    bAA-X\UFs]SpEiwTPPmjPfwq^FhxChJvYv[OYNoEtz[daaYJUOYTecChH\AqH`mTrCY_lgS`EWPVpzGNE) 0 0.0%
+
+
+test: (oEV{,    :8qK) 0 0.0%
+
+
+test: (-2147483648,    @U8P) 0 62.22%
+
+
+test: (A,$)5r=#NMHFKJIIKFNF]LU]xGto,    None) 0 0.0%
+
+
+test: (A,$)5r=#NMHFKJIIKFNF]LU]xGto,    1) 0 0.0%
+
+
+test: (leV:V+Zh'4m42)m,96&rCDFYmfPORTCrIcNeVphTNENvN\TXpgAzAynuyTUjiCVD`KNwHnb,    D(-<) 0 0.0%
+
+
+test: (leV:V+Zh'4m42)m,96&rCDFYmfPORTCrIcNeVphTNENvN\TXpgAzAynuyTUjiCVD`KNwHnb,    Æª¯¾) 0 0.0%
+
+
+test: (£¨¾¤²±¢¬·ª¦¸º¦¯²µ²½¶¨²¨´¼¤µ¤«¦¥°¶¸¬ª²½¹¦¯¦º²¨«¾«,    -1) 0 0.0%
+
+
+test: (£¨¾¤²±¢¬·ª¦¸º¦¯²µ²½¶¨²¨´¼¤µ¤«¦¥°¶¸¬ª²½¹¦¯¦º²¨«¾«,    uFXwPbVUq[uki]H]GGutvgItcXTTSKrWz\LKUxALkiyleBZQjZyUaCYt\FINf) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁýÓÐðÅÐ,    None) 0 0.0%
+
+
+test: (ØáòéÓÅßåãÉÊÙ×ÌÑÝÃÁçäÝæéÔöþõÉÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁýÓÐðÅÐ,    ~one) 0 0.0%
+
+
+test: (,    1) 0 0.0%
+
+
+test: (,    SbOHpm[vWNNI^cjpvuZrsIfACfNdBmYnkMKtlracmrrJTWRvHSy`woUTzSSWPkq\BDrwoLHqXlPfpMPuuKFremO) 0 0.0%
+
+
+test: (=,    b) 0 0.0%
+
+
+test: (=,    ?]qEoQIWWOJwwe_FKNSNN) 0 0.0%
+
+
+test: (32769,    RculpwLjwGtpaOvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkqj\^vV^]OfXswV_) 0 0.0%
+
+
+test: (32769,    1 /	$,$1843='2:!4'3*
+!?
+4"
+4:%-&;:0<	?=5=>,;5<) 0 0.0%
+
+
+test: (128,    u'Ij~684?-=)>OvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkq) 0 0.0%
+
+
+test: (128,    -1) 0 0.0%
+
+
+test: (32768,    A) 0 0.0%
+
+
+test: (oEV{,    ¹»òÈ) 0 57.78%
+
+
+test: (9223372036854775807,    D) 0 0.0%
+
+
+test: (9223372036854775807,    &) 0 0.0%
+
+
+test: ('{%0,    Æ) 0 0.0%
+
+
+test: ('{%0,    -129) 0 0.0%
+
+
+test: (qHLf,    None) 0 0.0%
+
+
+test: (qHLf,    32767) 0 0.0%
+
+
+test: (Þÿþõ,    -9223372036854775808) 0 0.0%
+
+
+test: (Þÿþõ,    M[Y[AG~ZakagPm~{vAyt) 0 0.0%
+
+
+test: (1,    -32768) 0 0.0%
+
+
+test: (1,    -32768) 0 0.0%
+
+
+test: (Û,    ìúÏ) 0 0.0%
+
+
+test: (Û,    oyL) 0 0.0%
+
+
+test: (65536,    0) 0 0.0%
+
+
+test: (65536,    ) 0 0.0%
+
+
+test: (aPrTJIpa]LkcmgioxUbrIIca\owt`PGchcedVQ\,    -922337203{854775808) 0 0.0%
+
+
+test: (aPrTJIpa]LkcmgioxUbrIIca\owt`PGchcedVQ\,    qfStJyx`Gkg]mhErWTaj\_aFyLORwXoeX\rEblQRh\LXOEcUCp_A`fb]CcYqqmDhJLU^`XODqtJVPogEjRkiiPiL]pAwzP\liSHWwx`kDuYT) 0 0.0%
+
+
+test: (32769,    vk}2337203{854775808[RO) 0 0.0%
+
+
+test: (32768,    #bDJ`iKZcABMkxM) 0 66.67%
+
+
+test: (-9223372036854775808,    -922337203{85475808) 0 0.0%
+
+
+test: (-9223372036854775808,    -129) 0 0.0%
+
+
+test: (None,    -922337203{5475808) 0 0.0%
+
+
+test: (None,    RFMMLLHMOLüJKHøJGOG) 0 0.0%
+
+
+test: (65536,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (65536,    None) 0 0.0%
+
+
+test: (256,    2147483647) 0 0.0%
+
+
+test: (256,    -32768) 0 0.0%
+
+
+test: (4294967295,    /3)UTTPUWTQ_RSPP) 0 0.0%
+
+
+test: (4294967295,    `ENL9D#2!$|{!Uc8OvgOmtsWvpHHsB_JqtrLua) 0 0.0%
+
+
+test: (65536,    /3)UTTPUWTQ_RPP) 0 0.0%
+
+
+test: (65536,    None) 0 0.0%
+
+
+test: (None,    ÎÚÑÑÐÐÔÑÓÐÕÛÖ×ÔÔÖÛÓÛ) 0 0.0%
+
+
+test: (None,    2-(Z]\SK*E9?Bo)uobH,MNmtCeMbwU`CvqkmNdeRtPgaN`uZvfVbVMB) 0 0.0%
+
+
+test: (32769,    0) 0 0.0%
+
+
+test: (32769,    -129) 0 0.0%
+
+
+test: (º±±°°´±³°µ»¶·´´¶»³´,    -9223372036854775808) 0 0.0%
+
+
+test: (32769,    None) 0 66.67%
+
+
+test: (1,    -922332036854775808) 0 0.0%
+
+
+test: (1,    0) 0 0.0%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (65535,    Non) 0 0.0%
+
+
+test: (32767,    32769) 0 0.0%
+
+
+test: (32767,    »º¿¾±) 0 0.0%
+
+
+test: (None,    Nne) 0 0.0%
+
+
+test: (None,    Nze) 0 0.0%
+
+
+test: (#9J\OCP-(L}=-0:*2.z.d7mZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfi,    32769) 0 0.0%
+
+
+test: (#9J\OCP-(L}=-0:*2.z.d7mZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfi,    [XeNm) 0 0.0%
+
+
+test: (äÅÄÏ,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDS) 0 0.0%
+
+
+test: (äÅÄÏ,    G!>-*;hXg7l>.WQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDSuyeMrQGOSEfqT) 0 0.0%
+
+
+test: (z¡ «,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (z¡ «,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP{widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (129,    |k@HaZEDUotJv\mgWjG_) 0 0.0%
+
+
+test: (129,    127) 0 0.0%
+
+
+test: (@dw«ZkD,    :M&<\ym7!s%dPr&;WjG_FnftzEQ_txQTw^Kh) 0 0.0%
+
+
+test: (º±±°°´±³°µ»¶·´´¶»³´,    BbK}tbsddFkorifya@Hs) 0 57.78%
+
+
+test: (257,    4294967295) 0 0.0%
+
+
+test: (257,    429967295) 0 0.0%
+
+
+test: (z,    9223372036854775807) 0 0.0%
+
+
+test: (z,    XD]r|lGkXXc^sYv@807avoAO[u[kn[kGnAu) 0 0.0%
+
+
+test: (¨Ò`}ôÕ,    None) 0 0.0%
+
+
+test: (¨Ò`}ôÕ,    87r6) 0 0.0%
+
+
+test: (Gc=.%T,    None) 0 0.0%
+
+
+test: (Gc=.%T,    ,) 0 0.0%
+
+
+test: (K3>Hu`8?5t4:]g1);07'5#i$8{&\#>b?3^AFr1we|$5a&:+$3'U&`@0Y?zY%L7&).z'`u6@&?&b7B,>!j,0g<,$%N5/?IOJBHxMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\,    :) 0 0.0%
+
+
+test: (K3>Hu`8?5t4:]g1);07'5#i$8{&\#>b?3^AFr1we|$5a&:+$3'U&`@0Y?zY%L7&).z'`u6@&?&b7B,>!j,0g<,$%N5/?IOJBHxMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\,    :) 0 0.0%
+
+
+test: (zMJTbKwv]JF{o`Vq\o\^NffZho[zsOsgKbXDmvyqJNQHSaUxIcDtsH{~XJa}PQt[VUMMrzYVpsyTeY^{spy{jc^ls^,    aTy@[OcQcNIWmGG\FVisBEjOaVeIwuihIdodrJFbINXqVOCna\EsboZdRRlacDL]U_kiBnhPKEz_siGukBFlGAKp) 0 0.0%
+
+
+test: (zMJTbKwv]JF{o`Vq\o\^NffZho[zsOsgKbXDmvyqJNQHSaUxIcDtsH{~XJa}PQt[VUMMrzYVpsyTeY^{spy{jc^ls^,    3Il~3'!0<+IWmGG\FVisBEjOaVeIwuihIdodrJFbINXqVOCna\EsboZdRRlacDL]U_kiBnhPKEz_s) 0 0.0%
+
+
+test: (tDiFrAGbUTXBHMCsTlwO^Zq\flxmrRCtKHa_NrotBHyBgxgg_ZCxUKOGD]eWRNPuSJ\YM^PWuR[U_oH`MMnQL^gQA,    None) 0 0.0%
+
+
+test: (tDiFrAGbUTXBHMCsTlwO^Zq\flxmrRCtKHa_NrotBHyBgxgg_ZCxUKOGD]eWRNPuSJ\YM^PWuR[U_oH`MMnQL^gQA,    }one) 0 0.0%
+
+
+test: (-2147483648,    32768) 0 0.0%
+
+
+test: (-2147483648,    »º¿¾°) 0 0.0%
+
+
+test: (@dw«ZkD,    None) 0 57.78%
+
+
+test: (T,    None) 0 0.0%
+
+
+test: (T,    256) 0 0.0%
+
+
+test: (257,    Noe) 0 0.0%
+
+
+test: (257,    :;G;) 0 0.0%
+
+
+test: (0,    {4_3) 0 0.0%
+
+
+test: (0,    9223372036854775807) 0 0.0%
+
+
+test: (5=G,    -128) 0 0.0%
+
+
+test: (5=G,    128) 0 0.0%
+
+
+test: (32768,    «·´¾) 0 0.0%
+
+
+test: (32768,    ~·´¾) 0 0.0%
+
+
+test: (;wx+ubkNgQKRKyW`lNkLvMQlZXvLAlnRrMDLBS,    -9223372036854775808) 0 0.0%
+
+
+test: (;wx+ubkNgQKRKyW`lNkLvMQlZXvLAlnRrMDLBS,    128) 0 0.0%
+
+
+test: (4,    PDOONNJOMNKEHIJJHEME) 0 0.0%
+
+
+test: (4,    PDOONNJOMNKEHIJJHEM) 0 0.0%
+
+
+test: (32767,    å¢ÅÎ) 0 0.0%
+
+
+test: (32767,    Ô³¸) 0 0.0%
+
+
+test: (a,    1) 0 57.78%
+
+
+test: (a,    M) 0 0.0%
+
+
+test: (ÚêúÉ×ÿÄÒÙýôßÆËÂÆùÈáõËÜÏÝÅÛÌÞÔÑÉäüæóáÈÆÜÆùÒüäðÿáËØÃÌëÏÃéÿñãá,    ¤ã) 0 0.0%
+
+
+test: (ÚêúÉ×ÿÄÒÙýôßÆËÂÆùÈáõËÜÏÝÅÛÌÞÔÑÉäüæóáÈÆÜÆùÒüäðÿáËØÃÌëÏÃéÿñãá,    00{w) 0 0.0%
+
+
+test: (96$]By,p2?'9J)R1-<,$4k,01$8#FO-p/"&:7b*>*83>%,G&B/$2:34_befA[YHCo]RlEzaVeYpzsJVxJdTsxsTICckTCR\xAqOTme]RTtjMkoprwZgui,    ,k) 0 0.0%
+
+
+test: (96$]By,p2?'9J)R1-<,$4k,01$8#FO-p/"&:7b*>*83>%,G&B/$2:34_befA[YHCo]RlEzaVeYpzsJVxJdTsxsTICckTCR\xAqOTme]RTtjMkoprwZgui,    X8lq) 0 0.0%
+
+
+test: (¸«µ¦°»½¤© ¤ªû©¾­¿§¹®¼¶³«ª¤¾¤°©º¡®­¡,    None) 0 0.0%
+
+
+test: (¸«µ¦°»½¤© ¤ªû©¾­¿§¹®¼¶³«ª¤¾¤°©º¡®­¡,    -32768) 0 0.0%
+
+
+test: (32767,    None) 0 0.0%
+
+
+test: (32767,    -) 0 0.0%
+
+
+test: (Nonz,    Noe) 0 0.0%
+
+
+test: (Nonz,    :<4L) 0 0.0%
+
+
+test: (S8-!\WgDaVcY[QTeMLr_GZQLu^zETvikZCGGbqKPuheOUdEeU^PBjPQAdPutFeZuhaFMeAuHD\Sx`Q]a^w,    oe) 0 0.0%
+
+
+test: (S8-!\WgDaVcY[QTeMLr_GZQLu^zETvikZCGGbqKPuheOUdEeU^PBjPQAdPutFeZuhaFMeAuHD\Sx`Q]a^w,    u,cG) 0 0.0%
+
+
+test: ((O#$,    32767) 0 0.0%
+
+
+test: ((O#$,    256) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    Îïîå) 0 0.0%
+
+
+test: (129,    65537) 0 60.0%
+
+
+test: (2147|83647,    32767) 0 0.0%
+
+
+test: (2147|83647,    128) 0 0.0%
+
+
+test: (None,    256) 0 0.0%
+
+
+test: (None,    pCtBvIecMPLGZc\BnVMdhREwWNpFou^^qqlIfVKIV^yqQSca\kTnRUa) 0 0.0%
+
+
+test: (65535,    65537) 0 0.0%
+
+
+test: (65535,    65535) 0 0.0%
+
+
+test: (-129,    _^}<e) 0 0.0%
+
+
+test: (-129,    None) 0 0.0%
+
+
+test: (2147483647,    eo) 0 0.0%
+
+
+test: (2147483647,    ) 0 0.0%
+
+
+test: (32768,    1) 0 0.0%
+
+
+test: (32768,    65536) 0 0.0%
+
+
+test: (None,    Ïïä) 0 0.0%
+
+
+test: (None,    Ïï) 0 0.0%
+
+
+test: (¢±¯¼ª¡§¾³º¾°³¤·¥½£´¦¬©±°¾¤ª³ »´·»,    None) 0 0.0%
+
+
+test: (¢±¯¼ª¡§¾³º¾°³¤·¥½£´¦¬©±°¾¤ª³ »´·»,    None) 0 0.0%
+
+
+test: (None,    o) 0 0.0%
+
+
+test: (None,    9223372036854775807) 0 0.0%
+
+
+test: (129,    LOOIM) 0 66.67%
+
+
+test: (0,    32767) 0 0.0%
+
+
+test: (0,    255) 0 0.0%
+
+
+test: (úÛÇãõÌäûÓÒÁâ÷ØÙâÓÖÕóèÏÊÂñ,    0) 0 0.0%
+
+
+test: (úÛÇãõÌäûÓÒÁâ÷ØÙâÓÖÕóèÏÊÂñ,    None) 0 0.0%
+
+
+test: (Kqz]}IG$ %$)!=2 ($ 2;+ 	<=.;>">%&/&=*
+8>&8:%<,#/%29!=paYQoJd,    None) 0 0.0%
+
+
+test: (Kqz]}IG$ %$)!=2 ($ 2;+ 	<=.;>">%&/&=*
+8>&8:%<,#/%29!=paYQoJd,    'Oj0i``UwRThgEMfKhSAuxZtsg]DnTY`SdHjbkvEyqKQUvYrim_eO][rC) 0 0.0%
+
+
+test: (TLc}lLKocJKyzdFNR]xo~GzKsozu]TDodfS}RA~TQMQkJI@pIR{EeWlcQduIWUwyqJziSCL@mnbJa]wzV{sNdRvx,    ') 0 0.0%
+
+
+test: (TLc}lLKocJKyzdFNR]xo~GzKsozu]TDodfS}RA~TQMQkJI@pIR{EeWlcQduIWUwyqJziSCL@mnbJa]wzV{sNdRvx,    4294967295) 0 0.0%
+
+
+test: (4294967296,    129) 0 0.0%
+
+
+test: (4294967296,    zyr) 0 0.0%
+
+
+test: (]2_,    65536) 0 0.0%
+
+
+test: (]2_,    OXMAY) 0 0.0%
+
+
+test: (LK7_y,    A\4pnF[rACstxJmmF\AReeVoe^^YVMnTSVlJPiejvtJQNO^IJgO[`fbIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_B) 0 0.0%
+
+
+test: (LK7_y,    ;7y,DZ96BCe/":<$)f"}?/"%{.ID1z>`99,.<30U)9<1/:9#:0t|F2bIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_BzkMfzQbDH\o[ZJvIoXcXZJAJapTMgQP\jowdlZUf_Mv`aWgjpkKOxT) 0 0.0%
+
+
+test: (|_),    9223372036854775807) 0 0.0%
+
+
+test: (|_),    ½¶¶··³¶´·²¼±°³³±¼´³) 0 0.0%
+
+
+test: (32767,    None) 0 0.0%
+
+
+test: (32767,    -2147483648) 0 0.0%
+
+
+test: (tbK?z{XUUA]PVYE}NVmeXacnh[,    >*) 0 57.78%
+
+
+test: (tbK?z{XUUA]PVYE}NVmeXacnh[,    TF) 0 0.0%
+
+
+test: (256,    '5#3iytVwGi^fZtTzdjwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`) 0 0.0%
+
+
+test: (256,    ¯½«»áñüÞÿÏáÖîÒüÜòìâÿÿòÒØÕÜòÕÿæÿÐìÍçëÍþÀÛÆØüíÂÁÚòÿÑþÔè) 0 0.0%
+
+
+test: (HCX5?8!	6#,    Cta@N#;T4#C}~#<2(djwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`dABslZO]CdeZryHfZ) 0 0.0%
+
+
+test: (HCX5?8!	6#,    255) 0 0.0%
+
+
+test: (UB+¿¾,vXp,    }one) 0 0.0%
+
+
+test: (UB+¿¾,vXp,    ) 0 0.0%
+
+
+test: (,    SA@K) 0 0.0%
+
+
+test: (,    h#M#) 0 0.0%
+
+
+test: (-9223372036854775808,    -:x@PUghchSbZcOlMvCzZl`nHSuTfdfAgE) 0 0.0%
+
+
+test: (-9223372036854775808,    129) 0 0.0%
+
+
+test: (ËÿûêíÝÎÜìøÖóûÎáÎÕæÁØåÌÝùÙ×ÔÔóßÜÏøÅýÁÒØæùÅÂÃâ×áÒÔÜâù,    2) 0 57.78%
+
+
+test: (-1,    65535) 0 0.0%
+
+
+test: (-1,    QTzKRgaOxg\lKsOGBJWKmsRqmY_rfZWS) 0 0.0%
+
+
+test: (257,    -1) 0 0.0%
+
+
+test: (257,    ¯³) 0 0.0%
+
+
+test: (129,    None) 0 0.0%
+
+
+test: (129,    96(:wYg_VyDiw`_XPe_rbqxfuaxAhup^\NRjixhpN]izUq\lEIROOJbL^dWZbTCBnLoW]vTdTgmB_YlglqwoMnaj[kfKSZ`kk\) 0 0.0%
+
+
+test: ([hCYORGhaM,    6(?M) 0 0.0%
+
+
+test: ([hCYORGhaM,    `wg?V_XrZyuualqDlaHlr`hwJ`zMPcAFYljKNM`XTbzy`klsVoSCnyMO_wQQVkfKS_KGv_Lb\) 0 0.0%
+
+
+test: (L(5Ptm.<'IzK_TXbPkT^mnHPogUjtz_MFvKZCMExr[ArTrarJZcMp^b`mQnKMiq,    1) 0 0.0%
+
+
+test: (L(5Ptm.<'IzK_TXbPkT^mnHPogUjtz_MFvKZCMExr[ArTrarJZcMp^b`mQnKMiq,    4294967295) 0 0.0%
+
+
+test: (",%7<,    65535) 0 0.0%
+
+
+test: (",%7<,    4294967296) 0 0.0%
+
+
+test: (None,    mLMF) 0 0.0%
+
+
+test: (None,    65537) 0 0.0%
+
+
+test: (4294967295,    -1) 0 0.0%
+
+
+test: (4294967295,    «·) 0 0.0%
+
+
+test: (ËÿûêíÝÎÜìøÖóûÎáÎÕæÁØåÌÝùÙ×ÔÔóßÜÏøÅýÁÒØæùÅÂÃâ×áÒÔÜâù,    FEeAtVwXKgwtreGStaa^EDcxrZNJsmkL\WLdGnGhFPmN][JOhJkpfd`LvrTQDwMY_`jEHJnIlEO^gXzmfzeUYX) 0 57.78%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (65535,    2147483647) 0 0.0%
+
+
+test: (-128,    N{ne) 0 0.0%
+
+
+test: (-128,    Q3d9) 0 0.0%
+
+
+test: (1{8,    g541) 0 0.0%
+
+
+test: (1{8,    8Sht) 0 0.0%
+
+
+test: (None,    2147483647) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (MG@wmVE\d],    256) 0 0.0%
+
+
+test: (MG@wmVE\d],    TP]) 0 0.0%
+
+
+test: (kmEB]uF^wukMSamSYUWZizyIrCwiB\Q_Ksc`yOWQKuxTuRIEI,    &:-=) 0 0.0%
+
+
+test: (kmEB]uF^wukMSamSYUWZizyIrCwiB\Q_Ksc`yOWQKuxTuRIEI,    pB{XVxVecNdyQTIWB_pNQA__jWCwF_U[[cVewYVwffKNCqMXGErR[RYFPAnw[hEk[CXAwIKsmigyGm) 0 0.0%
+
+
+test: (¥»º¿¾°,    &-=) 0 0.0%
+
+
+test: (¥»º¿¾°,    ¯¤´) 0 0.0%
+
+
+test: (32767,    257) 0 0.0%
+
+
+test: (32767,    TVR) 0 0.0%
+
+
+test: (32768,    -2147483648) 0 57.78%
+
+
+test: (32768,    ¨·´±²±½¶³±½) 0 0.0%
+
+
+test: (Îïîå,    1) 0 0.0%
+
+
+test: (Îïîå,    None) 0 0.0%
+
+
+test: (-128,    4294967296) 0 0.0%
+
+
+test: (-128,    pv}p}rsv}r) 0 0.0%
+
+
+test: (None,    o) 0 0.0%
+
+
+test: (None,    -129) 0 0.0%
+
+
+test: (65536,    
+) 0 0.0%
+
+
+test: (65536,    Q[]`GLOClqu^IwejyJvJOSdhbaZ`TedBwPJ`UkrwjntdJvRYWQZnnCLQyLFQFl_k]z) 0 0.0%
+
+
+test: (255,    ) 0 0.0%
+
+
+test: (255,    ) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (`sGQc,    Èéã) 0 0.0%
+
+
+test: (`sGQc,    4294967296) 0 0.0%
+
+
+test: (4294967295,    -1) 0 0.0%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (.87*;' &-%(%-513838).+78$7
+!0!#970$=%6!,    dca) 0 57.78%
+
+
+test: (F,    None) 0 0.0%
+
+
+test: (F,    129) 0 0.0%
+
+
+test: (L,    Éèéâ) 0 0.0%
+
+
+test: (L,    ´) 0 0.0%
+
+
+test: (None,    z) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (27,    ø) 0 0.0%
+
+
+test: (27,    z) 0 0.0%
+
+
+test: (kJK@,    z) 0 0.0%
+
+
+test: (kJK@,    m) 0 0.0%
+
+
+test: (4,    þ) 0 0.0%
+
+
+test: (4,    9223372036854775807) 0 0.0%
+
+
+test: (,,    ) 0 0.0%
+
+
+test: (,,    j) 0 0.0%
+
+
+test: (',    ) 0 0.0%
+
+
+test: (',    Ä) 0 0.0%
+
+
+test: (\-+d\BtgupB^bhTFBGjVVfjAQgGjgQqJLRH_kAZMAWEQsiERuM\,    ) 0 0.0%
+
+
+test: (.87*;' &-%(%-513838).+78$7
+!0!#970$=%6!,    1T1xuPuwAXe]) 0 57.78%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (4294967295,    ;Fb_) 0 0.0%
+
+
+test: (-92233720z6854775808,    1) 0 0.0%
+
+
+test: (-92233720z6854775808,    p) 0 0.0%
+
+
+test: (None,    s) 0 0.0%
+
+
+test: (None,    Z) 0 0.0%
+
+
+test: ([lW_5(0#M*v)89$!Q*A%9'5!Z1R&5nHkvXgr_FnP]wYf]ugY\tiO_`n[bvmr[t,    ²) 0 0.0%
+
+
+test: ([lW_5(0#M*v)89$!Q*A%9'5!Z1R&5nHkvXgr_FnP]wYf]ugY\tiO_`n[bvmr[t,    2) 0 0.0%
+
+
+test: (65536,    Ø) 0 0.0%
+
+
+test: (65536,    ) 0 0.0%
+
+
+test: (0;z+;?;:A=K)%e2(-}85*m8ulLcE2<>|/+i%9CpD6r8$X/Nt-T'!?41l2X6JU/$/!4]-z(wm#gsVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhr,    Ïîïä) 0 0.0%
+
+
+test: (0;z+;?;:A=K)%e2(-}85*m8ulLcE2<>|/+i%9CpD6r8$X/Nt-T'!?41l2X6JU/$/!4]-z(wm#gsVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhr,    32767) 0 0.0%
+
+
+test: (ýÉÆúá×ãìîÎÉûÿÎØáÔÞ×ûÂ×éßÐÿéèãçÛÝïäøÖÔéÎùÑÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÌÛüùÔÎ,    Ïïä) 0 0.0%
+
+
+test: (ýÉÆúá×ãìîÎÉûÿÎØáÔÞ×ûÂ×éßÐÿéèãçÛÝïäøÖÔéÎùÑÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÌÛüùÔÎ,    256) 0 0.0%
+
+
+test: (I}rNUcWXZz}OKzlU`jcOvc]kdK]\WSoi[PLb`]zMemFxo|hZWx|z}VJyS}Udta@CGn|xoHM`z,    127) 0 0.0%
+
+
+test: (I}rNUcWXZz}OKzlU`jcOvc]kdK]\WSoi[PLb`]zMemFxo|hZWx|z}VJyS}Udta@CGn|xoHM`z,    ¸»¾) 0 0.0%
+
+
+test: (\-+d\BtgupB^bhTFBGjVVfjAQgGjgQqJLRH_kAZMAWEQsiERuM\,    32768) 0 57.78%
+
+
+test: (­¾¦·§¿,    0) 0 0.0%
+
+
+test: (­¾¦·§¿,    BroWfNMGNdH\b\[_VOoeYzrgXQZnAuDEFbTKko_Kbldqcxxu\NXhvZpCm]KKWzWpyAMGGINVFaNiw^Av\rptfw) 0 0.0%
+
+
+test: (wVtCWdz`HoaDYM\Z\WoPQxaog[AeBrBzTqiYmm[sTe]S,    bRXrulkzzf[Bu[UVDKy_iUUhabcFECQ^vddqWYKZJ[loEcNBP) 0 0.0%
+
+
+test: (wVtCWdz`HoaDYM\Z\WoPQxaog[AeBrBzTqiYmm[sTe]S,    $J7\3#;)%Zuxr"UVDKy_iUUhabcFECQ^vddqWYKZJ[loEcNBPFEocFOep_eBFdy) 0 0.0%
+
+
+test: (129,    z) 0 0.0%
+
+
+test: (129,    9223372036854775807) 0 0.0%
+
+
+test: (129,    z) 0 0.0%
+
+
+test: (129,    ) 0 0.0%
+
+
+test: (,    @) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (~Q_lkTvKQx`skfYw]e^IZyJ^niXhgTtSdW\g]PeIyjdWsO_oLZsDkauNOlgmAWbpDYtTWJayqiMsBbirdObl[Nxp[GW_Kzcxnl,    y) 0 0.0%
+
+
+test: (~Q_lkTvKQx`skfYw]e^IZyJ^niXhgTtSdW\g]PeIyjdWsO_oLZsDkauNOlgmAWbpDYtTWJayqiMsBbirdObl[Nxp[GW_Kzcxnl,    {) 0 0.0%
+
+
+test: (}kRZJHtMoeBLPRb\`GyCb[EQGOCqfVgoj]oGGGQkC]njQ^PfhJkXzpeYag\brIAel,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbD`Az) 0 0.0%
+
+
+test: (}kRZJHtMoeBLPRb\`GyCb[EQGOCqfVgoj]oGGGQkC]njQ^PfhJkXzpeYag\brIAel,    E./82<6K)"(cVs) 0 0.0%
+
+
+test: (Z@IYao_`lNJeNBFXFvncdQ]PBLyY\GGmbz[hD[ZdsC\ACGojxhZvoSO[iRMvyIfQoUB\qsdQcrmngoY,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbDAz) 0 0.0%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}@gPxp[erauGJeag`KWdN`Hyi|]^ZsaerUP}g,    27) 0 57.78%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}@gPxp[erauGJeag`KWdN`Hyi|]^ZsaerUP}g,    -1) 0 0.0%
+
+
+test: (°¶½°½²³¶½±,    65536) 0 0.0%
+
+
+test: (°¶½°½²³¶½±,    6536) 0 0.0%
+
+
+test: (-9223372036854775808,    DWQVe) 0 0.0%
+
+
+test: (-9223372036854775808,    WQVe) 0 0.0%
+
+
+test: (<7!:12.%-:43;2##9,    KHHNK) 0 0.0%
+
+
+test: (<7!:12.%-:43;2##9,    ÊÉÉÏÊ) 0 0.0%
+
+
+test: (5!x72iC"%$:;.3z~JMrELe`]`]zGsvWhrh]mJEjlRkOhVW,    -1) 0 0.0%
+
+
+test: (5!x72iC"%$:;.3z~JMrELe`]`]zGsvWhrh]mJEjlRkOhVW,    Hb) 0 0.0%
+
+
+test: (ebwb_RnbP@R\A~nqTriIH[EPlaYP`sddtJYFaJYq]taviomHYyqupeAjyRVsqb^Iv_kJhiZkLw,    32768) 0 0.0%
+
+
+test: (ebwb_RnbP@R\A~nqTriIH[EPlaYP`sddtJYFaJYq]taviomHYyqupeAjyRVsqb^Iv_kJhiZkLw,    tPXPwGbofOELQTn) 0 0.0%
+
+
+test: (J.43#z&.+,    qo) 0 0.0%
+
+
+test: (J.43#z&.+,    *8) 0 0.0%
+
+
+test: (9223372036854775807,    3') 0 0.0%
+
+
+test: (9223372036854775807,    }tNSB_VFPMfeeQwIAXudTCm[Y) 0 0.0%
+
+
+test: (Z@IYao_`lNJeNBFXFvncdQ]PBLyY\GGmbz[hD[ZdsC\ACGojxhZvoSO[iRMvyIfQoUB\qsdQcrmngoY,    ù×ÃçýÜÏÄËÎüýåÜÉÊÐÝÃÝÑÛñããÌúÍÝØÿòÇñùðÇÙÆàìýÉÀÞÚùÀûåÞíëÂÇáàÕèÌÍßÇÍìËþàïààêÌ	Éò) 0 57.78%
+
+
+test: (Noe,    %U8Y) 0 0.0%
+
+
+test: (Noe,    129) 0 0.0%
+
+
+test: (MJH,    None) 0 0.0%
+
+
+test: (MJH,    Noe) 0 0.0%
+
+
+test: (@iv,    "-/~) 0 0.0%
+
+
+test: (@iv,    YVT) 0 0.0%
+
+
+test: (^7B@KÚÛÞÕÙgStst,    one) 0 0.0%
+
+
+test: (^7B@KÚÛÞÕÙgStst,    Q?3<ud]Ya]AEWErCTEYbKaTyLz`Si_Z_GV) 0 0.0%
+
+
+test: (255,    ïîå) 0 0.0%
+
+
+test: (255,    65537) 0 0.0%
+
+
+test: (None,    ne) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (255,    4294967296) 0 0.0%
+
+
+test: (255,    ²´¿²¿°±´¿°) 0 0.0%
+
+
+test: (IDT5kQCO{SptwHt^MbLeJFwlQhu`uIResLHLd_\dtITjkEJYXsfe]nVHGTFV[QqlR,    255) 0 0.0%
+
+
+test: (IDT5kQCO{SptwHt^MbLeJFwlQhu`uIResLHLd_\dtITjkEJYXsfe]nVHGTFV[QqlR,    25) 0 0.0%
+
+
+test: (C%+q,    PC^a) 0 57.78%
+
+
+test: (C%+q,    None) 0 0.0%
+
+
+test: (@fQ]h<9jOGVPfZbCyk[_DJfnwxbyfBk,    25) 0 0.0%
+
+
+test: (@fQ]h<9jOGVPfZbCyk[_DJfnwxbyfBk,    65536) 0 0.0%
+
+
+test: (32769,    -9223372036854775808) 0 0.0%
+
+
+test: (32769,    65537) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    !)8*KFVOAOobDfdnVbjLlNcnH^FaJExosopWFpBqc_DKK_AQ]QtFsOZfPMFHKJmeGtZy`TiRyCr) 0 0.0%
+
+
+test: (Pn*z,    6942xkrWyUOq_MdpAhIZYcgWWXwp]RULbLc\TC_]aa_GA\\ZDFBMAyUcHZwR]aZHr]PEw) 0 0.0%
+
+
+test: (Pn*z,    \Ph]!.V>BiH!5i,B3`"gag$WWXwp]RULbLc\TC_]aa_GA\\ZDFBMAyUcHZwR]aZHr]PEwji\oYEbiwJTPjSHarskMCla) 0 0.0%
+
+
+test: (sZW\CgbVIZvQQLrGuAZqluiyDh[wfI_fLMIJj[hmYmGpXAYnpMYsW^UtKwbOGHyJRulbDZklNM^UpKMnWGOX,    -2147483648) 0 0.0%
+
+
+test: (sZW\CgbVIZvQQLrGuAZqluiyDh[wfI_fLMIJj[hmYmGpXAYnpMYsW^UtKwbOGHyJRulbDZklNM^UpKMnWGOX,    {gF`~xTTDl8VUwTILlgrX) 0 0.0%
+
+
+test: (-9223372036854775808,    QNMHKHDOJHD) 0 0.0%
+
+
+test: (-9223372036854775808,    ÔËÈÍÎÍÁÊÏÍÁ) 0 0.0%
+
+
+test: (892,    None) 0 0.0%
+
+
+test: (892,    !1+bowE``oXJmWprEBTccU\RKFFHC]ly]SPJqVmMHCTNHQFTfhSxGYzo^OD\mY^ALwUVb_ElKi_OZADTYnBNDYygEoTnMNd]MY^) 0 0.0%
+
+
+test: (0<,0VSBUHubXJBSnU,    Noe) 0 0.0%
+
+
+test: (0<,0VSBUHubXJBSnU,    32769) 0 0.0%
+
+
+test: (257,    AFF) 0 66.67%
+
+
+test: (Y@@,    9223372036854775807) 0 0.0%
+
+
+test: (Y@@,    None) 0 0.0%
+
+
+test: (%n<,    q@fok_E`YjpeSY}S_QM) 0 0.0%
+
+
+test: (%n<,    q@fok_E`YjpeSY}S_~M) 0 0.0%
+
+
+test: (`hRo__APW_RYfXkgrfchDiYWd]zygiyDFwybkHetGdNLrgaefl[VCgZsh^hnkl_[OSm\efxLILCjdaikB,    32769) 0 0.0%
+
+
+test: (`hRo__APW_RYfXkgrfchDiYWd]zygiyDFwybkHetGdNLrgaefl[VCgZsh^hnkl_[OSm\efxLILCjdaikB,    9Q]RuLcjdLHCYlcWnoQtQTIQPiOBCswP_utpmkSeWDomGEYZnxcYxQo`DT_\ojsjG^MVV[CdtnC^n[emRJjlPhkH) 0 0.0%
+
+
+test: (-129,    CJpWa) 0 0.0%
+
+
+test: (-129,    p'>!&) 0 0.0%
+
+
+test: (qQ,    µ´±°¿) 0 0.0%
+
+
+test: (qQ,    H[$EFvQopaHnCLZQ) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    ;ZeC) 0 0.0%
+
+
+test: (Nne,    1) 0 0.0%
+
+
+test: (Nne,    None) 0 0.0%
+
+
+test: (257,    32769) 0 0.0%
+
+
+test: (257,    3276z) 0 0.0%
+
+
+test: (257,    ;<<) 0 66.67%
+
+
+test: (LKK,    #	 *:= :2;) 0 0.0%
+
+
+test: (LKK,    # *:= :2;) 0 0.0%
+
+
+test: (4294967296,    one) 0 0.0%
+
+
+test: (4294967296,    9223372036854775807) 0 0.0%
+
+
+test: (1,    ne) 0 0.0%
+
+
+test: (1,    -128) 0 0.0%
+
+
+test: (Uhi_Xc]\ln]dVERsRbApqBuCwKZ\MXWm[pggSv,    îïä) 0 0.0%
+
+
+test: (Uhi_Xc]\ln]dVERsRbApqBuCwKZ\MXWm[pggSv,    L¦§¬) 0 0.0%
+
+
+test: (-128,    ^RkqZWbAbVPhlUVurTuelCzRD\DM[OAqxahf\KEWd^Q[MMQ) 0 0.0%
+
+
+test: (-128,    65537) 0 0.0%
+
+
+test: (None,    ëêá) 0 0.0%
+
+
+test: (None,    mlg) 0 0.0%
+
+
+test: (0,    nod) 0 0.0%
+
+
+test: (0,    ø) 0 0.0%
+
+
+test: (255,    None) 0 0.0%
+
+
+test: (255,    Nzne) 0 0.0%
+
+
+test: (2147483647,    vGmdN^rqYkD^V_) 0 66.67%
+
+
+test: (	N,,    }) 0 0.0%
+
+
+test: (	N,,    }) 0 0.0%
+
+
+test: (w|R,    .NP1) 0 0.0%
+
+
+test: (w|R,    0) 0 0.0%
+
+
+test: (None,    2+]/) 0 0.0%
+
+
+test: (None,    -9223372036854775808) 0 0.0%
+
+
+test: (yz,    xae) 0 0.0%
+
+
+test: (yz,    None) 0 0.0%
+
+
+test: (:HmuiUnqdqZSS^RAxzyeHiwdSBCRXAoM_vDhcLTdLRCqBNwCmlRwsyXcMiYc_ZX]`cgAZgNiZPjDWW[tXGzRv,    2147483647) 0 0.0%
+
+
+test: (:HmuiUnqdqZSS^RAxzyeHiwdSBCRXAoM_vDhcLTdLRCqBNwCmlRwsyXcMiYc_ZX]`cgAZgNiZPjDWW[tXGzRv,    gdabamfcab) 0 0.0%
+
+
+test: (9223372036854775807,    -129) 0 0.0%
+
+
+test: (9223372036854775807,    32769) 0 0.0%
+
+
+test: (8!_'(",-.I,    ÓÀÝâ) 0 0.0%
+
+
+test: (8!_'(",-.I,    QB_`) 0 0.0%
+
+
+test: (32767,    de<H) 0 0.0%
+
+
+test: (32767,    BCn) 0 0.0%
+
+
+test: (2147483647,    5"><Ka$1-kD^V_CMSXFFVgR) 0 57.78%
+
+
+test: (ê­¬ÕùóèêÜîðÅêÁÕÉóåÐÁÅëòÒðéÒèÜæÎùÆðÆÇÄÚÒÃ,    9223372036854775807) 0 0.0%
+
+
+test: (ê­¬ÕùóèêÜîðÅêÁÕÉóåÐÁÅëòÒðéÒèÜæÎùÆðÆÇÄÚÒÃ,    VPm[h^QMfqNBW~\X{wY) 0 0.0%
+
+
+test: (1,    256) 0 0.0%
+
+
+test: (1,    OHK) 0 0.0%
+
+
+test: (None,    tQe) 0 0.0%
+
+
+test: (None,    [#>kr[wFlfSWGHJwpdbviGmNguWewnM`vgXQ]Zrjg^CksEzeIqvpgyMQ[Ky\v]hFJJe) 0 0.0%
+
+
+test: (4294967296,    Çæçì) 0 0.0%
+
+
+test: (4294967296,    ») 0 0.0%
+
+
+test: (None,    |æçì) 0 0.0%
+
+
+test: (None,    255) 0 0.0%
+
+
+test: (WCHHIIMHJILBONMMOBJB,    Çæç) 0 0.0%
+
+
+test: (WCHHIIMHJILBONMMOBJB,    None) 0 0.0%
+
+
+test: (©½¶¶··³¶´·²¼±°³³±¼´¼,    ¬ï) 0 0.0%
+
+
+test: (©½¶¶··³¶´·²¼±°³³±¼´¼,    257) 0 0.0%
+
+
+test: (#b'r|HUPfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAq,    1) 0 0.0%
+
+
+test: (#b'r|HUPfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAq,    O) 0 0.0%
+
+
+test: (None,    None) 0 57.78%
+
+
+test: (5H':?	?LNJI?#C-LD:DRW"ELKAJ'^I A^:U]GZ66$#(:<20'-%>*)2#9%<06
+<3+?-*
+>:."71
+;&%) +.'=($.,    CrMAtP]dcRixnZANFy^WFDtpXFxJibzJDlr_CbDthXXK]JOIsCsErKCEofDt) 0 0.0%
+
+
+test: (5H':?	?LNJI?#C-LD:DRW"ELKAJ'^I A^:U]GZ66$#(:<20'-%>*)2#9%<06
+<3+?-*
+>:."71
+;&%) +.'=($.,    ÂóÌÀõÑÜåâÓèùïÛÀÏÇøßÖÇÅõñÙÇùËèãûËÅíóÞÂãÅõéÙÙÊÜËÎÈòÂòÄóÊÂÄîçÅõ) 0 0.0%
+
+
+test: (4294967295,    128) 0 0.0%
+
+
+test: (4294967295,    28) 0 0.0%
+
+
+test: ([0y}OO0@L,/^ix<%/9'.0G)=0"jLRCug[ovVjyJEMyLpMrB_GS[FG,    0) 0 0.0%
+
+
+test: ([0y}OO0@L,/^ix<%/9'.0G)=0"jLRCug[ovVjyJEMyLpMrB_GS[FG,    None) 0 0.0%
+
+
+test: (32769,    ) 0 0.0%
+
+
+test: (32769,    g) 0 0.0%
+
+
+test: (~((J/$T,H,    ]mfa_nachYT^dzOz^pKknCcqgoQUZdTV[BjsXRgLugm) 0 0.0%
+
+
+test: (~((J/$T,H,    127) 0 0.0%
+
+
+test: (-32768,    -1) 0 0.0%
+
+
+test: (-32768,    255) 0 0.0%
+
+
+test: (-2147483648,    B) 0 0.0%
+
+
+test: (-2147483648,    YSiHeDgfCICSrxH^DpyNf_F`KweWocGT[vG[DiykvoLmLAWTDFQmK`) 0 0.0%
+
+
+test: (ER`,    65537) 0 0.0%
+
+
+test: (ER`,    0) 0 0.0%
+
+
+test: (128,    p) 0 0.0%
+
+
+test: (None,    !3b-) 0 57.78%
+
+
+test: (<@>$rzPAVk\sI_LO\lyMKrMAwHHuCTem[VXHCatonmfWcHLjWK_niUkGnAHETCFKVJUqUjc,    J) 0 0.0%
+
+
+test: (<@>$rzPAVk\sI_LO\lyMKrMAwHHuCTem[VXHCatonmfWcHLjWK_niUkGnAHETCFKVJUqUjc,    1) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    =<7) 0 0.0%
+
+
+test: (None,    65537) 0 0.0%
+
+
+test: (None,    O]i\{yh\oLXCyCQRaamN\kbUjMDMJ]`A^CJ`pksQvad) 0 0.0%
+
+
+test: (N!@EHNxaSAOoEbBF\xGaecacvSEdqo`QowteMvX[nO_NdnlP`RKU`R`y[tjKOMkP\T]ChVoQ`RFHTfWugP,    9*J$NpoAzDWMKYUsLF) 0 0.0%
+
+
+test: (N!@EHNxaSAOoEbBF\xGaecacvSEdqo`QowteMvX[nO_NdnlP`RKU`R`y[tjKOMkP\T]ChVoQ`RFHTfWugP,    None) 0 0.0%
+
+
+test: (None,    °£Ã­ÇùæÈóÍÞÄÂÐÜúÅÏ) 0 0.0%
+
+
+test: (None,    ×Ä¤Ê ¯ª¹£¥·»¢¨) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (LtSMLAyTTg,    +p(F) 0 0.0%
+
+
+test: (LtSMLAyTTg,    ZR\Fqot) 0 0.0%
+
+
+test: (32767,    0) 0 0.0%
+
+
+test: (32767,    H) 0 0.0%
+
+
+test: (ëãÒÎÀéÀÎÆüËàèèåÛüÊñÌýõåÎ×ãöÔËýÓÒÖÕÆ÷äÏåàÊÊÜÌíÔïÏÔüãÜÐâóÒÂàÀÃÃÓÒëÞåÕéÖÝìÑàÑÕìíôßÆßÍÛßÈüìÌæÜÓáÒé,    thNW) 0 0.0%
+
+
+test: (128,    None) 0 66.67%
+
+
+test: (vM"=Ec)~e.(*!(Mk&F|(~2"/;[3h)x)25;,    µ) 0 0.0%
+
+
+test: (vM"=Ec)~e.(*!(Mk&F|(~2"/;[3h)x)25;,    ) 0 0.0%
+
+
+test: (-129,    -32768) 0 0.0%
+
+
+test: (-129,    128) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    Íìíæ) 0 0.0%
+
+
+test: (CGX[,    3<]B) 0 0.0%
+
+
+test: (CGX[,    Te)-gYtoc[rdUF^bcarFsUPhVBiPc_QXkkF^PyB) 0 0.0%
+
+
+test: (U+CE1,    [X]) 0 0.0%
+
+
+test: (U+CE1,    -9223372036854775808) 0 0.0%
+
+
+test: (Q/GA5,    -9223372036854775808) 0 0.0%
+
+
+test: (Q/GA5,    -223372036854775808) 0 0.0%
+
+
+test: (Axixs,    N*l) 0 0.0%
+
+
+test: (Axixs,    None) 0 0.0%
+
+
+test: (½³®,    :YJtskgOrxTHxnVnuCbPlhUyaOtSqOJEVSrcststP`xaHdzV[^Yscnwws^dMTLM]IaXBLdengE) 0 0.0%
+
+
+test: (½³®,    4294967295) 0 0.0%
+
+
+test: (-32768,    None) 0 0.0%
+
+
+test: (ëãÒÎÀéÀÎÆüËàèèåÛüÊñÌýõåÎ×ãöÔËýÓÒÖÕÆ÷äÏåàÊÊÜÌíÔïÏÔüãÜÐâóÒÂàÀÃÃÓÒëÞåÕéÖÝìÑàÑÕìíôßÆßÍÛßÈüìÌæÜÓáÒé,    6/<0) 0 57.78%
+
+
+test: (,    257) 0 0.0%
+
+
+test: (,    25}) 0 0.0%
+
+
+test: (-128,    4294967295) 0 0.0%
+
+
+test: (-128,    429496725) 0 0.0%
+
+
+test: (Non,    NHCNCLMHCO) 0 0.0%
+
+
+test: (Non,    None) 0 0.0%
+
+
+test: (None,    IODIDKJODH) 0 0.0%
+
+
+test: (None,    257) 0 0.0%
+
+
+test: (Èéèã,    ÊÌÇÊÇÈÉÌÇË) 0 0.0%
+
+
+test: (Èéèã,    ÊÌÇÊÇÈÉÌÇ) 0 0.0%
+
+
+test: (3,    None) 0 0.0%
+
+
+test: (3,    None) 0 0.0%
+
+
+test: (4294967296,    /.%) 0 0.0%
+
+
+test: (4294967296,    LA]~Bns[fnXdMAQKmttHp) 0 0.0%
+
+
+test: (32768,    >7,8) 0 0.0%
+
+
+test: (32768,    -129) 0 0.0%
+
+
+test: ("(kuldwkcUwLlrI`wRdPMQG\rOvzs_gUSqFwYDp\p[TKA_E,    mmof) 0 0.0%
+
+
+test: (-32768,    Noe) 0 62.22%
+
+
+test: (-129,    1) 0 0.0%
+
+
+test: (-129,    -32768) 0 0.0%
+
+
+test: (-9223372036854775808,    4294967295) 0 0.0%
+
+
+test: (-9223372036854775808,    W~ePeTB}mLcL\d\buOTyNSUbh]gNOdnSgFaVoN]]Be_RzpbK]YtzoYa[qpHopvX\xsuHrPBElqGilsoIlncMPP\) 0 0.0%
+
+
+test: (-128,    127) 0 0.0%
+
+
+test: (-128,    lGC) 0 0.0%
+
+
+test: (255,    None) 0 0.0%
+
+
+test: (255,    o;i7AT`Rvudpypuh`) 0 0.0%
+
+
+test: (¨·´±²±½¶³±½,    -1) 0 0.0%
+
+
+test: (¨·´±²±½¶³±½,    None) 0 0.0%
+
+
+test: (None,    9223372036854775807) 0 0.0%
+
+
+test: (None,    257) 0 0.0%
+
+
+test: (Èéèã,    -1) 0 0.0%
+
+
+test: (Èéèã,    \hqYpvz^OAXcAGTLkxWmmFB^gkXQxyjjnmIawF]EiruG\UkXjmN) 0 0.0%
+
+
+test: (ÉÎÌ,    GLLMMILNMHFKJIIKFNI) 0 0.0%
+
+
+test: (ÉÎÌ,    GLLMMILNMHFKJII~FNI) 0 0.0%
+
+
+test: (None,    !**++/*(+. -,//- (/) 0 0.0%
+
+
+test: ("(kuldwkcUwLlrI`wRdPMQG\rOvzs_gUSqFwYDp\p[TKA_E,    UUW^) 0 57.78%
+
+
+test: (256,    None) 0 0.0%
+
+
+test: (256,    5) 0 0.0%
+
+
+test: (1,    5) 0 0.0%
+
+
+test: (1,    5) 0 0.0%
+
+
+test: (65535,    +}+$) 0 0.0%
+
+
+test: (65535,    @@O) 0 0.0%
+
+
+test: ('MvcMeKW{W>	
+	 	9#47$
+;
+#"1	!62!'3;3)4,    65535) 0 0.0%
+
+
+test: ('MvcMeKW{W>	
+	 	9#47$
+;
+#"1	!62!'3;3)4,    LOOIO) 0 0.0%
+
+
+test: (2769,    None) 0 0.0%
+
+
+test: (2769,    257) 0 0.0%
+
+
+test: (MLIHG,    0TN4) 0 0.0%
+
+
+test: (MLIHG,    
+nt) 0 0.0%
+
+
+test: (None,    :h/K) 0 0.0%
+
+
+test: (None,    bK@3) 0 0.0%
+
+
+test: (_yoAVlKXwoQOjV`xvE_fim,    v'G9) 0 0.0%
+
+
+test: (None,    `kkjjnkijoalmnnlain) 0 57.78%
+
+
+test: (,    9223372036854775807) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (65535,    yrrsswrpsvxutwwuxpw) 0 0.0%
+
+
+test: (65535,    úññððôñóðõûö÷ôôöûóô) 0 0.0%
+
+
+test: (0Q*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUBGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKeuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (0Q*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUBGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?,    "?%%(-)&: )%	*$)*1550%>491$-7?)><4/76	) 0 0.0%
+
+
+test: (None,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (None,    -128) 0 0.0%
+
+
+test: (,    ´·²) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (&%%#&,    {ekoUWp|djjL_]ucKQ|) 0 0.0%
+
+
+test: (&%%#&,    )d*^A'6('vZn%d"2=Dn) 0 0.0%
+
+
+test: (<BJn",    8$ZNRWp|djjL_]ucKQ|CAKfB) 0 0.0%
+
+
+test: (<BJn",    None) 0 0.0%
+
+
+test: (XiQBktDxnDrld[RKRj_CvIhLy]Vfcf^,    None) 0 0.0%
+
+
+test: (XiQBktDxnDrld[RKRj_CvIhLy]Vfcf^,    -129) 0 0.0%
+
+
+test: (´,    None) 0 0.0%
+
+
+test: (_yoAVlKXwoQOjV`xvE_fim,    None) 0 57.78%
+
+
+test: (29,    $) 0 0.0%
+
+
+test: (29,    0) 0 0.0%
+
+
+test: (-1,    qQ\IUTXFH^WmFLaMIJp^HrP]sVsHBxa[JWbRTMkfTRbPHpw\rscdOmSbJ[BZi) 0 0.0%
+
+
+test: (-1,    None) 0 0.0%
+
+
+test: (4294967295,    None) 0 0.0%
+
+
+test: (4294967295,    Non) 0 0.0%
+
+
+test: (294967296,    'h"Y) 0 0.0%
+
+
+test: (294967296,    NK0) 0 0.0%
+
+
+test: (R2ak%53yFKp_r^hIzyNS]DU_jQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`,    None) 0 0.0%
+
+
+test: (R2ak%53yFKp_r^hIzyNS]DU_jQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`,      ) 0 0.0%
+
+
+test: (j5P:$'5.@'"m((DF;S;$j1+b,!;#4%;0AzK5"}#6/?7x89thf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdpXPhK]unWNlRNh]sLAYuKHuuXFRgNM]RnyQ\AvouPuYm`sz,    4294967296) 0 0.0%
+
+
+test: (j5P:$'5.@'"m((DF;S;$j1+b,!;#4%;0AzK5"}#6/?7x89thf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdpXPhK]unWNlRNh]sLAYuKHuuXFRgNM]RnyQ\AvouPuYm`sz,    4294967295) 0 0.0%
+
+
+test: (EN_,    [388M\V]Q`ncopHYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\) 0 0.0%
+
+
+test: (EN_,    -es}'&vOG|9$>1TYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\vVKEIz_ZTmdGQAG) 0 0.0%
+
+
+test: (65535,    ß·¼¼ÉØÒÙÕäêçëôÌÝÔßãÍÓÂÚäÙüÀÈåÍÚÝ×ÀèÛäâÓÃÚÍÌÕñóÃÜôÕöÏÒàØ) 0 0.0%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (´,    one) 0 57.78%
+
+
+test: ('{,    Nne) 0 0.0%
+
+
+test: ('{,    -129) 0 0.0%
+
+
+test: (Bcbi,    C\T6) 0 0.0%
+
+
+test: (Bcbi,    ÅÚÒ°) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (MLIHI,    9223372036854775807) 0 0.0%
+
+
+test: (MLIHI,    None) 0 0.0%
+
+
+test: (2767,    ) 0 0.0%
+
+
+test: (2767,    cVDnTdyJH~`1_jRlAWk) 0 0.0%
+
+
+test: (32769,    Èéèã) 0 0.0%
+
+
+test: (32769,    -32768) 0 0.0%
+
+
+test: (Bdk{iAuX;u,    Èèã) 0 0.0%
+
+
+test: (Bdk{iAuX;u,    4294967296) 0 0.0%
+
+
+test: (3ô,    -129) 0 0.0%
+
+
+test: (3ô,    -12) 0 0.0%
+
+
+test: (`A§K,    T~YK) 0 0.0%
+
+
+test: (}Gjj,    Nne) 0 57.78%
+
+
+test: (}Gjj,    /à) 0 0.0%
+
+
+test: (~27,    32768) 0 0.0%
+
+
+test: (~27,    257) 0 0.0%
+
+
+test: (32768,    65536) 0 0.0%
+
+
+test: (32768,    128) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (,    Non) 0 0.0%
+
+
+test: (aD^MHtFlsZUvgyqBq^JlsCX\x,    32768) 0 0.0%
+
+
+test: (aD^MHtFlsZUvgyqBq^JlsCX\x,    None) 0 0.0%
+
+
+test: (,/|)/,    2147483647) 0 0.0%
+
+
+test: (,/|)/,    -129) 0 0.0%
+
+
+test: (¬¯à©¯,    MNKHKGLIKH) 0 0.0%
+
+
+test: (¬¯à©¯,    None) 0 0.0%
+
+
+test: (´,    None) 0 0.0%
+
+
+test: (´,    4294967295) 0 0.0%
+
+
+test: (N,    None) 0 0.0%
+
+
+test: (`A§K,    TYK) 0 57.78%
+
+
+test: (OIBOBMLIBN,    &_#$hyMAxAi\pPh\^vYU_rUnJPVrbxafPI\fqXk`URuusnCRK\E]yAfGRKZbGDv^nb^EOzL]fcJVEGV\Q) 0 0.0%
+
+
+test: (OIBOBMLIBN,    N7KL %))48 461=7="8>
+	8!40=:+:#4-5)/:#2
+/,6
+6-'$5">-/>49) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    0) 0 0.0%
+
+
+test: (9223372036854775807,    Noe) 0 0.0%
+
+
+test: (9223372036854775807,    (:-@fU[pqQIQMCyNr[`G^Gn) 0 0.0%
+
+
+test: (CBGFI,    127) 0 0.0%
+
+
+test: (CBGFI,    KYQ) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (0
+. 5*&#/0!9'>>-74&1*10# =-,    -2147483648) 0 0.0%
+
+
+test: (0
+. 5*&#/0!9'>>-74&1*10# =-,    
+) 0 0.0%
+
+
+test: (-2147483648,    129) 0 0.0%
+
+
+test: (-2147483648,    _A.nsFYjD) 0 0.0%
+
+
+test: (uEKFzJ\RCdGs\PWfdv^hOTmNxolvr]LaWVKYAwKuzPXNfmLE\mv`QFyJMtIDduyUfilNI_OIYOufn[RuSnoYhTznXQxNscyNQ[,    923372036854775807) 0 0.0%
+
+
+test: (uEKFzJ\RCdGs\PWfdv^hOTmNxolvr]LaWVKYAwKuzPXNfmLE\mv`QFyJMtIDduyUfilNI_OIYOufn[RuSnoYhTznXQxNscyNQ[,    V]è\\X]_\YWZ[XXZW_X) 0 0.0%
+
+
+test: (9223372036854775807,    ¿´µµ±´¶µ°¾³²±±³¾¶±) 0 0.0%
+
+
+test: (N,    ) 0 57.78%
+
+
+test: (;,    W\é]]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (;,    %.//+.,/*$)(++)$,+) 0 0.0%
+
+
+test: (None,    W\é]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (None,    5>æ?;><?:498;;94<;) 0 0.0%
+
+
+test: (129,    None) 0 0.0%
+
+
+test: (129,    Non) 0 0.0%
+
+
+test: (-18,    -1) 0 0.0%
+
+
+test: (-18,    ¬°) 0 0.0%
+
+
+test: (~mhL_FQGRL^p`,    {sPXYxxELSOuNwaukmPLfL) 0 0.0%
+
+
+test: (~mhL_FQGRL^p`,    3;:&/0,-3//) 0 0.0%
+
+
+test: (None,    1922?=+?!',) 0 0.0%
+
+
+test: (None,    oo*~UK]`NQBMWW=rMKDIbE^VelFyooHHGrSjTMll^ONCNBPNsUnviLS^zSvU]y]lvfSzQvePkSQvLuMZysDkAzfy) 0 0.0%
+
+
+test: (»º¿¾,    None) 0 0.0%
+
+
+test: (»º¿¾,    9223372036854775807) 0 0.0%
+
+
+test: (None,    -1) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (Èéèã,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (Èéèã,    MFóGGCDGBLA@CCALDC) 0 0.0%
+
+
+test: (9223372036854775807,    ¿´µµ±´¶µ°z³²±±³¾¶±) 0 62.22%
+
+
+test: (4294967296,    )"##'" #&(%$''%( ') 0 0.0%
+
+
+test: (4294967296,    )"##'"~#&(%$''%( ') 0 0.0%
+
+
+test: (128,    Pe#erFLLgFNqoSV|btwyGCFQanlD`fTKtqYJTPpXFCsNTea_aSmgdXoOml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQ) 0 0.0%
+
+
+test: (128,    6Qtg=?T#{'kP6:?2.#9=y0#7B:&i<+3+$)8k0?D=8;(h:z9,:s#7??0Oml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQfsWtOyZoyaJbYiiNLtmD[sefcTwRrMg`PXa[dokYTXhGnvXZmENP[g_) 0 0.0%
+
+
+test: (65535,    MFóGGCFzGBLA@CCALDC) 0 0.0%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (32768,    one) 0 0.0%
+
+
+test: (32768,    õ) 0 0.0%
+
+
+test: (N}ne,    %#a!'%+{\$&I-7#B<=h) 0 0.0%
+
+
+test: (N}ne,    4294967295) 0 0.0%
+
+
+test: (60#,x_MIxptjmmls`m,    JLd[MEC-LeL<xT{`~l&ooizj`hVRAjuUcX_BQNrXDxVqUiQng_SYaiLIwb) 0 0.0%
+
+
+test: (60#,x_MIxptjmmls`m,    -129) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    3) 0 0.0%
+
+
+test: (-32768,    Non|) 0 0.0%
+
+
+test: (-32768,    None) 0 0.0%
+
+
+test: (Non,    -%3#BJvFFd\GfeBJqAA^FDLze[WReFhSHoQCQTPuuMAIBouwnm) 0 0.0%
+
+
+test: (Non,    65535) 0 0.0%
+
+
+test: (256,    N'm#+\fm2O!-2"E+>"$) 0 66.67%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    #;&!) 0 0.0%
+
+
+test: (×ËÂ,    None) 0 0.0%
+
+
+test: (×ËÂ,    A50%) 0 0.0%
+
+
+test: (None,    65535) 0 0.0%
+
+
+test: (None,    6535) 0 0.0%
+
+
+test: (None,    256) 0 0.0%
+
+
+test: (None,    cQlQdZ]wqzcJQlGP`WqBQenTDyRYprKoMYN`LDPPHInnatp\\u) 0 0.0%
+
+
+test: (None,    26) 0 0.0%
+
+
+test: (None,    S:bavTHjrdULRPYrSzz_X]uxMTb]tfdUvxQmgnA`ExJMJWkqTnnHXSOEHs^njCgg]RlLQ\rahRm^SeAeNCTIiKLLvW) 0 0.0%
+
+
+test: (":liO^cEUzKFehG,    Nne) 0 0.0%
+
+
+test: (":liO^cEUzKFehG,    -32768) 0 0.0%
+
+
+test: (U>rlVTUSb,    257) 0 0.0%
+
+
+test: (U>rlVTUSb,    None) 0 0.0%
+
+
+test: (1,    9223372036854775807) 0 0.0%
+
+
+test: (1,    ODDEEADFE@NCBAACNFA) 0 0.0%
+
+
+test: (256,    -129) 0 60.0%
+
+
+test: (ÝÜòÑÞÒðïÀæèêãÙÈðÜÄÿÞþãòäõ,    4ó) 0 0.0%
+
+
+test: (ÝÜòÑÞÒðïÀæèêãÙÈðÜÄÿÞþãòäõ,    4|) 0 0.0%
+
+
+test: (iD3P/:$uY.6=3/+/yk(rP747Y,    {z^pOZJoXff_m]jVFAc^ZazbeKvgu_) 0 0.0%
+
+
+test: (iD3P/:$uY.6=3/+/yk(rP747Y,    MLhFyl|YnPPi[k\`pwUhlWLTS}@QCi) 0 0.0%
+
+
+test: (257,    Nne) 0 0.0%
+
+
+test: (257,    %1Pb) 0 0.0%
+
+
+test: (65537,    /-x)!(15437<3U`&4=5) 0 0.0%
+
+
+test: (65537,    sE3]GRb@FZpl]%9Uf{r\hKtfzSuriGPnpYsRFGtZrudFbOZsiYKKRpaAgaMtZjscD`cNzmsdAo) 0 0.0%
+
+
+test: (-9223372036854775808,    128) 0 0.0%
+
+
+test: (-9223372036854775808,    -129) 0 0.0%
+
+
+test: (-2147483648,    12) 0 0.0%
+
+
+test: (-2147483648,    DGü) 0 0.0%
+
+
+test: (None,    28) 0 0.0%
+
+
+test: (None,    2~) 0 0.0%
+
+
+test: (XUXy-D,    None) 0 0.0%
+
+
+test: (XUXy-D,    _:rq) 0 0.0%
+
+
+test: (None,    QzPSvp@zQxUGurYdsEZhHM`EGrJbNmrAEnQKumDTEE`drMjTiWOlEtmYem^NNy]C`Z) 0 57.78%
+
+
+test: (None,    5@;6ta=>r-s)05lo>j!\]O[$4G^T)0n)I0o!?#p2W2)/?!`E$/0Ol;'.e!&+4^.+.*) 0 0.0%
+
+
+test: (214743647,    j(:wlQN_NCN`bw) 0 0.0%
+
+
+test: (214743647,    j(:wlN_NCN`bw) 0 0.0%
+
+
+test: (Êëêá,    039) 0 0.0%
+
+
+test: (Êëêá,    LOE) 0 0.0%
+
+
+test: ( !*,    IJ@) 0 0.0%
+
+
+test: ( !*,    None) 0 0.0%
+
+
+test: (2X$!,    nxM) 0 0.0%
+
+
+test: (2X$!,    /9) 0 0.0%
+
+
+test: (~·^U,    -2147483648) 0 0.0%
+
+
+test: (~·^U,    @S_^tM|]^wh) 0 0.0%
+
+
+test: (]KVC,    n{M) 0 0.0%
+
+
+test: (]KVC,    None) 0 0.0%
+
+
+test: (4294967295,    0) 0 0.0%
+
+
+test: (4294967295,    ³) 0 0.0%
+
+
+test: (None,    bak) 0 57.78%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (-128,    ZaQiYjMlt\wN|{U{fMATwXc[jYz^DoAvIObLSuqleqlSYjSM^TmZT]KtMRfIayrjXZsiw]vkGIgpS`w[ciyxliA) 0 0.0%
+
+
+test: (-128,    ÓèØàÐãÄåýÕþÇõòÜòïÄÈÝþÑêÒãÐó×ÍæÈÿÀÆëÅÚüøåìøåÚÐãÚÄ×ÝäÓÝÔÂýÄÛïÀèðûãÑÓúàþÔÿâÎÀîùÚéþÒêàðñåàÈ) 0 0.0%
+
+
+test: (B]W,    Èéèã) 0 0.0%
+
+
+test: (B]W,    >=aeIxFTLa[T`VxcJgFMajVPxljv[fJJyHuMVCrZoU]CY`ICGzSyNfKHg) 0 0.0%
+
+
+test: (-28,    bAA-X\UFs]SpEiwTPPmjPfwq^FhxChJvYv[OYNoEtz[daaYJUOYTecChH\AqH`mTrCY_lgS`EWPVpzGNE) 0 0.0%
+
+
+test: (-28,    bAA-X\UFs]SpEiwTPPmjPfwq^FhxChJvYv[OYNoEtz[daaYJUOYTecChH\AqH`mTrCY_lgS`EWPVpzGNE) 0 0.0%
+
+
+test: (5";=,    :8qK) 0 0.0%
+
+
+test: (5";=,    ¾¼õÏ) 0 0.0%
+
+
+test: (-2147483648,    @U8P) 0 0.0%
+
+
+test: (-2147483648,    ÇÒ¿×) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    [9=ZOwSpGWoYfuIgUixkdSiaaBdLd[xSB_yadHLMzCzBcultRsUkDqFluryLRdUMMKazogjCcntzWevlePcPu]) 0 0.0%
+
+
+test: (jcbvW.Xj59B$.]+U-%61f8d09#/5]OF_b\eIYZOEeJbSGcxwStFIeD[ZrPqzAybnw,    1) 0 0.0%
+
+
+test: (jcbvW.Xj59B$.]+U-%61f8d09#/5]OF_b\eIYZOEeJbSGcxwStFIeD[ZrPqzAybnw,    Cr`empBk]uUx^BmhBUqDCizfwQBn\JSvgvWcJbDAwPQnV_Pd) 0 0.0%
+
+
+test: (qgBy_BUufrIDGltwhwK\,    -9223372036854775808) 0 57.78%
+
+
+test: (qgBy_BUufrIDGltwhwK\,    None) 0 0.0%
+
+
+test: (P]$RMH=b]vxsmB;gL|U$768(:,TTU6'7'5[."E'1?.*D#_95,/b148#@!w;`?.'D`KNwHnbyf]hEcgpzBoG_kVKuJsotrUqWJYNBbdEnVHKtgOeqkdjmNmm\HMKuyMtXBncVmR,    Æª¯¾) 0 0.0%
+
+
+test: (P]$RMH=b]vxsmB;gL|U$768(:,TTU6'7'5[."E'1?.*D#_95,/b148#@!w;`?.'D`KNwHnbyf]hEcgpzBoG_kVKuJsotrUqWJYNBbdEnVHKtgOeqkdjmNmm\HMKuyMtXBncVmR,    0) 0 0.0%
+
+
+test: (4294967295,    -1) 0 0.0%
+
+
+test: (4294967295,    4294967295) 0 0.0%
+
+
+test: (£¨¾¤²±¢¬·ª¦¸º¦¯²µ²½¶¨²¨´¼¤µ¤«¦¥°¶¸¬ª²½¹¦¯¦º²¨«¾«,    uFXwPbVUq[uki]H]GGutvgItcXTTSKrWz\LKUxALkiyleBZQjZyUaCYt\FINf) 0 0.0%
+
+
+test: (£¨¾¤²±¢¬·ª¦¸º¦¯²µ²½¶¨²¨´¼¤µ¤«¦¥°¶¸¬ª²½¹¦¯¦º²¨«¾«,    None) 0 0.0%
+
+
+test: (-32768,    None) 0 0.0%
+
+
+test: (-32768,    Ëêëà) 0 0.0%
+
+
+test: (1s!o;"gGe0H1tO<3uAv'6cE-L=|+ÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁýÓÐðÅÐBYQlCecdS^nnHXJoOmQNgZYDJzid,    ~one) 0 0.0%
+
+
+test: (1s!o;"gGe0H1tO<3uAv'6cE-L=|+ÎÉ÷üÆòéíÍÓüá|ëóÉÓÏìýÇñßýèÎáèößÐÝÞËêÍÃ×ÑÉêòîêÆÂÝÔüÝÁýÓÐðÅÐBYQlCecdS^nnHXJoOmQNgZYDJzid,    ~ne) 0 0.0%
+
+
+test: (-128,    1) 0 0.0%
+
+
+test: (-128,    ) 0 0.0%
+
+
+test: (cEyZZIwCrpwI[EBgdLKNxvLnQ[YZc^e`z^HRrM_VGGrmq\tIkglwa,    SbOHpm[vWNNI^cjpvuZrsIfACfNdBmYnkMKtlracmrrJTWRvHSy`woUTzSSWPkq\BDrwoLHqXlPfpMPuuKFremO) 0 0.0%
+
+
+test: (cEyZZIwCrpwI[EBgdLKNxvLnQ[YZc^e`z^HRrM_VGGrmq\tIkglwa,    %6<x+./WMPkP>?&(/([?,IfACfNdBmYnkMKtlracmrrJTWRvHSy`woUTzSSWPkq\B) 0 0.0%
+
+
+test: (32767,    b) 0 0.0%
+
+
+test: (32767,    b) 0 0.0%
+
+
+test: (-128,    D(-<) 0 62.22%
+
+
+test: (-128,    bgv) 0 0.0%
+
+
+test: (°±´µº,    RculpwLjwGtpaOvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkqj\^vV^]OfXswV_) 0 0.0%
+
+
+test: (°±´µº,    None) 0 0.0%
+
+
+test: (65537,    1 /	$,$1843='2:!4'3*
+!?
+4"
+4:%-&;:0<	?=5=>,;5<) 0 0.0%
+
+
+test: (65537,    -129) 0 0.0%
+
+
+test: (XJAixyUZCgKqVItoYbiXWmNPdNVrTvOVKW`xlWwS\MrZOOaeXYYix\wPtllNg[OsRkyQinTNkL^iKdjoSyZAiKu,    u'Ij~684?-=)>OvxdGmRr[WwnP^DtgzQYneBWDPazIiBe\rxiWAiWrYtvFhNEnrrXnYazS_zkq) 0 0.0%
+
+
+test: (XJAixyUZCgKqVItoYbiXWmNPdNVrTvOVKW`xlWwS\MrZOOaeXYYix\wPtllNg[OsRkyQinTNkL^iKdjoSyZAiKu,    HtWC	 rKEYzPoOfjJSmcyIZGldSXjym\GtTXaOETj|TjOdIK{UsxSOOeSd\GnbGVL) 0 0.0%
+
+
+test: (12,    -1) 0 0.0%
+
+
+test: (12,    B_onhDU`rfoscTMAbRySjqX) 0 0.0%
+
+
+test: (@llS_,    A) 0 0.0%
+
+
+test: (@llS_,    2) 0 0.0%
+
+
+test: (3 ,    ¹»òÈ) 0 0.0%
+
+
+test: (3 ,    65537) 0 0.0%
+
+
+test: (922337203{854775807,    D) 0 0.0%
+
+
+test: (922337203{854775807,    ?PfOoC^rv_UwsNeGOVMePGlKoFCoNex[m_n\[r^ZTcJCf\zEgEFW) 0 0.0%
+
+
+test: (257,    &) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (U,    ?]qEoQIWWOJwwe_FKNSNN) 0 57.78%
+
+
+test: (U,    Y@')Y$]r3"w~6<6![p**>) 0 0.0%
+
+
+test: (None,    -129) 0 0.0%
+
+
+test: (None,    -128) 0 0.0%
+
+
+test: (óÊÎä,    None) 0 0.0%
+
+
+test: (óÊÎä,    32768) 0 0.0%
+
+
+test: (0,    32767) 0 0.0%
+
+
+test: (0,    3277) 0 0.0%
+
+
+test: (¦§¬,    -9223372036854775808) 0 0.0%
+
+
+test: (¦§¬,    -922337z036854775808) 0 0.0%
+
+
+test: (£,    M[Y[AG~ZakagPm~{vAyt) 0 0.0%
+
+
+test: (£,    -128) 0 0.0%
+
+
+test: (z,    -32768) 0 0.0%
+
+
+test: (z,    hq{TzH) 0 0.0%
+
+
+test: (,    -32768) 0 0.0%
+
+
+test: (,    QONKJD) 0 0.0%
+
+
+test: (z,    ìúÏ) 0 0.0%
+
+
+test: ('{%,    Æ) 0 57.78%
+
+
+test: ('{%,    None) 0 0.0%
+
+
+test: (§,    oyL) 0 0.0%
+
+
+test: (§,    None) 0 0.0%
+
+
+test: (C@@FC,    0) 0 0.0%
+
+
+test: (C@@FC,    None) 0 0.0%
+
+
+test: (EFF@E,    ) 0 0.0%
+
+
+test: (EFF@E,    None) 0 0.0%
+
+
+test: (128,    -922337203{854775808) 0 0.0%
+
+
+test: (128,    -9223372036854775808) 0 0.0%
+
+
+test: (-2147483648,    qfStJyx`Gkg]mhErWTaj\_aFyLORwXoeX\rEblQRh\LXOEcUCp_A`fb]CcYqqmDhJLU^`XODqtJVPogEjRkiiPiL]pAwzP\liSHWwx`kDuYT) 0 0.0%
+
+
+test: (-2147483648,    32768) 0 0.0%
+
+
+test: (4294967295,    vk}2337203{854775808[RO) 0 0.0%
+
+
+test: (4294967295,    öëý²³³·²°³û¸µ´··µ¸°¸ÛÒÏ) 0 0.0%
+
+
+test: (GGbLotuUzWphnLNOYgbFFG,    #bDJ`iKZcABMkxM) 0 0.0%
+
+
+test: (GGbLotuUzWphnLNOYgbFFG,    ¡àÆÈâëÉØáÃÀÏéúÏ) 0 0.0%
+
+
+test: (z,    drG) 0 57.78%
+
+
+test: (-922337203685477580,    -129) 0 0.0%
+
+
+test: (-922337203685477580,    Hjhje[ZSArlTUc) 0 0.0%
+
+
+test: (iHIB,    -922337203{5475808) 0 0.0%
+
+
+test: (iHIB,    None) 0 0.0%
+
+
+test: ('#2.io\KJV[^RjnbvdRsRvvpfwIXa_Kn\FEYlmHt^C]zJYjzmSUpugrXmSbDMCmtvjo,    RFMMLLHMOLüJKHøJGOG) 0 0.0%
+
+
+test: ('#2.io\KJV[^RjnbvdRsRvvpfwIXa_Kn\FEYlmHt^C]zJYjzmSUpugrXmSbDMCmtvjo,    /;00115021y7657:2:) 0 0.0%
+
+
+test: (HKKMH,    J^UUTTPUWTQ_RSPPR_W_) 0 0.0%
+
+
+test: (HKKMH,    Ã×ÜÜÝÝÙÜÞÝØÖÛÚÙÙÛÖÞÖ) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (0,    2147483647) 0 0.0%
+
+
+test: (0,    ec{}uHYw]s) 0 0.0%
+
+
+test: (32768,    -32768) 0 0.0%
+
+
+test: (32768,    -9223372036854775808) 0 0.0%
+
+
+test: (None,    /3)UTTPUWTQ_RSPP) 0 0.0%
+
+
+test: (None,    -922337203{85475808) 0 57.78%
+
+
+test: (None,    a^wdCYYz]~OWiMoiajwmLgEVpjnHmMfo\yXBTRGUdYLM`_R]omQHNyg[DquLR\A``NnhtrtlMfWXwn]iDbSEgj) 0 0.0%
+
+
+test: (³µ¾³¾±°µ¾²,    `ENL9D#2!$|{!Uc8OvgOmtsWvpHHsB_JqtrLua) 0 0.0%
+
+
+test: (³µ¾³¾±°µ¾²,    Z3/R[Po`rB8IP$c8OvgOmtsWvpHHsB_JqtrLuauva^bYLRSfDnqq) 0 0.0%
+
+
+test: (¿¼¼º¿,    /3)UTTPUWTQ_RPP) 0 0.0%
+
+
+test: (¿¼¼º¿,    §»¡ÝÜÜØÝßÜÙ×ÚØØ) 0 0.0%
+
+
+test: (rqqwr,    None) 0 0.0%
+
+
+test: (rqqwr,    Nne) 0 0.0%
+
+
+test: (65537,    ÎÚÑÑÐÐÔÑÓÐÕÛÖ×ÔÔÖÛÓÛ) 0 0.0%
+
+
+test: (65537,    .=A^\+z1)qTNbhK<Qd1N) 0 0.0%
+
+
+test: (tUT_,    2-(Z]\SK*E9?Bo)uobH,MNmtCeMbwU`CvqkmNdeRtPgaN`uZvfVbVMB) 0 0.0%
+
+
+test: (tUT_,    None) 0 0.0%
+
+
+test: (256,    0) 0 0.0%
+
+
+test: (256,    m) 0 0.0%
+
+
+test: (\]XYV,    -129) 0 0.0%
+
+
+test: (\]XYV,    129) 0 0.0%
+
+
+test: (ÔßßÞÞÚßÝÞÛÕØÙÚÚØÕÝÚ,    -9223372036854775808) 0 0.0%
+
+
+test: (ÔßßÞÞÚßÝÞÛÕØÙÚÚØÕÝÚ,    None) 0 0.0%
+
+
+test: (None,    ­±«×ÖÖÒ×ÕÖÓÝÐÑÒÒ) 0 57.78%
+
+
+test: (9223372036854775807,    -922332036854775808) 0 0.0%
+
+
+test: (9223372036854775807,    -32768) 0 0.0%
+
+
+test: (l]levm]yGcnbjKJMLikCXxDnT`ZKH]waw,    0) 0 0.0%
+
+
+test: (l]levm]yGcnbjKJMLikCXxDnT`ZKH]waw,    [) 0 0.0%
+
+
+test: (kaVuV,    None) 0 0.0%
+
+
+test: (kaVuV,    $%.) 0 0.0%
+
+
+test: (rB|qR,    Non) 0 0.0%
+
+
+test: (rB|qR,    129) 0 0.0%
+
+
+test: (}^MX}NlznJOJfpupFEKnjZyrGsoVZAC`uSFpAmF\c[sUfNNeWV_kype\GfFyCQLJqMu^pEIrFpBYBJpWQc\OmFDOgxVtFzRkwLKnZ,    32769) 0 0.0%
+
+
+test: (}^MX}NlznJOJfpupFEKnjZyrGsoVZAC`uSFpAmF\c[sUfNNeWV_kype\GfFyCQLJqMu^pEIrFpBYBJpWQc\OmFDOgxVtFzRkwLKnZ,    ¶·²³¼) 0 0.0%
+
+
+test: (P~YnvcLnXAJqe\tS_at\fX`zJf,    »º¿¾±) 0 0.0%
+
+
+test: (P~YnvcLnXAJqe\tS_at\fX`zJf,    »º¿¾) 0 0.0%
+
+
+test: (_w$'nuJBl]ElwksMkUhmgf[lvZZaXDMC`IiwHBIlh,    Nne) 0 0.0%
+
+
+test: (_w$'nuJBl]ElwksMkUhmgf[lvZZaXDMC`IiwHBIlh,    G]H&GuaCkkqC\pnB_AIp\qGh^BxWuAJgmPyBSEnCsfWfTJIWagLhi\NBMhLWoHFQgxlJhLnHXCYWAgC_sQUzQQivSS) 0 0.0%
+
+
+test: (None,    Nze) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (128,    None) 0 66.67%
+
+
+test: (128,    (8:H) 0 0.0%
+
+
+test: (#9JOCP-(L}=-0:*2.z.d7mZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfi,    [XeNm) 0 0.0%
+
+
+test: (#9JOCP-(L}=-0:*2.z.d7mZltkQoEV\GSBuuNrkZ[te_lzghGbUbtZDGErAmkNeRxfi,    # 6) 0 0.0%
+
+
+test: (`A@K,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDS) 0 0.0%
+
+
+test: (`A@K,    =n$(Bb9Qu,.~!.(`"%"#K/D6{ZJ;H,/?p;D&P>X4$=<99+TR-/.z%L>+0,@p_!3/i$%8dm';43[*6Is5y#2qW3d?)>=,nCrXySMxMFunH`S[NylHKy\UDS]XQyAacBA^Aa[\MXUsBHNNhHm]bhRmvbZX`nVP[MziNtt[Pe[PgTE`qObCSFnTIWZSm^sEb`MhEIoQM\BbTXeNXXjzBz) 0 0.0%
+
+
+test: (`jNxANlukGZamR,    G!>-*;hXg7l>.WQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`S[NylHKy\UDSuyeMrQGOSEfqT) 0 0.0%
+
+
+test: (`jNxANlukGZamR,    9_@STE&I@P)/!	(?3!'1?'#16<. *333?/7.	,9 '5$1<%8,'(.+?/?;3=:5=&-3386-%065"+:-3/91-;*) 0 0.0%
+
+
+test: (r?ATeOKGwrOmJq^ZZKgIPFO[dsCvVY`Ft]iafbk`SaoZGDGSNAE]UqquZdZtsJueYYI]GqT]hFBoQsTzvNYJER,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP`widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (r?ATeOKGwrOmJq^ZZKgIPFO[dsCvVY`Ft]iafbk`SaoZGDGSNAE]UqquZdZtsJueYYI]GqT]hFBoQsTzvNYJER,    None) 0 0.0%
+
+
+test: (None,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMpApvQIP{widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (None,    `X[mXjZX4roezWQ_wV`AMai_kYmjOAY]OcfHBnPy^TMMMApvQIP{widRoG^muYKzZifrOB[yrFRYVPiUAfQ`AEMCDKunCrXySMxMFunH`{[NylHKy\UDS) 0 0.0%
+
+
+test: (JIB,    |k@HaZEDUotJv\mgWjG_) 0 0.0%
+
+
+test: (JIB,    |k@HaZEDUtJv\mgWjG_) 0 0.0%
+
+
+test: (imHX_qvLkYJbSkgMaio[wsIohIppMhZasKRcaFCovVCBIfvkCeHGehYKhdQep,    127) 0 0.0%
+
+
+test: (imHX_qvLkYJbSkgMaio[wsIohIppMhZasKRcaFCovVCBIfvkCeHGehYKhdQep,    ^]X) 0 0.0%
+
+
+test: (1,    32769) 0 60.0%
+
+
+test: (1,    3276) 0 0.0%
+
+
+test: (255,    BbK}tbsddFkorifya@Hs) 0 0.0%
+
+
+test: (255,    7KhEY+u'&'uM7b.=/-E!bg^]`IncoawOEgHDNmKcDGw]ZQ`Tdf]iQsCoHI]sTmS[X`VtLsIhaJKthzzyEKYdse[r) 0 0.0%
+
+
+test: (,    4294967295) 0 0.0%
+
+
+test: (,    ARA^kGvEA|u`xjRqAMxIajgIf_to) 0 0.0%
+
+
+test: (None,    429967295) 0 0.0%
+
+
+test: (None,    127) 0 0.0%
+
+
+test: (None,    9223372036854775807) 0 0.0%
+
+
+test: (None,    U223372036854775807l) 0 0.0%
+
+
+test: (-1,    XD]r|lGkXXc^sYv@807avoAO[u[kn[kGnAu) 0 0.0%
+
+
+test: (-1,    (4-7((.)0H@G1?+++71) 0 0.0%
+
+
+test: (Ö¬«,    None) 0 0.0%
+
+
+test: (Ö¬«,    -9223372036854775808) 0 0.0%
+
+
+test: (32767,    87r6) 0 0.0%
+
+
+test: (32767,    bP(`ZgZVPfzcO[SYhbGTIAI^Ags_oIMQgLzYRFcuQgMGg]cNsahpU]w_T`SAUGjHWJTMipNtlmDlAnaTL) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    *,7F) 0 0.0%
+
+
+test: (#G1k(7J,    :M&<\ym7!s%dPr&;WjG_FnftzEQ_txQTw^Kh) 0 57.78%
+
+
+test: (M<g\}xD_ZrXYVNOukHiraGFkbXbcDm`]Mn^YzvncKAdEdTkjhZRqOz^OUW\_\HlIGFJtV_NXkvgWRVICAeEbANlQ\xx,    ,) 0 0.0%
+
+
+test: (M<g\}xD_ZrXYVNOukHiraGFkbXbcDm`]Mn^YzvncKAdEdTkjhZRqOz^OUW\_\HlIGFJtV_NXkvgWRVICAeEbANlQ\xx,    ./$) 0 0.0%
+
+
+test: (6isl*loUo-VQ[6fBy]pfwi4{y'|@V^(Rh/yR/80,V@P+P_ervC;T>@\M?zY%L7&).z'`u6@&?&b7B,>!j,0g<,$%N5/?IOJBHxMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\YZMJ_yWjZYbkYQWkBmGABJ]_A\ZKu`gm[HULoNGIadeJveN[EdLrxIlI,    :) 0 0.0%
+
+
+test: (6isl*loUo-VQ[6fBy]pfwi4{y'|@V^(Rh/yR/80,V@P+P_ervC;T>@\M?zY%L7&).z'`u6@&?&b7B,>!j,0g<,$%N5/?IOJBHxMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\YZMJ_yWjZYbkYQWkBmGABJ]_A\ZKu`gm[HULoNGIadeJveN[EdLrxIlI,    A`aj) 0 0.0%
+
+
+test: (/Pfk1,AGR.UT.?zaqb_lyzqap7E$Jk4z[\hSLn"$*hQ'hMcKbwpbH4j8W6%T.`tJd<t+:U'asR8yxKpF|vb$LGst(cws'T{2$xMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\AcXVDLyxgmansXKHJRhKLYaEHrcxiUgEhFHXu_zAVLdFNwHoQP^DpJZahLKqbWRcJFScOcgGLtZNOgNgkZRbpkWQfVXLnZVUl,    :) 0 0.0%
+
+
+test: (/Pfk1,AGR.UT.?zaqb_lyzqap7E$Jk4z[\hSLn"$*hQ'hMcKbwpbH4j8W6%T.`tJd<t+:U'asR8yxKpF|vb$LGst(cws'T{2$xMRPNBEC[jmvKgZtjUpqnJQ[c\mcy_mNQqosbXnP[PHFP\zebjLH[py_grAQXBjoeq_rWq`q]_cWI[IRSs`abBCMoKbTpdF\AcXVDLyxgmansXKHJRhKLYaEHrcxiUgEhFHXu_zAVLdFNwHoQP^DpJZahLKqbWRcJFScOcgGLtZNOgNgkZRbpkWQfVXLnZVUl,    mT!@) 0 0.0%
+
+
+test: ().h`j0/9."288:*>?+/< 	.*5,71- ,<.45?21))=20=:::,    aTy@[OcQcNIWmGG\FVisBEjOaVeIwuihIdodrJFbINXqVOCna\EsboZdRRlacDL]U_kiBnhPKEz_siGukBFlGAKp) 0 0.0%
+
+
+test: ().h`j0/9."288:*>?+/< 	.*5,71- ,<.45?21))=20=:::,    65535) 0 0.0%
+
+
+test: (Reb$,&|Jc_^ubnSGH~WYtGtvfNNr@GsR[g[OcJplE^QYbfy`{I}PaKl\[`SVpbIUxy\s~}eeZRq~X[Q|MqvS[XQSBKvD[v,    3Il~3'!0<+IWmGG\FVisBEjOaVeIwuihIdodrJFbINXqVOCna\EsboZdRRlacDL]U_kiBnhPKEz_s) 0 0.0%
+
+
+test: (Reb$,&|Jc_^ubnSGH~WYtGtvfNNr@GsR[g[OcJplE^QYbfy`{I}PaKl\[`SVpbIUxy\s~}eeZRq~X[Q|MqvS[XQSBKvD[v,    4294967296) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    32767) 0 0.0%
+
+
+test: (None,    }one) 0 0.0%
+
+
+test: (None,    68&t) 0 0.0%
+
+
+test: (128,    32768) 0 0.0%
+
+
+test: (128,    -2147483648) 0 0.0%
+
+
+test: (#G1k(7J,    JEgb`/) 0 57.78%
+
+
+test: (+6.C/?>ORYDuTW]^gcyVbuX`CRQZ\i^x]gOpdDzdpcrjuK\MKFaV,    None) 0 0.0%
+
+
+test: (+6.C/?>ORYDuTW]^gcyVbuX`CRQZ\i^x]gOpdDzdpcrjuK\MKFaV,    lSp#) 0 0.0%
+
+
+test: (×,    None) 0 0.0%
+
+
+test: (×,    Èéèã) 0 0.0%
+
+
+test: (,    256) 0 0.0%
+
+
+test: (,    hCVZv`zUgscgThlAlQnThFbXkQRPDAeL\ZQwKJr^trR\CeSIs^xuTIi[WkQpXPDRkDSahsBtrTsQ[VCLAbX``KvOvJIlFQoSvbS) 0 0.0%
+
+
+test: (2~7,    Noe) 0 0.0%
+
+
+test: (2~7,    %4s<kOMY`l`aUUoyer`ktdoWSRP\tlmLWfr_]eNUxqqgml[uBmgx_ad[Btxw]YIDSyCL`VWkaBTErtxUwXCfcW^h) 0 0.0%
+
+
+test: (-9223372036854775808,    :;G;) 0 0.0%
+
+
+test: (-9223372036854775808,    @A=A) 0 0.0%
+
+
+test: (None,    {4_3) 0 0.0%
+
+
+test: (None,    {~_3) 0 0.0%
+
+
+test: (-2147483648,    9223372036854775807) 0 0.0%
+
+
+test: (-2147483648,    922337203685475807) 0 0.0%
+
+
+test: (None,    -128) 0 0.0%
+
+
+test: (None,    B]kqolYIUxBtk[FtGzkTJO^cy) 0 0.0%
+
+
+test: (None,    »º¿¾°) 0 57.78%
+
+
+test: (None,    T/Oy[) 0 0.0%
+
+
+test: (-9223372036854775808,    «·´¾) 0 0.0%
+
+
+test: (-9223372036854775808,    ,039) 0 0.0%
+
+
+test: (XD`fekvWP]PwHQWMfNDHAKOXXcxlJxf[SQz]k`Y\kyfbPFyxECdMLJjdWU_jLwQkLJ\PTdK,    ~·´¾) 0 0.0%
+
+
+test: (XD`fekvWP]PwHQWMfNDHAKOXXcxlJxf[SQz]k`Y\kyfbPFyxECdMLJjdWU_jLwQkLJ\PTdK,    '.8v) 0 0.0%
+
+
+test: (	EJGPY|Ucy`yKeR^|Y~Dc^hjD~s^\`@v~pa,    -9223372036854775808) 0 0.0%
+
+
+test: (	EJGPY|Ucy`yKeR^|Y~Dc^hjD~s^\`@v~pa,    65536) 0 0.0%
+
+
+test: (4294967295,    128) 0 0.0%
+
+
+test: (4294967295,    wHnFzVacxBAtBmuiQciEajahBGC^An) 0 0.0%
+
+
+test: (v_Ph,    PDOONNJOMNKEHIJJHEME) 0 0.0%
+
+
+test: (v_Ph,    T.8@6'l<=6|X/)KL2,$'KjJAxiWspxNGg]^DziibUqxAUBQVz^]NEdNyLgR^Q\Hx`ns_T) 0 0.0%
+
+
+test: (,    PDOONNJOMNKEHIJJHEM) 0 0.0%
+
+
+test: (,    {-&,{k6IC+2XtBX)9?#\iBLFFAZNeyPO^PFqzG`kICIZloiPedT_xaICkwGcImYzQ[l`_fiiyrMaO`JnDJSU) 0 0.0%
+
+
+test: (X{c`[,    å¢ÅÎ) 0 0.0%
+
+
+test: (X{c`[,    ,|r:) 0 0.0%
+
+
+test: (65537,    Ô³¸) 0 0.0%
+
+
+test: (2147483647,    128) 0 57.78%
+
+
+test: (2147483647,    ) 0 0.0%
+
+
+test: (9223372036854775807,    1) 0 0.0%
+
+
+test: (9223372036854775807,    @qsH]bn) 0 0.0%
+
+
+test: (X,    M) 0 0.0%
+
+
+test: (X,    32769) 0 0.0%
+
+
+test: (FFNxKEALW6(7K}?GmTa=%rm+%gG,t^2%;58#FCZfoXT8jÿáËØÃÌëÏÃéÿñãákPiDIfx_FIWPSsNsBLvdsaSzBfkpM]lkTBHN`iaGvxdxA,    ¤ã) 0 0.0%
+
+
+test: (FFNxKEALW6(7K}?GmTa=%rm+%gG,t^2%;58#FCZfoXT8jÿáËØÃÌëÏÃéÿñãákPiDIfx_FIWPSsNsBLvdsaSzBfkpM]lkTBHN`iaGvxdxA,    $c) 0 0.0%
+
+
+test: (0,    00{w) 0 0.0%
+
+
+test: (0,    127) 0 0.0%
+
+
+test: (4294967295,    ,k) 0 0.0%
+
+
+test: (4294967295,    ¤ã) 0 0.0%
+
+
+test: (None,    X8lq) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (OUVCnO1yaM..EE\(#1GD3M.8IWL31!U;H5(+{-0`kf^/8li6'Bj95BW0/#+RmRBLcLo_aq^GcZLtYadQuAWLGYF]_cpIJOJtNT`ZXThauIuhMuGKeUAwHNarc^iKnFzE\^uUzZCEIhyBwbYAZv_ExCXHdYV_,    None) 0 0.0%
+
+
+test: (OUVCnO1yaM..EE\(#1GD3M.8IWL31!U;H5(+{-0`kf^/8li6'Bj95BW0/#+RmRBLcLo_aq^GcZLtYadQuAWLGYF]_cpIJOJtNT`ZXThauIuhMuGKeUAwHNarc^iKnFzE\^uUzZCEIhyBwbYAZv_ExCXHdYV_,    -1) 0 0.0%
+
+
+test: (-9223372036854775808,    -32768) 0 0.0%
+
+
+test: (65537,    |fY2) 0 66.67%
+
+
+test: (65537,    None) 0 0.0%
+
+
+test: (65537,    :) 0 0.0%
+
+
+test: (9223372036854775807,    -) 0 0.0%
+
+
+test: (9223372036854775807,    129) 0 0.0%
+
+
+test: (N~nz,    Noe) 0 0.0%
+
+
+test: (N~nz,    9223372036854775807) 0 0.0%
+
+
+test: ($>$njoJiXKXUNTxBSxqIvDPNEnLbH[XvzBv\SknF[svdeeHHSNSVLCjIpZpgFulhr,    :<4L) 0 0.0%
+
+
+test: ($>$njoJiXKXUNTxBSxqIvDPNEnLbH[XvzBv\SknF[svdeeHHSNSVLCjIpZpgFulhr,    None) 0 0.0%
+
+
+test: (Ð»®¢ßÔäÇâÕàÚØÒ×æÎÏñÜÄÙÒÏöÝùÆ×õêèÙÀÄÄáòÈÓöëæÌÖçÆæÖÝÓÁéÓÒÂçÓö÷ÅæÙöëâÅÎæÂöËÇßÐûãÒÞâÝô,    oe) 0 0.0%
+
+
+test: (Ð»®¢ßÔäÇâÕàÚØÒ×æÎÏñÜÄÙÒÏöÝùÆ×õêèÙÀÄÄáòÈÓöëæÌÖçÆæÖÝÓÁéÓÒÂçÓö÷ÅæÙöëâÅÎæÂöËÇßÐûãÒÞâÝô,    ä
+ç ) 0 0.0%
+
+
+test: (S8-!\WgDaVc[QTeMLr_GZQLu^zETvikZCGGbqKPuheOUdEeU^PBjPQAdPutFeZuhaFMeAuHD\Sx`Q]a^w,    u,cG) 0 0.0%
+
+
+test: (S8-!\WgDaVc[QTeMLr_GZQLu^zETvikZCGGbqKPuheOUdEeU^PBjPQAdPutFeZuhaFMeAuHD\Sx`Q]a^w,    ?f)) 0 0.0%
+
+
+test: (0,    32767) 0 0.0%
+
+
+test: (0,    -9223372036854775808) 0 0.0%
+
+
+test: (None,    256) 0 0.0%
+
+
+test: (-9223372036854775808,    ª´µ°±¿) 0 57.78%
+
+
+test: (.+8.`DqKgo\NTw^glup]\Nvc\tIN^kmFJFWV,    None) 0 0.0%
+
+
+test: (.+8.`DqKgo\NTw^glup]\Nvc\tIN^kmFJFWV,    None) 0 0.0%
+
+
+test: (-1,    Îïîå) 0 0.0%
+
+
+test: (-1,    µ) 0 0.0%
+
+
+test: (-128,    65537) 0 0.0%
+
+
+test: (-128,    ²±±·³) 0 0.0%
+
+
+test: (2147|836~7,    32767) 0 0.0%
+
+
+test: (2147|836~7,    255) 0 0.0%
+
+
+test: (2147|8647,    128) 0 0.0%
+
+
+test: (2147|8647,    JIC) 0 0.0%
+
+
+test: (Íìíæ,    256) 0 0.0%
+
+
+test: (Íìíæ,    None) 0 0.0%
+
+
+test: (128,    pCtBvIecMPLGZc\BnVMdhREwWNpFou^^qqlIfVKIV^yqQSca\kTnRUa) 0 0.0%
+
+
+test: (128,    pCtvIecMPLGZc\BnVMdhREwWNpFou^^qqlIfVKIV^yqQSca\kTnRUa) 0 0.0%
+
+
+test: (]tAeG,    65537) 0 0.0%
+
+
+test: (None,    56) 0 57.78%
+
+
+test: (ujYv[C_lEneM]sC^oPtyfOuiYWoodsiSY^^lcvEhgLchwDYuDxfvlYg[LEEvbUvbjbDCBEFqyRq,    65535) 0 0.0%
+
+
+test: (ujYv[C_lEneM]sC^oPtyfOuiYWoodsiSY^^lcvEhgLchwDYuDxfvlYg[LEEvbUvbjbDCBEFqyRq,    None) 0 0.0%
+
+
+test: (uuxzXDJC,    _^}<e) 0 0.0%
+
+
+test: (uuxzXDJC,    None) 0 0.0%
+
+
+test: (¯³°»,    None) 0 0.0%
+
+
+test: (¯³°»,    xt?iQmQimDtGDGqKzSHyKMDhOCFDrQ]uInmnVTi[GzRHK`CWBxW) 0 0.0%
+
+
+test: (None,    eo) 0 0.0%
+
+
+test: (None,    âè) 0 0.0%
+
+
+test: (itwcibxYw~[ECT]ZKoCIa,    ) 0 0.0%
+
+
+test: (itwcibxYw~[ECT]ZKoCIa,    `}xoXFYIYoUze\H\SWHhbMrwXzq^qsJm[YfXjmNkIlzWeFEWf_LEqfJCAjLojsZExNSnrlTYPK) 0 0.0%
+
+
+test: (·¶³²¼,    1) 0 0.0%
+
+
+test: (·¶³²¼,    None) 0 0.0%
+
+
+test: (A27,    65536) 0 0.0%
+
+
+test: (A27,    65535) 0 0.0%
+
+
+test: (
++*!,    Ïïä) 0 0.0%
+
+
+test: (]tAeG,    32767) 0 57.78%
+
+
+test: (+:!;eU`^fzRu[FEgiHPLkkVeUrAbu_\SgGd^dDTK,    Ïï) 0 0.0%
+
+
+test: (+:!;eU`^fzRu[FEgiHPLkkVeUrAbu_\SgGd^dDTK,    pkA>JmwpvgvZRrrcwYa) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    2147483647) 0 0.0%
+
+
+test: (¢±¯¼ª¡§¾³º¾°³¤·¥½£´¦¬©±°¾¤ª³ »´·»,    None) 0 0.0%
+
+
+test: (¢±¯¼ª¡§¾³º¾°³¤·¥½£´¦¬©±°¾¤ª³ »´·»,    65535) 0 0.0%
+
+
+test: (-2147483648,    o) 0 0.0%
+
+
+test: (-2147483648,    ¨@) 0 0.0%
+
+
+test: (:1fzW^jcDtQoBcRsNJY,    9223372036854775807) 0 0.0%
+
+
+test: (:1fzW^jcDtQoBcRsNJY,    922337206854775807) 0 0.0%
+
+
+test: (SuSbGjrYHMtZz_C^gKH[LOWcqxSrKGAue`wHWCQ^YBJIKdYflVXAtkCvwsfPuGn\qnZzJVMNdqrDm,    LOOIM) 0 0.0%
+
+
+test: (SuSbGjrYHMtZz_C^gKH[LOWcqxSrKGAue`wHWCQ^YBJIKdYflVXAtkCvwsfPuGn\qnZzJVMNdqrDm,    yzz|x) 0 0.0%
+
+
+test: (32767,    32767) 0 0.0%
+
+
+test: (32767,    BCFGF) 0 0.0%
+
+
+test: (,    255) 0 0.0%
+
+
+test: (
++*!,    128) 0 57.78%
+
+
+test: (65535,    0) 0 0.0%
+
+
+test: (65535,    ) 0 0.0%
+
+
+test: (~_C
+gqH`WVEfs\]fWRQwlKNFu,    None) 0 0.0%
+
+
+test: (~_C
+gqH`WVEfs\]fWRQwlKNFu,    None) 0 0.0%
+
+
+test: (3~s+%8)VnQgnArbzOSG^UdleeXlZyo]hybTgtjxpgv@Yfwqtv}HW_Dk{^}NljLBanRHP|rdebcSgziSlAfcy_AmuT_3c*Z;(7,    None) 0 0.0%
+
+
+test: (3~s+%8)VnQgnArbzOSG^UdleeXlZyo]hybTgtjxpgv@Yfwqtv}HW_Dk{^}NljLBanRHP|rdebcSgziSlAfcy_AmuT_3c*Z;(7,    None) 0 0.0%
+
+
+test: (None,    'Oj0i``UwRThgEMfKhSAuxZtsg]DnTY`SdHjbkvEyqKQUvYrim_eO][rC) 0 0.0%
+
+
+test: (None,    127) 0 0.0%
+
+
+test: ( w8	8?>?2:&)
+3?) 0'	&5
+ %9%>=4=&1#%=#!>'784>)":&,    ') 0 0.0%
+
+
+test: ( w8	8?>?2:&)
+3?) 0'	&5
+ %9%>=4=&1#%=#!>'784>)":&,    Hihc) 0 0.0%
+
+
+test: (-129,    4294967295) 0 0.0%
+
+
+test: (-129,    65536) 0 0.0%
+
+
+test: (2147483647,    129) 0 0.0%
+
+
+test: (2147483647,    ·´¿) 0 0.0%
+
+
+test: (LJALANOJAN,    zyr) 0 0.0%
+
+
+test: (LJALANOJAN,    2Gv) 0 0.0%
+
+
+test: (,    55) 0 57.78%
+
+
+test: (?v7-M,    OXMAY) 0 0.0%
+
+
+test: (?v7-M,    None) 0 0.0%
+
+
+test: (<;G/	,    A\4pnF[rACstxJmmF\AReeVoe^^YVMnTSVlJPiejvtJQNO^IJgO[`fbIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_B) 0 0.0%
+
+
+test: (<;G/	,    127) 0 0.0%
+
+
+test: (L7_y,    ;7y,DZ96BCe/":<$)f"}?/"%{.ID1z>`99,.<30U)9<1/:9#:0t|F2bIWe]zIaVJMvLDuxNtqKsyOxKHmJhqqj`N_BzkMfzQbDH\o[ZJvIoXcXZJAJapTMgQP\jowdlZUf_Mv`aWgjpkKOxT) 0 0.0%
+
+
+test: (L7_y,    xe(Z3;^_;I(@@}lwJ'c6FOfl2E*Jl6xu`zs\wICiZ@yxAaLQ}oq*cb)1:5_7+#5N.9Kd;!Y&;G+Fx9'h30+^3-}/?m6.pfzQbDH\o[ZJvIoXcXZJAJapTMgQP\jowdlZUf_Mv`aWgjpkKOxTCRQvwagiyMMobGPScAAKy`DIIkKI]LFtYC_rKzsMsyEIn[urG_nVGPKxmPXMbBcDc`LWNYURJ[saPAlJ^zkiBmva`WLEC) 0 0.0%
+
+
+test: (255,    9223372036854775807) 0 0.0%
+
+
+test: (255,    128) 0 0.0%
+
+
+test: (þÝ«,    ½¶¶··³¶´·²¼±°³³±¼´³) 0 0.0%
+
+
+test: (þÝ«,    SguvS66;"KgybNBgK-6) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    32768) 0 0.0%
+
+
+test: (ONKJK,    -2147483648) 0 0.0%
+
+
+test: (ONKJK,    -2147{83648) 0 0.0%
+
+
+test: (None,    >*) 0 0.0%
+
+
+test: (None,    -32768) 0 0.0%
+
+
+test: (]2,    65536) 0 57.78%
+
+
+test: (256,    TF) 0 0.0%
+
+
+test: (256,    257) 0 0.0%
+
+
+test: (None,    '5#3iytVwGi^fZtTzdjwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`) 0 0.0%
+
+
+test: (None,    ¯½«»áñüÞÿÏáÖîÒüÜòìâÿÿòÒØÕÜòÕÿæÿÐìÍçëÍþÀÛÆØüíÂÁÚòÿÑþÔè) 0 0.0%
+
+
+test: (vLU,    ¯½«»áñüÞÿÏáÖîÒüÜòìâÿÿòÒØÕÜòÕÿæÿÐìÍçëÍþÀÛÆØüíÂÁÚòÿÑþÔè) 0 0.0%
+
+
+test: (vLU,    'Z<aZ) 0 0.0%
+
+
+test: (None,    Cta@N#;T4#C}~#<2(djwwzZP]Tz]wnwXdEocEvHSNPteJIRzwYv\`dABslZO]CdeZryHfZ) 0 0.0%
+
+
+test: (None,    2147483647) 0 0.0%
+
+
+test: (256,    255) 0 0.0%
+
+
+test: (256,    Gy_uLjrRO[LQAgHSjaEukhJTK^lxYVna`RAfouhBmXuBHfZMhfGAZrgFeb^pVumLEVZpPgvfJdMR) 0 0.0%
+
+
+test: (32769,    }one) 0 0.0%
+
+
+test: (32769,    255) 0 0.0%
+
+
+test: (00C+9a,/!erhNqMzwQrRjvlUTHpQKQWPfVOHWmX_KizlnXqcHQL]hndYpfXjQTUVuxXHGTLINUuWEol\RJ^hvWQEPiFthMT,    ) 0 0.0%
+
+
+test: (00C+9a,/!erhNqMzwQrRjvlUTHpQKQWPfVOHWmX_KizlnXqcHQL]hndYpfXjQTUVuxXHGTLINUuWEol\RJ^hvWQEPiFthMT,    ) 0 0.0%
+
+
+test: (None,    SA@K) 0 0.0%
+
+
+test: (None,    ?Q(5lDREZYr]^nZInQnqGhcAG[dyKtcSaKmNABhFenYNwXTspsXAIs) 0 0.0%
+
+
+test: (]2,    @_|j\) 0 57.78%
+
+
+test: (a7hQQ\Vc2[xODwpzjW]J,    -:x@PUghchSbZcOlMvCzZl`nHSuTfdfAgE) 0 0.0%
+
+
+test: (a7hQQ\Vc2[xODwpzjW]J,    -2147483648) 0 0.0%
+
+
+test: (-922337203684775808,    129) 0 0.0%
+
+
+test: (-922337203684775808,    lKJ]ysqggRtpX\Kp]^HkoAEUDOjNr[\udDDz`wPTrBSqW\YvdSSvy]BCGHBX) 0 0.0%
+
+
+test: (None,    2) 0 0.0%
+
+
+test: (None,    Hihc) 0 0.0%
+
+
+test: (©µ,    65535) 0 0.0%
+
+
+test: (©µ,    129) 0 0.0%
+
+
+test: (SO,    QTzKRgaOxg\lKsOGBJWKmsRqmY_rfZWS) 0 0.0%
+
+
+test: (SO,    -(7.3 73;>6+7.%#&+/) 0 0.0%
+
+
+test: (None,    -1) 0 0.0%
+
+
+test: (None,    pV]gmZhwoYJt[) 0 0.0%
+
+
+test: (25,    ¯³) 0 0.0%
+
+
+test: (25,    ';) 0 0.0%
+
+
+test: (-1,    None) 0 0.0%
+
+
+test: (-1,    8x4:vbZeZzrGq`GbsQdeZKwQdVNdPbjgCmiNHxxzUSObYdODoaTXXP`AOURSIYyWTTRTFmdaSJpu_JJkurgODLB) 0 0.0%
+
+
+test: (ykP<tZuwDIaYIYb,    h#M#) 0 57.78%
+
+
+test: (-1,    96(:wYg_VyDiw`_XPe_rbqxfuaxAhup^\NRjixhpN]izUq\lEIROOJbL^dWZbTCBnLoW]vTdTgmB_YlglqwoMnaj[kfKSZ`kk\) 0 0.0%
+
+
+test: (-1,    ¿°®¼ñßáÙÐÿÂïñæÙÞÖãÙôä÷þàóçþÇîóöØÚÈÔìïþîöÈÛïüÓ÷ÚêÃÏÔÉÉÌäÊØâÑÜäÒÅÄèÊéÑÛðÒâÒáëÄÙßêáê÷ñéËèçìÝíàÍÕÜæííÚ) 0 0.0%
+
+
+test: (None,    6(?M) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: ([hCYRGhaM,    `wg?V_XrZyuualqDlaHlr`hwJ`zMPcAFYljKNM`XTbzy`klsVoSCnyMO_wQQVkfKS_KGv_Lb\) 0 0.0%
+
+
+test: ([hCYRGhaM,    :@.t680*=19%,%;g=<~%-91.0PW=9s$E;_NKNM`XTbzy`klsVoSCnyMO_wQQVkfKS_KGv_Lb\ZWIK`QOXgHvPMIJCQwWI_lYYzqkpieeWKxy) 0 0.0%
+
+
+test: (UXOGa8Xab%4z2.,    1) 0 0.0%
+
+
+test: (UXOGa8Xab%4z2.,    Bb|YsrmCeDgDtYypUgD\QK]zuwseGeyS^XpD]RzFw]aMYfR`AhJC) 0 0.0%
+
+
+test: (X\~iD"{iFZ<>6D>hb9,    4294967295) 0 0.0%
+
+
+test: (X\~iD"{iFZ<>6D>hb9,    -9223372036854775808) 0 0.0%
+
+
+test: (^PYrxKwd@n,    65535) 0 0.0%
+
+
+test: (^PYrxKwd@n,    None) 0 0.0%
+
+
+test: (1,    4294967296) 0 0.0%
+
+
+test: (1,    Ux[{PLan96aJbOizV\) 0 0.0%
+
+
+test: (-1,    mLMF) 0 0.0%
+
+
+test: (-1,    None) 0 0.0%
+
+
+test: (ykP<tZuwDIaYIYb,    5ovg]LJDlooRssUhVYvTIenVOBxpwWVOoq\^c) 0 57.78%
+
+
+test: (-129,    -1) 0 0.0%
+
+
+test: (-129,    dYIhpFjPrEKvA]BvQmz`[xyr^H`dwlIi`\eY]tHzmeYnkENylpzuI[gLdO^^qJOkacgtWA) 0 0.0%
+
+
+test: (None,    «·) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (65535,    FEeAtVwXKgwtreGStaa^EDcxrZNJsmkL\WLdGnGhFPmN][JOhJkpfd`LvrTQDwMY_`jEHJnIlEO^gXzmfzeUYX) 0 0.0%
+
+
+test: (65535,    1) 0 0.0%
+
+
+test: (||z|,    None) 0 0.0%
+
+
+test: (||z|,    1!='FNSBXXbHCQczxu\to]iZZZbnmmrcJ\dx[NhTkYpYx]_Y\kQX[l_IRWxerdfYTzgdHiFjJdSnqyON]\^DevDasK) 0 0.0%
+
+
+test: (6535,    2147483647) 0 0.0%
+
+
+test: (6535,    ´·²±²¾µ°²±) 0 0.0%
+
+
+test: (}x[wPIiOmJRJppLwTMYxfasqpCBEWxXDvufuFttF]AgwLrFuqkTReKjodf[OdWTikmnxjTK\KyUmCWZOwERBQF[hsI,    N{ne) 0 0.0%
+
+
+test: (}x[wPIiOmJRJppLwTMYxfasqpCBEWxXDvufuFttF]AgwLrFuqkTReKjodf[OdWTikmnxjTK\KyUmCWZOwERBQF[hsI,    None) 0 0.0%
+
+
+test: ({128,    Q3d9) 0 0.0%
+
+
+test: ({128,    3Q[) 0 0.0%
+
+
+test: (±û¸,    g541) 0 0.0%
+
+
+test: (None,    65537) 0 57.78%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (n,H,    8Sht) 0 0.0%
+
+
+test: (n,H,    W1B:oUiNbDIzUdScbRLAUBS]Q_[QQa]WNXqbWHpoqTWKuhaFXKfKZMde) 0 0.0%
+
+
+test: ( ! +,    2147483647) 0 0.0%
+
+
+test: ( ! +,    |147483647) 0 0.0%
+
+
+test: (32769,    None) 0 0.0%
+
+
+test: (32769,    Îïîå) 0 0.0%
+
+
+test: (-1,    256) 0 0.0%
+
+
+test: (-1,    y~}) 0 0.0%
+
+
+test: (None,    TP]) 0 0.0%
+
+
+test: (None,    ÔÐÝ) 0 0.0%
+
+
+test: (None,    &:-=) 0 0.0%
+
+
+test: (None,    ¥¹®¾) 0 0.0%
+
+
+test: (32769,    pB{XVxVecNdyQTIWB_pNQA__jWCwF_U[[cVewYVwffKNCqMXGErR[RYFPAnw[hEk[CXAwIKsmigyGm) 0 0.0%
+
+
+test: (32769,    ?%++3,)4*?"3,<""*>
+;"(&&+
+$+
+63>0%:8/&/$;-<
+&8&>%<
+46:) 0 0.0%
+
+
+test: (±û¸,    65535) 0 57.78%
+
+
+test: (-32768,    ¯¤´) 0 0.0%
+
+
+test: (-32768,    öWýí) 0 0.0%
+
+
+test: (65536,    257) 0 0.0%
+
+
+test: (65536,    128) 0 0.0%
+
+
+test: (~|Ncf,    TVR) 0 0.0%
+
+
+test: (~|Ncf,    T~R) 0 0.0%
+
+
+test: (None,    -2147483648) 0 0.0%
+
+
+test: (None,    lnX{][g_\Q`A\iOjo_ljeXO_ogdLq_DfBkiv_ARNJgamLXjbgwH`kzWxOQM[]]Z^fINaSEa`SoDhX]AgPJxfHxRDpHEL) 0 0.0%
+
+
+test: (~{zt,    ¨·´±²±½¶³±½) 0 0.0%
+
+
+test: (~{zt,    32769) 0 0.0%
+
+
+test: (IQi8OgfuUclrEQMygebgHN]vlMIJYhtwbrfYFxus`XMUHEV^VLrH^G\h[_oyEb`EyxhKTfYMYhsYiuHNG_BeJW,    1) 0 0.0%
+
+
+test: (IQi8OgfuUclrEQMygebgHN]vlMIJYhtwbrfYFxus`XMUHEV^VLrH^G\h[_oyEb`EyxhKTfYMYhsYiuHNG_BeJW,    ·) 0 0.0%
+
+
+test: (ïîå,    None) 0 0.0%
+
+
+test: (ïîå,    one) 0 0.0%
+
+
+test: (129,    4294967296) 0 0.0%
+
+
+test: ( >?:;5,    &-=) 0 57.78%
+
+
+test: ( >?:;5,    ¹) 0 0.0%
+
+
+test: (RNMG,    pv}p}rsv}r) 0 0.0%
+
+
+test: (RNMG,    zJ%Q9^5=/:uxXuxiFmRvbvrvSefGcZwbraNlEHoTi^) 0 0.0%
+
+
+test: (9223372036854775807,    o) 0 0.0%
+
+
+test: (9223372036854775807,    None) 0 0.0%
+
+
+test: (ap+pEsEf`TuFXzHngwkk,    -129) 0 0.0%
+
+
+test: (ap+pEsEf`TuFXzHngwkk,    |`ch) 0 0.0%
+
+
+test: (·´´²·,    
+) 0 0.0%
+
+
+test: (·´´²·,    256) 0 0.0%
+
+
+test: (257,    Q[]`GLOClqu^IwejyJvJOSdhbaZ`TedBwPJ`UkrwjntdJvRYWQZnnCLQyLFQFl_k]z) 0 0.0%
+
+
+test: (257,    "q!3u+-J4X+)3/w,r.:Te4[)p_),4!?)58'=3~sX.!'1&Yv(j,7=o)vc/[`<3$X%+5KPGSggbRXp^wzXzFmdLC]gghotsL\DgkBhmifowmDOSUlhGqMXmSpjFAVVOmPH^NvOIBzfbAoqlQPtaYf) 0 0.0%
+
+
+test: (-2147483648,    ) 0 0.0%
+
+
+test: (-2147483648,    None) 0 0.0%
+
+
+test: (-129,    ) 0 0.0%
+
+
+test: (-129,    ê) 0 0.0%
+
+
+test: (129,    424967296) 0 60.0%
+
+
+test: (°·µ,    None) 0 0.0%
+
+
+test: (°·µ,    Non{) 0 0.0%
+
+
+test: (127,    Èéã) 0 0.0%
+
+
+test: (127,    g@K@) 0 0.0%
+
+
+test: (-wZ89,    4294967296) 0 0.0%
+
+
+test: (-wZ89,    32767) 0 0.0%
+
+
+test: (429496295,    -1) 0 0.0%
+
+
+test: (429496295,    -128) 0 0.0%
+
+
+test: (128,    None) 0 0.0%
+
+
+test: (128,    -128) 0 0.0%
+
+
+test: (.87*;' &-%({-513838).+78$7
+!0!#970$=%6!,    dca) 0 0.0%
+
+
+test: (.87*;' &-%({-513838).+78$7
+!0!#970$=%6!,    2147483647) 0 0.0%
+
+
+test: ({,    None) 0 0.0%
+
+
+test: ({,    (2=?f]zZSXIddLlNE^_C]VadNPWUqjH_sQh) 0 0.0%
+
+
+test: (|,    129) 0 0.0%
+
+
+test: (|,    p\SAnjQvHQoaEkWMl[bHVKlUCiDPgxOPCjtWG^PGbVkw\QIwOyZgz\hqreBVWis_^jZpJKoaCWlcV\TS`irIeqz[v) 0 0.0%
+
+
+test: (27,    None) 0 71.11%
+
+
+test: (,    Éèéâ) 0 0.0%
+
+
+test: (,    7mgd[RUuU) 0 0.0%
+
+
+test: (None,    ´) 0 0.0%
+
+
+test: (None,    $SgJPO[zyDQWmQGiN^ZUh) 0 0.0%
+
+
+test: ((	,    z) 0 0.0%
+
+
+test: ((	,    moBTpWwZa\Dfod) 0 0.0%
+
+
+test: (#*/#mEAqC]ppDZeWZ_\Yi]cH]VMKihMNcSqjMxpdvldONV]wTIBdscIcMR,    None) 0 0.0%
+
+
+test: (#*/#mEAqC]ppDZeWZ_\Yi]cH]VMKihMNcSqjMxpdvldONV]wTIBdscIcMR,    $41<j[_Y`dN_okLzJ[GYCLbCShqWSYy_xKtR\nyyWdDGGVAKMfCToOjALAmgPHcJ`KUtyH]sGivAaRwRduTh[kBGT^_Z) 0 0.0%
+
+
+test: (32768,    ø) 0 0.0%
+
+
+test: (32768,    ) 0 0.0%
+
+
+test: (32768,    z) 0 0.0%
+
+
+test: (32768,    -129) 0 0.0%
+
+
+test: (&',,    z) 0 0.0%
+
+
+test: (&',,    2) 0 0.0%
+
+
+test: (None,    m) 0 0.0%
+
+
+test: (27,    
++*!) 0 71.11%
+
+
+test: (½,    þ) 0 0.0%
+
+
+test: (½,    u) 0 0.0%
+
+
+test: (PNK},    9223372036854775807) 0 0.0%
+
+
+test: (PNK},    None) 0 0.0%
+
+
+test: (W,    ) 0 0.0%
+
+
+test: (W,    rv][[OHLlXVIGII[OPzuELo_nkmOBIKJwEnsme) 0 0.0%
+
+
+test: (257,    j) 0 0.0%
+
+
+test: (257,    +Aj^LDvv[Bp) 0 0.0%
+
+
+test: (,    ) 0 0.0%
+
+
+test: (,    ) 0 0.0%
+
+
+test: (V,    Ä) 0 0.0%
+
+
+test: (V,    qHVMg[`\ThuSmfIU`vHkNUT) 0 0.0%
+
+
+test: (`|[,%2#>$>E:>7$HBGjVVfjAQgGjgQqJLR,    ) 0 0.0%
+
+
+test: (`|[,%2#>$>E:>7$HBGjVVfjAQgGjgQqJLR,    -128) 0 0.0%
+
+
+test: (65535,    1T1xuPuwAXe]) 0 0.0%
+
+
+test: (None,    ) 0 57.78%
+
+
+test: (|E^vlLQk}q,    None) 0 0.0%
+
+
+test: (|E^vlLQk}q,    l$z6TKtSW\KitcmrPTxzMJuI`nd\qwkEImGNpHoNVW_JVWsMTmWdTCgVTkDfGBumqLHkxUouNiAqmha_MbqmAx]he) 0 0.0%
+
+
+test: (65535,    ;Fb_) 0 0.0%
+
+
+test: (65535,    i5?,) 0 0.0%
+
+
+test: (i]^gxKQ\x9sOf{STVr]PDdlUKxfnHqEwSOdccJmh,    1) 0 0.0%
+
+
+test: (i]^gxKQ\x9sOf{STVr]PDdlUKxfnHqEwSOdccJmh,    256) 0 0.0%
+
+
+test: (VBIIHHLIKMCNOLLNCKC,    p) 0 0.0%
+
+
+test: (VBIIHHLIKMCNOLLNCKC,    32768) 0 0.0%
+
+
+test: (127,    s) 0 0.0%
+
+
+test: (127,    ]) 0 0.0%
+
+
+test: (w6E1nmmTMur^Dq`_\eDsgsYAQQhHY,    Z) 0 0.0%
+
+
+test: (w6E1nmmTMur^Dq`_\eDsgsYAQQhHY,    ) 0 0.0%
+
+
+test: (+]!-dYcfpRvNK}jF2aAJRU}I>`WMq+#O'.%;4x$0,=`1JM/_/**"F%/@4!32#0,    ²) 0 0.0%
+
+
+test: (+]!-dYcfpRvNK}jF2aAJRU}I>`WMq+#O'.%;4x$0,=`1JM/_/**"F%/@4!32#0,    |) 0 0.0%
+
+
+test: (32769,    2) 0 0.0%
+
+
+test: (65535,    11xuPuwAXe]) 0 60.0%
+
+
+test: (´··±´,    Ø) 0 0.0%
+
+
+test: (´··±´,    _) 0 0.0%
+
+
+test: (·´´²·,    ) 0 0.0%
+
+
+test: (·´´²·,    .) 0 0.0%
+
+
+test: (Td0MP?;:A=K)%e2(-}85*m8ulLcE2<>|/+i%9CpD6r8$X/Nt-T'!?41l2X6JU/$/!4]-z(wm#gsVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhrd_Jfk,    Ïîïä) 0 0.0%
+
+
+test: (Td0MP?;:A=K)%e2(-}85*m8ulLcE2<>|/+i%9CpD6r8$X/Nt-T'!?41l2X6JU/$/!4]-z(wm#gsVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhrd_Jfk,    S!YmynXDhUECutiefO\) 0 0.0%
+
+
+test: (oPMYAH_lfNb_~RCZA>Xdc1U9N>=1BnzVsFB`w[-sn|Ie5E.>J!uf{n^.Kt~<aFq_HF)a"C%!a6OVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhr_kwrzwdVSsCv[rqrlC`QI\mLzr^tpRDv\mIENC]SXbqAmj`JguRGDZoByPHvXiUpirtLvkuLBQo,    32767) 0 0.0%
+
+
+test: (oPMYAH_lfNb_~RCZA>Xdc1U9N>=1BnzVsFB`w[-sn|Ie5E.>J!uf{n^.Kt~<aFq_HF)a"C%!a6OVP[iYWj[\thYkHxHVO\LPCVur`PZd_ANprleOafK`\zfFjtQnnAWNGTOVGGFQYSo]BVUcQlvR[Qd\ht[qjBcSsgpdhr_kwrzwdVSsCv[rqrlC`QI\mLzr^tpRDv\mIENC]SXbqAmj`JguRGDZoByPHvXiUpirtLvkuLBQo,    32767) 0 0.0%
+
+
+test: (ýÉÆúá×ãìîÎÉûÿÎØáÔÞ×ûÂ×éßÐÿéèãçÛÝïäøÖÔéÎùÑÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÛüùÔÎ,    Ïïä) 0 0.0%
+
+
+test: (ýÉÆúá×ãìîÎÉûÿÎØáÔÞ×ûÂ×éßÐÿéèãçÛÝïäøÖÔéÎùÑÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÛüùÔÎ,    -32768) 0 0.0%
+
+
+test: (<V\R+{P./M5)0mstR%lx_:9Q*#gK}|A<%.y$~/e@JÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÌÛüùÔÎ[na]Q\WAHJNsrKgL^pEwA_VofcFgocLL^\mBWnI\c,    256) 0 0.0%
+
+
+test: (<V\R+{P./M5)0mstR%lx_:9Q*#gK}|A<%.y$~/e@JÙòÌÛÈÜîãÌÈÎÉâþÍçÉáÐÀÕô÷óÚÈÌÛüùÔÎ[na]Q\WAHJNsrKgL^pEwA_VofcFgocLL^\mBWnI\c,    32768) 0 0.0%
+
+
+test: (I}rNUcWXZz}OKzlU`jcOvc]kdK]\WSoi[PLb`]zMemFxo|hZWx|zVJyS}Udta@CGn|xoHM`z,    127) 0 0.0%
+
+
+test: (I}rNUcWXZz}OKzlU`jcOvc]kdK]\WSoi[PLb`]zMemFxo|hZWx|zVJyS}Udta@CGn|xoHM`z,    vFO) 0 0.0%
+
+
+test: (%*; "%"482;.;3<71:8"=5 7$0 $"%!%<,96$ 78",    ¸»¾) 0 0.0%
+
+
+test: (%*; "%"482;.;3<71:8"=5 7$0 $"%!%<,96$ 78",    dUF) 0 0.0%
+
+
+test: (32769,    -129) 0 60.0%
+
+
+test: (on$T5*HBrS,    0) 0 0.0%
+
+
+test: (on$T5*HBrS,    -128) 0 0.0%
+
+
+test: (äàßüùÌÔÅÕÍ,    BroWfNMGNdH\b\[_VOoeYzrgXQZnAuDEFbTKko_Kbldqcxxu\NXhvZpCm]KKWzWpyAMGGINVFaNiw^Av\rptfw) 0 0.0%
+
+
+test: (äàßüùÌÔÅÕÍ,    &3*)#* ,88?;2+=<5>
+% !"0/;/ 8*<>'	9//33%)##-*2"*:%8) 0 0.0%
+
+
+test: (1*d5$=0:^!T!2/3~%.5$21&)#7"_K?[D>+"u%G,6R\st,    bRXrulkzzf[Bu[UVDKy_iUUhabcFECQ^vddqWYKZJ[loEcNBP) 0 0.0%
+
+
+test: (1*d5$=0:^!T!2/3~%.5$21&)#7"_K?[D>+"u%G,6R\st,    65536) 0 0.0%
+
+
+test: (None,    $J7\3#;)%Zuxr"UVDKy_iUUhabcFECQ^vddqWYKZJ[loEcNBPFEocFOep_eBFdy) 0 0.0%
+
+
+test: (None,    -32768) 0 0.0%
+
+
+test: (IYz,    z) 0 0.0%
+
+
+test: (IYz,    ) 0 0.0%
+
+
+test: (19,    9223372036854775807) 0 0.0%
+
+
+test: (19,    ¼··¶¶²·µ¶³½°±²²°½µ²) 0 0.0%
+
+
+test: (12,    z) 0 0.0%
+
+
+test: (12,    9223372036854775807) 0 0.0%
+
+
+test: (129,    ) 0 0.0%
+
+
+test: (129,    ) 0 0.0%
+
+
+test: (-32768,    32768) 0 57.78%
+
+
+test: (-32768,    None) 0 0.0%
+
+
+test: (xSoXbHXUjd_OPHxQ`ERLaj\podPP`rlMgxXEetuZLPztCipsgcmEHvuogQEQYhgsViTFAPoGx_b\ESTsSQW,    None) 0 0.0%
+
+
+test: (xSoXbHXUjd_OPHxQ`ERLaj\podPP`rlMgxXEetuZLPztCipsgcmEHvuogQEQYhgsViTFAPoGx_b\ESTsSQW,    6;<4) 0 0.0%
+
+
+test: (-128,    y) 0 0.0%
+
+
+test: (-128,    0) 0 0.0%
+
+
+test: (255,    {) 0 0.0%
+
+
+test: (255,    >) 0 0.0%
+
+
+test: (R-9WBnh:-K><:%0;`GyCb[EQGOCqfVgoj]oGGGQkC]njQ^PfhJkXzpeYag\brIAelfFkCEIaVcESpjwRg,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbD`Az) 0 0.0%
+
+
+test: (R-9WBnh:-K><:%0;`GyCb[EQGOCqfVgoj]oGGGQkC]njQ^PfhJkXzpeYag\brIAelfFkCEIaVcESpjwRg,    None) 0 0.0%
+
+
+test: (T78_+5.$4'Ns67,{n>8$q:AM'??k!$Em>f0$6.R;C]njQ^PfhJkXzpeYag\brIAelx\jOaEZ[OBQSfENDuyAglaNG`pEijrh`TLhcqiNP,    E./82<6K)"(cVs) 0 0.0%
+
+
+test: (T78_+5.$4'Ns67,{n>8$q:AM'??k!$Em>f0$6.R;C]njQ^PfhJkXzpeYag\brIAelx\jOaEZ[OBQSfENDuyAglaNG`pEijrh`TLhcqiNP,    #HI^TZP-ODN0) 0 0.0%
+
+
+test: (None,    q_KouTGLCFtumTABXUKUYSykkDrEUPwzOyqxOQNhduAHVRqHsmVecJOih]`DEWOEdCvhghhbDAz) 0 0.0%
+
+
+test: (None,    Cp-hL#.o5)3%*]kT><B-(T0?z1""<pmf69) 0 0.0%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}gPxp[erauGJeag`KWdN`Hyi|]^ZsaerUP}g,    27) 0 0.0%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}gPxp[erauGJeag`KWdN`Hyi|]^ZsaerUP}g,    gSvAaAWkx_cLkLemb`KsVOCPhPnaUnDnDxYtHjnLgqSiWuX) 0 0.0%
+
+
+test: (32769,    @) 0 66.67%
+
+
+test: (32769,    ;) 0 0.0%
+
+
+test: (t<("w`/yz$,    65536) 0 0.0%
+
+
+test: (t<("w`/yz$,    PSSUP) 0 0.0%
+
+
+test: (4294967295,    6536) 0 0.0%
+
+
+test: (4294967295,    [wBgq) 0 0.0%
+
+
+test: (255,    DWQVe) 0 0.0%
+
+
+test: (255,    0) 0 0.0%
+
+
+test: (-32768,    WQVe) 0 0.0%
+
+
+test: (-32768,    None) 0 0.0%
+
+
+test: (jR\S]~p|VwWMflUVpPVP]rGe|r_]wA,    KHHNK) 0 0.0%
+
+
+test: (jR\S]~p|VwWMflUVpPVP]rGe|r_]wA,    ,Ft?>gGXquyM\ewJH`Blc) 0 0.0%
+
+
+test: (ss#AfH:12.%-:43;2##9ODw`wN,    ÊÉÉÏÊ) 0 0.0%
+
+
+test: (ss#AfH:12.%-:43;2##9ODw`wN,    None) 0 0.0%
+
+
+test: (-9223372036854775808,    -1) 0 0.0%
+
+
+test: (-9223372036854775808,    ¨´) 0 0.0%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}@gPxp[erauGJeagKWdN`Hyi|]^ZsaerUP}g,    -1) 0 57.78%
+
+
+test: (T`oSH~JEGg`RVgqH}w~Rk~@vyV@AJNrtFMQ}@gPxp[erauGJeagKWdN`Hyi|]^ZsaerUP}g,    ]@pqHcESNtMjZlSgfL`pYdojDYOPW_OCVVjeHnPpfW_GjIxSEwhkxxTIaGvsvJbWdZQFf) 0 0.0%
+
+
+test: (åâ÷âßÒîâÐÀÒÜÁþîñÔòéÉÈÛÅÐìáÙÐàóääôÊÙÆáÊÙñÝôáöéïíÈÙùñõðåÁêùÒÖóñâÞÉößëÊèéÚëÌ÷,    32768) 0 0.0%
+
+
+test: (åâ÷âßÒîâÐÀÒÜÁþîñÔòéÉÈÛÅÐìáÙÐàóääôÊÙÆáÊÙñÝôáöéïíÈÙùñõðåÁêùÒÖóñâÞÉößëÊèéÚëÌ÷,    None) 0 0.0%
+
+
+test: ($#6#/# ?/03(	- !2%%5 05 7(.,	8041$ +820#7*)(*6,    tPXPwGbofOELQTn) 0 0.0%
+
+
+test: ($#6#/# ?/03(	- !2%%5 05 7(.,	8041$ +820#7*)(*6,    None) 0 0.0%
+
+
+test: (RE\om>@phBkh\Nmf^CfXoZcAa,    qo) 0 0.0%
+
+
+test: (RE\om>@phBkh\Nmf^CfXoZcAa,    65536) 0 0.0%
+
+
+test: (DDlvb,qaG,    *8) 0 0.0%
+
+
+test: (DDlvb,qaG,    -2147483648) 0 0.0%
+
+
+test: (DOONNJOMNKEHIJJHEMJ,    3') 0 0.0%
+
+
+test: (DOONNJOMNKEHIJJHEMJ,    None) 0 0.0%
+
+
+test: (None,    }tNSB_VFPMfeeQwIAXudTCm[Y) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (-1,    ù×ÃçýÜÏÄËÎüýåÜÉÊÐÝÃÝÑÛñããÌúÍÝØÿòÇñùðÇÙÆàìýÉÀÞÚùÀûåÞíëÂÇáàÕèÌÍßÇÍìËþàïààêÌ	Éò) 0 0.0%
+
+
+test: (-1,    {UAe^MFIL~g^KHR_A_SYsaaNxO_Z}pEs{rE[DbnKB\X{Byg\oi@EcbWjNO]EOnI|bmbbhNKp) 0 0.0%
+
+
+test: (N|e,    %U8Y) 0 0.0%
+
+
+test: (´ ù¶³èÂ£¤¥»º¯²ûÿËÌóÄÍäáÜáÜûÆò÷ÖéóéÜìËÄëíÓêÎé×Ö,    Hb) 0 57.78%
+
+
+test: (´ ù¶³èÂ£¤¥»º¯²ûÿËÌóÄÍäáÜáÜûÆò÷ÖéóéÜìËÄëíÓêÎé×Ö,    !O) 0 0.0%
+
+
+test: (oe,    129) 0 0.0%
+
+
+test: (oe,    None) 0 0.0%
+
+
+test: (256,    None) 0 0.0%
+
+
+test: (256,    None) 0 0.0%
+
+
+test: (-129,    Noe) 0 0.0%
+
+
+test: (-129,    No{) 0 0.0%
+
+
+test: (?	,    "-/~) 0 0.0%
+
+
+test: (?	,    d}H4) 0 0.0%
+
+
+test: (4294967295,    YVT) 0 0.0%
+
+
+test: (4294967295,    VT) 0 0.0%
+
+
+test: (None,    one) 0 0.0%
+
+
+test: (None,    y?,k) 0 0.0%
+
+
+test: (#J?=6§¦£¨¤.		,    Q?3<ud]Ya]AEWErCTEYbKaTyLz`Si_Z_GV) 0 0.0%
+
+
+test: (#J?=6§¦£¨¤.		,    Q?3<ud]Ya]AEWErCTEYbKaTyL`Si_Z_GV) 0 0.0%
+
+
+test: (N|e,    RQ_>) 0 57.78%
+
+
+test: ({k@,    65537) 0 0.0%
+
+
+test: ({k@,    IJJLH) 0 0.0%
+
+
+test: (-1,    ne) 0 0.0%
+
+
+test: (-1,    4294967295) 0 0.0%
+
+
+test: (-128,    None) 0 0.0%
+
+
+test: (-128,    }\]V) 0 0.0%
+
+
+test: (None,    4294967296) 0 0.0%
+
+
+test: (None,    wku}s}@SAB) 0 0.0%
+
+
+test: (25,    ²´¿²¿°±´¿°) 0 0.0%
+
+
+test: (25,    None) 0 0.0%
+
+
+test: (6;+J.<0,7!2359.
+
+6-373 #6+:5&'")78+9)$.-,    255) 0 0.0%
+
+
+test: (6;+J.<0,7!2359.
+
+6-373 #6+:5&'")78+9)$.-,    25) 0 0.0%
+
+
+test: (-32768,    25) 0 0.0%
+
+
+test: (-32768,    JE)xpVOZ^dW`uQmwQHM^YnQS\Gjp^fKV`opi\Nsii^_hgNjCLvK_IlMKlAM[iCv]jqYpGJFeGjfstiolWc\JBxDGqJidRHeIBx) 0 0.0%
+
+
+test: (o	],    PC^a) 0 0.0%
+
+
+test: (o	],    P~^a) 0 0.0%
+
+
+test: ({M|,    ïîå) 0 57.78%
+
+
+test: ()OA,    None) 0 0.0%
+
+
+test: ()OA,    257) 0 0.0%
+
+
+test: (65537,    25) 0 0.0%
+
+
+test: (65537,    µ²) 0 0.0%
+
+
+test: (%,:+"zP39`??7927a0_q0s?3a"z&:+P,    65536) 0 0.0%
+
+
+test: (%,:+"zP39`??7927a0_q0s?3a"z&:+P,    
+) 0 0.0%
+
+
+test: (None,    -9223372036854775808) 0 0.0%
+
+
+test: (None,    
+	
+
+) 0 0.0%
+
+
+test: ( ,    65537) 0 0.0%
+
+
+test: ( ,    -129) 0 0.0%
+
+
+test: (-129,    None) 0 0.0%
+
+
+test: (-129,    Çæçì) 0 0.0%
+
+
+test: (0,    !)8*KFVOAOobDfdnVbjLlNcnH^FaJExosopWFpBqc_DKK_AQ]QtFsOZfPMFHKJmeGtZy`TiRyCr) 0 0.0%
+
+
+test: (0,    32767) 0 0.0%
+
+
+test: (*S@ZztjlR]oB]x\TWnJpPtg[tTda_VDjE]SUPRrPnCnBy_uRLE^wEfTGemA,    6942xkrWyUOq_MdpAhIZYcgWWXwp]RULbLc\TC_]aa_GA\\ZDFBMAyUcHZwR]aZHr]PEw) 0 0.0%
+
+
+test: (*S@ZztjlR]oB]x\TWnJpPtg[tTda_VDjE]SUPRrPnCnBy_uRLE^wEfTGemA,    lNEH=5K-) 0 0.0%
+
+
+test: ({M|,    ïî) 0 57.78%
+
+
+test: ()0b=>%.)Q"'ya%?3$6#7dP?/"*H7O"8'<:+9n=y@L1/>O@/:<F4HQ3s(/=-S$}1+K9;/dV#:f>851=$;25L1ZjGCBBLIZxQDZiMtQwRFllVVfBAbckgApUbs`fxyKhhNW\vTLGAmFmVwdzvHc]HLUisdGKHVQsf`AviUer]irQmmEPCptH[,    -2147483648) 0 0.0%
+
+
+test: ()0b=>%.)Q"'ya%?3$6#7dP?/"*H7O"8'<:+9n=y@L1/>O@/:<F4HQ3s(/=-S$}1+K9;/dV#:f>851=$;25L1ZjGCBBLIZxQDZiMtQwRFllVVfBAbckgApUbs`fxyKhhNW\vTLGAmFmVwdzvHc]HLUisdGKHVQsf`AviUer]irQmmEPCptH[,    -214748348) 0 0.0%
+
+
+test: (sZW\CgbVIZvQQLrGuAZqluiyDh[wfI_fLMIJj[hmYmGpXAYnzMYsW^UtKwbOGHyJRulbDZklNM^UpKMnWGOX,    {gF`~xTTDl8VUwTILlgrX) 0 0.0%
+
+
+test: (sZW\CgbVIZvQQLrGuAZqluiyDh[wfI_fLMIJj[hmYmGpXAYnzMYsW^UtKwbOGHyJRulbDZklNM^UpKMnWGOX,     =//?C-./27	#) 0 0.0%
+
+
+test: (VBIIHHLIKHMCNOLLNCKC,    QNMHKHDOJHD) 0 0.0%
+
+
+test: (VBIIHHLIKHMCNOLLNCKC,    -32768) 0 0.0%
+
+
+test: (iMt@E_PgZIyB}eiek[}v,    ÔËÈÍÎÍÁÊÏÍÁ) 0 0.0%
+
+
+test: (iMt@E_PgZIyB}eiek[}v,    R*"?r-';:+E) 0 0.0%
+
+
+test: (ka@_,    None) 0 0.0%
+
+
+test: (ka@_,    Éèéâ) 0 0.0%
+
+
+test: (89|,    !1+bowE``oXJmWprEBTccU\RKFFHC]ly]SPJqVmMHCTNHQFTfhSxGYzo^OD\mY^ALwUVb_ElKi_OZADTYnBNDYygEoTnMNd]MY^) 0 0.0%
+
+
+test: (89|,     °ªãîöÄááîÙËìÖñóÄÃÕââÔÝÓÊÇÇÉÂÜíøÜÒÑËð×ìÌÉÂÕÏÉÐÇÕçéÒùÆØûîßÎÅÝìØßÀÍöÔ×ãÞÄíÊèÞÎÛÀÅÕØïÃÏÅØøæÄîÕïÌÏåÜÌØß) 0 0.0%
+
+
+test: (65535,    Noe) 0 0.0%
+
+
+test: (65535,    v+4*VDHOtsRSlK[KW\yDxLqzJlckdz^JFadSLhl]wds\m]oJfoD_PFbFahdpBCFgcQI\DN^TbP]yuDVYRylqykO) 0 0.0%
+
+
+test: (None,    \Ph]!.V>BiH!5i,B3`"gag$WWXwp]RULbLc\TC_]aa_GA\\ZDFBMAyUcHZwR]aZHr]PEwji\oYEbiwJTPjSHarskMCla) 0 57.78%
+
+
+test: (None,    0O$CcO?\7%,}G0EtD"Xjo{sV#`XZ&*xd-?.CQ&:[qK:g.O$7Cdvo#5i8M>'f%y|E9=;1!<f2~:J+l>+%_1h`|+&3k&1'lVLRBaYbuL\\rYiEwBzssyWWPLlkBxZPOQMP[eeOgveLRPxmFCQ]bLQfEdP[xmHYKOktVVdFsc[IbIaq_[UVbYUkIe]FLte) 0 0.0%
+
+
+test: (eWB,    AFF) 0 0.0%
+
+
+test: (eWB,    ?88) 0 0.0%
+
+
+test: (@@,    9223372036854775807) 0 0.0%
+
+
+test: (@@,    None) 0 0.0%
+
+
+test: (128,    None) 0 0.0%
+
+
+test: (128,    65537) 0 0.0%
+
+
+test: (2147483647,    q@fok_E`YjpeSY}S_QM) 0 0.0%
+
+
+test: (2147483647,    R,,-#k<<-369??m#.R+) 0 0.0%
+
+
+test: (-128,    q@fok_E`YjpeSY}S_~M) 0 0.0%
+
+
+test: (-128,    65535) 0 0.0%
+
+
+test: (+18|*NjYDF7Q=[=?3-<k,?4;{U$$?]:7,,5m#?&C-jnBn4={@7E?X9}Z+fLp06>l;6j*$)T*+Y9;5..#S,    32769) 0 0.0%
+
+
+test: (+18|*NjYDF7Q=[=?3-<k,?4;{U$$?]:7,,5m#?&C-jnBn4={@7E?X9}Z+fLp06>l;6j*$)T*+Y9;5..#S,    128) 0 0.0%
+
+
+test: (YQkVffxinfk`_aR^K_ZQ}P`n]dC@^P@}N@[Rq\M~]wuK^X\_Uboz^cJQgQWRUfbvjTe\_AupuzS]XPR{,    9Q]RuLcjdLHCYlcWnoQtQTIQPiOBCswP_utpmkSeWDomGEYZnxcYxQo`DT_\ojsjG^MVV[CdtnC^n[emRJjlPhkH) 0 0.0%
+
+
+test: (YQkVffxinfk`_aR^K_ZQ}P`n]dC@^P@}N@[Rq\M~]wuK^X\_Uboz^cJQgQWRUfbvjTe\_AupuzS]XPR{,    [3?0..*!;5336+32- !2=	15&%';8;3&6=>%</449!!<90(2
+	*) 0 0.0%
+
+
+test: (9223372036854775807,    CJpWa) 0 0.0%
+
+
+test: (9223372036854775807,    #,b><`fdi]THlONv\Syu\qUY) 0 0.0%
+
+
+test: (]QA];>/8%5'/>8,    32769) 0 57.78%
+
+
+test: (o]\A,    p'>!&) 0 0.0%
+
+
+test: (o]\A,    Tz{IA) 0 0.0%
+
+
+test: (-129,    µ´±°¿) 0 0.0%
+
+
+test: (-129,    None) 0 0.0%
+
+
+test: (ù.ÿ,    H[$EFvQopaHnCLZQ) 0 0.0%
+
+
+test: (ù.ÿ,    n<%:+$	) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    2) 0 0.0%
+
+
+test: (Zkl^`abE`kmXIYAbKhfJTlmvwNfm[kYZk,    ;ZeC) 0 0.0%
+
+
+test: (Zkl^`abE`kmXIYAbKhfJTlmvwNfm[kYZk,    129) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    ) 0 0.0%
+
+
+test: (-1,    None) 0 0.0%
+
+
+test: (-1,    Éèéâ) 0 0.0%
+
+
+test: (w_\EjkfHFl,    32769) 0 0.0%
+
+
+test: (w_\EjkfHFl,    UTQP_) 0 0.0%
+
+
+test: (]QA];>/8%5'/>8,    wGRFR) 0 57.78%
+
+
+test: (256,    ;<<) 0 0.0%
+
+
+test: (256,    255) 0 0.0%
+
+
+test: (127,    #	 *:= :2;) 0 0.0%
+
+
+test: (127,    256) 0 0.0%
+
+
+test: (255,    # *:= :2;) 0 0.0%
+
+
+test: (255,    None) 0 0.0%
+
+
+test: (294967296,    one) 0 0.0%
+
+
+test: (294967296,    on) 0 0.0%
+
+
+test: (429497296,    9223372036854775807) 0 0.0%
+
+
+test: (429497296,    4294967295) 0 0.0%
+
+
+test: (,    ne) 0 0.0%
+
+
+test: (,    s\3Q) 0 0.0%
+
+
+test: (1{,    -128) 0 0.0%
+
+
+test: (1{,    128) 0 0.0%
+
+
+test: (&,+./.%6! !2108)/>+$( ,    îïä) 0 0.0%
+
+
+test: (&,+./.%6! !2108)/>+$( ,    nod) 0 0.0%
+
+
+test: (CDF,    3276z) 0 57.78%
+
+
+test: (&%&25!,~I9-|#/68.&-)H","2h";)|EBe0Nc9_,    L¦§¬) 0 0.0%
+
+
+test: (&%&25!,~I9-|#/68.&-)H","2h";)|EBe0Nc9_,    ¦§¬) 0 0.0%
+
+
+test: (}{XV,    ^RkqZWbAbVPhlUVurTuelCzRD\DM[OAqxahf\KEWd^Q[MMQ) 0 0.0%
+
+
+test: (}{XV,    Û×îôßÒçÄçÓÕíéÐÓð÷ÑðàéÆÿ×ÁÙÁÈÞÊÄôýäíãÙÎÀÒáÛÔÞÈÈÔ) 0 0.0%
+
+
+test: (1,    65537) 0 0.0%
+
+
+test: (1,    }^d^EKkQmruJx\Hq`[mdHj]kYdQ_ZP\AhKDJDZ_uUCT[___HVN) 0 0.0%
+
+
+test: (None,    ëêá) 0 0.0%
+
+
+test: (None,    ëá) 0 0.0%
+
+
+test: (!.=>,    mlg) 0 0.0%
+
+
+test: (!.=>,    4294967295) 0 0.0%
+
+
+test: (,    nod) 0 0.0%
+
+
+test: (,    îïä) 0 0.0%
+
+
+test: (65537,    ø) 0 0.0%
+
+
+test: (65537,    32767) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (CDF,    HILM) 0 57.78%
+
+
+test: (255,    vGmdN^rqYkD^V_) 0 0.0%
+
+
+test: (255,    ;
+ )?<&	) 0 0.0%
+
+
+test: (4294967296,    }) 0 0.0%
+
+
+test: (4294967296,    }) 0 0.0%
+
+
+test: (]6T,    }) 0 0.0%
+
+
+test: (]6T,    }) 0 0.0%
+
+
+test: (-2147483648,    .NP1) 0 0.0%
+
+
+test: (-2147483648,    i5C~) 0 0.0%
+
+
+test: (|R,    0) 0 0.0%
+
+
+test: (|R,    65536) 0 0.0%
+
+
+test: (one,    2+]/) 0 0.0%
+
+
+test: (one,    zQC\HzKscyVlbGOxS\G[DkMMnQtlHKw_ULfnWgemQjNF^CVqsacaG) 0 0.0%
+
+
+test: (:5&aGZhliBmJeXlSb[wHrM]PMzSfep[rxZaD`kyzf,    -9223372036854775808) 0 0.0%
+
+
+test: (:5&aGZhliBmJeXlSb[wHrM]PMzSfep[rxZaD`kyzf,    32769) 0 0.0%
+
+
+test: (,    xae) 0 0.0%
+
+
+test: (25,    Nzne) 0 66.67%
+
+
+test: (25,    Nzn) 0 0.0%
+
+
+test: (-1,    None) 0 0.0%
+
+
+test: (-1,    9t95) 0 0.0%
+
+
+test: (None,    2147483647) 0 0.0%
+
+
+test: (None,    °³¶µ¶º±´¶µ) 0 0.0%
+
+
+test: (-2147483648,    gdabamfcab) 0 0.0%
+
+
+test: (-2147483648,    None) 0 0.0%
+
+
+test: (kmR@qNAQ36854775807R_`sBysa,    -129) 0 0.0%
+
+
+test: (kmR@qNAQ36854775807R_`sBysa,    ¤¸»°) 0 0.0%
+
+
+test: (-9223372036854775808,    32769) 0 0.0%
+
+
+test: (-9223372036854775808,    None) 0 0.0%
+
+
+test: (32768,    ÓÀÝâ) 0 0.0%
+
+
+test: (32768,    jDg*qKaeQEDTzZDMBH[gAlofpyNcsIWCzKFCrMkqs^ca]tqAyCpjhdTMRpWu`emWSAk`LNCGETxAC) 0 0.0%
+
+
+test: (8!_'(",.I,    QB_`) 0 0.0%
+
+
+test: (8!_'(",.I,    257) 0 0.0%
+
+
+test: (,    .7A3) 0 57.78%
+
+
+test: (32|67,    BCn) 0 0.0%
+
+
+test: (32|67,    de<H) 0 0.0%
+
+
+test: (WYxCNZ}u|j,    5"><Ka$1-kD^V_CMSXFFVgR) 0 0.0%
+
+
+test: (WYxCNZ}u|j,    5"><Ka$1-kD^V_CMSXFVgR) 0 0.0%
+
+
+test: (0,    9223372036854775807) 0 0.0%
+
+
+test: (0,    ½¶¶··³¶´·²¼±°³³±¼´³) 0 0.0%
+
+
+test: (n}cvJzj?gdZ68#Q[!^r!6_jm'VU5StS6X$]By7cW\Maoxkes[YKeMJEejCOboXLT\ILMz_dVxLj^Yo]AuJznLNgK\pHymMd,    VPm[h^QMfqNBW~\X{wY) 0 0.0%
+
+
+test: (n}cvJzj?gdZ68#Q[!^r!6_jm'VU5StS6X$]By7cW\Maoxkes[YKeMJEejCOboXLT\ILMz_dVxLj^Yo]AuJznLNgK\pHymMd,    % .9
+63?) 0 0.0%
+
+
+test: (128,    256) 0 0.0%
+
+
+test: (128,    129) 0 0.0%
+
+
+test: (9223372036854775807,    OHK) 0 0.0%
+
+
+test: (9223372036854775807,    074) 0 0.0%
+
+
+test: (65535,    tQe) 0 0.0%
+
+
+test: (65535,    öÓç) 0 0.0%
+
+
+test: (None,    [#>kr[wFlfSWGHJwpdbviGmNguWewnM`vgXQ]Zrjg^CksEzeIqvpgyMQ[Ky\v]hFJJe) 0 0.0%
+
+
+test: (None,    $\A$9,(875	81
+(2	'."%!<:6	2.$4#	"955) 0 0.0%
+
+
+test: (-32768,    de<H) 0 62.22%
+
+
+test: (-32768,    e<H) 0 0.0%
+
+
+test: (256,    ») 0 0.0%
+
+
+test: (256,    -2147483648) 0 0.0%
+
+
+test: (None,    |æçì) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (e*kU,    255) 0 0.0%
+
+
+test: (e*kU,    25) 0 0.0%
+
+
+test: (
+
+
+   ,    Çæç) 0 0.0%
+
+
+test: (
+
+
+   ,    _52vgyLzUHc`glBRycC[k^vvqsh_mhldLhCpIElrDl`][vFobgWGRuy_fvYR`ONNt`m`) 0 0.0%
+
+
+test: (|CHHIIMHJILBONMMOBJB,    None) 0 0.0%
+
+
+test: (|CHHIIMHJILBONMMOBJB,    ^_T) 0 0.0%
+
+
+test: (©½¶··³¶´·²¼±°³³±¼´¼,    ¬ï) 0 0.0%
+
+
+test: (©½¶··³¶´·²¼±°³³±¼´¼,    None) 0 0.0%
+
+
+test: (Pk[z&·³¶´·²¼±°³³±¼´¼KZZsH,    257) 0 0.0%
+
+
+test: (Pk[z&·³¶´·²¼±°³³±¼´¼KZZsH,    None) 0 0.0%
+
+
+test: (`fm`mbcfmb,    Çæçì) 0 57.78%
+
+
+test: (Y]2/**Y[_\*6V8YQ/QGB7PY^T_2K\TK/@HRO##16=/)'%280+?<'6 ,0)%# )&>*8?
++/;7"$.3	0	<5>;2
+(=1;,    1) 0 0.0%
+
+
+test: (Y]2/**Y[_\*6V8YQ/QGB7PY^T_2K\TK/@HRO##16=/)'%280+?<'6 ,0)%# )&>*8?
++/;7"$.3	0	<5>;2
+(=1;,    1) 0 0.0%
+
+
+test: (k<G7m;'vfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAqH^`EnsMQ,    O) 0 0.0%
+
+
+test: (k<G7m;'vfP#!%&P}L,B#+U+=8M*#$.%H1&o.t1U{:2(5iYYKrLGUmSg]i_HcxBJQEuF]LzVJSj_ntbYzeS\kDvPybBEpeyQUAwlhMrXi^eTIklrsJrtsgwFODvA`lHhpRkGnKAqH^`EnsMQ,    9vourCXy]YyzoDAczDprTwzc_iGsyNIt[pEZIK[MBzGCqUIvnC_EoeUTgvBvJXaBeXoTLjPbXBaQdxzKFyLOLFpnmmGmenSx) 0 0.0%
+
+
+test: (2147483647,    None) 0 0.0%
+
+
+test: (2147483647,    )'[:) 0 0.0%
+
+
+test: (C@vrwFCfQp(B}8yOk:]y<@m=,DDP"W/l2iH*myvB73feALGhWu`nXjMB0'-%>*)2#9%<06,    CrMAtP]dcRixnZANFy^WFDtpXFxJibzJDlr_CbDthXXK]JOIsCsErKCEofDt) 0 0.0%
+
+
+test: (C@vrwFCfQp(B}8yOk:]y<@m=,DDP"W/l2iH*myvB73feALGhWu`nXjMB0'-%>*)2#9%<06,    24$#)8.9408
+)":
+,2"4(
+	332/&4) 0 0.0%
+
+
+test: (AYSU_}Pu	?LNJI?#C-LD:DRW"ELKAJ'^I A^:U]GZ66$#(:<20'-%>*)2#9%<06
+<3+?-*
+>:."71
+;&%) +.',    ÂóÌÀõÑÜåâÓèùïÛÀÏÇøßÖÇÅõñÙÇùËèãûËÅíóÞÂãÅõéÙÙÊÜËÎÈòÂòÄóÊÂÄîçÅõ) 0 0.0%
+
+
+test: (AYSU_}Pu	?LNJI?#C-LD:DRW"ELKAJ'^I A^:U]GZ66$#(:<20'-%>*)2#9%<06
+<3+?-*
+>:."71
+;&%) +.',    65537) 0 0.0%
+
+
+test: (  ,    128) 0 0.0%
+
+
+test: (  ,     	) 0 0.0%
+
+
+test: (429467295,    28) 0 0.0%
+
+
+test: (429467295,    ùHB) 0 0.0%
+
+
+test: (e,(eyz<-ipzlr{e|hew? 2:#?,,%'
+,    0) 0 0.0%
+
+
+test: (`fm`mbcfmb,    ¥) 0 57.78%
+
+
+test: (65537,    None) 0 0.0%
+
+
+test: (65537,    65537) 0 0.0%
+
+
+test: (128,    ) 0 0.0%
+
+
+test: (128,    None) 0 0.0%
+
+
+test: (XucqPkGTGiY,    g) 0 0.0%
+
+
+test: (XucqPkGTGiY,    None) 0 0.0%
+
+
+test: (None,    ]mfa_nachYT^dzOz^pKknCcqgoQUZdTV[BjsXRgLugm) 0 0.0%
+
+
+test: (None,    =!1%4%'+:O:jw]Qk+1(@#P#3.W927b.D!U6s!(,-R/5WzWDkKFHRKVZjcSgufcaM\lBIfhOYrzKVK\ryzKajHXW[KTRphyXvNtxaDunLpVxJueoWaaq) 0 0.0%
+
+
+test: (~(J/$T,H,    127) 0 0.0%
+
+
+test: (~(J/$T,H,    ) 0 0.0%
+
+
+test: (129,    -1) 0 0.0%
+
+
+test: (129,    B^) 0 0.0%
+
+
+test: (None,    255) 0 0.0%
+
+
+test: (None,    65536) 0 0.0%
+
+
+test: (,    B) 0 0.0%
+
+
+test: (e,(eyz<-ipzlr{e|hew? 2:#?,,%'
+,    0) 0 57.78%
+
+
+test: («´·²±²¾µ°²¾,    YSiHeDgfCICSrxH^DpyNf_F`KweWocGT[vG[DiykvoLmLAWTDFQmK`) 0 0.0%
+
+
+test: («´·²±²¾µ°²¾,    YSiHeDgfCICSrxH^DpyNf_F`KweWocGT[G[DiykvoLmLAWTDFQmK`) 0 0.0%
+
+
+test: (ER,    65537) 0 0.0%
+
+
+test: (ER,    HKKMI) 0 0.0%
+
+
+test: (None,    0) 0 0.0%
+
+
+test: (None,    k[VdqFw^\OW[qAwth[fIViDZZ[bQRqFZoNcPF[LHmWRJBCQSVetPzRFEBfLFjSV_SkSOdxIcCOBDFJIr) 0 0.0%
+
+
+test: (tJ[,    p) 0 0.0%
+
+
+test: (tJ[,    5) 0 0.0%
+
+
+test: (32769,    !3b-) 0 0.0%
+
+
+test: (32769,    ^LR) 0 0.0%
+
+
+test: (<@{$rzPAVk\sI_LO\lyMKrMAwHHuCTem[VXHCatonmfWcHLjWK_niUkGnAHETCFKVJUqUjc,    J) 0 0.0%
+
+
+test: (<@{$rzPAVk\sI_LO\lyMKrMAwHHuCTem[VXHCatonmfWcHLjWK_niUkGnAHETCFKVJUqUjc,    2) 0 0.0%
+
+
+test: (32769,    1) 0 0.0%
+
+
+test: (32769,    65536) 0 0.0%
+
+
+test: (,    ~) 0 57.78%
+
+
+test: (%!$#,    =<7) 0 0.0%
+
+
+test: (%!$#,    65536) 0 0.0%
+
+
+test: (Éèéâ,    65537) 0 0.0%
+
+
+test: (Éèéâ,    SPPVR) 0 0.0%
+
+
+test: (<9Z<,    O]i\{yh\oLXCyCQRaamN\kbUjMDMJ]`A^CJ`pksQvad) 0 0.0%
+
+
+test: (<9Z<,    ;nM5#n_;2}D6/$=o&amN\kbUjMDMJ]`A^CJ`pksQvadtSniXqm^]\]uiglFG) 0 0.0%
+
+
+test: (3\=853.<28?;!:.8,
+	0%&2"3-/6(/&	620-!) >+,/;5)*-,    9*J$NpoAzDWMKYUsLF) 0 0.0%
+
+
+test: (3\=853.<28?;!:.8,
+	0%&2"3-/6(/&	620-!) >+,/;5)*-,    beZoj6\'*L7FI"94S%[O]KBFhfPY`E[UlG\IR]w`WpsHBe^KNsyEeSjtacmd) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (32769,    °£Ã­ÇùæÈóÍÞÄÂÐÜúÅÏ) 0 0.0%
+
+
+test: (32769,    °£Ã­ÇùæÈóÍÞÄÂÐÜúÅ) 0 0.0%
+
+
+test: (oNOD,    ×Ä¤Ê ¯ª¹£¥·»¢¨) 0 0.0%
+
+
+test: (oNOD,    Q'T>k995EgC=qU@IKkGS\NDACyX_gHvC`hP`XgzSL_[wlIPMT[C`AOBjvi) 0 0.0%
+
+
+test: (4,    None) 0 66.67%
+
+
+test: (4,    Non) 0 0.0%
+
+
+test: (None,    4294967295) 0 0.0%
+
+
+test: (None,    k[SUqTQH@~) 0 0.0%
+
+
+test: (32768,    +p(F) 0 0.0%
+
+
+test: (32768,    65536) 0 0.0%
+
+
+test: (None,    ZR\Fqot) 0 0.0%
+
+
+test: (None,    ÓÛÕÏøæý) 0 0.0%
+
+
+test: (BTcxi,    0) 0 0.0%
+
+
+test: (BTcxi,    None) 0 0.0%
+
+
+test: (XY\]\,    H) 0 0.0%
+
+
+test: (XY\]\,    Ï) 0 0.0%
+
+
+test: (ëãÒÎÀéÀÎÆüËàèèåÛüÊñÌýõåÎ×ãöÔËýÓÒÖÕÆ÷äÏåàÊÊÜÌíÔïÏÔüãÜÐâóÒÂàÀÃÃÓÒëÞåÕéÖÝìÑàÑÕìíôßÆßÛßÈüìÌæÜÓáÒé,    thNW) 0 0.0%
+
+
+test: (ëãÒÎÀéÀÎÆüËàèèåÛüÊñÌýõåÎ×ãöÔËýÓÒÖÕÆ÷äÏåàÊÊÜÌíÔïÏÔüãÜÐâóÒÂàÀÃÃÓÒëÞåÕéÖÝìÑàÑÕìíôßÆßÛßÈüìÌæÜÓáÒé,    4.+iwFeTJPKeJp\JYk) 0 0.0%
+
+
+test: (h28Y,    None) 0 0.0%
+
+
+test: (h28Y,    65535) 0 0.0%
+
+
+test: (,@8#,    None) 0 57.78%
+
+
+test: (-2147483648,    µ) 0 0.0%
+
+
+test: (-2147483648,    5) 0 0.0%
+
+
+test: (vM"=Ec)~e.(*!(Mk&F|(~2"/;[3h))25;,    ) 0 0.0%
+
+
+test: (vM"=Ec)~e.(*!(Mk&F|(~2"/;[3h))25;,    .QrzrNIp]Z]jymV]knGsny]WWvfcXlzr) 0 0.0%
+
+
+test: (-32768,    -32768) 0 0.0%
+
+
+test: (-32768,    ¯±°µ´º) 0 0.0%
+
+
+test: (-29,    128) 0 0.0%
+
+
+test: (-29,    mKy\yADUbTYS]\AAnxjJb_NE`ftEaDNMo]GPxvw]TsPfYO`^DkosNUCH) 0 0.0%
+
+
+test: (76t,yYhIPbZrEgVEo^MlbXrUNz^r[ZK\QgCbHk^eamhNDjIT_R`lmZcfAD`ujbPMyTrYCx^QwAxSqQoMr,    None) 0 0.0%
+
+
+test: (76t,yYhIPbZrEgVEo^MlbXrUNz^r[ZK\QgCbHk^eamhNDjIT_R`lmZcfAD`ujbPMyTrYCx^QwAxSqQoMr,    $%.) 0 0.0%
+
+
+test: (`A@K,    Íìíæ) 0 0.0%
+
+
+test: (`A@K,    Jkja) 0 0.0%
+
+
+test: (Xy'bBZX`WXzW_Czmy_vZgQOpXPhzbLq\lReHar_x\^gbcihP^nqdFmWInT]ITe]wSVDRNsiLd_QwNsdHghamtrSJpMhfAmy,    3<]B) 0 0.0%
+
+
+test: (Xy'bBZX`WXzW_Czmy_vZgQOpXPhzbLq\lReHar_x\^gbcihP^nqdFmWInT]ITe]wSVDRNsiLd_QwNsdHghamtrSJpMhfAmy,    ju) 0 0.0%
+
+
+test: (CGX[,    Te)-gYtoc[rdUF^bcarFsUPhVBiPc_QXkkF^PyB) 0 0.0%
+
+
+test: (CGX[,    32769) 0 0.0%
+
+
+test: (,@8#,    None) 0 57.78%
+
+
+test: (+CE1,    -9223372036854775808) 0 0.0%
+
+
+test: (+CE1,    FAyjRrgC_QHuUU{FchUQkxKXaAPqobIM`aLqVPeiJwJVwvDEaSUdQD[CElrAQpltOXTjuWxPEPZsM^FxtVO) 0 0.0%
+
+
+test: (Ø¦ÎÈ¼,    -9223372036854775808) 0 0.0%
+
+
+test: (Ø¦ÎÈ¼,    4294967296) 0 0.0%
+
+
+test: (ÔªÂÄ°,    -223372036854775808) 0 0.0%
+
+
+test: (ÔªÂÄ°,    -223372036854775808) 0 0.0%
+
+
+test: (!0(i0,    N*l) 0 0.0%
+
+
+test: (!0(i0,    &D-hnmLIz\jvBHN[_s\b_CPcFlSWFGaHzFwL]SFoZ]Z[wJpzbBfDUAq\F[xRgTemWzncbYzhRWGFinmjB) 0 0.0%
+
+
+test: (Axix,    None) 0 0.0%
+
+
+test: (Axix,    one) 0 0.0%
+
+
+test: (½³®,    :YJtskgOrxTHxnVnuCbPlhUyaOtSqOJEVSrcststP`xaHdzV[^Yscnwws^dMTLM]IaXBLdengE) 0 0.0%
+
+
+test: (½³®,    ½ÞÍóôìàÈõÿÓÏÿéÑéòÄå×ëïÒþæÈóÔöÈÍÂÑÔõäôóôó×çÿæÏãýÑÜÙÞôäéððôÙãÊÓËÊÚÎæßÅËãâéàÂ) 0 0.0%
+
+
+test: (° ,    4294967295) 0 0.0%
+
+
+test: (° ,    32767) 0 0.0%
+
+
+test: (256,    None) 0 0.0%
+
+
+test: (+CE1,    [X]) 0 57.78%
+
+
+test: (+CE1,    >s?) 0 0.0%
+
+
+test: (-129,    6/<0) 0 0.0%
+
+
+test: (-129,    ) 0 0.0%
+
+
+test: (65535,    257) 0 0.0%
+
+
+test: (65535,    i{^[Nin]SA]iDwOEpMPy`SRJGP[fpjoZAoqOroixJN\qV\xeE) 0 0.0%
+
+
+test: (None,    25}) 0 0.0%
+
+
+test: (None,    25) 0 0.0%
+
+
+test: (32769,    4294967295) 0 0.0%
+
+
+test: (32769,    65536) 0 0.0%
+
+
+test: (65537,    429496725) 0 0.0%
+
+
+test: (65537,    RT_R_PQTåS) 0 0.0%
+
+
+test: (4294967296,    NHCNCLMHCO) 0 0.0%
+
+
+test: (4294967296,    ^/(}rt9'Kw) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    Non) 0 0.0%
+
+
+test: (256,    3) 0 60.0%
+
+
+test: (DU$},    257) 0 0.0%
+
+
+test: (DU$},    bXOPmxptxVMuMEGgkXYejxepsx[]wjjspIKnk_[fwHrA) 0 0.0%
+
+
+test: (None,    ÊÌÇÊÇÈÉÌÇË) 0 0.0%
+
+
+test: (None,    NHCNCLMHCO) 0 0.0%
+
+
+test: (,zpd,    ÊÌÇÊÇÈÉÌÇ) 0 0.0%
+
+
+test: (,zpd,    :d+S$m7A*EpDYC^ycQoLYv`t[_fKCGXVp\JKQzmuumzDf`BCJ[Qaaxqb\VVhTdlEWVJfV) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (hhe[,    None) 0 0.0%
+
+
+test: (hhe[,    4294967296) 0 0.0%
+
+
+test: (RebQafuBCf,    /.%) 0 0.0%
+
+
+test: (RebQafuBCf,    CzDsMUjVYLD) 0 0.0%
+
+
+test: (HNEHEJKNEJ,    LA]~Bns[fnXdMAQKmttHp) 0 0.0%
+
+
+test: (HNEHEJKNEJ,    32769) 0 0.0%
+
+
+test: (kJK@,    IODIDKJODH) 0 57.78%
+
+
+test: (kJK@,    127) 0 0.0%
+
+
+test: (None,    -129) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    mmof) 0 0.0%
+
+
+test: (None,    7u05Zt_StWDoWLH[^]zhQAKPFueb`i[uTpAK`FJKOOtKHjfCknYqPQDisJCeTXbMXonFsCE^\Qn\WKrHnQLcFuaE) 0 0.0%
+
+
+test: (ª´µ°±¿,    Noe) 0 0.0%
+
+
+test: (ª´µ°±¿,    32768) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: (None,    {) 0 0.0%
+
+
+test: (®²±º,    -32768) 0 0.0%
+
+
+test: (®²±º,    ¤º»¾¿±) 0 0.0%
+
+
+test: (4294967295,    4294967295) 0 0.0%
+
+
+test: (4294967295,    p_vUOWXZjhDmOavaohS]wdugt`YYBqhKzsKvUwPkEODXg^`K[XEM`pgLH`ZpOagqRuBcgLaUUpAaGKeQKmTgStiNjK) 0 0.0%
+
+
+test: (¨¼··¶¶²·µ¶³½°±²²°½µ½,    W~ePeTB}mLcL\d\buOTyNSUbh]gNOdnSgFaVoN]]Be_RzpbK]YtzoYa[qpHopvX\xsuHrPBElqGilsoIlncMPP\) 0 0.0%
+
+
+test: (¨¼··¶¶²·µ¶³½°±²²°½µ½,    None) 0 0.0%
+
+
+test: (3z768,    >7,8) 0 66.67%
+
+
+test: (None,    127) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (IP|_daNgJAplJUxkFUOmsdJs[nW^Xefu\_MfFKBqpIWR`iPceye]Cy`KJY\PaijJFNyxIdKdXVlWyWRbI[S[dg,    lGC) 0 0.0%
+
+
+test: (IP|_daNgJAplJUxkFUOmsdJs[nW^Xefu\_MfFKBqpIWR`iPceye]Cy`KJY\PaijJFNyxIdKdXVlWyWRbI[S[dg,    74') 0 0.0%
+
+
+test: (25,    None) 0 0.0%
+
+
+test: (25,    None) 0 0.0%
+
+
+test: (º½½,    o;i7AT`Rvudpypuh`) 0 0.0%
+
+
+test: (º½½,    9223372036854775807) 0 0.0%
+
+
+test: (None,    -1) 0 0.0%
+
+
+test: (None,    256) 0 0.0%
+
+
+test: (255,    None) 0 0.0%
+
+
+test: (255,    B9L9DVv\FZG\E[zGiN]oZZntMoXGkOcSQIXkplP^IvGSeSJaSXSYizMOb^yBmSBUvV) 0 0.0%
+
+
+test: (127,    9223372036854775807) 0 0.0%
+
+
+test: (127,    65536) 0 0.0%
+
+
+test: (3z768,    -1) 0 66.67%
+
+
+test: (.q7&,    -1) 0 0.0%
+
+
+test: (.q7&,    WTzeZGd) 0 0.0%
+
+
+test: (Jkja,    \hqYpvz^OAXcAGTLkxWmmFB^gkXQxyjjnmIawF]EiruG\UkXjmN) 0 0.0%
+
+
+test: (Jkja,    Q<!AACq7G("X"u?zd?E02O3*c91611:5g79<3<:'!=K?I2!?1.o) 0 0.0%
+
+
+test: (KLN,    GLLMMILNMHFKJIIKFNI) 0 0.0%
+
+
+test: (KLN,    GLLMMILMHFKJIIKFNI) 0 0.0%
+
+
+test: ()zW,    GLLMMILNMHFKJII~FNI) 0 0.0%
+
+
+test: ()zW,    Pa$=ba!x;Z"3!E#9&s*WMhpSVmTPUdxkKjl`CcCDQsBGiRBI]jb[pmgQU]tl^MNhISxhvSPZbE`leSkmIknZcFEBIvabBRiMY_wqno[Zy) 0 0.0%
+
+
+test: (4,    !**++/*(+. -,//- (/) 0 0.0%
+
+
+test: (4,    !**++/*(+. -,// (/) 0 0.0%
+
+
+test: ("(kuldwkcwLlrI`wRdPMQG\rOvzs_gUSqFwYDp\p[TKA_E,    UUW^) 0 0.0%
+
+
+test: ("(kuldwkcwLlrI`wRdPMQG\rOvzs_gUSqFwYDp\p[TKA_E,    129) 0 0.0%
+
+
+test: (w^GEkqpntkQAAhWsjIQWVPChr`T]EZ\EVKigeolLv,    None) 0 0.0%
+
+
+test: (w^GEkqpntkQAAhWsjIQWVPChr`T]EZ\EVKigeolLv,    $3-2jOCWrjyKjFl_sQhtAYjz_DHY) 0 0.0%
+
+
+test: (*]2#dn\bveDtGCmeSUex_PHJKvzyc^kHfbnXif^_`J[LEwogsvSDLYeZFRHc,    257) 0 57.78%
+
+
+test: (0,    5) 0 0.0%
+
+
+test: (0,    pQP[) 0 0.0%
+
+
+test: (-9223372036854775808,    5) 0 0.0%
+
+
+test: (-9223372036854775808,    5) 0 0.0%
+
+
+test: (65537,    5) 0 0.0%
+
+
+test: (65537,    jm&h_yZvQEPA]VNuZldUDqDpJYtxfZzmzYhmCUL`inwbv^xiyn]N) 0 0.0%
+
+
+test: (None,    +}+$) 0 0.0%
+
+
+test: (None,    «ý«¤) 0 0.0%
+
+
+test: (None,    @@O) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (¥ÏôáÏçÉÕùÕ¼¢»¡¶µ¦¹¡ ³£´°£¥±¹±«¶,    65535) 0 0.0%
+
+
+test: (¥ÏôáÏçÉÕùÕ¼¢»¡¶µ¦¹¡ ³£´°£¥±¹±«¶,    {eE]S) 0 0.0%
+
+
+test: (None,    LOOIO) 0 0.0%
+
+
+test: (None,    O;hr5) 0 0.0%
+
+
+test: (2147483647,    None) 0 0.0%
+
+
+test: (2147483647,    32769) 0 0.0%
+
+
+test: (*]2#dn\bveDtGCmeSUex_PHJKvzyc^kHfbnXif^_`J[LEwogsvSDLYeZFRHc,    CDF) 0 57.78%
+
+
+test: (LIHG,    0TN4) 0 0.0%
+
+
+test: (LIHG,    0TN) 0 0.0%
+
+
+test: (None,    
+nt) 0 0.0%
+
+
+test: (None,    0) 0 0.0%
+
+
+test: (255,    :h/K) 0 0.0%
+
+
+test: (255,    eRDD) 0 0.0%
+
+
+test: (None,    bK@3) 0 0.0%
+
+
+test: (None,    255) 0 0.0%
+
+
+test: (<*)2*
+Ã/%=3 #,(,    v'G9) 0 0.0%
+
+
+test: (<*)2*
+Ã/%=3 #,(,    -2147483648) 0 0.0%
+
+
+test: (<84O,    `kkjjnkijoalmnnlain) 0 0.0%
+
+
+test: (<84O,    1) 0 0.0%
+
+
+test: ('&#"#,    9223372036854775807) 0 0.0%
+
+
+test: ('&#"#,    32769) 0 0.0%
+
+
+test: (2147483647,    257) 0 57.78%
+
+
+test: (2147483647,    129) 0 0.0%
+
+
+test: (³°°¶°,    yrrsswrpsvxutwwuxpw) 0 0.0%
+
+
+test: (³°°¶°,    +'-=86;9oJ/Q?(,1s-f) 0 0.0%
+
+
+test: (6553,    úññððôñóðõûö÷ôôöûóô) 0 0.0%
+
+
+test: (6553,    None) 0 0.0%
+
+
+test: (0Q*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKeuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (0Q*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?,    None) 0 0.0%
+
+
+test: (H8He*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUBGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?xiCg,    "?%%(-)&: )%	*$)*1550%>491$-7?)><4/76	) 0 0.0%
+
+
+test: (H8He*Y30>*KN<(P/T8)O;F9)KS6I_<,8SKLUBGD>$.5: >>1	/7
+= ?'<< 2  (3<1;
+,":#>7'%$3?/
+,713057
+:+%'?xiCg,    ^CYeYTQUkZF\aUYcuo~gqkVjcceXl~iUbnVMIILYoBHhcEldMcsw~wXQnmcKCUsB@nHSKJmu~t) 0 0.0%
+
+
+test: (%69P,    XE_c_RWSm\@ZgS_esixawmPleec^jxoSdhPKOOJ_iDNneCjbKuqxq^WhkeMESuDFhNUMLksxr) 0 0.0%
+
+
+test: (%69P,    !UWP+91g'q,/P*)$Gd<?!:`he?*r(KT0*10N#-:;"5'$<K92:?<`+*9%.3.u[qs-O2)!V:\?,*yM[ptkfBJAlusyvAfqg^VWM``ZIFJyzchYWElbJdbJiqY[SPqjIxk[grfdKKLOviUZgtB\yLTXjOMQh) 0 0.0%
+
+
+test: (67<,    -128) 0 0.0%
+
+
+test: (67<,    _C@J) 0 0.0%
+
+
+test: (-32768,    ´·²) 0 0.0%
+
+
+test: (-32768,    ´z²) 0 0.0%
+
+
+test: (,    None) 0 57.78%
+
+
+test: (,    Ïîïä) 0 0.0%
+
+
+test: (QChVc,    {ekoUWp|djjL_]ucKQ|) 0 0.0%
+
+
+test: (QChVc,    None) 0 0.0%
+
+
+test: (KHHNK,    )d*^A'6('vZn%d"2=Dn) 0 0.0%
+
+
+test: (KHHNK,    M?x6LWfMN-}<a!QDb4=d[Rh[pPeixLRDesv_DSdvOI[SjKEcaqv\nrSMMx\CnQjrQS\YLfZudLXmRXdfqZ_V[) 0 0.0%
+
+
+test: (-2147483648,    8$ZNRWp|djjL_]ucKQ|CAKfB) 0 0.0%
+
+
+test: (-2147483648,    8$ZNRWp|djjL_]cKQ|CAKfB) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    65536) 0 0.0%
+
+
+test: (XiQBktDxnrld[RKRj_CvIhLy]Vfcf^,    None) 0 0.0%
+
+
+test: (XiQBktDxnrld[RKRj_CvIhLy]Vfcf^,    ?sy;qda^Zs^`PyaksUdLNqaBccXCFdZCupWdAdSi_) 0 0.0%
+
+
+test: (1,    -129) 0 0.0%
+
+
+test: (1,    65537) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    .jM4) 0 0.0%
+
+
+test: (,    None) 0 57.78%
+
+
+test: (,    None) 0 0.0%
+
+
+test: (0FR,    $) 0 0.0%
+
+
+test: (0FR,    rSRY) 0 0.0%
+
+
+test: (ûMF,    0) 0 0.0%
+
+
+test: (ûMF,    Sc^JTiKQEOBFbNzqNFITay\VHmCgluORWRfYrhYiyPWAotIAGOKrthTMkb\szDxcXaFOoYM\yY\mmCBtAnsP) 0 0.0%
+
+
+test: (32767,    qQ\IUTXFH^WmFLaMIJp^HrP]sVsHBxa[JWbRTMkfTRbPHpw\rscdOmSbJ[BZi) 0 0.0%
+
+
+test: (32767,    127) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    0) 0 0.0%
+
+
+test: (65535,    None) 0 0.0%
+
+
+test: (65535,    -1) 0 0.0%
+
+
+test: (-32768,    Non) 0 0.0%
+
+
+test: (-32768,    65537) 0 0.0%
+
+
+test: (-128,    'h"Y) 0 0.0%
+
+
+test: (-128,    ¦é£Ø) 0 0.0%
+
+
+test: (· ,    NK0) 0 0.0%
+
+
+test: (257,    None) 0 66.67%
+
+
+test: (257,    4294967295) 0 0.0%
+
+
+test: (` SYKtyBm@lZ{HK|aovgmXcn_Ki[VTffFfFGThTh[yqFZTmi|GAfyGZaXYpgBFlZp[SzR,    None) 0 0.0%
+
+
+test: (` SYKtyBm@lZ{HK|aovgmXcn_Ki[VTffFfFGThTh[yqFZTmi|GAfyGZaXYpgBFlZp[SzR,    Non) 0 0.0%
+
+
+test: (#hCBql^gQ+)v4L.u(;)8"8`QjQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`qZxnTYml]`Y[FCF]RBgKRAUO,      ) 0 0.0%
+
+
+test: (#hCBql^gQ+)v4L.u(;)8"8`QjQ\my[idfTTtTtufZfZiKCthf_[NuMsTKuhSjkBUpt^hBiaH`qZxnTYml]`Y[FCF]RBgKRAUO,    65536) 0 0.0%
+
+
+test: (j5P:$'5.@'"m((DF;S;$j1+b,!;#4%;0AzK5"}#6/?7x89thf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdpXPhK]unWNlRN{]sLAYuKHuuXFRgNM]RnyQ\AvouPuYm`sz,    4294967296) 0 0.0%
+
+
+test: (j5P:$'5.@'"m((DF;S;$j1+b,!;#4%;0AzK5"}#6/?7x89thf_[NuMsTKuhSjkBUpt^hBiaH`xOJu^hNdpXPhK]unWNlRN{]sLAYuKHuuXFRgNM]RnyQ\AvouPuYm`sz,    dbidifgbif) 0 0.0%
+
+
+test: (B'MSPBY7PU__31L$LSF\[VLTCRLG6<BU
+TAXH@ON(,9:#<$5")5?8=)9/'<* 9%9*;6.<?/1%9:*%&+6'.,    4294967295) 0 0.0%
+
+
+test: (B'MSPBY7PU__31L$LSF\[VLTCRLG6<BU
+TAXH@ON(,9:#<$5")5?8=)9/'<* 9%9*;6.<?/1%9:*%&+6'.,    NHCNCLMHCO) 0 0.0%
+
+
+test: (!(q,    [388M\V]Q`ncopHYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\) 0 0.0%
+
+
+test: (!(q,    2|ogq{R+yA`w=(/:R)!&!5)-63(>1.!5%=A4v$-*6z1#r8#,>'m"9f/) 0 0.0%
+
+
+test: (.ml,    -es}'&vOG|9$>1TYP[gIWF^`]xDLaI^YSDl_`fWG^IHQuwGXpQrKVd\vVKEIz_ZTmdGQAG) 0 0.0%
+
+
+test: (.ml,    e=62C{"g?^K^HK<l"72.([8n:>_Nq+\3-0R;`fWG^IHQuwGXpQrKVd\vVKEIz_ZTmdGQAGHXEOd]TCxtr[vzhMrlUMBQNrNFIOgIWjHFcL) 0 0.0%
+
+
+test: (None,    ß·¼¼ÉØÒÙÕäêçëôÌÝÔßãÍÓÂÚäÙüÀÈåÍÚÝ×ÀèÛäâÓÃÚÍÌÕñóÃÜôÕöÏÒàØ) 0 0.0%
+
+
+test: (None,    ¹ÑÚÚ¯¾´¿³ª»²¹«µ¤¼¿¦®«¼»±¦½µ¥¼«ª³¥º³©´¾) 0 0.0%
+
+
+test: (· ,    9223372036854775807) 0 57.78%
+
+
+test: (257,    one) 0 0.0%
+
+
+test: (257,    None) 0 0.0%
+
+
+test: (z{,    Nne) 0 0.0%
+
+
+test: (z{,    255) 0 0.0%
+
+
+test: (E%Pf,    -129) 0 0.0%
+
+
+test: (E%Pf,    htw|) 0 0.0%
+
+
+test: (s!^iTByqLsWcLaHGwizv^`QuyMtYe[Bwy`_^PoHEV_gTaKNZKjVG,    C\T6) 0 0.0%
+
+
+test: (s!^iTByqLsWcLaHGwizv^`QuyMtYe[Bwy`_^PoHEV_gTaKNZKjVG,    None) 0 0.0%
+
+
+test: (257,    ÅÚÒ°) 0 0.0%
+
+
+test: (257,    _dh5) 0 0.0%
+
+
+test: (1,    None) 0 0.0%
+
+
+test: (1,    (i?=) 0 0.0%
+
+
+test: ([:?4]UQQnfeXAk`anSZL]xk]OvWWptTubTCHmcwmbAZqmZG]PS`cyWmGxo`InH`,    None) 0 0.0%
+
+
+test: ([:?4]UQQnfeXAk`anSZL]xk]OvWWptTubTCHmcwmbAZqmZG]PS`cyWmGxo`InH`,    t)H!CFuDCmvIJClf^su[AIK^wTqveCaLl]_fcthoRBqhmVrBBA[L`jIwvhxHkBtWITIHqSXqmMSycKPbi]\ybeDZuu) 0 0.0%
+
+
+test: (None,    9223372036854775807) 0 0.0%
+
+
+test: (-32768,    None) 0 62.22%
+
+
+test: (-32768,    .=5!`RyDXoPZAqkYUotGYsEaCzf[zwJkJt`qwkIKY\heSgiSL[iZjA`xOdTpGv) 0 0.0%
+
+
+test: (B?zQ&WsW\ou`C_YMVV\TRFQA_EtxSRzEgn]uRuaWHRMbOMk\UO^qtKb`xx\vlGjbyMI,    None) 0 0.0%
+
+
+test: (B?zQ&WsW\ou`C_YMVV\TRFQA_EtxSRzEgn]uRuaWHRMbOMk\UO^qtKb`xx\vlGjbyMI,    1) 0 0.0%
+
+
+test: (WaS@YcSdvnQZPhME`hUIEPkcxsp,    ) 0 0.0%
+
+
+test: (WaS@YcSdvnQZPhME`hUIEPkcxsp,    ) 0 0.0%
+
+
+test: (None,    cVDnTdyJH~`1_jRlAWk) 0 0.0%
+
+
+test: (None,    >J>?;8y?L7?^'v5viF"]JzQB\kuM^_oxegwMWw`__EyJ]CChTCExEOGEcTmaLjEz\gvj]\cLgCxqoJhzFibDQp^aNNgmjCNwOZrY]HCOIiKtGAPq) 0 0.0%
+
+
+test: (None,    Èéèã) 0 0.0%
+
+
+test: (None,    i&kd`c\fYs\HQaJUp^cgltQf^NtLAbolyE_yluh^jpZmOTgYIT\n^kVbIym) 0 0.0%
+
+
+test: (3769,    -32768) 0 0.0%
+
+
+test: (3769,    None) 0 0.0%
+
+
+test: (None,    Èèã) 0 0.0%
+
+
+test: (None,    òEÒÙ) 0 0.0%
+
+
+test: (zdk{iAuX;uW,    4294967296) 0 0.0%
+
+
+test: (zdk{iAuX;uW,    128) 0 0.0%
+
+
+test: (None,    -2147483648) 0 57.78%
+
+
+test: (None,    -12) 0 0.0%
+
+
+test: (None,    -12~) 0 0.0%
+
+
+test: (A§K,    T~YK) 0 0.0%
+
+
+test: (A§K,    <$,YhZBNwlUC[og[vs`_LOxfiCuBCr`gprlrjV^IYgFv) 0 0.0%
+
+
+test: (2147483647,    Nne) 0 0.0%
+
+
+test: (2147483647,    Ne) 0 0.0%
+
+
+test: (<,    /à) 0 0.0%
+
+
+test: (<,    4294967295) 0 0.0%
+
+
+test: (None,    32768) 0 0.0%
+
+
+test: (None,    `noRd) 0 0.0%
+
+
+test: (@E,    257) 0 0.0%
+
+
+test: (@E,    zcxHVOsnuuqknDaTVovXyarFcOGYZX_[EEuecBSHBHvvYSSWC) 0 0.0%
+
+
+test: (WfoUhdTXcPXa``[mrcQCNhQ[WD_xJw\gTNpGjoupfPQifqgUBRqS]xVb[D[ZONtrubR_L_St\yovNszxCqtx],    65536) 0 0.0%
+
+
+test: (WfoUhdTXcPXa``[mrcQCNhQ[WD_xJw\gTNpGjoupfPQifqgUBRqS]xVb[D[ZONtrubR_L_St\yovNszxCqtx],    65537) 0 0.0%
+
+
+test: (~M%R,    -129) 0 57.78%
+
+
+test: (~M%R,    G[XS) 0 0.0%
+
+
+test: (r\JGOegORRWr,    None) 0 0.0%
+
+
+test: (r\JGOegORRWr,    Îïîå) 0 0.0%
+
+
+test: (None,    Non) 0 0.0%
+
+
+test: (None,    ai6Q\uXokaVWo) 0 0.0%
+
+
+test: (-128,    32768) 0 0.0%
+
+
+test: (-128,    cbgfh) 0 0.0%
+
+
+test: (8"14:&)
+>"6?$ ,    None) 0 0.0%
+
+
+test: (8"14:&)
+>"6?$ ,    -32768) 0 0.0%
+
+
+test: (DGAG,    2147483647) 0 0.0%
+
+
+test: (DGAG,    32768) 0 0.0%
+
+
+test: (,/|}/,    -129) 0 0.0%
+
+
+test: (,/|}/,    [GDO) 0 0.0%
+
+
+test: (ÅÆÀÆ,    MNKHKGLIKH) 0 0.0%
+
+
+test: (ybZx{,    128) 0 57.78%
+
+
+test: (ybZx{,    OLF) 0 0.0%
+
+
+test: ((+d-+,    None) 0 0.0%
+
+
+test: ((+d-+,    Íìíæ) 0 0.0%
+
+
+test: (2,    None) 0 0.0%
+
+
+test: (2,    ;) 0 0.0%
+
+
+test: (1,    4294967295) 0 0.0%
+
+
+test: (1,    fzP~LXr_HLRHiJunEmqyVVf^OZQvYPjRbHHfVNZuRuxXZ]sfynt`UHFKvhk`SwdJneraGHVvFfiWqjK`\rWn[) 0 0.0%
+
+
+test: (32768,    None) 0 0.0%
+
+
+test: (32768,    2147483647) 0 0.0%
+
+
+test: (None,    TYK) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (+-&+&)(-&*,    &_#$hyMAxAi\pPh\^vYU_rUnJPVrbxafPI\fqXk`URuusnCRK\E]yAfGRKZbGDv^nb^EOzL]fcJVEGV\Q) 0 0.0%
+
+
+test: (+-&+&)(-&*,    &_#$hyMAxAi\pPh\^vYU_rUnJPVrbxafPI\fqXk`URuusnCRK\E]yAfGRKZbGDv^{b^EOzL]fcJVEGV\Q) 0 0.0%
+
+
+test: (None,    N7KL %))48 461=7="8>
+	8!40=:+:#4-5)/:#2
+/,6
+6-'$5">-/>49) 0 0.0%
+
+
+test: (None,    1H43nZVoV~KgGKIaNBHeBy]GAeuovqG^KqfO|wBEbbdyTE\KRJnVqPE\MuPSaIyuIRXm[Jqt]ARPAKF) 0 0.0%
+
+
+test: (Non,    None) 0 0.0%
+
+
+test: (ÅÆÀÆ,    65536) 0 57.78%
+
+
+test: (H&##PIMFtbOhivdRMb\Xgd]_hmU[urEjA\NWaNMJydjZLSTmI]JSQPbAG]orsmWx\,    0) 0 0.0%
+
+
+test: (H&##PIMFtbOhivdRMb\Xgd]_hmU[urEjA\NWaNMJydjZLSTmI]JSQPbAG]orsmWx\,    None) 0 0.0%
+
+
+test: (WqtbrA][|eJqRSdBUqC,    Noe) 0 0.0%
+
+
+test: (WqtbrA][|eJqRSdBUqC,    None) 0 0.0%
+
+
+test: (None,    (:-@fU[pqQIQMCyNr[`G^Gn) 0 0.0%
+
+
+test: (None,    1) 0 0.0%
+
+
+test: ()(-,#,    127) 0 0.0%
+
+
+test: ()(-,#,    OLI) 0 0.0%
+
+
+test: (257,    KYQ) 0 0.0%
+
+
+test: (257,    32768) 0 0.0%
+
+
+test: (}zx,    None) 0 0.0%
+
+
+test: (}zx,    Nne) 0 0.0%
+
+
+test: (Y`nkUYmChCekjPtZHtMBUYOuUzZlcTAKNzp,    None) 0 0.0%
+
+
+test: (Y`nkUYmChCekjPtZHtMBUYOuUzZlcTAKNzp,    Nne) 0 0.0%
+
+
+test: (Non,    b6j5) 0 57.78%
+
+
+test: (RxhLbixWaHlo|D`AMqiRjC[Esj\mmi{\OUVoliDSHxlSRsArbll_Os,    
+) 0 0.0%
+
+
+test: (RxhLbixWaHlo|D`AMqiRjC[Esj\mmi{\OUVoliDSHxlSRsArbll_Os,    
+) 0 0.0%
+
+
+test: (None,    129) 0 0.0%
+
+
+test: (None,    JIB) 0 0.0%
+
+
+test: (-2147483648,    _A.nsFYjD) 0 0.0%
+
+
+test: (-2147483648,    65536) 0 0.0%
+
+
+test: (None,    923372036854775807) 0 0.0%
+
+
+test: (None,    2147483647) 0 0.0%
+
+
+test: (-129,    V]è\\X]_\YWZ[XXZW_X) 0 0.0%
+
+
+test: (-129,    ÑÚoÛÛßÚØÛÞÐÝÜßßÝÐØß) 0 0.0%
+
+
+test: (922337203854775807,    ¿´µµ±´¶µ°¾³²±±³¾¶±) 0 0.0%
+
+
+test: (922337203854775807,    ¿´µ±´¶µ°¾³²±±³¾¶±) 0 0.0%
+
+
+test: (129,    ) 0 0.0%
+
+
+test: (129,    -129) 0 0.0%
+
+
+test: (`JZ~P[JeSz^]NvRsC[`XqiwAXn__[In}gd]^[vazJ^a`As@P^^m}A,    -2147483648) 0 57.78%
+
+
+test: (`JZ~P[JeSz^]NvRsC[`XqiwAXn__[In}gd]^[vazJ^a`As@P^^m}A,    -128) 0 0.0%
+
+
+test: (,    %.//+.,/*$)(++)$,+) 0 0.0%
+
+
+test: (,    65535) 0 0.0%
+
+
+test: (.76n,    W\é]Y\^]XV[ZYY[V^Y) 0 0.0%
+
+
+test: (.76n,    |.=/H."j$^:+>,#*o)-KrnoSwSXyDSpduSqPwtaJgwO) 0 0.0%
+
+
+test: (zone,    5>æ?;><?:498;;94<;) 0 0.0%
+
+
+test: (zone,    None) 0 0.0%
+
+
+test: (None,    None) 0 0.0%
+
+
+test: (None,    65536) 0 0.0%
+
+
+test: (´·¼,    Non) 0 0.0%
+
+
+test: (´·¼,    None) 0 0.0%
+
+
+test: (PLE,    -1) 0 0.0%
+
+
+test: (PLE,    NR) 0 0.0%
+
+
+test: (~18,    ¬°) 0 0.0%
+
+
+test: (z,    W\é]]Y\^]XV[ZYY[V^Y) 0 57.78%
+
+
+test: (z,    128) 0 0.0%
+
+
+test: (None,    {sPXYxxELSOuNwaukmPLfL) 0 0.0%
+
+
+test: (None,    /'&:3,0
+1
+/33) 0 0.0%
+
+
+test: (&ì5,;-8&4
+,    3;:&/0,-3//) 0 0.0%
+
+
+test: (&ì5,;-8&4
+,    -9223372036854775808) 0 0.0%
+
+
+test: (257,    1922?=+?!',) 0 0.0%
+
+
+test: (257,    9223372036854775807) 0 0.0%
+
+
+test: (Ìíìç,    oo*~UK]`NQBMWW=rMKDIbE^VelFyooHHGrSjTMll^ONCNBPNsUnviLS^zSvU]y]lvfSzQvePkSQvLuMZysDkAzfy) 0 0.0%
+
+
+test: (Ìíìç,    U*4"1.=2((B24;6:!)9778,+2!01<1=/1*	3,!,	*""	,.	/,.	3
+2%;>) 0 0.0%
+
+
+test: (-9223372036854775808,    None) 0 0.0%
+
+
+test: (-9223372036854775808,    65535) 0 0.0%
+
+
+test: (65537,    9223372036854775807) 0 0.0%
+
+
+test: (65537,    -128) 0 0.0%
+
+
+test: (##m{,    -1) 0 0.0%
+
+
+test: (##m{,    None) 0 0.0%
+
+
+test: (~18,    ~") 0 57.78%
+
+
+test: (127,    MFóGGCFDGBLA@CCALDC) 0 0.0%
+
+
+test: (127,    »
+		) 0 0.0%
+
+
+test: (h~pRQF_Tdz`kpqXkbbvU`urpDsbDMAvA``fSce]xeEQFGppGfHoUcx_aLB]FRrHgyRcl\fCZe\Kt`ehYtna,    MFóGGCDGBLA@CCALDC) 0 0.0%
+
+
+test: (h~pRQF_Tdz`kpqXkbbvU`urpDsbDMAvA``fSce]xeEQFGppGfHoUcx_aLB]FRrHgyRcl\fCZe\Kt`ehYtna,    32769) 0 0.0%
+
+
+test: (92{3372036854775807,    ¿´µµ±´¶µ°z³²±±³¾¶±) 0 0.0%
+
+
+test: (92{3372036854775807,    7V{RuGw9jh6]}`h!0DeCnzXuAkQDFLlKJ\Wcb`^pLDayJB`uHfQvqMFjQNYfLX) 0 0.0%
+
+
+test: (WQZWZUTQZU,    )"##'" #&(%$''%( ') 0 0.0%
+
+
+test: (WQZWZUTQZU,    4294967296) 0 0.0%
+
+
+test: (|294967296,    )"##'"~#&(%$''%( ') 0 0.0%
+
+
+test: (|294967296,    2147483647) 0 0.0%
+
+
+test: (None,    Pe#erFLLgFNqoSV|btwyGCFQanlD`fTKtqYJTPpXFCsNTea_aSmgdXoOml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQ) 0 0.0%
+
+
+test: (None,    32u>(+/O>.cd*!G$m(%Z6A5&L~:)=!OItqYJTPpXFCsNTea_aSmgdXoOml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQKWV[ZGcCY_KrErLcj\RnqOMwnNVm]jOY) 0 0.0%
+
+
+test: (12,    6Qtg=?T#{'kP6:?2.#9=y0#7B:&i<+3+$)8k0?D=8;(h:z9,:s#7??0Oml]uNEoxUWLKscQYmN`GIHleHCifohcAkhEvhGgGwtVLkZuAAKQrQfsWtOyZoyaJbYiiNLtmD[sefcTwRrMg`PXa[dokYTXhGnvXZmENP[g_) 0 0.0%
+
+
+test: (12,    None) 0 0.0%
+
+
+test: (RC`_Z,    MFóGGCFzGBLA@CCALDC) 0 0.0%
+
+
+test: (RC`_Z,    127) 0 0.0%
+
+
+test: (32769,    1) 0 60.0%
+
+
+test: (-9223372036854775808,    None) 0 0.0%
+
+
+test: (-9223372036854775808,    None) 0 0.0%
+
+
+test: (257,    one) 0 0.0%
+
+
+test: (257,    hb?)]fQLcvu[Y) 0 0.0%
+
+
+test: (32769,    õ) 0 0.0%
+
+
+test: (32769,    den) 0 0.0%
+
+
+test: (N}e,    %#a!'%+{\$&I-7#B<=h) 0 0.0%
+
+
+test: (N}e,    32767) 0 0.0%
+
+
+test: (+](.e]FKQnqQdL[LgRwgmqYmTHfQYWPMg[JXsEsXPGOTp_FtpRAbZoyDbFXRcgM_FtQVZLxA_iqMEkeEBIBIXRiKZWK\piRgnoxwRhf,    4294967295) 0 0.0%
+
+
+test: (+](.e]FKQnqQdL[LgRwgmqYmTHfQYWPMg[JXsEsXPGOTp_FtpRAbZoyDbFXRcgM_FtQVZLxA_iqMEkeEBIBIXRiKZWK\piRgnoxwRhf,    255) 0 0.0%
 
 
 -------------------TOTAL-------------------
 
 
-with 0: 50
+with 0: 2617
 
 
 -------------------------------------------
 
 
-[25.8, 24.2, 21.0, 29.0]
+[24.7, 23.4, 25.3, 26.6]

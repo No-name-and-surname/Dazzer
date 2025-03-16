@@ -19,6 +19,8 @@ from datetime import datetime
 import select
 import tty
 import termios
+import threading
+from threading import Lock
 
 # Add after imports
 import sys
@@ -30,7 +32,11 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 #globals initialization ---------------------------------------------------------------------------------------------------
-DEBUG_PROB_OF_MUT = [25, 25, 25]
+DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
+prob_mut_lock = Lock()
+stats_lock = Lock()
+queue_lock = Lock()
+output_lock = Lock()
 TIMEOUT = 1
 width_1 = (str(list(get_monitors())[0])[8:].split(', '))[2].split('width=')[1] + 'px'
 height_1 = (str(list(get_monitors())[0])[8:].split(', '))[3].split('height=')[1] + 'px'
@@ -236,23 +242,72 @@ def display_stats(stats):
     # Print everything at once
     print(''.join(output), flush=True)
 
-def processing(listik, j, filik):
-    mutated_err_data, mut_type = mutator.mutate(listik[0][1][j], 100, new_dict2, new_dict)
+def process_queue(queue, queue_name, filik, thread_name):
+    """Process a single queue safely"""
     try:
-        ind = calibrator.info_dict[tuple(listik[0][1])]
-        ind2 = calibrator.num + 1
-    except:
-        ind = calibrator.num + 1
-        ind2 = calibrator.num + 2
-        calibrator.info_dict.update({tuple(listik[0][1]):ind})
-    xxxx = copy.deepcopy(listik)
-    xxxx[0][1][j] = mutated_err_data
-    if xxxx[0][1] != listik[0][1]:
-        _, nnn, _, _ = calibrator.testing2(config.file_name, xxxx[0][1])
-        calibrator.info.append([listik[0][1], xxxx[0][1], ind, ind2, '#ff9cc0', '#ff9cc0', 0, listik[0][0], nnn])
-    listik[0][1][j] = mutated_err_data
-    listik[0][4] = mut_type
-    calibrator.calibrate(listik[0][1], filik, mut_type)
+        if not queue or len(queue) == 0:
+            return False
+        
+        current_task = queue[0]
+        queue.pop(0)
+        
+        if not isinstance(current_task, list) or len(current_task) < 2:
+            return False
+        
+        if isinstance(current_task[1], list):
+            for j in range(len(current_task[1])):
+                processing(current_task, j, filik, thread_name)
+        else:
+            processing(current_task, 0, filik, thread_name)
+            
+        return True
+        
+    except Exception as e:
+        with output_lock:
+            filik.write(f"\n[{thread_name}] Error in process_queue: {str(e)}\n")
+        return False
+
+def processing(task, j, filik, thread_name):
+    """Process a single mutation task"""
+    try:
+        # Perform mutation
+        if isinstance(task[1], list):
+            mutated_err_data, mut_type = mutator.mutate(task[1][j], 100, new_dict2, new_dict)
+        else:
+            mutated_err_data, mut_type = mutator.mutate(task[1], 100, new_dict2, new_dict)
+        
+        # Update info_dict
+        try:
+            ind = calibrator.info_dict[tuple(task[1])]
+            ind2 = calibrator.num + 1
+        except:
+            ind = calibrator.num + 1
+            ind2 = calibrator.num + 2
+            calibrator.info_dict.update({tuple(task[1]): ind})
+        
+        # Process mutation results
+        xxxx = copy.deepcopy(task)
+        if isinstance(task[1], list):
+            xxxx[1][j] = mutated_err_data
+            if xxxx[1] != task[1]:
+                _, nnn, _, _ = calibrator.testing2(config.file_name, xxxx[1])
+                calibrator.info.append([task[1], xxxx[1], ind, ind2, '#ff9cc0', '#ff9cc0', 0, task[0], nnn])
+            task[1][j] = mutated_err_data
+        else:
+            xxxx[1] = mutated_err_data
+            if xxxx[1] != task[1]:
+                _, nnn, _, _ = calibrator.testing2(config.file_name, xxxx[1])
+                calibrator.info.append([task[1], xxxx[1], ind, ind2, '#ff9cc0', '#ff9cc0', 0, task[0], nnn])
+            task[1] = mutated_err_data
+        
+        task[4] = mut_type
+        
+        # Calibrate
+        calibrator.calibrate(task[1], filik, mut_type)
+        
+    except Exception as e:
+        with output_lock:
+            filik.write(f"\n[{thread_name}] Error in processing: {str(e)}\n")
 
 def extract_strings(file_path, min_length=4):
     strings = []
@@ -327,130 +382,117 @@ def restore_terminal():
 # Save terminal settings
 old_settings = termios.tcgetattr(sys.stdin)
 
+def fuzzing_thread(thread_name, filik):
+    """Function to run fuzzing in a separate thread"""
+    global DEBUG_PROB_OF_MUT
+    
+    while True:
+        try:
+            # Process queues in priority order
+            if len(calibrator.queue_seg_fault) > 0:
+                process_queue(calibrator.queue_seg_fault, "segfault", filik, thread_name)
+            elif len(calibrator.queue_no_error) > 0:
+                process_queue(calibrator.queue_no_error, "no_error", filik, thread_name)
+            elif len(calibrator.queue_sig_fpe) > 0:
+                process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
+            
+            # Update probabilities
+            with stats_lock:
+                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                new_probs = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)
+                DEBUG_PROB_OF_MUT = new_probs
+            
+            time.sleep(0.001)
+            
+        except Exception as e:
+            with output_lock:
+                filik.write(f"\n[{thread_name}] Error: {str(e)}\n")
+
 def main():
     global DEBUG_PROB_OF_MUT, start_time, max_coverage_percent
     last_update = time.time()
-    update_interval = 0.25  # Update every 250ms instead of 100ms
+    update_interval = 0.25
     start_time = time.time()
     max_coverage_percent = 0
-    DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
+    
+    with prob_mut_lock:
+        DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
     
     # Set terminal to raw mode
     tty.setraw(sys.stdin.fileno())
     
     try:
         with open(config.output_file, 'w') as filik:
-            if config.FUZZ not in config.args:
-                calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
-            else:
-                calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
-
-            step = -1
+            # Initial calibration
+            with stats_lock:
+                if config.FUZZ not in config.args:
+                    calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
+                else:
+                    calibrator.calibrate(copy.deepcopy(config.args), filik, "first_no_mut")
+            
+            # Create and start fuzzing threads
+            thread1 = threading.Thread(
+                target=fuzzing_thread,
+                args=('thread1', filik),
+                daemon=True
+            )
+            thread2 = threading.Thread(
+                target=fuzzing_thread,
+                args=('thread2', filik),
+                daemon=True
+            )
+            
+            thread1.start()
+            thread2.start()
+            
+            # Main loop for display updates and user input
             while True:
+                current_time = time.time()
+                
                 # Check for 'q' key press
                 if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
                     char = sys.stdin.read(1)
                     if char == 'q':
-                        restore_terminal()
-                        # Save results before exiting
-                        filik.write(f"-------------------TOTAL-------------------\n\n\n")
-                        if len(sig_segvi) > 0:
-                            filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
-                        if len(no_error) > 0:
-                            for i in calibrator.codes_set:
-                                filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
-                        filik.write(f"-------------------------------------------\n\n\n")
-                        filik.write(f"{DEBUG_PROB_OF_MUT}")
-                        print(colored("\nResults saved to output.txt", "green"))
-                        sys.exit(0)
-
-                step += 1
-                current_time = time.time()
-                
-                # Original fuzzing logic
-                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
-                
-                # Process mutations
-                if len(sig_segvi) != 0 and len(calibrator.queue_seg_fault) != 0:
-                    if len(sig_segvi) == 1:
-                        for i in range(len(sig_segvi)):
-                            my_err = copy.deepcopy(calibrator.queue_seg_fault)
-                    else:
-                        my_err = copy.deepcopy(calibrator.queue_seg_fault)
-                    if len(calibrator.queue_seg_fault[0][1]) > 1:
-                        for j in range(len(calibrator.queue_seg_fault[0][1])):
-                            processing(calibrator.queue_seg_fault, j, filik)
-                        calibrator.queue_seg_fault.pop(0)      
-                    else:
-                        processing(calibrator.queue_seg_fault, 0, filik)
-                        calibrator.queue_seg_fault.pop(0)
-
-                if len(no_error) != 0 or len(sig_fpe) != 0:
-                    if len(no_error) != 0:
-                        if len(no_error) == 1:
-                            for i in range(len(no_error)):
-                                my_err = copy.deepcopy(calibrator.queue_no_error)
-                        else:
-                            my_err = copy.deepcopy(calibrator.queue_no_error)
-                        try:
-                            if len(calibrator.queue_no_error[0][1]) > 1:
-                                for j in range(len(calibrator.queue_no_error[0][1])):
-                                    processing(calibrator.queue_no_error, j, filik)
-                                calibrator.queue_no_error.pop(0)
-                            else:
-                                processing(calibrator.queue_no_error, 0, filik)
-                                calibrator.queue_no_error.pop(0)
-                        except:
-                            continue
-                    else:
-                        if len(sig_fpe) == 1 and len(calibrator.queue_sig_fpe) != 0:
-                            for i in range(len(sig_fpe)):
-                                sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
-                        else:
-                            sig_fpe_1 = copy.deepcopy(calibrator.queue_sig_fpe)
-                        if len(calibrator.queue_sig_fpe[0][1]) > 1:
-                            for j in range(len(calibrator.queue_sig_fpe[0][1])):
-                                processing(calibrator.queue_sig_fpe, j, filik)
-                            calibrator.queue_sig_fpe.pop(0)
-
-                # Update probabilities
-                DEBUG_PROB_OF_MUT = define_probability_of_mutations(no_error, sig_segvi, sig_fpe)
+                        break
                 
                 # Update display less frequently
                 if current_time - last_update >= update_interval:
-                    stats = {
-                        'sig_segvi': sig_segvi,
-                        'time_out': time_out,
-                        'no_error': no_error,
-                        'sig_fpe': sig_fpe,
-                        'codes_set': calibrator.codes_set if hasattr(calibrator, 'codes_set') else set(),
-                        'codes_dict': calibrator.codes_dict if hasattr(calibrator, 'codes_dict') else {}
-                    }
+                    with stats_lock:
+                        sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                        stats = {
+                            'sig_segvi': sig_segvi,
+                            'time_out': time_out,
+                            'no_error': no_error,
+                            'sig_fpe': sig_fpe,
+                            'codes_set': calibrator.codes_set if hasattr(calibrator, 'codes_set') else set(),
+                            'codes_dict': calibrator.codes_dict if hasattr(calibrator, 'codes_dict') else {}
+                        }
                     display_stats(stats)
                     last_update = current_time
                 
-                # Slightly longer sleep to reduce CPU usage
-                time.sleep(0.005)
-                
-    except KeyboardInterrupt:
-        # Save results before exiting
-        filik.write(f"-------------------TOTAL-------------------\n\n\n")
-        if len(sig_segvi) > 0:
-            filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
-        if len(no_error) > 0:
-            for i in calibrator.codes_set:
-                filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
-        filik.write(f"-------------------------------------------\n\n\n")
-        filik.write(f"{DEBUG_PROB_OF_MUT}")
-        print(colored("\nResults saved to output.txt", "green"))
-        restore_terminal()
-        sys.exit(0)
+                time.sleep(0.01)
+            
+            # Save results before exiting
+            with stats_lock:
+                sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
+                with output_lock:
+                    filik.write(f"-------------------TOTAL-------------------\n\n\n")
+                    if len(sig_segvi) > 0:
+                        filik.write('with -11: ' + str(len(sig_segvi)) + '\n\n\n')
+                    if len(no_error) > 0:
+                        for i in calibrator.codes_set:
+                            filik.write(f"with {i}: " + str(calibrator.codes_dict[i]) + '\n\n\n')
+                    filik.write(f"-------------------------------------------\n\n\n")
+                    with prob_mut_lock:
+                        filik.write(f"{DEBUG_PROB_OF_MUT}")
+            
+            print(colored("\nResults saved to output.txt", "green"))
+            
     except Exception as e:
-        restore_terminal()
         print(colored(f"\nAn error occurred: {str(e)}", "red"))
-        sys.exit(1)
     finally:
         restore_terminal()
+        sys.exit(0)
 
 def show_welcome_screen():
     title = """
