@@ -115,5 +115,10 @@ Dazzer - это мутационный фаззер с открытым исхо
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-22-34.png)
 
+На скриншоте указан результат работы фаззера в 8 потоков. Что бы посмотреть тесты которые обрабатывались в каждом из них, достаточно просто открыть папку tests-Thread-n__fuzzing_thread_,  где n - номер потока. Пример теста:
+
+![Image alt](https://github.com/user-attachments/assets/3d3dc00e-7999-4d88-8a5a-c2babd2b70f8)
+
+
 ## 
                               
