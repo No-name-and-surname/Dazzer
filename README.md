@@ -1,15 +1,11 @@
 
-<p>
-╔╦╗┌─┐┌─┐┌─┐┌─┐┬─┐
- ║║├─┤┌─┘┌─┘├┤ ├┬┘
-═╩╝┴ ┴└─┘└─┘└─┘┴└─
-</p>
+## <a id="title0">Dazzer</a>
 
 Dazzer - это мутационный фаззер с открытым исходным кодом
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pix.png)
 
-## <a id="title1">How does it actually work?</a>
+## <a id="title1">Как работает?</a>
 
 Мой фаззер является мутационным, следовательно, он работает за счет преобразования изначальных входных данных с помощью одного из мутационных алгоритмов. 
 Состоит фаззер из 3 частей:
@@ -26,14 +22,56 @@ Dazzer - это мутационный фаззер с открытым исхо
 ![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-20-54.png)
 
 
-## <a id="title2">Instaling</a>
+## <a id="title2">Установка</a>
 
-So, closer to the point, to install Dazzer you should run a few simple commands:
+Установить Dazzer не сложно, достаточно просто выполнить следующие команды:
+
+### Debian/Ubuntu
 
 ```
    git clone git@github.com:No-name-and-surname/Dazzer.git
    cd Dazzer
+
+   pip install -r requirements.txt
 ```
+
+### Fedora
+
+```
+   git clone git@github.com:No-name-and-surname/Dazzer.git
+   cd Dazzer
+   sudo dnf install -y gcc gcc-c++ gcovr lcov valgrind strace perf
+   pip install -r requirements.txt
+```
+
+### Arch Linux
+
+```
+   git clone git@github.com:No-name-and-surname/Dazzer.git
+   cd Dazzer
+   sudo pacman -Sy gcc gcovr lcov valgrind strace perf
+   pip install -r requirements.txt
+```
+
+### NixOS
+
+```
+   git clone git@github.com:No-name-and-surname/Dazzer.git
+   cd Dazzer
+   nix-shell -p gcc gcovr lcov valgrind strace linuxPackages.perf python3 python3Packages.pip
+   pip install -r requirements.txt
+```
+
+### Windows (в wsl)
+
+```
+   pacman -Syu
+   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-lcov
+   git clone git@github.com:No-name-and-surname/Dazzer.git
+   cd Dazzer
+   pip install -r requirements.txt
+```
+
 
 ## <a id="title3">Get started</a>
 
