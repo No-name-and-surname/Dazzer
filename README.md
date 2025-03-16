@@ -17,7 +17,7 @@ Dazzer - это мутационный фаззер с открытым исхо
 
 Приведу несколько скриншотов Dazzer:
 
-![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-20-26.png)
+![Image alt](https://github.com/user-attachments/assets/76ad5a97-2905-48c7-9acd-77dd7bfc7bd3)
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/blob/main/Screenshot%20from%202025-03-16%2016-20-54.png)
 
