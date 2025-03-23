@@ -100,7 +100,6 @@ queue_cache = {'seg_fault': 0, 'no_error': 0, 'sig_fpe': 0}
 queue_cache_lock = Lock()
 
 def get_best_mutator(stats):
-    """Determine the most effective mutator based on found issues"""
     mutator_stats = {
         "interesting": 0,
         "ch_symb": 0,
@@ -134,25 +133,38 @@ def get_best_mutator(stats):
     return "None"
 
 def get_coverage():
-    """Get current code coverage percentage"""
     global max_coverage_percent
     try:
+        try:
+            from calibrator import global_max_coverage
+            if global_max_coverage > 0:
+                coverage_value = round(global_max_coverage, 2)
+                max_coverage_percent = max(max_coverage_percent, coverage_value)
+                return f"{coverage_value:.2f}%"
+        except ImportError:
+            pass
+            
         if os.path.exists('out'):
             files = [f for f in os.listdir('out') if os.path.isfile(os.path.join('out', f))]
-            if files:
-                latest_file = max(files, key=lambda x: os.path.getctime(os.path.join('out', x)))
+            gcov_files = [f for f in files if f.startswith('cov-')]
+            if gcov_files:
                 try:
-                    coverage = float(latest_file.split(':cov-')[1])
-                    max_coverage_percent = max(max_coverage_percent, coverage)
-                    return f"{max_coverage_percent:.1f}%"
+                    max_coverage_file = max(gcov_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
+                    coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
+                    max_coverage_percent = max(max_coverage_percent, coverage_value)
+                    return f"{coverage_value:.2f}%"
                 except:
                     pass
-        return "0.0%"
-    except:
-        return "0.0%"
+        
+        if max_coverage_percent > 0:
+            return f"{max_coverage_percent:.2f}%"
+            
+        return "0.00%"
+    except Exception as e:
+        print(f"Error in get_coverage: {e}")
+        return "0.00%"
 
 def format_time(seconds):
-    """Format seconds into readable time"""
     if seconds < 60:
         return f"{seconds:.1f}s"
     elif seconds < 3600:
@@ -165,7 +177,6 @@ def format_time(seconds):
         return f"{int(hours)}h {int(minutes)}m"
 
 def create_stats_box(stats):
-    """Create a formatted statistics box"""
     best_mutator = get_best_mutator(stats)
     
     total_tests = len(stats.get('sig_segvi', [])) + len(stats.get('sig_fpe', [])) + len(stats.get('no_error', []))
@@ -177,6 +188,13 @@ def create_stats_box(stats):
         runtime = current_time - start_time
     
     tests_per_sec = total_tests / runtime if runtime > 0 else 0
+    
+    saved_tests_count = 0
+    try:
+        from calibrator import global_saved_tests_count
+        saved_tests_count = global_saved_tests_count
+    except ImportError:
+        pass
     
     global DEBUG_PROB_OF_MUT
     if len(DEBUG_PROB_OF_MUT) < 4:
@@ -192,8 +210,9 @@ def create_stats_box(stats):
         format_line("Runtime", format_time(round(runtime, 1)), 39),
         format_line("Total Tests", total_tests, 35),
         format_line("Tests/sec", f"{round(tests_per_sec, 1)}/s", 37),
+        format_line("Saved Tests", saved_tests_count, 35),
         format_line("Threads Running", config.NUM_THREADS, 31),
-        format_line("Max Coverage", get_coverage(), 34),
+        format_line("Max Coverage", f"{get_coverage()}", 34),
         format_line("Best Mutator", best_mutator, 34),
         hex_color('#ff4a96ff', "║                                                  ║")
     ]
@@ -491,7 +510,6 @@ def fuzzing_thread(thread_name, filik):
                 filik.write(f"\n[{thread_name}] Error: {str(e)}\n")
 
 def main():
-    # Fill screen with black again before starting main program
     fill_screen_black()
     
     global DEBUG_PROB_OF_MUT, start_time, max_coverage_percent
@@ -499,6 +517,14 @@ def main():
     update_interval = 0.5
     start_time = time.time()
     max_coverage_percent = 0
+    
+    with calibrator.global_coverage_lock:
+        calibrator.global_max_coverage = 0.0
+    
+    calibrator.global_error_codes = set()
+    
+    with calibrator.global_saved_tests_lock:
+        calibrator.global_saved_tests_count = 0
     
     with prob_mut_lock:
         DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
@@ -573,6 +599,7 @@ def main():
                     filik.write(f"Runtime: {format_time(round(runtime, 1))}\n")
                     filik.write(f"Total Tests Run: {total_tests}\n")
                     filik.write(f"Tests/sec: {round(tests_per_sec, 1)}/s\n")
+                    filik.write(f"Saved Tests: {calibrator.global_saved_tests_count}\n")
                     filik.write(f"Configured Threads: {config.NUM_THREADS}\n")
                     filik.write(f"Active Threads: {active_thread_count}\n")
                     
@@ -587,7 +614,7 @@ def main():
                             filik.write(f"    Tests completed: {tests_by_thread} ({round(thread_efficiency, 1)}% of total)\n")
                             filik.write(f"    Tests/sec: {round(thread_tests_per_sec, 1)}/s\n")
                     
-                    filik.write(f"Max Coverage: {get_coverage()}\n")
+                    filik.write(f"Max Coverage: {round(calibrator.global_max_coverage, 2):.2f}%\n")
                     filik.write(f"Best Mutator: {best_mutator}\n\n")
                     
                     filik.write(f"Error Breakdown:\n")

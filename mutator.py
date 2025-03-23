@@ -2,17 +2,9 @@ from random import randint, choice
 import config
 import main
 
-#globals initialization ---------------------------------------------------------------------------------------------------
-
 fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
-# 25 = 25
-# 25 = 25
-# 25 = 25
-# 25 = 25
 flag = 0
-
-# --------------------------------------------------------------------------------------------------------------------------
 
 def xor(ret):
     try:

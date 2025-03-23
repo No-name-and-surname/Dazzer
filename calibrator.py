@@ -12,6 +12,7 @@ from random import *
 import shlex
 import tempfile
 import threading
+import fnmatch
 
 #globals initialization ---------------------------------------------------------------------------------------------------
 
@@ -46,6 +47,13 @@ if not os.path.exists(OUTPUT_DIR):
 coverage_cache = {}
 base_coverage_cache = {}
 
+global_max_coverage = 0
+global_error_codes = set()
+global_coverage_lock = threading.Lock()
+global_error_lock = threading.Lock()
+global_saved_tests_count = 0
+global_saved_tests_lock = threading.Lock()
+
 # --------------------------------------------------------------------------------------------------------------------------
 
 def if_interesting(test_case):
@@ -65,16 +73,36 @@ def graph_collecting_tests(color1, color2, index, bbbb, mas, flag):
         info.append([bbbb, gf, num1, num, color1, color2, 0, returncode, nnn])
 
 def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read_count, num, mut_type, is_interesting):
+    global global_max_coverage, global_error_codes, global_saved_tests_count
+    
     executed, total, coverage = get_coverage(file_name, tests_2)
+    
+    first_test = False
+    with global_coverage_lock:
+        if global_max_coverage == 0 and coverage > 0:
+            first_test = True
+            global_max_coverage = coverage
+    
     increased_coverage = False
+    with global_coverage_lock:
+        if coverage >= global_max_coverage and coverage > 0:
+            increased_coverage = True
+            if coverage > global_max_coverage:
+                global_max_coverage = coverage
+    
+    new_error = False
+    with global_error_lock:
+        if returncode not in global_error_codes:
+            new_error = True
+            global_error_codes.add(returncode)
+    
+    local_increased_coverage = False
     if len(listik) == 0:
-        increased_coverage = True
+        local_increased_coverage = True
     else:
         prev_max_coverage = max(item[5] for item in listik) if listik else 0
-        increased_coverage = coverage > prev_max_coverage
-    new_error = False
-    if returncode not in [item[0] for item in sig_segv]:
-        new_error = True
+        local_increased_coverage = coverage > prev_max_coverage
+    
     error_count = stderr.count("error") + stderr.count("Error")
     max_previous_errors = 0
     if len(sig_segv) > 0:
@@ -83,6 +111,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
             prev_errors = prev_stderr.count("error") + prev_stderr.count("Error")
             max_previous_errors = max(max_previous_errors, prev_errors)
     more_errors = error_count > max_previous_errors
+    
     listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
     queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
     
@@ -99,7 +128,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
     tests_output_dir = os.path.join(OUTPUT_DIR, f"tests_{thread_name}")
     os.makedirs(tests_output_dir, exist_ok=True)
 
-    if increased_coverage or new_error or more_errors or is_interesting:
+    if first_test or increased_coverage or new_error:
         timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
         file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}"
         file_path = os.path.join(tests_output_dir, file_namus)
@@ -113,6 +142,19 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
                 f.write(f"Stdout: {stdout}\n")
             if stderr:
                 f.write(f"Stderr: {stderr}\n")
+                
+        with global_saved_tests_lock:
+            global_saved_tests_count += 1
+            
+        save_reason = ""
+        if first_test:
+            save_reason = "первый тест"
+        elif increased_coverage:
+            save_reason = f"увеличено покрытие до {coverage}%"
+        elif new_error:
+            save_reason = f"новый код ошибки {returncode}"
+            
+        filik.write(f"[INFO] Сохранен тест: {file_namus}. Причина: {save_reason}\n\n")
     
     if flag == 1:
         if returncode not in codes_set:
@@ -793,6 +835,7 @@ def analyze_binary_coverage(binary_path, input_data):
     return get_binary_coverage(binary_path, input_data)
 
 def get_base_coverage(binary_path):
+    global global_max_coverage, global_coverage_lock
     if binary_path in base_coverage_cache:
         return base_coverage_cache[binary_path]
         
@@ -846,11 +889,21 @@ def get_base_coverage(binary_path):
                                     if line.split(':')[0].strip() not in ['-'] and 
                                     not line.split(':')[2].strip().startswith('//') and
                                     not line.split(':')[2].strip().startswith('#'))
-                    timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-                    output_filename = f"base_time-{timestamp}_{source_base}.gcov"
-                    output_gcov = os.path.join(gcov_output_dir, output_filename)
-                    with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
-                        dst.write(src.read())
+                    
+                    # We only need to save the base coverage file once, not on every run
+                    base_gcov_pattern = f"base_time-*_{source_base}.gcov"
+                    existing_base_files = []
+                    for fname in os.listdir(gcov_output_dir):
+                        if fnmatch.fnmatch(fname, base_gcov_pattern):
+                            existing_base_files.append(fname)
+                    
+                    if not existing_base_files:
+                        timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
+                        output_filename = f"base_time-{timestamp}_{source_base}.gcov"
+                        output_gcov = os.path.join(gcov_output_dir, output_filename)
+                        with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
+                            dst.write(src.read())
+                    
                     result = max(total_lines, 1)
                     base_coverage_cache[binary_path] = result
                     return result
@@ -866,6 +919,7 @@ def get_base_coverage(binary_path):
         return 1
 
 def get_coverage(binary_path, input_data):
+    global global_max_coverage, global_coverage_lock
     try:
         input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
         if input_key in coverage_cache:
@@ -962,9 +1016,19 @@ def get_coverage(binary_path, input_data):
                         timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
                         output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.gcov"
                         output_gcov = os.path.join(gcov_output_dir, output_filename)
-                        with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
-                            dst.write(src.read())
+                        
+                        with global_coverage_lock:
+                            high_coverage_test = coverage > 60.0
                             
+                            increased_coverage = (coverage >= global_max_coverage and coverage > 0) or (global_max_coverage == 0 and coverage > 0)
+                            
+                            if coverage > global_max_coverage and coverage > 0:
+                                global_max_coverage = coverage
+                                
+                            if high_coverage_test or increased_coverage:
+                                with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
+                                    dst.write(src.read())
+                        
                         result = (executed, total, coverage)
                         coverage_cache[input_key] = result
                         return result
