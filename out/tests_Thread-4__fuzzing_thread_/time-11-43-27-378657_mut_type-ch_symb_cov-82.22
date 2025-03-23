@@ -1,0 +1,5 @@
+Test: ["C618*\x81&;!U>'TcN&{!1z*I16'#\x84\\..X9J8.", 'É']
+Coverage: 82.22%
+Return code: 0 (Unknown Error (0))
+Mutation type: ch_symb
+Stderr: [Errno 32] Broken pipe

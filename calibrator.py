@@ -53,6 +53,57 @@ global_coverage_lock = threading.Lock()
 global_error_lock = threading.Lock()
 global_saved_tests_count = 0
 global_saved_tests_lock = threading.Lock()
+global_error_details_lock = threading.Lock()
+
+# Структуры для хранения информации об ошибках, включая ошибки санитайзеров
+error_details = {}
+error_by_mutator = {}
+
+# Коды ошибок санитайзеров
+SANITIZER_ERROR_CODES = {
+    -100: "Generic Sanitizer Error",
+    -101: "AddressSanitizer Error",
+    -102: "UndefinedBehaviorSanitizer Error",
+    -103: "ThreadSanitizer Error",
+    -104: "MemorySanitizer Error",
+    -105: "LeakSanitizer Error"
+}
+
+error_descriptions = {
+    -11: "Segmentation Fault",
+    -8: "Floating Point Exception",
+    -6: "Aborted",
+    -4: "Illegal Instruction",
+    -7: "Bus Error",
+    -9: "Killed",
+    -1: "Timeout",
+    1: "Generic Error",
+    2: "Misuse of Shell Builtins",
+    126: "Command Not Executable",
+    127: "Command Not Found",
+    128: "Invalid Exit Argument",
+    130: "Script Terminated by Ctrl+C",
+    137: "Process Killed (SIGKILL)",
+    139: "Segmentation Fault (SIGSEGV)",
+    134: "Abort Signal (SIGABRT)",
+    136: "Floating Point Exception (SIGFPE)"
+}
+
+# Добавляем коды ошибок санитайзеров в словарь описаний
+error_descriptions.update(SANITIZER_ERROR_CODES)
+
+error_by_mutator = {
+    "interesting": {},
+    "ch_symb": {},
+    "length_ch": {},
+    "xor": {},
+    "first_no_mut": {}
+}
+
+def get_error_description(code):
+    if code in error_descriptions:
+        return error_descriptions[code]
+    return f"Unknown Error ({code})"
 
 # --------------------------------------------------------------------------------------------------------------------------
 
@@ -95,6 +146,38 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
         if returncode not in global_error_codes:
             new_error = True
             global_error_codes.add(returncode)
+            
+    with global_error_details_lock:
+        if returncode not in error_details:
+            error_details[returncode] = {
+                "count": 0,
+                "description": get_error_description(returncode),
+                "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
+                "examples": []
+            }
+        error_details[returncode]["count"] += 1
+        
+        if mut_type not in error_by_mutator:
+            error_by_mutator[mut_type] = {}
+        if returncode not in error_by_mutator[mut_type]:
+            error_by_mutator[mut_type][returncode] = 0
+        error_by_mutator[mut_type][returncode] += 1
+        
+        if len(error_details[returncode]["examples"]) < 5:
+            error_example = {
+                "test": tests_2,
+                "stderr": stderr if stderr else "",
+                "stdout": stdout if stdout else "",
+                "mutation": mut_type,
+                "coverage": coverage
+            }
+            error_details[returncode]["examples"].append(error_example)
+    
+    # Проверка на наличие вывода санитайзера
+    sanitizer_detected = False
+    sanitizer_info = check_sanitizer(stderr)
+    if sanitizer_info["detected"]:
+        sanitizer_detected = True
     
     local_increased_coverage = False
     if len(listik) == 0:
@@ -128,20 +211,30 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
     tests_output_dir = os.path.join(OUTPUT_DIR, f"tests_{thread_name}")
     os.makedirs(tests_output_dir, exist_ok=True)
 
-    if first_test or increased_coverage or new_error:
+    # Сохраняем тест если это первый тест, увеличено покрытие, новая ошибка или обнаружен санитайзер
+    if first_test or increased_coverage or new_error or sanitizer_detected:
         timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-        file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}"
+        sanitizer_suffix = "_sanitizer" if sanitizer_detected else ""
+        file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}{sanitizer_suffix}"
         file_path = os.path.join(tests_output_dir, file_namus)
  
         with open(file_path, 'w') as f:
             f.write(f"Test: {tests_2}\n")
             f.write(f"Coverage: {coverage}%\n")
-            f.write(f"Return code: {returncode}\n")
+            f.write(f"Return code: {returncode} ({get_error_description(returncode)})\n")
             f.write(f"Mutation type: {mut_type}\n")
             if stdout:
                 f.write(f"Stdout: {stdout}\n")
             if stderr:
                 f.write(f"Stderr: {stderr}\n")
+                
+            # Добавляем подробную информацию о санитайзере, если она есть
+            if sanitizer_detected:
+                f.write(f"\n--- SANITIZER DETAILS ---\n")
+                f.write(f"Sanitizer type: {sanitizer_info['type']}\n")
+                if sanitizer_info["details"]:
+                    f.write(f"Details: {sanitizer_info['details']}\n")
+                f.write(f"Full sanitizer output:\n{stderr}\n")
                 
         with global_saved_tests_lock:
             global_saved_tests_count += 1
@@ -152,7 +245,9 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
         elif increased_coverage:
             save_reason = f"увеличено покрытие до {coverage}%"
         elif new_error:
-            save_reason = f"новый код ошибки {returncode}"
+            save_reason = f"новый код ошибки {returncode} ({get_error_description(returncode)})"
+        elif sanitizer_detected:
+            save_reason = f"обнаружена ошибка санитайзера: {sanitizer_info['type']}"
             
         filik.write(f"[INFO] Сохранен тест: {file_namus}. Причина: {save_reason}\n\n")
     
@@ -174,9 +269,173 @@ def run_command(command, error_message, input_data=None):
     return process.stdout.decode(), process.stderr.decode()
 
 def check_sanitizer(stderr):
-    sanitizer_triggers = ["AddressSanitizer", "UndefinedBehaviorSanitizer", "LeakSanitizer", "ERROR: "]
-    return any(trigger in stderr for trigger in sanitizer_triggers)
+    result = {
+        "detected": False,
+        "type": "",
+        "details": ""
+    }
+    
+    if not stderr:
+        return result
+    
+    # Типичные строки с ошибками от санитайзеров
+    sanitizer_markers = [
+        # AddressSanitizer
+        "==ERROR: AddressSanitizer:",
+        "AddressSanitizer: heap-use-after-free",
+        "AddressSanitizer: heap-buffer-overflow",
+        "AddressSanitizer: stack-buffer-overflow",
+        "AddressSanitizer: global-buffer-overflow",
+        "AddressSanitizer: stack-use-after-return",
+        "AddressSanitizer: use-after-poison",
+        "AddressSanitizer: stack-use-after-scope",
+        "AddressSanitizer: SEGV",
+        "AddressSanitizer: requested allocation size",
+        "AddressSanitizer: attempting double-free",
+        "AddressSanitizer: attempting free on address which was not malloc",
+        
+        # UndefinedBehaviorSanitizer
+        "==ERROR: UndefinedBehaviorSanitizer:",
+        "UndefinedBehaviorSanitizer: undefined-behavior",
+        "UndefinedBehaviorSanitizer: runtime error",
+        "UndefinedBehaviorSanitizer: shift exponent",
+        "UndefinedBehaviorSanitizer: signed-integer-overflow",
+        "UndefinedBehaviorSanitizer: unsigned-integer-overflow",
+        "UndefinedBehaviorSanitizer: load of misaligned",
+        "UndefinedBehaviorSanitizer: null pointer",
 
+        # ThreadSanitizer
+        "==ERROR: ThreadSanitizer:",
+        "ThreadSanitizer: data race",
+        "ThreadSanitizer: race condition",
+        
+        # MemorySanitizer
+        "==ERROR: MemorySanitizer:",
+        "MemorySanitizer: use-of-uninitialized-value",
+        
+        # LeakSanitizer
+        "==ERROR: LeakSanitizer:",
+        "LeakSanitizer: detected memory leaks",
+        
+        # Общие маркеры санитайзеров LLVM/Clang
+        "runtime error:",
+        "Sanitizer:",
+        "SUMMARY: Sanitizer:"
+    ]
+    
+    for marker in sanitizer_markers:
+        if marker in stderr:
+            result["detected"] = True
+            
+            # Определяем тип санитайзера
+            if "AddressSanitizer" in stderr:
+                result["type"] = "AddressSanitizer"
+            elif "UndefinedBehaviorSanitizer" in stderr:
+                result["type"] = "UndefinedBehaviorSanitizer"
+            elif "ThreadSanitizer" in stderr:
+                result["type"] = "ThreadSanitizer"
+            elif "MemorySanitizer" in stderr:
+                result["type"] = "MemorySanitizer"
+            elif "LeakSanitizer" in stderr:
+                result["type"] = "LeakSanitizer"
+            else:
+                result["type"] = "Sanitizer"
+                
+            # Извлекаем детали ошибки
+            lines = stderr.split('\n')
+            for line in lines:
+                if "ERROR:" in line and "Sanitizer" in line:
+                    result["details"] = line.strip()
+                    break
+                elif "SUMMARY: " in line and "Sanitizer" in line:
+                    result["details"] = line.strip()
+                    break
+            
+            # Если не нашли описание ошибки в ERROR или SUMMARY, используем строку с маркером
+            if not result["details"]:
+                for line in lines:
+                    for marker in sanitizer_markers:
+                        if marker in line:
+                            result["details"] = line.strip()
+                            break
+                    if result["details"]:
+                        break
+            
+            # Если всё ещё нет деталей, берём первую непустую строку
+            if not result["details"] and lines:
+                for line in lines:
+                    if line.strip():
+                        result["details"] = line.strip()
+                        break
+            
+            break
+    
+    return result
+
+def add_sanitizer_error(stderr, test_input=None, mut_type=None):
+    sanitizer_info = check_sanitizer(stderr)
+    if sanitizer_info["detected"]:
+        error_code = -100  # Специальный код для ошибок санитайзера
+        
+        # Создаем более специфичный код для разных типов санитайзеров
+        if "AddressSanitizer" in sanitizer_info["type"]:
+            error_code = -101
+        elif "UndefinedBehaviorSanitizer" in sanitizer_info["type"]:
+            error_code = -102
+        elif "ThreadSanitizer" in sanitizer_info["type"]:
+            error_code = -103
+        elif "MemorySanitizer" in sanitizer_info["type"]:
+            error_code = -104
+        elif "LeakSanitizer" in sanitizer_info["type"]:
+            error_code = -105
+        
+        with global_error_details_lock:
+            if error_code not in error_details:
+                error_details[error_code] = {
+                    "count": 0,
+                    "description": f"Sanitizer: {sanitizer_info['type']}",
+                    "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
+                    "examples": [],
+                    "details": [],
+                    "is_crash": True,
+                    "error_type": sanitizer_info["type"].lower().replace("sanitizer", "").strip()
+                }
+            error_details[error_code]["count"] += 1
+            
+            # Добавляем детали ошибки, если их еще нет
+            if sanitizer_info["details"] and sanitizer_info["details"] not in error_details[error_code]["details"]:
+                error_details[error_code]["details"].append(sanitizer_info["details"])
+                
+            # Добавляем информацию о стеке вызовов, если она есть
+            if "stack_trace" in sanitizer_info and len(error_details[error_code].get("stack_traces", [])) < 10:
+                if "stack_traces" not in error_details[error_code]:
+                    error_details[error_code]["stack_traces"] = []
+                error_details[error_code]["stack_traces"].append(sanitizer_info["stack_trace"])
+                
+            # Сохраняем пример теста
+            if test_input and mut_type and len(error_details[error_code]["examples"]) < 5:
+                example = {
+                    "test": test_input,
+                    "stderr": stderr,
+                    "mutation": mut_type,
+                    "details": sanitizer_info["details"],
+                    "sanitizer_type": sanitizer_info["type"]
+                }
+                if "stack_trace" in sanitizer_info:
+                    example["stack_trace"] = sanitizer_info["stack_trace"]
+                    
+                error_details[error_code]["examples"].append(example)
+                
+            # Отслеживаем по мутатору
+            if mut_type:
+                if mut_type not in error_by_mutator:
+                    error_by_mutator[mut_type] = {}
+                if error_code not in error_by_mutator[mut_type]:
+                    error_by_mutator[mut_type][error_code] = 0
+                error_by_mutator[mut_type][error_code] += 1
+        
+        return True, error_code
+    return False, None
 
 if len(config.args) == 1:
     for i in dictionary:
@@ -313,6 +572,49 @@ def testing(file_name, listik):
 def ret_globals():
     return sig_segv, time_out, no_err, sig_fpe
 
+def get_error_statistics():
+    with global_error_details_lock:
+        total_errors = sum(details["count"] for details in error_details.values())
+        unique_errors = len(error_details)
+        
+        error_types = {}
+        crash_count = 0
+        sanitizer_count = 0
+        
+        for code, details in error_details.items():
+            error_type = details.get("error_type", "unknown")
+            
+            # Учитываем тип ошибки
+            if error_type not in error_types:
+                error_types[error_type] = 0
+            error_types[error_type] += details["count"]
+            
+            # Подсчитываем количество крашей
+            if details.get("is_crash", False):
+                crash_count += details["count"]
+                
+            # Подсчитываем ошибки санитайзера
+            if code < -100 and code >= -110:
+                sanitizer_count += details["count"]
+                
+            # Добавляем специфичные типы санитайзеров, если это ошибка санитайзера
+            if error_type == "sanitizer" and "sanitizer_type" in details:
+                sanitizer_type = details["sanitizer_type"].lower()
+                sanitizer_key = f"{sanitizer_type}_error"
+                if sanitizer_key not in error_types:
+                    error_types[sanitizer_key] = 0
+                error_types[sanitizer_key] += details["count"]
+                
+        return {
+            "total_errors": total_errors,
+            "unique_errors": unique_errors,
+            "error_types": error_types,
+            "crash_count": crash_count,
+            "sanitizer_count": sanitizer_count,
+            "error_details": error_details,
+            "error_by_mutator": error_by_mutator
+        }
+
 def check_no_error(list_of_inp, started_out):
     exec_time, returncode, stdout, stderr = testing2(file_name, list_of_inp)
     started_out1 = started_out
@@ -364,7 +666,29 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
                             break 
             exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
             is_interesting = if_interesting([returncode, tests_2, stdout])
-            if returncode == -11 or returncode == -8:
+            
+            # Проверяем на ошибки санитайзера
+            sanitizer_info = check_sanitizer(stderr)
+            
+            # Категоризируем и логируем ошибку
+            error_info = categorize_error(returncode, stderr, stdout)
+            
+            # Если это ошибка санитайзера, добавляем полный вывод к информации об ошибке
+            if sanitizer_info["detected"]:
+                error_info["type"] = "sanitizer"
+                error_info["sanitizer_output"] = stderr
+                error_info["sanitizer_details"] = sanitizer_info["details"]
+                error_info["sanitizer_type"] = sanitizer_info["type"]
+                error_info["is_crash"] = True
+                
+                # Выводим информацию об ошибке санитайзера в лог
+                filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+                filik.write(f"Test: {tests_2}\nMutation: {mut_type}\n\n")
+                
+            is_crash = log_error(error_info, tests_2, mut_type, 0)  # У нас здесь нет покрытия
+            
+            # Проверяем, это крэш или ошибка санитайзера
+            if is_crash or returncode == -11 or returncode == -8 or sanitizer_info["detected"]:
                 tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
             else:
                 tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
@@ -384,7 +708,31 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
         is_interesting = if_interesting([returncode, tests_2, stdout])
         
-        if returncode == -11 or returncode == -8 or check_sanitizer(stderr):
+        # Получаем покрытие для лучшего отслеживания ошибок
+        executed, total, coverage = get_coverage(file_name, tests_2)
+        
+        # Проверяем на ошибки санитайзера
+        sanitizer_info = check_sanitizer(stderr)
+        
+        # Категоризируем и логируем ошибку
+        error_info = categorize_error(returncode, stderr, stdout)
+        
+        # Если это ошибка санитайзера, добавляем полный вывод к информации об ошибке
+        if sanitizer_info["detected"]:
+            error_info["type"] = "sanitizer"
+            error_info["sanitizer_output"] = stderr
+            error_info["sanitizer_details"] = sanitizer_info["details"]
+            error_info["sanitizer_type"] = sanitizer_info["type"]
+            error_info["is_crash"] = True
+            
+            # Выводим информацию об ошибке санитайзера в лог
+            filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+            filik.write(f"Test: {tests_2}\nMutation: {mut_type}\nCoverage: {coverage}%\n\n")
+            
+        is_crash = log_error(error_info, tests_2, mut_type, coverage)
+        
+        # Проверяем, это крэш или ошибка санитайзера
+        if is_crash or returncode == -11 or returncode == -8 or sanitizer_info["detected"]:
             tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
         else:
             tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
@@ -401,6 +749,26 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
         is_interesting = if_interesting([returncode, tests_2, stdout])
         
+        # Проверяем на ошибки санитайзера
+        sanitizer_info = check_sanitizer(stderr)
+        
+        # Категоризируем и логируем ошибку
+        error_info = categorize_error(returncode, stderr, stdout)
+        
+        # Если это ошибка санитайзера, добавляем полный вывод к информации об ошибке
+        if sanitizer_info["detected"]:
+            error_info["type"] = "sanitizer"
+            error_info["sanitizer_output"] = stderr
+            error_info["sanitizer_details"] = sanitizer_info["details"]
+            error_info["sanitizer_type"] = sanitizer_info["type"]
+            error_info["is_crash"] = True
+            
+            # Выводим информацию об ошибке санитайзера в лог
+            filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+            filik.write(f"Test: {tests_2}\nMutation: {mut_type}\n\n")
+            
+        is_crash = log_error(error_info, tests_2, mut_type, 0)  # В режиме черного ящика покрытие недоступно
+        
         new_output = True
         if len(no_err) > 0:
             for item in no_err:
@@ -408,7 +776,8 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
                     new_output = False
                     break
         
-        if returncode < 0 or check_sanitizer(stderr):
+        # Проверяем, это крэш, ошибка санитайзера или отрицательный код возврата
+        if is_crash or returncode < 0 or sanitizer_info["detected"]:
             tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting)
         elif new_output:
             tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting)
@@ -1043,3 +1412,157 @@ def get_coverage(binary_path, input_data):
     except Exception as e:
         print(f"Error in get_coverage: {e}")
         return 0, 1, 0.0
+
+def categorize_error(returncode, stderr, stdout):
+    error_info = {
+        "code": returncode,
+        "type": "unknown",
+        "is_crash": False
+    }
+    
+    # Проверяем ошибки санитайзера в первую очередь
+    sanitizer_info = check_sanitizer(stderr)
+    if sanitizer_info["detected"]:
+        # Используем специальные коды для разных типов санитайзеров
+        if sanitizer_info["type"] == "AddressSanitizer":
+            error_info["code"] = -101
+        elif sanitizer_info["type"] == "UndefinedBehaviorSanitizer":
+            error_info["code"] = -102
+        elif sanitizer_info["type"] == "ThreadSanitizer":
+            error_info["code"] = -103  
+        elif sanitizer_info["type"] == "MemorySanitizer":
+            error_info["code"] = -104
+        elif sanitizer_info["type"] == "LeakSanitizer":
+            error_info["code"] = -105
+        else:
+            error_info["code"] = -100  # Общий код для санитайзеров
+        
+        error_info["type"] = "sanitizer"
+        error_info["sanitizer_type"] = sanitizer_info["type"]
+        error_info["details"] = sanitizer_info["details"]
+        error_info["is_crash"] = True
+        
+        return error_info
+    
+    # Проверяем известные коды ошибок
+    if returncode == -11:
+        error_info["type"] = "segmentation_fault" 
+        error_info["is_crash"] = True
+    elif returncode == -8:
+        error_info["type"] = "floating_point_exception"
+        error_info["is_crash"] = True
+    elif returncode == -6:
+        error_info["type"] = "aborted"
+        error_info["is_crash"] = True
+    elif returncode == -9:
+        error_info["type"] = "killed"
+        error_info["is_crash"] = True
+    elif returncode == -4:
+        error_info["type"] = "illegal_instruction"
+        error_info["is_crash"] = True
+    elif returncode == -7:
+        error_info["type"] = "bus_error"
+        error_info["is_crash"] = True
+    elif returncode == -1:
+        error_info["type"] = "timeout"
+    elif returncode > 128:
+        # Ошибки, связанные с сигналами
+        error_info["type"] = f"signal_{returncode - 128}"
+        error_info["is_crash"] = True
+    
+    # Проверяем stderr на дополнительные подсказки
+    if stderr:
+        if "memory" in stderr.lower() and "corruption" in stderr.lower():
+            error_info["type"] = "memory_corruption"
+            error_info["is_crash"] = True
+        elif "stack" in stderr.lower() and "overflow" in stderr.lower():
+            error_info["type"] = "stack_overflow"
+            error_info["is_crash"] = True
+        elif "heap" in stderr.lower() and ("overflow" in stderr.lower() or "corruption" in stderr.lower()):
+            error_info["type"] = "heap_corruption"
+            error_info["is_crash"] = True
+        elif "double free" in stderr.lower():
+            error_info["type"] = "double_free"
+            error_info["is_crash"] = True
+        elif "use after free" in stderr.lower():
+            error_info["type"] = "use_after_free"
+            error_info["is_crash"] = True
+        
+        # Для других ошибок сегментации, которые могут не иметь код -11
+        elif "segmentation fault" in stderr.lower() or "segfault" in stderr.lower():
+            error_info["type"] = "segmentation_fault"
+            error_info["is_crash"] = True
+            
+        # Добавляем детали об ошибке из stderr
+        if stderr.strip():
+            lines = stderr.split('\n')
+            for line in lines:
+                if "error:" in line.lower() or "fault" in line.lower() or "crash" in line.lower():
+                    error_info["details"] = line.strip()
+                    break
+            
+            # Если не нашли строку с ошибкой, берем первую непустую строку
+            if "details" not in error_info:
+                for line in lines:
+                    if line.strip():
+                        error_info["details"] = line.strip()
+                        break
+    
+    return error_info
+
+def log_error(error_info, test_input, mut_type, coverage):
+    with global_error_details_lock:
+        error_code = error_info["code"]
+        error_type = error_info["type"]
+        
+        if error_code not in error_details:
+            error_details[error_code] = {
+                "count": 0,
+                "description": get_error_description(error_code),
+                "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
+                "examples": [],
+                "error_type": error_type,
+                "is_crash": error_info.get("is_crash", False)
+            }
+            
+            # Для ошибок санитайзера обновляем описание
+            if error_type == "sanitizer" and "sanitizer_type" in error_info:
+                sanitizer_type = error_info["sanitizer_type"]
+                error_details[error_code]["description"] = f"Sanitizer: {sanitizer_type}"
+                error_details[error_code]["sanitizer_type"] = sanitizer_type
+        
+        error_details[error_code]["count"] += 1
+        error_details[error_code]["error_type"] = error_type  # Обновляем на случай, если у нас теперь лучшая информация
+        
+        # Отслеживаем по типу мутации
+        if mut_type not in error_by_mutator:
+            error_by_mutator[mut_type] = {}
+        if error_code not in error_by_mutator[mut_type]:
+            error_by_mutator[mut_type][error_code] = 0
+        error_by_mutator[mut_type][error_code] += 1
+        
+        # Сохраняем пример, если у нас их еще недостаточно
+        if len(error_details[error_code]["examples"]) < 5:
+            example = {
+                "test": test_input,
+                "mutation": mut_type,
+                "coverage": coverage,
+                "error_type": error_type,
+                "timestamp": datetime.datetime.now().strftime("%H:%M:%S.%f")
+            }
+            
+            if "details" in error_info:
+                example["details"] = error_info["details"]
+            
+            # Для ошибок санитайзера сохраняем дополнительную информацию
+            if error_type == "sanitizer":
+                if "sanitizer_output" in error_info:
+                    example["sanitizer_output"] = error_info["sanitizer_output"]
+                if "sanitizer_type" in error_info:
+                    example["sanitizer_type"] = error_info["sanitizer_type"]
+                if "sanitizer_details" in error_info:
+                    example["sanitizer_details"] = error_info["sanitizer_details"]
+            
+            error_details[error_code]["examples"].append(example)
+    
+    return error_info["is_crash"]

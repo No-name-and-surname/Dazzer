@@ -196,6 +196,13 @@ def create_stats_box(stats):
     except ImportError:
         pass
     
+    error_stats = {}
+    try:
+        from calibrator import get_error_statistics, get_error_description
+        error_stats = get_error_statistics()
+    except ImportError:
+        pass
+    
     global DEBUG_PROB_OF_MUT
     if len(DEBUG_PROB_OF_MUT) < 4:
         DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
@@ -217,12 +224,81 @@ def create_stats_box(stats):
         hex_color('#ff4a96ff', "║                                                  ║")
     ]
     
+    if error_stats:
+        box_content.append(hex_color('#ff4a96ff', "║  Error Statistics:                              ║"))
+        box_content.append(format_line("  Unique Errors", error_stats.get('unique_errors', 0), 31))
+        box_content.append(format_line("  Total Errors", error_stats.get('total_errors', 0), 32))
+        box_content.append(format_line("  Crashes", error_stats.get('crash_count', 0), 37))
+        sanitizer_errors_count = 0
+        sanitizer_errors = []
+        for code, details in error_stats['error_details'].items():
+            if code < -100 and code >= -110:
+                sanitizer_errors_count += details.get('count', 0)
+                sanitizer_errors.append((code, details))
+        
+        if sanitizer_errors_count > 0:
+            box_content.append(format_line("  Sanitizer Errors", sanitizer_errors_count, 29))
+        
+        error_details = error_stats.get('error_details', {})
+        if error_details:
+            box_content.append(hex_color('#ff4a96ff', "║  Top Errors:                                    ║"))
+            
+            top_errors = sorted(error_details.items(), key=lambda x: x[1]['count'], reverse=True)[:3]
+            for code, details in top_errors:
+                description = details.get('description', f"Error {code}")
+                count = details['count']
+                box_content.append(format_line(f"  {description} ({code})", count, 25))
+        
+        error_types = error_stats.get('error_types', {})
+        if error_types:
+            box_content.append(hex_color('#ff4a96ff', "║  Error Types:                                   ║"))
+            sorted_types = sorted(error_types.items(), key=lambda x: x[1], reverse=True)[:4]
+            for error_type, count in sorted_types:
+                if count > 0:
+                    box_content.append(format_line(f"  {error_type}", count, 37))
+        
+        if sanitizer_errors:
+            box_content.append(hex_color('#ff4a96ff', "║  Sanitizer Errors:                              ║"))
+            sanitizer_types = {
+                -101: "AddressSanitizer",
+                -102: "UndefinedBehaviorSanitizer",
+                -103: "ThreadSanitizer",
+                -104: "MemorySanitizer",
+                -105: "LeakSanitizer"
+            }
+            
+            for code, name in sanitizer_types.items():
+                if code in sanitizer_errors:
+                    count = sanitizer_errors[code]['count']
+                    if count > 0:
+                        box_content.append(format_line(f"  {name}", count, 31))
+                
+        error_by_mutator = error_stats.get('error_by_mutator', {})
+        if error_by_mutator:
+            mutator_error_counts = {}
+            for mutator, errors in error_by_mutator.items():
+                mutator_error_counts[mutator] = sum(errors.values())
+            
+            if any(mutator_error_counts.values()):
+                box_content.append(hex_color('#ff4a96ff', "║  Errors by Mutator:                             ║"))
+                sorted_mutators = sorted(mutator_error_counts.items(), key=lambda x: x[1], reverse=True)
+                for mutator, count in sorted_mutators:
+                    if count > 0:
+                        box_content.append(format_line(f"  {mutator}", count, 37))
+    
     if config.FUZZING_TYPE == "Gray" or config.FUZZING_TYPE == "Black":
         if stats.get('codes_set'):
             box_content.append(hex_color('#ff4a96ff', "║  Return Codes:                                  ║"))
             for code in sorted(stats.get('codes_set', [])):
                 count = stats.get('codes_dict', {}).get(code, 0)
-                box_content.append(format_line(f"  Code {code}", count, 33))
+                description = ""
+                try:
+                    from calibrator import get_error_description
+                    description = f" ({get_error_description(code)})"
+                except ImportError:
+                    pass
+                
+                box_content.append(format_line(f"  Code {code}{description}", count, 33 - len(description)))
     
     box_content.extend([
         hex_color('#ff4a96ff', "║                                                  ║"),
@@ -628,6 +704,135 @@ def main():
                         filik.write('Other Return Codes:\n')
                         for i in calibrator.codes_set:
                             filik.write(f"  Code {i}: {calibrator.codes_dict[i]}\n")
+                    
+                    try:
+                        error_stats = calibrator.get_error_statistics()
+                        filik.write(f"\nDetailed Error Analysis:\n")
+                        filik.write(f"  Total Unique Errors: {error_stats['unique_errors']}\n")
+                        filik.write(f"  Total Error Instances: {error_stats['total_errors']}\n")
+                        filik.write(f"  Total Crashes: {error_stats['crash_count']}\n")
+                        
+                        # Добавляем счетчик ошибок санитайзера
+                        sanitizer_errors_count = 0
+                        sanitizer_errors = []
+                        for code, details in error_stats['error_details'].items():
+                            if code < -100 and code >= -110:  # Коды ошибок санитайзеров
+                                sanitizer_errors_count += details.get('count', 0)
+                                sanitizer_errors.append((code, details))
+                                
+                        if sanitizer_errors_count > 0:
+                            filik.write(f"  Total Sanitizer Errors: {sanitizer_errors_count}\n")
+                        
+                        # Error types summary
+                        if 'error_types' in error_stats and error_stats['error_types']:
+                            filik.write(f"Error Types:\n")
+                            sorted_types = sorted(error_stats['error_types'].items(), key=lambda x: x[1], reverse=True)
+                            for error_type, count in sorted_types:
+                                if count > 0:
+                                    filik.write(f"  {error_type}: {count}\n")
+                            filik.write("\n")
+                            
+                        # Секция для ошибок санитайзера
+                        if sanitizer_errors:
+                            filik.write(f"Sanitizer Errors:\n")
+                            sanitizer_types = {
+                                -101: "AddressSanitizer",
+                                -102: "UndefinedBehaviorSanitizer",
+                                -103: "ThreadSanitizer", 
+                                -104: "MemorySanitizer",
+                                -105: "LeakSanitizer"
+                            }
+                            
+                            for code, details in sanitizer_errors:
+                                sanitizer_name = sanitizer_types.get(code, f"Unknown Sanitizer ({code})")
+                                filik.write(f"  {sanitizer_name}:\n")
+                                filik.write(f"    Count: {details['count']}\n")
+                                filik.write(f"    First Seen: {details['first_seen']}\n")
+                                
+                                if 'details' in details and details['details']:
+                                    filik.write(f"    Common Error Details:\n")
+                                    for i, detail in enumerate(details['details'], 1):
+                                        filik.write(f"      {i}. {detail}\n")
+                                
+                                if 'stack_traces' in details and details['stack_traces']:
+                                    filik.write(f"    Stack Traces (unique):\n")
+                                    for i, stack_trace in enumerate(details['stack_traces'][:3], 1):
+                                        filik.write(f"      Stack {i}:\n")
+                                        for j, frame in enumerate(stack_trace, 0):
+                                            filik.write(f"        {frame}\n")
+                                            
+                                if 'examples' in details and details['examples']:
+                                    filik.write(f"    Examples:\n")
+                                    for i, example in enumerate(details['examples'][:2], 1):
+                                        filik.write(f"      Example {i}:\n")
+                                        filik.write(f"        Test: {example['test']}\n")
+                                        filik.write(f"        Mutation: {example['mutation']}\n")
+                                        if 'coverage' in example:
+                                            filik.write(f"        Coverage: {example['coverage']}%\n")
+                                        if 'details' in example:
+                                            filik.write(f"        Details: {example['details'][:150]}...\n")
+                                        if 'stack_trace' in example:
+                                            filik.write(f"        Stack Trace: {example['stack_trace'][0]}\n")
+                                filik.write("\n")
+                            filik.write("\n")
+                        
+                        filik.write(f"Error Details:\n")
+                        sorted_errors = sorted(error_stats['error_details'].items(), key=lambda x: x[1]['count'], reverse=True)
+                        for code, details in sorted_errors:
+                            # Пропускаем ошибки санитайзера, так как мы уже вывели их выше
+                            if code < -100 and code >= -110:
+                                continue
+                                
+                            error_type = details.get('error_type', 'unknown')
+                            is_crash = details.get('is_crash', False)
+                            crash_indicator = " [CRASH]" if is_crash else ""
+                            
+                            filik.write(f"  Error Code {code} - {details['description']} ({error_type}){crash_indicator}:\n")
+                            filik.write(f"    Count: {details['count']}\n")
+                            filik.write(f"    First Seen: {details['first_seen']}\n")
+                            
+                            # Show error examples
+                            if details['examples']:
+                                filik.write(f"    Examples:\n")
+                                for i, example in enumerate(details['examples'], 1):
+                                    filik.write(f"      Example {i}:\n")
+                                    filik.write(f"        Test: {example['test']}\n")
+                                    filik.write(f"        Mutation: {example['mutation']}\n")
+                                    filik.write(f"        Coverage: {example['coverage']}%\n")
+                                    if 'details' in example:
+                                        filik.write(f"        Details: {example['details'][:100]}...\n")
+                                    if example.get('stderr', ''):
+                                        stderr_summary = example['stderr'][:100] + (
+                                            "..." if len(example['stderr']) > 100 else "")
+                                        filik.write(f"        Error: {stderr_summary}\n")
+                        
+                        filik.write(f"\nErrors by Mutation Strategy:\n")
+                        for mut_type, errors in error_stats['error_by_mutator'].items():
+                            if errors:
+                                total = sum(errors.values())
+                                filik.write(f"  {mut_type}: {total} errors\n")
+                                
+                                # Crash count for this mutator
+                                crash_count = 0
+                                for code, count in errors.items():
+                                    if code in error_stats['error_details'] and error_stats['error_details'][code].get('is_crash', False):
+                                        crash_count += count
+                                if crash_count > 0:
+                                    filik.write(f"    Crashes: {crash_count}\n")
+                                
+                                sorted_mut_errors = sorted(errors.items(), key=lambda x: x[1], reverse=True)
+                                for code, count in sorted_mut_errors:
+                                    try:
+                                        description = calibrator.get_error_description(code)
+                                        error_type = error_stats['error_details'][code].get('error_type', 'unknown')
+                                        is_crash = error_stats['error_details'][code].get('is_crash', False)
+                                        crash_indicator = " [CRASH]" if is_crash else ""
+                                        filik.write(f"    {description} ({code}) - {error_type}{crash_indicator}: {count}\n")
+                                    except:
+                                        filik.write(f"    Error {code}: {count}\n")
+                    except Exception as e:
+                        filik.write(f"\nCouldn't get detailed error statistics: {e}\n")
+                    
                     filik.write(f"\nFinal Mutation Probabilities:\n")
                     with prob_mut_lock:
                         filik.write(f"  Length Change: {round(DEBUG_PROB_OF_MUT[0], 1)}%\n")

@@ -1,0 +1,5 @@
+Test: ['\x1e%\r.;!\x08 "\x119(\t+\r"\x17"\x106-\r\x0f\r,\x16%=4+%,821.;\x101=2\x10381(2\'\x16\x12#=*\x02"\x10\x1d\'\t\x159)\x03\x03\x1f786\x11/1#,\x13(\x1d7\x0f\x1b5-(;\x160\x0b \x1a\x03\x0f\x1d\x03\x1c\x14\x116/\x15\x0e!&?5', 'Q3^*2QlDqNzEhEdwpnWx`Enj_XGpS_WCuRpNJrrvOvm]yfrN]nSIofMNpYkoexlkT^MUF`RSyaOjFQhuCpXpu\\maufNOiRM']
+Coverage: 80.0%
+Return code: 0 (Unknown Error (0))
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe

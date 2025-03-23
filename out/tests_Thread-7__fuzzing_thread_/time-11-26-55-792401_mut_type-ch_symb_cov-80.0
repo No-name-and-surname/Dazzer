@@ -1,0 +1,10 @@
+Test: ['\\tXR\x85hQtdzBb[pcmmgcK', '\x1e\x19\x1a']
+Coverage: 80.0%
+Return code: 0 (Unknown Error (0))
+Mutation type: ch_symb
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

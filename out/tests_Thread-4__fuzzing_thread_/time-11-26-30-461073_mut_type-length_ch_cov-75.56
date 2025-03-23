@@ -1,0 +1,10 @@
+Test: ['ewb{{ieCdMQE[CB_Rq]xmlJCqHMLivIiGRhUgs_iWAxCksJSraiqNUvwExAIJmgn^^aASZeU]lkVUNr^WBfw^F\\LEVD', 'Rb[EACbAzU\\h`tb[QJzc`JfjuDSCp`gKzZJQ\\NUFd]SCl^wwc_PU[Y\\_Q^]`NZ\\PCJyLPhbzdu]KYPHF']
+Coverage: 75.56%
+Return code: 0 (Unknown Error (0))
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

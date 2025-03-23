@@ -1,0 +1,10 @@
+Test: [',4</!>(4Nw~7@!M/!2\\.7:Y\'9(!?O2#O,D*:;9,9X".U2Q];5!3>\'65i9/Y6)3c-jRD`S\\pgeTGE`\x7ftHHaM[O\\PMrQ]OkWaGB@Kv~wfWXoKaOkjeg@eVsRMmPwrkDmPDuwBOXPC@b', '>\x0f\x102\x08\r\x1a\r\x06;</\x05\x14ê']
+Coverage: 75.56%
+Return code: 0 (Unknown Error (0))
+Mutation type: xor
+Stdout: Введите первое число: Введите второе число: Числа равны
+Первое число равно нулю.
+Первое число четное.
+Второе число равно нулю.
+Второе число четное.
+

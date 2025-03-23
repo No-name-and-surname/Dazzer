@@ -1,0 +1,5 @@
+Test: ["<u'td4*47wW/P,R|aJ5WV}w=w\\=4Nb{+oNia-*RB?b", '2147483647']
+Coverage: 84.44%
+Return code: 0 (Unknown Error (0))
+Mutation type: length_ch
+Stderr: [Errno 32] Broken pipe
