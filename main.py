@@ -192,34 +192,30 @@ def get_best_mutator(stats):
 def get_coverage():
     global max_coverage_percent
     try:
-        try:
-            from calibrator import global_max_coverage
-            if global_max_coverage > 0:
-                coverage_value = round(global_max_coverage, 2)
+        from calibrator import global_max_coverage
+        if global_max_coverage > 0:
+            coverage_value = round(global_max_coverage, 2)
             max_coverage_percent = max(max_coverage_percent, coverage_value)
             return f"{coverage_value:.2f}%"
-        except ImportError:
-            pass
-            
-        if os.path.exists('out'):
-            files = [f for f in os.listdir('out') if os.path.isfile(os.path.join('out', f))]
-            gcov_files = [f for f in files if f.startswith('cov-')]
-            if gcov_files:
-                try:
-                    max_coverage_file = max(gcov_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
-                    coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
-                    max_coverage_percent = max(max_coverage_percent, coverage_value)
-                    return f"{coverage_value:.2f}%"
-                except:
-                    pass
+    except ImportError:
+        pass
         
-        if max_coverage_percent > 0:
-            return f"{max_coverage_percent:.2f}%"
-            
-        return "0.00%"
-    except Exception as e:
-        print(f"Error in get_coverage: {e}")
-        return "0.00%"
+    if os.path.exists('out'):
+        files = [f for f in os.listdir('out') if os.path.isfile(os.path.join('out', f))]
+        gcov_files = [f for f in files if f.startswith('cov-')]
+        if gcov_files:
+            try:
+                max_coverage_file = max(gcov_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
+                coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
+                max_coverage_percent = max(max_coverage_percent, coverage_value)
+                return f"{coverage_value:.2f}%"
+            except:
+                pass
+    
+    if max_coverage_percent > 0:
+        return f"{max_coverage_percent:.2f}%"
+        
+    return "0.00%"
 
 def format_time(seconds):
     if seconds < 60:

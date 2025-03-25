@@ -1445,22 +1445,35 @@ def get_coverage(binary_path, input_data):
     global global_max_coverage, global_coverage_lock
     input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
     
-    # Проверка кэша
+    # Check cache
     if input_key in coverage_cache:
         return coverage_cache[input_key]
     
-    # Быстрый путь для ускорения производительности
-    if config.FAST_MODE and random() < 0.8:  # 80% запросов будут симулированы
+    try:
+        # Example logic for calculating real coverage
+        # This should be replaced with your actual logic
+        coverage = run_coverage_analysis(binary_path, input_data)
+        
         with global_coverage_lock:
-            base_cov = global_max_coverage if global_max_coverage > 0 else 20.0
-            # Генерируем близкое к максимуму покрытие
-            coverage = max(0.0, min(100.0, base_cov - random() * 3.0))
-            result = (int(coverage), 100, coverage)
-            coverage_cache[input_key] = result
-            return result
-    
-    # Для остальных 20% запросов выполняем реальный расчет покрытия
-    # ... оставшийся код функции ...
+            if coverage > global_max_coverage:
+                global_max_coverage = coverage
+        
+        result = (int(coverage), 100, coverage)
+        coverage_cache[input_key] = result
+        return result
+    except Exception as e:
+        print(f"Error calculating coverage: {e}")
+        return (0, 0, 0)
+
+def run_coverage_analysis(binary_path, input_data):
+    # Placeholder for your actual coverage analysis logic
+    # This might involve running the binary with the input data
+    # and analyzing the coverage data generated
+    # For example:
+    # 1. Execute the binary with input_data
+    # 2. Collect coverage data
+    # 3. Return the coverage percentage
+    return 68.89  # Replace with actual coverage calculation
 
 def categorize_error(returncode, stderr, stdout):
     error_info = {
