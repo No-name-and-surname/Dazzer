@@ -1,5 +1,0 @@
-Test: ['"\x07.b\x0f\x7f\x01~!\x17\x01\x01jw|v\x0c\x1ea+\x19f\x97\x81º¹\x84\x9f\x9a\x89\x94»ªº¡®\x8e³¬®¼\x9c\x83\x8f\x9f\x9f¯®\x99\x8b³\xad\x85\x9b¹¡\x92¦\x89¢\x99°¼\x83§°\x81¼\x9d¦\x9a\x92\x96¨\x9e\x88¬', '`ePQfeYUmXTWie_SngTmkA\\qQFSkqkaakR[TENnGSfdUjhgrrxIF[n_Y`LPWw]uyqfE[Fhj_PGSdNNFSlE[a']
-Coverage: 82.22%
-Return code: 0 (Unknown Error (0))
-Mutation type: xor
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['42949\x847295', 'bj9/']
-Coverage: 88.89%
-Return code: 0 (Unknown Error (0))
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe

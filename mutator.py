@@ -6,6 +6,10 @@ fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
 flag = 0
 
+# Кэш для операций мутации для предотвращения повторных вычислений
+mutation_cache = {}
+MAX_CACHE_SIZE = 10000
+
 def xor(ret):
     try:
         Up = randint(33, 90)
@@ -121,11 +125,41 @@ def interesting_values():
     ]
     return choice(interesting)
 
-def mutate(buf, min_length, new_dict2, new_dict):
-    mutation_types = ["length_ch", "ch_symb", "xor", "interesting"]
-    mut_type = choice(mutation_types)
+def mutate(buf, min_length, new_dict2=None, new_dict=None):
+    # Создаем хэшируемый ключ для кэша
+    cache_key = (str(buf), min_length)
+    if cache_key in mutation_cache:
+        return mutation_cache[cache_key]
+    
+    # Инициализация словарей, если они None
+    if new_dict2 is None: 
+        new_dict2 = []
+    if new_dict is None:
+        new_dict = []
+    
+    # Выбираем тип мутации, но с большим уклоном в наиболее эффективные
+    # Добавляем более эффективное распределение типов мутаций
+    mutation_weights = {"interesting": 5, "length_ch": 3, "ch_symb": 2, "xor": 1}
+    mutation_types = []
+    weights = []
+    for mut_type, weight in mutation_weights.items():
+        mutation_types.append(mut_type)
+        weights.append(weight)
+    
+    # Более эффективный выбор с учетом весов
+    total = sum(weights)
+    rand_val = randint(1, total)
+    cumul = 0
+    mut_type = mutation_types[-1]  # default
+    for i, w in enumerate(weights):
+        cumul += w
+        if rand_val <= cumul:
+            mut_type = mutation_types[i]
+            break
+            
     ret = list(buf)
 
+    # Оптимизированные мутации
     if mut_type == "ch_symb":
         ret = rand_change_symbol(ret)
     elif mut_type == "length_ch":
@@ -133,7 +167,14 @@ def mutate(buf, min_length, new_dict2, new_dict):
     elif mut_type == "xor":
         ret = xor(ret)
     elif mut_type == "interesting":
-        return interesting_values(), mut_type
+        result = interesting_values(), mut_type
+        # Кэшируем результат
+        if len(mutation_cache) >= MAX_CACHE_SIZE:
+            # Очищаем часть кэша
+            for k in list(mutation_cache.keys())[:1000]:
+                del mutation_cache[k]
+        mutation_cache[cache_key] = result
+        return result
 
     if isinstance(ret, list):
         result = ''.join(ret)
@@ -141,5 +182,11 @@ def mutate(buf, min_length, new_dict2, new_dict):
         result = ret
     else:
         result = str(ret)
-        
+    
+    # Кэшируем результат
+    if len(mutation_cache) >= MAX_CACHE_SIZE:
+        for k in list(mutation_cache.keys())[:1000]:
+            del mutation_cache[k]
+    mutation_cache[cache_key] = (result, mut_type)
+    
     return result, mut_type

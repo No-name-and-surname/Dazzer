@@ -1,5 +1,0 @@
-Test: ["JO\x88\x12ND'ü\x00\x1b=\x04P-\x1d3/\x08û>#3X\x0f:\x0bY\x06\x084C\x12,>\x15", '0]BfbeBPsNlmdQEWCwEOp[`vBLgK[eWG`IwKuWxNicDQFLXbawFQQYeTVDkD`tpyWKWP`t\\juOPFmxnnXKp[Xg_B`MQRk[']
-Coverage: 82.22%
-Return code: 0 (Unknown Error (0))
-Mutation type: length_ch
-Stderr: [Errno 32] Broken pipe

@@ -1,5 +1,0 @@
-Test: ['?g2', '-32768']
-Coverage: 82.22%
-Return code: 0 (Unknown Error (0))
-Mutation type: interesting
-Stderr: [Errno 32] Broken pipe

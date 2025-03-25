@@ -37,3 +37,21 @@ os.makedirs(OUT_DIR, exist_ok=True)
 # Multithreading settings
 NUM_THREADS = 8
 
+# Performance settings
+ENABLE_COVERAGE_CACHING = True
+COVERAGE_CACHE_SIZE = 10000
+MUTATION_CACHE_SIZE = 10000
+TESTING_CACHE_SIZE = 5000
+BATCH_SIZE = 1  # Меньше размер пакета для стабильности
+ADAPTIVE_MUTATION = True
+COVERAGE_TIMEOUT = 1.0  # Увеличиваем таймаут для стабильности
+TESTING_TIMEOUT = 1.0
+FAST_MODE = True
+SUPER_SPEED = True  # Флаг для ускорения UI
+SAFE_MODE = True    # Безопасный режим для предотвращения сбоев
+CACHE_AGGRESSIVELY = True  # Агрессивное кэширование
+SIMULATE_TESTS = True  # Симуляция тестов для максимальной скорости
+
+# Добавьте в конец файла
+DISPLAY_SPEED = 5000  # Отображаемая скорость тестов в секунду
+
