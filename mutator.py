@@ -1,6 +1,8 @@
 from random import randint, choice
 import config
 import main
+import random
+import threading
 
 fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
@@ -9,6 +11,34 @@ flag = 0
 # Кэш для операций мутации для предотвращения повторных вычислений
 mutation_cache = {}
 MAX_CACHE_SIZE = 10000
+
+# Add a structure to track mutation success
+mutation_success = {
+    "interesting": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "ch_symb": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "length_ch": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "xor": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "first_no_mut": {"new_coverage": 0, "new_crash": 0, "total": 0}
+}
+mutation_success_lock = threading.Lock()
+
+# Add a structure to track errors found by each mutator
+mutator_error_counts = {
+    "interesting": 0,
+    "ch_symb": 0,
+    "length_ch": 0,
+    "xor": 0
+}
+mutator_error_lock = threading.Lock()
+
+def update_mutation_success(mut_type, coverage_increased, new_crash):
+    with mutation_success_lock:
+        if mut_type in mutation_success:
+            mutation_success[mut_type]["total"] += 1
+            if coverage_increased:
+                mutation_success[mut_type]["new_coverage"] += 1
+            if new_crash:
+                mutation_success[mut_type]["new_crash"] += 1
 
 def xor(ret):
     try:
@@ -125,7 +155,37 @@ def interesting_values():
     ]
     return choice(interesting)
 
+def get_mutation_probabilities():
+    with mutator_error_lock:
+        probabilities = {}
+        total_errors = sum(mutator_error_counts.values())
+        
+        if total_errors > 0:
+            for mut in mutator_error_counts:
+                probabilities[mut] = mutator_error_counts[mut] / total_errors
+        
+        # Normalize probabilities
+        total_prob = sum(probabilities.values())
+        if total_prob > 0:
+            for mut in probabilities:
+                probabilities[mut] = (probabilities[mut] / total_prob) * 100
+        
+        return probabilities
+
 def mutate(buf, min_length, new_dict2=None, new_dict=None):
+    # Get updated mutation probabilities
+    mutation_probs = get_mutation_probabilities()
+    
+    # Choose mutation type based on updated probabilities
+    mutation_types = list(mutation_probs.keys())
+    weights = list(mutation_probs.values())
+    
+    if not mutation_types:
+        mutation_types = ["interesting", "ch_symb", "length_ch", "xor"]
+        weights = [25, 25, 25, 25]  # Default weights if no data
+    
+    mut_type = random.choices(mutation_types, weights=weights, k=1)[0]
+    
     # Создаем хэшируемый ключ для кэша
     cache_key = (str(buf), min_length)
     if cache_key in mutation_cache:
@@ -137,26 +197,6 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
     if new_dict is None:
         new_dict = []
     
-    # Выбираем тип мутации, но с большим уклоном в наиболее эффективные
-    # Добавляем более эффективное распределение типов мутаций
-    mutation_weights = {"interesting": 5, "length_ch": 3, "ch_symb": 2, "xor": 1}
-    mutation_types = []
-    weights = []
-    for mut_type, weight in mutation_weights.items():
-        mutation_types.append(mut_type)
-        weights.append(weight)
-    
-    # Более эффективный выбор с учетом весов
-    total = sum(weights)
-    rand_val = randint(1, total)
-    cumul = 0
-    mut_type = mutation_types[-1]  # default
-    for i, w in enumerate(weights):
-        cumul += w
-        if rand_val <= cumul:
-            mut_type = mutation_types[i]
-            break
-            
     ret = list(buf)
 
     # Оптимизированные мутации

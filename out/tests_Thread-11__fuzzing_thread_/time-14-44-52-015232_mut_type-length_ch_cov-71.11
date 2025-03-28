@@ -1,0 +1,14 @@
+Test: ['1\\V\x13R#JHKM2LYW\x0eOVGY.P]\x0eO5R$\x02ZS=A_PC&WLNMG\x0b/\x03H1\x1c7WVN?LT.]G 8\x10\x0c5,\x1e%\x17\n$\x16($\n\r\n+7#>\x0e\x10\x02=5\x18 7\x1d%\x1f< \x10+ \x16,..\x10#9\x1e &\x188-\x01*\x11<!.9<\x03\x1d>\x1a89$4\x1e%\x16\x14(\x1c\x13\x11\x1a\x08\x19\x01&?\x1b5\x119\x18-\x1e\x01\x17\x14\x14=+5\x08\x1c6\x0f%8#\x10\x187=\x1e0\x03/3', 'E}x*nvWvQu]hOIGYBoEgAGhqitMbZBAsrNBhCXsfrdl]G_IUGN\\KRdfrC[CkwNWe^lq_mS_qvqPLXEukyFNc[Lf^dG[kP[mWUUkXBe[]cCVzQj']
+Coverage: 71.11%
+Return code: 0 (Unknown Error (0))
+Mutation type: length_ch
+Stdout: Введите первое число: Введите второе число: Числа не равны
+Второе число - ноль
+А первое положительное
+Первое 1, второе 0
+Первое больше второго
+Первое число положительное.
+Первое число нечетное.
+Второе число равно нулю.
+Второе число четное.
+

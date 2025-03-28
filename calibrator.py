@@ -52,7 +52,7 @@ if not os.path.exists(OUTPUT_DIR):
 
 # Упрощаем кэширование - используем только dictionaries
 coverage_cache = {}
-testing_cache = {}
+base_coverage_cache = {}
 
 # Функция для безопасного доступа к кэшу
 def safe_get_from_cache(cache, key, default_value=None):
@@ -137,6 +137,15 @@ mutation_success = {
 }
 mutation_success_lock = threading.Lock()
 
+# Add a structure to track errors found by each mutator
+mutator_error_counts = {
+    "interesting": 0,
+    "ch_symb": 0,
+    "length_ch": 0,
+    "xor": 0
+}
+mutator_error_lock = threading.Lock()
+
 def get_error_description(code):
     if code in error_descriptions:
         return error_descriptions[code]
@@ -165,7 +174,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
     
     executed, total, coverage = get_coverage(file_name, tests_2)
     
-    # Отслеживаем успешность мутации
+    # Track mutation success
     with mutation_success_lock:
         if mut_type in mutation_success:
             mutation_success[mut_type]["total"] += 1
@@ -175,7 +184,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
         if global_max_coverage == 0 and coverage > 0:
             first_test = True
             global_max_coverage = coverage
-            # Отмечаем успех мутации
+            # Mark mutation success
             with mutation_success_lock:
                 if mut_type in mutation_success:
                     mutation_success[mut_type]["new_coverage"] += 1
@@ -186,7 +195,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
             increased_coverage = True
             if coverage > global_max_coverage:
                 global_max_coverage = coverage
-                # Отмечаем успех мутации
+                # Mark mutation success
                 with mutation_success_lock:
                     if mut_type in mutation_success:
                         mutation_success[mut_type]["new_coverage"] += 1
@@ -196,9 +205,9 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
         if returncode not in global_error_codes:
             new_error = True
             global_error_codes.add(returncode)
-            # Отмечаем успех мутации для новых ошибок
+            # Mark mutation success for new crashes
             with mutation_success_lock:
-                if mut_type in mutation_success and returncode < 0:  # Предполагаем, что отрицательные коды - это крэши
+                if mut_type in mutation_success and returncode < 0:  # Assuming negative codes are crashes
                     mutation_success[mut_type]["new_crash"] += 1
     
     with global_error_details_lock:
@@ -267,6 +276,15 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
 
     # Сохраняем тест если это первый тест, увеличено покрытие, новая ошибка или обнаружен санитайзер
     if first_test or increased_coverage or new_error or sanitizer_detected:
+        # Заполняем экран черным цветом, но без импорта main
+        try:
+            sys.stdout.write("\033[2J")  # Очистка экрана
+            sys.stdout.write("\033[40m") # Черный фон
+            sys.stdout.flush()
+        except Exception:
+            # В случае ошибки просто продолжаем выполнение
+            pass
+            
         timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
         sanitizer_suffix = "_sanitizer" if sanitizer_detected else ""
         file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}{sanitizer_suffix}"
@@ -721,7 +739,7 @@ def testing(file_name, listik):
 
 
 def ret_globals():
-    return sig_segv, time_out, no_err, sig_fpe
+    return queue_seg_fault, time_out, queue_no_error, queue_sig_fpe
 
 def get_error_statistics():
     with global_error_details_lock:
@@ -1354,26 +1372,27 @@ def analyze_perf_data(perf_data, binary_path):
     except Exception as e:
         return None
 
-def analyze_binary_coverage(binary_path, input_data):
-    return get_binary_coverage(binary_path, input_data)
-
-def get_base_coverage(binary_path):
-    global global_max_coverage, global_coverage_lock
-    if binary_path in base_coverage_cache:
-        return base_coverage_cache[binary_path]
-        
+def get_coverage(binary_path, input_data):
+    global global_max_coverage
     try:
+        input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
+        if input_key in coverage_cache:
+            return coverage_cache[input_key]
+            
         source_file = config.source_file
         if not os.path.exists(source_file):
-            return 1
+            return 0, 1, 0.0
+            
         thread_name = threading.current_thread().name.replace("(", "_").replace(")", "_").replace(" ", "_")
         temp_dir = os.path.join(OUTPUT_DIR, f"temp_{thread_name}")
         os.makedirs(temp_dir, exist_ok=True)
         gcov_output_dir = os.path.join(OUTPUT_DIR, f"gcov_{thread_name}")
         os.makedirs(gcov_output_dir, exist_ok=True)
+        
         source_base = os.path.basename(source_file)
         binary_base = os.path.basename(binary_path)
         temp_source = os.path.join(temp_dir, source_base)
+        
         need_compile = not os.path.exists(os.path.join(temp_dir, binary_base))
         
         original_dir = os.getcwd()
@@ -1382,98 +1401,115 @@ def get_base_coverage(binary_path):
             if need_compile:
                 with open(source_file, 'r') as src, open(temp_source, 'w') as dst:
                     dst.write(src.read())
+            
             os.chdir(temp_dir)
+        
             if need_compile:
                 compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
                 subprocess.run(compile_cmd, shell=True, check=True)
+        
             for gcda_file in [f for f in os.listdir('.') if f.endswith('.gcda')]:
                 try:
                     os.unlink(gcda_file)
                 except:
                     pass
-            
-            # Запускаем тест
+        
+            if isinstance(input_data, list):
+                input_str = "\n".join(str(x) for x in input_data) + "\n"
+            else:
+                input_str = str(input_data) + "\n"
+                
             process = subprocess.Popen(
                 [f"./{binary_base}"],
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE
             )
+            
             try:
-                process.communicate(input=b"\n\n", timeout=1)
+                stdout, stderr = process.communicate(input=input_str.encode(), timeout=1)
             except subprocess.TimeoutExpired:
                 process.kill()
-            subprocess.run(["gcov", source_base], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                process.wait()
+            
+            subprocess.run(
+                ["gcov", source_base],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=True
+            )
+
             gcov_file = f"{source_base}.gcov"
             if os.path.exists(gcov_file):
                 with open(gcov_file) as f:
                     lines = f.readlines()
-                    total_lines = sum(1 for line in lines 
-                                    if line.split(':')[0].strip() not in ['-'] and 
-                                    not line.split(':')[2].strip().startswith('//') and
-                                    not line.split(':')[2].strip().startswith('#'))
                     
-                    # We only need to save the base coverage file once, not on every run
-                    base_gcov_pattern = f"base_time-*_{source_base}.gcov"
-                    existing_base_files = []
-                    for fname in os.listdir(gcov_output_dir):
-                        if fnmatch.fnmatch(fname, base_gcov_pattern):
-                            existing_base_files.append(fname)
+                    executed = 0
+                    total = 0
                     
-                    if not existing_base_files:
-                        timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-                        output_filename = f"base_time-{timestamp}_{source_base}.gcov"
-                        output_gcov = os.path.join(gcov_output_dir, output_filename)
-                        with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
-                            dst.write(src.read())
+                    for line in lines:
+                        parts = line.split(':', 2)
+                        if len(parts) < 3:
+                            continue
+                            
+                        execution_count = parts[0].strip()
+                        line_number = parts[1].strip()
+                        source_line = parts[2].strip()
+                        
+                        if not source_line or source_line.startswith('//') or source_line.startswith('#'):
+                            continue
+                        if execution_count == '-':
+                            continue
+                            
+                        total += 1
+                        if execution_count != '#####' and execution_count != '0':
+                            executed += 1
                     
-                    result = max(total_lines, 1)
-                    base_coverage_cache[binary_path] = result
-                    return result
-                    
-            base_coverage_cache[binary_path] = 1
-            return 1
+                    if total > 0:
+                        coverage = round((executed / total * 100), 2)
+                        
+                        # Save test if coverage is higher than previous max
+                        if coverage > global_max_coverage:
+                            global_max_coverage = coverage
+                            timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
+                            output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.gcov"
+                            output_gcov = os.path.join(gcov_output_dir, output_filename)
+                            with open(gcov_file, 'r') as src, open(output_gcov, 'w') as dst:
+                                dst.write(src.read())
+                            
+                        result = (executed, total, coverage)
+                        coverage_cache[input_key] = result
+                        return result
+            
+            result = (0, 1, 0.0)
+            coverage_cache[input_key] = result
+            return result
             
         finally:
             os.chdir(original_dir)
             
     except Exception as e:
-        print(f"Error in get_base_coverage: {e}")
-        return 1
+        return 0, 1, 0.0
 
-def get_coverage(binary_path, input_data):
-    global global_max_coverage, global_coverage_lock
-    input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
+def parse_gcov_output(source_file):
+    gcov_file = f"{os.path.basename(source_file)}.gcov"
+    if not os.path.exists(gcov_file):
+        return 0.0
     
-    # Check cache
-    if input_key in coverage_cache:
-        return coverage_cache[input_key]
+    executed_lines = 0
+    total_lines = 0
     
-    try:
-        # Example logic for calculating real coverage
-        # This should be replaced with your actual logic
-        coverage = run_coverage_analysis(binary_path, input_data)
-        
-        with global_coverage_lock:
-            if coverage > global_max_coverage:
-                global_max_coverage = coverage
-        
-        result = (int(coverage), 100, coverage)
-        coverage_cache[input_key] = result
-        return result
-    except Exception as e:
-        print(f"Error calculating coverage: {e}")
-        return (0, 0, 0)
-
-def run_coverage_analysis(binary_path, input_data):
-    # Placeholder for your actual coverage analysis logic
-    # This might involve running the binary with the input data
-    # and analyzing the coverage data generated
-    # For example:
-    # 1. Execute the binary with input_data
-    # 2. Collect coverage data
-    # 3. Return the coverage percentage
-    return 68.89  # Replace with actual coverage calculation
+    with open(gcov_file, 'r') as f:
+        for line in f:
+            if line.strip().startswith('-') or line.strip().startswith('#'):
+                continue
+            parts = line.split(':')
+            if len(parts) > 1 and parts[0].strip().isdigit():
+                executed_lines += 1
+            total_lines += 1
+    
+    coverage = (executed_lines / total_lines) * 100 if total_lines > 0 else 0.0
+    return coverage
 
 def categorize_error(returncode, stderr, stdout):
     error_info = {
@@ -1586,15 +1622,13 @@ def log_error(error_info, test_input, mut_type, coverage):
                 "error_type": error_type,
                 "is_crash": error_info.get("is_crash", False)
             }
-            
-            # Для ошибок санитайзера обновляем описание
-            if error_type == "sanitizer" and "sanitizer_type" in error_info:
-                sanitizer_type = error_info["sanitizer_type"]
-                error_details[error_code]["description"] = f"Sanitizer: {sanitizer_type}"
-                error_details[error_code]["sanitizer_type"] = sanitizer_type
         
         error_details[error_code]["count"] += 1
-        error_details[error_code]["error_type"] = error_type  # Обновляем на случай, если у нас теперь лучшая информация
+        
+        # Track errors found by mutator
+        with mutator_error_lock:
+            if mut_type in mutator_error_counts:
+                mutator_error_counts[mut_type] += 1
         
         # Отслеживаем по типу мутации
         if mut_type not in error_by_mutator:
@@ -1633,3 +1667,12 @@ def log_error(error_info, test_input, mut_type, coverage):
 def inflate_stats_for_display():
     """Функция только для статистических целей, не меняет логику работы"""
     return True
+
+def update_mutation_success(mut_type, coverage_increased, new_crash):
+    with mutation_success_lock:
+        if mut_type in mutation_success:
+            mutation_success[mut_type]["total"] += 1
+            if coverage_increased:
+                mutation_success[mut_type]["new_coverage"] += 1
+            if new_crash:
+                mutation_success[mut_type]["new_crash"] += 1

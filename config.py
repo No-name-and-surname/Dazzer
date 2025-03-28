@@ -42,16 +42,11 @@ ENABLE_COVERAGE_CACHING = True
 COVERAGE_CACHE_SIZE = 10000
 MUTATION_CACHE_SIZE = 10000
 TESTING_CACHE_SIZE = 5000
-BATCH_SIZE = 1  # Меньше размер пакета для стабильности
+BATCH_SIZE = 1
 ADAPTIVE_MUTATION = True
-COVERAGE_TIMEOUT = 1.0  # Увеличиваем таймаут для стабильности
+COVERAGE_TIMEOUT = 1.0
 TESTING_TIMEOUT = 1.0
 FAST_MODE = True
-SUPER_SPEED = True  # Флаг для ускорения UI
-SAFE_MODE = True    # Безопасный режим для предотвращения сбоев
-CACHE_AGGRESSIVELY = True  # Агрессивное кэширование
-SIMULATE_TESTS = True  # Симуляция тестов для максимальной скорости
-
-# Добавьте в конец файла
-DISPLAY_SPEED = 5000  # Отображаемая скорость тестов в секунду
-
+SUPER_SPEED = True
+SAFE_MODE = True
+CACHE_AGGRESSIVELY = True
