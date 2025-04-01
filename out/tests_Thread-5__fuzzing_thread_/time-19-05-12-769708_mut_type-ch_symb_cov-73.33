@@ -1,5 +1,0 @@
-Test: ['8\x19\x83\x13', '8\x19\x83\x13']
-Coverage: 73.33%
-Return code: 0 (Unknown Error (0))
-Mutation type: ch_symb
-Stderr: [Errno 32] Broken pipe
