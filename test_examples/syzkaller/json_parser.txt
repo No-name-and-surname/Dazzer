@@ -1,6 +1,0 @@
-# sys/json_parser.txt (описание системных вызовов)
-open$json(file ptr[in, string], flags flags[open_flags], mode flags[open_mode]) fd
-read(fd fd, buf buffer[out], count len[buf]) len[buf]
-json_parse(buf ptr[in, json_data], len len[buf])
-
-resource json_data[buffer]
