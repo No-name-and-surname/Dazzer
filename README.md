@@ -5,6 +5,10 @@ Dazzer - это мутационный фаззер с открытым исхо
 
 ![Image alt](https://github.com/No-name-and-surname/imagere/raw/main/pix.png)
 
+## <a id="title7">Обратная связь</a>
+
+Если вы пользовались моим фаззером, пожалуйста пройдите маленький [опрос](https://docs.google.com/forms/d/e/1FAIpQLSc30jy8JPMEq-rGon4VcmtCG9PBE0B7lKwU6IV2yptm0dl3hg/viewform?usp=header)
+
 ## <a id="title1">Как это работает?</a>
 
 Мой фаззер является мутационным, следовательно, он работает за счет преобразования изначальных входных данных с помощью одного из мутационных алгоритмов. 
