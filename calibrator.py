@@ -21,6 +21,13 @@ import concurrent.futures
 
 #globals initialization ---------------------------------------------------------------------------------------------------
 
+# Глобальная переменная для отслеживания ошибок по типам мутаций
+debug_error_by_mutator = {
+    "length_ch": {},
+    "xor": {},
+    "ch_symb": {},
+    "interesting": {}
+}
 afiget = 'dfghjkl'
 interesting_tests = []
 queue_no_error = []

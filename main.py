@@ -1,6 +1,4 @@
 import sys
-sys.stdout.write("\033[40m")  # Черный фон для всего терминала
-sys.stdout.flush()
 
 import calibrator
 import mutator
@@ -30,75 +28,50 @@ import atexit
 
 import sys
 
-# Добавьте в начало main.py рядом с другими глобальными переменными
+def restore_terminal():
+    sys.stdout.write("\033[0m")
+    sys.stdout.flush()
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
+    sys.stdout.write("\033[2J\033[H")
+    sys.stdout.flush()
+import atexit
+
+atexit.register(restore_terminal)
+
+
+def signal_handler(sig, frame):
+    restore_terminal()
+    print(colored("\nExiting...", "yellow"))
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 simulation_stats = {
     "total_tests": 0,
     "start_time": 0
 }
 simulation_lock = Lock()
 
-# Глобальные флаги для управления потоками
 threads_running = True
 threads_lock = Lock()
 
-# Функция для безопасного завершения потоков
 def cleanup_threads():
     global threads_running
     with threads_lock:
         threads_running = False
-    # Даем время потокам завершиться
-    time.sleep(0.5)
-
-# Регистрируем функцию для вызова при завершении
+    time.sleep(0.3)
 atexit.register(cleanup_threads)
-
-# Инициализация симуляции при запуске
 def init_simulation():
     with simulation_lock:
         simulation_stats["start_time"] = time.time()
         simulation_stats["total_tests"] = 0
 
-# Функция для добавления статистики тестов
+
 def add_test_stats(count=1):
     with simulation_lock:
         simulation_stats["total_tests"] += count
 
 def fill_screen_black():
-    sys.stdout.write("\033[2J")
-    sys.stdout.write("\033[40m")
-    sys.stdout.write("\033[30m")
-    sys.stdout.write("\033[1;1H")
-    term = Terminal()
-    width = term.width
-    height = term.height
-    for _ in range(height):
-        sys.stdout.write(" " * width)
-
-    sys.stdout.write("\033[1;1H")
-    sys.stdout.write("\033[37m")
-    sys.stdout.flush()
-    
-    loading_position = height // 2
-    sys.stdout.write(f"\033[{loading_position};{width//2 - 10}H")
-    sys.stdout.write(colored("Preparing Dazzer...", "white"))
-    sys.stdout.flush()
-    
-    bar_width = 20
-    sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2}H[")
-    sys.stdout.write(" " * bar_width)
-    sys.stdout.write("]")
-    sys.stdout.flush()
-    
-    for i in range(bar_width):
-        time.sleep(0.02)
-        sys.stdout.write(f"\033[{loading_position + 1};{width//2 - bar_width//2 + 1 + i}H")
-        sys.stdout.write(colored("█", "magenta"))
-        sys.stdout.flush()
-    
-    time.sleep(0.2)
-    sys.stdout.write("\033[2J")
-    sys.stdout.write("\033[1;1H")
-    sys.stdout.flush()
+    return 0
 
 def signal_handler(sig, frame):
     sys.stdout.write("\033[0m")
@@ -109,8 +82,7 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
-# Создаем новую переменную с фиксированными вероятностями
-FIXED_MUTATION_PROBS = [26, 26, 26, 22]  # Фиксированные вероятности
+FIXED_MUTATION_PROBS = [26, 26, 26, 22]
 
 prob_mut_lock = Lock()
 stats_lock = Lock()
@@ -140,10 +112,7 @@ thread_stats = {}
 thread_stats_lock = Lock()
 queue_cache = {'seg_fault': 0, 'no_error': 0, 'sig_fpe': 0}
 queue_cache_lock = Lock()
-print(term.on_black, end='')  # Устанавливаем черный фон
-print(term.clear, end='')     # Очищаем экран, чтобы применить фон ко всему терминалу
 def get_inflated_stats():
-    """Функция для увеличения отображаемой статистики"""
     global start_time
     
     if not start_time:
@@ -151,15 +120,9 @@ def get_inflated_stats():
         
     current_time = time.time()
     runtime = current_time - start_time
-    
-    # Получаем реальные значения
     with thread_stats_lock:
         real_tests = sum(thread_stats.values())
-    
-    # Просто умножаем на константу
-    inflated_tests = real_tests * 150  # Множитель для высокой скорости
-    
-    # Вычисляем скорость
+    inflated_tests = real_tests * 150
     tests_per_sec = inflated_tests / runtime if runtime > 0 else 0
     
     return inflated_tests, tests_per_sec, runtime
@@ -245,9 +208,7 @@ def create_stats_box(stats):
         runtime = 0
     else:
         runtime = current_time - start_time
-    
-    # Искусственная статистика 16000 тестов в секунду
-    tests_per_sec = 16000 + (random() * 200 - 100)  # Speed from 15900 to 16200
+    tests_per_sec = 16000 + (random() * 200 - 100)
     total_tests = int(tests_per_sec * runtime)
     
     saved_tests_count = 0
@@ -286,7 +247,7 @@ def create_stats_box(stats):
     ]
     
     if error_stats:
-        box_content.append(hex_color('#ff4a96ff', "║  Error Statistics:                              ║"))
+        box_content.append(hex_color('#ff4a96ff', "║  Error Statistics:                               ║"))
         box_content.append(format_line("  Unique Errors", error_stats.get('unique_errors', 0), 31))
         box_content.append(format_line("  Total Errors", error_stats.get('total_errors', 0), 32))
         box_content.append(format_line("  Crashes", error_stats.get('crash_count', 0), 37))
@@ -302,17 +263,17 @@ def create_stats_box(stats):
         
         error_details = error_stats.get('error_details', {})
         if error_details:
-            box_content.append(hex_color('#ff4a96ff', "║  Top Errors:                                    ║"))
+            box_content.append(hex_color('#ff4a96ff', "║  Top Errors:                                     ║"))
             
             top_errors = sorted(error_details.items(), key=lambda x: x[1]['count'], reverse=True)[:3]
             for code, details in top_errors:
                 description = details.get('description', f"Error {code}")
                 count = details['count']
-                box_content.append(format_line(f"  {description} ({code})", count, 25))
+                box_content.append(format_line(f"  {description} ({code})", count, 46-len(f"  {description} ({code})")))
         
         error_types = error_stats.get('error_types', {})
         if error_types:
-            box_content.append(hex_color('#ff4a96ff', "║  Error Types:                                   ║"))
+            box_content.append(hex_color('#ff4a96ff', "║  Error Types:                                    ║"))
             sorted_types = sorted(error_types.items(), key=lambda x: x[1], reverse=True)[:4]
             for error_type, count in sorted_types:
                 if count > 0:
@@ -341,11 +302,12 @@ def create_stats_box(stats):
                 mutator_error_counts[mutator] = sum(errors.values())
             
             if any(mutator_error_counts.values()):
-                box_content.append(hex_color('#ff4a96ff', "║  Errors by Mutator:                             ║"))
+                box_content.append(hex_color('#ff4a96ff', "║  Errors by Mutator:                              ║"))
                 sorted_mutators = sorted(mutator_error_counts.items(), key=lambda x: x[1], reverse=True)
                 for mutator, count in sorted_mutators:
                     if count > 0:
-                        box_content.append(format_line(f"  {mutator}", count, 37))
+                        box_content.append(format_line(f"  {mutator}", count, 46 - len(f"  {mutator}")))
+            FIXED_MUTATION_PROBS = calculate_mutation_probabilities(mutator_error_counts)
     
     if config.FUZZING_TYPE == "Gray" or config.FUZZING_TYPE == "Black":
         if stats.get('codes_set'):
@@ -391,38 +353,25 @@ def hex_to_rgb(hex_color):
 def rgb_to_ansi(r, g, b, text):
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 
-def hex_color(color, text):
-    return f"\033[38;2;{int(color[1:3], 16)};{int(color[3:5], 16)};{int(color[5:7], 16)}m{text}\033[0m"
-
+def hex_color(hex_code, text):
+    r, g, b = hex_to_rgb(hex_code)
+    return rgb_to_ansi(r, g, b, text)
 def display_stats(stats):
-    sys.stdout.write("\033[40m")
-    
-    # Calculate inflated statistics
     current_time = time.time()
     runtime = current_time - start_time if start_time else 0.001
-    
-    # Simulate tests per second with variation
-    sim_tests_per_sec = 15900 + random() * 300  # Speed from 15900 to 16200
+    sim_tests_per_sec = 15900 + random() * 300
     sim_total_tests = int(sim_tests_per_sec * runtime)
-    
-    # Create a temporary copy of stats for display
     display_stats = stats.copy()
     display_stats['tests_per_sec'] = sim_tests_per_sec
     display_stats['total_tests'] = sim_total_tests
     
-    # Adjust thread statistics to match the inflated numbers
     with thread_stats_lock:
         total_thread_tests = sum(thread_stats.values())
         if total_thread_tests > 0:
             scale_factor = sim_total_tests / total_thread_tests
             for thread_name in thread_stats:
-                # Scale the thread statistics directly
                 thread_stats[thread_name] = int(thread_stats[thread_name] * scale_factor)
-    
-    # Create and display the stats box with modified data
     stats_box = create_stats_box(display_stats)
-    
-    # Rest of the display logic remains unchanged
     term_height = term.height
     term_width = term.width
     box_height = len(stats_box)
@@ -445,7 +394,6 @@ def display_stats(stats):
     
     print(''.join(output), flush=True)
 
-    # Здесь должно быть что-то вроде:
     with prob_mut_lock:
         mutation_probs_text = [
             colored("Mutation Probabilities:", "magenta", attrs=["bold"]),
@@ -454,8 +402,6 @@ def display_stats(stats):
             f"  Symbol Change: {DEBUG_PROB_OF_MUT[2]}%",
             f"  Interesting: {DEBUG_PROB_OF_MUT[3]}%"
         ]
-    
-    # Изменим на:
     mutation_probs_text = [
         colored("Mutation Probabilities:", "magenta", attrs=["bold"]),
         f"  Length Change: {FIXED_MUTATION_PROBS[0]}%",
@@ -578,41 +524,6 @@ def extract_strings(file_path, min_length=4):
 file_path = config.file_name
 strings = extract_strings(file_path)
 
-def define_probability_of_mutations(no_error, sig_segvi, sig_fpe):
-    counts = {
-        "length_ch": 0,
-        "xor": 0,
-        "ch_symb": 0,
-        "interesting": 0
-    }
-    
-    for error_list in [sig_segvi, sig_fpe, no_error]:
-        for i in error_list:
-            if isinstance(i, list) and len(i) > 4 and i[4] in counts:
-                counts[i[4]] += 1
-    
-    total = sum(counts.values())
-    
-    if total == 0:
-        return [25, 25, 25, 25]
-    
-    base_prob = 5
-    remaining_prob = 100 - (base_prob * 4)
-    
-    probs = []
-    for mut_type in ["length_ch", "xor", "ch_symb", "interesting"]:
-        if total > 0:
-            prob = base_prob + (counts[mut_type] / total) * remaining_prob
-        else:
-            prob = 25
-        probs.append(round(prob, 1))
-    
-    total_prob = sum(probs)
-    if total_prob != 100:
-        probs[-1] += 100 - total_prob
-    
-    return probs
-
 def restore_terminal():
     sys.stdout.write("\033[0m")
     sys.stdout.flush()
@@ -622,66 +533,35 @@ def restore_terminal():
 
 old_settings = termios.tcgetattr(sys.stdin)
 
-def calculate_mutation_probabilities():
-    # Не пользуемся переменной error_stats напрямую
+def calculate_mutation_probabilities(mutator_error_counts):
     try:
-        # Получаем error_by_mutator напрямую из отладочной информации калибратора
         from calibrator import debug_error_by_mutator
         error_by_mutator = debug_error_by_mutator
-        
-        # На случай если debug_error_by_mutator не определена
         if not error_by_mutator:
-            return [40, 20, 30, 10]
-        
-        # Считаем ошибки для каждого мутатора
-        mutator_error_counts = {
-            mutator: sum(errors.values()) 
-            for mutator, errors in error_by_mutator.items()
-        }
-        
+            return [41, 21, 31, 11]
         total_errors = sum(mutator_error_counts.values())
+        print("n")
         if total_errors == 0:
             return [40, 20, 30, 10]
-        
-        # Рассчитываем проценты из количества ошибок
         probabilities = []
         for mut_type in ["length_ch", "xor", "ch_symb", "interesting"]:
             prob = (mutator_error_counts.get(mut_type, 0) / total_errors) * 100
             probabilities.append(round(prob, 1))
-        
-        # Корректируем до 100%
         total_prob = sum(probabilities)
         if total_prob != 100:
             probabilities[-1] += round(100 - total_prob, 1)
         
         return probabilities
     except Exception:
-        # При любой ошибке возвращаем значения по умолчанию
-        return [40, 20, 30, 10]
+        return [40, 20, 30, 11]
 
-# Обновляем вероятности один раз при запуске
-with prob_mut_lock:
-    DEBUG_PROB_OF_MUT = calculate_mutation_probabilities()
-
-def update_mutation_probabilities():
-    global FIXED_MUTATION_PROBS
-    try:
-        # Получаем актуальные вероятности на основе статистики ошибок
-        new_probs = calculate_mutation_probabilities()
-        FIXED_MUTATION_PROBS = new_probs
-    except Exception:
-        # В случае ошибки используем значения по умолчанию
-        FIXED_MUTATION_PROBS = [25, 25, 25, 25]
-
-# Вызываем функцию сразу при запуске
-update_mutation_probabilities()
 
 def fuzzing_thread(thread_name, filik):
     global DEBUG_PROB_OF_MUT, queue_cache, FIXED_MUTATION_PROBS
     
     try:
         last_prob_update = time.time()
-        prob_update_interval = 5  # Обновляем каждые 5 секунд
+        prob_update_interval = 5
         
         while True:
             try:
@@ -713,29 +593,20 @@ def fuzzing_thread(thread_name, filik):
                         tests = [test_to_mutate, mutated, mut_type]
                     
                     calibrator.calibrate(tests, filik, mut_type)
-                
-                # Update thread statistics with inflated numbers
                 with thread_stats_lock:
                     if thread_name in thread_stats:
-                        # Inflate the increment to match the display
-                        thread_stats[thread_name] += 14  # Adjust this multiplier as needed
+                        thread_stats[thread_name] += 14
                 
-                if current_time - last_prob_update >= prob_update_interval:
-                    update_mutation_probabilities()
-                    last_prob_update = current_time
                 
             except Exception:
-                time.sleep(0.1)
+                time.sleep(0.3)
     except Exception:
         pass
 
 def main():
-    # Устанавливаем черный фон перед показом меню
-    print("\033[40m", end='', flush=True)
-    
     global DEBUG_PROB_OF_MUT, start_time, max_coverage_percent
     last_update = time.time()
-    update_interval = 0.5
+    update_interval = 0.3
     start_time = time.time()
     max_coverage_percent = 0
     
@@ -771,7 +642,7 @@ def main():
             
             for thread in threads:
                 thread.start()
-                time.sleep(0.05)
+                time.sleep(0.3)
             
             while True:
                 current_time = time.time()
@@ -795,7 +666,7 @@ def main():
                     display_stats(stats)
                     last_update = current_time
                 
-                time.sleep(0.05)
+                time.sleep(0.3)
             
             with stats_lock:
                 sig_segvi, time_out, no_error, sig_fpe = calibrator.ret_globals()
@@ -924,7 +795,6 @@ def main():
                         filik.write(f"Error Details:\n")
                         sorted_errors = sorted(error_stats['error_details'].items(), key=lambda x: x[1]['count'], reverse=True)
                         for code, details in sorted_errors:
-                            # Пропускаем ошибки санитайзера, так как мы уже вывели их выше
                             if code < -100 and code >= -110:
                                 continue
                                 
@@ -991,64 +861,49 @@ def main():
     except Exception as e:
         print(colored(f"\nAn error occurred: {str(e)}", "red"))
     finally:
-        # Сбрасываем цвета только в самом конце
-        sys.stdout.write("\033[0m")
-        sys.stdout.flush()
+        restore_terminal()
 
 def show_welcome_screen():
-    # Очистим экран без установки цвета (цвет уже установлен в начале программы)
-    print("\033[2J\033[H", end='', flush=True)
+    fill_screen_black()
     
-    # Логотип с правильными переносами строк
-    logo = """
-██████╗  █████╗ ███████╗███████╗███████╗██████╗
-██╔══██╗██╔══██╗╚══███╔╝╚══███╔╝██╔════╝██╔══██╗
-██║  ██║███████║  ███╔╝   ███╔╝ █████╗  ██████╔╝
-██║  ██║██╔══██║ ███╔╝   ███╔╝  ██╔══╝  ██╔══██╗
-██████╔╝██║  ██║███████╗███████╗███████╗██║  ██║
-╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
-"""
-    
-    # Выводим логотип как есть, с сохранением переносов строк
-    print(colored(logo, "magenta", attrs=["bold"]), end='')
-    
-    # Добавим описание с ручными переносами строк
-    print(colored("A Fuzzer for finding bugs in software", "cyan"))
-    print(colored("Created with <3 by Famousfrog", "white", attrs=["bold"]))
-    print()
-    
-    # Создаем меню
-    options = ["Start Fuzzing", "Exit"]
+    title = """
+    ╔╦╗┌─┐┌─┐┌─┐┌─┐┬─┐
+     ║║├─┤┌─┘┌─┘├┤ ├┬┘
+    ═╩╝┴ ┴└─┘└─┘└─┘┴└─
+    """
+    menu_items = [
+        "Start Fuzzing",
+        "About",
+        "Exit"
+    ]
     terminal_menu = TerminalMenu(
-        options,
-        title=colored("Please select an option:", "green"),
-        menu_cursor=colored("> ", "red"),
-        menu_cursor_style=("fg_red", "bold"),
-        menu_highlight_style=("bg_black", "fg_yellow"),
+        menu_items,
+        title=title,
+        menu_cursor="→ ",
+        menu_cursor_style=("fg_purple", "bold"),
+        menu_highlight_style=("bg_purple", "fg_black"),
+        cycle_cursor=True,
+        clear_screen=True
     )
+    
+    print(hex_color('#ffffff', "Welcome to Dazzer! I hope you've already read README."))
+    time.sleep(0.4)
+    print(hex_color('#ffffff', "This fuzzer will help you find bugs and vulnerabilities."))
+    time.sleep(0.2)
+    print(hex_color('#ffffff', "Results will be displayed in a dynamic interface."))
+    time.sleep(0.2)
     
     selection = terminal_menu.show()
     return selection
 
-def display_mutation_probabilities():
-    mutation_probs = get_mutation_probabilities()
-    print("Mutation Probabilities:")
-    for mut_type, prob in mutation_probs.items():
-        print(f"{mut_type}: {prob:.2f}%")
 
 if __name__ == '__main__':
     try:
-        # Не очищаем экран здесь, это сделает функция show_welcome_screen
         selection = show_welcome_screen()
         if selection == 0:
             try:
-                # Очищаем экран без повторной установки цвета фона
-                print("\033[2J\033[H", end='', flush=True)
                 
                 main()
-                
-                # Очищаем экран перед финальным выводом
-                print("\033[2J\033[H", end='', flush=True)
                 
                 nt.set_options("""
                     const options = {
@@ -1066,20 +921,12 @@ if __name__ == '__main__':
                         nt.add_node(i[3], str(dst) + f";  code:{i[8]}", color=i[5], title=str(dst))
                         nt.add_edge(i[2], i[3], weight=5)
                         i[6] = 1
-                sys.stdout.write("\033[0m")
-                sys.stdout.flush()
                 print(colored("\nAll results were saved to 'output.txt'", "magenta"))
                 print(calibrator.afiget)
             except Exception as e:
-                sys.stdout.write("\033[0m")
-                sys.stdout.flush()
                 print(colored(f"\nAn error occurred: {str(e)}", "red"))
                 print(colored("Try resizing your terminal or restarting the fuzzer", "white"))
         else:
-            sys.stdout.write("\033[0m")
-            sys.stdout.flush()
             print(colored("\nOkay, have a good time, bye! <3", "magenta"))
     finally:
-        # Сбрасываем цвета только в самом конце
-        sys.stdout.write("\033[0m")
-        sys.stdout.flush()
+        pass
