@@ -31,7 +31,6 @@ import sys
 def restore_terminal():
     sys.stdout.write("\033[0m")
     sys.stdout.flush()
-    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
     sys.stdout.write("\033[2J\033[H")
     sys.stdout.flush()
 import atexit
