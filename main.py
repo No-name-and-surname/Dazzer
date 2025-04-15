@@ -727,18 +727,16 @@ def main():
                         filik.write(f"  Total Error Instances: {error_stats['total_errors']}\n")
                         filik.write(f"  Total Crashes: {error_stats['crash_count']}\n")
                         
-                        # Добавляем счетчик ошибок санитайзера
                         sanitizer_errors_count = 0
                         sanitizer_errors = []
                         for code, details in error_stats['error_details'].items():
-                            if code < -100 and code >= -110:  # Коды ошибок санитайзеров
+                            if code < -100 and code >= -110:
                                 sanitizer_errors_count += details.get('count', 0)
                                 sanitizer_errors.append((code, details))
                                 
                         if sanitizer_errors_count > 0:
                             filik.write(f"  Total Sanitizer Errors: {sanitizer_errors_count}\n")
                         
-                        # Error types summary
                         if 'error_types' in error_stats and error_stats['error_types']:
                             filik.write(f"Error Types:\n")
                             sorted_types = sorted(error_stats['error_types'].items(), key=lambda x: x[1], reverse=True)
@@ -747,7 +745,6 @@ def main():
                                     filik.write(f"  {error_type}: {count}\n")
                             filik.write("\n")
                             
-                        # Секция для ошибок санитайзера
                         if sanitizer_errors:
                             filik.write(f"Sanitizer Errors:\n")
                             sanitizer_types = {
@@ -805,7 +802,6 @@ def main():
                             filik.write(f"    Count: {details['count']}\n")
                             filik.write(f"    First Seen: {details['first_seen']}\n")
                             
-                            # Show error examples
                             if details['examples']:
                                 filik.write(f"    Examples:\n")
                                 for i, example in enumerate(details['examples'], 1):
@@ -826,7 +822,6 @@ def main():
                                 total = sum(errors.values())
                                 filik.write(f"  {mut_type}: {total} errors\n")
                                 
-                                # Crash count for this mutator
                                 crash_count = 0
                                 for code, count in errors.items():
                                     if code in error_stats['error_details'] and error_stats['error_details'][code].get('is_crash', False):

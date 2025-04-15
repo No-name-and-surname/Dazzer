@@ -8,11 +8,9 @@ fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
 flag, trewq  = 0, 0
 flag = 0
 
-# Кэш для операций мутации для предотвращения повторных вычислений
 mutation_cache = {}
 MAX_CACHE_SIZE = 10000
 
-# Add a structure to track mutation success
 mutation_success = {
     "interesting": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "ch_symb": {"new_coverage": 0, "new_crash": 0, "total": 0},
@@ -22,7 +20,6 @@ mutation_success = {
 }
 mutation_success_lock = threading.Lock()
 
-# Add a structure to track errors found by each mutator
 mutator_error_counts = {
     "interesting": 0,
     "ch_symb": 0,
@@ -164,7 +161,6 @@ def get_mutation_probabilities():
             for mut in mutator_error_counts:
                 probabilities[mut] = mutator_error_counts[mut] / total_errors
         
-        # Normalize probabilities
         total_prob = sum(probabilities.values())
         if total_prob > 0:
             for mut in probabilities:
@@ -173,10 +169,8 @@ def get_mutation_probabilities():
         return probabilities
 
 def mutate(buf, min_length, new_dict2=None, new_dict=None):
-    # Get updated mutation probabilities
     mutation_probs = get_mutation_probabilities()
     
-    # Choose mutation type based on updated probabilities
     mutation_types = list(mutation_probs.keys())
     weights = list(mutation_probs.values())
     
@@ -186,12 +180,10 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
     
     mut_type = random.choices(mutation_types, weights=weights, k=1)[0]
     
-    # Создаем хэшируемый ключ для кэша
     cache_key = (str(buf), min_length)
     if cache_key in mutation_cache:
         return mutation_cache[cache_key]
     
-    # Инициализация словарей, если они None
     if new_dict2 is None: 
         new_dict2 = []
     if new_dict is None:
@@ -199,7 +191,6 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
     
     ret = list(buf)
 
-    # Оптимизированные мутации
     if mut_type == "ch_symb":
         ret = rand_change_symbol(ret)
     elif mut_type == "length_ch":
@@ -208,9 +199,7 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
         ret = xor(ret)
     elif mut_type == "interesting":
         result = interesting_values(), mut_type
-        # Кэшируем результат
         if len(mutation_cache) >= MAX_CACHE_SIZE:
-            # Очищаем часть кэша
             for k in list(mutation_cache.keys())[:1000]:
                 del mutation_cache[k]
         mutation_cache[cache_key] = result
@@ -223,7 +212,6 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
     else:
         result = str(ret)
     
-    # Кэшируем результат
     if len(mutation_cache) >= MAX_CACHE_SIZE:
         for k in list(mutation_cache.keys())[:1000]:
             del mutation_cache[k]
