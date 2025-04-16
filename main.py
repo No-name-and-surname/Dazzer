@@ -16,7 +16,6 @@ import networkx as nx
 from screeninfo import get_monitors
 import re
 from simple_term_menu import TerminalMenu
-import sys
 from datetime import datetime
 import select
 import tty
@@ -26,17 +25,13 @@ from threading import Lock
 import concurrent.futures
 import atexit
 
-import sys
-
 def restore_terminal():
     sys.stdout.write("\033[0m")
     sys.stdout.flush()
     sys.stdout.write("\033[2J\033[H")
     sys.stdout.flush()
-import atexit
 
 atexit.register(restore_terminal)
-
 
 def signal_handler(sig, frame):
     restore_terminal()
@@ -59,11 +54,11 @@ def cleanup_threads():
         threads_running = False
     time.sleep(0.3)
 atexit.register(cleanup_threads)
+
 def init_simulation():
     with simulation_lock:
         simulation_stats["start_time"] = time.time()
         simulation_stats["total_tests"] = 0
-
 
 def add_test_stats(count=1):
     with simulation_lock:
@@ -90,7 +85,7 @@ output_lock = Lock()
 TIMEOUT = 1
 width_1 = (str(list(get_monitors())[0])[8:].split(', '))[2].split('width=')[1] + 'px'
 height_1 = (str(list(get_monitors())[0])[8:].split(', '))[3].split('height=')[1] + 'px'
-nt = Network(height_1, width='100%',  bgcolor="#111111", font_color="white",  select_menu=True)
+nt = Network(height_1, width='100%', bgcolor="#111111", font_color="white", select_menu=True)
 pos = 27
 places = []
 codes = []
@@ -111,6 +106,7 @@ thread_stats = {}
 thread_stats_lock = Lock()
 queue_cache = {'seg_fault': 0, 'no_error': 0, 'sig_fpe': 0}
 queue_cache_lock = Lock()
+
 def get_inflated_stats():
     global start_time
     
@@ -172,15 +168,26 @@ def get_coverage():
         
     if os.path.exists('out'):
         files = [f for f in os.listdir('out') if os.path.isfile(os.path.join('out', f))]
-        gcov_files = [f for f in files if f.startswith('cov-')]
-        if gcov_files:
-            try:
-                max_coverage_file = max(gcov_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
-                coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
-                max_coverage_percent = max(max_coverage_percent, coverage_value)
-                return f"{coverage_value:.2f}%"
-            except:
-                pass
+        if config.TARGET_LANGUAGE == "go":
+            cover_files = [f for f in files if f.endswith('.coverprofile')]
+            if cover_files:
+                try:
+                    max_coverage_file = max(cover_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
+                    coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
+                    max_coverage_percent = max(max_coverage_percent, coverage_value)
+                    return f"{coverage_value:.2f}%"
+                except:
+                    pass
+        else:
+            gcov_files = [f for f in files if f.startswith('cov-')]
+            if gcov_files:
+                try:
+                    max_coverage_file = max(gcov_files, key=lambda x: float(x.split('cov-')[1].split('_')[0]))
+                    coverage_value = float(max_coverage_file.split('cov-')[1].split('_')[0])
+                    max_coverage_percent = max(max_coverage_percent, coverage_value)
+                    return f"{coverage_value:.2f}%"
+                except:
+                    pass
     
     if max_coverage_percent > 0:
         return f"{max_coverage_percent:.2f}%"
@@ -195,7 +202,7 @@ def format_time(seconds):
         seconds = seconds % 60
         return f"{int(minutes)}m {int(seconds)}s"
     else:
-        hours = seconds // 3600
+        hours = seconds // 60
         minutes = (seconds % 3600) // 60
         return f"{int(hours)}h {int(minutes)}m"
 
@@ -259,6 +266,15 @@ def create_stats_box(stats):
         
         if sanitizer_errors_count > 0:
             box_content.append(format_line("  Sanitizer Errors", sanitizer_errors_count, 29))
+        
+        if config.TARGET_LANGUAGE == "go":
+            error_types = error_stats.get('error_types', {})
+            go_race_count = error_types.get('goracedetector', 0)
+            go_panic_count = error_types.get('gopanic', 0)
+            if go_race_count > 0:
+                box_content.append(format_line("  Go Race Issues", go_race_count, 31))
+            if go_panic_count > 0:
+                box_content.append(format_line("  Go Panics", go_panic_count, 35))
         
         error_details = error_stats.get('error_details', {})
         if error_details:
@@ -355,6 +371,7 @@ def rgb_to_ansi(r, g, b, text):
 def hex_color(hex_code, text):
     r, g, b = hex_to_rgb(hex_code)
     return rgb_to_ansi(r, g, b, text)
+
 def display_stats(stats):
     current_time = time.time()
     runtime = current_time - start_time if start_time else 0.001
@@ -554,7 +571,6 @@ def calculate_mutation_probabilities(mutator_error_counts):
     except Exception:
         return [40, 20, 30, 11]
 
-
 def fuzzing_thread(thread_name, filik):
     global DEBUG_PROB_OF_MUT, queue_cache, FIXED_MUTATION_PROBS
     
@@ -595,7 +611,6 @@ def fuzzing_thread(thread_name, filik):
                 with thread_stats_lock:
                     if thread_name in thread_stats:
                         thread_stats[thread_name] += 14
-                
                 
             except Exception:
                 time.sleep(0.3)
@@ -889,7 +904,6 @@ def show_welcome_screen():
     
     selection = terminal_menu.show()
     return selection
-
 
 if __name__ == '__main__':
     try:

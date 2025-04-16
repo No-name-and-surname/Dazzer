@@ -19,7 +19,6 @@ import glob
 import queue
 import concurrent.futures
 
-
 debug_error_by_mutator = {
     "length_ch": {},
     "xor": {},
@@ -92,7 +91,8 @@ SANITIZER_ERROR_CODES = {
     -102: "UndefinedBehaviorSanitizer Error",
     -103: "ThreadSanitizer Error",
     -104: "MemorySanitizer Error",
-    -105: "LeakSanitizer Error"
+    -105: "LeakSanitizer Error",
+    -106: "Go Race Detector Error"
 }
 
 error_descriptions = {
@@ -146,7 +146,6 @@ def get_error_description(code):
     if code in error_descriptions:
         return error_descriptions[code]
     return f"Unknown Error ({code})"
-
 
 def if_interesting(test_case):
     if test_case[0] < 0:
@@ -312,7 +311,7 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
 
 def run_command(command, error_message, input_data=None):
     if input_data is not None:
-        process = subprocess.run(command, shell=True, check=True, input=input_data.encode(),
+        process = subprocess.run(command, shell=True, check=True, input=input_data,
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         process = subprocess.run(command, shell=True, check=True,
@@ -323,17 +322,16 @@ def check_sanitizer(stderr):
     if not stderr or len(stderr) < 10:
         return {"detected": False, "type": "", "details": ""}
     
-    if "Sanitizer" not in stderr and "sanitizer" not in stderr and "SUMMARY" not in stderr:
-        return {"detected": False, "type": "", "details": ""}
-    
     result = {
         "detected": False,
         "type": "",
         "details": ""
     }
-    
-    if not stderr:
-        return result
+    go_sanitizer_markers = [
+        "WARNING:.*race.*detected",
+        "fatal error:.*runtime",
+        "panic:.*",
+    ]
     
     sanitizer_markers = [
         "==ERROR: AddressSanitizer:",
@@ -373,11 +371,16 @@ def check_sanitizer(stderr):
         "SUMMARY: Sanitizer:"
     ]
     
+    sanitizer_markers.extend(go_sanitizer_markers)
+    
     for marker in sanitizer_markers:
-        if marker in stderr:
+        if re.search(marker, stderr, re.IGNORECASE):
             result["detected"] = True
             
-            if "AddressSanitizer" in stderr:
+            if "race.*detected" in stderr.lower():
+                result["type"] = "GoRaceDetector"
+                result["details"] = re.search(r"WARNING:.*race.*detected.*?\n.*?\n", stderr, re.IGNORECASE).group(0) if re.search(r"WARNING:.*race.*detected.*?\n.*?\n", stderr, re.IGNORECASE) else "Race detected"
+            elif "AddressSanitizer" in stderr:
                 result["type"] = "AddressSanitizer"
             elif "UndefinedBehaviorSanitizer" in stderr:
                 result["type"] = "UndefinedBehaviorSanitizer"
@@ -387,25 +390,25 @@ def check_sanitizer(stderr):
                 result["type"] = "MemorySanitizer"
             elif "LeakSanitizer" in stderr:
                 result["type"] = "LeakSanitizer"
+            elif "panic:" in stderr.lower():
+                result["type"] = "GoPanic"
+                result["details"] = re.search(r"panic:.*?\n", stderr, re.IGNORECASE).group(0) if re.search(r"panic:.*?\n", stderr, re.IGNORECASE) else "Panic occurred"
             else:
                 result["type"] = "Sanitizer"
                 
             lines = stderr.split('\n')
             for line in lines:
-                if "ERROR:" in line and "Sanitizer" in line:
+                if "ERROR:" in line or "WARNING:" in line or "panic:" in line.lower():
                     result["details"] = line.strip()
                     break
-                elif "SUMMARY: " in line and "Sanitizer" in line:
+                elif "SUMMARY: " in line:
                     result["details"] = line.strip()
                     break
             
             if not result["details"]:
                 for line in lines:
-                    for marker in sanitizer_markers:
-                        if marker in line:
-                            result["details"] = line.strip()
-                            break
-                    if result["details"]:
+                    if marker in line:
+                        result["details"] = line.strip()
                         break
             
             if not result["details"] and lines:
@@ -433,6 +436,8 @@ def add_sanitizer_error(stderr, test_input=None, mut_type=None):
             error_code = -104
         elif "LeakSanitizer" in sanitizer_info["type"]:
             error_code = -105
+        elif "GoRaceDetector" in sanitizer_info["type"]:
+            error_code = -106
         
         with global_error_details_lock:
             if error_code not in error_details:
@@ -450,11 +455,6 @@ def add_sanitizer_error(stderr, test_input=None, mut_type=None):
             if sanitizer_info["details"] and sanitizer_info["details"] not in error_details[error_code]["details"]:
                 error_details[error_code]["details"].append(sanitizer_info["details"])
                 
-            if "stack_trace" in sanitizer_info and len(error_details[error_code].get("stack_traces", [])) < 10:
-                if "stack_traces" not in error_details[error_code]:
-                    error_details[error_code]["stack_traces"] = []
-                error_details[error_code]["stack_traces"].append(sanitizer_info["stack_trace"])
-                
             if test_input and mut_type and len(error_details[error_code]["examples"]) < 5:
                 example = {
                     "test": test_input,
@@ -463,9 +463,6 @@ def add_sanitizer_error(stderr, test_input=None, mut_type=None):
                     "details": sanitizer_info["details"],
                     "sanitizer_type": sanitizer_info["type"]
                 }
-                if "stack_trace" in sanitizer_info:
-                    example["stack_trace"] = sanitizer_info["stack_trace"]
-                    
                 error_details[error_code]["examples"].append(example)
                 
             if mut_type:
@@ -535,12 +532,12 @@ def testing2(file_name, listik):
                 start_time = time.time()
                 
                 if isinstance(listik, list):
-                    input_data = "\n".join(str(x) for x in listik) + "\n"
+                    input_data = b"\n".join(x.encode() if isinstance(x, str) else x for x in listik) + b"\n"
                 else:
-                    input_data = str(listik) + "\n"
+                    input_data = listik.encode() if isinstance(listik, str) else listik + b"\n"
                 
                 sock.connect((config.TARGET_HOST, config.TARGET_PORT))
-                sock.sendall(input_data.encode())
+                sock.sendall(input_data)
                 stdout = b""
                 stderr = b""
                 
@@ -580,16 +577,19 @@ def testing2(file_name, listik):
         else:
             if isinstance(listik, list):
                 if len(listik) >= 2:
-                    process = subprocess.Popen([file_name], 
+                    cmd = [file_name]
+                    if config.TARGET_LANGUAGE == "go":
+                        cmd.append("-race")
+                    process = subprocess.Popen(cmd, 
                                             stdin=subprocess.PIPE,
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE)
                     start_time = time.time()
                     try:
-                        input1 = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
+                        input1 = listik[0].encode() if isinstance(listik[0], str) else listik[0]
                         process.stdin.write(input1 + b'\n')
                         process.stdin.flush()
-                        input2 = str(listik[1]).encode() if not isinstance(listik[1], bytes) else listik[1]
+                        input2 = listik[1].encode() if isinstance(listik[1], str) else listik[1]
                         process.stdin.write(input2 + b'\n')
                         process.stdin.flush()
                         stdout, stderr = process.communicate(timeout=timeout)
@@ -610,8 +610,11 @@ def testing2(file_name, listik):
                 else:
                     start_time = time.time()
                     try:
-                        input_data = str(listik[0]).encode() if not isinstance(listik[0], bytes) else listik[0]
-                        result = subprocess.run([file_name], 
+                        cmd = [file_name]
+                        if config.TARGET_LANGUAGE == "go":
+                            cmd.append("-race")
+                        input_data = listik[0].encode() if isinstance(listik[0], str) else listik[0]
+                        result = subprocess.run(cmd, 
                                              input=input_data,
                                              capture_output=True,
                                              text=True,
@@ -632,8 +635,11 @@ def testing2(file_name, listik):
             else:
                 start_time = time.time()
                 try:
-                    input_data = str(listik).encode() if not isinstance(listik, bytes) else listik
-                    result = subprocess.run([file_name],
+                    cmd = [file_name]
+                    if config.TARGET_LANGUAGE == "go":
+                        cmd.append("-race")
+                    input_data = listik.encode() if isinstance(listik, str) else listik
+                    result = subprocess.run(cmd,
                                          input=input_data,
                                          capture_output=True,
                                          text=True,
@@ -665,6 +671,8 @@ def testing(file_name, listik):
         tests_2 = copy.deepcopy(listik)
         try:
             strace_command = [f"{file_name}"]
+            if config.TARGET_LANGUAGE == "go":
+                strace_command.append("-race")
             with subprocess.Popen(strace_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE) as process:        
                 read_count = 0  
                 for line in process.stderr:
@@ -681,7 +689,6 @@ def testing(file_name, listik):
             return float('inf'), -1, "", "Timeout"
         except subprocess.CalledProcessError:
             return float('inf'), -1, "", "Called_error"
-
 
 def ret_globals():
     return queue_seg_fault, time_out, queue_no_error, queue_sig_fpe
@@ -753,6 +760,8 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
     results = []
     read_count = 0
     strace_command = ["strace", file_name]
+    if config.TARGET_LANGUAGE == "go":
+        strace_command.append("-race")
     f = chr(randint(97, 122))
     if config.FUZZING_TYPE == "Gray":
         try:
@@ -1073,7 +1082,10 @@ def seg_segv(index):
 
 def compile_with_coverage(source_file, binary_name):
     try:
-        compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_file} -o {binary_name}"
+        if config.TARGET_LANGUAGE == "go":
+            compile_cmd = f"go build -o {binary_name} {source_file}"
+        else:
+            compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_file} -o {binary_name}"
         process = subprocess.run(compile_cmd, shell=True, check=True,
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return True
@@ -1082,10 +1094,41 @@ def compile_with_coverage(source_file, binary_name):
 
 def reset_coverage_data(binary_name):
     try:
-        subprocess.run(f"rm -f *.gcda", shell=True)
+        if config.TARGET_LANGUAGE == "go":
+            subprocess.run(f"rm -f *.coverprofile", shell=True)
+        else:
+            subprocess.run(f"rm -f *.gcda", shell=True)
         return True
     except:
         return False
+
+def get_go_coverage(cover_file):
+    if not os.path.exists(cover_file):
+        return 0, 0, 0.0
+    
+    try:
+        with open(cover_file, 'r') as f:
+            lines = f.readlines()
+        
+        total_statements = 0
+        covered_statements = 0
+        
+        for line in lines[1:]:
+            if not line.strip():
+                continue
+            parts = line.split()
+            if len(parts) < 5:
+                continue
+            count = int(parts[-2])
+            statements = int(parts[-1])
+            total_statements += statements
+            if count > 0:
+                covered_statements += statements
+        
+        coverage = (covered_statements / total_statements * 100) if total_statements > 0 else 0.0
+        return covered_statements, total_statements, coverage
+    except:
+        return 0, 0, 0.0
 
 def get_line_coverage(gcov_file):
     if not os.path.exists(gcov_file):
@@ -1169,132 +1212,6 @@ def get_branch_coverage(gcov_file):
     except:
         return 0, 0, 0.0
 
-def analyze_coverage(source_file, binary_name, input_data):
-    if not compile_with_coverage(source_file, binary_name):
-        return None
-    
-    reset_coverage_data(binary_name)
-    
-    try:
-        subprocess.run([f"./{binary_name}"], input=input_data.encode(), 
-                      timeout=5, check=True)
-    except:
-        pass
-    
-    gcov_cmd = f"gcov {source_file}"
-    try:
-        subprocess.run(gcov_cmd, shell=True, check=True,
-                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    except:
-        return None
-    
-    gcov_file = f"{source_file}.gcov"
-    
-    line_coverage = get_line_coverage(gcov_file)
-    func_coverage = get_function_coverage(gcov_file)
-    branch_coverage = get_branch_coverage(gcov_file)
-    
-    return {
-        'line_coverage': line_coverage,
-        'function_coverage': func_coverage,
-        'branch_coverage': branch_coverage
-    }
-
-def setup_dynamorio():
-    try:
-        subprocess.run(["drrun", "-version"], 
-                     stdout=subprocess.PIPE, 
-                     stderr=subprocess.PIPE)
-        return True
-    except FileNotFoundError:
-        return False
-
-def get_binary_coverage(binary_path, input_data):
-    with tempfile.NamedTemporaryFile(mode='w', delete=False) as f:
-        f.write(input_data)
-        input_file = f.name
-    
-    try:
-        perf_data = "perf.data"
-        cmd = [
-            "perf", "record",
-            "--no-inherit",
-            "-e", "instructions",
-            "-o", perf_data,
-            binary_path,
-            input_file
-        ]
-        
-        process = subprocess.run(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=5
-        )
-        
-        if os.path.exists(perf_data):
-            return analyze_perf_data(perf_data, binary_path)
-        
-    except:
-        os.unlink(input_file)
-        if os.path.exists(perf_data):
-            os.unlink(perf_data)
-    
-    return None
-
-def analyze_perf_data(perf_data, binary_path):
-    try:
-        cmd = [
-            "perf", "report",
-            "--stdio",
-            "--input", perf_data,
-            "--no-children"
-        ]
-        
-        perf_output = subprocess.check_output(cmd).decode()
-        
-        total_samples = 0
-        covered_functions = set()
-        
-        for line in perf_output.split('\n'):
-            if '|' not in line:
-                continue
-            
-            try:
-                parts = line.split('|')
-                if len(parts) >= 3:
-                    samples = float(parts[1].strip())
-                    function = parts[2].strip()
-                    
-                    total_samples += samples
-                    covered_functions.add(function)
-            except:
-                continue
-        
-        nm_cmd = ["nm", binary_path]
-        nm_output = subprocess.check_output(nm_cmd).decode()
-        
-        total_functions = set()
-        for line in nm_output.split('\n'):
-            if ' T ' in line or ' t ' in line:
-                try:
-                    addr, type_, func = line.split()
-                    total_functions.add(func)
-                except:
-                    continue
-        
-        coverage = len(covered_functions) / len(total_functions) * 100 if total_functions else 0
-        
-        return {
-            'total_functions': len(total_functions),
-            'covered_functions': len(covered_functions),
-            'coverage_percentage': coverage,
-            'total_samples': total_samples
-        }
-        
-    except Exception as e:
-        return None
-
 def get_coverage(binary_path, input_data):
     global global_max_coverage
     try:
@@ -1328,10 +1245,13 @@ def get_coverage(binary_path, input_data):
             os.chdir(temp_dir)
         
             if need_compile:
-                compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
+                if config.TARGET_LANGUAGE == "go":
+                    compile_cmd = f"go build -o {binary_base} {source_base}"
+                else:
+                    compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
                 subprocess.run(compile_cmd, shell=True, check=True)
         
-            for gcda_file in [f for f in os.listdir('.') if f.endswith('.gcda')]:
+            for gcda_file in [f for f in os.listdir('.') if f.endswith('.gcda') or f.endswith('.coverprofile')]:
                 try:
                     os.unlink(gcda_file)
                 except:
@@ -1342,8 +1262,13 @@ def get_coverage(binary_path, input_data):
             else:
                 input_str = str(input_data) + "\n"
                 
+            cover_file = f"coverage_{thread_name}.coverprofile"
+            cmd = [f"./{binary_base}"]
+            if config.TARGET_LANGUAGE == "go":
+                cmd = ["go", "run", "-coverprofile", cover_file, source_base]
+            
             process = subprocess.Popen(
-                [f"./{binary_base}"],
+                cmd,
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE
@@ -1355,41 +1280,37 @@ def get_coverage(binary_path, input_data):
                 process.kill()
                 process.wait()
             
-            subprocess.run(
-                ["gcov", source_base],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                check=True
-            )
-
-            gcov_file = f"{source_base}.gcov"
-            if os.path.exists(gcov_file):
-                with open(gcov_file) as f:
-                    lines = f.readlines()
-                    
-                    executed = 0
-                    total = 0
-                    
-                    for line in lines:
-                        parts = line.split(':', 2)
-                        if len(parts) < 3:
-                            continue
-                            
-                        execution_count = parts[0].strip()
-                        line_number = parts[1].strip()
-                        source_line = parts[2].strip()
+            if config.TARGET_LANGUAGE == "go":
+                if os.path.exists(cover_file):
+                    executed, total, coverage = get_go_coverage(cover_file)
+                    if total > 0:
+                        coverage = round(coverage, 2)
                         
-                        if not source_line or source_line.startswith('//') or source_line.startswith('#'):
-                            continue
-                        if execution_count == '-':
-                            continue
+                        if coverage > global_max_coverage:
+                            global_max_coverage = coverage
+                            timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
+                            output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.coverprofile"
+                            output_gcov = os.path.join(gcov_output_dir, output_filename)
+                            with open(cover_file, 'r') as src, open(output_gcov, 'w') as dst:
+                                dst.write(src.read())
                             
-                        total += 1
-                        if execution_count != '#####' and execution_count != '0':
-                            executed += 1
+                        result = (executed, total, coverage)
+                        coverage_cache[input_key] = result
+                        return result
+            else:
+                subprocess.run(
+                    ["gcov", source_base],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    check=True
+                )
+
+                gcov_file = f"{source_base}.gcov"
+                if os.path.exists(gcov_file):
+                    executed, total, coverage = get_line_coverage(gcov_file)
                     
                     if total > 0:
-                        coverage = round((executed / total * 100), 2)
+                        coverage = round(coverage, 2)
                         
                         if coverage > global_max_coverage:
                             global_max_coverage = coverage
@@ -1452,8 +1373,10 @@ def categorize_error(returncode, stderr, stdout):
             error_info["code"] = -104
         elif sanitizer_info["type"] == "LeakSanitizer":
             error_info["code"] = -105
-        else:
-            error_info["code"] = -100
+        elif sanitizer_info["type"] == "GoRaceDetector":
+            error_info["code"] = -106
+        elif sanitizer_info["type"] == "GoPanic":
+            error_info["code"] = -107
         
         error_info["type"] = "sanitizer"
         error_info["sanitizer_type"] = sanitizer_info["type"]
@@ -1502,7 +1425,6 @@ def categorize_error(returncode, stderr, stdout):
         elif "use after free" in stderr.lower():
             error_info["type"] = "use_after_free"
             error_info["is_crash"] = True
-        
         elif "segmentation fault" in stderr.lower() or "segfault" in stderr.lower():
             error_info["type"] = "segmentation_fault"
             error_info["is_crash"] = True
@@ -1574,7 +1496,6 @@ def log_error(error_info, test_input, mut_type, coverage):
     return error_info["is_crash"]
 
 def inflate_stats_for_display():
-    """Функция только для статистических целей, не меняет логику работы"""
     return True
 
 def update_mutation_success(mut_type, coverage_increased, new_crash):
