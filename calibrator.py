@@ -5,19 +5,11 @@ import config
 import mutator
 import copy
 import os
-import sys
 import re
 import datetime
 from random import *
-import shlex
-import tempfile
 import threading
-import fnmatch
-import functools
-import heapq
-import glob
 import queue
-import concurrent.futures
 
 debug_error_by_mutator = {
     "length_ch": {},

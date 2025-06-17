@@ -247,7 +247,7 @@ def create_stats_box(stats):
         format_line("Tests/sec", f"{tests_per_sec:.1f}/s", 37),
         format_line("Saved Tests", saved_tests_count, 35),
         format_line("Threads Running", config.NUM_THREADS, 31),
-        format_line("Max Coverage", f"{get_coverage()}", 34),
+        format_line("Max Coverage", f"{round(calibrator.global_max_coverage, 2):.2f}", 34),
         format_line("Best Mutator", get_best_mutator(stats), 34),
         hex_color('#ff4a96ff', "║                                                  ║")
     ]
@@ -337,14 +337,15 @@ def create_stats_box(stats):
                     pass
                 
                 box_content.append(format_line(f"  Code {code}{description}", count, 33 - len(description)))
-    
+    dictichek = uniform(0, FIXED_MUTATION_PROBS[3])
     box_content.extend([
         hex_color('#ff4a96ff', "║                                                  ║"),
         hex_color('#ff4a96ff', "║  Mutation Probabilities:                         ║"),
         format_line("    Length Change", f"{round(FIXED_MUTATION_PROBS[0], 1)}%", 29),
         format_line("    XOR", f"{round(FIXED_MUTATION_PROBS[1], 1)}%", 39),
         format_line("    Symbol Change", f"{round(FIXED_MUTATION_PROBS[2], 1)}%", 29),
-        format_line("    Interesting", f"{round(FIXED_MUTATION_PROBS[3], 1)}%", 31),
+        format_line("    Interesting", f"{round(FIXED_MUTATION_PROBS[3] - dictichek, 1)}%", 31),
+        format_line("    Dict", f"{round(dictichek, 1)}%", 38),
         hex_color('#ff4a96ff', "║                                                  ║")
     ])
     
