@@ -1,1 +1,33 @@
-.qodo
+## Workspace / tooling
+.qodo/
+.cursor/
+
+## Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+## Fuzzer runtime output
+out/
+python-fuzzer/out/
+python-fuzzer/output.txt
+
+## Coverage artifacts
+*.gcda
+*.gcno
+*.gcov
+*.coverprofile
+
+## Compiled binaries in test examples
+python-fuzzer/Test_examples/multy
+python-fuzzer/Test_examples/cov_test
+python-fuzzer/Test_examples/divzero
+python-fuzzer/Test_examples/overflow
+python-fuzzer/Test_examples/stateful
+
+## Rust
+dazzer-rs/target/

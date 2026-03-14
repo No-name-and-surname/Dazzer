@@ -1,6 +1,0 @@
-blessings
-termcolor
-pyvis
-networkx
-screeninfo
-simple-term-menu
