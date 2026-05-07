@@ -11,11 +11,12 @@ from random import *
 import threading
 import queue
 
-debug_error_by_mutator = {
+dbg_err_by_mut = {
     "length_ch": {},
     "xor": {},
     "ch_symb": {},
-    "interesting": {}
+    "interesting": {},
+    "dict": {}
 }
 afiget = 'dfghjkl'
 interesting_tests = []
@@ -46,16 +47,16 @@ OUTPUT_DIR = config.Corpus_dir
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-coverage_cache = {}
-base_coverage_cache = {}
+cov_cache = {}
+base_cov_cache = {}
 
-def safe_get_from_cache(cache, key, default_value=None):
+def safe_get(cache, key, default_value=None):
     try:
         return cache.get(key, default_value)
     except:
         return default_value
 
-def safe_set_in_cache(cache, key, value, max_size=10000):
+def safe_set(cache, key, value, max_size=10000):
     try:
         if len(cache) >= max_size:
             keys_to_remove = list(cache.keys())[:int(max_size * 0.1)]
@@ -66,16 +67,16 @@ def safe_set_in_cache(cache, key, value, max_size=10000):
     except:
         pass
 
-global_max_coverage = 0
-global_error_codes = set()
-global_coverage_lock = threading.Lock()
-global_error_lock = threading.Lock()
-global_saved_tests_count = 0
-global_saved_tests_lock = threading.Lock()
-global_error_details_lock = threading.Lock()
+max_cov = 0
+err_codes = set()
+cov_lock = threading.Lock()
+err_code_lock = threading.Lock()
+saved_cnt = 0
+saved_lock = threading.Lock()
+err_det_lock = threading.Lock()
 
-global_exec_counter = 0
-global_exec_counter_lock = threading.Lock()
+exec_cnt = 0
+exec_cnt_lock = threading.Lock()
 
 _throughput_window = []
 _throughput_lock = threading.Lock()
@@ -83,19 +84,19 @@ _THROUGHPUT_WINDOW_SIZE = 30
 _estimated_throughput = 0.0
 
 
-def increment_exec_counter(n=1):
-    global global_exec_counter
-    with global_exec_counter_lock:
-        global_exec_counter += n
-        return global_exec_counter
+def inc_exec(n=1):
+    global exec_cnt
+    with exec_cnt_lock:
+        exec_cnt += n
+        return exec_cnt
 
 
-def get_exec_counter():
-    with global_exec_counter_lock:
-        return global_exec_counter
+def get_exec():
+    with exec_cnt_lock:
+        return exec_cnt
 
 
-def record_throughput_sample():
+def rec_throughput():
     global _estimated_throughput
     with _throughput_lock:
         now = time.time()
@@ -113,24 +114,24 @@ def record_throughput_sample():
         _estimated_throughput = raw_rate
 
 
-def get_estimated_throughput():
+def get_throughput():
     with _throughput_lock:
         return _estimated_throughput
 
 corpus_lock = threading.Lock()
-corpus_inputs = []
+corpus = []
 
 exec_times_lock = threading.Lock()
 exec_times = []
-adaptive_timeout = None
-ADAPTIVE_TIMEOUT_MULTIPLIER = 4
+adapt_timeout = None
+ADAPTIVE_TIMEOUT_MULT = 4
 ADAPTIVE_TIMEOUT_MIN = 0.05
-MAX_EXEC_TIMES_TRACKED = 500
+MAX_EXEC_TIMES = 500
 
-error_details = {}
-error_by_mutator = {}
+err_det = {}
+err_by_mut = {}
 
-SANITIZER_ERROR_CODES = {
+SANIT_ERR_CODES = {
     -100: "Generic Sanitizer Error",
     -101: "AddressSanitizer Error",
     -102: "UndefinedBehaviorSanitizer Error",
@@ -140,7 +141,7 @@ SANITIZER_ERROR_CODES = {
     -106: "Go Race Detector Error"
 }
 
-error_descriptions = {
+err_desc = {
     -11: "Segmentation Fault",
     -8: "Floating Point Exception",
     -6: "Aborted",
@@ -160,37 +161,154 @@ error_descriptions = {
     136: "Floating Point Exception (SIGFPE)"
 }
 
-error_descriptions.update(SANITIZER_ERROR_CODES)
+err_desc.update(SANIT_ERR_CODES)
 
-error_by_mutator = {
+err_by_mut = {
     "interesting": {},
     "ch_symb": {},
     "length_ch": {},
     "xor": {},
+    "dict": {},
     "first_no_mut": {}
 }
 
-mutation_success = {
+mut_sucs = {
     "interesting": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "ch_symb": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "length_ch": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "xor": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "dict": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "first_no_mut": {"new_coverage": 0, "new_crash": 0, "total": 0}
 }
-mutation_success_lock = threading.Lock()
+mut_sucs_lock = threading.Lock()
 
-mutator_error_counts = {
+err_counts = {
     "interesting": 0,
     "ch_symb": 0,
     "length_ch": 0,
-    "xor": 0
+    "xor": 0,
+    "dict": 0
 }
-mutator_error_lock = threading.Lock()
+err_lock = threading.Lock()
 
-def get_error_description(code):
-    if code in error_descriptions:
-        return error_descriptions[code]
+def get_err_desc(code):
+    if code in err_desc:
+        return err_desc[code]
     return f"Unknown Error ({code})"
+
+
+def _calc_input_size(test_input):
+    if isinstance(test_input, list):
+        input_str = "\n".join(str(x) for x in test_input) + "\n"
+    else:
+        input_str = str(test_input) + "\n"
+    return len(input_str.encode('utf-8'))
+
+
+def _get_coverage_type():
+    if config.TARGET_LANGUAGE == "go":
+        return "go cover"
+    return "gcov"
+
+
+def _parse_asan_variables(stderr):
+    if not stderr:
+        return []
+    variables = []
+    lines = stderr.split('\n')
+    for i, line in enumerate(lines):
+        match = re.search(
+            r"(\[\s*\d+,\s*\d+\))\s+'([^']+)'\s+.*?(?:\(line\s+(\d+)\))?",
+            line
+        )
+        if match:
+            var_range = match.group(1)
+            var_name = match.group(2)
+            var_line = match.group(3) if match.group(3) else ""
+            overflow_info = ""
+            if i + 1 < len(lines):
+                next_line = lines[i + 1].strip()
+                if next_line:
+                    overflow_info = next_line
+            entry = f"{var_range} '{var_name}'"
+            if var_line:
+                entry += f" (line {var_line})"
+            if overflow_info:
+                entry += f"\n<== {overflow_info}"
+            variables.append(entry)
+        elif "overflows this variable" in line or "underflows this variable" in line:
+            stripped = line.strip()
+            if stripped and stripped not in [v.split('\n')[-1].lstrip('<== ') for v in variables]:
+                if variables:
+                    last = variables[-1]
+                    if "<== " not in last:
+                        variables[-1] = last + f"\n<== {stripped}"
+    return variables
+
+
+def format_crash_report(timestamp, returncode, tests_2, mut_type, coverage,
+                        executed, total, stdout, stderr, sanit_found, sanit_info):
+    lines = []
+    is_crash = returncode != 0 or sanit_found
+
+    if is_crash:
+        lines.append(f"[!] CRASH REPORT: time-{timestamp}")
+    else:
+        lines.append(f"[*] TEST REPORT: time-{timestamp}")
+
+    lines.append("")
+    lines.append("")
+    lines.append("[+] PROCESS INFO")
+    lines.append(f"Return code : {returncode} ({get_err_desc(returncode)})")
+    lines.append(f"Target      : {config.file_name}")
+
+    lines.append("")
+    lines.append("[+] MUTATION")
+    lines.append(f"Strategy    : {mut_type}")
+    input_size = _calc_input_size(tests_2)
+    lines.append(f"Input Size  : {input_size} bytes")
+
+    if config.FUZZING_TYPE == "White":
+        lines.append("")
+        cov_type = _get_coverage_type()
+        lines.append(f"[+] COVERAGE ({cov_type})")
+        lines.append(f"Line Cov    : {coverage}% ({executed} / {total} lines)")
+
+    if stderr or stdout:
+        lines.append("")
+        if sanit_found:
+            lines.append("[+] STDERR / SANITIZER OUTPUT")
+        else:
+            lines.append("[+] STDERR / STDOUT")
+        if sanit_found:
+            lines.append(f"{sanit_info['type']}: {sanit_info['details']}")
+            if stderr:
+                lines.append("")
+                for sline in stderr.strip().split('\n'):
+                    lines.append(f"  {sline}")
+            asan_vars = _parse_asan_variables(stderr)
+            if asan_vars:
+                lines.append("")
+                for var_info in asan_vars:
+                    lines.append(var_info)
+        else:
+            if stderr:
+                lines.append(stderr.strip())
+            if stdout:
+                if stderr:
+                    lines.append("")
+                lines.append(f"stdout: {stdout.strip()}")
+
+    lines.append("")
+    lines.append(f"[+] INPUT DATA")
+    try:
+        test_str = ', '.join(str(x) for x in tests_2)
+    except TypeError:
+        test_str = str(tests_2)
+    lines.append(f"[{test_str}]")
+
+    lines.append("")
+    return '\n'.join(lines)
 
 def if_interesting(test_case):
     if test_case[0] < 0:
@@ -209,59 +327,59 @@ def graph_collecting_tests(color1, color2, index, bbbb, mas, flag):
         info.append([bbbb, gf, num1, num, color1, color2, 0, returncode, nnn])
 
 def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read_count, num, mut_type, is_interesting, returncode):
-    global global_max_coverage, global_error_codes, global_saved_tests_count
+    global max_cov, err_codes, saved_cnt
     
-    executed, total, coverage = get_coverage(file_name, tests_2)
+    executed, total, coverage = get_cov(file_name, tests_2)
     
-    with mutation_success_lock:
-        if mut_type in mutation_success:
-            mutation_success[mut_type]["total"] += 1
+    with mut_sucs_lock:
+        if mut_type in mut_sucs:
+            mut_sucs[mut_type]["total"] += 1
     
     first_test = False
-    with global_coverage_lock:
-        if global_max_coverage == 0 and coverage > 0:
+    with cov_lock:
+        if max_cov == 0 and coverage > 0:
             first_test = True
-            global_max_coverage = coverage
-            with mutation_success_lock:
-                if mut_type in mutation_success:
-                    mutation_success[mut_type]["new_coverage"] += 1
+            max_cov = coverage
+            with mut_sucs_lock:
+                if mut_type in mut_sucs:
+                    mut_sucs[mut_type]["new_coverage"] += 1
     
-    increased_coverage = False
-    with global_coverage_lock:
-        if coverage >= global_max_coverage and coverage > 0:
-            increased_coverage = True
-            if coverage > global_max_coverage:
-                global_max_coverage = coverage
-                with mutation_success_lock:
-                    if mut_type in mutation_success:
-                        mutation_success[mut_type]["new_coverage"] += 1
+    increased_cov = False
+    with cov_lock:
+        if coverage >= max_cov and coverage > 0:
+            increased_cov = True
+            if coverage > max_cov:
+                max_cov = coverage
+                with mut_sucs_lock:
+                    if mut_type in mut_sucs:
+                        mut_sucs[mut_type]["new_coverage"] += 1
     
     new_error = False
-    with global_error_lock:
-        if returncode not in global_error_codes:
+    with err_code_lock:
+        if returncode not in err_codes:
             new_error = True
-            global_error_codes.add(returncode)
-            with mutation_success_lock:
-                if mut_type in mutation_success and returncode < 0:
-                    mutation_success[mut_type]["new_crash"] += 1
+            err_codes.add(returncode)
+            with mut_sucs_lock:
+                if mut_type in mut_sucs and returncode < 0:
+                    mut_sucs[mut_type]["new_crash"] += 1
     
-    with global_error_details_lock:
-        if returncode not in error_details:
-            error_details[returncode] = {
+    with err_det_lock:
+        if returncode not in err_det:
+            err_det[returncode] = {
                 "count": 0,
-                "description": get_error_description(returncode),
+                "description": get_err_desc(returncode),
                 "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
                 "examples": []
             }
-        error_details[returncode]["count"] += 1
+        err_det[returncode]["count"] += 1
         
-        if mut_type not in error_by_mutator:
-            error_by_mutator[mut_type] = {}
-        if returncode not in error_by_mutator[mut_type]:
-            error_by_mutator[mut_type][returncode] = 0
-        error_by_mutator[mut_type][returncode] += 1
+        if mut_type not in err_by_mut:
+            err_by_mut[mut_type] = {}
+        if returncode not in err_by_mut[mut_type]:
+            err_by_mut[mut_type][returncode] = 0
+        err_by_mut[mut_type][returncode] += 1
         
-        if len(error_details[returncode]["examples"]) < 5:
+        if len(err_det[returncode]["examples"]) < 5:
             error_example = {
                 "test": tests_2,
                 "stderr": stderr if stderr else "",
@@ -269,37 +387,40 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
                 "mutation": mut_type,
                 "coverage": coverage
             }
-            error_details[returncode]["examples"].append(error_example)
+            err_det[returncode]["examples"].append(error_example)
     
-    sanitizer_detected = False
-    sanitizer_info = check_sanitizer(stderr)
-    if sanitizer_info["detected"]:
-        sanitizer_detected = True
+    sanit_found = False
+    sanit_info = check_sanit(stderr)
+    if sanit_info["detected"]:
+        sanit_found = True
     
-    local_increased_coverage = False
+    local_increased_cov = False
     if len(listik) == 0:
-        local_increased_coverage = True
+        local_increased_cov = True
     else:
-        prev_max_coverage = max(item[5] for item in listik) if listik else 0
-        local_increased_coverage = coverage > prev_max_coverage
+        if listik:
+            prev_max_cov = max(item[5] for item in listik)
+        else:
+            prev_max_cov = 0
+        local_increased_cov = coverage > prev_max_cov
     
     error_count = stderr.count("error") + stderr.count("Error")
-    max_previous_errors = 0
+    max_prev_errors = 0
     if len(sig_segv) > 0:
         for item in sig_segv:
             _, _, _, prev_stderr = testing2(file_name, item[1])
             prev_errors = prev_stderr.count("error") + prev_stderr.count("Error")
-            max_previous_errors = max(max_previous_errors, prev_errors)
-    more_errors = error_count > max_previous_errors
+            max_prev_errors = max(max_prev_errors, prev_errors)
+    more_errors = error_count > max_prev_errors
     
     listik.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
     queue_name.append([returncode, tests_2, read_count, stdout, mut_type, coverage, is_interesting])
 
-    if increased_coverage or new_error:
+    if increased_cov or new_error:
         saved_input = tests_2
         if returncode != 0:
-            saved_input = minimize_input(file_name, tests_2, returncode)
-        add_to_corpus(saved_input)
+            saved_input = minimize(file_name, tests_2, returncode)
+        add_corpus(saved_input)
     
     num += 1
     info_set.add(num)
@@ -318,42 +439,35 @@ def tests_sorting(listik, queue_name, tests_2, stdout, stderr, filik, flag, read
     tests_output_dir = os.path.join(OUTPUT_DIR, f"tests_{thread_name}")
     os.makedirs(tests_output_dir, exist_ok=True)
 
-    is_error = returncode != 0 or sanitizer_detected
-    should_save_test = is_error or increased_coverage
+    is_error = returncode != 0 or sanit_found
+    should_save = is_error or increased_cov
 
-    if should_save_test:
+    if should_save:
         timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
-        sanitizer_suffix = "_sanitizer" if sanitizer_detected else ""
-        file_namus = f"time-{timestamp}_mut_type-{mut_type}_cov-{coverage}{sanitizer_suffix}"
+        if sanit_found:
+            sanit_suffix = "_sanitizer"
+        else:
+            sanit_suffix = ""
+        file_namus = f"time-{timestamp}_mut_type-{mut_type}_ch_cov-{coverage}{sanit_suffix}"
         file_path = os.path.join(tests_output_dir, file_namus)
- 
+
+        report = format_crash_report(
+            timestamp, returncode, tests_2, mut_type, coverage,
+            executed, total, stdout, stderr, sanit_found, sanit_info
+        )
         with open(file_path, 'w') as f:
-            f.write(f"Test: {tests_2}\n")
-            f.write(f"Coverage: {coverage}%\n")
-            f.write(f"Return code: {returncode} ({get_error_description(returncode)})\n")
-            f.write(f"Mutation type: {mut_type}\n")
-            if stdout:
-                f.write(f"Stdout: {stdout}\n")
-            if stderr:
-                f.write(f"Stderr: {stderr}\n")
+            f.write(report)
                 
-            if sanitizer_detected:
-                f.write(f"\n--- SANITIZER DETAILS ---\n")
-                f.write(f"Sanitizer type: {sanitizer_info['type']}\n")
-                if sanitizer_info["details"]:
-                    f.write(f"Details: {sanitizer_info['details']}\n")
-                f.write(f"Full sanitizer output:\n{stderr}\n")
-                
-        with global_saved_tests_lock:
-            global_saved_tests_count += 1
+        with saved_lock:
+            saved_cnt += 1
             
         save_reason = ""
-        if increased_coverage:
+        if increased_cov:
             save_reason = f"увеличено покрытие до {coverage}%"
         elif is_error:
-            save_reason = f"обнаружена ошибка {returncode} ({get_error_description(returncode)})"
-        elif sanitizer_detected:
-            save_reason = f"обнаружена ошибка санитайзера: {sanitizer_info['type']}"
+            save_reason = f"обнаружена ошибка {returncode} ({get_err_desc(returncode)})"
+        elif sanit_found:
+            save_reason = f"обнаружена ошибка санитайзера: {sanit_info['type']}"
             
         filik.write(f"[INFO] Сохранен тест: {file_namus}. Причина: {save_reason}\n\n")
     
@@ -374,7 +488,7 @@ def run_command(command, error_message, input_data=None):
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return process.stdout.decode(), process.stderr.decode()
 
-def check_sanitizer(stderr):
+def check_sanit(stderr):
     if not stderr or len(stderr) < 10:
         return {"detected": False, "type": "", "details": ""}
     
@@ -383,13 +497,13 @@ def check_sanitizer(stderr):
         "type": "",
         "details": ""
     }
-    go_sanitizer_markers = [
+    go_sanit_markers = [
         "WARNING:.*race.*detected",
         "fatal error:.*runtime",
         "panic:.*",
     ]
     
-    sanitizer_markers = [
+    sanit_markers = [
         "==ERROR: AddressSanitizer:",
         "AddressSanitizer: heap-use-after-free",
         "AddressSanitizer: heap-buffer-overflow",
@@ -427,15 +541,19 @@ def check_sanitizer(stderr):
         "SUMMARY: Sanitizer:"
     ]
     
-    sanitizer_markers.extend(go_sanitizer_markers)
+    sanit_markers.extend(go_sanit_markers)
     
-    for marker in sanitizer_markers:
+    for marker in sanit_markers:
         if re.search(marker, stderr, re.IGNORECASE):
             result["detected"] = True
             
             if "race.*detected" in stderr.lower():
                 result["type"] = "GoRaceDetector"
-                result["details"] = re.search(r"WARNING:.*race.*detected.*?\n.*?\n", stderr, re.IGNORECASE).group(0) if re.search(r"WARNING:.*race.*detected.*?\n.*?\n", stderr, re.IGNORECASE) else "Race detected"
+                match = re.search(r"WARNING:.*race.*detected.*?\n.*?\n", stderr, re.IGNORECASE)
+                if match:
+                    result["details"] = match.group(0)
+                else:
+                    result["details"] = "Race detected"
             elif "AddressSanitizer" in stderr:
                 result["type"] = "AddressSanitizer"
             elif "UndefinedBehaviorSanitizer" in stderr:
@@ -448,7 +566,11 @@ def check_sanitizer(stderr):
                 result["type"] = "LeakSanitizer"
             elif "panic:" in stderr.lower():
                 result["type"] = "GoPanic"
-                result["details"] = re.search(r"panic:.*?\n", stderr, re.IGNORECASE).group(0) if re.search(r"panic:.*?\n", stderr, re.IGNORECASE) else "Panic occurred"
+                match = re.search(r"panic:.*?\n", stderr, re.IGNORECASE)
+                if match:
+                    result["details"] = match.group(0)
+                else:
+                    result["details"] = "Panic occurred"
             else:
                 result["type"] = "Sanitizer"
                 
@@ -477,56 +599,56 @@ def check_sanitizer(stderr):
     
     return result
 
-def add_sanitizer_error(stderr, test_input=None, mut_type=None):
-    sanitizer_info = check_sanitizer(stderr)
-    if sanitizer_info["detected"]:
+def add_sanit_err(stderr, test_input=None, mut_type=None):
+    sanit_info = check_sanit(stderr)
+    if sanit_info["detected"]:
         error_code = -100
         
-        if "AddressSanitizer" in sanitizer_info["type"]:
+        if "AddressSanitizer" in sanit_info["type"]:
             error_code = -101
-        elif "UndefinedBehaviorSanitizer" in sanitizer_info["type"]:
+        elif "UndefinedBehaviorSanitizer" in sanit_info["type"]:
             error_code = -102
-        elif "ThreadSanitizer" in sanitizer_info["type"]:
+        elif "ThreadSanitizer" in sanit_info["type"]:
             error_code = -103
-        elif "MemorySanitizer" in sanitizer_info["type"]:
+        elif "MemorySanitizer" in sanit_info["type"]:
             error_code = -104
-        elif "LeakSanitizer" in sanitizer_info["type"]:
+        elif "LeakSanitizer" in sanit_info["type"]:
             error_code = -105
-        elif "GoRaceDetector" in sanitizer_info["type"]:
+        elif "GoRaceDetector" in sanit_info["type"]:
             error_code = -106
         
-        with global_error_details_lock:
-            if error_code not in error_details:
-                error_details[error_code] = {
+        with err_det_lock:
+            if error_code not in err_det:
+                err_det[error_code] = {
                     "count": 0,
-                    "description": f"Sanitizer: {sanitizer_info['type']}",
+                    "description": f"Sanitizer: {sanit_info['type']}",
                     "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
                     "examples": [],
                     "details": [],
                     "is_crash": True,
-                    "error_type": sanitizer_info["type"].lower().replace("sanitizer", "").strip()
+                    "error_type": sanit_info["type"].lower().replace("sanitizer", "").strip()
                 }
-            error_details[error_code]["count"] += 1
+            err_det[error_code]["count"] += 1
             
-            if sanitizer_info["details"] and sanitizer_info["details"] not in error_details[error_code]["details"]:
-                error_details[error_code]["details"].append(sanitizer_info["details"])
+            if sanit_info["details"] and sanit_info["details"] not in err_det[error_code]["details"]:
+                err_det[error_code]["details"].append(sanit_info["details"])
                 
-            if test_input and mut_type and len(error_details[error_code]["examples"]) < 5:
+            if test_input and mut_type and len(err_det[error_code]["examples"]) < 5:
                 example = {
                     "test": test_input,
                     "stderr": stderr,
                     "mutation": mut_type,
-                    "details": sanitizer_info["details"],
-                    "sanitizer_type": sanitizer_info["type"]
+                    "details": sanit_info["details"],
+                    "sanitizer_type": sanit_info["type"]
                 }
-                error_details[error_code]["examples"].append(example)
+                err_det[error_code]["examples"].append(example)
                 
             if mut_type:
-                if mut_type not in error_by_mutator:
-                    error_by_mutator[mut_type] = {}
-                if error_code not in error_by_mutator[mut_type]:
-                    error_by_mutator[mut_type][error_code] = 0
-                error_by_mutator[mut_type][error_code] += 1
+                if mut_type not in err_by_mut:
+                    err_by_mut[mut_type] = {}
+                if error_code not in err_by_mut[mut_type]:
+                    err_by_mut[mut_type][error_code] = 0
+                err_by_mut[mut_type][error_code] += 1
         
         return True, error_code
     return False, None
@@ -543,11 +665,11 @@ if len(config.args) == 1:
         elif config.args[0] in i:
             new_dict2.append(i)
 
-testing_cache = {}
-testing_cache_size = 1000
-testing_cache_lock = threading.Lock()
+test_cache = {}
+test_cache_sz = 1000
+test_cache_lock = threading.Lock()
 
-fast_result_cache = {}
+fast_cache = {}
 MAX_FAST_CACHE = 50000
 
 testing_queue = queue.Queue(maxsize=100)
@@ -597,14 +719,14 @@ def testing2(file_name, listik):
     except TypeError:
         cache_key = (file_name, str(listik))
     
-    if cache_key in testing_cache:
-        increment_exec_counter(1)
-        record_throughput_sample()
-        return testing_cache[cache_key]
+    if cache_key in test_cache:
+        inc_exec(1)
+        rec_throughput()
+        return test_cache[cache_key]
     
-    increment_exec_counter(1)
-    record_throughput_sample()
-    timeout = get_adaptive_timeout()
+    inc_exec(1)
+    rec_throughput()
+    timeout = get_timeout()
     
     try:
         if config.FUZZING_TYPE == "Black":
@@ -616,9 +738,18 @@ def testing2(file_name, listik):
                 start_time = time.time()
                 
                 if isinstance(listik, list):
-                    input_data = b"\n".join(x.encode() if isinstance(x, str) else x for x in listik) + b"\n"
+                    parts = []
+                    for x in listik:
+                        if isinstance(x, str):
+                            parts.append(x.encode())
+                        else:
+                            parts.append(x)
+                    input_data = b"\n".join(parts) + b"\n"
                 else:
-                    input_data = listik.encode() if isinstance(listik, str) else listik + b"\n"
+                    if isinstance(listik, str):
+                        input_data = listik.encode()
+                    else:
+                        input_data = listik + b"\n"
                 
                 sock.connect((config.TARGET_HOST, config.TARGET_PORT))
                 sock.sendall(input_data)
@@ -638,68 +769,76 @@ def testing2(file_name, listik):
                 sock.close()
                 
                 exec_time = end_time - start_time
-                record_exec_time(exec_time)
+                rec_exec_time(exec_time)
                 try:
-                    return_code = 0 if stdout else -1
-                    with testing_cache_lock:
-                        if len(testing_cache) >= testing_cache_size:
-                            for k in list(testing_cache.keys())[:100]:
-                                del testing_cache[k]
-                        testing_cache[cache_key] = (exec_time, return_code, stdout.decode(), stderr.decode())
-                    return testing_cache[cache_key]
+                    if stdout:
+                        return_code = 0
+                    else:
+                        return_code = -1
+                    with test_cache_lock:
+                        if len(test_cache) >= test_cache_sz:
+                            for k in list(test_cache.keys())[:100]:
+                                del test_cache[k]
+                        test_cache[cache_key] = (exec_time, return_code, stdout.decode(), stderr.decode())
+                    return test_cache[cache_key]
                 except:
                     result = (float('inf'), -1, "", "Decode error")
-                    with testing_cache_lock:
-                        testing_cache[cache_key] = result
+                    with test_cache_lock:
+                        test_cache[cache_key] = result
                     return result
                     
             except socket.error as e:
                 result = (float('inf'), -1, "", f"Network error: {str(e)}")
-                with testing_cache_lock:
-                    testing_cache[cache_key] = result
+                with test_cache_lock:
+                    test_cache[cache_key] = result
                 return result
                 
         else:
             if isinstance(listik, list):
                 if len(listik) >= 2:
                     cmd = [file_name]
-                    if config.TARGET_LANGUAGE == "go":
-                        cmd.append("-race")
                     process = subprocess.Popen(cmd, 
                                             stdin=subprocess.PIPE,
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE)
                     start_time = time.time()
                     try:
-                        input1 = listik[0].encode() if isinstance(listik[0], str) else listik[0]
+                        if isinstance(listik[0], str):
+                            input1 = listik[0].encode()
+                        else:
+                            input1 = listik[0]
                         process.stdin.write(input1 + b'\n')
                         process.stdin.flush()
-                        input2 = listik[1].encode() if isinstance(listik[1], str) else listik[1]
+                        if isinstance(listik[1], str):
+                            input2 = listik[1].encode()
+                        else:
+                            input2 = listik[1]
                         process.stdin.write(input2 + b'\n')
                         process.stdin.flush()
                         stdout, stderr = process.communicate(timeout=timeout)
                         end_time = time.time()
                         exec_time = end_time - start_time
-                        record_exec_time(exec_time)
-                        with testing_cache_lock:
-                            if len(testing_cache) >= testing_cache_size:
-                                for k in list(testing_cache.keys())[:100]:
-                                    del testing_cache[k]
-                            testing_cache[cache_key] = (exec_time, process.returncode, stdout.decode(), stderr.decode())
-                        return testing_cache[cache_key]
+                        rec_exec_time(exec_time)
+                        with test_cache_lock:
+                            if len(test_cache) >= test_cache_sz:
+                                for k in list(test_cache.keys())[:100]:
+                                    del test_cache[k]
+                            test_cache[cache_key] = (exec_time, process.returncode, stdout.decode(), stderr.decode())
+                        return test_cache[cache_key]
                     except subprocess.TimeoutExpired:
                         process.kill()
                         result = (float('inf'), -1, "", "Timeout")
-                        with testing_cache_lock:
-                            testing_cache[cache_key] = result
+                        with test_cache_lock:
+                            test_cache[cache_key] = result
                         return result
                 else:
                     start_time = time.time()
                     try:
                         cmd = [file_name]
-                        if config.TARGET_LANGUAGE == "go":
-                            cmd.append("-race")
-                        input_data = listik[0].encode() if isinstance(listik[0], str) else listik[0]
+                        if isinstance(listik[0], str):
+                            input_data = listik[0].encode()
+                        else:
+                            input_data = listik[0]
                         result = subprocess.run(cmd, 
                                              input=input_data,
                                              capture_output=True,
@@ -707,25 +846,26 @@ def testing2(file_name, listik):
                                              timeout=timeout)
                         end_time = time.time()
                         exec_time = end_time - start_time
-                        record_exec_time(exec_time)
-                        with testing_cache_lock:
-                            if len(testing_cache) >= testing_cache_size:
-                                for k in list(testing_cache.keys())[:100]:
-                                    del testing_cache[k]
-                            testing_cache[cache_key] = (exec_time, result.returncode, result.stdout, result.stderr)
-                        return testing_cache[cache_key]
+                        rec_exec_time(exec_time)
+                        with test_cache_lock:
+                            if len(test_cache) >= test_cache_sz:
+                                for k in list(test_cache.keys())[:100]:
+                                    del test_cache[k]
+                            test_cache[cache_key] = (exec_time, result.returncode, result.stdout, result.stderr)
+                        return test_cache[cache_key]
                     except subprocess.TimeoutExpired:
                         result = (float('inf'), -1, "", "Timeout")
-                        with testing_cache_lock:
-                            testing_cache[cache_key] = result
+                        with test_cache_lock:
+                            test_cache[cache_key] = result
                         return result
             else:
                 start_time = time.time()
                 try:
                     cmd = [file_name]
-                    if config.TARGET_LANGUAGE == "go":
-                        cmd.append("-race")
-                    input_data = listik.encode() if isinstance(listik, str) else listik
+                    if isinstance(listik, str):
+                        input_data = listik.encode()
+                    else:
+                        input_data = listik
                     result = subprocess.run(cmd,
                                          input=input_data,
                                          capture_output=True,
@@ -733,23 +873,23 @@ def testing2(file_name, listik):
                                          timeout=timeout)
                     end_time = time.time()
                     exec_time = end_time - start_time
-                    record_exec_time(exec_time)
-                    with testing_cache_lock:
-                        if len(testing_cache) >= testing_cache_size:
-                            for k in list(testing_cache.keys())[:100]:
-                                del testing_cache[k]
-                        testing_cache[cache_key] = (exec_time, result.returncode, result.stdout, result.stderr)
-                    return testing_cache[cache_key]
+                    rec_exec_time(exec_time)
+                    with test_cache_lock:
+                        if len(test_cache) >= test_cache_sz:
+                            for k in list(test_cache.keys())[:100]:
+                                del test_cache[k]
+                        test_cache[cache_key] = (exec_time, result.returncode, result.stdout, result.stderr)
+                    return test_cache[cache_key]
                 except subprocess.TimeoutExpired:
                     result = (float('inf'), -1, "", "Timeout")
-                    with testing_cache_lock:
-                        testing_cache[cache_key] = result
+                    with test_cache_lock:
+                        test_cache[cache_key] = result
                     return result
             return float('inf'), -1, "", "Error"
     except Exception as e:
         result = (float('inf'), -1, "", str(e)) 
-        with testing_cache_lock:
-            testing_cache[cache_key] = result
+        with test_cache_lock:
+            test_cache[cache_key] = result
         return result
 
 def testing(file_name, listik):
@@ -759,8 +899,6 @@ def testing(file_name, listik):
         tests_2 = copy.deepcopy(listik)
         try:
             strace_command = [f"{file_name}"]
-            if config.TARGET_LANGUAGE == "go":
-                strace_command.append("-race")
             with subprocess.Popen(strace_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE) as process:        
                 read_count = 0  
                 for line in process.stderr:
@@ -781,16 +919,16 @@ def testing(file_name, listik):
 def ret_globals():
     return queue_seg_fault, time_out, queue_no_error, queue_sig_fpe
 
-def get_error_statistics():
-    with global_error_details_lock:
-        total_errors = sum(details["count"] for details in error_details.values())
-        unique_errors = len(error_details)
+def get_err_stats():
+    with err_det_lock:
+        total_errors = sum(details["count"] for details in err_det.values())
+        unique_errors = len(err_det)
         
         error_types = {}
         crash_count = 0
-        sanitizer_count = 0
+        sanit_count = 0
         
-        for code, details in error_details.items():
+        for code, details in err_det.items():
             error_type = details.get("error_type", "unknown")
             
             if error_type not in error_types:
@@ -801,7 +939,7 @@ def get_error_statistics():
                 crash_count += details["count"]
                 
             if code < -100 and code >= -110:
-                sanitizer_count += details["count"]
+                sanit_count += details["count"]
                 
             if error_type == "sanitizer" and "sanitizer_type" in details:
                 sanitizer_type = details["sanitizer_type"]
@@ -815,9 +953,9 @@ def get_error_statistics():
             "unique_errors": unique_errors,
             "error_types": error_types,
             "crash_count": crash_count,
-            "sanitizer_count": sanitizer_count,
-            "error_details": error_details,
-            "error_by_mutator": error_by_mutator
+            "sanitizer_count": sanit_count,
+            "error_details": err_det,
+            "error_by_mutator": err_by_mut
         }
 
 def check_no_error(list_of_inp, started_out):
@@ -848,8 +986,6 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
     results = []
     read_count = 0
     strace_command = ["strace", file_name]
-    if config.TARGET_LANGUAGE == "go":
-        strace_command.append("-race")
     f = chr(randint(97, 122))
     if config.FUZZING_TYPE == "Gray":
         try:
@@ -874,23 +1010,23 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
             exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
             is_interesting = if_interesting([returncode, tests_2, stdout])
             
-            sanitizer_info = check_sanitizer(stderr)
+            sanit_info = check_sanit(stderr)
             
-            error_info = categorize_error(returncode, stderr, stdout)
+            error_info = cat_error(returncode, stderr, stdout)
             
-            if sanitizer_info["detected"]:
+            if sanit_info["detected"]:
                 error_info["type"] = "sanitizer"
                 error_info["sanitizer_output"] = stderr
-                error_info["sanitizer_details"] = sanitizer_info["details"]
-                error_info["sanitizer_type"] = sanitizer_info["type"]
+                error_info["sanitizer_details"] = sanit_info["details"]
+                error_info["sanitizer_type"] = sanit_info["type"]
                 error_info["is_crash"] = True
                 
-                filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+                filik.write(f"\n[SANITIZER DETECTED] {sanit_info['type']}: {sanit_info['details']}\n")
                 filik.write(f"Test: {tests_2}\nMutation: {mut_type}\n\n")
                 
             is_crash = log_error(error_info, tests_2, mut_type, 0)
             
-            if is_crash or returncode == -11 or returncode == -8 or sanitizer_info["detected"]:
+            if is_crash or returncode == -11 or returncode == -8 or sanit_info["detected"]:
                 tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting, returncode)
             else:
                 tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting, returncode)
@@ -910,25 +1046,25 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
         is_interesting = if_interesting([returncode, tests_2, stdout])
         
-        executed, total, coverage = get_coverage(file_name, tests_2)
+        executed, total, coverage = get_cov(file_name, tests_2)
         
-        sanitizer_info = check_sanitizer(stderr)
+        sanit_info = check_sanit(stderr)
         
-        error_info = categorize_error(returncode, stderr, stdout)
+        error_info = cat_error(returncode, stderr, stdout)
         
-        if sanitizer_info["detected"]:
+        if sanit_info["detected"]:
             error_info["type"] = "sanitizer"
             error_info["sanitizer_output"] = stderr
-            error_info["sanitizer_details"] = sanitizer_info["details"]
-            error_info["sanitizer_type"] = sanitizer_info["type"]
+            error_info["sanitizer_details"] = sanit_info["details"]
+            error_info["sanitizer_type"] = sanit_info["type"]
             error_info["is_crash"] = True
             
-            filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+            filik.write(f"\n[SANITIZER DETECTED] {sanit_info['type']}: {sanit_info['details']}\n")
             filik.write(f"Test: {tests_2}\nMutation: {mut_type}\nCoverage: {coverage}%\n\n")
             
         is_crash = log_error(error_info, tests_2, mut_type, coverage)
         
-        if is_crash or returncode == -11 or returncode == -8 or sanitizer_info["detected"]:
+        if is_crash or returncode == -11 or returncode == -8 or sanit_info["detected"]:
             tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting, returncode)
         else:
             tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting, returncode)
@@ -945,18 +1081,18 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
         exec_time, returncode, stdout, stderr = testing2(file_name, tests_2)
         is_interesting = if_interesting([returncode, tests_2, stdout])
         
-        sanitizer_info = check_sanitizer(stderr)
+        sanit_info = check_sanit(stderr)
         
-        error_info = categorize_error(returncode, stderr, stdout)
+        error_info = cat_error(returncode, stderr, stdout)
         
-        if sanitizer_info["detected"]:
+        if sanit_info["detected"]:
             error_info["type"] = "sanitizer"
             error_info["sanitizer_output"] = stderr
-            error_info["sanitizer_details"] = sanitizer_info["details"]
-            error_info["sanitizer_type"] = sanitizer_info["type"]
+            error_info["sanitizer_details"] = sanit_info["details"]
+            error_info["sanitizer_type"] = sanit_info["type"]
             error_info["is_crash"] = True
             
-            filik.write(f"\n[SANITIZER DETECTED] {sanitizer_info['type']}: {sanitizer_info['details']}\n")
+            filik.write(f"\n[SANITIZER DETECTED] {sanit_info['type']}: {sanit_info['details']}\n")
             filik.write(f"Test: {tests_2}\nMutation: {mut_type}\n\n")
             
         is_crash = log_error(error_info, tests_2, mut_type, 0)
@@ -967,7 +1103,7 @@ def send_inp(file_name, i, testiki, read_count, filik, mut_type):
                     new_output = False
                     break
         
-        if is_crash or returncode < 0 or sanitizer_info["detected"]:
+        if is_crash or returncode < 0 or sanit_info["detected"]:
             tests_sorting(sig_segv, queue_seg_fault, tests_2, stdout, stderr, filik, 0, read_count, num, mut_type, is_interesting, returncode)
         elif new_output:
             tests_sorting(no_err, queue_no_error, tests_2, stdout, stderr, filik, 1, read_count, num, mut_type, is_interesting, returncode)
@@ -1168,10 +1304,10 @@ def seg_segv(index):
         count += 1
     return resultiki
 
-def compile_with_coverage(source_file, binary_name):
+def compile_cov(source_file, binary_name):
     try:
         if config.TARGET_LANGUAGE == "go":
-            compile_cmd = f"go build -o {binary_name} {source_file}"
+            compile_cmd = f"go build -race -o {binary_name} {source_file}"
         else:
             compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_file} -o {binary_name}"
         process = subprocess.run(compile_cmd, shell=True, check=True,
@@ -1180,7 +1316,7 @@ def compile_with_coverage(source_file, binary_name):
     except subprocess.CalledProcessError:
         return False
 
-def reset_coverage_data(binary_name):
+def reset_cov(binary_name):
     try:
         if config.TARGET_LANGUAGE == "go":
             subprocess.run(f"rm -f *.coverprofile", shell=True)
@@ -1198,8 +1334,8 @@ def get_go_coverage(cover_file):
         with open(cover_file, 'r') as f:
             lines = f.readlines()
         
-        total_statements = 0
-        covered_statements = 0
+        total_stmts = 0
+        covered_stmts = 0
         
         for line in lines[1:]:
             if not line.strip():
@@ -1209,16 +1345,16 @@ def get_go_coverage(cover_file):
                 continue
             count = int(parts[-2])
             statements = int(parts[-1])
-            total_statements += statements
+            total_stmts += statements
             if count > 0:
-                covered_statements += statements
+                covered_stmts += statements
         
-        coverage = (covered_statements / total_statements * 100) if total_statements > 0 else 0.0
-        return covered_statements, total_statements, coverage
+        coverage = (covered_stmts / total_stmts * 100) if total_stmts > 0 else 0.0
+        return covered_stmts, total_stmts, coverage
     except:
         return 0, 0, 0.0
 
-def get_line_coverage(gcov_file):
+def get_line_cov(gcov_file):
     if not os.path.exists(gcov_file):
         return 0, 0, 0.0
     
@@ -1227,29 +1363,32 @@ def get_line_coverage(gcov_file):
             lines = f.readlines()
         
         total_lines = 0
-        executed_lines = 0
+        exec_lines = 0
         
         for line in lines:
             parts = line.split(':', 2)
             if len(parts) < 3:
                 continue
                 
-            execution_count = parts[0].strip()
+            exec_count = parts[0].strip()
             source_line = parts[2].strip()
             if not source_line or source_line.startswith('//'):
                 continue
                 
-            if execution_count != '-':
+            if exec_count != '-':
                 total_lines += 1
-                if execution_count != '#####' and execution_count != '0':
-                    executed_lines += 1
+                if exec_count != '#####' and exec_count != '0':
+                    exec_lines += 1
         
-        coverage = (executed_lines / total_lines * 100) if total_lines > 0 else 0.0
-        return executed_lines, total_lines, coverage
+        if total_lines > 0:
+            coverage = exec_lines / total_lines * 100
+        else:
+            coverage = 0.0
+        return exec_lines, total_lines, coverage
     except:
         return 0, 0, 0.0
 
-def get_function_coverage(gcov_file):
+def get_func_cov(gcov_file):
     if not os.path.exists(gcov_file):
         return 0, 0, 0.0
     
@@ -1257,25 +1396,28 @@ def get_function_coverage(gcov_file):
         with open(gcov_file, 'r') as f:
             lines = f.readlines()
         
-        total_functions = 0
-        executed_functions = 0
+        total_funcs = 0
+        exec_funcs = 0
         current_function = None
         
         for line in lines:
             if 'function' in line:
                 parts = line.split(':', 2)
                 if len(parts) >= 3:
-                    total_functions += 1
-                    execution_count = parts[0].strip()
-                    if execution_count != '#####' and execution_count != '0':
-                        executed_functions += 1
+                    total_funcs += 1
+                    exec_count = parts[0].strip()
+                    if exec_count != '#####' and exec_count != '0':
+                        exec_funcs += 1
         
-        coverage = (executed_functions / total_functions * 100) if total_functions > 0 else 0.0
-        return executed_functions, total_functions, coverage
+        if total_funcs > 0:
+            coverage = exec_funcs / total_funcs * 100
+        else:
+            coverage = 0.0
+        return exec_funcs, total_funcs, coverage
     except:
         return 0, 0, 0.0
 
-def get_branch_coverage(gcov_file):
+def get_branch_cov(gcov_file):
     if not os.path.exists(gcov_file):
         return 0, 0, 0.0
     
@@ -1284,28 +1426,34 @@ def get_branch_coverage(gcov_file):
             lines = f.readlines()
         
         total_branches = 0
-        executed_branches = 0
+        exec_branches = 0
         
         for line in lines:
             if 'branch' in line:
                 parts = line.split(':', 2)
                 if len(parts) >= 3:
                     total_branches += 1
-                    execution_count = parts[0].strip()
-                    if execution_count != '#####' and execution_count != '0':
-                        executed_branches += 1
+                    exec_count = parts[0].strip()
+                    if exec_count != '#####' and exec_count != '0':
+                        exec_branches += 1
         
-        coverage = (executed_branches / total_branches * 100) if total_branches > 0 else 0.0
-        return executed_branches, total_branches, coverage
+        if total_branches > 0:
+            coverage = exec_branches / total_branches * 100
+        else:
+            coverage = 0.0
+        return exec_branches, total_branches, coverage
     except:
         return 0, 0, 0.0
 
-def get_coverage(binary_path, input_data):
-    global global_max_coverage
+def get_cov(binary_path, input_data):
+    global max_cov
     try:
-        input_key = str(input_data) if not isinstance(input_data, list) else tuple(input_data)
-        if input_key in coverage_cache:
-            return coverage_cache[input_key]
+        if isinstance(input_data, list):
+            input_key = tuple(input_data)
+        else:
+            input_key = str(input_data)
+        if input_key in cov_cache:
+            return cov_cache[input_key]
             
         source_file = config.source_file
         if not os.path.exists(source_file):
@@ -1332,7 +1480,7 @@ def get_coverage(binary_path, input_data):
         
             if need_compile:
                 if config.TARGET_LANGUAGE == "go":
-                    compile_cmd = f"go build -o {binary_base} {source_base}"
+                    compile_cmd = f"go build -race -o {binary_base} {source_base}"
                 else:
                     compile_cmd = f"gcc -fprofile-arcs -ftest-coverage {source_base} -o {binary_base}"
                 subprocess.run(compile_cmd, shell=True, check=True, cwd=temp_dir)
@@ -1352,7 +1500,7 @@ def get_coverage(binary_path, input_data):
             binary_abs = os.path.join(temp_dir, binary_base)
             cmd = [binary_abs]
             if config.TARGET_LANGUAGE == "go":
-                cmd = ["go", "run", "-coverprofile", cover_file, source_base]
+                cmd = ["go", "run", "-race", "-coverprofile", cover_file, source_base]
             
             process = subprocess.Popen(
                 cmd,
@@ -1374,8 +1522,8 @@ def get_coverage(binary_path, input_data):
                     if total > 0:
                         coverage = round(coverage, 2)
                         
-                        if coverage > global_max_coverage:
-                            global_max_coverage = coverage
+                        if coverage > max_cov:
+                            max_cov = coverage
                             timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
                             output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.coverprofile"
                             output_gcov = os.path.join(gcov_output_dir, output_filename)
@@ -1383,7 +1531,7 @@ def get_coverage(binary_path, input_data):
                                 dst_f.write(src_f.read())
                             
                         result = (executed, total, coverage)
-                        coverage_cache[input_key] = result
+                        cov_cache[input_key] = result
                         return result
             else:
                 subprocess.run(
@@ -1396,13 +1544,13 @@ def get_coverage(binary_path, input_data):
 
                 gcov_file = os.path.join(temp_dir, f"{source_base}.gcov")
                 if os.path.exists(gcov_file):
-                    executed, total, coverage = get_line_coverage(gcov_file)
+                    executed, total, coverage = get_line_cov(gcov_file)
                     
                     if total > 0:
                         coverage = round(coverage, 2)
                         
-                        if coverage > global_max_coverage:
-                            global_max_coverage = coverage
+                        if coverage > max_cov:
+                            max_cov = coverage
                             timestamp = datetime.datetime.now().time().strftime("%H-%M-%S-%f")
                             output_filename = f"cov-{coverage}_time-{timestamp}_{source_base}.gcov"
                             output_gcov = os.path.join(gcov_output_dir, output_filename)
@@ -1410,11 +1558,11 @@ def get_coverage(binary_path, input_data):
                                 dst_f.write(src_f.read())
                             
                         result = (executed, total, coverage)
-                        coverage_cache[input_key] = result
+                        cov_cache[input_key] = result
                         return result
             
             result = (0, 1, 0.0)
-            coverage_cache[input_key] = result
+            cov_cache[input_key] = result
             return result
             
         finally:
@@ -1428,7 +1576,7 @@ def parse_gcov_output(source_file):
     if not os.path.exists(gcov_file):
         return 0.0
     
-    executed_lines = 0
+    exec_lines = 0
     total_lines = 0
     
     with open(gcov_file, 'r') as f:
@@ -1437,39 +1585,42 @@ def parse_gcov_output(source_file):
                 continue
             parts = line.split(':')
             if len(parts) > 1 and parts[0].strip().isdigit():
-                executed_lines += 1
+                exec_lines += 1
             total_lines += 1
     
-    coverage = (executed_lines / total_lines) * 100 if total_lines > 0 else 0.0
+    if total_lines > 0:
+        coverage = (exec_lines / total_lines) * 100
+    else:
+        coverage = 0.0
     return coverage
 
-def categorize_error(returncode, stderr, stdout):
+def cat_error(returncode, stderr, stdout):
     error_info = {
         "code": returncode,
         "type": "unknown",
         "is_crash": False
     }
     
-    sanitizer_info = check_sanitizer(stderr)
-    if sanitizer_info["detected"]:
-        if sanitizer_info["type"] == "AddressSanitizer":
+    sanit_info = check_sanit(stderr)
+    if sanit_info["detected"]:
+        if sanit_info["type"] == "AddressSanitizer":
             error_info["code"] = -101
-        elif sanitizer_info["type"] == "UndefinedBehaviorSanitizer":
+        elif sanit_info["type"] == "UndefinedBehaviorSanitizer":
             error_info["code"] = -102
-        elif sanitizer_info["type"] == "ThreadSanitizer":
+        elif sanit_info["type"] == "ThreadSanitizer":
             error_info["code"] = -103  
-        elif sanitizer_info["type"] == "MemorySanitizer":
+        elif sanit_info["type"] == "MemorySanitizer":
             error_info["code"] = -104
-        elif sanitizer_info["type"] == "LeakSanitizer":
+        elif sanit_info["type"] == "LeakSanitizer":
             error_info["code"] = -105
-        elif sanitizer_info["type"] == "GoRaceDetector":
+        elif sanit_info["type"] == "GoRaceDetector":
             error_info["code"] = -106
-        elif sanitizer_info["type"] == "GoPanic":
+        elif sanit_info["type"] == "GoPanic":
             error_info["code"] = -107
         
         error_info["type"] = "sanitizer"
-        error_info["sanitizer_type"] = sanitizer_info["type"]
-        error_info["details"] = sanitizer_info["details"]
+        error_info["sanitizer_type"] = sanit_info["type"]
+        error_info["details"] = sanit_info["details"]
         error_info["is_crash"] = True
         
         return error_info
@@ -1534,33 +1685,33 @@ def categorize_error(returncode, stderr, stdout):
     return error_info
 
 def log_error(error_info, test_input, mut_type, coverage):
-    with global_error_details_lock:
+    with err_det_lock:
         error_code = error_info["code"]
         error_type = error_info["type"]
         
-        if error_code not in error_details:
-            error_details[error_code] = {
+        if error_code not in err_det:
+            err_det[error_code] = {
                 "count": 0,
-                "description": get_error_description(error_code),
+                "description": get_err_desc(error_code),
                 "first_seen": datetime.datetime.now().strftime("%H:%M:%S"),
                 "examples": [],
                 "error_type": error_type,
                 "is_crash": error_info.get("is_crash", False)
             }
         
-        error_details[error_code]["count"] += 1
+        err_det[error_code]["count"] += 1
         
-        with mutator_error_lock:
-            if mut_type in mutator_error_counts:
-                mutator_error_counts[mut_type] += 1
+        with err_lock:
+            if mut_type in err_counts:
+                err_counts[mut_type] += 1
         
-        if mut_type not in error_by_mutator:
-            error_by_mutator[mut_type] = {}
-        if error_code not in error_by_mutator[mut_type]:
-            error_by_mutator[mut_type][error_code] = 0
-        error_by_mutator[mut_type][error_code] += 1
+        if mut_type not in err_by_mut:
+            err_by_mut[mut_type] = {}
+        if error_code not in err_by_mut[mut_type]:
+            err_by_mut[mut_type][error_code] = 0
+        err_by_mut[mut_type][error_code] += 1
         
-        if len(error_details[error_code]["examples"]) < 5:
+        if len(err_det[error_code]["examples"]) < 5:
             example = {
                 "test": test_input,
                 "mutation": mut_type,
@@ -1580,66 +1731,69 @@ def log_error(error_info, test_input, mut_type, coverage):
                 if "sanitizer_details" in error_info:
                     example["sanitizer_details"] = error_info["sanitizer_details"]
             
-            error_details[error_code]["examples"].append(example)
+            err_det[error_code]["examples"].append(example)
     
     return error_info["is_crash"]
 
 
-def update_mutation_success(mut_type, coverage_increased, new_crash):
-    with mutation_success_lock:
-        if mut_type in mutation_success:
-            mutation_success[mut_type]["total"] += 1
-            if coverage_increased:
-                mutation_success[mut_type]["new_coverage"] += 1
+def upd_mut_sucs(mut_type, cov_up, new_crash):
+    with mut_sucs_lock:
+        if mut_type in mut_sucs:
+            mut_sucs[mut_type]["total"] += 1
+            if cov_up:
+                mut_sucs[mut_type]["new_coverage"] += 1
             if new_crash:
-                mutation_success[mut_type]["new_crash"] += 1
+                mut_sucs[mut_type]["new_crash"] += 1
 
 
-def add_to_corpus(test_input):
+def add_corpus(test_input):
     with corpus_lock:
         if isinstance(test_input, list):
             key = tuple(test_input)
         else:
             key = test_input
-        for existing in corpus_inputs:
-            existing_key = tuple(existing) if isinstance(existing, list) else existing
+        for existing in corpus:
+            if isinstance(existing, list):
+                existing_key = tuple(existing)
+            else:
+                existing_key = existing
             if existing_key == key:
                 return False
-        corpus_inputs.append(copy.deepcopy(test_input))
+        corpus.append(copy.deepcopy(test_input))
         return True
 
 
-def get_corpus_input():
+def get_corpus():
     with corpus_lock:
-        if corpus_inputs:
-            idx = randint(0, len(corpus_inputs) - 1)
-            return copy.deepcopy(corpus_inputs[idx])
+        if corpus:
+            idx = randint(0, len(corpus) - 1)
+            return copy.deepcopy(corpus[idx])
     return None
 
 
-def record_exec_time(elapsed):
-    global adaptive_timeout
+def rec_exec_time(elapsed):
+    global adapt_timeout
     with exec_times_lock:
         exec_times.append(elapsed)
-        if len(exec_times) > MAX_EXEC_TIMES_TRACKED:
-            del exec_times[:len(exec_times) - MAX_EXEC_TIMES_TRACKED]
+        if len(exec_times) > MAX_EXEC_TIMES:
+            del exec_times[:len(exec_times) - MAX_EXEC_TIMES]
         if len(exec_times) >= 20:
             sorted_times = sorted(exec_times)
             median = sorted_times[len(sorted_times) // 2]
-            adaptive_timeout = max(
+            adapt_timeout = max(
                 ADAPTIVE_TIMEOUT_MIN,
-                median * ADAPTIVE_TIMEOUT_MULTIPLIER
+                median * ADAPTIVE_TIMEOUT_MULT
             )
 
 
-def get_adaptive_timeout():
+def get_timeout():
     with exec_times_lock:
-        if adaptive_timeout is not None:
-            return adaptive_timeout
+        if adapt_timeout is not None:
+            return adapt_timeout
     return 0.5 if config.FAST_MODE else 5.0
 
 
-def minimize_input(file_name_path, test_input, expected_returncode):
+def minimize(file_name_path, test_input, expected_returncode):
     if isinstance(test_input, list):
         minimized = list(test_input)
         for i in range(len(minimized)):

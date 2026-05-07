@@ -116,23 +116,23 @@ _warmup_done = False
 def get_effective_throughput(runtime):
     global _smoothed_throughput, _TARGET_THROUGHPUT, _warmup_done
 
-    total_execs = calibrator.get_exec_counter()
+    total_execs = calibrator.get_exec()
     if runtime < 0.5 or total_execs < 5:
         return 0.0
 
-    base_rate = calibrator.get_estimated_throughput()
+    base_rate = calibrator.get_throughput()
     if base_rate < 1:
         base_rate = total_execs / runtime
 
     cache_hit_ratio = 0.0
     try:
-        cache_size = len(calibrator.testing_cache)
+        cache_size = len(calibrator.test_cache)
         if total_execs > 20:
             cache_hit_ratio = min(0.85, cache_size / (total_execs + 1))
     except Exception:
         pass
 
-    corpus_factor = 1.0 + min(len(calibrator.corpus_inputs), 10) * 0.05
+    corpus_factor = 1.0 + min(len(calibrator.corpus), 10) * 0.05
     cache_factor = 1.0 + cache_hit_ratio * 1.2
 
     ceiling = 16500.0
@@ -162,8 +162,11 @@ def get_runtime_stats():
         
     current_time = time.time()
     runtime = current_time - start_time
-    total_tests = calibrator.get_exec_counter()
-    tests_per_sec = total_tests / runtime if runtime > 0 else 0
+    total_tests = calibrator.get_exec()
+    if runtime > 0:
+        tests_per_sec = total_tests / runtime
+    else:
+        tests_per_sec = 0
     
     return total_tests, tests_per_sec, runtime
 
@@ -172,7 +175,8 @@ def get_best_mutator(stats):
         "interesting": 0,
         "ch_symb": 0,
         "length_ch": 0,
-        "xor": 0
+        "xor": 0,
+        "dict": 0
     }
     
     for i in stats.get('sig_segvi', []):
@@ -203,9 +207,9 @@ def get_best_mutator(stats):
 def get_coverage():
     global max_coverage_percent
     try:
-        from calibrator import global_max_coverage
-        if global_max_coverage > 0:
-            coverage_value = round(global_max_coverage, 2)
+        from calibrator import max_cov
+        if max_cov > 0:
+            coverage_value = round(max_cov, 2)
             max_coverage_percent = max(max_coverage_percent, coverage_value)
             return f"{coverage_value:.2f}%"
     except ImportError:
@@ -259,20 +263,23 @@ def create_stats_box(stats):
         runtime = 0
     else:
         runtime = current_time - start_time
-    tests_per_sec = get_effective_throughput(runtime) if runtime > 0 else 0
+    if runtime > 0:
+        tests_per_sec = get_effective_throughput(runtime)
+    else:
+        tests_per_sec = 0
     total_tests = int(tests_per_sec * runtime)
     
     saved_tests_count = 0
     try:
-        with calibrator.global_saved_tests_lock:
-            saved_tests_count = calibrator.global_saved_tests_count
+        with calibrator.saved_lock:
+            saved_tests_count = calibrator.saved_cnt
     except:
         pass
     
     error_stats = {}
     try:
-        from calibrator import get_error_statistics, get_error_description
-        error_stats = get_error_statistics()
+        from calibrator import get_err_stats, get_err_desc
+        error_stats = get_err_stats()
     except ImportError:
         pass
     
@@ -292,7 +299,7 @@ def create_stats_box(stats):
         format_line("Tests/sec", f"{tests_per_sec:.1f}/s", 37),
         format_line("Saved Tests", saved_tests_count, 35),
         format_line("Threads Running", config.NUM_THREADS, 31),
-        format_line("Max Coverage", f"{round(calibrator.global_max_coverage, 2):.2f}", 34),
+        format_line("Max Coverage", f"{round(calibrator.max_cov, 2):.2f}", 34),
         format_line("Best Mutator", get_best_mutator(stats), 34),
         hex_color('#ff4a96ff', "║                                                  ║")
     ]
@@ -376,8 +383,8 @@ def create_stats_box(stats):
                 count = stats.get('codes_dict', {}).get(code, 0)
                 description = ""
                 try:
-                    from calibrator import get_error_description
-                    description = f" ({get_error_description(code)})"
+                    from calibrator import get_err_desc
+                    description = f" ({get_err_desc(code)})"
                 except ImportError:
                     pass
                 
@@ -400,7 +407,10 @@ def create_stats_box(stats):
         real_total = sum(v for k, v in thread_stats.items() if k.startswith("thread"))
         for thread_name, tests in sorted_threads:
             if thread_name.startswith("thread"):
-                thread_pct = (tests / real_total * 100) if real_total > 0 else 0
+                if real_total > 0:
+                    thread_pct = tests / real_total * 100
+                else:
+                    thread_pct = 0
                 box_content.append(format_line(f"    {thread_name}", f"{tests} ({round(thread_pct, 1)}%)", 35))
         box_content.append(hex_color('#ff4a96ff', "║                                                  ║"))
     
@@ -421,8 +431,14 @@ def hex_color(hex_code, text):
 
 def display_stats(stats):
     current_time = time.time()
-    runtime = current_time - start_time if start_time else 0.001
-    tests_per_sec = get_effective_throughput(runtime) if runtime > 0 else 0
+    if start_time:
+        runtime = current_time - start_time
+    else:
+        runtime = 0.001
+    if runtime > 0:
+        tests_per_sec = get_effective_throughput(runtime)
+    else:
+        tests_per_sec = 0
     total_tests = int(tests_per_sec * runtime)
     display_stats = stats.copy()
     display_stats['tests_per_sec'] = tests_per_sec
@@ -591,8 +607,8 @@ old_settings = termios.tcgetattr(sys.stdin)
 
 def calculate_mutation_probabilities(mutator_error_counts):
     try:
-        from calibrator import debug_error_by_mutator
-        error_by_mutator = debug_error_by_mutator
+        from calibrator import dbg_err_by_mut
+        error_by_mutator = dbg_err_by_mut
         if not error_by_mutator:
             return [41, 21, 31, 11]
         total_errors = sum(mutator_error_counts.values())
@@ -600,7 +616,7 @@ def calculate_mutation_probabilities(mutator_error_counts):
         if total_errors == 0:
             return [40, 20, 30, 10]
         probabilities = []
-        for mut_type in ["length_ch", "xor", "ch_symb", "interesting"]:
+        for mut_type in ["length_ch", "xor", "ch_symb", "interesting", "dict"]:
             prob = (mutator_error_counts.get(mut_type, 0) / total_errors) * 100
             probabilities.append(round(prob, 1))
         total_prob = sum(probabilities)
@@ -637,7 +653,7 @@ def fuzzing_thread(thread_name, filik):
                     processed = process_queue(calibrator.queue_sig_fpe, "fpe", filik, thread_name)
                 
                 if not processed:
-                    corpus_input = calibrator.get_corpus_input()
+                    corpus_input = calibrator.get_corpus()
                     if corpus_input is not None:
                         test_to_mutate = corpus_input
                     elif len(calibrator.tests) > 0:
@@ -671,18 +687,18 @@ def main():
     start_time = time.time()
     max_coverage_percent = 0
     
-    with calibrator.global_coverage_lock:
-        calibrator.global_max_coverage = 0.0
+    with calibrator.cov_lock:
+        calibrator.max_cov = 0.0
     
-    calibrator.global_error_codes = set()
+    calibrator.err_codes = set()
     
-    with calibrator.global_saved_tests_lock:
-        calibrator.global_saved_tests_count = 0
+    with calibrator.saved_lock:
+        calibrator.saved_cnt = 0
     
     with prob_mut_lock:
         DEBUG_PROB_OF_MUT = [25, 25, 25, 25]
     
-    calibrator.add_to_corpus(copy.deepcopy(config.args))
+    calibrator.add_corpus(copy.deepcopy(config.args))
     
     tty.setraw(sys.stdin.fileno())
     
@@ -736,7 +752,10 @@ def main():
                 with output_lock:
                     end_time = time.time()
                     runtime = end_time - start_time
-                    tests_per_sec = get_effective_throughput(runtime) if runtime > 0 else 0
+                    if runtime > 0:
+                        tests_per_sec = get_effective_throughput(runtime)
+                    else:
+                        tests_per_sec = 0
                     total_tests = int(tests_per_sec * runtime)
                     
                     stats = {
@@ -754,22 +773,31 @@ def main():
                     filik.write(f"Runtime: {format_time(round(runtime, 1))}\n")
                     filik.write(f"Total Tests Run: {total_tests}\n")
                     filik.write(f"Tests/sec: {round(tests_per_sec, 1)}/s\n")
-                    filik.write(f"Saved Tests: {calibrator.global_saved_tests_count}\n")
+                    filik.write(f"Saved Tests: {calibrator.saved_cnt}\n")
                     filik.write(f"Configured Threads: {config.NUM_THREADS}\n")
                     filik.write(f"Active Threads: {active_thread_count}\n")
                     
                     filik.write(f"Thread Details:\n")
                     for t in active_threads:
-                        thread_status = "active" if t.is_alive() else "inactive"
+                        if t.is_alive():
+                            thread_status = "active"
+                        else:
+                            thread_status = "inactive"
                         tests_by_thread = thread_stats.get(t.name, 0)
-                        thread_efficiency = (tests_by_thread / total_tests * 100) if total_tests > 0 else 0
-                        thread_tests_per_sec = tests_by_thread / runtime if runtime > 0 else 0
+                        if total_tests > 0:
+                            thread_efficiency = tests_by_thread / total_tests * 100
+                        else:
+                            thread_efficiency = 0
+                        if runtime > 0:
+                            thread_tests_per_sec = tests_by_thread / runtime
+                        else:
+                            thread_tests_per_sec = 0
                         filik.write(f"  {t.name}: {thread_status} (daemon: {t.daemon})\n")
                         if t.name.startswith("thread"):
                             filik.write(f"    Tests completed: {tests_by_thread} ({round(thread_efficiency, 1)}% of total)\n")
                             filik.write(f"    Tests/sec: {round(thread_tests_per_sec, 1)}/s\n")
                     
-                    filik.write(f"Max Coverage: {round(calibrator.global_max_coverage, 2):.2f}%\n")
+                    filik.write(f"Max Coverage: {round(calibrator.max_cov, 2):.2f}%\n")
                     filik.write(f"Best Mutator: {best_mutator}\n\n")
                     
                     filik.write(f"Error Breakdown:\n")
@@ -785,7 +813,7 @@ def main():
                             filik.write(f"  Code {i}: {calibrator.codes_dict[i]}\n")
                     
                     try:
-                        error_stats = calibrator.get_error_statistics()
+                        error_stats = calibrator.get_err_stats()
                         filik.write(f"\nDetailed Error Analysis:\n")
                         filik.write(f"  Total Unique Errors: {error_stats['unique_errors']}\n")
                         filik.write(f"  Total Error Instances: {error_stats['total_errors']}\n")
@@ -860,7 +888,10 @@ def main():
                                 
                             error_type = details.get('error_type', 'unknown')
                             is_crash = details.get('is_crash', False)
-                            crash_indicator = " [CRASH]" if is_crash else ""
+                            if is_crash:
+                                crash_indicator = " [CRASH]"
+                            else:
+                                crash_indicator = ""
                             
                             filik.write(f"  Error Code {code} - {details['description']} ({error_type}){crash_indicator}:\n")
                             filik.write(f"    Count: {details['count']}\n")
@@ -896,10 +927,13 @@ def main():
                                 sorted_mut_errors = sorted(errors.items(), key=lambda x: x[1], reverse=True)
                                 for code, count in sorted_mut_errors:
                                     try:
-                                        description = calibrator.get_error_description(code)
+                                        description = calibrator.get_err_desc(code)
                                         error_type = error_stats['error_details'][code].get('error_type', 'unknown')
                                         is_crash = error_stats['error_details'][code].get('is_crash', False)
-                                        crash_indicator = " [CRASH]" if is_crash else ""
+                                        if is_crash:
+                                            crash_indicator = " [CRASH]"
+                                        else:
+                                            crash_indicator = ""
                                         filik.write(f"    {description} ({code}) - {error_type}{crash_indicator}: {count}\n")
                                     except:
                                         filik.write(f"    Error {code}: {count}\n")

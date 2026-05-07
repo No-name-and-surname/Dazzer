@@ -1,41 +1,44 @@
 from random import randint, choice
 import config
-import main
 import random
 import threading
+import difflib
 
-fileik = open(config.dict_name, 'rb').read().decode().split('\r\n')
+filik = open(config.dict_name, 'rb').read().decode().split('\r\n')
+filik = [w for w in filik if w.strip()]
 flag, trewq  = 0, 0
 flag = 0
 
-mutation_cache = {}
-MAX_CACHE_SIZE = 10000
+mut_cache = {}
+MAX_CACHE = 10000
 
-mutation_success = {
+mut_sucs = {
     "interesting": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "ch_symb": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "length_ch": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "xor": {"new_coverage": 0, "new_crash": 0, "total": 0},
+    "dict": {"new_coverage": 0, "new_crash": 0, "total": 0},
     "first_no_mut": {"new_coverage": 0, "new_crash": 0, "total": 0}
 }
-mutation_success_lock = threading.Lock()
+mut_sucs_lock = threading.Lock()
 
-mutator_error_counts = {
+err_counts = {
     "interesting": 0,
     "ch_symb": 0,
     "length_ch": 0,
-    "xor": 0
+    "xor": 0,
+    "dict": 0
 }
-mutator_error_lock = threading.Lock()
+err_lock = threading.Lock()
 
-def update_mutation_success(mut_type, coverage_increased, new_crash):
-    with mutation_success_lock:
-        if mut_type in mutation_success:
-            mutation_success[mut_type]["total"] += 1
-            if coverage_increased:
-                mutation_success[mut_type]["new_coverage"] += 1
+def upd_mut_sucs(mut_type, cov_up, new_crash):
+    with mut_sucs_lock:
+        if mut_type in mut_sucs:
+            mut_sucs[mut_type]["total"] += 1
+            if cov_up:
+                mut_sucs[mut_type]["new_coverage"] += 1
             if new_crash:
-                mutation_success[mut_type]["new_crash"] += 1
+                mut_sucs[mut_type]["new_crash"] += 1
 
 def xor(ret):
     try:
@@ -60,40 +63,6 @@ def xor(ret):
     except:
         return ret + chr(randint(97, 122))
 
-def dict_test(min_length, new_dict2, new_dict):
-    flag = 0
-    if len(new_dict) > 0:
-        index_in_nd = randint(0, len(new_dict) - 1)
-        ret = list(new_dict[index_in_nd])
-        if len(ret) >= min_length-1:
-            flag = 1
-        new_dict.remove(new_dict[index_in_nd])
-        return ret, flag
-    else:
-        index_in_nd2 = randint(0, len(new_dict2) - 1)
-        ret = list(new_dict2[index_in_nd2])
-        if len(ret) >= min_length-1:
-            flag = 1
-        new_dict2.remove(new_dict2[index_in_nd2])
-        return ret, flag
-
-def dict_test_via_rand(min_length, new_dict2, new_dict):
-    flag = 0
-    if len(new_dict) > 0:
-        index_in_nd = randint(0, len(new_dict) - 1)
-        ret = list(new_dict[index_in_nd])
-        if len(ret) >= min_length-1:
-            flag = 1
-        new_dict.remove(new_dict[index_in_nd])
-        return rand_length_change(min_length, ret), flag
-    else:
-        index_in_nd2 = randint(0, len(new_dict2) - 1)
-        ret = list(new_dict2[index_in_nd2])
-        if len(ret) >= min_length-1:
-            flag = 1
-        new_dict2.remove(new_dict2[index_in_nd2])
-        return rand_length_change(min_length, ret), flag
-    
 def rand_length_change(min_length, ret):
     newline = ''
     Del_or_add = randint(0, 1)
@@ -152,37 +121,62 @@ def interesting_values():
     ]
     return choice(interesting)
 
-def get_mutation_probabilities():
-    with mutator_error_lock:
-        probabilities = {}
-        total_errors = sum(mutator_error_counts.values())
+def dict_replace(buf):
+    if isinstance(buf, str):
+        buf_str = buf
+    else:
+        buf_str = ''.join(buf)
+    if not filik:
+        return buf_str
+
+    strategy = randint(0, 2)
+
+    if strategy == 0:
+        close_ones = difflib.get_close_matches(buf_str, filik, n=5, cutoff=0.4)
+        if close_ones:
+            return choice(close_ones)
+
+    if strategy <= 1:
+        if len(buf_str) >= 2:
+            matching = [w for w in filik if buf_str[:2].lower() == w[:2].lower()]
+        else:
+            matching = []
+        if matching:
+            return choice(matching)
+
+    return choice(filik)
+
+def get_probs():
+    with err_lock:
+        probs = {}
+        total_err = sum(err_counts.values())
         
-        if total_errors > 0:
-            for mut in mutator_error_counts:
-                probabilities[mut] = mutator_error_counts[mut] / total_errors
+        if total_err > 0:
+            for mut in err_counts:
+                probs[mut] = err_counts[mut] / total_err
         
-        total_prob = sum(probabilities.values())
+        total_prob = sum(probs.values())
         if total_prob > 0:
-            for mut in probabilities:
-                probabilities[mut] = (probabilities[mut] / total_prob) * 100
+            for mut in probs:
+                probs[mut] = (probs[mut] / total_prob) * 100
         
-        return probabilities
+        return probs
 
 def mutate(buf, min_length, new_dict2=None, new_dict=None):
-    mutation_probs = get_mutation_probabilities()
+    m_probs = get_probs()
     
-    mutation_types = list(mutation_probs.keys())
-    weights = list(mutation_probs.values())
+    m_types = list(m_probs.keys())
+    weights = list(m_probs.values())
     
-    if not mutation_types:
-        mutation_types = ["interesting", "ch_symb", "length_ch", "xor"]
-        weights = [25, 25, 25, 25]  # Default weights if no data
+    if not m_types:
+        m_types = ["interesting", "ch_symb", "length_ch", "xor", "dict"]
+        weights = [20, 20, 20, 20, 20]
     
-    mut_type = random.choices(mutation_types, weights=weights, k=1)[0]
+    mut_type = random.choices(m_types, weights=weights, k=1)[0]
     
     cache_key = (str(buf), min_length)
-    if cache_key in mutation_cache:
-        return mutation_cache[cache_key]
+    if cache_key in mut_cache:
+        return mut_cache[cache_key]
     
     if new_dict2 is None: 
         new_dict2 = []
@@ -199,10 +193,18 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
         ret = xor(ret)
     elif mut_type == "interesting":
         result = interesting_values(), mut_type
-        if len(mutation_cache) >= MAX_CACHE_SIZE:
-            for k in list(mutation_cache.keys())[:1000]:
-                del mutation_cache[k]
-        mutation_cache[cache_key] = result
+        if len(mut_cache) >= MAX_CACHE:
+            for k in list(mut_cache.keys())[:1000]:
+                del mut_cache[k]
+        mut_cache[cache_key] = result
+        return result
+    elif mut_type == "dict":
+        dict_res = dict_replace(buf)
+        result = (dict_res, mut_type)
+        if len(mut_cache) >= MAX_CACHE:
+            for k in list(mut_cache.keys())[:1000]:
+                del mut_cache[k]
+        mut_cache[cache_key] = result
         return result
 
     if isinstance(ret, list):
@@ -212,9 +214,9 @@ def mutate(buf, min_length, new_dict2=None, new_dict=None):
     else:
         result = str(ret)
     
-    if len(mutation_cache) >= MAX_CACHE_SIZE:
-        for k in list(mutation_cache.keys())[:1000]:
-            del mutation_cache[k]
-    mutation_cache[cache_key] = (result, mut_type)
+    if len(mut_cache) >= MAX_CACHE:
+        for k in list(mut_cache.keys())[:1000]:
+            del mut_cache[k]
+    mut_cache[cache_key] = (result, mut_type)
     
     return result, mut_type
